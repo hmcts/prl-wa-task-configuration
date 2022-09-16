@@ -1,4 +1,4 @@
-package uk.gov.hmcts.reform.iataskconfiguration.dmn;
+package uk.gov.hmcts.reform.prl.taskconfiguration.dmn;
 
 import lombok.Builder;
 import lombok.Value;
@@ -13,7 +13,8 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.platform.commons.util.StringUtils;
-import uk.gov.hmcts.reform.iataskconfiguration.DmnDecisionTableBaseUnitTest;
+import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTable;
+import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,13 +29,12 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static uk.gov.hmcts.reform.iataskconfiguration.DmnDecisionTable.WA_TASK_CONFIGURATION_IA_ASYLUM;
 
 class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     @BeforeAll
     public static void initialization() {
-        CURRENT_DMN_DECISION_TABLE = WA_TASK_CONFIGURATION_IA_ASYLUM;
+        CURRENT_DMN_DECISION_TABLE = DmnDecisionTable.WA_TASK_CONFIGURATION_PRL;
     }
 
     @ParameterizedTest

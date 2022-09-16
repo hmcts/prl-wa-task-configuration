@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+  <decision id="wa-task-configuration-ia-asylum" name="Task configuration DMN">
+    <decisionTable id="DecisionTable_14cx079" hitPolicy="COLLECT">
+      <input id="InputClause_1gxyo7f" label="CCD Case Data" camunda:inputVariable="caseData">
+        <inputExpression id="LiteralExpression_0mra7c4" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1gmuynt" label="Task type" biodi:width="415" camunda:inputVariable="taskType">
+        <inputExpression id="LiteralExpression_06iiuqg" typeRef="string">
+          <text>if(taskAttributes != null and taskAttributes.taskType != null) then
+                        taskAttributes. taskType
+                        else if(taskType != null) then
+                        taskType
+                        else
+                        null
+                    </text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Name" name="name" typeRef="string" />
+      <output id="OutputClause_021y3bb" label="Value" name="value" typeRef="string" biodi:width="803" />
+      <rule id="DecisionRule_0u7yi27">
+        <inputEntry id="UnaryTests_03ky0ek">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03q2nz0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nkps91">
+          <text>"caseName"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06tqng3">
+          <text>caseData.applicantCaseName</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0oagl97">
+        <inputEntry id="UnaryTests_0mkzt2r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1esseck">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0selern">
+          <text>"caseTypeOfApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0t707ev">
+          <text>caseData.caseTypeOfApplication
+                    </text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0r3u9cf">
+        <inputEntry id="UnaryTests_1bqxdqr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wxfevs">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0etwrk3">
+          <text>"location"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05korws">
+          <text>caseData.courtid</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1oirne1">
+        <inputEntry id="UnaryTests_04xtpdu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ssoq5v">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lvlmxm">
+          <text>"locationName"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xp4dc7">
+          <text>caseData.courtName                    </text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ikmf14">
+        <inputEntry id="UnaryTests_0epux74">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y3kj1v">
+          <text>"checkApplication",
+"checkApplicationfl401", 
+“addCaseNumber”,                    </text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rvgay2">
+          <text>"workType"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zoponq">
+          <text>"applications"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1csczvs">
+        <inputEntry id="UnaryTests_0wmnz5z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gm06lg">
+          <text>"gateKeeping",
+"createJudicialOrder,</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0omxasv">
+          <text>"workType"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mfd2ul">
+          <text>"decision_making_work"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03n8x3v">
+        <inputEntry id="UnaryTests_0u2qxu3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ps3x4j">
+          <text>"produceHearingBundle"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0c3eia6">
+          <text>"workType"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19poitv">
+          <text>"hearing_work"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1mgtmkd">
+        <inputEntry id="UnaryTests_0mpogvu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uoqs4p">
+          <text>"checkApplication",
+"checkApplicationfl401",
+"addCaseNumber",
+"sendToGateKeeper",
+"gateKeeping",
+"checkSolicitorOrderProvided",
+"serveOrder",
+"reviewCorrespondence",
+"reviewCorrespondencyByJudiciary"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qi2rsb">
+          <text>"workType"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1spq9ei">
+          <text>"routine_work"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ma01yj">
+        <inputEntry id="UnaryTests_1kg4r3c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bo2i9w">
+          <text>checkApplication",
+"checkApplicationfl401",
+"addCaseNumber",
+"sendToGateKeeper",
+"gateKeeping",
+"serviceOfApplication",
+"checkSolicitorOrderProvided",
+"produceHearingBundle"
+"createJudicialOrder",
+"serveOrder",
+"reviewCorrespondence",
+"reviewSpecificAccessRequestAdmin"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lyoqjj">
+          <text>"role_Category"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m3e4ko">
+          <text>	
+
+"ADMIN"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00yasz5">
+        <inputEntry id="UnaryTests_0zfo8ln">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04wtfxs">
+          <text>"reviewOder",
+"reviewSpecificAccessRequestJudiciary",
+"createJudicialOrder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ywf3hm">
+          <text>"role_Category"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jcwzi7">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1dhhpyl">
+        <inputEntry id="UnaryTests_13pqmkc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10f3uas">
+          <text>"gateKeeping",
+"reviewCorrespondencyByJudiciary",
+"reviewSpecificAccessRequestLegalOps"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05l5bvs">
+          <text>"roleCategory"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18y163a">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01cmxvs">
+        <inputEntry id="UnaryTests_1np8ii5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15ftuu0">
+          <text>"reviewSpecificAccessRequestJudiciary", "reviewSpecificAccessRequestLegalOps", "reviewSpecificAccessRequestAdmin"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15nowth">
+          <text>"workType"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cn9cb2">
+          <text>"access_requests"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1lny4x5">
+        <inputEntry id="UnaryTests_1jpdq6j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hpq8zy">
+          <text>"checkApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0omo7uu">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1iaoi95">
+          <text>taskAttributes.taskName
+URL = ""</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0sbbgct">
+        <inputEntry id="UnaryTests_17ip7tf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ly0n3y">
+          <text>"addCaseNumber"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jq8aj3">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ss14pz">
+          <text>taskAttributes.taskName
+URL = ""</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1waof6r">
+        <inputEntry id="UnaryTests_0je8nqs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_116iaj9">
+          <text>"sendToGateKeeper"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1826xtq">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17w7a73">
+          <text>taskAttributes.taskName
+URL = ""</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1tpi99q">
+        <inputEntry id="UnaryTests_0khxajr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qk9sfm">
+          <text>"gateKeeping"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ezdmgy">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vexerb">
+          <text>taskAttributes.taskName
+URL = ""</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_162onvy">
+        <inputEntry id="UnaryTests_0jx7exg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_160ck6w">
+          <text>"serviceOfApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0oob6k6">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qw8wks">
+          <text>taskAttributes.taskName
+URL = ""</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06bv594">
+        <inputEntry id="UnaryTests_1a0x0hw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x05n68">
+          <text>"checkSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1u4pgvz">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lanhsm">
+          <text>taskAttributes.taskName
+URL = ""</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15fnxnz">
+        <inputEntry id="UnaryTests_1anumbc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fbx96p">
+          <text>"produceHearingBundle"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10zi0rl">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02svkjv">
+          <text>taskAttributes.taskName
+URL = ""</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1cv5x30">
+        <inputEntry id="UnaryTests_0m00ool">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ikc92j">
+          <text>"createJudicialOrder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pime5f">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yvppje">
+          <text>taskAttributes.taskName
+URL = ""</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12qwclg">
+        <inputEntry id="UnaryTests_0eynosw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d21hw5">
+          <text>"reviewOder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1oxy3n9">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0njo055">
+          <text>taskAttributes.taskName
+URL = ""</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13hrfv7">
+        <inputEntry id="UnaryTests_02hj5bb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gyeo27">
+          <text>"serveOder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vtp9ip">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jtn07q">
+          <text>taskAttributes.taskName
+URL = ""</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qqvs82">
+        <inputEntry id="UnaryTests_1uq2wob">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1agpx04">
+          <text>"reviewCorrespondence"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0w3c7s8">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ko7l9u">
+          <text>taskAttributes.taskName
+URL = ""</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1dlaqje">
+        <inputEntry id="UnaryTests_0bjn8kf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wnq1k8">
+          <text>"reviewCorrespondencyByJudiciary"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0j3y66k">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03lybek">
+          <text>taskAttributes.taskName
+URL = ""</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qwkbxz">
+        <inputEntry id="UnaryTests_0ewjvgh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h5ieae">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1x52vpo">
+          <text>"region"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kf0r5v">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_1ifewa3">
+      <dmndi:DMNShape id="DMNShape_0ijg0or" dmnElementRef="wa-task-configuration-ia-asylum">
+        <dc:Bounds height="80" width="180" x="150" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
