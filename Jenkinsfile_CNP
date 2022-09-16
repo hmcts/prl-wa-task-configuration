@@ -3,10 +3,10 @@
 @Library('Infrastructure')
 
 def type = "java"
-def product = "fis"
-def component = "task-configuration"
+def product = "prl"
+def component = "wa-task-configuration"
 def s2sServiceName = "wa_camunda_pipeline_upload"
-def tenantId = "fis"
+def tenantId = "prl"
 def branchesToSync = ['demo', 'perftest']
 
 withCamundaOnlyPipeline(type, product, component, s2sServiceName, tenantId) {
