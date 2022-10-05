@@ -4,7 +4,7 @@
 
 def type = "java"
 def product = "prl"
-def component = "wa-task-configuration"
+def component = "task-configuration"
 def s2sServiceName = "wa_camunda_pipeline_upload"
 def tenantId = "prl"
 def branchesToSync = ['demo', 'perftest']
