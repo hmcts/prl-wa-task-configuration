@@ -19,6 +19,7 @@ import java.util.stream.Stream;
 
 import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
+import static java.util.Collections.singletonList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTable.WA_TASK_COMPLETION_FAMILY_PRL;
@@ -36,7 +37,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "issueAndSendToLocalCourtCallback",
                 "CASE_ISSUE",
-                asList(
+                singletonList(
                     Map.of(
                         "taskType", "checkApplication",
                         "completionMode", "Auto"
@@ -46,7 +47,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "fl401AddCaseNumber",
                 "CASE_ISSUE",
-                asList(
+                singletonList(
                     Map.of(
                         "taskType", "checkApplicationfl401",
                         "completionMode", "Auto"
@@ -56,7 +57,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "caseNumber",
                 "CASE_ISSUE",
-                asList(
+                singletonList(
                     Map.of(
                         "taskType", "addCaseNumber",
                         "completionMode", "Auto"
@@ -66,7 +67,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "returnApplication",
                 null,
-                asList(
+                singletonList(
                     Map.of(
                         "completionMode", "Auto"
                     )
@@ -75,7 +76,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "sendToGateKeeper",
                 "GATE_KEEPING",
-                asList(
+                singletonList(
                     Map.of(
                         "taskType", "caseNumber",
                         "completionMode", "Auto"
@@ -85,7 +86,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "serviceOfApplication",
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
-                asList(
+                singletonList(
                     Map.of(
                         "taskType", "sendToGateKeeper",
                         "completionMode", "Auto"
@@ -95,7 +96,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "manageOrders",
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
-                asList(
+                singletonList(
                     Map.of(
                         "taskType", "sendToGateKeeper",
                         "completionMode", "Auto"
@@ -123,7 +124,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "sendAndReplyToMessages",
                 null,
-                asList(
+                singletonList(
                     Map.of(
                         "taskType", "reviewOrder",
                         "completionMode", "Auto"
