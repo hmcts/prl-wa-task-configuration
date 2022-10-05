@@ -150,8 +150,8 @@ project.tasks['sonarqube'].dependsOn test, integration, jacocoTestReport
 
 sonarqube {
   properties {
-    property "sonar.projectName", "Reform :: prl-task-configuration"
-    property "sonar.projectKey", "uk.gov.hmcts.reform:prl-task-configuration"
+    property "sonar.projectName", "prl-wa-task-configuration"
+    property "sonar.projectKey", "prl-wa-task-configuration"
     property "sonar.coverage.jacoco.xmlReportPaths", "${jacocoTestReport.reports.xml.destination.path}"
     property "sonar.pitest.mode", "reuseReport"
     property "sonar.pitest.reportsDirectory", "build/reports/pitest"
@@ -225,8 +225,8 @@ repositories {
 }
 
 def versions = [
-  junit           : '5.7.2',
-  junitPlatform   : '1.7.2',
+  junit           : '5.9.0',
+  junitPlatform   : '1.9.0',
   reformLogging   : '5.1.7',
   springfoxSwagger: '2.9.2',
   camunda         : '7.15.0',
