@@ -12,13 +12,11 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
 
 import static java.util.Arrays.asList;
-import static java.util.Collections.emptyList;
 import static java.util.Collections.singletonList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -136,7 +134,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest(name = "event id: {0} post event state: {1}")
     @MethodSource("scenarioProvider")
-    void given_event_ids_should_evaluate_dmn(String eventId, String postEventState, List<Map<String, String>> expectation) {
+    void event_ids_should_evaluate_dmn(String eventId,String postEventState,List<Map<String, String>> expectation) {
 
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("eventId", eventId);
