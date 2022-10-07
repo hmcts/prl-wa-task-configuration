@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+  <decision id="wa-task-completion-family-prl" name="Task completion DMN">
+    <decisionTable id="DecisionTable_01re27m" hitPolicy="COLLECT">
+      <input id="eventId" label="Event ID" biodi:width="614">
+        <inputExpression id="LiteralExpression_1ngg489" typeRef="string">
+          <text>eventId</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0hnyifv" label="State" camunda:inputVariable="state">
+        <inputExpression id="LiteralExpression_1kasg0b" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Task Type" name="taskType" typeRef="string" biodi:width="282" />
+      <output id="OutputClause_1mldd9e" label="Completion Mode" name="completionMode" typeRef="string" />
+      <rule id="DecisionRule_12eenty">
+        <inputEntry id="UnaryTests_17cg7de">
+          <text>"issueAndSendToLocalCourtCallback"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o7q1f8">
+          <text>"CASE_ISSUE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lk4wxe">
+          <text>"checkApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ap1s9l">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1q8g2nu">
+        <inputEntry id="UnaryTests_0htkc9k">
+          <text>"fl401AddCaseNumber"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i5w5nu">
+          <text>"CASE_ISSUE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pxkm8l">
+          <text>"checkApplicationfl401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15mqpgr">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0x1cjp2">
+        <inputEntry id="UnaryTests_1bjqbmz">
+          <text>"caseNumber"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qj1u1s">
+          <text>"CASE_ISSUE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1g232ye">
+          <text>"addCaseNumber"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nx8xz4">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1v9cegc">
+        <inputEntry id="UnaryTests_1ckmgqx">
+          <text>"returnApplication"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a49p12">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11wnabl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0um7can">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0vuq3ym">
+        <inputEntry id="UnaryTests_025guv0">
+          <text>"sendToGateKeeper"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05ftjsg">
+          <text>"GATE_KEEPING"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03hy3xh">
+          <text>"caseNumber"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kdk8vs">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19m181l">
+        <inputEntry id="UnaryTests_1fa5tqp">
+          <text>"serviceOfApplication"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0my6yzt">
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15ivr9l">
+          <text>"sendToGateKeeper"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wfwufd">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ermjaa">
+        <inputEntry id="UnaryTests_10jbxe2">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hjwrgp">
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ej8jjr">
+          <text>"sendToGateKeeper"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0im41fd">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09abaxj">
+        <inputEntry id="UnaryTests_1tn1kfj">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02ec392">
+          <text>"CASE_HEARING"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1d3ub83">
+          <text>"produceHearingBundle"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rrt4am">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1aibb9e">
+        <inputEntry id="UnaryTests_1qgf71h">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06muxpj">
+          <text>"CASE_HEARING"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1cjnxd5">
+          <text>"gateKeeping"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fm3ljn">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0o92uh9">
+        <inputEntry id="UnaryTests_1f7l7or">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j57uil">
+          <text>"CASE_HEARING"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xushlk">
+          <text>"checkSolicitorOrderProvided"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0y7rujr">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_103goea">
+        <inputEntry id="UnaryTests_0su2akh">
+          <text>"sendAndReplyToMessages"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n7wce3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gfe3at">
+          <text>"reviewOrder"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11q8q8f">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="wa-task-completion-family-prl">
+        <dc:Bounds height="80" width="180" x="160" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

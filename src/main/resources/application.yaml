@@ -1,5 +1,5 @@
 server:
-  port: 4550
+  port: 4090
 
 management:
   endpoint:
@@ -13,4 +13,4 @@ management:
 
 spring:
   application:
-    name: ia-task-configuration
+    name: prl-wa-task-configuration

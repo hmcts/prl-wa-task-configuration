@@ -150,13 +150,13 @@ project.tasks['sonarqube'].dependsOn test, integration, jacocoTestReport
 
 sonarqube {
   properties {
-    property "sonar.projectName", "Reform :: ia-task-configuration"
-    property "sonar.projectKey", "uk.gov.hmcts.reform:ia-task-configuration"
+    property "sonar.projectName", "prl-wa-task-configuration"
+    property "sonar.projectKey", "prl-wa-task-configuration"
     property "sonar.coverage.jacoco.xmlReportPaths", "${jacocoTestReport.reports.xml.destination.path}"
     property "sonar.pitest.mode", "reuseReport"
     property "sonar.pitest.reportsDirectory", "build/reports/pitest"
-    property "sonar.exclusions", "src/main/java/uk/gov/hmcts/reform/iataskconfiguration/config/**," +
-      "src/main/java/uk/gov/hmcts/reform/iataskconfiguration/Application.java"
+    property "sonar.exclusions", "src/main/java/uk/gov/hmcts/reform/prl/taskconfiguration/config/**," +
+      "src/main/java/uk/gov/hmcts/reform/prl/taskconfiguration/Application.java"
   }
 }
 
@@ -288,11 +288,11 @@ dependencies {
   smokeTestImplementation sourceSets.main.runtimeClasspath
 }
 
-mainClassName = 'uk.gov.hmcts.reform.iataskconfiguration.Application'
+mainClassName = 'uk.gov.hmcts.reform.prl.taskconfiguration.Application'
 
 bootJar {
   getArchiveFileName().set(provider {
-    'ia-task-configuration.jar'
+    'prl-task-configuration.jar'
   })
 
   manifest {
