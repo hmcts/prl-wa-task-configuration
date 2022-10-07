@@ -209,12 +209,12 @@
         <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_0tzrow3">
           <text>"checkApplication",
-"checkApplicationfl401"
+"checkApplicationfl401",
 "addCaseNumber",
 "sendToGateKeeper",
 "serveApplication",
 "checkSolicitorOrderProvided",
-"produceHearingBundle"
+"produceHearingBundle",
 "serveOrder",
 "createJudicialOrder",
 "reviewCorrespondence"</text>
