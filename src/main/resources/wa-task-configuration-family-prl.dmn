@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
-  <decision id="wa-task-configuration-ia-asylum" name="Task configuration DMN">
+  <decision id="wa-task-configuration-family-prl" name="Task configuration DMN">
     <decisionTable id="DecisionTable_14cx079" hitPolicy="COLLECT">
       <input id="InputClause_1gxyo7f" label="CCD Case Data" camunda:inputVariable="caseData">
         <inputExpression id="LiteralExpression_0mra7c4" typeRef="string">
@@ -9,12 +9,7 @@
       </input>
       <input id="InputClause_1gmuynt" label="Task type" biodi:width="415" camunda:inputVariable="taskType">
         <inputExpression id="LiteralExpression_06iiuqg" typeRef="string">
-          <text>if(taskAttributes != null and taskAttributes.taskType != null) then
-                        taskAttributes. taskType
-                        else if(taskType != null) then
-                        taskType
-                        else
-                        null
+          <text>
                     </text>
         </inputExpression>
       </input>
@@ -82,9 +77,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1y3kj1v">
-          <text>"checkApplication",
-"checkApplicationfl401", 
-“addCaseNumber”,                    </text>
+          <text>“checkApplication",“checkApplicationfl401",“addCaseNumber"               </text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0rvgay2">
           <text>"workType"</text>
@@ -98,8 +91,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gm06lg">
-          <text>"gateKeeping",
-"createJudicialOrder,</text>
+          <text>“gateKeeping",“createJudicialOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0omxasv">
           <text>"workType"</text>
@@ -113,7 +105,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ps3x4j">
-          <text>"produceHearingBundle"</text>
+          <text>“produceHearingBundle"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0c3eia6">
           <text>"workType"</text>
@@ -127,15 +119,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0uoqs4p">
-          <text>"checkApplication",
-"checkApplicationfl401",
-"addCaseNumber",
-"sendToGateKeeper",
-"gateKeeping",
-"checkSolicitorOrderProvided",
-"serveOrder",
-"reviewCorrespondence",
-"reviewCorrespondencyByJudiciary"</text>
+          <text>“checkApplication",“checkApplicationfl401",“addCaseNumber",“sendToGateKeeper",“gateKeeping",“checkSolicitorOrderProvided",“serveOrder",“reviewCorrespondence",“reviewCorrespondencyByJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1qi2rsb">
           <text>"workType"</text>
@@ -149,24 +133,13 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0bo2i9w">
-          <text>checkApplication",
-"checkApplicationfl401",
-"addCaseNumber",
-"sendToGateKeeper",
-"gateKeeping",
-"serviceOfApplication",
-"checkSolicitorOrderProvided",
-"produceHearingBundle"
-"createJudicialOrder",
-"serveOrder",
-"reviewCorrespondence",
-"reviewSpecificAccessRequestAdmin"</text>
+          <text>“checkApplication",“checkApplicationfl401",“addCaseNumber",“sendToGateKeeper",“gateKeeping",“serviceOfApplication",“checkSolicitorOrderProvided",“produceHearingBundle""createJudicialOrder",“serveOrder",“reviewCorrespondence",“reviewSpecificAccessRequestAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lyoqjj">
           <text>"role_Category"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1m3e4ko">
-          <text>	
+          <text>
 
 "ADMIN"</text>
         </outputEntry>
@@ -176,9 +149,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_04wtfxs">
-          <text>"reviewOder",
-"reviewSpecificAccessRequestJudiciary",
-"createJudicialOrder"</text>
+          <text>“reviewOder",“reviewSpecificAccessRequestJudiciary",“createJudicialOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ywf3hm">
           <text>"role_Category"</text>
@@ -192,9 +163,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_10f3uas">
-          <text>"gateKeeping",
-"reviewCorrespondencyByJudiciary",
-"reviewSpecificAccessRequestLegalOps"</text>
+          <text>“gateKeeping",“reviewCorrespondencyByJudiciary",“reviewSpecificAccessRequestLegalOps"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_05l5bvs">
           <text>"roleCategory"</text>
@@ -208,7 +177,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_15ftuu0">
-          <text>"reviewSpecificAccessRequestJudiciary", "reviewSpecificAccessRequestLegalOps", "reviewSpecificAccessRequestAdmin"</text>
+          <text>“reviewSpecificAccessRequestJudiciary",“reviewSpecificAccessRequestLegalOps",“reviewSpecificAccessRequestAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_15nowth">
           <text>"workType"</text>
@@ -222,14 +191,13 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1hpq8zy">
-          <text>"checkApplication"</text>
+          <text>“checkApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0omo7uu">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1iaoi95">
-          <text>taskAttributes.taskName
-URL = ""</text>
+          <text>taskAttributes.taskName</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0sbbgct">
@@ -237,14 +205,13 @@ URL = ""</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ly0n3y">
-          <text>"addCaseNumber"</text>
+          <text>“addCaseNumber"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1jq8aj3">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ss14pz">
-          <text>taskAttributes.taskName
-URL = ""</text>
+          <text>taskAttributes.taskName</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1waof6r">
@@ -252,14 +219,13 @@ URL = ""</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_116iaj9">
-          <text>"sendToGateKeeper"</text>
+          <text>“sendToGateKeeper"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1826xtq">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_17w7a73">
-          <text>taskAttributes.taskName
-URL = ""</text>
+          <text>taskAttributes.taskName</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1tpi99q">
@@ -267,14 +233,13 @@ URL = ""</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qk9sfm">
-          <text>"gateKeeping"</text>
+          <text>“gateKeeping"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ezdmgy">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1vexerb">
-          <text>taskAttributes.taskName
-URL = ""</text>
+          <text>taskAttributes.taskName</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_162onvy">
@@ -282,14 +247,13 @@ URL = ""</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_160ck6w">
-          <text>"serviceOfApplication"</text>
+          <text>“serviceOfApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0oob6k6">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0qw8wks">
-          <text>taskAttributes.taskName
-URL = ""</text>
+          <text>taskAttributes.taskName</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_06bv594">
@@ -297,14 +261,13 @@ URL = ""</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0x05n68">
-          <text>"checkSolicitorOrderProvided"</text>
+          <text>“checkSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1u4pgvz">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0lanhsm">
-          <text>taskAttributes.taskName
-URL = ""</text>
+          <text>taskAttributes.taskName</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_15fnxnz">
@@ -312,14 +275,13 @@ URL = ""</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0fbx96p">
-          <text>"produceHearingBundle"</text>
+          <text>“produceHearingBundle"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_10zi0rl">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02svkjv">
-          <text>taskAttributes.taskName
-URL = ""</text>
+          <text>taskAttributes.taskName</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1cv5x30">
@@ -327,14 +289,13 @@ URL = ""</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ikc92j">
-          <text>"createJudicialOrder"</text>
+          <text>“createJudicialOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0pime5f">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1yvppje">
-          <text>taskAttributes.taskName
-URL = ""</text>
+          <text>taskAttributes.taskName</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_12qwclg">
@@ -342,14 +303,13 @@ URL = ""</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0d21hw5">
-          <text>"reviewOder"</text>
+          <text>“reviewOder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1oxy3n9">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0njo055">
-          <text>taskAttributes.taskName
-URL = ""</text>
+          <text>taskAttributes.taskName</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_13hrfv7">
@@ -357,14 +317,13 @@ URL = ""</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gyeo27">
-          <text>"serveOder"</text>
+          <text>“serveOder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vtp9ip">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1jtn07q">
-          <text>taskAttributes.taskName
-URL = ""</text>
+          <text>taskAttributes.taskName</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0qqvs82">
@@ -372,14 +331,13 @@ URL = ""</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1agpx04">
-          <text>"reviewCorrespondence"</text>
+          <text>“reviewCorrespondence"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0w3c7s8">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ko7l9u">
-          <text>taskAttributes.taskName
-URL = ""</text>
+          <text>taskAttributes.taskName</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1dlaqje">
@@ -387,14 +345,14 @@ URL = ""</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1wnq1k8">
-          <text>"reviewCorrespondencyByJudiciary"</text>
+          <text>“reviewCorrespondencyByJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0j3y66k">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03lybek">
           <text>taskAttributes.taskName
-URL = ""</text>
+</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1qwkbxz">
@@ -415,7 +373,7 @@ URL = ""</text>
   </decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DMNDiagram_1ifewa3">
-      <dmndi:DMNShape id="DMNShape_0ijg0or" dmnElementRef="wa-task-configuration-ia-asylum">
+      <dmndi:DMNShape id="DMNShape_0ijg0or" dmnElementRef="wa-task-configuration-family-prl">
         <dc:Bounds height="80" width="180" x="150" y="80" />
       </dmndi:DMNShape>
     </dmndi:DMNDiagram>

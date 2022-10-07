@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
-  <decision id="wa-task-initiation-ia-asylum" name="Task initiation DMN">
+  <decision id="wa-task-initiation-family-prl" name="Task initiation DMN">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="319" camunda:inputVariable="eventId">
         <inputExpression id="InputExpression_1" typeRef="string">
@@ -12,23 +12,18 @@
           <text></text>
         </inputExpression>
       </input>
-      <input id="InputClause_0a0i7vo" label="caseTypeOfApplication" biodi:width="150" camunda:inputVariable="appealType">
+      <input id="InputClause_0a0i7vo" label="Case Type of Application" biodi:width="230" camunda:inputVariable="caseTypeOfApplication">
         <inputExpression id="LiteralExpression_18qwedg" typeRef="string">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.appealType
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.caseTypeOfApplication
             != null) then
-            additionalData.Data.appealType
+            additionalData.Data.caseTypeOfApplication
             else
-            null
-          </text>
+            caseTypeOfApplication</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0cdowsz" label="Parties" camunda:inputVariable="journeyType">
+      <input id="InputClause_0cdowsz" label="Parties" camunda:inputVariable="parties">
         <inputExpression id="LiteralExpression_1ojl2ef" typeRef="string">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.journeyType
-            != null) then
-            additionalData.Data.journeyType
-            else
-            null</text>
+          <text></text>
         </inputExpression>
       </input>
       <output id="Output_1" label="Task Id" name="taskId" typeRef="string" biodi:width="368" />
@@ -79,7 +74,7 @@
           <text>-</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_14cvrmv">
-          <text>checkApplicationfl401</text>
+          <text>"checkApplicationfl401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_167wbm7">
           <text>"Check application"</text>
@@ -330,7 +325,7 @@
       </rule>
       <rule id="DecisionRule_0qqyq8g">
         <inputEntry id="UnaryTests_0wdq701">
-          <text>"manageOrders"</text>
+          <text>"sendToAdmin"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0lwlzt9">
           <text>"CASE_HEARING"</text>
@@ -421,7 +416,7 @@
   </decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DMNDiagram_0b2rkcb">
-      <dmndi:DMNShape id="DMNShape_0wc7glt" dmnElementRef="wa-task-initiation-ia-asylum">
+      <dmndi:DMNShape id="DMNShape_0wc7glt" dmnElementRef="wa-task-initiation-family-prl">
         <dc:Bounds height="80" width="180" x="150" y="80" />
       </dmndi:DMNShape>
     </dmndi:DMNDiagram>

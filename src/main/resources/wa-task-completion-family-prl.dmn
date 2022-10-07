@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
-  <decision id="wa-task-completion-ia-asylum" name="Task completion DMN">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+  <decision id="wa-task-completion-family-prl" name="Task completion DMN">
     <decisionTable id="DecisionTable_01re27m" hitPolicy="COLLECT">
       <input id="eventId" label="Event ID" biodi:width="614">
         <inputExpression id="LiteralExpression_1ngg489" typeRef="string">
           <text>eventId</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0hnyifv" label="State">
+      <input id="InputClause_0hnyifv" label="State" camunda:inputVariable="state">
         <inputExpression id="LiteralExpression_1kasg0b" typeRef="string">
           <text></text>
         </inputExpression>
@@ -61,10 +61,10 @@
           <text>"returnApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0a49p12">
-          <text>*</text>
+          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_11wnabl">
-          <text>*</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0um7can">
           <text>"Auto"</text>
@@ -112,6 +112,20 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_09abaxj">
+        <inputEntry id="UnaryTests_1tn1kfj">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02ec392">
+          <text>"CASE_HEARING"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1d3ub83">
+          <text>"produceHearingBundle"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rrt4am">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1aibb9e">
         <inputEntry id="UnaryTests_1qgf71h">
           <text>"manageOrders"</text>
@@ -123,20 +137,6 @@
           <text>"gateKeeping"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0fm3ljn">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_19ss4q7">
-        <inputEntry id="UnaryTests_013vo07">
-          <text>"manageOrders"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1xgkor3">
-          <text>"CASE_HEARING"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_18245xl">
-          <text>"produceHearingBundle"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0mtu3yn">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
@@ -159,7 +159,7 @@
           <text>"sendAndReplyToMessages"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1n7wce3">
-          <text>*</text>
+          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0gfe3at">
           <text>"reviewOrder"</text>
@@ -168,39 +168,11 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_138f5n0">
-        <inputEntry id="UnaryTests_183z4k1">
-          <text>"manageOrders"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_14dplry">
-          <text>*</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_19lhpk1">
-          <text>"serveOrder"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0ygfnw4">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1prmser">
-        <inputEntry id="UnaryTests_18tspr7">
-          <text>"manageOrders"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_15oa75d">
-          <text>*</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1sj8ke0">
-          <text>"createJudicialOrder"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1u4vzfc">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
-      <dmndi:DMNShape dmnElementRef="wa-task-completion-ia-asylum">
+      <dmndi:DMNShape dmnElementRef="wa-task-completion-family-prl">
         <dc:Bounds height="80" width="180" x="160" y="80" />
       </dmndi:DMNShape>
     </dmndi:DMNDiagram>
