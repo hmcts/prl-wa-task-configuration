@@ -145,21 +145,6 @@ pitest {
 
 project.tasks['pitest'].group = "Verification"
 
-
-project.tasks['sonarqube'].dependsOn test, integration, jacocoTestReport
-
-sonarqube {
-  properties {
-    property "sonar.projectName", "prl-wa-task-configuration"
-    property "sonar.projectKey", "prl-wa-task-configuration"
-    property "sonar.coverage.jacoco.xmlReportPaths", "${jacocoTestReport.reports.xml.destination.path}"
-    property "sonar.pitest.mode", "reuseReport"
-    property "sonar.pitest.reportsDirectory", "build/reports/pitest"
-    property "sonar.exclusions", "src/main/java/uk/gov/hmcts/reform/prl/taskconfiguration/config/**," +
-      "src/main/java/uk/gov/hmcts/reform/prl/taskconfiguration/Application.java"
-  }
-}
-
 // before committing a change, make sure task still works
 dependencyUpdates {
   def isNonStable = { String version ->
