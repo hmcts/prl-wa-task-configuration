@@ -28,7 +28,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
 
     @BeforeAll
     public static void initialization() {
-        CURRENT_DMN_DECISION_TABLE = DmnDecisionTable.WA_TASK_INITIATION_FAMILY_PRL;
+        CURRENT_DMN_DECISION_TABLE = DmnDecisionTable.WA_TASK_INITIATION;
     }
 
     @Test

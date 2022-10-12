@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 import static org.hamcrest.CoreMatchers.is;
-import static uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTable.WA_TASK_PERMISSIONS_FAMILY_PRL;
+import static uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTable.WA_TASK_PERMISSION;
 
 class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
 
@@ -76,7 +76,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
 
     @BeforeAll
     public static void initialization() {
-        CURRENT_DMN_DECISION_TABLE = WA_TASK_PERMISSIONS_FAMILY_PRL;
+        CURRENT_DMN_DECISION_TABLE = WA_TASK_PERMISSION;
     }
 
     public static Stream<Arguments> genericScenarioProvider() {

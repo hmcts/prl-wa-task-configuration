@@ -20,13 +20,13 @@ import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTable.WA_TASK_COMPLETION_FAMILY_PRL;
+import static uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTable.WA_TASK_COMPLETION;
 
 class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
 
     @BeforeAll
     public static void initialization() {
-        CURRENT_DMN_DECISION_TABLE = WA_TASK_COMPLETION_FAMILY_PRL;
+        CURRENT_DMN_DECISION_TABLE = WA_TASK_COMPLETION;
     }
 
     static Stream<Arguments> scenarioProvider() {
