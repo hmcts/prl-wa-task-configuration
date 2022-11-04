@@ -4,11 +4,11 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum DmnDecisionTable {
 
-    WA_TASK_CANCEL("wa-task-cancellation-family-prl", "wa-task-cancellation-privatelaw-prlapps.dmn"),
-    WA_TASK_COMPLETION("wa-task-completion-family-prl", "wa-task-completion-privatelaw-prlapps.dmn"),
-    WA_TASK_CONFIGS("wa-task-configuration-family-prl", "wa-task-configuration-privatelaw-prlapps.dmn"),
-    WA_TASK_INITIATION("wa-task-initiation-family-prl", "wa-task-initiation-privatelaw-prlapps.dmn"),
-    WA_TASK_PERMISSION("wa-task-permissions-family-prl", "wa-task-permissions-privatelaw-prlapps.dmn");
+    WA_TASK_CANCEL("wa-task-cancellation-privatelaw-prlapps", "wa-task-cancellation-privatelaw-prlapps.dmn"),
+    WA_TASK_COMPLETION("wa-task-completion-privatelaw-prlapps", "wa-task-completion-privatelaw-prlapps.dmn"),
+    WA_TASK_CONFIGS("wa-task-configuration-privatelaw-prlapps", "wa-task-configuration-privatelaw-prlapps.dmn"),
+    WA_TASK_INITIATION("wa-task-initiation-privatelaw-prlapps", "wa-task-initiation-privatelaw-prlapps.dmn"),
+    WA_TASK_PERMISSION("wa-task-permissions-privatelaw-prlapps", "wa-task-permissions-privatelaw-prlapps.dmn");
 
 
     @JsonValue
