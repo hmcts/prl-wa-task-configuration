@@ -3,7 +3,7 @@
 @Library('Infrastructure')
 
 def type = "java"
-def product = "privatelaw"
+def product = "prl"
 def component = "task-configuration"
 def s2sServiceName = "wa_camunda_pipeline_upload"
 def tenantId = "privatelaw"
