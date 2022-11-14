@@ -166,11 +166,10 @@
           <text>“checkApplication",“checkApplicationfl401",“addCaseNumber",“sendToGateKeeper",“gateKeeping",“serviceOfApplication",“checkSolicitorOrderProvided",“produceHearingBundle""createJudicialOrder",“serveOrder",“reviewCorrespondence",“reviewSpecificAccessRequestAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lyoqjj">
-          <text>"role_Category"</text>
+          <text>"roleCategory"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1m3e4ko">
           <text>
-
 "ADMIN"</text>
         </outputEntry>
       </rule>
@@ -182,7 +181,7 @@
           <text>“reviewOder",“reviewSpecificAccessRequestJudiciary",“createJudicialOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ywf3hm">
-          <text>"role_Category"</text>
+          <text>"roleCategory"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0jcwzi7">
           <text>"JUDICIAL"</text>
