@@ -9,8 +9,7 @@
       </input>
       <input id="InputClause_1gmuynt" label="Task type" biodi:width="415" camunda:inputVariable="taskType">
         <inputExpression id="LiteralExpression_06iiuqg" typeRef="string">
-          <text>
-                    </text>
+          <text></text>
         </inputExpression>
       </input>
       <output id="Output_1" label="Name" name="name" typeRef="string" />
@@ -37,11 +36,10 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0selern">
-          <text>"caseTypeOfApplication"</text>
+          <text>"caseManagementCategory"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0t707ev">
-          <text>caseData.caseTypeOfApplication
-                    </text>
+          <text>if (caseData.caseManagementCategory !=null  then caseData.caseManagementCategory else ""</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0r3u9cf">
@@ -55,7 +53,25 @@
           <text>"location"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_05korws">
-          <text>caseData.courtid</text>
+          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.baseLocation !=
+                        null) then
+                        caseData.caseManagementLocation.baseLocation else "632407"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1un90jh">
+        <inputEntry id="UnaryTests_1g6zprh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14a7isb">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ff5q67">
+          <text>"region"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lgc40a">
+          <text> if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.region != null)
+                        then
+                        caseData.caseManagementLocation.region else "1"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1oirne1">
@@ -70,6 +86,20 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0xp4dc7">
           <text>caseData.courtName                    </text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xb8v6r">
+        <inputEntry id="UnaryTests_1d4vxet">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ohqyt5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ueso4z">
+          <text>"appealType"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ixwok5">
+          <text>if caseData.appealType !=null then caseData.appealType else ""</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ikmf14">
@@ -184,6 +214,21 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1cn9cb2">
           <text>"access_requests"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0uylw5t">
+        <inputEntry id="UnaryTests_1vjr4x3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fz2goy">
+          <text>“reviewSpecificAccessRequestJudiciary",“reviewSpecificAccessRequestLegalOps",“reviewSpecificAccessRequestAdmin"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01izsdw">
+          <text>"additionalProperties_roleAssignmentId"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ont4a5">
+          <text>if (taskAttributes != null and taskAttributes.roleAssignmentId != null) then taskAttributes.roleAssignmentId
+else "1234"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1lny4x5">
@@ -353,20 +398,6 @@
         <outputEntry id="LiteralExpression_03lybek">
           <text>taskAttributes.taskName
 </text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1qwkbxz">
-        <inputEntry id="UnaryTests_0ewjvgh">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0h5ieae">
-          <text>-</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1x52vpo">
-          <text>"region"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1kf0r5v">
-          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
