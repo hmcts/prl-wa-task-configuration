@@ -107,7 +107,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1y3kj1v">
-          <text>“checkApplication",“checkApplicationfl401",“addCaseNumber"               </text>
+          <text>"checkApplication","checkApplicationfl401","addCaseNumber"               </text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0rvgay2">
           <text>"workType"</text>
@@ -121,7 +121,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gm06lg">
-          <text>“gateKeeping",“createJudicialOrder"</text>
+          <text>"gateKeeping","createJudicialOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0omxasv">
           <text>"workType"</text>
@@ -149,7 +149,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0uoqs4p">
-          <text>“checkApplication",“checkApplicationfl401",“addCaseNumber",“sendToGateKeeper",“gateKeeping",“checkSolicitorOrderProvided",“serveOrder",“reviewCorrespondence",“reviewCorrespondencyByJudiciary"</text>
+          <text>"checkApplication","checkApplicationfl401","addCaseNumber","sendToGateKeeper","gateKeeping","checkSolicitorOrderProvided","serveOrder","reviewCorrespondence","reviewCorrespondencyByJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1qi2rsb">
           <text>"workType"</text>
@@ -163,7 +163,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0bo2i9w">
-          <text>“checkApplication",“checkApplicationfl401",“addCaseNumber",“sendToGateKeeper",“gateKeeping",“serviceOfApplication",“checkSolicitorOrderProvided",“produceHearingBundle""createJudicialOrder",“serveOrder",“reviewCorrespondence",“reviewSpecificAccessRequestAdmin"</text>
+          <text>"checkApplication","checkApplicationfl401","addCaseNumber","sendToGateKeeper","gateKeeping","serviceOfApplication","checkSolicitorOrderProvided","produceHearingBundle","createJudicialOrder","serveOrder","reviewCorrespondence","reviewSpecificAccessRequestAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lyoqjj">
           <text>"roleCategory"</text>
@@ -178,7 +178,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_04wtfxs">
-          <text>“reviewOder",“reviewSpecificAccessRequestJudiciary",“createJudicialOrder"</text>
+          <text>"reviewOder","reviewSpecificAccessRequestJudiciary","createJudicialOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ywf3hm">
           <text>"roleCategory"</text>
@@ -192,7 +192,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_10f3uas">
-          <text>“gateKeeping",“reviewCorrespondencyByJudiciary",“reviewSpecificAccessRequestLegalOps"</text>
+          <text>"gateKeeping","reviewCorrespondencyByJudiciary","reviewSpecificAccessRequestLegalOps"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_05l5bvs">
           <text>"roleCategory"</text>
@@ -206,7 +206,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_15ftuu0">
-          <text>“reviewSpecificAccessRequestJudiciary",“reviewSpecificAccessRequestLegalOps",“reviewSpecificAccessRequestAdmin"</text>
+          <text>"reviewSpecificAccessRequestJudiciary","reviewSpecificAccessRequestLegalOps","reviewSpecificAccessRequestAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_15nowth">
           <text>"workType"</text>
@@ -220,7 +220,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0fz2goy">
-          <text>“reviewSpecificAccessRequestJudiciary",“reviewSpecificAccessRequestLegalOps",“reviewSpecificAccessRequestAdmin"</text>
+          <text>"reviewSpecificAccessRequestJudiciary","reviewSpecificAccessRequestLegalOps","reviewSpecificAccessRequestAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_01izsdw">
           <text>"additionalProperties_roleAssignmentId"</text>
@@ -235,7 +235,7 @@ else "1234"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1hpq8zy">
-          <text>“checkApplication"</text>
+          <text>"checkApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0omo7uu">
           <text>"description"</text>
@@ -249,7 +249,7 @@ else "1234"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ly0n3y">
-          <text>“addCaseNumber"</text>
+          <text>"addCaseNumber"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1jq8aj3">
           <text>"description"</text>
@@ -263,7 +263,7 @@ else "1234"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_116iaj9">
-          <text>“sendToGateKeeper"</text>
+          <text>"sendToGateKeeper"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1826xtq">
           <text>"description"</text>
@@ -277,7 +277,7 @@ else "1234"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qk9sfm">
-          <text>“gateKeeping"</text>
+          <text>"gateKeeping"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ezdmgy">
           <text>"description"</text>
@@ -291,7 +291,7 @@ else "1234"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_160ck6w">
-          <text>“serviceOfApplication"</text>
+          <text>"serviceOfApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0oob6k6">
           <text>"description"</text>
@@ -305,7 +305,7 @@ else "1234"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0x05n68">
-          <text>“checkSolicitorOrderProvided"</text>
+          <text>"checkSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1u4pgvz">
           <text>"description"</text>
@@ -319,7 +319,7 @@ else "1234"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0fbx96p">
-          <text>“produceHearingBundle"</text>
+          <text>"produceHearingBundle"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_10zi0rl">
           <text>"description"</text>
@@ -333,7 +333,7 @@ else "1234"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ikc92j">
-          <text>“createJudicialOrder"</text>
+          <text>"createJudicialOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0pime5f">
           <text>"description"</text>
@@ -347,7 +347,7 @@ else "1234"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0d21hw5">
-          <text>“reviewOder"</text>
+          <text>"reviewOder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1oxy3n9">
           <text>"description"</text>
@@ -361,7 +361,7 @@ else "1234"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gyeo27">
-          <text>“serveOder"</text>
+          <text>"serveOder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vtp9ip">
           <text>"description"</text>
@@ -375,7 +375,7 @@ else "1234"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1agpx04">
-          <text>“reviewCorrespondence"</text>
+          <text>"reviewCorrespondence"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0w3c7s8">
           <text>"description"</text>
@@ -389,7 +389,7 @@ else "1234"</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1wnq1k8">
-          <text>“reviewCorrespondencyByJudiciary"</text>
+          <text>"reviewCorrespondencyByJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0j3y66k">
           <text>"description"</text>
