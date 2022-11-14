@@ -25,7 +25,7 @@
           <text>"caseName"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_06tqng3">
-          <text>caseData.applicantCaseName</text>
+          <text>if caseData.applicantCaseName != null then caseData.applicantCaseName else "Sathish Kannan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0oagl97">
@@ -244,6 +244,20 @@ else "1234"</text>
           <text>taskAttributes.name</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0buo2ys">
+        <inputEntry id="UnaryTests_19a7q56">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d9wpk9">
+          <text>"checkApplicationfl401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1403bvw">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ose5gu">
+          <text>taskAttributes.name</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0sbbgct">
         <inputEntry id="UnaryTests_17ip7tf">
           <text></text>
@@ -397,6 +411,48 @@ else "1234"</text>
         <outputEntry id="LiteralExpression_03lybek">
           <text>taskAttributes.name
 </text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bnpf7m">
+        <inputEntry id="UnaryTests_1phlg8r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m39e3o">
+          <text>"reviewSpecificAccessRequestJudiciary"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ryikeo">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_156dmae">
+          <text>taskAttributes.name</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1s5y6qc">
+        <inputEntry id="UnaryTests_0gapt7f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_028ij0u">
+          <text>"reviewSpecificAccessRequestLegalOps"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16z6wmo">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ahxflt">
+          <text>taskAttributes.name</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18mf9r3">
+        <inputEntry id="UnaryTests_08a6bru">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q7i3ai">
+          <text>"reviewSpecificAccessRequestAdmin"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1h4616x">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m3jwfg">
+          <text>taskAttributes.name</text>
         </outputEntry>
       </rule>
     </decisionTable>
