@@ -242,7 +242,7 @@ else "1234"</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1iaoi95">
-          <text>taskAttributes.taskName</text>
+          <text>taskAttributes.name</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0sbbgct">
@@ -256,7 +256,7 @@ else "1234"</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ss14pz">
-          <text>taskAttributes.taskName</text>
+          <text>taskAttributes.name</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1waof6r">
@@ -270,7 +270,7 @@ else "1234"</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_17w7a73">
-          <text>taskAttributes.taskName</text>
+          <text>taskAttributes.name</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1tpi99q">
@@ -284,7 +284,7 @@ else "1234"</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1vexerb">
-          <text>taskAttributes.taskName</text>
+          <text>taskAttributes.name</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_162onvy">
@@ -298,7 +298,7 @@ else "1234"</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0qw8wks">
-          <text>taskAttributes.taskName</text>
+          <text>taskAttributes.name</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_06bv594">
@@ -312,7 +312,7 @@ else "1234"</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0lanhsm">
-          <text>taskAttributes.taskName</text>
+          <text>taskAttributes.name</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_15fnxnz">
@@ -326,7 +326,7 @@ else "1234"</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02svkjv">
-          <text>taskAttributes.taskName</text>
+          <text>taskAttributes.name</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1cv5x30">
@@ -340,7 +340,7 @@ else "1234"</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1yvppje">
-          <text>taskAttributes.taskName</text>
+          <text>taskAttributes.name</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_12qwclg">
@@ -354,7 +354,7 @@ else "1234"</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0njo055">
-          <text>taskAttributes.taskName</text>
+          <text>taskAttributes.name</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_13hrfv7">
@@ -368,7 +368,7 @@ else "1234"</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1jtn07q">
-          <text>taskAttributes.taskName</text>
+          <text>taskAttributes.name</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0qqvs82">
@@ -382,7 +382,7 @@ else "1234"</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ko7l9u">
-          <text>taskAttributes.taskName</text>
+          <text>taskAttributes.name</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1dlaqje">
@@ -396,7 +396,7 @@ else "1234"</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03lybek">
-          <text>taskAttributes.taskName
+          <text>taskAttributes.name
 </text>
         </outputEntry>
       </rule>

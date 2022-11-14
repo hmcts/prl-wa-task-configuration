@@ -18,7 +18,7 @@
             != null) then
             additionalData.Data.caseTypeOfApplication
             else
-            caseTypeOfApplication</text>
+            ""</text>
         </inputExpression>
       </input>
       <input id="InputClause_0cdowsz" label="Parties" camunda:inputVariable="parties">
