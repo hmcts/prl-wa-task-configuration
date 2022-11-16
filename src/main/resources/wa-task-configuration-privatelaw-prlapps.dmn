@@ -25,7 +25,7 @@
           <text>"caseName"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_06tqng3">
-          <text>if caseData.applicantCaseName != null then caseData.applicantCaseName else "Sathish Kannan"</text>
+          <text>if caseData.applicantCaseName !=null then caseData.applicantCaseName else "Sathish Kannan"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0oagl97">
@@ -85,7 +85,7 @@
           <text>"locationName"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xp4dc7">
-          <text>caseData.courtName                    </text>
+          <text>if caseData.courtName !=null then caseData.courtName else ""</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0xb8v6r">
