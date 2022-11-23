@@ -52,36 +52,6 @@
           <text>false</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0hquso8">
-        <description>Admin task permissions</description>
-        <inputEntry id="UnaryTests_0k9c8di">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_09282qm">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1127hta">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1yf4x22">
-          <text>"hmcts-admin"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1mrjiss">
-          <text>"Read, Own, Manage, Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0c1qhm9">
-          <text>"ADMIN"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1u8852c">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_12xxsbr">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0h1n3be">
-          <text>false</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0ivpl63">
         <description>Judicial task permissions</description>
         <inputEntry id="UnaryTests_155q736">

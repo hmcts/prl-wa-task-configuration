@@ -29,14 +29,14 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     );
     private static final Map<String, Serializable> judgeOne = Map.of(
         "autoAssignable", false,
-        "name", "Judge",
+        "name", "hmcts-judiciary",
         "roleCategory", "JUDICIAL",
         "value", "Read, Own, Manage, Cancel",
         "authorisations","315"
     );
     private static final Map<String, Serializable> judgeTwo = Map.of(
-        "autoAssignable", false,
-        "name", "Judge",
+        "autoAssignable", true,
+        "name", "hmcts-judiciary",
         "roleCategory", "JUDICIAL",
         "value", "Read, Own",
         "authorisations","315"
@@ -48,29 +48,28 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "value", "Read, Own, Manage, Cancel"
     );
     private static final Map<String, Serializable> seniorTribunalCaseworker = Map.of(
-        "autoAssignable", false,
+        "autoAssignable", true,
         "name", "senior-tribunal-caseworker",
         "roleCategory", "LEGAL_OPERATIONS",
         "value", "Read, Own"
     );
     private static final Map<String, Serializable> ctscTeamLeader = Map.of(
-        "autoAssignable", false,
+        "autoAssignable", true,
         "name", "ctsc-team-leader",
         "roleCategory", "ADMIN",
         "value", "Read, Own"
     );
-    private static final Map<String, Serializable> ctsc = Map.of(
-        "autoAssignable", false,
-        "name", "ctsc",
+    private static final Map<String, Serializable> teamLeader = Map.of(
+        "autoAssignable", true,
+        "name", "hearing-centre-team-leader",
         "roleCategory", "ADMIN",
         "value", "Read, Manage, Cancel"
     );
-    private static final Map<String, Serializable> hearingJudgePriorityOne = Map.of(
-        "autoAssignable", false,
-        "assignmentPriority", 1,
-        "name", "hearing-judge",
-        "roleCategory", "JUDICIAL",
-        "value", "Read,Refer,Own,Cancel"
+    private static final Map<String, Serializable> teamAdmin = Map.of(
+        "autoAssignable", true,
+        "name", "hearing-centre-admin",
+        "roleCategory", "ADMIN",
+        "value", "Read, Own, Manage, Cancel"
     );
 
 
@@ -114,7 +113,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     taskSupervisor,
                     judgeOne,
-                    ctsc
+                    teamLeader,
+                    teamAdmin
                 )
             )
 
@@ -252,10 +252,15 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "value", "Read,Manage,Cancel",
                 "autoAssignable", false
             ), Map.of(
-                "autoAssignable", false,
-                "name", "ctsc",
+                "autoAssignable", true,
+                "name", "hearing-centre-team-leader",
                 "roleCategory", "ADMIN",
                 "value", "Read, Manage, Cancel"
+            ), Map.of(
+                "autoAssignable", true,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read, Own, Manage, Cancel"
             )
         )));
     }
