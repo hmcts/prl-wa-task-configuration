@@ -29,14 +29,14 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     );
     private static final Map<String, Serializable> judgeOne = Map.of(
         "autoAssignable", false,
-        "name", "hmcts-judiciary",
+        "name", "judge",
         "roleCategory", "JUDICIAL",
         "value", "Read, Own, Manage, Cancel",
         "authorisations","315"
     );
     private static final Map<String, Serializable> judgeTwo = Map.of(
-        "autoAssignable", true,
-        "name", "hmcts-judiciary",
+        "autoAssignable", false,
+        "name", "judge",
         "roleCategory", "JUDICIAL",
         "value", "Read, Own",
         "authorisations","315"
@@ -48,25 +48,25 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "value", "Read, Own, Manage, Cancel"
     );
     private static final Map<String, Serializable> seniorTribunalCaseworker = Map.of(
-        "autoAssignable", true,
+        "autoAssignable", false,
         "name", "senior-tribunal-caseworker",
         "roleCategory", "LEGAL_OPERATIONS",
         "value", "Read, Own"
     );
     private static final Map<String, Serializable> ctscTeamLeader = Map.of(
-        "autoAssignable", true,
+        "autoAssignable", false,
         "name", "ctsc-team-leader",
         "roleCategory", "ADMIN",
         "value", "Read, Own"
     );
     private static final Map<String, Serializable> teamLeader = Map.of(
-        "autoAssignable", true,
+        "autoAssignable", false,
         "name", "hearing-centre-team-leader",
         "roleCategory", "ADMIN",
         "value", "Read, Manage, Cancel"
     );
     private static final Map<String, Serializable> teamAdmin = Map.of(
-        "autoAssignable", true,
+        "autoAssignable", false,
         "name", "hearing-centre-admin",
         "roleCategory", "ADMIN",
         "value", "Read, Own, Manage, Cancel"
@@ -252,12 +252,12 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "value", "Read,Manage,Cancel",
                 "autoAssignable", false
             ), Map.of(
-                "autoAssignable", true,
+                "autoAssignable", false,
                 "name", "hearing-centre-team-leader",
                 "roleCategory", "ADMIN",
                 "value", "Read, Manage, Cancel"
             ), Map.of(
-                "autoAssignable", true,
+                "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
                 "value", "Read, Own, Manage, Cancel"
