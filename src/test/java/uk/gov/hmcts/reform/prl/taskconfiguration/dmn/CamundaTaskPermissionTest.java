@@ -29,14 +29,14 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     );
     private static final Map<String, Serializable> judgeOne = Map.of(
         "autoAssignable", false,
-        "name", "Judge",
+        "name", "judge",
         "roleCategory", "JUDICIAL",
         "value", "Read, Own, Manage, Cancel",
         "authorisations","315"
     );
     private static final Map<String, Serializable> judgeTwo = Map.of(
         "autoAssignable", false,
-        "name", "Judge",
+        "name", "judge",
         "roleCategory", "JUDICIAL",
         "value", "Read, Own",
         "authorisations","315"
@@ -59,18 +59,17 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "roleCategory", "ADMIN",
         "value", "Read, Own"
     );
-    private static final Map<String, Serializable> ctsc = Map.of(
+    private static final Map<String, Serializable> teamLeader = Map.of(
         "autoAssignable", false,
-        "name", "ctsc",
+        "name", "hearing-centre-team-leader",
         "roleCategory", "ADMIN",
         "value", "Read, Manage, Cancel"
     );
-    private static final Map<String, Serializable> hearingJudgePriorityOne = Map.of(
+    private static final Map<String, Serializable> teamAdmin = Map.of(
         "autoAssignable", false,
-        "assignmentPriority", 1,
-        "name", "hearing-judge",
-        "roleCategory", "JUDICIAL",
-        "value", "Read,Refer,Own,Cancel"
+        "name", "hearing-centre-admin",
+        "roleCategory", "ADMIN",
+        "value", "Read, Own, Manage, Cancel"
     );
 
 
@@ -114,7 +113,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     taskSupervisor,
                     judgeOne,
-                    ctsc
+                    teamLeader,
+                    teamAdmin
                 )
             )
 
@@ -253,9 +253,14 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false
             ), Map.of(
                 "autoAssignable", false,
-                "name", "ctsc",
+                "name", "hearing-centre-team-leader",
                 "roleCategory", "ADMIN",
                 "value", "Read, Manage, Cancel"
+            ), Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read, Own, Manage, Cancel"
             )
         )));
     }
