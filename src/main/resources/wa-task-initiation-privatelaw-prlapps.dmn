@@ -265,41 +265,12 @@
           <text>"checkSolicitorOrder"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_046wm6a">
-        <inputEntry id="UnaryTests_02g9rgn">
-          <text>"sendAndReplyToMessages"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0jwdel0">
-          <text>"CASE_HEARING"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_06un14x">
-          <text>"C100", "FL401"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_16jd0dl">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_00bhd5h">
-          <text>"createJudicialOrder"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1jfenyd">
-          <text>"Create Order"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0tpiw26">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_16urfvv">
-          <text>1</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0zy6a6s">
-          <text>"judgeCreateOrder"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0gm0jgu">
         <inputEntry id="UnaryTests_03i96yg">
           <text>"managerOrders"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1q3wn6f">
-          <text>"CASE_HEARING"</text>
+          <text>-</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0cs2yvj">
           <text>"C100", "FL401"</text>
@@ -328,7 +299,7 @@
           <text>"sendToAdmin"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0lwlzt9">
-          <text>"CASE_HEARING"</text>
+          <text>-</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1x51rqc">
           <text>"C100", "FL401"</text>
@@ -410,6 +381,35 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1soxij3">
           <text>"judicialCorrespondence"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1syfwg1">
+        <inputEntry id="UnaryTests_1xtm9yb">
+          <text>"sendAndReplyToMessages"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j04hd9">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oct6hc">
+          <text>"C100", "FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m0w92h">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18e02f5">
+          <text>"reviewCorrespondencyByJudiciary"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wnp51f">
+          <text>"Create Order"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cqdizm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ucpqbt">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0glcj6l">
+          <text>"judgeCreateOrder"</text>
         </outputEntry>
       </rule>
     </decisionTable>

@@ -68,7 +68,7 @@
           <text>"judge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ekjswr">
-          <text>"Read, Own, Manage, Cancel"</text>
+          <text>"Read,Own,Manage,Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1tlohef">
           <text>"JUDICIAL"</text>
@@ -95,10 +95,10 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0pwg10h">
-          <text>"judge"</text>
+          <text>"leadership-judge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_151ry1h">
-          <text>"Read, Own"</text>
+          <text>"Read,Own"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1rwokl1">
           <text>"JUDICIAL"</text>
@@ -129,7 +129,7 @@
           <text>"tribunal-caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1nhvpem">
-          <text>"Read, Own, Manage, Cancel"</text>
+          <text>"Read,Own,Manage,Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03nq5c0">
           <text>"LEGAL_OPERATIONS"</text>
@@ -159,7 +159,7 @@
           <text>"senior-tribunal-caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1qa45z2">
-          <text>"Read, Own"</text>
+          <text>"Read,Own"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_06zjq08">
           <text>"LEGAL_OPERATIONS"</text>
@@ -189,7 +189,7 @@
           <text>"ctsc-team-leader"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1g9ombg">
-          <text>"Read, Own"</text>
+          <text>"Read,Own"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_017of59">
           <text>"ADMIN"</text>
@@ -228,7 +228,7 @@
           <text>"hearing-centre-team-leader"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_18uxrkl">
-          <text>"Read, Manage, Cancel"</text>
+          <text>"Read,Manage,Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0fbgbzp">
           <text>"ADMIN"</text>
@@ -267,7 +267,7 @@
           <text>"hearing-centre-admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1hqo5x4">
-          <text>"Read, Own, Manage, Cancel"</text>
+          <text>"Read,Own,Manage,Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_18bd5ey">
           <text>"ADMIN"</text>
