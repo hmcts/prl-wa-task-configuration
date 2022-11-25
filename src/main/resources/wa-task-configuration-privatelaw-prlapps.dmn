@@ -70,7 +70,7 @@
                         caseData.caseManagementLocation.region else "1"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0dwx9qa">
-          <text></text>
+          <text>true</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_06fd9qz">

@@ -214,42 +214,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "sendAndReplyToMessages",
-                "CASE_HEARING",
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "createJudicialOrder",
-                        "name", "Create Order",
-                        "workingDaysAllowed", 1,
-                        "processCategories", "judgeCreateOrder"
-                    )
-                )
-            ),
-            Arguments.of(
-                "sendAndReplyToMessages",
-                "CASE_HEARING",
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "createJudicialOrder",
-                        "name", "Create Order",
-                        "workingDaysAllowed", 1,
-                        "processCategories", "judgeCreateOrder"
-                    )
-                )
-            ),
-            Arguments.of(
                 "managerOrders",
-                "CASE_HEARING",
+                null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
@@ -266,7 +232,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "managerOrders",
-                "CASE_HEARING",
+                null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
@@ -283,7 +249,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "sendToAdmin",
-                "CASE_HEARING",
+                null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
@@ -300,7 +266,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "sendToAdmin",
-                "CASE_HEARING",
+                null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
@@ -380,6 +346,40 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "name", "Review Correspondence Judiciary",
                         "workingDaysAllowed", 1,
                         "processCategories", "judicialCorrespondence"
+                    )
+                )
+            ),
+            Arguments.of(
+                "sendAndReplyToMessages",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewCorrespondencyByJudiciary",
+                        "name", "Create Order",
+                        "workingDaysAllowed", 1,
+                        "processCategories", "judgeCreateOrder"
+                    )
+                )
+            ),
+            Arguments.of(
+                "sendAndReplyToMessages",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewCorrespondencyByJudiciary",
+                        "name", "Create Order",
+                        "workingDaysAllowed", 1,
+                        "processCategories", "judgeCreateOrder"
                     )
                 )
             )
