@@ -277,7 +277,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1glizm3">
-          <text>"checkApplication", "checkApplicationfl401", "addCaseNumber", "sendToGateKeeper", "gateKeeping", "serviceOfApplication", "checkSolicitorOrderProvided", "produceHearingBundle", "createJudicialOrder", "serveOrder", "reviewCorrespondence", "reviewSpecificAccessRequestAdmin"</text>
+          <text>"checkApplication", "checkApplicationfl401", "addCaseNumber", "sendToGateKeeper", "serviceOfApplication", "checkSolicitorOrderProvided", "produceHearingBundle", "createJudicialOrder", "serveOrder", "reviewCorrespondence", "reviewSpecificAccessRequestAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1131kat">
           <text>"roleCategory"</text>
