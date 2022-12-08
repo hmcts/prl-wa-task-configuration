@@ -34,7 +34,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         return Stream.of(
             Arguments.of(
                 "issueAndSendToLocalCourtCallback",
-                "CASE_ISSUE",
                 singletonList(
                     Map.of(
                         "taskType", "checkApplication",
@@ -44,7 +43,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "fl401AddCaseNumber",
-                "CASE_ISSUE",
                 singletonList(
                     Map.of(
                         "taskType", "checkApplicationfl401",
@@ -54,7 +52,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "caseNumber",
-                "CASE_ISSUE",
                 singletonList(
                     Map.of(
                         "taskType", "addCaseNumber",
@@ -64,7 +61,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "returnApplication",
-                null,
                 singletonList(
                     Map.of(
                         "completionMode", "Auto"
@@ -73,7 +69,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "sendToGateKeeper",
-                "GATE_KEEPING",
                 singletonList(
                     Map.of(
                         "taskType", "caseNumber",
@@ -83,7 +78,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "serviceOfApplication",
-                "PREPARE_FOR_HEARING_CONDUCT_HEARING",
                 singletonList(
                     Map.of(
                         "taskType", "sendToGateKeeper",
@@ -93,18 +87,11 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "manageOrders",
-                "PREPARE_FOR_HEARING_CONDUCT_HEARING",
-                singletonList(
-                    Map.of(
-                        "taskType", "sendToGateKeeper",
-                        "completionMode", "Auto"
-                    )
-                )
-            ),
-            Arguments.of(
-                "manageOrders",
-                "CASE_HEARING",
                 asList(
+                    Map.of(
+                         "taskType", "sendToGateKeeper",
+                         "completionMode", "Auto"
+                    ),
                     Map.of(
                         "taskType", "produceHearingBundle",
                         "completionMode", "Auto"
@@ -121,7 +108,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "sendAndReplyToMessages",
-                null,
                 singletonList(
                     Map.of(
                         "taskType", "reviewOrder",
@@ -134,11 +120,10 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest(name = "event id: {0} post event state: {1}")
     @MethodSource("scenarioProvider")
-    void event_ids_should_evaluate_dmn(String eventId,String postEventState,List<Map<String, String>> expectation) {
+    void event_ids_should_evaluate_dmn(String eventId,List<Map<String, String>> expectation) {
 
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("eventId", eventId);
-        inputVariables.putValue("state", postEventState);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
         MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
@@ -149,7 +134,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
 
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(2));
+        assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
         assertThat(logic.getRules().size(), is(11));
     }
