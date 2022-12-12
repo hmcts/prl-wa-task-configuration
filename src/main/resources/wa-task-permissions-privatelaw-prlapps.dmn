@@ -37,7 +37,7 @@
           <text>"task-supervisor"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1gda35a">
-          <text>"Read,Manage,Cancel"</text>
+          <text>"Read,Manage,Complete,Cancel,Assign,Unassign"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0uxj36c">
           <text></text>
@@ -68,7 +68,7 @@
           <text>"judge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ekjswr">
-          <text>"Read,Own,Manage,Cancel"</text>
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1tlohef">
           <text>"JUDICIAL"</text>
@@ -95,10 +95,10 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0pwg10h">
-          <text>"leadership-judge"</text>
+          <text>"specific-access-approver-judiciary"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_151ry1h">
-          <text>"Read,Own"</text>
+          <text>"Read,Own,Claim,Unclaim,CompleteOwn,CancelOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1rwokl1">
           <text>"JUDICIAL"</text>
@@ -129,7 +129,7 @@
           <text>"tribunal-caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1nhvpem">
-          <text>"Read,Own,Manage,Cancel"</text>
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03nq5c0">
           <text>"LEGAL_OPERATIONS"</text>
@@ -156,10 +156,10 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zsbfdo">
-          <text>"senior-tribunal-caseworker"</text>
+          <text>"specific-access-approver-legal-ops"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1qa45z2">
-          <text>"Read,Own"</text>
+          <text>"Read,Own,Claim,Unclaim,CompleteOwn,CancelOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_06zjq08">
           <text>"LEGAL_OPERATIONS"</text>
@@ -186,10 +186,10 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_17r04ok">
-          <text>"ctsc-team-leader"</text>
+          <text>"specific-access-approver-admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1g9ombg">
-          <text>"Read,Own"</text>
+          <text>"Read,Own,Claim,Unclaim,CompleteOwn,CancelOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_017of59">
           <text>"ADMIN"</text>
@@ -201,45 +201,6 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0n6tcd2">
-          <text>false</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0hv79lq">
-        <description>Admin Leader task permissions</description>
-        <inputEntry id="UnaryTests_0tzrow3">
-          <text>"checkApplication",
-"checkApplicationfl401",
-"addCaseNumber",
-"sendToGateKeeper",
-"serveApplication",
-"checkSolicitorOrderProvided",
-"produceHearingBundle",
-"serveOrder",
-"createJudicialOrder",
-"reviewCorrespondence"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1sw9xpj">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0yp47wz">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_09116fr">
-          <text>"hearing-centre-team-leader"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_18uxrkl">
-          <text>"Read,Manage,Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0fbgbzp">
-          <text>"ADMIN"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_11pjfav">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0jexll1">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0l87ays">
           <text>false</text>
         </outputEntry>
       </rule>
@@ -267,7 +228,7 @@
           <text>"hearing-centre-admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1hqo5x4">
-          <text>"Read,Own,Manage,Cancel"</text>
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_18bd5ey">
           <text>"ADMIN"</text>
@@ -279,6 +240,74 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nysdyn">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_098qsjq">
+        <description>CTSC task permissions</description>
+        <inputEntry id="UnaryTests_14xrsqw">
+          <text>"checkApplication",
+"checkApplicationfl401",
+"addCaseNumber",
+"sendToGateKeeper",
+"serveApplication",
+"checkSolicitorOrderProvided",
+"produceHearingBundle",
+"serveOrder",
+"reviewCorrespondence"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pv1c0z">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rygc2e">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08der8z">
+          <text>"ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09o2reg">
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1sso00i">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cigjw1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1sopskr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ckfsm8">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1s7y6zd">
+        <description>CTSC specic access permissions</description>
+        <inputEntry id="UnaryTests_0vfvmzw">
+          <text>"reviewSpecificAccessRequestCtsc"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uqox1x">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kxziu8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ov0gzm">
+          <text>"specific-access-approver-ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ehyafk">
+          <text>"Read,Own,Claim,Unclaim,CompleteOwn,CancelOwn"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xt2npy">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_133x8el">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10qlamt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04gckbd">
           <text>false</text>
         </outputEntry>
       </rule>
