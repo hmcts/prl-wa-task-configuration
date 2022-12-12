@@ -289,6 +289,23 @@
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_040n43q">
+        <inputEntry id="UnaryTests_01d93ox">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wz7dry">
+          <text>"checkApplication","checkApplicationfl401","addCaseNumber", "sendToGateKeeper","serviceOfApplication","checkSolicitorOrderProvided","produceHearingBundle","createJudicialOrder","serveOrder","reviewCorrespondence","reviewSpecificAccessRequestAdmin"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nbncg7">
+          <text>"roleCategory"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d6071t">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e5rmld">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_01cmxvs">
         <inputEntry id="UnaryTests_1np8ii5">
           <text></text>
