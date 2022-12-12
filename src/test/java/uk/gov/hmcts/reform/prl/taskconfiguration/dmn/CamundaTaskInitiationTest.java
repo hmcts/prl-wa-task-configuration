@@ -116,24 +116,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "CASE_ISSUE",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "sendToGateKeeper",
-                        "name", "Send to Gatekeeper",
-                        "workingDaysAllowed", 1,
-                        "processCategories", "localCourt"
-                    )
-                )
-            ),
-            Arguments.of(
-                "caseNumber",
-                "CASE_ISSUE",
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -150,24 +133,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "CASE_ISSUE",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "sendToGateKeeper",
-                        "name", "Send to Gatekeeper",
-                        "workingDaysAllowed", 1,
-                        "processCategories", "localCourt"
-                    )
-                )
-            ),
-            Arguments.of(
-                "manageOrders",
-                "CASE_ISSUE",
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -184,24 +150,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "GATE_KEEPING",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "gateKeeping",
-                        "name", "Gatekeeping",
-                        "workingDaysAllowed", 2,
-                        "processCategories", "gateKeeping"
-                    )
-                )
-            ),
-            Arguments.of(
-                "sendToGateKeeper",
-                "GATE_KEEPING",
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -218,24 +167,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "reviewOder",
-                        "name", "Review Order",
-                        "workingDaysAllowed", 1,
-                        "processCategories", "judgeReviewOrder"
-                    )
-                )
-            ),
-            Arguments.of(
-                "managerOrders",
-                null,
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -252,24 +184,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "serveOrder",
-                        "name", "Serve order",
-                        "workingDaysAllowed", 5,
-                        "processCategories", "serveOrder"
-                    )
-                )
-            ),
-            Arguments.of(
-                "sendToAdmin",
-                null,
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -286,24 +201,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "reviewCorrespondence",
-                        "name", "Review correspondence",
-                        "workingDaysAllowed", 5,
-                        "processCategories", "courtAdminCorrespondence"
-                    )
-                )
-            ),
-            Arguments.of(
-                "manageDocuments",
-                null,
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -320,24 +218,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "reviewCorrespondencyByJudiciary",
-                        "name", "Review Correspondence Judiciary",
-                        "workingDaysAllowed", 1,
-                        "processCategories", "judicialCorrespondence"
-                    )
-                )
-            ),
-            Arguments.of(
-                "manageDocumentsByJudicial",
-                null,
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -354,24 +235,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "reviewCorrespondencyByJudiciary",
-                        "name", "Create Order",
-                        "workingDaysAllowed", 1,
-                        "processCategories", "judgeCreateOrder"
-                    )
-                )
-            ),
-            Arguments.of(
-                "sendAndReplyToMessages",
-                null,
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
