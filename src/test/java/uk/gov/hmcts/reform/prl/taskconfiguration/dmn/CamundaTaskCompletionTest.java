@@ -89,8 +89,8 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                 "manageOrders",
                 asList(
                     Map.of(
-                         "taskType", "sendToGateKeeper",
-                         "completionMode", "Auto"
+                        "taskType", "sendToGateKeeper",
+                        "completionMode", "Auto"
                     ),
                     Map.of(
                         "taskType", "produceHearingBundle",
