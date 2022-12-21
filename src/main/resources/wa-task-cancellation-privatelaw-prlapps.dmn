@@ -23,13 +23,13 @@
       <output id="OutputClause_0dqzted" label="Process Categories Identifiers" name="processCategories" typeRef="string" biodi:width="277" />
       <rule id="DecisionRule_0w82l1w">
         <inputEntry id="UnaryTests_1nfllzy">
-          <text></text>
+          <text>"SUBMITTED_PAID"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0a7tgdv">
-          <text>"withdrawApplication"</text>
+          <text>"WithdrawApplication_Event"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1iy08tm">
-          <text>"CASE_WITHDRAWN"</text>
+          <text>"SUBMITTED_PAID"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0t8415e">
           <text>"Cancel"</text>
@@ -41,6 +41,98 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zmhw8j">
+          <text>"applicationCheckC100,applicationCheckC100Resubmit"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ejz62i">
+        <inputEntry id="UnaryTests_1s99s7i">
+          <text>"SUBMITTED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18lckib">
+          <text>"WithdrawApplication_Event"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x54ea4">
+          <text>"SUBMITTED"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13shtg6">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03sjheq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1crcryi">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_187lcs2">
+          <text>"applicationCheckFL401,applicationCheckFL401Resubmit"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0apzh7f">
+        <inputEntry id="UnaryTests_1sc5v50">
+          <text>"DECISION_OUTCOME"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e0k7ss">
+          <text>"draftAnOrder"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ppyzd0">
+          <text>"DECISION_OUTCOME"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0dxmk9p">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xsejy8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0u6vsa7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0087uk6">
+          <text>"requestSolicitorOrderC100,requestSolicitorOrderFL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_17vm1l0">
+        <inputEntry id="UnaryTests_1ohkznv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hxwtst">
+          <text>"amendApplicantsDetails"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05z0gyw">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ave4xr">
+          <text>"Reconfigure"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zd6cal">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04s7qxt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ugr77x">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0v399w9">
+        <inputEntry id="UnaryTests_0lb2x96">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nyn97o">
+          <text>"amendCourtDetails"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05ogrdu">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1og1w7b">
+          <text>"Reconfigure"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nvj1hb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09na52d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nvhaoe">
           <text></text>
         </outputEntry>
       </rule>
