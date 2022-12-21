@@ -223,7 +223,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "checkApplicationFL401", "checkApplicationResubmittedFL401",
         "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401",
         "serviceOfApplicationFL401",
-        "produceHearingBundleFL401", "adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewCorrespondenceFL401"
+        "produceHearingBundleFL401", "adminServeOrderFL401",
+        "updateHearingActualsFL401", "requestSolicitorOrderFL401",
+        "reviewCorrespondenceFL401"
     })
     void evaluate_task_admin(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
