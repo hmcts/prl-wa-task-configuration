@@ -102,21 +102,12 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "reviewOder",
+                "reviewSolicitorOrderProvided",
                 List.of(
                     taskSupervisor,
                     judgeOne
                 )
-            ),
-            Arguments.of(
-                "createJudicialOrder",
-                List.of(
-                    taskSupervisor,
-                    judgeOne,
-                    teamAdmin
-                )
             )
-
         );
     }
 
@@ -204,9 +195,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @ParameterizedTest
     @CsvSource(value = {
         "gateKeeping",
-        "reviewCorrespondencyByJudiciary"
+        "gateKeepingResubmitted"
     })
-    void given_taskType_when_evaluate_dmn_then_it_returns_first_second_rules(String taskType) {
+    void evaluate_task_legalOps(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
 
@@ -229,17 +220,14 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "checkApplication",
-        "checkApplicationfl401",
-        "addCaseNumber",
-        "sendToGateKeeper",
-        "serveApplication",
-        "checkSolicitorOrderProvided",
-        "produceHearingBundle",
-        "serveOrder",
-        "reviewCorrespondence"
+        "checkApplicationFL401", "checkApplicationResubmittedFL401",
+        "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401",
+        "serviceOfApplicationFL401",
+        "produceHearingBundleFL401", "adminServeOrderFL401",
+        "updateHearingActualsFL401", "requestSolicitorOrderFL401",
+        "reviewCorrespondenceFL401"
     })
-    void given_taskType_when_evaluate_dmn_then_it_returns_first_second_third_rules(String taskType) {
+    void evaluate_task_admin(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
 
@@ -255,6 +243,32 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
                 "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+            )
+        )));
+    }
+
+    @SuppressWarnings("checkstyle:indentation")
+    @ParameterizedTest
+    @CsvSource(value = {
+        "checkApplicationC100", "checkApplicationResubmittedC100",
+        "addCaseNumber", "addCaseNumberResubmitted",
+        "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100",
+        "serviceOfApplicationC100",
+        "produceHearingBundleC100",
+        "adminServeOrderC100", "updateHearingActualsC100",
+        "requestSolicitorOrderC100", "reviewCorrespondenceC100"
+    })
+    void evaluate_task_ctsc(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            Map.of(
+                "name", "task-supervisor",
+                "value", "Read,Manage,Complete,Cancel,Assign,Unassign",
+                "autoAssignable", false
             ), Map.of(
                 "autoAssignable", false,
                 "name", "ctsc",

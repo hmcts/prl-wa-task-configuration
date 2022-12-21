@@ -16,7 +16,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
 
-import static java.util.Collections.singletonList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTable.WA_TASK_CANCEL;
@@ -31,13 +30,56 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
 
         return Stream.of(
             Arguments.of(
-                null,
-                "withdrawApplication",
-                "CASE_WITHDRAWN",
-                singletonList(
+                "SUBMITTED_PAID",
+                "WithdrawApplication_Event",
+                "SUBMITTED_PAID",
+                List.of(
                     Map.of(
-                        "action", "Cancel"
+                        "action", "Cancel",
+                        "processCategories", "applicationCheckC100,applicationCheckC100Resubmit"
                     )
+                )
+            ),
+            Arguments.of(
+                "SUBMITTED",
+                "WithdrawApplication_Event",
+                "SUBMITTED",
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "applicationCheckFL401,applicationCheckFL401Resubmit"
+                    )
+                )
+            ),
+            Arguments.of(
+                "DECISION_OUTCOME",
+                "draftAnOrder",
+                "DECISION_OUTCOME",
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "requestSolicitorOrderC100,requestSolicitorOrderFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                null,
+                "amendApplicantsDetails",
+                null,
+                List.of(
+                    Map.of(
+                        "action", "Reconfigure"
+                    )
+                )
+            ),
+            Arguments.of(
+                null,
+                "amendCourtDetails",
+                null,
+                List.of(
+                    Map.of(
+                        "action", "Reconfigure"
+                        )
                 )
             )
         );
@@ -65,7 +107,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(1));
+        assertThat(logic.getRules().size(), is(5));
 
     }
 }
