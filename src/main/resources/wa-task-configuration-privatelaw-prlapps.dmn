@@ -31,7 +31,7 @@
           <text>"caseName"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_06tqng3">
-          <text>if caseData.applicantCaseName !=null then caseData.applicantCaseName else "Private Law Cases"</text>
+          <text>if caseData.applicantCaseName !=null then caseData.applicantCaseName else "Family PrL"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09ruaaf">
           <text>true</text>
