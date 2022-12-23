@@ -121,7 +121,7 @@
       </rule>
       <rule id="DecisionRule_0zls3ux">
         <inputEntry id="UnaryTests_10ymei2">
-          <text>"manageOrder"</text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0inu52p">
           <text>"addCaseNumber"</text>
@@ -176,7 +176,7 @@
       </rule>
       <rule id="DecisionRule_0j03pfr">
         <inputEntry id="UnaryTests_1ry31qi">
-          <text>"manageOrder"</text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0gbnnwr">
           <text>"sendToGateKeeperFL401"</text>
@@ -187,7 +187,7 @@
       </rule>
       <rule id="DecisionRule_05q31gr">
         <inputEntry id="UnaryTests_1kve3yz">
-          <text>"manageOrder"</text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1n5bqi4">
           <text>"sendToGateKeeperC100"</text>
@@ -242,7 +242,7 @@
       </rule>
       <rule id="DecisionRule_1snfah8">
         <inputEntry id="UnaryTests_1ty9ezy">
-          <text>"manageOrder"</text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0p6awc8">
           <text>"sendToGateKeeperC100Resubmitted"</text>
@@ -253,7 +253,7 @@
       </rule>
       <rule id="DecisionRule_138xkbf">
         <inputEntry id="UnaryTests_0yxrp6s">
-          <text>"manageOrder"</text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_137xux7">
           <text>"sendToGateKeeperFL401Resubmitted"</text>
@@ -286,7 +286,7 @@
       </rule>
       <rule id="DecisionRule_1ermjaa">
         <inputEntry id="UnaryTests_10jbxe2">
-          <text>"manageOrder"</text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ej8jjr">
           <text>"gateKeeping"</text>
@@ -319,7 +319,7 @@
       </rule>
       <rule id="DecisionRule_1eafvrw">
         <inputEntry id="UnaryTests_1bzzs35">
-          <text>"manageOrder"</text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1iwowpp">
           <text>"gateKeepingResubmitted"</text>
