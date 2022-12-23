@@ -192,7 +192,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "gateKeeping",
+                "sendToGateKeeper",
                 "GATE_KEEPING",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"

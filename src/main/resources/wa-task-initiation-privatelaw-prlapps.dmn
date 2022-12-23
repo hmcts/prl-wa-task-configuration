@@ -323,7 +323,7 @@
       </rule>
       <rule id="DecisionRule_0awsb0p">
         <inputEntry id="UnaryTests_116xfi4">
-          <text>"gateKeeping"</text>
+          <text>"sendToGateKeeper"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_07uxcvq">
           <text>"GATE_KEEPING"</text>
@@ -381,7 +381,7 @@
       </rule>
       <rule id="DecisionRule_1p5lr3l">
         <inputEntry id="UnaryTests_0230u0n">
-          <text>"manageOrder"</text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rufm1x">
           <text>"GATE_KEEPING"</text>
@@ -410,7 +410,7 @@
       </rule>
       <rule id="DecisionRule_1h0v3eh">
         <inputEntry id="UnaryTests_02nwove">
-          <text>"manageOrder"</text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_015n398">
           <text>"GATE_KEEPING"</text>

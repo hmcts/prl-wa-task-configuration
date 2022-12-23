@@ -150,7 +150,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "gateKeeping",
+                "sendToGateKeeper",
                 asList(
                     Map.of(
                         "taskType", "sendToGateKeeperFL401",

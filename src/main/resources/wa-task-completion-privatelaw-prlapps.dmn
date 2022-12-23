@@ -132,7 +132,7 @@
       </rule>
       <rule id="DecisionRule_0vuq3ym">
         <inputEntry id="UnaryTests_025guv0">
-          <text>"gateKeeping"</text>
+          <text>"sendToGateKeeper"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_03hy3xh">
           <text>"sendToGateKeeperFL401"</text>
@@ -143,7 +143,7 @@
       </rule>
       <rule id="DecisionRule_1l0cilh">
         <inputEntry id="UnaryTests_1vd2uj0">
-          <text>"gateKeeping"</text>
+          <text>"sendToGateKeeper"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1maqjco">
           <text>"sendToGateKeeperC100"</text>
@@ -198,7 +198,7 @@
       </rule>
       <rule id="DecisionRule_10wm25l">
         <inputEntry id="UnaryTests_0vdg7rk">
-          <text>"gateKeeping"</text>
+          <text>"sendToGateKeeper"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1pe5d3j">
           <text>"sendToGateKeeperC100Resubmitted"</text>
@@ -209,7 +209,7 @@
       </rule>
       <rule id="DecisionRule_1sijzow">
         <inputEntry id="UnaryTests_0yqlsr0">
-          <text>"gateKeeping"</text>
+          <text>"sendToGateKeeper"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0oik8xs">
           <text>"sendToGateKeeperFL401Resubmitted"</text>
