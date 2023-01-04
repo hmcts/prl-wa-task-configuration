@@ -136,6 +136,52 @@
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1j3kmhf">
+        <inputEntry id="UnaryTests_0ri3g73">
+          <text>"SUBMITTED_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04nu9wc">
+          <text>"issueAndSendToLocalCourtCallback"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ttzk5j">
+          <text>"CASE_ISSUE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kg149w">
+          <text>"Reconfigure"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gunu4f">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0haizik">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1oznlpu">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0f4920o">
+        <inputEntry id="UnaryTests_04d59xw">
+          <text>"SUBMITTED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cjpegl">
+          <text>"issueAndSendToLocalCourtCallback"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_099gmpg">
+          <text>"CASE_ISSUE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_065adt5">
+          <text>"Reconfigure"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zfstuv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dvm88l">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11c4kfh">
+          <text></text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
