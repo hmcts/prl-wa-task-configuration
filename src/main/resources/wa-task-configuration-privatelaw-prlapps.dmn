@@ -226,7 +226,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1466etp">
-          <text>"reviewSpecificAccessRequestJudiciary", "reviewSpecificAccessRequestLegalOps", "reviewSpecificAccessRequestAdmin","reviewSpecificAccessRequestCtsc"</text>
+          <text>"reviewSpecificAccessRequestJudiciary", "reviewSpecificAccessRequestLegalOps", "reviewSpecificAccessRequestAdmin","reviewSpecificAccessRequestCTSC"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0bjcvtf">
           <text>"workType"</text>
@@ -243,7 +243,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0b3q932">
-          <text>"reviewSpecificAccessRequestJudiciary", "reviewSpecificAccessRequestLegalOps", "reviewSpecificAccessRequestAdmin","reviewSpecificAccessRequestCtsc"</text>
+          <text>"reviewSpecificAccessRequestJudiciary", "reviewSpecificAccessRequestLegalOps", "reviewSpecificAccessRequestAdmin","reviewSpecificAccessRequestCTSC"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1hrei14">
           <text>"additionalProperties_roleAssignmentId"</text>
@@ -302,7 +302,7 @@
 "serviceOfApplicationC100",
  "produceHearingBundleC100", "adminServeOrderC100", 
 "updateHearingActualsC100", "requestSolicitorOrderC100", 
-"reviewCorrespondenceC100", "reviewSpecificAccessRequestCtsc"</text>
+"reviewCorrespondenceC100", "reviewSpecificAccessRequestCTSC"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18u6y8m">
           <text>"roleCategory"</text>
