@@ -95,7 +95,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                     specificLegalOps
                 )
             ),Arguments.of(
-                "reviewSpecificAccessRequestCtsc",
+                "reviewSpecificAccessRequestCTSC",
                 List.of(
                     taskSupervisor,
                     specificCtsc

@@ -275,7 +275,7 @@
       <rule id="DecisionRule_1s7y6zd">
         <description>CTSC specic access permissions</description>
         <inputEntry id="UnaryTests_0vfvmzw">
-          <text>"reviewSpecificAccessRequestCtsc"</text>
+          <text>"reviewSpecificAccessRequestCTSC"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1uqox1x">
           <text></text>
