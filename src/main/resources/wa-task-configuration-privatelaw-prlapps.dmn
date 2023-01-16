@@ -342,8 +342,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0p6dwov">
-          <text>"if (taskAttributes != null and taskAttributes.taskId != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskId + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)"
-else ""</text>
+          <text>"if (taskAttributes != null and taskAttributes.taskType != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskType + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)" else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_16ytx4v">
           <text></text>
@@ -360,8 +359,7 @@ else ""</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1y1fpcs">
-          <text>"if (taskAttributes != null and taskAttributes.taskId != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskId + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)"
-else ""</text>
+          <text>"if (taskAttributes != null and taskAttributes.taskType != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskType + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)" else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_14uk4ie">
           <text></text>
@@ -378,8 +376,7 @@ else ""</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0m0aauy">
-          <text>"if (taskAttributes != null and taskAttributes.taskId != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskId + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)"
-else ""</text>
+          <text>"if (taskAttributes != null and taskAttributes.taskType != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskType + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)" else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1rzokfq">
           <text></text>
@@ -396,8 +393,7 @@ else ""</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1dp76kk">
-          <text>"if (taskAttributes != null and taskAttributes.taskId != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskId + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)"
-else ""</text>
+          <text>"if (taskAttributes != null and taskAttributes.taskType != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskType + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)" else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0cs66qx">
           <text></text>
