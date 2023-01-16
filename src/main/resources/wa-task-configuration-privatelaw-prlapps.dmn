@@ -331,6 +331,78 @@
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_01ktw4o">
+        <inputEntry id="UnaryTests_0jyxna7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wtgcvz">
+          <text>"reviewSpecificAccessRequestCTSC"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vphrgr">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p6dwov">
+          <text>"if (taskAttributes != null and taskAttributes.taskId != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskId + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)"
+else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16ytx4v">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1smfvga">
+        <inputEntry id="UnaryTests_0f414vh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13he3bk">
+          <text>"reviewSpecificAccessRequestAdmin"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dq5gpc">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1y1fpcs">
+          <text>"if (taskAttributes != null and taskAttributes.taskId != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskId + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)"
+else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14uk4ie">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0fhorsb">
+        <inputEntry id="UnaryTests_0n8mm64">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15ekcqc">
+          <text>"reviewSpecificAccessRequestJudiciary"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mz5xz5">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0m0aauy">
+          <text>"if (taskAttributes != null and taskAttributes.taskId != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskId + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)"
+else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rzokfq">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09sae4d">
+        <inputEntry id="UnaryTests_0kautte">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ny7bdh">
+          <text>"reviewSpecificAccessRequestLegalOps"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11os6z9">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dp76kk">
+          <text>"if (taskAttributes != null and taskAttributes.taskId != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskId + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)"
+else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cs66qx">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1lny4x5">
         <inputEntry id="UnaryTests_1jpdq6j">
           <text></text>
@@ -348,20 +420,20 @@
           <text></text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1uqb4b6">
-        <inputEntry id="UnaryTests_13oac4r">
+      <rule id="DecisionRule_0dmolmi">
+        <inputEntry id="UnaryTests_1d1d4kg">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0qocc7t">
+        <inputEntry id="UnaryTests_0gc3qd4">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0gei307">
+        <outputEntry id="LiteralExpression_1kz0hzb">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1dg1rgf">
+        <outputEntry id="LiteralExpression_0t54gz9">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_18bsmqt">
+        <outputEntry id="LiteralExpression_04ns7a9">
           <text></text>
         </outputEntry>
       </rule>
