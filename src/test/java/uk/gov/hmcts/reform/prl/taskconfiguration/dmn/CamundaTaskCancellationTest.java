@@ -37,14 +37,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "action", "Cancel",
                         "processCategories", "applicationCheckC100,applicationCheckC100Resubmit"
-                    )
-                )
-            ),
-            Arguments.of(
-                "SUBMITTED",
-                "WithdrawApplication_Event",
-                "CASE_WITHDRAWN",
-                List.of(
+                    ),
                     Map.of(
                         "action", "Cancel",
                         "processCategories", "applicationCheckFL401,applicationCheckFL401Resubmit"

@@ -79,7 +79,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "fl401StatementOfTruthAndSubmit",
-                "SUBMITTED",
+                "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
@@ -96,7 +96,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "fl401resubmit",
-                "SUBMITTED",
+                "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"

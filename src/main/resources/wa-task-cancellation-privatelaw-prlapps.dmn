@@ -46,7 +46,7 @@
       </rule>
       <rule id="DecisionRule_1ejz62i">
         <inputEntry id="UnaryTests_1s99s7i">
-          <text>"SUBMITTED"</text>
+          <text>"SUBMITTED_PAID"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_18lckib">
           <text>"WithdrawApplication_Event"</text>

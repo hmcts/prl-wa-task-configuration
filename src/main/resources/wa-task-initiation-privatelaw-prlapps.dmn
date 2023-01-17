@@ -94,7 +94,7 @@
           <text>"fl401StatementOfTruthAndSubmit"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ryp7i8">
-          <text>"SUBMITTED"</text>
+          <text>"SUBMITTED_PAID"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1jvptu6">
           <text></text>
@@ -123,7 +123,7 @@
           <text>"fl401resubmit"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0hgc4cl">
-          <text>"SUBMITTED"</text>
+          <text>"SUBMITTED_PAID"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0y2885j">
           <text>"FL401"</text>
