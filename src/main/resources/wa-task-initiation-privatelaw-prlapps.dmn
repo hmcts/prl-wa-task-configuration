@@ -448,7 +448,7 @@
           <text>"C100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1nlo9li">
-          <text>if (applicants.representativeLastName == null &amp;&amp; respondents.representativeLastName==null)</text>
+          <text>if (caseData.applicants.representativeLastName == null &amp;&amp; caseData.respondents.representativeLastName==null)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lnnahe">
           <text>"produceHearingBundleC100"</text>
@@ -477,7 +477,7 @@
           <text>"FL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ss9e1e">
-          <text>if (applicants.representativeLastName == null &amp;&amp; respondents.representativeLastName==null)</text>
+          <text>if (caseData.applicants.representativeLastName == null &amp;&amp; caseData.respondents.representativeLastName==null)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0rugf3j">
           <text>"produceHearingBundleFL100"</text>
@@ -506,7 +506,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1uovxbi">
-          <text>if (applicants.representativeLastName != null || respondents.representativeLastName != null)</text>
+          <text>if (caseData.applicants.representativeLastName != null || caseData.respondents.representativeLastName != null)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_15ab7vt">
           <text>"reviewSolicitorOrderProvided"</text>
@@ -537,7 +537,7 @@
           <text>"C100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0dywuhs">
-          <text>if (applicants.representativeLastName != null || respondents.representativeLastName != null)</text>
+          <text>if (caseData.applicants.representativeLastName != null || caseData.respondents.representativeLastName != null)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_14i0saf">
           <text>"adminServeOrderC100"</text>
@@ -568,7 +568,7 @@
           <text>"FL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ui4vad">
-          <text>if (applicants.representativeLastName != null || respondents.representativeLastName != null)</text>
+          <text>if (caseData.applicants.representativeLastName != null || caseData.respondents.representativeLastName != null)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_06c4eqf">
           <text>"adminServeOrderFL100"</text>
@@ -655,7 +655,7 @@
           <text>"C100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_09a30yi">
-          <text>if (applicants.representativeLastName != null || respondents.representativeLastName != null)</text>
+          <text>if (caseData.applicants.representativeLastName != null || caseData.respondents.representativeLastName != null)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0603xs2">
           <text>"requestSolicitorOrderC100"</text>
@@ -684,7 +684,7 @@
           <text>"FL400"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0lvgsm5">
-          <text>if (applicants.representativeLastName != null || respondents.representativeLastName != null)</text>
+          <text>if (caseData.applicants.representativeLastName != null || caseData.respondents.representativeLastName != null)</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1p72r5o">
           <text>"requestSolicitorOrderFL100"</text>

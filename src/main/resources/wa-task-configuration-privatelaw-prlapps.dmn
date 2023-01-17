@@ -65,9 +65,7 @@
           <text>"region"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_05korws">
-          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.region != null)
-                        then
-                        caseData.caseManagementLocation.region else "1"</text>
+          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.regionId != null) then  caseData.caseManagementLocation.regionId else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0dwx9qa">
           <text>"true"</text>
@@ -84,9 +82,7 @@
           <text>"location"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0jj1wzo">
-          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.baseLocation !=
-                        null) then
-                        caseData.caseManagementLocation.baseLocation else "231596"</text>
+          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.baseLocationId != null) then caseData.caseManagementLocation.baseLocationId else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1wrzh5i">
           <text>"true"</text>
@@ -103,9 +99,7 @@
           <text>"locationName"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xp4dc7">
-          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.baseLocation !=
-                        null) then
-                        caseData.caseManagementLocation.baseLocation else "Taylor House"</text>
+          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.baseLocationName != null) then caseData.caseManagementLocation.baseLocationName else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1la2dkb">
           <text>"true"</text>
@@ -122,32 +116,7 @@
           <text>"caseManagementCategory"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_099dwbs">
-          <text>if (caseData.caseManagementCategory !=null and caseData.caseManagementCategory.value.code =
-                        "refusalOfHumanRights") then
-                        "Human rights"
-                        else if (caseData.caseManagementCategory !=null and caseData.caseManagementCategory.value.code =
-                        "refusalOfEu") then
-                        "EEA"
-                        else if (caseData.caseManagementCategory !=null and caseData.caseManagementCategory.value.code =
-                        "deprivation") then
-                        "DoC"
-                        else if (caseData.caseManagementCategory !=null and caseData.caseManagementCategory.value.code =
-                        "protection") then
-                        "Protection"
-                        else if (caseData.caseManagementCategory !=null and caseData.caseManagementCategory.value.code =
-                        "revocationOfProtection") then
-                        "Revocation"
-                        else if caseData.appealType = "refusalOfHumanRights" then
-                        "Human rights"
-                        else if caseData.appealType = "refusalOfEu" then
-                        "EEA"
-                        else if caseData.appealType = "deprivation" then
-                        "DoC"
-                        else if caseData.appealType = "protection" then
-                        "Protection"
-                        else if caseData.appealType = "revocationOfProtection" then
-                        "Revocation"
-                        else "C100 / FL401"</text>
+          <text>"C100 / FL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1oq20o8">
           <text></text>
@@ -336,7 +305,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1wtgcvz">
-          <text>"reviewSpecificAccessRequestCTSC"</text>
+          <text>"reviewSpecificAccessRequestCTSC", "reviewSpecificAccessRequestAdmin", "reviewSpecificAccessRequestJudiciary", "reviewSpecificAccessRequestLegalOps"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vphrgr">
           <text>"description"</text>
@@ -345,57 +314,6 @@
           <text>"if (taskAttributes != null and taskAttributes.taskType != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskType + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)" else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_16ytx4v">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1smfvga">
-        <inputEntry id="UnaryTests_0f414vh">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_13he3bk">
-          <text>"reviewSpecificAccessRequestAdmin"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1dq5gpc">
-          <text>"description"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1y1fpcs">
-          <text>"if (taskAttributes != null and taskAttributes.taskType != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskType + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)" else ""</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_14uk4ie">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0fhorsb">
-        <inputEntry id="UnaryTests_0n8mm64">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_15ekcqc">
-          <text>"reviewSpecificAccessRequestJudiciary"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1mz5xz5">
-          <text>"description"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0m0aauy">
-          <text>"if (taskAttributes != null and taskAttributes.taskType != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskType + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)" else ""</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1rzokfq">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_09sae4d">
-        <inputEntry id="UnaryTests_0kautte">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ny7bdh">
-          <text>"reviewSpecificAccessRequestLegalOps"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_11os6z9">
-          <text>"description"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1dp76kk">
-          <text>"if (taskAttributes != null and taskAttributes.taskType != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskType + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)" else ""</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0cs66qx">
           <text></text>
         </outputEntry>
       </rule>
@@ -413,23 +331,6 @@
           <text>taskAttributes.name</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_184xf0n">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0dmolmi">
-        <inputEntry id="UnaryTests_1d1d4kg">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0gc3qd4">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1kz0hzb">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0t54gz9">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_04ns7a9">
           <text></text>
         </outputEntry>
       </rule>
