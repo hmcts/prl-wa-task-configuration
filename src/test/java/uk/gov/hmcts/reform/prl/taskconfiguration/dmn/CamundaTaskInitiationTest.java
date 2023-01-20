@@ -65,7 +65,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -82,7 +82,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -139,7 +139,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "CASE_ISSUE",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 List.of(
@@ -179,7 +179,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "CASE_ISSUE",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
