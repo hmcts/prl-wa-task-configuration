@@ -36,11 +36,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     Map.of(
                         "action", "Cancel",
-                        "processCategories", "applicationCheckC100,applicationCheckC100Resubmit"
-                    ),
-                    Map.of(
-                        "action", "Cancel",
-                        "processCategories", "applicationCheckFL401,applicationCheckFL401Resubmit"
+                        "processCategories", "applicationCheck"
                     )
                 )
             ),
@@ -51,7 +47,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     Map.of(
                         "action", "Cancel",
-                        "processCategories", "requestSolicitorOrderC100,requestSolicitorOrderFL401"
+                        "processCategories", "requestSolicitorOrder"
                     )
                 )
             ),
@@ -100,7 +96,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(5));
+        assertThat(logic.getRules().size(), is(4));
 
     }
 }

@@ -57,7 +57,7 @@
           <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1m76a0d">
-          <text>"applicationCheckC100"</text>
+          <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1as56x2">
@@ -86,7 +86,7 @@
           <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_138zrjw">
-          <text>"applicationCheckC100Resubmit"</text>
+          <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_03822dt">
@@ -115,7 +115,7 @@
           <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_15in5hs">
-          <text>"applicationCheckFL401"</text>
+          <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0mh63vx">
@@ -144,7 +144,7 @@
           <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0u7wwv6">
-          <text>"applicationCheckFL401Resubmit"</text>
+          <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1205pgi">
@@ -670,7 +670,7 @@
           <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0oqqgxq">
-          <text>"requestSolicitorOrderC100"</text>
+          <text>"requestSolicitorOrder"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0dr66m3">
@@ -699,7 +699,7 @@
           <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_13cxgrq">
-          <text>"requestSolicitorOrderFL100"</text>
+          <text>"requestSolicitorOrder"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0gm0jgu">

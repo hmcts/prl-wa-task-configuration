@@ -41,30 +41,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zmhw8j">
-          <text>"applicationCheckC100,applicationCheckC100Resubmit"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1ejz62i">
-        <inputEntry id="UnaryTests_1s99s7i">
-          <text>"SUBMITTED_PAID"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_18lckib">
-          <text>"WithdrawApplication_Event"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0x54ea4">
-          <text>"CASE_WITHDRAWN"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_13shtg6">
-          <text>"Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_03sjheq">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1crcryi">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_187lcs2">
-          <text>"applicationCheckFL401,applicationCheckFL401Resubmit"</text>
+          <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0apzh7f">
@@ -87,7 +64,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0087uk6">
-          <text>"requestSolicitorOrderC100,requestSolicitorOrderFL401"</text>
+          <text>"requestSolicitorOrder"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_17vm1l0">
