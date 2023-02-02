@@ -34,7 +34,7 @@
           <text>if caseData.applicantCaseName !=null then caseData.applicantCaseName else "Family PrL"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09ruaaf">
-          <text>"true"</text>
+          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0oagl97">
@@ -317,28 +317,190 @@
           <text></text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1lny4x5">
-        <inputEntry id="UnaryTests_1jpdq6j">
+      <rule id="DecisionRule_19ys829">
+        <inputEntry id="UnaryTests_1r4tf6m">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1hpq8zy">
-          <text>"checkApplicationFL401", "checkApplicationResubmittedFL401",
-"sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401",
-"serviceOfApplicationFL401","produceHearingBundleFL401", "adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewCorrespondenceFL401", "reviewSpecificAccessRequestAdmin", "checkApplicationC100", "checkApplicationResubmittedC100", 
-"addCaseNumber", "addCaseNumberResubmitted", 
-"sendToGateKeeperC100", "sendToGateKeeperResubmittedC100", 
-"serviceOfApplicationC100",
- "produceHearingBundleC100", "adminServeOrderC100", 
-"updateHearingActualsC100", "requestSolicitorOrderC100", 
-"reviewCorrespondenceC100","gateKeeping", "gateKeepingResubmitted","gateKeeping", "gateKeepingResubmitted",</text>
+        <inputEntry id="UnaryTests_0k8t9uf">
+          <text>"checkApplicationFL401", "checkApplicationResubmittedFL401"</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0omo7uu">
+        <outputEntry id="LiteralExpression_0mie2zu">
           <text>"description"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1iaoi95">
-          <text>taskAttributes.name</text>
+        <outputEntry id="LiteralExpression_1tuwyws">
+          <text>"[Add Case Number](/cases/case-details/${[CASE_REFERENCE]}/trigger/issueAndSendToLocalCourtCallback/issueAndSendToLocalCourtCallback1)"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_184xf0n">
+        <outputEntry id="LiteralExpression_1wisp2q">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qj4vfh">
+        <inputEntry id="UnaryTests_1aql7ou">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jvxih0">
+          <text>"checkApplicationC100", "checkApplicationResubmittedC100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0mpsunv">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xxdcni">
+          <text>"[Issue and send to local Court](/cases/case-details/${[CASE_REFERENCE]}/trigger/fl401AddCaseNumber/fl401AddCaseNumber1)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p4gen9">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19jholt">
+        <inputEntry id="UnaryTests_1nrq0n1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1aa9lmh">
+          <text>"addCaseNumber", "addCaseNumberResubmitted", </text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10z2t2a">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0oh9m7z">
+          <text>"[Add Case Number](/cases/case-details/${[CASE_REFERENCE]}/trigger/caseNumber/caseNumber1)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00kptk8">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1k0smbv">
+        <inputEntry id="UnaryTests_1t943w9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0afcecw">
+          <text>"sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401", "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xdwv1u">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sofmuu">
+          <text>"[Send To Gatekeeper](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendToGateKeeper/sendToGateKeeper1)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wbn2gb">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1yzrydi">
+        <inputEntry id="UnaryTests_1nw8vat">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17czakr">
+          <text>"serviceOfApplicationFL401", "serviceOfApplicationC100" </text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0o26yty">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0omzm7q">
+          <text>"[Service of Application](/cases/case-details/${[CASE_REFERENCE]}/trigger/serviceOfApplication)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fc5qjz">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ol9j4o">
+        <inputEntry id="UnaryTests_08czz2j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e6i0vx">
+          <text>"produceHearingBundleFL401", "produceHearingBundleC100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lprxe9">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0azzdzt">
+          <text>"[Create Bundle](/cases/case-details/${[CASE_REFERENCE]}/trigger/createBundle/createBundle1)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h5gzp7">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10i0b6u">
+        <inputEntry id="UnaryTests_0s2jpzs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kvz75o">
+          <text> "adminServeOrderFL401", "adminServeOrderC100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0z94w12">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05zl31d">
+          <text>"[Service of Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_121bl15">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1traqxd">
+        <inputEntry id="UnaryTests_1j8r6ux">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g0xhur">
+          <text>"reviewCorrespondenceFL401", "reviewCorrespondenceC100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_013ea43">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14bncvb">
+          <text>"[Review Correspondence](/cases/case-details/${[CASE_REFERENCE]}/trigger/)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l3mwkl">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wsm7f7">
+        <inputEntry id="UnaryTests_07odi9r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_063yi8i">
+          <text>"updateHearingActualsFL401", "updateHearingActualsC100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18362fg">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ggjpaq">
+          <text>"[Update Hearing Actuals](/cases/case-details/${[CASE_REFERENCE]}/trigger/)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0szy8u7">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15xcr5v">
+        <inputEntry id="UnaryTests_0xnse18">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lz83v5">
+          <text>"requestSolicitorOrderFL401", "requestSolicitorOrderC100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1drdfke">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kzirjj">
+          <text>"[Request Solicitor to Submit the Order]"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0t3f1gd">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lmjovk">
+        <inputEntry id="UnaryTests_1y6skp2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l6ob90">
+          <text>"gateKeeping", "gateKeepingResubmitted"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jqlc9c">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o6t7rz">
+          <text>if (taskAttributes.name != null) then taskAttributes.name else if (taskAttributes.taskName !=null) then taskAttributes.taskName else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xk4f3f">
           <text></text>
         </outputEntry>
       </rule>
