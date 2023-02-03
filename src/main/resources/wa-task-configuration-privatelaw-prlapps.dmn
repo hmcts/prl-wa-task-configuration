@@ -34,7 +34,7 @@
           <text>if caseData.applicantCaseName !=null then caseData.applicantCaseName else "Family PrL"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09ruaaf">
-          <text></text>
+          <text>"true"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0oagl97">
@@ -311,7 +311,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0p6dwov">
-          <text>if (taskAttributes != null and taskAttributes.taskId != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskId + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)" else ""</text>
+          <text>if (taskAttributes != null and taskAttributes.taskType != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskId+ "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)" else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_16ytx4v">
           <text></text>
