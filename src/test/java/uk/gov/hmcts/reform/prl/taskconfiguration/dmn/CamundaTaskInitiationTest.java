@@ -56,7 +56,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "checkApplicationC100",
                         "name", "Check Application",
                         "workingDaysAllowed", 1,
-                        "processCategories", "applicationCheckC100"
+                        "processCategories", "applicationCheck"
                     )
                 )
             ),
@@ -65,7 +65,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -73,16 +73,16 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "checkApplicationResubmittedc100",
                         "name", "Check Resubmitted Application",
                         "workingDaysAllowed", 1,
-                        "processCategories", "applicationCheckC100Resubmit"
+                        "processCategories", "applicationCheck"
                     )
                 )
             ),
             Arguments.of(
                 "fl401StatementOfTruthAndSubmit",
-                "SUBMITTED",
+                "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -90,16 +90,16 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "checkApplicationFL401",
                         "name", "Check Application",
                         "workingDaysAllowed", 1,
-                        "processCategories", "applicationCheckFL401"
+                        "processCategories", "applicationCheck"
                     )
                 )
             ),
             Arguments.of(
                 "fl401resubmit",
-                "SUBMITTED",
+                "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -107,7 +107,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "checkApplicationResubmittedFL401",
                         "name", "Check Resubmitted Application",
                         "workingDaysAllowed", 1,
-                        "processCategories", "applicationCheckFL401Resubmit"
+                        "processCategories", "applicationCheck"
                     )
                 )
             ),
@@ -116,7 +116,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "CASE_ISSUE",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 List.of(
@@ -139,7 +139,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "CASE_ISSUE",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 List.of(
@@ -162,7 +162,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "CASE_ISSUE",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -179,7 +179,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "CASE_ISSUE",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -196,7 +196,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "GATE_KEEPING",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -213,7 +213,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "GATE_KEEPING",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(

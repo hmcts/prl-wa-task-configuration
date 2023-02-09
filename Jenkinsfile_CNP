@@ -7,11 +7,11 @@ def product = "prl"
 def component = "task-configuration"
 def s2sServiceName = "wa_camunda_pipeline_upload"
 def tenantId = "privatelaw"
-def branchesToSync = ['demo', 'perftest']
+def branchesToSync = ['demo', 'perftest', "ithc"]
 
 withCamundaOnlyPipeline(type, product, component, s2sServiceName, tenantId) {
 
-  after('test') {
+  afterSuccess('test') {
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: '**/reports/tests/**/*'
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: '**/reports/tests/integration/**/*'
   }

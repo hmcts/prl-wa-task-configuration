@@ -29,7 +29,7 @@
           <text>"WithdrawApplication_Event"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1iy08tm">
-          <text>"SUBMITTED_PAID"</text>
+          <text>"CASE_WITHDRAWN"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0t8415e">
           <text>"Cancel"</text>
@@ -41,30 +41,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zmhw8j">
-          <text>"applicationCheckC100,applicationCheckC100Resubmit"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1ejz62i">
-        <inputEntry id="UnaryTests_1s99s7i">
-          <text>"SUBMITTED"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_18lckib">
-          <text>"WithdrawApplication_Event"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0x54ea4">
-          <text>"SUBMITTED"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_13shtg6">
-          <text>"Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_03sjheq">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1crcryi">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_187lcs2">
-          <text>"applicationCheckFL401,applicationCheckFL401Resubmit"</text>
+          <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0apzh7f">
@@ -87,7 +64,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0087uk6">
-          <text>"requestSolicitorOrderC100,requestSolicitorOrderFL401"</text>
+          <text>"requestSolicitorOrder"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_17vm1l0">
@@ -133,52 +110,6 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1nvhaoe">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1j3kmhf">
-        <inputEntry id="UnaryTests_0ri3g73">
-          <text>"SUBMITTED_PAID"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_04nu9wc">
-          <text>"issueAndSendToLocalCourtCallback"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ttzk5j">
-          <text>"CASE_ISSUE"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0kg149w">
-          <text>"Reconfigure"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1gunu4f">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0haizik">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1oznlpu">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0f4920o">
-        <inputEntry id="UnaryTests_04d59xw">
-          <text>"SUBMITTED"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0cjpegl">
-          <text>"issueAndSendToLocalCourtCallback"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_099gmpg">
-          <text>"CASE_ISSUE"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_065adt5">
-          <text>"Reconfigure"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0zfstuv">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0dvm88l">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_11c4kfh">
           <text></text>
         </outputEntry>
       </rule>
