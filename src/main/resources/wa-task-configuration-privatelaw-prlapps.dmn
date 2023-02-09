@@ -127,7 +127,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1y3kj1v">
-          <text>"addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationC100","serviceOfApplicationFL401","reviewSolicitorOrderProvided","adminServeOrderC100","adminServeOrderFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","reviewCorrespondenceC100","reviewCorrespondenceFL401"</text>
+          <text>"addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationC100","serviceOfApplicationFL401","adminServeOrderC100","adminServeOrderFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","reviewCorrespondenceC100","reviewCorrespondenceFL401"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0rvgay2">
           <text>"workType"</text>
@@ -144,7 +144,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gm06lg">
-          <text>"gateKeeping","gateKeepingResubmitted"</text>
+          <text>"gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0omxasv">
           <text>"workType"</text>
@@ -501,6 +501,23 @@
           <text>if (taskAttributes.name != null) then taskAttributes.name else if (taskAttributes.taskName !=null) then taskAttributes.taskName else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xk4f3f">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18p9n63">
+        <inputEntry id="UnaryTests_0r2c9k2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g87bcw">
+          <text>"reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mjj9t0">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pnixna">
+          <text>"[Review and Approve Solicitor Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/editAndApproveAnOrder/editAndApproveAnOrder1)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1z0pkcv">
           <text></text>
         </outputEntry>
       </rule>
