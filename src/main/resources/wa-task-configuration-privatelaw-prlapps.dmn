@@ -311,7 +311,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0p6dwov">
-          <text>if (taskAttributes != null and taskAttributes.taskType != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskId+ "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)" else ""</text>
+          <text>if (taskAttributes != null and taskAttributes.taskType != null and taskAttributes.roleAssignmentId != null) then "[Review Access Request](/role-access/" + taskAttributes.taskType + "/assignment/" + taskAttributes.roleAssignmentId + "/specific-access)" else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_16ytx4v">
           <text></text>
