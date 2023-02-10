@@ -70,7 +70,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "checkApplicationResubmittedc100",
+                        "taskId", "checkApplicationResubmittedC100",
                         "name", "Check Resubmitted Application",
                         "workingDaysAllowed", 1,
                         "processCategories", "applicationCheck"
