@@ -65,7 +65,7 @@
           <text>"region"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_05korws">
-          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.region != null) then  caseData.caseManagementLocation.region else ""</text>
+          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.regionId != null) then  caseData.caseManagementLocation.regionId else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0dwx9qa">
           <text>"true"</text>
@@ -82,7 +82,7 @@
           <text>"location"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0jj1wzo">
-          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.baseLocation != null) then caseData.caseManagementLocation.baseLocation else ""</text>
+          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.baseLocationId != null) then caseData.caseManagementLocation.baseLocationId else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1wrzh5i">
           <text>"true"</text>
