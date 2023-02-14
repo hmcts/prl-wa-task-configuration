@@ -328,7 +328,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1tuwyws">
-          <text>"[Add Case Number](/cases/case-details/${[CASE_REFERENCE]}/trigger/issueAndSendToLocalCourtCallback/issueAndSendToLocalCourtCallback1)"</text>
+          <text>"[Add Case Number](/cases/case-details/${[CASE_REFERENCE]}/trigger/fl401AddCaseNumber/fl401AddCaseNumber1)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1wisp2q">
           <text></text>
@@ -345,7 +345,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1xxdcni">
-          <text>"[Issue and send to local Court](/cases/case-details/${[CASE_REFERENCE]}/trigger/fl401AddCaseNumber/fl401AddCaseNumber1)"</text>
+          <text>"[Issue and send to local Court](/cases/case-details/${[CASE_REFERENCE]}/trigger/issueAndSendToLocalCourtCallback/issueAndSendToLocalCourtCallback1)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0p4gen9">
           <text></text>
