@@ -134,7 +134,7 @@
           <text>"LEGAL_OPERATIONS"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_140ri28">
-          <text></text>
+          <text>"SKILL:ABA5:GATEKEEPINGFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_11r2dnr">
           <text></text>
@@ -173,13 +173,42 @@
           <text>false</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1uxnxlx">
-        <description>Admin task permissions</description>
-        <inputEntry id="UnaryTests_1aj3x26">
+      <rule id="DecisionRule_0obpeja">
+        <description>Court admin check application skills permission</description>
+        <inputEntry id="UnaryTests_0m16bpv">
           <text>"checkApplicationFL401", "checkApplicationResubmittedFL401",
-"sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401", 
-"serviceOfApplicationFL401",
-"produceHearingBundleFL401", "adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewCorrespondenceFL401"</text>
+"sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_132ys7j">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0f7gbzp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00srfsu">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08cueo7">
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sd0fo0">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hhi01m">
+          <text>"SKILL:ABA5:CHECKAPPLICATIONFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0frmr9q">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ejj2eo">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1uxnxlx">
+        <description>Court admin service of application skills permissions</description>
+        <inputEntry id="UnaryTests_1aj3x26">
+          <text>"serviceOfApplicationFL401"
+</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0wl01xq">
           <text></text>
@@ -197,12 +226,100 @@
           <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_15u3v40">
-          <text></text>
+          <text>"SKILL:ABA5:SERVEAPPLICATIONFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1nyn2if">
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nysdyn">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0u17n4d">
+        <description>Court admin hearing management skills permission</description>
+        <inputEntry id="UnaryTests_0x0kyja">
+          <text>"produceHearingBundleFL401", "updateHearingActualsFL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0473w2g">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1n3pumu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pdb4yj">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_194ifzv">
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12csz1u">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yy5h9a">
+          <text>"SKILL:ABA5:HEARINGMANAGEMENTFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1836ek9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ebtpne">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qf60gz">
+        <inputEntry id="UnaryTests_19oywac">
+          <text>"adminServeOrderFL401", "requestSolicitorOrderFL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1braxwh">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wjycbt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1sc3i5c">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xh39rh">
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06yq22s">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vifmop">
+          <text>"SKILLS:ABA5:ORDERMANAGEMENTFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ygosjr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bzwpsj">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wrkkzl">
+        <inputEntry id="UnaryTests_18p5ocz">
+          <text>"reviewCorrespondenceFL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gv5jm0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0o2cazf">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0660kzw">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rj11t8">
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1awke1s">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qh5x9o">
+          <text>"SKILLS:ABA5:REVIEWCORRESPONDENCEFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1krpez6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0scn8g8">
           <text>false</text>
         </outputEntry>
       </rule>
@@ -241,11 +358,7 @@
         <inputEntry id="UnaryTests_14xrsqw">
           <text>"checkApplicationC100", "checkApplicationResubmittedC100", 
 "addCaseNumber", "addCaseNumberResubmitted", 
-"sendToGateKeeperC100", "sendToGateKeeperResubmittedC100", 
-"serviceOfApplicationC100", 
-"produceHearingBundleC100",
- "adminServeOrderC100", "updateHearingActualsC100", 
-"requestSolicitorOrderC100", "reviewCorrespondenceC100"</text>
+"sendToGateKeeperC100", "sendToGateKeeperResubmittedC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1pv1c0z">
           <text></text>
@@ -263,12 +376,132 @@
           <text>"CTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0cigjw1">
-          <text></text>
+          <text>"SKILL:ABA5:CHECKAPPLICATIONC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1sopskr">
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ckfsm8">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_005gw4i">
+        <description>CTSC task permissions</description>
+        <inputEntry id="UnaryTests_1brppq7">
+          <text>"serviceOfApplicationC100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yxbwuy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0mrsvm3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wabicz">
+          <text>"ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0skgcrx">
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1z05mxg">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_178xemb">
+          <text>"SKILL:ABA5:SERVEAPPLICATIONC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sks8a8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tekxtu">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_079udd1">
+        <description>CTSC task permissions</description>
+        <inputEntry id="UnaryTests_0ahkyod">
+          <text>"produceHearingBundleC100", "updateHearingActualsC100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qchifs">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0brxn0q">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19obhmm">
+          <text>"ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09ijhe4">
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wy8ulv">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kj034r">
+          <text>"SKILL:ABA5:HEARINGMANAGEMENTC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ewffgq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01y04qj">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vv5vra">
+        <description>CTSC task permissions</description>
+        <inputEntry id="UnaryTests_10kndmd">
+          <text> "adminServeOrderC100", "requestSolicitorOrderC100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_093g86j">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rtph7q">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1535ski">
+          <text>"ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1shehdx">
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16qbdgi">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qdcdmu">
+          <text>"SKILLS:ABA5:ORDERMANAGEMENTC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gpc6lu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lp7twn">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0isxg00">
+        <description>CTSC task permissions</description>
+        <inputEntry id="UnaryTests_062rjrz">
+          <text>"reviewCorrespondenceC100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fgfm23">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lswxll">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g7141c">
+          <text>"ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wy7hbb">
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1t4uyg3">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kx6utj">
+          <text>"SKILLS:ABA5:REVIEWCORRESPONDENCEC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hmfl3n">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0brr23b">
           <text>false</text>
         </outputEntry>
       </rule>
