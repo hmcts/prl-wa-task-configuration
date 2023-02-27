@@ -122,6 +122,23 @@
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0zt41dv">
+        <inputEntry id="UnaryTests_1qd5lim">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0464xkj">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08ngy8w">
+          <text>"Hearing Date"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_134flsm">
+          <text>if (caseData.nextHearingDetails !=null and caseData.nextHearingDetails.nextHearingDate!=null) then caseData.nextHearingDetails.nextHearingDate else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pbs7b2">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0ikmf14">
         <inputEntry id="UnaryTests_0epux74">
           <text></text>
