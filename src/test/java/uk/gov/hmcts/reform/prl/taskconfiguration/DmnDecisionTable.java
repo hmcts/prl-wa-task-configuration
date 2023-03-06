@@ -9,7 +9,7 @@ public enum DmnDecisionTable {
     WA_TASK_CONFIGS("wa-task-configuration-privatelaw-prlapps", "wa-task-configuration-privatelaw-prlapps.dmn"),
     WA_TASK_INITIATION("wa-task-initiation-privatelaw-prlapps", "wa-task-initiation-privatelaw-prlapps.dmn"),
     WA_TASK_PERMISSION("wa-task-permissions-privatelaw-prlapps", "wa-task-permissions-privatelaw-prlapps.dmn"),
-    WA_TASK_TASKTYPEFILTER("wa-task-typefilter-privatelaw-prlapps", "wa-task-typefilter-privatelaw-prlapps.dmn");
+    WA_TASK_TASKTYPEFILTER("wa-task-types-privatelaw-prlapps", "wa-task-types-privatelaw-prlapps.dmn");
 
     @JsonValue
     private final String key;

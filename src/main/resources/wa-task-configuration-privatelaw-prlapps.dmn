@@ -130,13 +130,148 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08ngy8w">
-          <text>"Hearing Date"</text>
+          <text>"nextHearingDate"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_134flsm">
           <text>if (caseData.nextHearingDetails !=null and caseData.nextHearingDetails.nextHearingDate!=null) then caseData.nextHearingDetails.nextHearingDate else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0pbs7b2">
           <text>"true"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vxib8v">
+        <inputEntry id="UnaryTests_06paho4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sp5nj2">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01lchmp">
+          <text>"nextHearingId"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mk1c2z">
+          <text>if (caseData.nextHearingDetails !=null and caseData.nextHearingDetails.hearingId!=null) then caseData.nextHearingDetails.hearingId else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15sfmzo">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1i1m22e">
+        <inputEntry id="UnaryTests_01jxtvg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08jiuyj">
+          <text>"checkApplicationFL401", "checkApplicationResubmittedFL401", "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401", "serviceOfApplicationFL401",  "adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewSpecificAccessRequestAdmin", "checkApplicationC100", "checkApplicationResubmittedC100", "addCaseNumber", "addCaseNumberResubmitted", "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100", 
+"serviceOfApplicationC100", "adminServeOrderC100", 
+"updateHearingActualsC100", "requestSolicitorOrderC100", 
+"reviewSpecificAccessRequestCTSC"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lyogga">
+          <text>"priorityDate"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05oe9ab">
+          <text>if(taskAttributes != null and taskAttributes.dueDateTime !=null) then taskAttributes.dueDateTime else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s6csib">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_079hy2c">
+        <inputEntry id="UnaryTests_1w13g4y">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a86afo">
+          <text>"reviewCorrespondenceFL401", "produceHearingBundleFL401", "reviewCorrespondenceC100", "produceHearingBundleC100", "gateKeeping", "gateKeepingResubmitted", "reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07s1azt">
+          <text>"priorityDate"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_036c0l4">
+          <text>{min(${taskAttributes.dueDate}, {${if (caseData.nextHearingDetails !=null and caseData.nextHearingDetails.nextHearingDate!=null) then caseData.nextHearingDetails.nextHearingDate else 3}}.minusDays(3))}</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0aelp04">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00tvixh">
+        <inputEntry id="UnaryTests_0yqsbvn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02twz7w">
+          <text>"checkApplicationFL401", "checkApplicationResubmittedFL401", "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401", "serviceOfApplicationFL401",  "adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewSpecificAccessRequestAdmin", "reviewCorrespondenceFL401", "produceHearingBundleFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0o0dcmv">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gh6ptw">
+          <text>1000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nx7ijw">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ugk4jw">
+        <inputEntry id="UnaryTests_088b2ki">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f0gzeq">
+          <text>"checkApplicationC100", "checkApplicationResubmittedC100", "addCaseNumber", "addCaseNumberResubmitted", 
+"sendToGateKeeperC100", "sendToGateKeeperResubmittedC100", 
+"serviceOfApplicationC100", "adminServeOrderC100", 
+"updateHearingActualsC100", "requestSolicitorOrderC100", 
+"reviewSpecificAccessRequestCTSC", "reviewCorrespondenceC100", "produceHearingBundleC100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jiva8u">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h1xvth">
+          <text>if (caseData.isUrgentFlag != null and caseData.isCaseUrgent=="Yes") then 2000 else if  (caseData.allegationsOfHarmYesNo != null and caseData.allegationsOfHarmYesNo=="Yes") then 3000 else 5000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gfut7a">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0b08kgy">
+        <inputEntry id="UnaryTests_0ddifi8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05latny">
+          <text>"gateKeeping", "gateKeepingResubmitted", "reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_121l57m">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0w906jt">
+          <text>if (caseDate.caseTypeOfApplication != null and caseDate.caseTypeOfApplication == "FL401") 
+     then 1000, 
+else if (caseDate.caseTypeOfApplication != null and caseDate.caseTypeOfApplication == "C100") 
+      then if 
+             (caseData.isUrgentFlag != null and caseData.isCaseUrgent=="Yes") 
+              then 2000 
+      else 
+             (caseData.allegationsOfHarmYesNo != null and caseData.allegationsOfHarmYesNo=="Yes") 
+             then 3000 
+else 5000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ve8n1e">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1dhdw0x">
+        <inputEntry id="UnaryTests_0gx69sv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w4pkag">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1flz794">
+          <text>"minorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h425sn">
+          <text>500</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00rylng">
+          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ikmf14">

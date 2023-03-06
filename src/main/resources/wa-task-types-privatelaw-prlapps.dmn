@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
-  <decision id="wa-task-typefilter-privatelaw-prlapps" name="Private Law TaskType Filter DMN">
-    <decisionTable id="DecisionTable_07kcj0o">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.3.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="wa-task-types-privatelaw-prlapps" name="Private Law Task Types DMN">
+    <decisionTable id="DecisionTable_07kcj0o" hitPolicy="COLLECT">
       <input id="Input_1">
         <inputExpression id="InputExpression_1" typeRef="string">
           <text></text>
@@ -27,7 +27,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1totaky">
-          <text>"checkResubmittedApplicationc100"</text>
+          <text>"checkResubmittedApplicationC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_014q4l0">
           <text>"Check resubmitted application"</text>
@@ -39,7 +39,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1thuvv6">
-          <text>"checkApplicationfl401"</text>
+          <text>"checkApplicationFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1dupvs1">
           <text>"Check application"</text>
@@ -51,7 +51,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0o73z81">
-          <text>"checkResubmittedApplicationfl401"</text>
+          <text>"checkResubmittedApplicationFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zojmeb">
           <text>"Check resubmitted application"</text>
@@ -87,7 +87,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0egs0fb">
-          <text>"sendToGateKeeperfl401"</text>
+          <text>"sendToGateKeeperFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0cjm448">
           <text>"Send To Gatekeeper"</text>
@@ -99,7 +99,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18hw4j9">
-          <text>"sendToGateKeeperc100"</text>
+          <text>"sendToGateKeeperC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1dof50t">
           <text>"Send To Gatekeeper"</text>
@@ -135,7 +135,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1tn5c0c">
-          <text>"serviceOfApplicationc100"</text>
+          <text>"serviceOfApplicationC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0l7u80j">
           <text>"Service Of Application"</text>
@@ -147,7 +147,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_02nxd6g">
-          <text>"serviceOfApplicationfl401"</text>
+          <text>"serviceOfApplicationFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_04l7968">
           <text>"Service Of Application"</text>
@@ -159,7 +159,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1rino2x">
-          <text>"serviceOfOrderc100"</text>
+          <text>"serviceOfOrderC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1lup6p8">
           <text>"Service Of Order"</text>
@@ -171,7 +171,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_13sjfhs">
-          <text>"serviceOfOrderfl401"</text>
+          <text>"serviceOfOrderFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1e7chqz">
           <text>"Service Of Order"</text>
@@ -183,7 +183,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1s4a3l8">
-          <text>"produceHearingBundlec100"</text>
+          <text>"produceHearingBundleF100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1fl7v31">
           <text>"Produce Hearing Bundle"</text>
@@ -195,7 +195,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1iv02zu">
-          <text>"produceHearingBundlefl401"</text>
+          <text>"produceHearingBundleFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_07wfh38">
           <text>"Produce Hearing Bundle"</text>
@@ -207,7 +207,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_10r2r8y">
-          <text>"createOrderc100"</text>
+          <text>"createOrderC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_07t65e7">
           <text>"Create Order"</text>
@@ -219,7 +219,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0t1sgqg">
-          <text>"createOrderfl401"</text>
+          <text>"createOrderFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0of22tl">
           <text>"Create Order"</text>
@@ -243,7 +243,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ubvyab">
-          <text>"requestSolicitorOrderc100"</text>
+          <text>"requestSolicitorOrderC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0wal4tx">
           <text>"Request Solicitor Order"</text>
@@ -255,7 +255,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1tfodbe">
-          <text>"requestSolicitorOrderfl401"</text>
+          <text>"requestSolicitorOrderFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_11347sz">
           <text>"Request Solicitor Order"</text>
@@ -267,7 +267,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_194hd98">
-          <text>"updateHearingActualsc100"</text>
+          <text>"updateHearingActualsC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09oz916">
           <text>"Update Hearing Actuals "</text>
@@ -279,7 +279,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_17opci5">
-          <text>"updateHearingActualsfl401"</text>
+          <text>"updateHearingActualsFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1bbas8n">
           <text>"Update Hearing Actuals"</text>
@@ -291,7 +291,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1az8rd9">
-          <text>"reviewCorrespondencec100"</text>
+          <text>"reviewCorrespondenceC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1idgoa5">
           <text>"Review Correspondence"</text>
@@ -303,7 +303,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_191uwop">
-          <text>"reviewCorrespondencefl401"</text>
+          <text>"reviewCorrespondenceFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02vsyqy">
           <text>"Review Correspondence"</text>
@@ -313,7 +313,7 @@
   </decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
-      <dmndi:DMNShape dmnElementRef="wa-task-typefilter-privatelaw-prlapps">
+      <dmndi:DMNShape dmnElementRef="wa-task-types-privatelaw-prlapps">
         <dc:Bounds height="80" width="180" x="160" y="100" />
       </dmndi:DMNShape>
     </dmndi:DMNDiagram>
