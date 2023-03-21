@@ -133,7 +133,7 @@
           <text>"nextHearingDate"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_134flsm">
-          <text>if (caseData.nextHearingDetails !=null and caseData.nextHearingDetails.nextHearingDate!=null) then caseData.nextHearingDetails.nextHearingDate else ""</text>
+          <text>if (caseData.nextHearingDetails !=null and caseData.nextHearingDetails.nextHearingDate!=null) then caseData.nextHearingDetails.nextHearingDate+"Z" else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0pbs7b2">
           <text>"true"</text>
@@ -161,16 +161,13 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08jiuyj">
-          <text>"checkApplicationFL401", "checkApplicationResubmittedFL401", "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401", "serviceOfApplicationFL401",  "adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewSpecificAccessRequestAdmin", "checkApplicationC100", "checkApplicationResubmittedC100", "addCaseNumber", "addCaseNumberResubmitted", "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100", 
-"serviceOfApplicationC100", "adminServeOrderC100", 
-"updateHearingActualsC100", "requestSolicitorOrderC100", 
-"reviewSpecificAccessRequestCTSC"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lyogga">
           <text>"priorityDate"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_05oe9ab">
-          <text>if(taskAttributes != null and taskAttributes.dueDateTime !=null) then taskAttributes.dueDateTime else ""</text>
+          <text>if(taskAttributes != null and taskAttributes.dueDate !=null) then taskAttributes.dueDate else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0s6csib">
           <text></text>
@@ -181,13 +178,28 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0a86afo">
-          <text>"reviewCorrespondenceFL401", "produceHearingBundleFL401", "reviewCorrespondenceC100", "produceHearingBundleC100", "gateKeeping", "gateKeepingResubmitted", "reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_07s1azt">
           <text>"priorityDate"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_036c0l4">
-          <text>{min(${taskAttributes.dueDate}, {${if (caseData.nextHearingDetails !=null and caseData.nextHearingDetails.nextHearingDate!=null) then caseData.nextHearingDetails.nextHearingDate else 3}}.minusDays(3))}</text>
+          <text>if (caseData.nextHearingDetails !=null and caseData.nextHearingDetails.nextHearingDate!=null)
+{
+    (
+        {
+            min(
+                ${taskAttributes.dueDate}, 
+                {
+                    ${caseData.nextHearingDetails.nextHearingDate}.minusDays(3) 
+                }
+            )
+        }
+    )
+} else 
+{ 
+     taskAttributes.dueDate
+}</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0aelp04">
           <text></text>
@@ -198,7 +210,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_02twz7w">
-          <text>"checkApplicationFL401", "checkApplicationResubmittedFL401", "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401", "serviceOfApplicationFL401",  "adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewSpecificAccessRequestAdmin", "reviewCorrespondenceFL401", "produceHearingBundleFL401"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0o0dcmv">
           <text>"majorPriority"</text>
@@ -215,11 +227,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0f0gzeq">
-          <text>"checkApplicationC100", "checkApplicationResubmittedC100", "addCaseNumber", "addCaseNumberResubmitted", 
-"sendToGateKeeperC100", "sendToGateKeeperResubmittedC100", 
-"serviceOfApplicationC100", "adminServeOrderC100", 
-"updateHearingActualsC100", "requestSolicitorOrderC100", 
-"reviewSpecificAccessRequestCTSC", "reviewCorrespondenceC100", "produceHearingBundleC100"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jiva8u">
           <text>"majorPriority"</text>
@@ -236,15 +244,15 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_05latny">
-          <text>"gateKeeping", "gateKeepingResubmitted", "reviewSolicitorOrderProvided"</text>
+          <text>"gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_121l57m">
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0w906jt">
-          <text>if (caseDate.caseTypeOfApplication != null and caseDate.caseTypeOfApplication == "FL401") 
-     then 1000, 
-else if (caseDate.caseTypeOfApplication != null and caseDate.caseTypeOfApplication == "C100") 
+          <text>if (caseData.caseTypeOfApplication != null and caseData.caseTypeOfApplication == "FL401") 
+     then 1000 
+else if (caseData.caseTypeOfApplication != null and caseData.caseTypeOfApplication == "C100") 
       then if 
              (caseData.isUrgentFlag != null and caseData.isCaseUrgent=="Yes") 
               then 2000 
@@ -508,7 +516,7 @@ else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1aa9lmh">
-          <text>"addCaseNumber", "addCaseNumberResubmitted"</text>
+          <text>"addCaseNumber","addCaseNumberResubmitted"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_10z2t2a">
           <text>"description"</text>
@@ -548,7 +556,7 @@ else 5000</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0omzm7q">
-          <text>"[Service of Application](/cases/case-details/${[CASE_REFERENCE]}/trigger/serviceOfApplication)"</text>
+          <text>"[Service of Application](/cases/case-details/${[CASE_REFERENCE]}/trigger/serviceOfApplication/serviceOfApplicationorderDetails)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1fc5qjz">
           <text></text>
@@ -599,7 +607,7 @@ else 5000</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_14bncvb">
-          <text>"[Review Correspondence](/cases/case-details/${[CASE_REFERENCE]}/trigger/)"</text>
+          <text>"[Review Correspondence](/cases/case-details/${[CASE_REFERENCE]}/Case documents)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0l3mwkl">
           <text></text>
