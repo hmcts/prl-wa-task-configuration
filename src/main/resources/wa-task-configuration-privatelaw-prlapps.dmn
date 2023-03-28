@@ -65,7 +65,7 @@
           <text>"region"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_05korws">
-          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.regionId != null) then  caseData.caseManagementLocation.regionId else ""</text>
+          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.region != null) then  caseData.caseManagementLocation.region else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0dwx9qa">
           <text>"true"</text>
@@ -82,7 +82,7 @@
           <text>"location"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0jj1wzo">
-          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.baseLocationId != null) then caseData.caseManagementLocation.baseLocationId else ""</text>
+          <text>if (caseData.caseManagementLocation != null and caseData.caseManagementLocation.baseLocation != null) then caseData.caseManagementLocation.baseLocation else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1wrzh5i">
           <text>"true"</text>
@@ -265,12 +265,12 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1cssptr">
-          <text>"checkApplicationC100", "checkApplicationResubmittedC100", 
-"addCaseNumber", "addCaseNumberResubmitted", 
-"sendToGateKeeperC100", "sendToGateKeeperResubmittedC100", 
+          <text>"checkApplicationC100", "checkApplicationResubmittedC100",
+"addCaseNumber", "addCaseNumberResubmitted",
+"sendToGateKeeperC100", "sendToGateKeeperResubmittedC100",
 "serviceOfApplicationC100",
- "produceHearingBundleC100", "adminServeOrderC100", 
-"updateHearingActualsC100", "requestSolicitorOrderC100", 
+ "produceHearingBundleC100", "adminServeOrderC100",
+"updateHearingActualsC100", "requestSolicitorOrderC100",
 "reviewCorrespondenceC100", "reviewSpecificAccessRequestCTSC"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18u6y8m">
@@ -396,7 +396,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0omzm7q">
-          <text>"[Service of Application](/cases/case-details/${[CASE_REFERENCE]}/trigger/serviceOfApplication)"</text>
+          <text>"[Service of Application](/cases/case-details/${[CASE_REFERENCE]}/trigger/serviceOfApplication/serviceOfApplicationorderDetails)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1fc5qjz">
           <text></text>
@@ -447,7 +447,7 @@
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_14bncvb">
-          <text>"[Review Correspondence](/cases/case-details/${[CASE_REFERENCE]}/trigger/)"</text>
+          <text>"[Review Correspondence](/cases/case-details/${[CASE_REFERENCE]}/Case documents)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0l3mwkl">
           <text></text>
