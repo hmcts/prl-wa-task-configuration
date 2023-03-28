@@ -30,9 +30,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "name", "task-supervisor",
         "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
     );
-    private static final Map<String, Serializable> judgeOne = Map.of(
+    private static final Map<String, Serializable> hearingJudge = Map.of(
         "autoAssignable", false,
-        "name", "judge",
+        "name", "hearing-judge",
         "roleCategory", "JUDICIAL",
         "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
         "authorisations","315"
@@ -61,12 +61,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "name", "specific-access-approver-ctsc",
         "roleCategory", "CTSC",
         "value", "Read,Own,Claim,Unclaim,CompleteOwn,CancelOwn"
-    );
-    private static final Map<String, Serializable> teamAdmin = Map.of(
-        "autoAssignable", false,
-        "name", "hearing-centre-admin",
-        "roleCategory", "ADMIN",
-        "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
     );
 
 
@@ -108,7 +102,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "reviewSolicitorOrderProvided",
                 List.of(
                     taskSupervisor,
-                    judgeOne
+                    hearingJudge
                 )
             )
         );
@@ -212,17 +206,19 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "value", "Read,Manage,Complete,Cancel,Assign,Unassign",
                 "autoAssignable", false
             ), Map.of(
-                "autoAssignable", false,
-                "name", "tribunal-caseworker",
-                "roleCategory", "LEGAL_OPERATIONS",
-                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
-                ), Map.of(
                 "name", "judge",
                 "value","Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
                 "roleCategory", "JUDICIAL",
                 "authorisations", "315",
                 "autoAssignable", false
-            )
+                ),
+                Map.of(
+                "autoAssignable", false,
+                "name", "tribunal-caseworker",
+                "roleCategory", "LEGAL_OPERATIONS",
+                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations", "SKILL:ABA5:GATEKEEPINGFL401"
+                )
         )));
     }
 
@@ -247,7 +243,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401"
             )
         )));
     }
@@ -272,7 +269,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations", "SKILL:ABA5:SERVEAPPLICATIONFL401"
             )
         )));
     }
@@ -297,7 +295,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations", "SKILL:ABA5:HEARINGMANAGEMENTFL401"
             )
         )));
     }
@@ -322,7 +321,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations", "SKILLS:ABA5:ORDERMANAGEMENTFL401"
             )
         )));
     }
@@ -347,7 +347,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations", "SKILLS:ABA5:REVIEWCORRESPONDENCEFL401"
             )
         )));
     }
@@ -374,7 +375,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "ctsc",
                 "roleCategory", "CTSC",
-                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations","SKILL:ABA5:CHECKAPPLICATIONC100"
             )
         )));
     }
@@ -399,7 +401,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "ctsc",
                 "roleCategory", "CTSC",
-                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations","SKILL:ABA5:SERVEAPPLICATIONC100"
             )
         )));
     }
@@ -424,7 +427,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "ctsc",
                 "roleCategory", "CTSC",
-                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations", "SKILL:ABA5:HEARINGMANAGEMENTC100"
             )
         )));
     }
@@ -449,7 +453,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "ctsc",
                 "roleCategory", "CTSC",
-                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations","SKILLS:ABA5:ORDERMANAGEMENTC100"
             )
         )));
     }
@@ -474,7 +479,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "ctsc",
                 "roleCategory", "CTSC",
-                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations", "SKILLS:ABA5:REVIEWCORRESPONDENCEC100"
             )
         )));
     }
@@ -485,6 +491,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(17));
+        assertThat(logic.getRules().size(), is(18));
     }
 }
