@@ -113,6 +113,29 @@
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0pyz0kq">
+        <inputEntry id="UnaryTests_1rrptbg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ex20ag">
+          <text>"hmcCaseUpdateSuccess"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bivkbq">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hqzm03">
+          <text>"Reconfigure"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fq842h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nwzzr2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1key6b4">
+          <text></text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
