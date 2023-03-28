@@ -133,7 +133,7 @@
           <text>"nextHearingDate"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_134flsm">
-          <text>if (caseData.nextHearingDetails !=null and caseData.nextHearingDetails.nextHearingDate!=null) then caseData.nextHearingDetails.nextHearingDate+"Z" else ""</text>
+          <text>if (caseData.nextHearingDetails !=null and caseData.nextHearingDetails.hearingDateTime!=null) then caseData.nextHearingDetails.hearingDateTime +"Z" else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0pbs7b2">
           <text>"true"</text>
@@ -499,7 +499,7 @@ else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1jvxih0">
-          <text>"checkApplicationC100", "checkApplicationResubmittedC100"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0mpsunv">
           <text>"description"</text>
@@ -550,7 +550,7 @@ else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_17czakr">
-          <text>"serviceOfApplicationFL401", "serviceOfApplicationC100" </text>
+          <text>"serviceOfApplicationFL401","serviceOfApplicationC100" </text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0o26yty">
           <text>"description"</text>
@@ -567,7 +567,7 @@ else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1e6i0vx">
-          <text>"produceHearingBundleFL401", "produceHearingBundleC100"</text>
+          <text>"produceHearingBundleFL401","produceHearingBundleC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1lprxe9">
           <text>"description"</text>
@@ -584,7 +584,7 @@ else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1kvz75o">
-          <text> "adminServeOrderFL401", "adminServeOrderC100"</text>
+          <text> "adminServeOrderFL401","adminServeOrderC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0z94w12">
           <text>"description"</text>
@@ -601,7 +601,7 @@ else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1g0xhur">
-          <text>"reviewCorrespondenceFL401", "reviewCorrespondenceC100"</text>
+          <text>"reviewCorrespondenceFL401","reviewCorrespondenceC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_013ea43">
           <text>"description"</text>
@@ -618,7 +618,7 @@ else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_063yi8i">
-          <text>"updateHearingActualsFL401", "updateHearingActualsC100"</text>
+          <text>"updateHearingActualsFL401","updateHearingActualsC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18362fg">
           <text>"description"</text>
@@ -635,7 +635,7 @@ else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0lz83v5">
-          <text>"requestSolicitorOrderFL401", "requestSolicitorOrderC100"</text>
+          <text>"requestSolicitorOrderFL401","requestSolicitorOrderC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1drdfke">
           <text>"description"</text>
@@ -652,7 +652,7 @@ else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1l6ob90">
-          <text>"gateKeeping", "gateKeepingResubmitted"</text>
+          <text>"gateKeeping","gateKeepingResubmitted"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jqlc9c">
           <text>"description"</text>

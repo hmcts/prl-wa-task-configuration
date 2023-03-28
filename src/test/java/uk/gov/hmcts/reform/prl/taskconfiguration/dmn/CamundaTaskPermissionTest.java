@@ -216,6 +216,12 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "tribunal-caseworker",
                 "roleCategory", "LEGAL_OPERATIONS",
                 "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                ), Map.of(
+                "name", "judge",
+                "value","Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "roleCategory", "JUDICIAL",
+                "authorisations", "315",
+                "autoAssignable", false
             )
         )));
     }

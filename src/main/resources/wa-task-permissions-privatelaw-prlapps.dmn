@@ -52,10 +52,40 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0p9v7kx">
+        <inputEntry id="UnaryTests_0724iye">
+          <text>"reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14unn5y">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wwvl6y">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xrpdgi">
+          <text>"hearing-judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17bhgll">
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1odkqyk">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uv0l5c">
+          <text>315</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0encap1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gn92sb">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0ivpl63">
         <description>Judicial task permissions</description>
         <inputEntry id="UnaryTests_155q736">
-          <text>"reviewSolicitorOrderProvided"</text>
+          <text>"gateKeeping",
+"gateKeepingResubmitted"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0buofva">
           <text></text>
@@ -134,7 +164,7 @@
           <text>"LEGAL_OPERATIONS"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_140ri28">
-          <text></text>
+          <text>"SKILL:ABA5:GATEKEEPINGFL401","SKILL:ABA5:GATEKEEPINGC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_11r2dnr">
           <text></text>
@@ -195,7 +225,7 @@
           <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1hhi01m">
-          <text></text>
+          <text>"SKILL:ABA5:CHECKAPPLICATIONFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0frmr9q">
           <text></text>
@@ -226,7 +256,7 @@
           <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_15u3v40">
-          <text></text>
+          <text>	"SKILL:ABA5:SERVEAPPLICATIONFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1nyn2if">
           <text></text>
@@ -256,7 +286,8 @@
           <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0yy5h9a">
-          <text></text>
+          <text>	
+"SKILL:ABA5:HEARINGMANAGEMENTFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1836ek9">
           <text></text>
@@ -285,7 +316,7 @@
           <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0vifmop">
-          <text></text>
+          <text>"SKILLS:ABA5:ORDERMANAGEMENTFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ygosjr">
           <text></text>
@@ -314,7 +345,7 @@
           <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0qh5x9o">
-          <text></text>
+          <text>"SKILLS:ABA5:REVIEWCORRESPONDENCEFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1krpez6">
           <text></text>
@@ -376,7 +407,7 @@
           <text>"CTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0cigjw1">
-          <text></text>
+          <text>"SKILL:ABA5:CHECKAPPLICATIONC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1sopskr">
           <text></text>
@@ -406,7 +437,8 @@
           <text>"CTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_178xemb">
-          <text></text>
+          <text>	
+"SKILL:ABA5:SERVEAPPLICATIONC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0sks8a8">
           <text></text>
@@ -436,7 +468,7 @@
           <text>"CTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0kj034r">
-          <text></text>
+          <text>"SKILL:ABA5:HEARINGMANAGEMENTC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ewffgq">
           <text></text>
@@ -466,7 +498,8 @@
           <text>"CTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0qdcdmu">
-          <text></text>
+          <text>	
+"SKILLS:ABA5:ORDERMANAGEMENTC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0gpc6lu">
           <text></text>
@@ -496,7 +529,7 @@
           <text>"CTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kx6utj">
-          <text></text>
+          <text>"SKILLS:ABA5:REVIEWCORRESPONDENCEC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0hmfl3n">
           <text></text>
