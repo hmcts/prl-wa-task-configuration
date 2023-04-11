@@ -390,7 +390,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_17czakr">
-          <text>"serviceOfApplicationFL401", "serviceOfApplicationC100" </text>
+          <text>"serviceOfApplicationFL401", "serviceOfApplicationC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0o26yty">
           <text>"description"</text>
