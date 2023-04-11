@@ -152,7 +152,7 @@
           <text>"issueAndSendToLocalCourtCallback"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1x6e3bu">
-          <text>"CASE_ISSUE"</text>
+          <text>"CASE_ISSUED"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_10foe2w">
           <text></text>
@@ -181,7 +181,7 @@
           <text>"submit"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0hrb9kr">
-          <text>"CASE_ISSUE"</text>
+          <text>"CASE_ISSUED"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1onere6">
           <text></text>
@@ -210,7 +210,7 @@
           <text>"fl401AddCaseNumber"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_02dj6fb">
-          <text>"CASE_ISSUE"</text>
+          <text>"CASE_ISSUED"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1pyvycn">
           <text></text>
@@ -239,7 +239,7 @@
           <text>"fl401resubmit"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ead27q">
-          <text>"CASE_ISSUE"</text>
+          <text>"CASE_ISSUED"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_11jwfjb">
           <text></text>
@@ -268,7 +268,7 @@
           <text>"issueAndSendToLocalCourtCallback"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0y84e11">
-          <text>"CASE_ISSUE"</text>
+          <text>"CASE_ISSUED"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1hafjat">
           <text></text>
@@ -297,7 +297,7 @@
           <text>"submit"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1avrej1">
-          <text>"CASE_ISSUE"</text>
+          <text>"CASE_ISSUED"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1xyn6pk">
           <text></text>
@@ -326,7 +326,7 @@
           <text>"sendToGateKeeper"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_07uxcvq">
-          <text>"GATE_KEEPING"</text>
+          <text>"JUDICIAL_REVIEW"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1syvbhj">
           <text></text>
@@ -355,7 +355,7 @@
           <text>"submit"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1n1iaxg">
-          <text>"GATE_KEEPING"</text>
+          <text>"JUDICIAL_REVIEW"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_14tx9jt">
           <text></text>
@@ -384,7 +384,7 @@
           <text>"manageOrders"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rufm1x">
-          <text>"GATE_KEEPING"</text>
+          <text>"JUDICIAL_REVIEW"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_14adovi">
           <text>"C100"</text>
@@ -413,7 +413,7 @@
           <text>"manageOrders"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_015n398">
-          <text>"GATE_KEEPING"</text>
+          <text>"JUDICIAL_REVIEW"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ranfwa">
           <text>"FL401"</text>
