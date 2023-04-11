@@ -646,7 +646,7 @@
       </rule>
       <rule id="DecisionRule_0bu2jfj">
         <inputEntry id="UnaryTests_1sy5sab">
-          <text>"hmcCaseUpdateSuccess"</text>
+          <text>"hmcCaseUpdDecOutcome"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c225g3">
           <text>"DECISION_OUTCOME"</text>
@@ -675,7 +675,7 @@
       </rule>
       <rule id="DecisionRule_0dr66m3">
         <inputEntry id="UnaryTests_1wkw41q">
-          <text>"hmcCaseUpdateSuccess"</text>
+          <text>"hmcCaseUpdDecOutcome"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1tz6dvs">
           <text>"DECISION_OUTCOME"</text>
