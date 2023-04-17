@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(4));
         assertThat(logic.getOutputs().size(), is(5));
-        assertThat(logic.getRules().size(), is(25));
+        assertThat(logic.getRules().size(), is(23));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -85,12 +85,18 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
-                singletonList(
+                List.of(
                     Map.of(
                         "taskId", "checkApplicationFL401",
                         "name", "Check Application",
                         "workingDaysAllowed", 1,
                         "processCategories", "applicationCheck"
+                    ),
+                    Map.of(
+                        "taskId", "sendToGateKeeperFL401",
+                        "name", "Send to Gatekeeper",
+                        "workingDaysAllowed", 1,
+                        "processCategories", "localCourtGatekeepingFL401"
                     )
                 )
             ),
@@ -102,18 +108,24 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
-                singletonList(
+                List.of(
                     Map.of(
                         "taskId", "checkApplicationResubmittedFL401",
                         "name", "Check Resubmitted Application",
                         "workingDaysAllowed", 1,
                         "processCategories", "applicationCheck"
+                    ),
+                    Map.of(
+                        "taskId", "sendToGateKeeperResubmittedFL401",
+                        "name", "Send to Gatekeeper Resubmitted",
+                        "workingDaysAllowed", 1,
+                        "processCategories", "localCourtGatekeepingFL401Resubmit"
                     )
                 )
             ),
             Arguments.of(
                 "issueAndSendToLocalCourtCallback",
-                "CASE_ISSUE",
+                "CASE_ISSUED",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
@@ -136,7 +148,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "submit",
-                "CASE_ISSUE",
+                "CASE_ISSUED",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
@@ -158,42 +170,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "fl401AddCaseNumber",
-                "CASE_ISSUE",
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "sendToGateKeeperFL401",
-                        "name", "Send to Gatekeeper",
-                        "workingDaysAllowed", 1,
-                        "processCategories", "localCourtGatekeepingFL401"
-                    )
-                )
-            ),
-            Arguments.of(
-                "fl401resubmit",
-                "CASE_ISSUE",
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "sendToGateKeeperResubmittedFL401",
-                        "name", "Send to Gatekeeper Resubmitted",
-                        "workingDaysAllowed", 1,
-                        "processCategories", "localCourtGatekeepingFL401Resubmit"
-                    )
-                )
-            ),
-            Arguments.of(
                 "sendToGateKeeper",
-                "GATE_KEEPING",
+                "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
@@ -210,7 +188,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "submit",
-                "GATE_KEEPING",
+                "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
@@ -256,6 +234,76 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "name", "Update Hearing Actuals",
                         "workingDaysAllowed", 1,
                         "processCategories", "updateHearingActualsFL100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "hmcCaseUpdPrepForHearing",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "updateHearingActualsC100",
+                        "name", "Update Hearing Actuals",
+                        "workingDaysAllowed", 1,
+                        "processCategories", "updateHearingActualsC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "hmcCaseUpdPrepForHearing",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "updateHearingActualsFL100",
+                        "name", "Update Hearing Actuals",
+                        "workingDaysAllowed", 1,
+                        "processCategories", "updateHearingActualsFL100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "hmcCaseUpdDecOutcome",
+                "DECISION_OUTCOME",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "requestSolicitorOrderC100",
+                        "name", "Request Solicitor Order",
+                        "delayDuration", 5,
+                        "workingDaysAllowed", 1,
+                        "processCategories", "requestSolicitorOrder"
+                    )
+                )
+            ),
+            Arguments.of(
+                "hmcCaseUpdDecOutcome",
+                "DECISION_OUTCOME",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "requestSolicitorOrderFL100",
+                        "name", "Request Solicitor Order",
+                        "delayDuration", 5,
+                        "workingDaysAllowed", 1,
+                        "processCategories", "requestSolicitorOrder"
                     )
                 )
             ),

@@ -31,64 +31,6 @@
       <output id="OutputClause_165p3r3" label="Delay Duration" name="delayDuration" typeRef="integer" biodi:width="232" />
       <output id="OutputClause_0i6c6c2" label="Working Days Allowed" name="workingDaysAllowed" typeRef="integer" biodi:width="199" />
       <output id="OutputClause_10rno4c" label="Process Categories Identifiers" name="processCategories" typeRef="string" biodi:width="268" />
-      <rule id="DecisionRule_1fenvxm">
-        <inputEntry id="UnaryTests_09nq8bu">
-          <text>"paymentSuccessCallback"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0aldx9i">
-          <text>"SUBMITTED_PAID"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_169unjz">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1fwqrsi">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0tbxmk0">
-          <text>"checkApplicationC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_02t95m8">
-          <text>"Check Application"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1x6roa1">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1td2bt7">
-          <text>1</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1m76a0d">
-          <text>"applicationCheck"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1as56x2">
-        <inputEntry id="UnaryTests_1flvbac">
-          <text>"submit"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1w31xoc">
-          <text>"SUBMITTED_PAID"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_04d87pd">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1hudvk6">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0r22tf3">
-          <text>"checkApplicationResubmittedC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_01yj4ke">
-          <text>"Check Resubmitted Application"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0tculj3">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1uktpjv">
-          <text>1</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_138zrjw">
-          <text>"applicationCheck"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_03822dt">
         <inputEntry id="UnaryTests_034z127">
           <text>"fl401StatementOfTruthAndSubmit"</text>
@@ -144,6 +86,122 @@
           <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0u7wwv6">
+          <text>"applicationCheck"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0iojvyo">
+        <inputEntry id="UnaryTests_18kkr5l">
+          <text>"fl401StatementOfTruthAndSubmit"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02dj6fb">
+          <text>"SUBMITTED_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pyvycn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tpwyb0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16lr65j">
+          <text>"sendToGateKeeperFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wrp8vo">
+          <text>"Send to Gatekeeper"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_142ctbp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_141th00">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jvruj4">
+          <text>"localCourtGatekeepingFL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04rx9im">
+        <inputEntry id="UnaryTests_0ex8hvo">
+          <text>"fl401resubmit"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ead27q">
+          <text>"SUBMITTED_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11jwfjb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_178wukh">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vsz3nt">
+          <text>"sendToGateKeeperResubmittedFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09z3otl">
+          <text>"Send to Gatekeeper Resubmitted"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mfn2bv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pgvbko">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_146bbar">
+          <text>"localCourtGatekeepingFL401Resubmit"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1fenvxm">
+        <inputEntry id="UnaryTests_09nq8bu">
+          <text>"paymentSuccessCallback"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0aldx9i">
+          <text>"SUBMITTED_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_169unjz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fwqrsi">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tbxmk0">
+          <text>"checkApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02t95m8">
+          <text>"Check Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1x6roa1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1td2bt7">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m76a0d">
+          <text>"applicationCheck"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1as56x2">
+        <inputEntry id="UnaryTests_1flvbac">
+          <text>"submit"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w31xoc">
+          <text>"SUBMITTED_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04d87pd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hudvk6">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0r22tf3">
+          <text>"checkApplicationResubmittedC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01yj4ke">
+          <text>"Check Resubmitted Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tculj3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uktpjv">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_138zrjw">
           <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
@@ -203,64 +261,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1javb3l">
           <text>"addCaseNumberC100Resubmit"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0iojvyo">
-        <inputEntry id="UnaryTests_18kkr5l">
-          <text>"fl401AddCaseNumber"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_02dj6fb">
-          <text>"CASE_ISSUED"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1pyvycn">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0tpwyb0">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_16lr65j">
-          <text>"sendToGateKeeperFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1wrp8vo">
-          <text>"Send to Gatekeeper"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_142ctbp">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_141th00">
-          <text>1</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1jvruj4">
-          <text>"localCourtGatekeepingFL401"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_04rx9im">
-        <inputEntry id="UnaryTests_0ex8hvo">
-          <text>"fl401resubmit"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ead27q">
-          <text>"CASE_ISSUED"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_11jwfjb">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_178wukh">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0vsz3nt">
-          <text>"sendToGateKeeperResubmittedFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_09z3otl">
-          <text>"Send to Gatekeeper Resubmitted"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1mfn2bv">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1pgvbko">
-          <text>1</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_146bbar">
-          <text>"localCourtGatekeepingFL401Resubmit"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_141yqc4">
@@ -377,64 +377,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_067iein">
           <text>"gateKeepingResubmitted"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1p5lr3l">
-        <inputEntry id="UnaryTests_0230u0n">
-          <text>"manageOrders"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1rufm1x">
-          <text>"JUDICIAL_REVIEW"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_14adovi">
-          <text>"C100"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0hawoeo">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ct368x">
-          <text>"serviceOfApplicationC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1jes95s">
-          <text>"Service of  Application"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1rheskx">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0uf28b8">
-          <text>2</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_13tx90d">
-          <text>"serveApplicationGatekeepingC100"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1h0v3eh">
-        <inputEntry id="UnaryTests_02nwove">
-          <text>"manageOrders"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_015n398">
-          <text>"JUDICIAL_REVIEW"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ranfwa">
-          <text>"FL401"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1qs4s8t">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_16i2zux">
-          <text>"serviceOfApplicationFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0l9navv">
-          <text>"Service of  Application"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0n6zoh6">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_17pcwcp">
-          <text>2</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0lipaou">
-          <text>"serveApplicationGatekeepingFL401"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1neox9h">
@@ -591,7 +533,7 @@
           <text>"hmcCaseUpdPrepForHearing"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1iw6d2r">
-          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
+          <text>"JUDICIAL_REVIEW", "PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_09q1n5f">
           <text>"C100"</text>
@@ -620,7 +562,7 @@
           <text>"hmcCaseUpdPrepForHearing"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1lsoqm7">
-          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
+          <text>"JUDICIAL_REVIEW", "PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_04s7bfi">
           <text>"FL401"</text>
@@ -646,7 +588,7 @@
       </rule>
       <rule id="DecisionRule_0bu2jfj">
         <inputEntry id="UnaryTests_1sy5sab">
-          <text>"hmcCaseUpdateSuccess"</text>
+          <text>"hmcCaseUpdDecOutcome"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c225g3">
           <text>"DECISION_OUTCOME"</text>
@@ -675,13 +617,13 @@
       </rule>
       <rule id="DecisionRule_0dr66m3">
         <inputEntry id="UnaryTests_1wkw41q">
-          <text>"hmcCaseUpdateSuccess"</text>
+          <text>"hmcCaseUpdDecOutcome"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1tz6dvs">
           <text>"DECISION_OUTCOME"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0r2gcoz">
-          <text>"FL400"</text>
+          <text>"FL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0lvgsm5">
           <text></text>
