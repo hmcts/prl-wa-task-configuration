@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(4));
         assertThat(logic.getOutputs().size(), is(5));
-        assertThat(logic.getRules().size(), is(25));
+        assertThat(logic.getRules().size(), is(23));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -85,12 +85,18 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
-                singletonList(
+                List.of(
                     Map.of(
                         "taskId", "checkApplicationFL401",
                         "name", "Check Application",
                         "workingDaysAllowed", 1,
                         "processCategories", "applicationCheck"
+                    ),
+                    Map.of(
+                        "taskId", "sendToGateKeeperFL401",
+                        "name", "Send to Gatekeeper",
+                        "workingDaysAllowed", 1,
+                        "processCategories", "localCourtGatekeepingFL401"
                     )
                 )
             ),
@@ -102,12 +108,18 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
                                       + "   }"
                                       + "}"),
-                singletonList(
+                List.of(
                     Map.of(
                         "taskId", "checkApplicationResubmittedFL401",
                         "name", "Check Resubmitted Application",
                         "workingDaysAllowed", 1,
                         "processCategories", "applicationCheck"
+                    ),
+                    Map.of(
+                        "taskId", "sendToGateKeeperResubmittedFL401",
+                        "name", "Send to Gatekeeper Resubmitted",
+                        "workingDaysAllowed", 1,
+                        "processCategories", "localCourtGatekeepingFL401Resubmit"
                     )
                 )
             ),
@@ -154,40 +166,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "name", "Send to Gatekeeper Resubmitted",
                         "workingDaysAllowed", 1,
                         "processCategories", "localCourtGatekeepingResubmittedC100"
-                    )
-                )
-            ),
-            Arguments.of(
-                "fl401AddCaseNumber",
-                "CASE_ISSUED",
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "sendToGateKeeperFL401",
-                        "name", "Send to Gatekeeper",
-                        "workingDaysAllowed", 1,
-                        "processCategories", "localCourtGatekeepingFL401"
-                    )
-                )
-            ),
-            Arguments.of(
-                "fl401resubmit",
-                "CASE_ISSUED",
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "sendToGateKeeperResubmittedFL401",
-                        "name", "Send to Gatekeeper Resubmitted",
-                        "workingDaysAllowed", 1,
-                        "processCategories", "localCourtGatekeepingFL401Resubmit"
                     )
                 )
             ),
