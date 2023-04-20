@@ -234,37 +234,6 @@
           <text>false</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1uxnxlx">
-        <description>Court admin service of application skills permissions</description>
-        <inputEntry id="UnaryTests_1aj3x26">
-          <text>"serviceOfApplicationFL401"
-</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0wl01xq">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1qqp71f">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1sv9fk6">
-          <text>"hearing-centre-admin"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1hqo5x4">
-          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_18bd5ey">
-          <text>"ADMIN"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_15u3v40">
-          <text>	"SKILL:ABA5:SERVEAPPLICATIONFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1nyn2if">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0nysdyn">
-          <text>false</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0u17n4d">
         <description>Court admin hearing management skills permission</description>
         <inputEntry id="UnaryTests_0x0kyja">
@@ -413,37 +382,6 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ckfsm8">
-          <text>false</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_005gw4i">
-        <description>CTSC task permissions</description>
-        <inputEntry id="UnaryTests_1brppq7">
-          <text>"serviceOfApplicationC100"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0yxbwuy">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0mrsvm3">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1wabicz">
-          <text>"ctsc"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0skgcrx">
-          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1z05mxg">
-          <text>"CTSC"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_178xemb">
-          <text>	
-"SKILL:ABA5:SERVEAPPLICATIONC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0sks8a8">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0tekxtu">
           <text>false</text>
         </outputEntry>
       </rule>
