@@ -405,6 +405,17 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1xebuh2">
+        <inputEntry id="UnaryTests_0r7yfty">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1a8ujsy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wiqeen">
+          <text></text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
