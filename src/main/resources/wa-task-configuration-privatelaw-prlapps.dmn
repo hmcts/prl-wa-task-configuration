@@ -181,7 +181,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1wg7sho">
-          <text>"calculatedDate"</text>
+          <text>"calculatedDates"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1gj8qxv">
           <text>"nextHearingDate,dueDate,priorityDate"</text>
@@ -357,7 +357,7 @@
           <text>"dueDate"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0s6csib">
-          <text></text>
+          <text>"true"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0201y35">
@@ -374,7 +374,7 @@
           <text>"nextHearingDate,nextHearingDatePreDate,dueDate,priorityDate"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1o0fxgi">
-          <text></text>
+          <text>"true"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_05cwhr5">
@@ -391,7 +391,7 @@
           <text>"nextHearingDate"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1m8euvc">
-          <text></text>
+          <text>"true"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0lmu7xf">
@@ -408,7 +408,7 @@
           <text>-3</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_06p5r3c">
-          <text></text>
+          <text>"true"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_094sjvr">
@@ -425,7 +425,7 @@
           <text>"https://www.gov.uk/bank-holidays/england-and-wales.json"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19mavp9">
-          <text></text>
+          <text>"true"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1wr2ivo">
@@ -442,7 +442,7 @@
           <text>"SATURDAY, SUNDAY"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1dsq4ce">
-          <text></text>
+          <text>"true"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1oqiti4">
@@ -459,7 +459,7 @@
           <text>true</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1gplhct">
-          <text></text>
+          <text>"true"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1i589zf">
@@ -476,7 +476,7 @@
           <text>"No"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0y038p1">
-          <text></text>
+          <text>"true"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0k7rbde">
@@ -493,7 +493,7 @@
           <text>"nextHearingDatePreDate,dueDate"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kr9ycc">
-          <text></text>
+          <text>"true"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_00tvixh">
