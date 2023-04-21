@@ -284,17 +284,6 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1ermjaa">
-        <inputEntry id="UnaryTests_10jbxe2">
-          <text>"manageOrders"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ej8jjr">
-          <text>"gateKeeping"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0im41fd">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_06chwh2">
         <inputEntry id="UnaryTests_1r717r8">
           <text>"serviceOfApplication"</text>
@@ -314,17 +303,6 @@
           <text>"gateKeepingResubmitted"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08eazaa">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1eafvrw">
-        <inputEntry id="UnaryTests_1bzzs35">
-          <text>"manageOrders"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1iwowpp">
-          <text>"gateKeepingResubmitted"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_073nr1v">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
