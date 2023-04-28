@@ -27,7 +27,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1totaky">
-          <text>"checkResubmittedApplicationC100"</text>
+          <text>"checkApplicationResubmittedC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_014q4l0">
           <text>"Check resubmitted application C100"</text>
@@ -51,7 +51,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0o73z81">
-          <text>"checkResubmittedApplicationFL401"</text>
+          <text>"checkApplicationResubmittedFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zojmeb">
           <text>"Check resubmitted application FL401"</text>

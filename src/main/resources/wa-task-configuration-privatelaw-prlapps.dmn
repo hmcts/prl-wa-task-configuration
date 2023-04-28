@@ -286,7 +286,7 @@
           <text>"dueDateMustBeWorkingDay"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0g1tkil">
-          <text>“No”</text>
+          <text>"No"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_149fzlo">
           <text></text>
@@ -524,7 +524,7 @@
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1h1xvth">
-          <text>if (caseData.isUrgentFlag="Yes") then 2000 else if (caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
+          <text>if (caseDate.isUrgentFlag != null and caseData.isUrgentFlag="Yes") then 2000 else if (caseData.allegationsOfHarmYesNo != null and caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0gfut7a">
           <text></text>
@@ -541,7 +541,9 @@
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0w906jt">
-          <text>if (caseData.caseTypeOfApplication = "FL401") then 1000 else if (caseData.caseTypeOfApplication = "C100") then if (caseData.isCaseUrgent="Yes") then 2000 else if (caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
+          <text>if (caseData.caseTypeOfApplication = "FL401") then 1000 else if (caseData.caseTypeOfApplication = "C100" and caseDate.isCaseUrgent != null and caseData.isCaseUrgent="Yes") then 2000
+else if (caseData.caseTypeOfApplication = "C100" and caseData.allegationsOfHarmYesNo != null and
+caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ve8n1e">
           <text></text>
