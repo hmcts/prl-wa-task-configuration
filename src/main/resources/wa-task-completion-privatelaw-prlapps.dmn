@@ -416,6 +416,17 @@
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1uov3uf">
+        <inputEntry id="UnaryTests_0tej6cd">
+          <text>"serviceOfApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1czv58h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ff55d8">
+          <text></text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
