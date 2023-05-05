@@ -350,6 +350,35 @@
           <text>"gateKeeping"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_14wa6fo">
+        <inputEntry id="UnaryTests_1tntaxx">
+          <text>"fl401SendToGateKeeper"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tute44">
+          <text>"JUDICIAL_REVIEW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ib8a33">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06hf5jl">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0sx8dp8">
+          <text>"gateKeeping"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1p3k4vv">
+          <text>"Gatekeeping"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rxigc8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10l7b3y">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j1n7x2">
+          <text>"gateKeeping"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1pzdbd8">
         <inputEntry id="UnaryTests_1g5etpp">
           <text>"submit"</text>
@@ -526,6 +555,35 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1q2o6h4">
           <text>"adminServeOrderFL100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gquoiv">
+        <inputEntry id="UnaryTests_0karjuu">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y1w70r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05g7x8m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w2oo69">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mqdubs">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1e3l3ri">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xwvlzi">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mka5gq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1n4z6c1">
+          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0z5s2qi">
