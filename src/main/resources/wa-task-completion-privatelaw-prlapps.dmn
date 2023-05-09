@@ -416,14 +416,25 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0woh718">
-        <inputEntry id="UnaryTests_01py4h5">
-          <text>"updateHearingActuals"</text>
+      <rule id="DecisionRule_0k4na2m">
+        <inputEntry id="UnaryTests_01ecymt">
+          <text>"adminEditAndApproveAnOrder"</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_1kqv32x">
-          <text>"updateHearingActualsFL401"</text>
+        <outputEntry id="LiteralExpression_0smmbtq">
+          <text>"adminServeOrderCreatedByJudgeC100"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0rryakc">
+        <outputEntry id="LiteralExpression_15fgfi5">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1pprk5q">
+        <inputEntry id="UnaryTests_0ayfn8v">
+          <text>"adminEditAndApproveAnOrder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_085jxpq">
+          <text>"adminServeOrderCreatedByJudgeFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13tm3n4">
           <text>"Auto"</text>
         </outputEntry>
       </rule>

@@ -297,7 +297,7 @@
       </rule>
       <rule id="DecisionRule_0qf60gz">
         <inputEntry id="UnaryTests_19oywac">
-          <text>"adminServeOrderFL401", "requestSolicitorOrderFL401"</text>
+          <text>"adminServeOrderFL401", "requestSolicitorOrderFL401","adminServeOrderCreatedByJudgeFL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1braxwh">
           <text></text>
@@ -479,7 +479,7 @@
       <rule id="DecisionRule_1vv5vra">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_10kndmd">
-          <text> "adminServeOrderC100", "requestSolicitorOrderC100"</text>
+          <text> "adminServeOrderC100", "requestSolicitorOrderC100","adminServeOrderCreatedByJudgeC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_093g86j">
           <text></text>
