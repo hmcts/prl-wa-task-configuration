@@ -31,9 +31,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
     );
 
-    private static final Map<String, Serializable> hearingJudge = Map.of(
+    private static final Map<String, Serializable> circuitJudge = Map.of(
             "autoAssignable", false,
-            "name", "hearing-judge",
+            "name", "circuit-judge",
             "roleCategory", "JUDICIAL",
             "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
             "authorisations", "315"
@@ -117,7 +117,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "reviewSolicitorOrderProvided",
                 List.of(
                     taskSupervisor,
-                    hearingJudge
+                    judgeOne,
+                    circuitJudge
+
                 )
             )
         );
@@ -222,6 +224,12 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false
             ),Map.of(
                 "name", "judge",
+                "value","Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "roleCategory", "JUDICIAL",
+                "authorisations", "315",
+                "autoAssignable", false
+            ),Map.of(
+                "name", "circuit-judge",
                 "value","Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
                 "roleCategory", "JUDICIAL",
                 "authorisations", "315",
@@ -494,6 +502,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(18));
+        assertThat(logic.getRules().size(), is(20));
     }
 }
