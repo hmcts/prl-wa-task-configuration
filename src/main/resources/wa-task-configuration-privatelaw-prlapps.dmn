@@ -896,6 +896,23 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0lmjovk">
+        <inputEntry id="UnaryTests_1y6skp2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l6ob90">
+          <text>"gateKeeping", "gateKeepingResubmitted"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jqlc9c">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o6t7rz">
+          <text>"[Gatekeeping]"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xk4f3f">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_18p9n63">
         <inputEntry id="UnaryTests_0r2c9k2">
           <text></text>
