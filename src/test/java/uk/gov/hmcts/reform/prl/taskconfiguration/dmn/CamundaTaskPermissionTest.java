@@ -30,13 +30,21 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "name", "task-supervisor",
         "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
     );
-    private static final Map<String, Serializable> hearingJudge = Map.of(
-        "autoAssignable", false,
-        "name", "hearing-judge",
-        "roleCategory", "JUDICIAL",
-        "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
-        "authorisations","315"
+    private static final Map<String, Serializable> circuitJudge = Map.of(
+            "autoAssignable", false,
+            "name", "circuit-judge",
+            "roleCategory", "JUDICIAL",
+            "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+            "authorisations", "315"
     );
+    private static final Map<String, Serializable> judgeOne = Map.of(
+            "autoAssignable", false,
+            "name", "judge",
+            "roleCategory", "JUDICIAL",
+            "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+            "authorisations", "315"
+    );
+
     private static final Map<String, Serializable> specificJudge = Map.of(
         "autoAssignable", false,
         "name", "specific-access-approver-judiciary",
@@ -102,7 +110,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "reviewSolicitorOrderProvided",
                 List.of(
                     taskSupervisor,
-                    hearingJudge
+                    judgeOne,
+                    circuitJudge
                 )
             )
         );
@@ -211,14 +220,19 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "roleCategory", "JUDICIAL",
                 "authorisations", "315",
                 "autoAssignable", false
-                ),
-                Map.of(
-                "autoAssignable", false,
+            ),Map.of(
+                "name", "circuit-judge",
+                "value","Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "roleCategory", "JUDICIAL",
+                "authorisations", "315",
+                "autoAssignable", false
+            ),Map.of(
                 "name", "tribunal-caseworker",
-                "roleCategory", "LEGAL_OPERATIONS",
                 "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "roleCategory", "LEGAL_OPERATIONS",
                 "authorisations", "SKILL:ABA5:GATEKEEPINGFL401"
-                )
+                "autoAssignable", false
+            )
         )));
     }
 

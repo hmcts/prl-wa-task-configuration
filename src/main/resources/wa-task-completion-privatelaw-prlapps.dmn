@@ -405,14 +405,14 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_05kvogz">
-        <inputEntry id="UnaryTests_0cb5u2c">
-          <text>"manageOrders","serviceOfApplication","createBundle"</text>
+      <rule id="DecisionRule_1xebuh2">
+        <inputEntry id="UnaryTests_0r7yfty">
+          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","editAndApproveAnOrder"</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_1o5rfjh">
+        <outputEntry id="LiteralExpression_1a8ujsy">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_09pxu1a">
+        <outputEntry id="LiteralExpression_0wiqeen">
           <text></text>
         </outputEntry>
       </rule>
