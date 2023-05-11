@@ -28,8 +28,7 @@
       </input>
       <output id="Output_1" label="Task Id" name="taskId" typeRef="string" biodi:width="368" />
       <output id="OutputClause_0p5fhhd" label="Name" name="name" typeRef="string" biodi:width="150" />
-      <output id="OutputClause_165p3r3" label="Delay Duration" name="delayDuration" typeRef="integer" biodi:width="232" />
-      <output id="OutputClause_0i6c6c2" label="Working Days Allowed" name="workingDaysAllowed" typeRef="integer" biodi:width="199" />
+      <output id="OutputClause_165p3r3" label="Delay Until" name="delayUntil" typeRef="string" biodi:width="232" />
       <output id="OutputClause_10rno4c" label="Process Categories Identifiers" name="processCategories" typeRef="string" biodi:width="268" />
       <rule id="DecisionRule_03822dt">
         <inputEntry id="UnaryTests_034z127">
@@ -52,9 +51,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_129f8oi">
           <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_14ix5gg">
-          <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_15in5hs">
           <text>"applicationCheck"</text>
@@ -82,9 +78,6 @@
         <outputEntry id="LiteralExpression_06bajxy">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_16rp4ps">
-          <text>1</text>
-        </outputEntry>
         <outputEntry id="LiteralExpression_0u7wwv6">
           <text>"applicationCheck"</text>
         </outputEntry>
@@ -110,9 +103,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_142ctbp">
           <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_141th00">
-          <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1jvruj4">
           <text>"localCourtGatekeepingFL401"</text>
@@ -140,9 +130,6 @@
         <outputEntry id="LiteralExpression_1mfn2bv">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1pgvbko">
-          <text>1</text>
-        </outputEntry>
         <outputEntry id="LiteralExpression_146bbar">
           <text>"localCourtGatekeepingFL401Resubmit"</text>
         </outputEntry>
@@ -168,9 +155,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1x6roa1">
           <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1td2bt7">
-          <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1m76a0d">
           <text>"applicationCheck"</text>
@@ -198,9 +182,6 @@
         <outputEntry id="LiteralExpression_0tculj3">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1uktpjv">
-          <text>1</text>
-        </outputEntry>
         <outputEntry id="LiteralExpression_138zrjw">
           <text>"applicationCheck"</text>
         </outputEntry>
@@ -226,9 +207,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0ntq0fj">
           <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0spcrb9">
-          <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1pyp879">
           <text>"addCaseNumberC100"</text>
@@ -256,9 +234,6 @@
         <outputEntry id="LiteralExpression_0fc4ypw">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0yzj7yb">
-          <text>1</text>
-        </outputEntry>
         <outputEntry id="LiteralExpression_1javb3l">
           <text>"addCaseNumberC100Resubmit"</text>
         </outputEntry>
@@ -284,9 +259,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0uad2vw">
           <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_12cjht1">
-          <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ebf9sj">
           <text>"localCourtGatekeepingC100"</text>
@@ -314,9 +286,6 @@
         <outputEntry id="LiteralExpression_13qm4ud">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1qqthte">
-          <text>1</text>
-        </outputEntry>
         <outputEntry id="LiteralExpression_1tk485o">
           <text>"localCourtGatekeepingResubmittedC100"</text>
         </outputEntry>
@@ -343,39 +312,7 @@
         <outputEntry id="LiteralExpression_0t06g2j">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_02ctkt2">
-          <text>2</text>
-        </outputEntry>
         <outputEntry id="LiteralExpression_1x4lczj">
-          <text>"gateKeeping"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_14wa6fo">
-        <inputEntry id="UnaryTests_1tntaxx">
-          <text>"fl401SendToGateKeeper"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1tute44">
-          <text>"JUDICIAL_REVIEW"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ib8a33">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_06hf5jl">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0sx8dp8">
-          <text>"gateKeeping"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1p3k4vv">
-          <text>"Gatekeeping"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1rxigc8">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_10l7b3y">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0j1n7x2">
           <text>"gateKeeping"</text>
         </outputEntry>
       </rule>
@@ -400,9 +337,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1396ism">
           <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_185a6h0">
-          <text>2</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_067iein">
           <text>"gateKeepingResubmitted"</text>
@@ -430,9 +364,6 @@
         <outputEntry id="LiteralExpression_19rxs4w">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_00h6yxb">
-          <text>1</text>
-        </outputEntry>
         <outputEntry id="LiteralExpression_15xnwvl">
           <text>"productHearingBundleC100"</text>
         </outputEntry>
@@ -459,9 +390,6 @@
         <outputEntry id="LiteralExpression_02mk6z6">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0zeqb3p">
-          <text>1</text>
-        </outputEntry>
         <outputEntry id="LiteralExpression_1hptupr">
           <text>"productHearingBundleFL100"</text>
         </outputEntry>
@@ -487,9 +415,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_19zz5f9">
           <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1puroqo">
-          <text>5</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_00rbli9">
           <text>"reviewSolicitorOrderByJudge"</text>
@@ -519,9 +444,6 @@
         <outputEntry id="LiteralExpression_1ddgs5t">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1ol5505">
-          <text>2</text>
-        </outputEntry>
         <outputEntry id="LiteralExpression_0wnnmif">
           <text>"adminServeOrderC100"</text>
         </outputEntry>
@@ -550,40 +472,8 @@
         <outputEntry id="LiteralExpression_0tk9vw5">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_15pob9d">
-          <text>2</text>
-        </outputEntry>
         <outputEntry id="LiteralExpression_1q2o6h4">
           <text>"adminServeOrderFL100"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0gquoiv">
-        <inputEntry id="UnaryTests_0karjuu">
-          <text>"manageOrders"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0y1w70r">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_05g7x8m">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1w2oo69">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1mqdubs">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1e3l3ri">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0xwvlzi">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1mka5gq">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1n4z6c1">
-          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0z5s2qi">
@@ -591,7 +481,7 @@
           <text>"hmcCaseUpdPrepForHearing"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1iw6d2r">
-          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
+          <text>"JUDICIAL_REVIEW", "PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_09q1n5f">
           <text>"C100"</text>
@@ -608,9 +498,6 @@
         <outputEntry id="LiteralExpression_10rqu7f">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0awehfo">
-          <text>1</text>
-        </outputEntry>
         <outputEntry id="LiteralExpression_05baaz0">
           <text>"updateHearingActualsC100"</text>
         </outputEntry>
@@ -620,7 +507,7 @@
           <text>"hmcCaseUpdPrepForHearing"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1lsoqm7">
-          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
+          <text>"JUDICIAL_REVIEW", "PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_04s7bfi">
           <text>"FL401"</text>
@@ -636,9 +523,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1xmbvue">
           <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_04ue2fp">
-          <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1gsyxkc">
           <text>"updateHearingActualsFL100"</text>
@@ -664,10 +548,9 @@
           <text>"Request Solicitor Order"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_140ejeb">
-          <text>5</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_020shh0">
-          <text>1</text>
+          <text>{
+"delayUntil":date and time(date(now) + duration("P5D"))
+}</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0oqqgxq">
           <text>"requestSolicitorOrder"</text>
@@ -681,7 +564,7 @@
           <text>"DECISION_OUTCOME"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0r2gcoz">
-          <text>"FL400"</text>
+          <text>"FL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0lvgsm5">
           <text></text>
@@ -693,10 +576,9 @@
           <text>"Request Solicitor Order"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0yhayu9">
-          <text>5</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_13d8267">
-          <text>1</text>
+          <text>{
+"delayUntil":date and time(date(now) + duration("P5D"))
+}</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_13cxgrq">
           <text>"requestSolicitorOrder"</text>
@@ -723,9 +605,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1i50q27">
           <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_057kfbi">
-          <text>5</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0s3kz5g">
           <text>"courtAdminCorrespondenceC100"</text>
@@ -754,9 +633,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0qlx5fk">
           <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_07faeys">
-          <text>5</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09g5ruk">
           <text>"courtAdminCorrespondenceFL401"</text>

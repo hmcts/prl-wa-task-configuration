@@ -36,8 +36,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(4));
-        assertThat(logic.getOutputs().size(), is(5));
-        assertThat(logic.getRules().size(), is(25));
+        assertThat(logic.getOutputs().size(), is(4));
+        assertThat(logic.getRules().size(), is(23));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -55,7 +55,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "checkApplicationC100",
                         "name", "Check Application",
-                        "workingDaysAllowed", 1,
                         "processCategories", "applicationCheck"
                     )
                 )
@@ -72,7 +71,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "checkApplicationResubmittedC100",
                         "name", "Check Resubmitted Application",
-                        "workingDaysAllowed", 1,
                         "processCategories", "applicationCheck"
                     )
                 )
@@ -89,13 +87,11 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "checkApplicationFL401",
                         "name", "Check Application",
-                        "workingDaysAllowed", 1,
                         "processCategories", "applicationCheck"
                     ),
                     Map.of(
                         "taskId", "sendToGateKeeperFL401",
                         "name", "Send to Gatekeeper",
-                        "workingDaysAllowed", 1,
                         "processCategories", "localCourtGatekeepingFL401"
                     )
                 )
@@ -112,13 +108,11 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "checkApplicationResubmittedFL401",
                         "name", "Check Resubmitted Application",
-                        "workingDaysAllowed", 1,
                         "processCategories", "applicationCheck"
                     ),
                     Map.of(
                         "taskId", "sendToGateKeeperResubmittedFL401",
                         "name", "Send to Gatekeeper Resubmitted",
-                        "workingDaysAllowed", 1,
                         "processCategories", "localCourtGatekeepingFL401Resubmit"
                     )
                 )
@@ -135,13 +129,11 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "addCaseNumber",
                         "name", "Add Case Number",
-                        "workingDaysAllowed", 1,
                         "processCategories", "addCaseNumberC100"
                     ),
                     Map.of(
                         "taskId", "sendToGateKeeperC100",
                         "name", "Send to Gatekeeper",
-                        "workingDaysAllowed", 1,
                         "processCategories", "localCourtGatekeepingC100"
                     )
                 )
@@ -158,13 +150,11 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "addCaseNumberResubmitted",
                         "name", "Add Case Number Resubmitted",
-                        "workingDaysAllowed", 1,
                         "processCategories", "addCaseNumberC100Resubmit"
                     ),
                     Map.of(
                         "taskId", "sendToGateKeeperResubmittedC100",
                         "name", "Send to Gatekeeper Resubmitted",
-                        "workingDaysAllowed", 1,
                         "processCategories", "localCourtGatekeepingResubmittedC100"
                     )
                 )
@@ -181,7 +171,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "gateKeeping",
                         "name", "Gatekeeping",
-                        "workingDaysAllowed", 2,
                         "processCategories", "gateKeeping"
                     )
                 )
@@ -198,7 +187,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "gateKeepingResubmitted",
                         "name", "Gatekeeping Resubmitted",
-                        "workingDaysAllowed", 2,
                         "processCategories", "gateKeepingResubmitted"
                     )
                 )
@@ -215,7 +203,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "updateHearingActualsC100",
                         "name", "Update Hearing Actuals",
-                        "workingDaysAllowed", 1,
                         "processCategories", "updateHearingActualsC100"
                     )
                 )
@@ -232,7 +219,38 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "updateHearingActualsFL100",
                         "name", "Update Hearing Actuals",
-                        "workingDaysAllowed", 1,
+                        "processCategories", "updateHearingActualsFL100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "hmcCaseUpdPrepForHearing",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "updateHearingActualsC100",
+                        "name", "Update Hearing Actuals",
+                        "processCategories", "updateHearingActualsC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "hmcCaseUpdPrepForHearing",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "updateHearingActualsFL100",
+                        "name", "Update Hearing Actuals",
                         "processCategories", "updateHearingActualsFL100"
                     )
                 )
@@ -249,7 +267,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "reviewCorrespondenceC100",
                         "name", "Review correspondence",
-                        "workingDaysAllowed", 5,
                         "processCategories", "courtAdminCorrespondenceC100"
                     )
                 )
@@ -266,7 +283,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "reviewCorrespondenceFL401",
                         "name", "Review correspondence",
-                        "workingDaysAllowed", 5,
                         "processCategories", "courtAdminCorrespondenceFL401"
                     )
                 )

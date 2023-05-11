@@ -7,7 +7,7 @@
           <text></text>
         </inputExpression>
       </input>
-      <input id="InputClause_1gmuynt" label="Task type" biodi:width="415" camunda:inputVariable="taskType">
+      <input id="InputClause_1gmuynt" label="Task type" biodi:width="375" camunda:inputVariable="taskType">
         <inputExpression id="LiteralExpression_06iiuqg" typeRef="string">
           <text>if(taskAttributes != null and taskAttributes.taskType != null) then
                         taskAttributes. taskType
@@ -17,7 +17,7 @@
                         null</text>
         </inputExpression>
       </input>
-      <output id="Output_1" label="Name" name="name" typeRef="string" />
+      <output id="Output_1" label="Name" name="name" typeRef="string" biodi:width="351" />
       <output id="OutputClause_021y3bb" label="Value" name="value" typeRef="string" biodi:width="803" />
       <output id="OutputClause_06m3ktt" label="Can Reconfigure?" name="canReconfigure" typeRef="boolean" biodi:width="192" />
       <rule id="DecisionRule_0u7yi27">
@@ -119,6 +119,433 @@
           <text>"Private Law"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1oq20o8">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0zt41dv">
+        <inputEntry id="UnaryTests_1qd5lim">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0464xkj">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08ngy8w">
+          <text>"nextHearingDate"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_134flsm">
+          <text>if (caseData.nextHearingDetails !=null and caseData.nextHearingDetails.hearingDateTime!=null) then caseData.nextHearingDetails.hearingDateTime else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pbs7b2">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vxib8v">
+        <inputEntry id="UnaryTests_06paho4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sp5nj2">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01lchmp">
+          <text>"nextHearingId"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mk1c2z">
+          <text>if (caseData.nextHearingDetails !=null and caseData.nextHearingDetails.hearingId!=null) then caseData.nextHearingDetails.hearingId else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15sfmzo">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1dhdw0x">
+        <inputEntry id="UnaryTests_0gx69sv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w4pkag">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1flz794">
+          <text>"minorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h425sn">
+          <text>500</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00rylng">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1o0rxwr">
+        <inputEntry id="UnaryTests_0z5sjzo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dprj8g">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wg7sho">
+          <text>"calculatedDates"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gj8qxv">
+          <text>"nextHearingDate,dueDate,priorityDate"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nppmxy">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0y83yup">
+        <inputEntry id="UnaryTests_00y14o0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0busoxc">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ddqql0">
+          <text>"dueDateOrigin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lz6pa1">
+          <text>today()</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jtp2vx">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rr88jn">
+        <inputEntry id="UnaryTests_0cbcvyk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qjtiic">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0y42a5i">
+          <text>"dueDateTime"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cr885e">
+          <text>"17:00"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jxmhdc">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0a61a19">
+        <inputEntry id="UnaryTests_1fp20gw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l7uev2">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0sqhvby">
+          <text>"dueDateNonWorkingCalendar"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08frem4">
+          <text>"https://www.gov.uk/bank-holidays/england-and-wales.json"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i07xzc">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bq8jat">
+        <inputEntry id="UnaryTests_0lrkamg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ksg4uk">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1hw3roc">
+          <text>"dueDateNonWorkingDaysOfWeek"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zqecrr">
+          <text>"SATURDAY,SUNDAY"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xnycut">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09x67vl">
+        <inputEntry id="UnaryTests_1felq7m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lrdrsp">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hkzf00">
+          <text>"dueDateSkipNonWorkingDays"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zaaxce">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1euj0yu">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13j7ryy">
+        <inputEntry id="UnaryTests_038o8l4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00uoorx">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1nj5nei">
+          <text>"dueDateMustBeWorkingDay"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g1tkil">
+          <text>"No"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_149fzlo">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0tmyr2c">
+        <inputEntry id="UnaryTests_0w1nlpg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gtvl7x">
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ju1b88">
+          <text>"dueDateIntervalDays"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02isqg6">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0myx3mr">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qpxsqu">
+        <inputEntry id="UnaryTests_06x8jq2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tvsteh">
+          <text>"gateKeeping","gateKeepingResubmitted","serviceOfApplicationC100","serviceOfApplicationFL401","adminServeOrderC100","adminServeOrderFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ixfp2h">
+          <text>"dueDateIntervalDays"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d12xlm">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gojn3h">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0i6hiaj">
+        <inputEntry id="UnaryTests_0gqhgbm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07bn4jn">
+          <text>"reviewSolicitorOrderProvided", "reviewCorrespondenceC100","reviewCorrespondenceFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0t7q94m">
+          <text>"dueDateIntervalDays"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cp8m0w">
+          <text>5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_010oqi1">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1i1m22e">
+        <inputEntry id="UnaryTests_01jxtvg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08jiuyj">
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lyogga">
+          <text>"priorityDateOriginRef"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05oe9ab">
+          <text>"dueDate"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s6csib">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0201y35">
+        <inputEntry id="UnaryTests_1eaobsi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tb79v4">
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tucp7d">
+          <text>"calculatedDates"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bc7zx7">
+          <text>"nextHearingDate,nextHearingDatePreDate,dueDate,priorityDate"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o0fxgi">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05cwhr5">
+        <inputEntry id="UnaryTests_06jk63c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iktol6">
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ijqt0h">
+          <text>"nextHearingDatePreDateOriginRef"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m4qswq">
+          <text>"nextHearingDate"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m8euvc">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lmu7xf">
+        <inputEntry id="UnaryTests_089k6jw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g9qqrs">
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0uhqm5x">
+          <text>"nextHearingDatePreDateIntervalDays"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pe9yxq">
+          <text>-3</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06p5r3c">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_094sjvr">
+        <inputEntry id="UnaryTests_01eur0l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vgvmxc">
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06l1dup">
+          <text>"nextHearingDatePreDateNonWorkingCalendar"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0y0lx3c">
+          <text>"https://www.gov.uk/bank-holidays/england-and-wales.json"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19mavp9">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wr2ivo">
+        <inputEntry id="UnaryTests_0rrkak5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yds9g8">
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18wcq2b">
+          <text>"nextHearingDatePreDateNonWorkingDaysOfWeek"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1014bid">
+          <text>"SATURDAY, SUNDAY"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dsq4ce">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1oqiti4">
+        <inputEntry id="UnaryTests_1gpbqqx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1i9hse8">
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gykh0v">
+          <text>"nextHearingDatePreDateSkipNonWorkingDays"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tlncvd">
+          <text>true</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gplhct">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1i589zf">
+        <inputEntry id="UnaryTests_1osw0mt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19i7035">
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0z0xy3x">
+          <text>"nextHearingDatePreDateMustBeWorkingDay"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dz6ovr">
+          <text>"No"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0y038p1">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0k7rbde">
+        <inputEntry id="UnaryTests_0jjjvob">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06p8hre">
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07bc3mo">
+          <text>"priorityDateOriginEarliest"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03ea43q">
+          <text>"nextHearingDatePreDate,dueDate"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kr9ycc">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00tvixh">
+        <inputEntry id="UnaryTests_0yqsbvn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02twz7w">
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0o0dcmv">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gh6ptw">
+          <text>1000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nx7ijw">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ugk4jw">
+        <inputEntry id="UnaryTests_088b2ki">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f0gzeq">
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jiva8u">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h1xvth">
+          <text>if (caseDate.isUrgentFlag != null and caseData.isUrgentFlag="Yes") then 2000 else if (caseData.allegationsOfHarmYesNo != null and caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gfut7a">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0b08kgy">
+        <inputEntry id="UnaryTests_0ddifi8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05latny">
+          <text>"gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_121l57m">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0w906jt">
+          <text>if (caseData.caseTypeOfApplication = "FL401") then 1000 else if (caseData.caseTypeOfApplication = "C100" and caseDate.isCaseUrgent != null and caseData.isCaseUrgent="Yes") then 2000
+else if (caseData.caseTypeOfApplication = "C100" and caseData.allegationsOfHarmYesNo != null and
+caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ve8n1e">
           <text></text>
         </outputEntry>
       </rule>
@@ -406,7 +833,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1kvz75o">
-          <text> "adminServeOrderFL401", "adminServeOrderC100"</text>
+          <text>"adminServeOrderFL401", "adminServeOrderC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0z94w12">
           <text>"description"</text>
@@ -466,6 +893,23 @@
           <text>"[Request Solicitor to Submit the Order]"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0t3f1gd">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lmjovk">
+        <inputEntry id="UnaryTests_1y6skp2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l6ob90">
+          <text>"gateKeeping", "gateKeepingResubmitted"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jqlc9c">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o6t7rz">
+          <text>"[Gatekeeping]"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xk4f3f">
           <text></text>
         </outputEntry>
       </rule>
