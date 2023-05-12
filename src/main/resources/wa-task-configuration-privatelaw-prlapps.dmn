@@ -116,7 +116,7 @@
           <text>"caseManagementCategory"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_099dwbs">
-          <text>"Private Law"</text>
+          <text>"Private Law" + " - "  + caseData.caseTypeOfApplication</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1oq20o8">
           <text></text>
