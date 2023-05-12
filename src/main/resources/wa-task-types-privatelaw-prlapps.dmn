@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="wa-task-types-privatelaw-prlapps" name="Private Law Task Types DMN">
+    <decisionTable id="DecisionTable_07kcj0o" hitPolicy="COLLECT">
+      <input id="Input_1">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Task Type Id" name="taskTypeId" typeRef="string" />
+      <output id="OutputClause_05pod8h" label="Task Type Name" name="taskTypeName" typeRef="string" />
+      <rule id="DecisionRule_083xw98">
+        <description>CAC100</description>
+        <inputEntry id="UnaryTests_0n2hu2e">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_003um46">
+          <text>"checkApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x72h03">
+          <text>"Check application C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0y6qby5">
+        <description>CAC100</description>
+        <inputEntry id="UnaryTests_1h191va">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1totaky">
+          <text>"checkApplicationResubmittedC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_014q4l0">
+          <text>"Check resubmitted application C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hsxey1">
+        <description>CAFL401</description>
+        <inputEntry id="UnaryTests_18gcf2q">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1thuvv6">
+          <text>"checkApplicationFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dupvs1">
+          <text>"Check application FL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lkf90u">
+        <description>CAFL401</description>
+        <inputEntry id="UnaryTests_0hpulda">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0o73z81">
+          <text>"checkApplicationResubmittedFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zojmeb">
+          <text>"Check resubmitted application FL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1lhwpz7">
+        <description>CAC100</description>
+        <inputEntry id="UnaryTests_1msnog1">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kh2yyp">
+          <text>"addCaseNumber"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1p9hw3b">
+          <text>"Add Case Number"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vo8wqc">
+        <description>CAC100</description>
+        <inputEntry id="UnaryTests_0qxzdcr">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06eqcww">
+          <text>"AddCaseNumberResubmitted"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rnmzpm">
+          <text>"Add Case Number Resubmitted"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1mqqvev">
+        <description>CAFL401</description>
+        <inputEntry id="UnaryTests_1x6rhc3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0egs0fb">
+          <text>"sendToGateKeeperFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cjm448">
+          <text>"Send To Gatekeeper FL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15deat6">
+        <description>CAC100</description>
+        <inputEntry id="UnaryTests_1w0tg35">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18hw4j9">
+          <text>"sendToGateKeeperC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dof50t">
+          <text>"Send To Gatekeeper C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04r3ux0">
+        <description>CAFL401</description>
+        <inputEntry id="UnaryTests_1deog31">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03xgxzd">
+          <text>"sendToGateKeeperResubmittedFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0myuraf">
+          <text>"Send to Gatekeeper Resubmitted FL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_16boq4o">
+        <description>CAC100</description>
+        <inputEntry id="UnaryTests_095d5je">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1hugnht">
+          <text>"sendToGateKeeperResubmittedC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x1hxmu">
+          <text>"Send to Gatekeeper Resubmitted C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09isqs0">
+        <description>GK</description>
+        <inputEntry id="UnaryTests_030i0zo">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gix9xq">
+          <text>"gateKeeping"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jbb027">
+          <text>"Gatekeeping"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0f7f2pr">
+        <description>GK</description>
+        <inputEntry id="UnaryTests_03tzfl9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1cpnjxt">
+          <text>"gateKeepingResubmitted"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05lfo1x">
+          <text>"Gatekeeping Resubmitted"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ewy2lu">
+        <description>SoAC100</description>
+        <inputEntry id="UnaryTests_1rpvfd3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tn5c0c">
+          <text>"serviceOfApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l7u80j">
+          <text>"Service Of Application C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0s6h530">
+        <description>SoAFL401</description>
+        <inputEntry id="UnaryTests_00dmfyt">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02nxd6g">
+          <text>"serviceOfApplicationFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04l7968">
+          <text>"Service Of Application FL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qadfnt">
+        <description>SoOC100</description>
+        <inputEntry id="UnaryTests_0s9wesh">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rino2x">
+          <text>"serviceOfOrderC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lup6p8">
+          <text>"Service Of Order C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rb3vtl">
+        <description>SoCFL401</description>
+        <inputEntry id="UnaryTests_0mzfq7g">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13sjfhs">
+          <text>"serviceOfOrderFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1e7chqz">
+          <text>"Service Of Order FL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bfc7i0">
+        <description>HMC100</description>
+        <inputEntry id="UnaryTests_08gqryo">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1s4a3l8">
+          <text>"produceHearingBundleC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fl7v31">
+          <text>"Produce Hearing Bundle C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09jm3xo">
+        <description>HMFL401</description>
+        <inputEntry id="UnaryTests_0l43d8z">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1iv02zu">
+          <text>"produceHearingBundleFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07wfh38">
+          <text>"Produce Hearing Bundle FL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0t5qcd3">
+        <description>OMC100</description>
+        <inputEntry id="UnaryTests_02l862t">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10r2r8y">
+          <text>"createOrderC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07t65e7">
+          <text>"Create Order C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xw65eo">
+        <description>OMFL401</description>
+        <inputEntry id="UnaryTests_0zd1qnt">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0t1sgqg">
+          <text>"createOrderFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0of22tl">
+          <text>"Create Order FL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dkyo52">
+        <description>RSOP</description>
+        <inputEntry id="UnaryTests_07vcvgi">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0dzb9i9">
+          <text>"reviewSolicitorOrderProvided"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1goyaxs">
+          <text>"Review Solicitor Order"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09pfq52">
+        <description>OMC100</description>
+        <inputEntry id="UnaryTests_00tamde">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ubvyab">
+          <text>"requestSolicitorOrderC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wal4tx">
+          <text>"Request Solicitor Order C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1gnqy86">
+        <description>OMFL401</description>
+        <inputEntry id="UnaryTests_1559e8x">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tfodbe">
+          <text>"requestSolicitorOrderFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11347sz">
+          <text>"Request Solicitor Order FL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ys11ye">
+        <description>HMC100</description>
+        <inputEntry id="UnaryTests_0nakg0u">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_194hd98">
+          <text>"updateHearingActualsC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09oz916">
+          <text>"Update Hearing Actuals C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_007gzvg">
+        <description>HMFL401</description>
+        <inputEntry id="UnaryTests_00pvi57">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17opci5">
+          <text>"updateHearingActualsFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bbas8n">
+          <text>"Update Hearing Actuals FL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0w4v8oa">
+        <description>RCC100</description>
+        <inputEntry id="UnaryTests_0az2cz6">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1az8rd9">
+          <text>"reviewCorrespondenceC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1idgoa5">
+          <text>"Review Correspondence C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0x6pvwi">
+        <description>RCFL401</description>
+        <inputEntry id="UnaryTests_1mdm9jf">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_191uwop">
+          <text>"reviewCorrespondenceFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02vsyqy">
+          <text>"Review Correspondence FL401"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="wa-task-types-privatelaw-prlapps">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

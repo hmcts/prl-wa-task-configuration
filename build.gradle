@@ -229,7 +229,7 @@ def versions = [
   junitPlatform   : '1.7.2',
   reformLogging   : '5.1.7',
   springfoxSwagger: '2.9.2',
-  camunda         : '7.15.0',
+  camunda         : '7.18.0',
   pitest          : '1.5.2',
   sonarPitest     : '0.5',
   tomcat          : '9.0.58',

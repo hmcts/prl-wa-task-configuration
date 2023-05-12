@@ -118,7 +118,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ex20ag">
-          <text>"hmcCaseUpdateSuccess"</text>
+          <text>"hmcCaseUpdPrepForHearing"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1bivkbq">
           <text></text>
@@ -133,6 +133,29 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1key6b4">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ty25kk">
+        <inputEntry id="UnaryTests_1tjyx5f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0febnt9">
+          <text>"hmcCaseUpdDecOutcome"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y0496y">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kywb4s">
+          <text>"Reconfigure"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nlpj3b">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1p0p6ul">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vr7bi4">
           <text></text>
         </outputEntry>
       </rule>
