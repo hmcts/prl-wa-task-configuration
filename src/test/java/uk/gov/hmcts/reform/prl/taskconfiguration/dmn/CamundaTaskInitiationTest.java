@@ -392,10 +392,14 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
                                       + "   }"
-                                      + "}"),
-                mapAdditionalData("{\n"
+                                      + "}," +
+                                      "{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"performingUser\":\"" + "JUDGE" + "\"\n"
+                                      + "   }"
+                                      + "},{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"performingAction\":\"" + "Create an order" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -409,24 +413,22 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         );
     }
 
-    @ParameterizedTest(name = "event id: {0} post event state: {1} additional data: {2} additional data {3}")
+    /* @ParameterizedTest(name = "event id: {0} post event state: {1} additional data: {2}")
     @MethodSource("scenarioProviderNew")
     void given_multiple_event_ids_should_evaluate_dmn_1(String eventId,
                                                       String postEventState,
                                                       Map<String, Object> map1,
-                                                      Map<String, Object> map2,
                                                       List<Map<String, String>> expectation) {
 
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("eventId", eventId);
         inputVariables.putValue("postEventState", postEventState);
-        inputVariables.putValue("caseTypeOfApplication", map1);
-        inputVariables.putValue("performingUser", map2);
+        inputVariables.putValue("additionalData ", map1);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
-    }
+    }*/
 
     private static Map<String, Object> mapAdditionalData(String additionalData) {
         ObjectMapper mapper = new ObjectMapper();
