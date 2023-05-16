@@ -2,7 +2,7 @@
 <definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-permissions-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
   <decision id="wa-task-permissions-privatelaw-prlapps" name="Private Law Permissions DMN">
     <decisionTable id="DecisionTable_1pr5oic" hitPolicy="RULE ORDER">
-      <input id="InputClause_12crj6e" label="Task Type" biodi:width="554" camunda:inputVariable="taskType">
+      <input id="InputClause_12crj6e" label="Task Type" biodi:width="578" camunda:inputVariable="taskType">
         <inputExpression id="LiteralExpression_11cu08d" typeRef="string" expressionLanguage="feel">
           <text>if(taskAttributes != null and taskAttributes.taskType != null) then
             taskAttributes.taskType
@@ -15,7 +15,7 @@
           <text></text>
         </inputExpression>
       </input>
-      <output id="OutputClause_1q156ce" label="Case Access Category" name="caseAccessCategory" typeRef="string" biodi:width="179" />
+      <output id="OutputClause_1q156ce" label="Case Access Category" name="caseAccessCategory" typeRef="string" biodi:width="151" />
       <output id="Output_1" label="Name" name="name" typeRef="string" biodi:width="150" />
       <output id="OutputClause_1mzxe7i" label="Value" name="value" typeRef="string" biodi:width="249" />
       <output id="OutputClause_05whhwf" label="RoleCategory" name="roleCategory" typeRef="string" biodi:width="168" />
@@ -287,7 +287,7 @@
           <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0vifmop">
-          <text>"SKILLS:ABA5:ORDERMANAGEMENTFL401"</text>
+          <text>"SKILL:ABA5:ORDERMANAGEMENTFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ygosjr">
           <text></text>
@@ -317,7 +317,7 @@
           <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1fyqexf">
-          <text></text>
+          <text>"SKILL:ABA5:ORDERMANAGEMENTFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0s247nr">
           <text></text>
@@ -346,7 +346,7 @@
           <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0qh5x9o">
-          <text>"SKILLS:ABA5:REVIEWCORRESPONDENCEFL401"</text>
+          <text>"SKILL:ABA5:REVIEWCORRESPONDENCEFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1krpez6">
           <text></text>
@@ -469,7 +469,7 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0qdcdmu">
           <text>
-"SKILLS:ABA5:ORDERMANAGEMENTC100"</text>
+"SKILL:ABA5:ORDERMANAGEMENTC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0gpc6lu">
           <text></text>
@@ -499,8 +499,7 @@
           <text>"CTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0fsxebg">
-          <text>
-</text>
+          <text>"SKILL:ABA5:ORDERMANAGEMENTC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ph8mp0">
           <text></text>
@@ -530,7 +529,7 @@
           <text>"CTSC"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kx6utj">
-          <text>"SKILLS:ABA5:REVIEWCORRESPONDENCEC100"</text>
+          <text>"SKILL:ABA5:REVIEWCORRESPONDENCEC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0hmfl3n">
           <text></text>
