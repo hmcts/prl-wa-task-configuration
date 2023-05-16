@@ -35,9 +35,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(4));
+        assertThat(logic.getInputs().size(), is(6));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(23));
+        assertThat(logic.getRules().size(), is(28));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -192,6 +192,38 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "fl401SendToGateKeeper",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "gateKeeping",
+                        "name", "Gatekeeping",
+                        "processCategories", "gateKeeping"
+                    )
+                )
+            ),
+            Arguments.of(
+                "fl401resubmit",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "gateKeepingResubmitted",
+                        "name", "Gatekeeping Resubmitted",
+                        "processCategories", "gateKeepingResubmitted"
+                    )
+                )
+            ),
+            Arguments.of(
                 "hmcCaseUpdPrepForHearing",
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
                 mapAdditionalData("{\n"
@@ -204,6 +236,50 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "updateHearingActualsC100",
                         "name", "Update Hearing Actuals",
                         "processCategories", "updateHearingActualsC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "draftAnOrder",
+                null,
+                null,
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewSolicitorOrderProvided",
+                        "name", "Review and Approve Solicitor Order",
+                        "processCategories", "reviewSolicitorOrderByJudge"
+                    )
+                )
+            ),
+            Arguments.of(
+                "editAndApproveAnOrder",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "adminServeOrderC100",
+                        "name", "Service of Order",
+                        "processCategories", "adminServeOrderC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "editAndApproveAnOrder",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "adminServeOrderFL401",
+                        "name", "Service of Order",
+                        "processCategories", "adminServeOrderFL401"
                     )
                 )
             ),
@@ -301,6 +377,50 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         inputVariables.putValue("eventId", eventId);
         inputVariables.putValue("postEventState", postEventState);
         inputVariables.putValue("additionalData", map);
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
+    }
+
+    static Stream<Arguments> scenarioProviderNew() {
+        return Stream.of(
+            Arguments.of(
+                "manageOrders",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "JUDGE" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "adminServeOrderCreatedByJudgeC100",
+                        "name", "Service of Order",
+                        "processCategories", "adminServeOrderCreatedByJudgeC100"
+                    )
+                )
+            )
+        );
+    }
+    @ParameterizedTest(name = "event id: {0} post event state: {1} additional data: {2} additional data {3}")
+    @MethodSource("scenarioProviderNew")
+    void given_multiple_event_ids_should_evaluate_dmn_1(String eventId,
+                                                      String postEventState,
+                                                      Map<String, Object> map1,
+                                                      Map<String, Object> map2,
+                                                      List<Map<String, String>> expectation) {
+
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("eventId", eventId);
+        inputVariables.putValue("postEventState", postEventState);
+        inputVariables.putValue("caseTypeOfApplication", map1);
+        inputVariables.putValue("performingUser", map2);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
