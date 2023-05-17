@@ -31,7 +31,7 @@
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.performingAction != null) then additionalData.Data.performingAction else ""</text>
         </inputExpression>
       </input>
-      <input id="InputClause_19o6aaw" label="LAJudge Review Required" biodi:width="150" camunda:inputVariable="Data.judgeLaReviewRequired">
+      <input id="InputClause_19o6aaw" label="LAJudge Review Required" biodi:width="150" camunda:inputVariable="judgeLaReviewRequired">
         <inputExpression id="LiteralExpression_06e7tqk" typeRef="string">
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.Data.judgeLaReviewRequired != null) then additionalData.Data.Data.judgeLaReviewRequired else ""</text>
         </inputExpression>
