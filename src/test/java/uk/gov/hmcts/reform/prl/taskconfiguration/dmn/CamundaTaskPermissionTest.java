@@ -233,7 +233,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
                 "roleCategory", "LEGAL_OPERATIONS",
                 "autoAssignable", false,
-                "authorisations", "SKILL:ABA5:GATEKEEPINGFL401"
+                "authorisations", "SKILL:ABA5:GATEKEEPING"
             )
         )));
     }
