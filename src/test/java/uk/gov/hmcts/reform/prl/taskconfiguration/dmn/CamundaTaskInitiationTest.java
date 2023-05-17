@@ -392,8 +392,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
                                       + "   }"
-                                      + "}," +
-                                      "{\n"
+                                      + "},"
+                                      + "{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"performingUser\":\"" + "JUDGE" + "\"\n"
                                       + "   }"
