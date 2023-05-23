@@ -21,19 +21,12 @@
             ""</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0cdowsz" label="Performing User" biodi:width="150" camunda:inputVariable="performingUser">
-        <inputExpression id="LiteralExpression_1ojl2ef" typeRef="string" expressionLanguage="feel">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.performingUser != null) then additionalData.Data.performingUser else ""</text>
-        </inputExpression>
-      </input>
-      <input id="InputClause_12gdmzs" label="Performing Action" camunda:inputVariable="performingAction">
-        <inputExpression id="LiteralExpression_0iqfkk0" typeRef="string">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.performingAction != null) then additionalData.Data.performingAction else ""</text>
-        </inputExpression>
-      </input>
-      <input id="InputClause_19o6aaw" label="LAJudge Review Required" biodi:width="150" camunda:inputVariable="judgeLaReviewRequired">
-        <inputExpression id="LiteralExpression_06e7tqk" typeRef="string">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.Data.judgeLaReviewRequired != null) then additionalData.Data.Data.judgeLaReviewRequired else ""</text>
+      <input id="InputClause_0jb2dcy" label="Additional Case Data" biodi:width="317" camunda:inputVariable="Data">
+        <inputExpression id="LiteralExpression_1dx4wvv" typeRef="boolean">
+          <text>if(additionalData != null and additionalData.Data != null) then
+            additionalData.Data
+            else
+            ""</text>
         </inputExpression>
       </input>
       <output id="Output_1" label="Task Id" name="taskId" typeRef="string" biodi:width="368" />
@@ -50,13 +43,7 @@
         <inputEntry id="UnaryTests_1jvptu6">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0wocam1">
-          <text>-</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0lpqcxp">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_17ifflf">
+        <inputEntry id="UnaryTests_0u5jmpl">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_14cvrmv">
@@ -82,13 +69,7 @@
         <inputEntry id="UnaryTests_0y2885j">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0td0jbn">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_06i3mf9">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0dpqfwg">
+        <inputEntry id="UnaryTests_0vlmjuw">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ax6ek0">
@@ -114,13 +95,7 @@
         <inputEntry id="UnaryTests_1pyvycn">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0tpwyb0">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1l1947q">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1pfho55">
+        <inputEntry id="UnaryTests_1qa8jqz">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_16lr65j">
@@ -146,13 +121,7 @@
         <inputEntry id="UnaryTests_11jwfjb">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_178wukh">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0wsltzh">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0zmedch">
+        <inputEntry id="UnaryTests_0kf9x6u">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0vsz3nt">
@@ -178,13 +147,7 @@
         <inputEntry id="UnaryTests_169unjz">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1fwqrsi">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_16gb1jn">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0wll17x">
+        <inputEntry id="UnaryTests_1csrk2w">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0tbxmk0">
@@ -210,13 +173,7 @@
         <inputEntry id="UnaryTests_04d87pd">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1hudvk6">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_017wt5z">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0n1siui">
+        <inputEntry id="UnaryTests_11etnnl">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0r22tf3">
@@ -242,13 +199,7 @@
         <inputEntry id="UnaryTests_10foe2w">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1nuxb8g">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_03cpx92">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1h8bjsc">
+        <inputEntry id="UnaryTests_0qix4mo">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0axzr7q">
@@ -274,13 +225,7 @@
         <inputEntry id="UnaryTests_1onere6">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0skgkao">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1uth2bi">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1nlkptv">
+        <inputEntry id="UnaryTests_0kpd3gu">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_13xfo34">
@@ -306,13 +251,7 @@
         <inputEntry id="UnaryTests_1hafjat">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1pyoouw">
-          <text>-</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0wctjvd">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_11vkz7y">
+        <inputEntry id="UnaryTests_191v99z">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_171625f">
@@ -338,13 +277,7 @@
         <inputEntry id="UnaryTests_1xyn6pk">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1rf2etl">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1d3krjj">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0zm2miw">
+        <inputEntry id="UnaryTests_0s329io">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0i24s4n">
@@ -370,17 +303,11 @@
         <inputEntry id="UnaryTests_1ingivx">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_08iwdy2">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0q8ghuv">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ozkned">
+        <inputEntry id="UnaryTests_0hiod8r">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_12qxqyj">
-          <text>"gateKeeping"</text>
+          <text>"gateKeepingFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nfd078">
           <text>"Gatekeeping"</text>
@@ -402,17 +329,11 @@
         <inputEntry id="UnaryTests_0ygdfir">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1n2x6ba">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_003b4ej">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0wjbdk7">
+        <inputEntry id="UnaryTests_1vwwqfw">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1eycm99">
-          <text>"gateKeepingResubmitted"</text>
+          <text>"gateKeepingResubmittedFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1arrliz">
           <text>"Gatekeeping Resubmitted"</text>
@@ -434,17 +355,11 @@
         <inputEntry id="UnaryTests_1syvbhj">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1c6xae8">
-          <text>-</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_15jd1a2">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1s2h369">
+        <inputEntry id="UnaryTests_0x9odh2">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0sfd5sj">
-          <text>"gateKeeping"</text>
+          <text>"gateKeepingC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08l47ys">
           <text>"Gatekeeping"</text>
@@ -466,17 +381,11 @@
         <inputEntry id="UnaryTests_14tx9jt">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_03bxdfq">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0o5vd9k">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ua3lnz">
+        <inputEntry id="UnaryTests_18fz41a">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ll9di2">
-          <text>"gateKeepingResubmitted"</text>
+          <text>"gateKeepingResubmittedC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1mebnb7">
           <text>"Gatekeeping Resubmitted"</text>
@@ -498,13 +407,7 @@
         <inputEntry id="UnaryTests_1jz4zmi">
           <text>"C100"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1nlo9li">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1o8eqtn">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1idq9qv">
+        <inputEntry id="UnaryTests_07a8ctp">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lnnahe">
@@ -530,13 +433,7 @@
         <inputEntry id="UnaryTests_1rlhwd4">
           <text>"FL401"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1ss9e1e">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ahtse0">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_090icnq">
+        <inputEntry id="UnaryTests_0x3pb9i">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0rugf3j">
@@ -562,13 +459,7 @@
         <inputEntry id="UnaryTests_02d78jv">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1uovxbi">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1bmvjww">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1e9fm3i">
+        <inputEntry id="UnaryTests_0xxlh39">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_15ab7vt">
@@ -596,14 +487,8 @@
         <inputEntry id="UnaryTests_19nc6sw">
           <text>"C100"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0dywuhs">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0y2ds7l">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_12rmg3w">
-          <text></text>
+        <inputEntry id="UnaryTests_02lyo64">
+          <text>if(additionalData.Data.isOrderCompleteToServe!= null and additionalData.Data.isOrderCompleteToServe = "Yes") </text>
         </inputEntry>
         <outputEntry id="LiteralExpression_14i0saf">
           <text>"adminServeOrderC100"</text>
@@ -630,14 +515,8 @@
         <inputEntry id="UnaryTests_1lihk8j">
           <text>"FL401"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1ui4vad">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0wgnepi">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0dt4orw">
-          <text></text>
+        <inputEntry id="UnaryTests_1ufu12k">
+          <text>if(additionalData.Data.isOrderCompleteToServe!= null and additionalData.Data.isOrderCompleteToServe = "Yes") </text>
         </inputEntry>
         <outputEntry id="LiteralExpression_06c4eqf">
           <text>"adminServeOrderFL401"</text>
@@ -662,13 +541,7 @@
         <inputEntry id="UnaryTests_09q1n5f">
           <text>"C100"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0kpkunw">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_11ioqfs">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1qq3q2h">
+        <inputEntry id="UnaryTests_14hph4g">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lzt4h1">
@@ -694,13 +567,7 @@
         <inputEntry id="UnaryTests_04s7bfi">
           <text>"FL401"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_06vhodi">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_12aaa92">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1no8e5y">
+        <inputEntry id="UnaryTests_1bzatiz">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0n5n8dg">
@@ -726,13 +593,7 @@
         <inputEntry id="UnaryTests_0zm0mqb">
           <text>"C100"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_09a30yi">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1bc6ynb">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0rb7pjj">
+        <inputEntry id="UnaryTests_02w9j4q">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0603xs2">
@@ -760,13 +621,7 @@
         <inputEntry id="UnaryTests_0r2gcoz">
           <text>"FL401"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0lvgsm5">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_00oxowq">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0cntcig">
+        <inputEntry id="UnaryTests_038p47n">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1p72r5o">
@@ -794,13 +649,7 @@
         <inputEntry id="UnaryTests_0cs2yvj">
           <text>"C100"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1tq7pbm">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0anxh44">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1gviegp">
+        <inputEntry id="UnaryTests_036uz8h">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1f28uac">
@@ -828,13 +677,7 @@
         <inputEntry id="UnaryTests_1ygsshp">
           <text>"FL401"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_105vlx5">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0infjfn">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_00diuug">
+        <inputEntry id="UnaryTests_0y2z4di">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1y680ep">
@@ -860,14 +703,8 @@
         <inputEntry id="UnaryTests_1k17vn6">
           <text>"C100"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0k5s4v3">
-          <text>"JUDGE"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_068gh4t">
-          <text>"Create an order"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0vafr7v">
-          <text></text>
+        <inputEntry id="UnaryTests_0exvb1o">
+          <text>if (additionalData.Data.performingUser != null and additionalData.Data.performingUser = "JUDGE" and additionalData.Data.performingAction !=null and additionalData.Data.performingAction = "Create an order" and additionalData.Data.isOrderCompleteToServeAmendOrder = "Yes") then true else false</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1kos9tz">
           <text>"adminServeOrderCreatedByJudgeC100"</text>
@@ -892,14 +729,8 @@
         <inputEntry id="UnaryTests_1tw4eh7">
           <text>"FL401"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0u2jcaq">
-          <text>"JUDGE"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_166hgha">
-          <text>"Create an order"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_09b0ch1">
-          <text></text>
+        <inputEntry id="UnaryTests_0ifsjuf">
+          <text>if (additionalData.Data.performingUser != null and additionalData.Data.performingUser = "JUDGE" and additionalData.Data.performingAction !=null and additionalData.Data.performingAction = "Create an order" and additionalData.Data.isOrderCompleteToServeAmendOrder = "Yes") then true else false</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1hyj1oo">
           <text>"adminServeOrderCreatedByJudgeFL401"</text>
@@ -924,14 +755,8 @@
         <inputEntry id="UnaryTests_145kbbi">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_03lajja">
-          <text>"COURT_ADMIN"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1033t8a">
-          <text>"Create an order"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ovcx10">
-          <text>"Yes"</text>
+        <inputEntry id="UnaryTests_0lyvx2q">
+          <text>if (additionalData.Data.performingUser != null and additionalData.Data.performingUser = "COURT_ADMIN" and additionalData.Data.performingAction !=null and additionalData.Data.performingAction = "Create an order" and additionalData.Data.judgeLaReviewRequired != null and additionalData.Data.judgeLaReviewRequired = "Yes") then true else false</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1xvlp8o">
           <text>"reviewAdminOrderProvided"</text>
@@ -951,7 +776,7 @@
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DMNDiagram_0b2rkcb">
       <dmndi:DMNShape id="DMNShape_0wc7glt" dmnElementRef="wa-task-initiation-privatelaw-prlapps">
-        <dc:Bounds height="80" width="180" x="150" y="80" />
+        <dc:Bounds height="80" width="180" x="140" y="90" />
       </dmndi:DMNShape>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
