@@ -975,7 +975,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0jnyxc0">
-          <text>"[Remove Legal Representative](/cases/case-details/${[CASE_REFERENCE]}/trigger/removeLegalRepresentative/removeLegalRepresentative1)"</text>
+          <text>"[Remove Legal Representative](/cases/case-details/${[CASE_REFERENCE]}/trigger/adminRemoveLegalRepresentative/adminRemoveLegalRepresentative1)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02hhljj">
           <text></text>

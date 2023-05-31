@@ -248,6 +248,15 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     )
                 )
+            ),
+            Arguments.of(
+                "adminRemoveLegalRepresentative",
+                asList(
+                    Map.of(
+                        "taskType", "removeLegalRepresentative",
+                        "completionMode", "Auto"
+                    )
+                )
             )
         );
     }
@@ -270,7 +279,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(40));
+        assertThat(logic.getRules().size(), is(41));
     }
 
 

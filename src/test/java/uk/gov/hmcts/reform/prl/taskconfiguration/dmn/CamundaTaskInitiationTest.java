@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(6));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(28));
+        assertThat(logic.getRules().size(), is(29));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -407,6 +407,27 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "adminServeOrderCreatedByJudgeC100",
                         "name", "Service of Order",
                         "processCategories", "adminServeOrderCreatedByJudgeC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "citizenRemoveLegalRepresentative",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
+                                      + "   }"
+                                      + "},"
+                                      + "{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "removeLegalRepresentative",
+                        "name", "Remove legal representative",
+                        "processCategories", "applicationCheck"
                     )
                 )
             )

@@ -948,7 +948,7 @@
       </rule>
       <rule id="DecisionRule_0gwwbae">
         <inputEntry id="UnaryTests_1sd15gu">
-          <text>"removeLegalRepresentative"</text>
+          <text>"citizenRemoveLegalRepresentative"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_02fibc5">
           <text></text>
@@ -957,7 +957,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_07kehx1">
-          <text>"COURT_ADMIN"</text>
+          <text>-</text>
         </inputEntry>
         <inputEntry id="UnaryTests_16dfvkn">
           <text></text>

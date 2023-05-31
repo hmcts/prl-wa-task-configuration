@@ -569,6 +569,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1b19eg0">
+        <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_01cloyc">
           <text>"removeLegalRepresentative"</text>
         </inputEntry>
@@ -594,7 +595,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1rjy5ty">
-          <text></text>
+          <text>false</text>
         </outputEntry>
       </rule>
     </decisionTable>
