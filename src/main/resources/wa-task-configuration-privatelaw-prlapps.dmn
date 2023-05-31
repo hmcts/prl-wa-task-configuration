@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN">
     <decisionTable id="DecisionTable_14cx079" hitPolicy="COLLECT">
       <input id="InputClause_1gxyo7f" label="CCD Case Data" camunda:inputVariable="caseData">
@@ -961,6 +961,23 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"[Review and Approve Admin Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/editAndApproveAnOrder/editAndApproveAnOrder1)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09b1kap">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06zn4th">
+        <inputEntry id="UnaryTests_1j5mxn8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j8fx4u">
+          <text>"removeLegalRepresentative"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05rnnqk">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jnyxc0">
+          <text>"[Remove Legal Representative](/cases/case-details/${[CASE_REFERENCE]}/trigger/removeLegalRepresentative/removeLegalRepresentative1)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02hhljj">
           <text></text>
         </outputEntry>
       </rule>
