@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(6));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(29));
+        assertThat(logic.getRules().size(), is(30));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -362,6 +362,38 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "processCategories", "courtAdminCorrespondenceFL401"
                     )
                 )
+            ),
+            Arguments.of(
+                "citizenRemoveLegalRepresentative",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "removeLegalRepresentativeC100",
+                        "name", "Remove legal representative C100",
+                        "processCategories", "applicationCheck"
+                    )
+                )
+            ),
+            Arguments.of(
+                "citizenRemoveLegalRepresentative",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "removeLegalRepresentativeFL401",
+                        "name", "Remove legal representative FL401",
+                        "processCategories", "applicationCheck"
+                    )
+                )
             )
         );
     }
@@ -407,27 +439,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "adminServeOrderCreatedByJudgeC100",
                         "name", "Service of Order",
                         "processCategories", "adminServeOrderCreatedByJudgeC100"
-                    )
-                )
-            ),
-            Arguments.of(
-                "citizenRemoveLegalRepresentative",
-                null,
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
-                                      + "   }"
-                                      + "},"
-                                      + "{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "removeLegalRepresentative",
-                        "name", "Remove legal representative",
-                        "processCategories", "applicationCheck"
                     )
                 )
             )

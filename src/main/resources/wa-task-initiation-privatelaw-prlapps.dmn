@@ -954,7 +954,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0e16cq3">
-          <text></text>
+          <text>"C100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_07kehx1">
           <text>-</text>
@@ -966,15 +966,47 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1s9wru7">
-          <text>"removeLegalRepresentative"</text>
+          <text>"removeLegalRepresentativeC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0iqzi4f">
-          <text>"Remove legal representative"</text>
+          <text>"Remove legal representative C100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0f9sfah">
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1r3xda4">
+          <text>"applicationCheck"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hbfzed">
+        <inputEntry id="UnaryTests_1in446u">
+          <text>"citizenRemoveLegalRepresentative"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s295yg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e1sjpv">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kspjdi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15yoa7x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fmrk7f">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pni5ur">
+          <text>"removeLegalRepresentativeFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0m134he">
+          <text>"Remove legal representative FL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1is2l7k">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yu70lv">
           <text>"applicationCheck"</text>
         </outputEntry>
       </rule>

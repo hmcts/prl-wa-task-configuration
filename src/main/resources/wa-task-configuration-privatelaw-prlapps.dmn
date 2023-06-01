@@ -969,15 +969,32 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1j8fx4u">
-          <text>"removeLegalRepresentative"</text>
+          <text>"removeLegalRepresentativeC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_05rnnqk">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0jnyxc0">
-          <text>"[Remove Legal Representative](/cases/case-details/${[CASE_REFERENCE]}/trigger/adminRemoveLegalRepresentative/adminRemoveLegalRepresentative1)"</text>
+          <text>"[Remove Legal Representative](/cases/case-details/${[CASE_REFERENCE]}/trigger/adminRemoveLegalRepresentativeC100/adminRemoveLegalRepresentativeC1001)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02hhljj">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ivzoao">
+        <inputEntry id="UnaryTests_0hiv4sj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lv7f3f">
+          <text>"removeLegalRepresentativeFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dqc8iy">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ug4g60">
+          <text>"[Remove Legal Representative](/cases/case-details/${[CASE_REFERENCE]}/trigger/adminRemoveLegalRepresentativeFL401/adminRemoveLegalRepresentativeFL4011)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l9u9k9">
           <text></text>
         </outputEntry>
       </rule>

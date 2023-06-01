@@ -451,12 +451,23 @@
       </rule>
       <rule id="DecisionRule_0zq6faz">
         <inputEntry id="UnaryTests_0rffgl7">
-          <text>"adminRemoveLegalRepresentative"</text>
+          <text>"adminRemoveLegalRepresentativeC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1iapzvo">
-          <text>"removeLegalRepresentative"</text>
+          <text>"removeLegalRepresentativeC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_049xp5j">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ztm4au">
+        <inputEntry id="UnaryTests_0w7iv10">
+          <text>"adminRemoveLegalRepresentativeFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hhz3dj">
+          <text>"removeLegalRepresentativeFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0iqxb51">
           <text>"Auto"</text>
         </outputEntry>
       </rule>

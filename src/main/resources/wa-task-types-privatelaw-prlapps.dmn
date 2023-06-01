@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-types-privatelaw-prlapps" name="Private Law Task Types DMN">
     <decisionTable id="DecisionTable_07kcj0o" hitPolicy="COLLECT">
       <input id="Input_1">
@@ -7,8 +7,8 @@
           <text></text>
         </inputExpression>
       </input>
-      <output id="Output_1" label="Task Type Id" name="taskTypeId" typeRef="string" />
-      <output id="OutputClause_05pod8h" label="Task Type Name" name="taskTypeName" typeRef="string" />
+      <output id="Output_1" label="Task Type Id" name="taskTypeId" typeRef="string" biodi:width="247" />
+      <output id="OutputClause_05pod8h" label="Task Type Name" name="taskTypeName" typeRef="string" biodi:width="323" />
       <rule id="DecisionRule_083xw98">
         <description>CAC100</description>
         <inputEntry id="UnaryTests_0n2hu2e">
@@ -334,15 +334,27 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_04gekfy">
-        <description>RLR</description>
+        <description>RLRC100</description>
         <inputEntry id="UnaryTests_0l2ruhi">
           <text>-</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0f4fm1c">
-          <text>"removeLegalRepresentative"</text>
+          <text>"removeLegalRepresentativeC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1yqem6d">
-          <text>"Remove legal representative"</text>
+          <text>"Remove legal representative C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ffd1ku">
+        <description>RLRFL401</description>
+        <inputEntry id="UnaryTests_08niw5p">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01svjmt">
+          <text>"removeLegalRepresentativeFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xf1sly">
+          <text>"Remove legal representative FL401"</text>
         </outputEntry>
       </rule>
     </decisionTable>

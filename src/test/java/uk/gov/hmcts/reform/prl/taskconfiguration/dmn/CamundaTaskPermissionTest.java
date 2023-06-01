@@ -504,9 +504,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "removeLegalRepresentative"
+        "removeLegalRepresentativeC100"
     })
-    void evaluate_task_admin_removeLegalRepresentative(String taskType) {
+    void evaluate_task_admin_removeLegalRepresentativeC100(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
 
@@ -521,6 +521,33 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "ctsc",
                 "roleCategory", "CTSC",
+                "authorisations", "SKILL:ABA5:CHECKAPPLICATIONC100",
+                "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+            )
+        )));
+    }
+
+    @SuppressWarnings("checkstyle:indentation")
+    @ParameterizedTest
+    @CsvSource(value = {
+        "removeLegalRepresentativeFL401"
+    })
+    void evaluate_task_admin_removeLegalRepresentativeFL401(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            Map.of(
+                "autoAssignable", false,
+                "name", "task-supervisor",
+                "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
+            ), Map.of(
+                "autoAssignable", false,
+                "name", "ctsc",
+                "roleCategory", "CTSC",
+                "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401",
                 "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
             )
         )));
@@ -532,6 +559,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(19));
+        assertThat(logic.getRules().size(), is(20));
     }
 }
