@@ -264,7 +264,7 @@
       </rule>
       <rule id="DecisionRule_19m181l">
         <inputEntry id="UnaryTests_1fa5tqp">
-          <text>"serviceOfApplication"</text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_15ivr9l">
           <text>"gateKeeping"</text>
@@ -286,7 +286,7 @@
       </rule>
       <rule id="DecisionRule_06chwh2">
         <inputEntry id="UnaryTests_1r717r8">
-          <text>"serviceOfApplication"</text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0q9rzj2">
           <text>"gateKeepingResubmitted"</text>
