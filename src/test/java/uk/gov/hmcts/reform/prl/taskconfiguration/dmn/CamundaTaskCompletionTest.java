@@ -118,6 +118,14 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "taskType", "sendToGateKeeperFL401Resubmitted",
                         "completionMode", "Auto"
                     ),
+                    Map.of(
+                        "taskType", "gateKeeping",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "gateKeepingResubmitted",
+                        "completionMode", "Auto"
+                    ),
                     Map.of()
                 )
             ),
@@ -164,20 +172,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         )
                     )
                 ),
-            Arguments.of(
-                "serviceOfApplication",
-                asList(
-                    Map.of(
-                        "taskType", "gateKeeping",
-                        "completionMode", "Auto"
-                    ),
-                    Map.of(
-                        "taskType", "gateKeepingResubmitted",
-                        "completionMode", "Auto"
-                    ),
-                    Map.of()
-                )
-            ),
             Arguments.of(
                 "createBundle",
                 asList(
