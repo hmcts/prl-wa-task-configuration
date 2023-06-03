@@ -37,7 +37,7 @@
         </inputExpression>
       </input>
       <input id="InputClause_0s3lde6" label="Order Complete To Serve" biodi:width="192" camunda:inputVariable="isOrderCompleteToServe">
-        <inputExpression id="LiteralExpression_0w2qmqq" typeRef="boolean">
+        <inputExpression id="LiteralExpression_0w2qmqq" typeRef="string">
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.isOrderCompleteToServe
             != null) then
             additionalData.Data.isOrderCompleteToServe
@@ -666,7 +666,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0s8a0gb">
-          <text>true</text>
+          <text>"true"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_14i0saf">
           <text>"adminServeOrderC100"</text>
@@ -703,7 +703,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0r3es86">
-          <text>true</text>
+          <text>"true"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_06c4eqf">
           <text>"adminServeOrderFL401"</text>
