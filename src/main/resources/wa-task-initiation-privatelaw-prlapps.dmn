@@ -22,7 +22,7 @@
         </inputExpression>
       </input>
       <input id="InputClause_0jb2dcy" label="Additional Case Data" biodi:width="317" camunda:inputVariable="Data">
-        <inputExpression id="LiteralExpression_1dx4wvv" typeRef="boolean">
+        <inputExpression id="LiteralExpression_1dx4wvv" typeRef="string">
           <text>if(additionalData != null and additionalData.Data != null) then
             additionalData.Data
             else
@@ -488,7 +488,7 @@
           <text>"C100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_02lyo64">
-          <text>if(additionalData.Data.isOrderCompleteToServe!= null and additionalData.Data.isOrderCompleteToServe = "Yes") </text>
+          <text>if(additionalData.Data.isOrderCompleteToServe!= null and additionalData.Data.isOrderCompleteToServe = "true") then "true" else "false"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_14i0saf">
           <text>"adminServeOrderC100"</text>
@@ -516,7 +516,7 @@
           <text>"FL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ufu12k">
-          <text>if(additionalData.Data.isOrderCompleteToServe!= null and additionalData.Data.isOrderCompleteToServe = "Yes") </text>
+          <text>if(additionalData.Data.isOrderCompleteToServe!= null and additionalData.Data.isOrderCompleteToServe = "true") then "true" else "false"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_06c4eqf">
           <text>"adminServeOrderFL401"</text>
@@ -704,7 +704,7 @@
           <text>"C100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0exvb1o">
-          <text>if (additionalData.Data.performingUser != null and additionalData.Data.performingUser = "JUDGE" and additionalData.Data.performingAction !=null and additionalData.Data.performingAction = "Create an order" and additionalData.Data.isOrderCompleteToServeAmendOrder = "Yes") then true else false</text>
+          <text>if (additionalData.Data.performingUser != null and additionalData.Data.performingUser = "JUDGE" and additionalData.Data.performingAction !=null and additionalData.Data.performingAction = "Create an order" and additionalData.Data.isOrderCompleteToServeAmendOrder = "Yes") then "true" else "false"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1kos9tz">
           <text>"adminServeOrderCreatedByJudgeC100"</text>
@@ -730,7 +730,7 @@
           <text>"FL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ifsjuf">
-          <text>if (additionalData.Data.performingUser != null and additionalData.Data.performingUser = "JUDGE" and additionalData.Data.performingAction !=null and additionalData.Data.performingAction = "Create an order" and additionalData.Data.isOrderCompleteToServeAmendOrder = "Yes") then true else false</text>
+          <text>if (additionalData.Data.performingUser != null and additionalData.Data.performingUser = "JUDGE" and additionalData.Data.performingAction !=null and additionalData.Data.performingAction = "Create an order" and additionalData.Data.isOrderCompleteToServeAmendOrder = "Yes") then "true" else "false"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1hyj1oo">
           <text>"adminServeOrderCreatedByJudgeFL401"</text>
@@ -756,7 +756,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0lyvx2q">
-          <text>if (additionalData.Data.performingUser != null and additionalData.Data.performingUser = "COURT_ADMIN" and additionalData.Data.performingAction !=null and additionalData.Data.performingAction = "Create an order" and additionalData.Data.judgeLaReviewRequired != null and additionalData.Data.judgeLaReviewRequired = "Yes") then true else false</text>
+          <text>if (additionalData.Data.performingUser != null and additionalData.Data.performingUser = "COURT_ADMIN" and additionalData.Data.performingAction !=null and additionalData.Data.performingAction = "Create an order" and additionalData.Data.judgeLaReviewRequired != null and additionalData.Data.judgeLaReviewRequired = "Yes") then "true" else "false"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1xvlp8o">
           <text>"reviewAdminOrderProvided"</text>

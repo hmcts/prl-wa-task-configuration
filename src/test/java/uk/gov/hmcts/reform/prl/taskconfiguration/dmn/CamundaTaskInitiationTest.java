@@ -169,7 +169,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "gateKeeping",
+                        "taskId", "gateKeepingC100",
                         "name", "Gatekeeping",
                         "processCategories", "gateKeeping"
                     )
@@ -185,7 +185,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "gateKeepingResubmitted",
+                        "taskId", "gateKeepingResubmittedC100",
                         "name", "Gatekeeping Resubmitted",
                         "processCategories", "gateKeepingResubmitted"
                     )
@@ -201,7 +201,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "gateKeeping",
+                        "taskId", "gateKeepingFL401",
                         "name", "Gatekeeping",
                         "processCategories", "gateKeeping"
                     )
@@ -217,7 +217,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "gateKeepingResubmitted",
+                        "taskId", "gateKeepingResubmittedFL401",
                         "name", "Gatekeeping Resubmitted",
                         "processCategories", "gateKeepingResubmitted"
                     )
