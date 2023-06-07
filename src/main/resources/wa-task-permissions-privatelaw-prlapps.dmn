@@ -55,8 +55,8 @@
       <rule id="DecisionRule_0ivpl63">
         <description>Judicial task permissions</description>
         <inputEntry id="UnaryTests_155q736">
-          <text>"gateKeeping",
-"gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided"</text>
+          <text>"gateKeepingC100",
+"gateKeepingResubmittedC100","reviewSolicitorOrderProvided","reviewAdminOrderProvided"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0buofva">
           <text></text>
@@ -83,11 +83,42 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0mkjyoq">
+        <description>Judicial task permissions</description>
+        <inputEntry id="UnaryTests_149i0l3">
+          <text>"gateKeepingFL401",
+"gateKeepingResubmittedFL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03prnjm">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fgvcwx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1235wqh">
+          <text>"judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e69w0t">
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07fk7xk">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vm2vw0">
+          <text>315,294</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tqi74r">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xmzeg8">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1ydh51r">
         <description>Judicial task permissions</description>
         <inputEntry id="UnaryTests_0ngofzz">
-          <text>"gateKeeping",
-"gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided"</text>
+          <text>"gateKeepingC100",
+"gateKeepingResubmittedC100","reviewSolicitorOrderProvided","reviewAdminOrderProvided"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0i05m2b">
           <text></text>
@@ -111,6 +142,37 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_12l8k23">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1te71lu">
+        <description>Judicial task permissions</description>
+        <inputEntry id="UnaryTests_0a13k2z">
+          <text>"gateKeepingFL401",
+"gateKeepingResubmittedFL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01igm4w">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zrui1d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11ddbdk">
+          <text>"circuit-judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dsjd0z">
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cpgd4w">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rdj49i">
+          <text>315,294</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03bpiek">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1biwd4z">
           <text>false</text>
         </outputEntry>
       </rule>
@@ -147,8 +209,9 @@
       <rule id="DecisionRule_1x1oenn">
         <description>Tribunal caseworker task permissions</description>
         <inputEntry id="UnaryTests_183egaw">
-          <text>"gateKeeping",
-"gateKeepingResubmitted"</text>
+          <text>"gateKeepingC100",
+"gateKeepingResubmittedC100","gateKeepingFL401",
+"gateKeepingResubmittedFL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_18tqbn3">
           <text></text>

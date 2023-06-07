@@ -267,9 +267,20 @@
           <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_15ivr9l">
-          <text>"gateKeeping"</text>
+          <text>"gateKeepingC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0wfwufd">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08q3e0j">
+        <inputEntry id="UnaryTests_1jmxpq4">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lrsaoq">
+          <text>"gateKeepingFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_116e0lc">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
@@ -278,9 +289,20 @@
           <text>"returnApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1pee5ln">
-          <text>"gateKeeping"</text>
+          <text>"gateKeepingC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_14mdqk7">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0e459sn">
+        <inputEntry id="UnaryTests_0neiui0">
+          <text>"returnApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18yh8dk">
+          <text>"gateKeepingFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uliba8">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
@@ -289,9 +311,20 @@
           <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0q9rzj2">
-          <text>"gateKeepingResubmitted"</text>
+          <text>"gateKeepingResubmittedC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nc55z0">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0yir3it">
+        <inputEntry id="UnaryTests_0f0z2qo">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_162mh1k">
+          <text>"gateKeepingResubmittedFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0r7xsi1">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
@@ -300,9 +333,20 @@
           <text>"returnApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1pzswv8">
-          <text>"gateKeepingResubmitted"</text>
+          <text>"gateKeepingResubmittedC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08eazaa">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_142v884">
+        <inputEntry id="UnaryTests_160tzze">
+          <text>"returnApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mpi1ej">
+          <text>"gateKeepingResubmittedFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1w74c24">
           <text>"Auto"</text>
         </outputEntry>
       </rule>

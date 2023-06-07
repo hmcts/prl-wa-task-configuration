@@ -85,11 +85,18 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "gateKeeping",
+                        "taskType", "gateKeepingC100",
+                        "completionMode", "Auto"
+                    ),Map.of(
+                        "taskType", "gateKeepingFL401",
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "gateKeepingResubmitted",
+                        "taskType", "gateKeepingResubmittedC100",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "gateKeepingResubmittedFL401",
                         "completionMode", "Auto"
                     ),
                     Map.of()
@@ -119,11 +126,18 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "gateKeeping",
+                        "taskType", "gateKeepingC100",
+                        "completionMode", "Auto"
+                    ),Map.of(
+                        "taskType", "gateKeepingFL401",
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "gateKeepingResubmitted",
+                        "taskType", "gateKeepingResubmittedC100",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "gateKeepingResubmittedFL401",
                         "completionMode", "Auto"
                     ),
                     Map.of()
@@ -264,7 +278,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(40));
+        assertThat(logic.getRules().size(), is(44));
     }
 
 
