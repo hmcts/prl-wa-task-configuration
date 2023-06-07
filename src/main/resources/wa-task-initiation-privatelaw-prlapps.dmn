@@ -954,7 +954,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gz0k6w">
-          <text></text>
+          <text>"true"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1kos9tz">
           <text>"adminServeOrderCreatedByJudgeC100"</text>
@@ -989,7 +989,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_15l3i9j">
-          <text></text>
+          <text>"true"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1hyj1oo">
           <text>"adminServeOrderCreatedByJudgeFL401"</text>
