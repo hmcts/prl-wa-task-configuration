@@ -35,7 +35,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(6));
+        assertThat(logic.getInputs().size(), is(7));
         assertThat(logic.getOutputs().size(), is(4));
         assertThat(logic.getRules().size(), is(30));
     }
@@ -256,7 +256,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -272,7 +273,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -422,16 +424,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
-                                      + "   }"
-                                      + "},"
-                                      + "{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"performingUser\":\"" + "JUDGE" + "\"\n"
-                                      + "   }"
-                                      + "},{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"performingAction\":\"" + "Create an order" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Yes" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -445,7 +440,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         );
     }
 
-    /* @ParameterizedTest(name = "event id: {0} post event state: {1} additional data: {2}")
+    /*@ParameterizedTest(name = "event id: {0} post event state: {1} additional data: {2}")
     @MethodSource("scenarioProviderNew")
     void given_multiple_event_ids_should_evaluate_dmn_1(String eventId,
                                                       String postEventState,
