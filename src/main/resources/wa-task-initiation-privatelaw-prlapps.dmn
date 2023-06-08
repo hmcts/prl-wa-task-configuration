@@ -1039,67 +1039,73 @@
           <text>"reviewAdminOrderByJudge"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0gwwbae">
-        <inputEntry id="UnaryTests_1sd15gu">
+      <rule id="DecisionRule_0mmr2d6">
+        <inputEntry id="UnaryTests_1ldvvdl">
           <text>"citizenRemoveLegalRepresentative"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_02fibc5">
+        <inputEntry id="UnaryTests_0ici7ts">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0e16cq3">
+        <inputEntry id="UnaryTests_0hw5at0">
           <text>"C100"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_07kehx1">
-          <text>-</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_16dfvkn">
+        <inputEntry id="UnaryTests_1924pt3">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1oncs4o">
+        <inputEntry id="UnaryTests_1msbylf">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_1s9wru7">
+        <inputEntry id="UnaryTests_080ayyc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a0i7k0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13dass3">
           <text>"removeLegalRepresentativeC100"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0iqzi4f">
+        <outputEntry id="LiteralExpression_1khpm7s">
           <text>"Remove legal representative C100"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0f9sfah">
+        <outputEntry id="LiteralExpression_0tjygqk">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1r3xda4">
+        <outputEntry id="LiteralExpression_18zqai6">
           <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1hbfzed">
-        <inputEntry id="UnaryTests_1in446u">
+      <rule id="DecisionRule_0syzxkf">
+        <inputEntry id="UnaryTests_00v33xf">
           <text>"citizenRemoveLegalRepresentative"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0s295yg">
+        <inputEntry id="UnaryTests_0q6fcs5">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0e1sjpv">
+        <inputEntry id="UnaryTests_04hkms3">
           <text>"FL401"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1kspjdi">
+        <inputEntry id="UnaryTests_02v2lff">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_15yoa7x">
+        <inputEntry id="UnaryTests_1uhe2w0">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1fmrk7f">
+        <inputEntry id="UnaryTests_1keboi7">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_1pni5ur">
+        <inputEntry id="UnaryTests_0qasc5o">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vgivhy">
           <text>"removeLegalRepresentativeFL401"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0m134he">
+        <outputEntry id="LiteralExpression_0us4tww">
           <text>"Remove legal representative FL401"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1is2l7k">
+        <outputEntry id="LiteralExpression_07f30i5">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1yu70lv">
+        <outputEntry id="LiteralExpression_0b04yo5">
           <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
