@@ -33,7 +33,7 @@
       </input>
       <input id="InputClause_19o6aaw" label="LAJudge Review Required" biodi:width="150" camunda:inputVariable="judgeLaReviewRequired">
         <inputExpression id="LiteralExpression_06e7tqk" typeRef="string">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.udgeLaReviewRequired != null) then additionalData.Data.judgeLaReviewRequired else ""</text>
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.judgeLaReviewRequired != null) then additionalData.Data.judgeLaReviewRequired else ""</text>
         </inputExpression>
       </input>
       <input id="InputClause_0s3lde6" label="Order Complete To Serve" biodi:width="192" camunda:inputVariable="isOrderCompleteToServe">
