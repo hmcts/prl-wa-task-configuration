@@ -438,17 +438,6 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_05kvogz">
-        <inputEntry id="UnaryTests_0cb5u2c">
-          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","editAndApproveAnOrder","returnApplication"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1o5rfjh">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_09pxu1a">
-          <text></text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0be7h4s">
         <inputEntry id="UnaryTests_1a7lna2">
           <text>"sendOrReplyToMessages"</text>
@@ -458,6 +447,39 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1qgugpe">
           <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0stasgs">
+        <inputEntry id="UnaryTests_10vr06z">
+          <text>"sendOrReplyToMessages"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_097n382">
+          <text>"replyToMessageForCourtAdminC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_000qrdw">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_17jhkvk">
+        <inputEntry id="UnaryTests_058k1du">
+          <text>"sendOrReplyToMessages"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13wemvq">
+          <text>"replyToMessageForJudiciary"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00j9xyg">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05kvogz">
+        <inputEntry id="UnaryTests_0cb5u2c">
+          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","editAndApproveAnOrder","returnApplication","sendOrReplyToMessages"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1o5rfjh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09pxu1a">
+          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>

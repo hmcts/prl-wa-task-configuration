@@ -334,7 +334,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ejcgps">
-        <description>SNRFRCA</description>
+        <description>SNRFL401CA</description>
         <inputEntry id="UnaryTests_1tgri3s">
           <text></text>
         </inputEntry>
@@ -342,7 +342,31 @@
           <text>"replyToMessageForCourtAdminFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0aehjgy">
-          <text>"Reply To Message"</text>
+          <text>"Reply To Message FL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18ds7km">
+        <description>SNRC100CA</description>
+        <inputEntry id="UnaryTests_1s7h816">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_177k7b3">
+          <text>"replyToMessageForCourtAdminC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h5f4m2">
+          <text>"Reply To Message C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0h9ulcr">
+        <description>SNRJUD</description>
+        <inputEntry id="UnaryTests_04bd7tf">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lgji7k">
+          <text>"replyToMessageForJudiciary"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rek1bx">
+          <text>"Reply To Message Judicial"</text>
         </outputEntry>
       </rule>
     </decisionTable>

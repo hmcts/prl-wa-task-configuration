@@ -1166,6 +1166,82 @@
           <text>"sendAndReplyIdent"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0p66z7f">
+        <inputEntry id="UnaryTests_1kfwr7x">
+          <text>"sendOrReplyToMessages"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t5qxog">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15vmq4k">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u7xq83">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uha7x5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1adyarg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rrfwe9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l3b7h6">
+          <text>"COURT_ADMIN"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13nddln">
+          <text>"replyToMessageForCourtAdminC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h58yjp">
+          <text>"Reply to the Message"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0as41l0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o7sj3k">
+          <text>"sendAndReplyIdent"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0vyp857">
+        <inputEntry id="UnaryTests_1fh6pvq">
+          <text>"sendOrReplyToMessages"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1csw3bx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o8lsy1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kyf3pr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jfydb6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xfijv6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rzjzqf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ql92wz">
+          <text>"JUDICIARY"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0sj18nh">
+          <text>"replyToMessageForJudiciary"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mnggd8">
+          <text>"Reply to the Message"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dccuzv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n2feb7">
+          <text>"sendAndReplyIdent"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
