@@ -377,7 +377,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "removeLegalRepresentativeC100",
                         "name", "Remove legal representative C100",
-                        "processCategories", "applicationCheck"
+                        "processCategories", "citizenNoC"
                     )
                 )
             ),
@@ -392,7 +392,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 singletonList(
                     Map.of(
                         "name", "Remove legal representative FL401",
-                        "processCategories", "applicationCheck",
+                        "processCategories", "citizenNoC",
                         "taskId", "removeLegalRepresentativeFL401"
                     )
                 )

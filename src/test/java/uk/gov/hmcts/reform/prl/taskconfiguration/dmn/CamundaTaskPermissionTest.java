@@ -545,8 +545,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
             ), Map.of(
                 "autoAssignable", false,
-                "name", "ctsc",
-                "roleCategory", "CTSC",
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401",
                 "value", "Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"
             )
@@ -559,6 +559,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(20));
+        assertThat(logic.getRules().size(), is(18));
     }
 }
