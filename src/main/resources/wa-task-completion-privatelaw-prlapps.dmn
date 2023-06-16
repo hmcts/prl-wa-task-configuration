@@ -438,17 +438,6 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_05kvogz">
-        <inputEntry id="UnaryTests_0cb5u2c">
-          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","editAndApproveAnOrder","returnApplication"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1o5rfjh">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_09pxu1a">
-          <text></text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0zq6faz">
         <inputEntry id="UnaryTests_0rffgl7">
           <text>"adminRemoveLegalRepresentativeC100"</text>
@@ -469,6 +458,17 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0iqxb51">
           <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05kvogz">
+        <inputEntry id="UnaryTests_0cb5u2c">
+          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","editAndApproveAnOrder","returnApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1o5rfjh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09pxu1a">
+          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
