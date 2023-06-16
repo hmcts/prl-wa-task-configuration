@@ -209,7 +209,7 @@
         <description>Court admin check application skills permission</description>
         <inputEntry id="UnaryTests_0m16bpv">
           <text>"checkApplicationFL401", "checkApplicationResubmittedFL401",
-"sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401"</text>
+"sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401","removeLegalRepresentativeFL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_132ys7j">
           <text></text>
@@ -390,7 +390,7 @@
         <inputEntry id="UnaryTests_14xrsqw">
           <text>"checkApplicationC100", "checkApplicationResubmittedC100",
 "addCaseNumber", "addCaseNumberResubmitted",
-"sendToGateKeeperC100", "sendToGateKeeperResubmittedC100"</text>
+"sendToGateKeeperC100", "sendToGateKeeperResubmittedC100","removeLegalRepresentativeC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1pv1c0z">
           <text></text>
@@ -565,66 +565,6 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_04gckbd">
-          <text>false</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1b19eg0">
-        <description>CTSC task permissions</description>
-        <inputEntry id="UnaryTests_01cloyc">
-          <text>"removeLegalRepresentativeC100"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0mxgm7b">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_19qw4mb">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0f7vitv">
-          <text>"ctsc"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0b7rb7x">
-          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0xc4kp1">
-          <text>"CTSC"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0klc10z">
-          <text>"SKILL:ABA5:CHECKAPPLICATIONC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0ll99wg">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1rjy5ty">
-          <text>false</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_08exhao">
-        <description>CTSC task permissions</description>
-        <inputEntry id="UnaryTests_0ttcriq">
-          <text>"removeLegalRepresentativeFL401"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0jzm6jj">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1of7f6z">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1u737wd">
-          <text>"ctsc"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1g2xv4t">
-          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0mrozfg">
-          <text>"CTSC"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0k86u7v">
-          <text>"SKILL:ABA5:CHECKAPPLICATIONFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1rn3bxi">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0bvt8zo">
           <text>false</text>
         </outputEntry>
       </rule>

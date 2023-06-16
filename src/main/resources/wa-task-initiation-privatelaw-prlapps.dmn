@@ -1071,7 +1071,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_18zqai6">
-          <text>"applicationCheck"</text>
+          <text>"citizenNoC"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0syzxkf">
@@ -1106,7 +1106,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0b04yo5">
-          <text>"applicationCheck"</text>
+          <text>"citizenNoC"</text>
         </outputEntry>
       </rule>
     </decisionTable>
