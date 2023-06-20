@@ -438,6 +438,17 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1acksuo">
+        <inputEntry id="UnaryTests_0kncjs4">
+          <text>"serviceOfApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10kurbr">
+          <text>"confidentialCheckSOA"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xwj285">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_05kvogz">
         <inputEntry id="UnaryTests_0cb5u2c">
           <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","editAndApproveAnOrder","returnApplication"</text>
@@ -454,7 +465,7 @@
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <dmndi:DMNShape dmnElementRef="wa-task-completion-privatelaw-prlapps">
-        <dc:Bounds height="80" width="180" x="160" y="80" />
+        <dc:Bounds height="80" width="180" x="330" y="-160" />
       </dmndi:DMNShape>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
