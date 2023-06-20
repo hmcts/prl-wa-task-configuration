@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(7));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(28));
+        assertThat(logic.getRules().size(), is(30));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -362,6 +362,38 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "reviewCorrespondenceFL401",
                         "name", "Review correspondence",
                         "processCategories", "courtAdminCorrespondenceFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "citizenRemoveLegalRepresentative",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "removeLegalRepresentativeC100",
+                        "name", "Remove legal representative",
+                        "processCategories", "citizenNoC"
+                    )
+                )
+            ),
+            Arguments.of(
+                "citizenRemoveLegalRepresentative",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "name", "Remove legal representative",
+                        "processCategories", "citizenNoC",
+                        "taskId", "removeLegalRepresentativeFL401"
                     )
                 )
             )

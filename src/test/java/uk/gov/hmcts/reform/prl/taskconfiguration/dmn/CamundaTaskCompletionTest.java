@@ -157,7 +157,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskType", "sendToGateKeeperC100",
                         "completionMode", "Auto"
-                    ),Map.of(
+                    ), Map.of(
                         "taskType", "sendToGateKeeperC100Resubmitted",
                         "completionMode", "Auto"
                     )
@@ -166,12 +166,12 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "fl401SendToGateKeeper",
                 singletonList(
-                        Map.of(
-                            "taskType", "sendToGateKeeperFL401",
-                            "completionMode", "Auto"
-                        )
+                    Map.of(
+                        "taskType", "sendToGateKeeperFL401",
+                        "completionMode", "Auto"
                     )
-                ),
+                )
+            ),
             Arguments.of(
                 "createBundle",
                 asList(
@@ -242,13 +242,31 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     )
                 )
+            ),
+            Arguments.of(
+                "adminRemoveLegalRepresentativeC100",
+                asList(
+                    Map.of(
+                        "taskType", "removeLegalRepresentativeC100",
+                        "completionMode", "Auto"
+                    )
+                )
+            ),
+            Arguments.of(
+                "adminRemoveLegalRepresentativeFL401",
+                asList(
+                    Map.of(
+                        "taskType", "removeLegalRepresentativeFL401",
+                        "completionMode", "Auto"
+                    )
+                )
             )
         );
     }
 
     @ParameterizedTest(name = "event id: {0} post event state: {1}")
     @MethodSource("scenarioProvider")
-    void event_ids_should_evaluate_dmn(String eventId,List<Map<String, String>> expectation) {
+    void event_ids_should_evaluate_dmn(String eventId, List<Map<String, String>> expectation) {
 
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("eventId", eventId);
@@ -264,7 +282,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(40));
+        assertThat(logic.getRules().size(), is(42));
     }
 
 
