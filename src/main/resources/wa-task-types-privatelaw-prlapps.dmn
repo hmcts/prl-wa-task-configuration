@@ -369,6 +369,30 @@
           <text>"Reply To Message Judicial"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0lv5u84">
+        <description>RDC100SOLCAF</description>
+        <inputEntry id="UnaryTests_1w9qzgy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0x5hvb7">
+          <text>"reviewDocumentsForSolAndCafcassC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1112i9i">
+          <text>"C100 Review Documents Submitted By Sol or Cafcass"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12yys0c">
+        <description>RDFL401SOLCAF</description>
+        <inputEntry id="UnaryTests_08vhqab">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1uyf1ox">
+          <text>"reviewDocumentsForSolAndCafcassFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1syd1na">
+          <text>"FL401 Review Documents Submitted By Sol or Cafcass"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
