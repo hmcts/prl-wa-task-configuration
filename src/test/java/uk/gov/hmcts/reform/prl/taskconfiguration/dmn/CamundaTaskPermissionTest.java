@@ -557,7 +557,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @CsvSource(value = {
         "confidentialCheckSOA"
     })
-    void evaluate_task_admin_confidentialCheckSOA(String taskType) {
+    void evaluate_task_admin_confidentialCheckSoa(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
 
