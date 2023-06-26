@@ -245,7 +245,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "adminRemoveLegalRepresentativeC100",
-                asList(
+                singletonList(
                     Map.of(
                         "taskType", "removeLegalRepresentativeC100",
                         "completionMode", "Auto"
@@ -254,11 +254,21 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "adminRemoveLegalRepresentativeFL401",
-                asList(
+                singletonList(
                     Map.of(
                         "taskType", "removeLegalRepresentativeFL401",
                         "completionMode", "Auto"
                     )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                asList(
+                    Map.of(
+                        "taskType", "confidentialCheckSOA",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of()
                 )
             )
         );
@@ -282,7 +292,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(42));
+        assertThat(logic.getRules().size(), is(43));
     }
 
 
