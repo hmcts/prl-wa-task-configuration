@@ -209,7 +209,7 @@
         <description>Court admin check application skills permission</description>
         <inputEntry id="UnaryTests_0m16bpv">
           <text>"checkApplicationFL401", "checkApplicationResubmittedFL401",
-"sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401","removeLegalRepresentativeFL401"</text>
+"sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401","removeLegalRepresentativeFL401","confidentialCheckSOA"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_132ys7j">
           <text></text>

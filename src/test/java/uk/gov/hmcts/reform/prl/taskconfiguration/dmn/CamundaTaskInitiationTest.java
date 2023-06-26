@@ -35,9 +35,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(7));
+        assertThat(logic.getInputs().size(), is(8));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(30));
+        assertThat(logic.getRules().size(), is(31));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -413,6 +413,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         inputVariables.putValue("additionalData", map);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+        System.out.println(dmnDecisionTableResult);
 
         assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
     }
@@ -434,6 +435,18 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "adminServeOrderCreatedByJudgeC100",
                         "name", "Service of Order",
                         "processCategories", "adminServeOrderCreatedByJudgeC100"
+                    )
+                ),
+                Arguments.of(
+                    "serviceOfApplication",
+                    "JUDICIAL_REVIEW",
+                    null,
+                    singletonList(
+                        Map.of(
+                            "name", "Confidentiality Check  before Serving the Application",
+                            "processCategories", "confidentialCheck",
+                            "taskId", "confidentialCheckSOA"
+                        )
                     )
                 )
             )
