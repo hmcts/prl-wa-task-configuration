@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-types-privatelaw-prlapps" name="Private Law Task Types DMN">
     <decisionTable id="DecisionTable_07kcj0o" hitPolicy="COLLECT">
       <input id="Input_1">
@@ -367,6 +367,66 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0mbnmpn">
           <text>"C8 - Confidential details check"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0wo7umy">
+        <description>SNRFL401CA</description>
+        <inputEntry id="UnaryTests_1h4lv95">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vohuig">
+          <text>"replyToMessageForCourtAdminFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0apwiiw">
+          <text>"Reply To Message FL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ohg8ba">
+        <description>SNRC100CA</description>
+        <inputEntry id="UnaryTests_10cdq1p">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0iss4hj">
+          <text>"replyToMessageForCourtAdminC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12jmht0">
+          <text>"Reply To Message C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ppuioz">
+        <description>SNRJUD</description>
+        <inputEntry id="UnaryTests_0etk4vv">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ce5tx1">
+          <text>"replyToMessageForJudiciary"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bd9eqe">
+          <text>"Reply To Message Judicial"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06ipmqb">
+        <description>RDC100SOLCAF</description>
+        <inputEntry id="UnaryTests_17kp8ql">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1l9fwk5">
+          <text>"reviewDocumentsForSolAndCafcassC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1smy0ej">
+          <text>"C100 Review Documents Submitted By Sol or Cafcass"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0q30npj">
+        <description>RDFL401SOLCAF</description>
+        <inputEntry id="UnaryTests_0otuqsh">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0cvg9os">
+          <text>"reviewDocumentsForSolAndCafcassFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ugtsa6">
+          <text>"FL401 Review Documents Submitted By Sol or Cafcass"</text>
         </outputEntry>
       </rule>
     </decisionTable>

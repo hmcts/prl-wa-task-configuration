@@ -56,7 +56,7 @@
         <description>Judicial task permissions</description>
         <inputEntry id="UnaryTests_155q736">
           <text>"gateKeeping",
-"gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided"</text>
+"gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided", "replyToMessageForJudiciary"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0buofva">
           <text></text>
@@ -87,7 +87,7 @@
         <description>Judicial task permissions</description>
         <inputEntry id="UnaryTests_0ngofzz">
           <text>"gateKeeping",
-"gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided"</text>
+"gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided", "replyToMessageForJudiciary"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0i05m2b">
           <text></text>
@@ -209,7 +209,7 @@
         <description>Court admin check application skills permission</description>
         <inputEntry id="UnaryTests_0m16bpv">
           <text>"checkApplicationFL401", "checkApplicationResubmittedFL401",
-"sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401","removeLegalRepresentativeFL401","confidentialCheckSOA"</text>
+"sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401","removeLegalRepresentativeFL401","confidentialCheckSOA", "reviewDocumentsForSolAndCafcassFL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_132ys7j">
           <text></text>
@@ -328,7 +328,7 @@
       </rule>
       <rule id="DecisionRule_1wrkkzl">
         <inputEntry id="UnaryTests_18p5ocz">
-          <text>"reviewCorrespondenceFL401"</text>
+          <text>"reviewCorrespondenceFL401", "replyToMessageForCourtAdminFL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gv5jm0">
           <text></text>
@@ -390,7 +390,7 @@
         <inputEntry id="UnaryTests_14xrsqw">
           <text>"checkApplicationC100", "checkApplicationResubmittedC100",
 "addCaseNumber", "addCaseNumberResubmitted",
-"sendToGateKeeperC100", "sendToGateKeeperResubmittedC100","removeLegalRepresentativeC100"</text>
+"sendToGateKeeperC100", "sendToGateKeeperResubmittedC100","removeLegalRepresentativeC100", "reviewDocumentsForSolAndCafcassC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1pv1c0z">
           <text></text>
@@ -511,7 +511,7 @@
       <rule id="DecisionRule_0isxg00">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_062rjrz">
-          <text>"reviewCorrespondenceC100"</text>
+          <text>"reviewCorrespondenceC100","replyToMessageForCourtAdminC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0fgfm23">
           <text></text>

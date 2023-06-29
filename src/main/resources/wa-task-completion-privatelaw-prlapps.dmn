@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
   <decision id="wa-task-completion-privatelaw-prlapps" name="Private Law Task completion DMN">
     <decisionTable id="DecisionTable_01re27m" hitPolicy="COLLECT">
       <input id="eventId" label="Event ID" biodi:width="437">
@@ -471,9 +471,64 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_088guw8">
+        <inputEntry id="UnaryTests_0xe1anm">
+          <text>"sendOrReplyToMessages"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1sdvh3r">
+          <text>"replyToMessageForCourtAdminFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mqlcvy">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qpojiy">
+        <inputEntry id="UnaryTests_0z4ixw2">
+          <text>"sendOrReplyToMessages"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1hughre">
+          <text>"replyToMessageForCourtAdminC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_034qvey">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_086bf3g">
+        <inputEntry id="UnaryTests_0iqxe7q">
+          <text>"sendOrReplyToMessages"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1g3wr5m">
+          <text>"replyToMessageForJudiciary"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17o1xow">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p3diza">
+        <inputEntry id="UnaryTests_1ycmk5g">
+          <text>"c100-all-docs-reviewed"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wsh0s0">
+          <text>"reviewDocumentsForSolAndCafcassC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1w8k11x">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1i9rl11">
+        <inputEntry id="UnaryTests_1ni03ll">
+          <text>"fl401-all-docs-reviewed"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ckjipn">
+          <text>"reviewDocumentsForSolAndCafcassFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1w83afe">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_05kvogz">
         <inputEntry id="UnaryTests_0cb5u2c">
-          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","editAndApproveAnOrder","returnApplication"</text>
+          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","editAndApproveAnOrder","returnApplication","sendOrReplyToMessages"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1o5rfjh">
           <text></text>
