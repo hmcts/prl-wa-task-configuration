@@ -381,18 +381,6 @@
           <text>"Reply To Message FL401"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0qdjvzo">
-        <description>SNRFL401CA</description>
-        <inputEntry id="UnaryTests_1qi6n5s">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ab78ba">
-          <text>"replyToMessageForLAFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1pfuogd">
-          <text>"Reply To Message FL401"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0ohg8ba">
         <description>SNRC100CA</description>
         <inputEntry id="UnaryTests_10cdq1p">
@@ -411,7 +399,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0vt12c4">
-          <text>"replyToMessageForLAC100"</text>
+          <text>"replyToMessageForLA"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kwqfnl">
           <text>"Reply To Message C100"</text>
