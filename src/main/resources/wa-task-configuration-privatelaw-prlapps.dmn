@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN">
     <decisionTable id="DecisionTable_14cx079" hitPolicy="COLLECT">
       <input id="InputClause_1gxyo7f" label="CCD Case Data" camunda:inputVariable="caseData">
@@ -297,7 +297,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gtvl7x">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA", "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ju1b88">
           <text>"dueDateIntervalDays"</text>
@@ -331,7 +331,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1jc6qee">
-          <text>"removeLegalRepresentativeC100","removeLegalRepresentativeFL401"</text>
+          <text>"removeLegalRepresentativeC100","removeLegalRepresentativeFL401", "reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1qc3zk6">
           <text>"dueDateIntervalDays"</text>
@@ -348,7 +348,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_07bn4jn">
-          <text>"reviewSolicitorOrderProvided", "reviewCorrespondenceC100","reviewCorrespondenceFL401"</text>
+          <text>"reviewSolicitorOrderProvided", "reviewCorrespondenceC100","reviewCorrespondenceFL401", "replyToMessageForJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0t7q94m">
           <text>"dueDateIntervalDays"</text>
@@ -365,7 +365,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08jiuyj">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","reviewAdminOrderProvided","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","reviewAdminOrderProvided","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA", "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLA"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lyogga">
           <text>"priorityDateOriginRef"</text>
@@ -382,7 +382,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1tb79v4">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided", "replyToMessageForJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0tucp7d">
           <text>"calculatedDates"</text>
@@ -518,7 +518,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_02twz7w">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401","adminServeOrderCreatedByJudgeFL401","removeLegalRepresentativeFL401"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401","adminServeOrderCreatedByJudgeFL401","removeLegalRepresentativeFL401", "replyToMessageForCourtAdminFL401", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLAFL401"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0o0dcmv">
           <text>"majorPriority"</text>
@@ -535,7 +535,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0f0gzeq">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","adminServeOrderCreatedByJudgeC100","removeLegalRepresentativeC100"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","adminServeOrderCreatedByJudgeC100","removeLegalRepresentativeC100", "replyToMessageForCourtAdminC100","reviewDocumentsForSolAndCafcassC100","replyToMessageForLA"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jiva8u">
           <text>"majorPriority"</text>
@@ -552,7 +552,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_05latny">
-          <text>"gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA"</text>
+          <text>"gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA", "replyToMessageForJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_121l57m">
           <text>"majorPriority"</text>
@@ -571,7 +571,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1y3kj1v">
-          <text>"addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","adminServeOrderC100","adminServeOrderFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","reviewCorrespondenceC100","reviewCorrespondenceFL401","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA"</text>
+          <text>"addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","adminServeOrderC100","adminServeOrderFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","reviewCorrespondenceC100","reviewCorrespondenceFL401","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForCourtAdminC100","replyToMessageForLA"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0rvgay2">
           <text>"workType"</text>
@@ -673,7 +673,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_10f3uas">
-          <text>"gateKeeping", "gateKeepingResubmitted", "reviewSpecificAccessRequestLegalOps"</text>
+          <text>"gateKeeping", "gateKeepingResubmitted", "reviewSpecificAccessRequestLegalOps","replyToMessageForLAC100","replyToMessageForLA"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_05l5bvs">
           <text>"roleCategory"</text>
@@ -692,7 +692,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         <inputEntry id="UnaryTests_1glizm3">
           <text>"checkApplicationFL401", "checkApplicationResubmittedFL401",
 "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401",
-"produceHearingBundleFL401", "adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewCorrespondenceFL401", "reviewSpecificAccessRequestAdmin", "adminServeOrderCreatedByJudgeFL401","removeLegalRepresentativeFL401"</text>
+"produceHearingBundleFL401", "adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewCorrespondenceFL401", "reviewSpecificAccessRequestAdmin", "adminServeOrderCreatedByJudgeFL401","removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1131kat">
           <text>"roleCategory"</text>
@@ -714,7 +714,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
 "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100",
  "produceHearingBundleC100", "adminServeOrderC100",
 "updateHearingActualsC100", "requestSolicitorOrderC100",
-"reviewCorrespondenceC100", "reviewSpecificAccessRequestCTSC", "adminServeOrderCreatedByJudgeC100","removeLegalRepresentativeC100","confidentialCheckSOA"</text>
+"reviewCorrespondenceC100", "reviewSpecificAccessRequestCTSC", "adminServeOrderCreatedByJudgeC100","removeLegalRepresentativeC100","confidentialCheckSOA","reviewDocumentsForSolAndCafcassC100","replyToMessageForCourtAdminC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18u6y8m">
           <text>"roleCategory"</text>
@@ -1023,12 +1023,46 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"confidentialCheckSOA"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jycpq1">
-          <text>"descrption"</text>
+          <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ep77sp">
           <text>"[Check for Confidential Documents](/cases/case-details/${[CASE_REFERENCE]}#Case File View"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02lku50">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1fy3vj0">
+        <inputEntry id="UnaryTests_10j7z9u">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xh9lpg">
+          <text>"replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","replyToMessageForLA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zgm7ll">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rvmm7d">
+          <text>"[Reply to Message](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendOrReplyToMessages)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ss75wi">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1uc1f1e">
+        <inputEntry id="UnaryTests_1ys31sh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dkhe7a">
+          <text>"reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1kpgsgn">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03f2iql">
+          <text>"[Review Documents](/cases/case-details/${[CASE_REFERENCE]}/trigger/reviewDocuments)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mtevpl">
           <text></text>
         </outputEntry>
       </rule>
