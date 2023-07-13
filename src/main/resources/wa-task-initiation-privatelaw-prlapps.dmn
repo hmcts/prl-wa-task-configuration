@@ -28,7 +28,7 @@
       </input>
       <input id="InputClause_12gdmzs" label="Performing Action" camunda:inputVariable="performingAction">
         <inputExpression id="LiteralExpression_0iqfkk0" typeRef="string">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.performingAction != null and (additionalData.Data.performingAction = "Create an Order" or additionalData.Data.performingAction = "Upload an order")) then "Yes" else ""</text>
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.performingAction != null and (additionalData.Data.performingAction = "Create an order" or additionalData.Data.performingAction = "Upload an order")) then "Yes" else ""</text>
         </inputExpression>
       </input>
       <input id="InputClause_19o6aaw" label="LAJudge Review Required" biodi:width="150" camunda:inputVariable="judgeLaReviewRequired">
