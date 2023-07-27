@@ -26,7 +26,7 @@
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.performingUser != null) then additionalData.Data.performingUser else ""</text>
         </inputExpression>
       </input>
-      <input id="InputClause_12gdmzs" label="Performing Action" camunda:inputVariable="performingAction">
+      <input id="InputClause_12gdmzs" label="Performing Action" biodi:width="150" camunda:inputVariable="performingAction">
         <inputExpression id="LiteralExpression_0iqfkk0" typeRef="string">
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.performingAction != null and (additionalData.Data.performingAction = "Create an order" or additionalData.Data.performingAction = "Upload an order")) then "Yes" else ""</text>
         </inputExpression>
@@ -36,7 +36,7 @@
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.udgeLaReviewRequired != null) then additionalData.Data.judgeLaReviewRequired else ""</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0s3lde6" label="Order Complete To Serve" biodi:width="192" camunda:inputVariable="isOrderCompleteToServe">
+      <input id="InputClause_0s3lde6" label="Order Complete To Serve" biodi:width="150" camunda:inputVariable="isOrderCompleteToServe">
         <inputExpression id="LiteralExpression_0w2qmqq" typeRef="string">
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.isOrderCompleteToServe
             != null) then
@@ -45,7 +45,7 @@
             ""</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0znldau" label="Confidential Check for SOA" camunda:inputVariable="confidentialCheck">
+      <input id="InputClause_0znldau" label="Confidential Check for SOA" biodi:width="150" camunda:inputVariable="confidentialCheck">
         <inputExpression id="LiteralExpression_0tjz3wq" typeRef="string">
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.proceedToServing
             != null) then
@@ -54,22 +54,22 @@
             ""</text>
         </inputExpression>
       </input>
-      <input id="InputClause_1pl9avo" label="Send Message Parameter" camunda:inputVariable="sendMessageObject">
+      <input id="InputClause_1pl9avo" label="Send Message Parameter" biodi:width="150" camunda:inputVariable="sendMessageObject">
         <inputExpression id="LiteralExpression_1n4rjpi" typeRef="string">
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.sendMessageObject != null and additionalData.Data.sendMessageObject.internalMessageWhoToSendTo != null) then additionalData.Data.sendMessageObject.internalMessageWhoToSendTo  else ""</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0r6sl6r" label="Reply Message Parameter" camunda:inputVariable="replyMessageObject">
+      <input id="InputClause_0r6sl6r" label="Reply Message Parameter" biodi:width="150" camunda:inputVariable="replyMessageObject">
         <inputExpression id="LiteralExpression_03ya5v2" typeRef="string">
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.replyMessageObject != null and additionalData.Data.replyMessageObject.internalMessageReplyTo != null) then additionalData.Data.replyMessageObject.internalMessageReplyTo else ""</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0gxwuqu" label="manageDocuments TriggeredBy" camunda:inputVariable="manageDocumentsTriggeredBy">
+      <input id="InputClause_0gxwuqu" label="manageDocuments TriggeredBy" biodi:width="150" camunda:inputVariable="manageDocumentsTriggeredBy">
         <inputExpression id="LiteralExpression_16khai2" typeRef="string">
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocumentsTriggeredBy != null) then additionalData.Data.manageDocumentsTriggeredBy else ""</text>
         </inputExpression>
       </input>
-      <input id="InputClause_1h856zx" label="manageDocumentsRestrictedFlag">
+      <input id="InputClause_1h856zx" label="manageDocumentsRestrictedFlag" biodi:width="150">
         <inputExpression id="LiteralExpression_1ynsjkw" typeRef="string">
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocumentsRestrictedFlag != null) then additionalData.Data.manageDocumentsRestrictedFlag else ""</text>
         </inputExpression>
