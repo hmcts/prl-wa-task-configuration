@@ -7,23 +7,18 @@ plugins {
   id 'org.springframework.boot' version '2.4.12'
   id 'com.github.ben-manes.versions' version '0.38.0'
   id 'org.owasp.dependencycheck' version '8.0.1'
-  id 'org.sonarqube' version '3.2.0'
+  id 'org.sonarqube' version '4.3.0.3225'
   id 'info.solidsoft.pitest' version '1.5.2'
-  id 'io.freefair.lombok' version '5.3.0'
+  id 'io.freefair.lombok' version '8.1.0'
 }
 
 group = 'uk.gov.hmcts.reform'
 version = '0.0.1'
 
-allprojects {
-  sourceCompatibility = '11'
-  targetCompatibility = '11'
-}
-
-lombok {
-  config['config.stopBubbling'] = 'true'
-  config['lombok.addLombokGeneratedAnnotation'] = 'true'
-  config['lombok.anyConstructor.addConstructorProperties'] = 'true'
+java {
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(17)
+  }
 }
 
 sourceSets {
@@ -124,8 +119,8 @@ jacocoTestCoverageVerification {
 jacocoTestReport {
   executionData(test, integration)
   reports {
-    xml.enabled = true
-    csv.enabled = false
+    xml.required = true
+    csv.required = false
     xml.destination file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml")
   }
 }
@@ -145,14 +140,13 @@ pitest {
 
 project.tasks['pitest'].group = "Verification"
 
-
 project.tasks['sonarqube'].dependsOn test, integration, jacocoTestReport
 
 sonarqube {
   properties {
     property "sonar.projectName", "prl-wa-task-configuration"
     property "sonar.projectKey", "prl-wa-task-configuration"
-    property "sonar.coverage.jacoco.xmlReportPaths", "${jacocoTestReport.reports.xml.destination.path}"
+    property "sonar.coverage.jacoco.xmlReportPaths", "${jacocoTestReport.reports.xml.outputLocation}"
     property "sonar.pitest.mode", "reuseReport"
     property "sonar.pitest.reportsDirectory", "build/reports/pitest"
     property "sonar.exclusions", "src/main/java/uk/gov/hmcts/reform/prl/taskconfiguration/config/**," +
@@ -265,11 +259,11 @@ dependencies {
   implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-core', version: versions.tomcat
   implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-websocket', version: versions.tomcat
 
-  testCompile group: 'org.pitest', name: 'pitest', version: versions.pitest
-  testCompile 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.5.2'
+  testImplementation group: 'org.pitest', name: 'pitest', version: versions.pitest
+  testImplementation 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.5.2'
 
-  testCompile "org.junit.vintage:junit-vintage-engine:${versions.junit}"
-  testCompile group: 'org.codehaus.sonar-plugins', name: 'sonar-pitest-plugin', version: versions.sonarPitest
+  testImplementation "org.junit.vintage:junit-vintage-engine:${versions.junit}"
+  testImplementation group: 'org.codehaus.sonar-plugins', name: 'sonar-pitest-plugin', version: versions.sonarPitest
   testImplementation libraries.junit5
   testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', {
     exclude group: 'junit', module: 'junit'
@@ -286,6 +280,10 @@ dependencies {
   functionalTestImplementation sourceSets.main.runtimeClasspath
 
   smokeTestImplementation sourceSets.main.runtimeClasspath
+}
+
+tasks.withType(Copy) {
+  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
 mainClassName = 'uk.gov.hmcts.reform.prl.taskconfiguration.Application'
