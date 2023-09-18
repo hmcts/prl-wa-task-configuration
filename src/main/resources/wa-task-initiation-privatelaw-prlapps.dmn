@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -928,6 +928,106 @@
           <text>"reviewSolicitorOrderByJudge"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1shhhyi">
+        <inputEntry id="UnaryTests_1m3wb73">
+          <text>editAndApproveAnOrder</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_146d8a8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1venx25">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j6e7qt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0c11tne">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rp53jj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vxkebo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10z12fd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bm6exy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bphapt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05q34zf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b67vdk">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1eyvdef">
+          <text>"adminServeOrderC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00tm0i4">
+          <text>"Finalize and Serve the Order"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06oir1d">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nue0t8">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1eqz4i3">
+        <inputEntry id="UnaryTests_1pseo73">
+          <text>"editAndApproveAnOrder"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19gejg2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_167k3t0">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_088jwvm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pkv6k3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00nlgw7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0og59vm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dp6zpd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vgm8ig">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vj49xe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vrn71d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n2w7dl">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0cojrts">
+          <text>"adminServeOrderC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dut1i4">
+          <text>"Finalize and Serve the Order"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1cwimto">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f51mwl">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0xzi2j0">
         <inputEntry id="UnaryTests_1xiod7u">
           <text>
@@ -971,12 +1071,112 @@
           <text>"adminServeOrderC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_17mw5ff">
-          <text>"Service of Order"</text>
+          <text>"Complete the Order"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ddgs5t">
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0wnnmif">
+          <text>"adminServeOrderC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1w2062x">
+        <inputEntry id="UnaryTests_0wxuwk4">
+          <text>"editAndApproveAnOrder"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1anjxw5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06iqo8b">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17yefgh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cs3bh3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r53mtu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uod3eu">
+          <text>"true"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03bpywn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t7amxc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1459yvq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1awy436">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ts8sqi">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1p86jdw">
+          <text>"serviceOfApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0291roz">
+          <text>"Serve the Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ql47z9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z0r56l">
+          <text>"serviceOfApplicationC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hwvher">
+        <inputEntry id="UnaryTests_0xx5cat">
+          <text>"editAndApproveAnOrder"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1478mk9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vof4pc">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v8001w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q48ywz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15zqp9s">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_136n1lq">
+          <text>"false"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x1kq4o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bwt0b5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vtcip6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h8adxp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01pdjj3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1thskb2">
+          <text>""adminServeOrderC100""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ltui8y">
+          <text>"Finalize the Order"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j84ojp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ubs09n">
           <text>"adminServeOrderC100"</text>
         </outputEntry>
       </rule>
@@ -1029,6 +1229,110 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1q2o6h4">
+          <text>"adminServeOrderFL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rjjsy7">
+        <inputEntry id="UnaryTests_0y5drdb">
+          <text>
+"editAndApproveAnOrder"
+          </text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10p968y">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04lscm5">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j3qg11">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01cppb3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k4ttz2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0c0cl8i">
+          <text>"true"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1er8xsc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15tkk6t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n0hvjy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d1tmof">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_108w8h5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rl80vx">
+          <text>"serviceOfApplicationFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15ny1l3">
+          <text>"Serve the Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dx8jdd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0h1qrop">
+          <text>"serviceOfApplicationFL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0nwx59d">
+        <inputEntry id="UnaryTests_19r9kcb">
+          <text>
+"editAndApproveAnOrder"
+          </text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hlfgnt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06a37xn">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b3zn8y">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01goa4o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ynib58">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1up0rju">
+          <text>"false"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08t5n1b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mm8rs6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n3yy26">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1saf23t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09edlnv">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1n0u9gz">
+          <text>"adminServeOrderFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ak22m8">
+          <text>"Finalize the Order"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f87r43">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vgi5ap">
           <text>"adminServeOrderFL401"</text>
         </outputEntry>
       </rule>

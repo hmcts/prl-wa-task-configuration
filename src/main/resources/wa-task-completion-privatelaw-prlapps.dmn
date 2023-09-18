@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
   <decision id="wa-task-completion-privatelaw-prlapps" name="Private Law Task completion DMN">
     <decisionTable id="DecisionTable_01re27m" hitPolicy="COLLECT">
       <input id="eventId" label="Event ID" biodi:width="437">
@@ -546,6 +546,28 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_09pxu1a">
           <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0cyz6vd">
+        <inputEntry id="UnaryTests_1puhv6t">
+          <text>"serviceOfApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pzxyxi">
+          <text>"serviceOfApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e0k2v0">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1iisl8q">
+        <inputEntry id="UnaryTests_0yzpgw6">
+          <text>"serviceOfApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01g8ukl">
+          <text>"serviceOfApplicationFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l8ekhe">
+          <text>"Auto"</text>
         </outputEntry>
       </rule>
     </decisionTable>

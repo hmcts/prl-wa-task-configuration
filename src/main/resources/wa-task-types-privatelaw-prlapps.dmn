@@ -441,6 +441,30 @@
           <text>"FL401 Review Documents Submitted By Sol or Cafcass"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_12qsny0">
+        <description>SOAC100</description>
+        <inputEntry id="UnaryTests_15bi3e2">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1cnmtm6">
+          <text>"serviceOfApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1onrgh5">
+          <text>"C100 Service of Application"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_167dutl">
+        <description>SOAFL401</description>
+        <inputEntry id="UnaryTests_0tyac1l">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ur0cvs">
+          <text>"serviceOfApplicationFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qm7mmd">
+          <text>"FL401 Service of Application"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
