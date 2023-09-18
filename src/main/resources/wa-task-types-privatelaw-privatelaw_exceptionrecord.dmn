@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="wa-task-types-privatelaw-privatelaw_exceptionrecord" name="Private Law Bulk scan Task Types DMN">
+    <decisionTable id="DecisionTable_07kcj0o" hitPolicy="COLLECT">
+      <input id="Input_1">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Task Type Id" name="taskTypeId" typeRef="string" biodi:width="247" />
+      <output id="OutputClause_05pod8h" label="Task Type Name" name="taskTypeName" typeRef="string" biodi:width="323" />
+      <rule id="DecisionRule_1vo8wqc">
+        <description>REVEXCREC</description>
+        <inputEntry id="UnaryTests_0qxzdcr">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_06eqcww">
+          <text>"reviewExceptionBulkScanRecord"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rnmzpm">
+          <text>"Review Private Law Exception Record Message"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="wa-task-types-privatelaw-privatelaw_exceptionrecord">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
