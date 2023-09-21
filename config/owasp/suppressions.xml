@@ -67,6 +67,8 @@
     <cve>CVE-2023-35116</cve>
     <cve>CVE-2020-8908</cve>
     <cve>CVE-2023-20873</cve>
+    <cve>CVE-2023-41080</cve>
+    <cve></cve>
   </suppress>
   <suppress>
     <notes>
