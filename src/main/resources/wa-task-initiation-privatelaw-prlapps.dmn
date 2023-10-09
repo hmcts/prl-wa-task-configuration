@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.12.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.15.1">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -2336,6 +2336,106 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0dixi4x">
           <text>"reviewDocsFL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1yk2hfv">
+        <inputEntry id="UnaryTests_0xj6r97">
+          <text>"c100RequestSupport"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ythdqe">
+          <text>"SUBMITTED_PAID", "CASE_ISSUED","JUDICIAL_REVIEW","PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gw9o67">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0poup59">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1awb3mj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02skm7m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19vlzcz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00pk60e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nhvfvl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07yfnjr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pvl1x3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nbzlts">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fafx8u">
+          <text>"reviewRARequestsC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10e6ljz">
+          <text>"Review RA request"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f8b3vh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xpl0xq">
+          <text>"reviewRAC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xap93g">
+        <inputEntry id="UnaryTests_0g5ps1f">
+          <text>"fl401RequestSupport"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1owf3ec">
+          <text>"SUBMITTED_PAID", "CASE_ISSUED","JUDICIAL_REVIEW","PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eqoaj5">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vz7di9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o0zfdq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gfpjpe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18i3ads">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1b8plo3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12p7zbv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13lmvx3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bquih2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_004w99w">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1u8bfk8">
+          <text>"reviewRaRequestsFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02bii4t">
+          <text>"Review RA request"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15drf6j">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1me96xn">
+          <text>"reviewRAFL401"</text>
         </outputEntry>
       </rule>
     </decisionTable>

@@ -267,6 +267,24 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     ),
                     Map.of()
                 )
+            ),
+            Arguments.of(
+                "c100ManageFlags",
+                singletonList(
+                    Map.of(
+                        "taskType", "reviewRARequestsC100",
+                        "completionMode", "Auto"
+                    )
+                )
+            ),
+            Arguments.of(
+                "fl401ManageFlags",
+                singletonList(
+                    Map.of(
+                        "taskType", "reviewRaRequestsFL401",
+                        "completionMode", "Auto"
+                    )
+                )
             )
         );
     }

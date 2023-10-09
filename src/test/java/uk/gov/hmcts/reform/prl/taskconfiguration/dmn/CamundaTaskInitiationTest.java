@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(12));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(45));
+        assertThat(logic.getRules().size(), is(47));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -394,6 +394,38 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "name", "Remove legal representative",
                         "processCategories", "citizenNoC",
                         "taskId", "removeLegalRepresentativeFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "c100RequestSupport",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewRARequestsC100",
+                        "name", "Review RA request",
+                        "processCategories", "reviewRARequestsC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "fl401RequestSupport",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "name", "Review RA request",
+                        "processCategories", "reviewRaRequestsFL401",
+                        "taskId", "reviewRaRequestsFL401"
                     )
                 )
             )
