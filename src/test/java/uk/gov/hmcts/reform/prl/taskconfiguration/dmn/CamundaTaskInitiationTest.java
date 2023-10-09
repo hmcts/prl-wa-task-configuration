@@ -399,7 +399,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "c100RequestSupport",
-                null,
+                "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
@@ -407,15 +407,15 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "reviewRARequestsC100",
+                        "taskId", "reviewRaRequestC100",
                         "name", "Review RA request",
-                        "processCategories", "reviewRARequestsC100"
+                        "processCategories", "reviewRAC100"
                     )
                 )
             ),
             Arguments.of(
                 "fl401RequestSupport",
-                null,
+                "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
@@ -423,9 +423,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
+                        "taskId", "reviewRaRequestsFL401",
                         "name", "Review RA request",
-                        "processCategories", "reviewRaRequestsFL401",
-                        "taskId", "reviewRaRequestsFL401"
+                        "processCategories", "reviewRAFL401"
                     )
                 )
             )

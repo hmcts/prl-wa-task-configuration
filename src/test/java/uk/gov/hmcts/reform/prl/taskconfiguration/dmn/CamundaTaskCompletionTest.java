@@ -272,7 +272,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                 "c100ManageFlags",
                 singletonList(
                     Map.of(
-                        "taskType", "reviewRARequestsC100",
+                        "taskType", "reviewRaRequestC100",
                         "completionMode", "Auto"
                     )
                 )
@@ -307,7 +307,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(49));
+        assertThat(logic.getRules().size(), is(51));
     }
 
 
