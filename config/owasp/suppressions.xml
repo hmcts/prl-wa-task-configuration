@@ -90,6 +90,7 @@
     </notes>
     <cve>CVE-2022-22965</cve>
     <cve>CVE-2023-20883</cve>
+    <cve>CVE-2023-34047</cve>
   </suppress>
 </suppressions>
 
