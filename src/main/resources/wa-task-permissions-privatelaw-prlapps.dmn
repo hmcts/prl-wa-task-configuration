@@ -239,7 +239,7 @@
       <rule id="DecisionRule_0u17n4d">
         <description>Court admin hearing management skills permission</description>
         <inputEntry id="UnaryTests_0x0kyja">
-          <text>"produceHearingBundleFL401", "updateHearingActualsFL401"</text>
+          <text>"produceHearingBundleFL401", "updateHearingActualsFL401","createHearingRequestFL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0473w2g">
           <text></text>
@@ -420,7 +420,7 @@
       <rule id="DecisionRule_079udd1">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_0ahkyod">
-          <text>"produceHearingBundleC100", "updateHearingActualsC100"</text>
+          <text>"produceHearingBundleC100","updateHearingActualsC100","createHearingRequestC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qchifs">
           <text></text>

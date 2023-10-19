@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.12.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -1030,6 +1030,110 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1q2o6h4">
           <text>"adminServeOrderFL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ci191s">
+        <inputEntry id="UnaryTests_0br8xg4">
+          <text>
+"editAndApproveAnOrder"
+          </text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hf6ai9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ekj64j">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hw4q7c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01s3ehr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1omprjl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_054wgdu">
+          <text>"true"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ck4tak">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tl30ep">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yl2iee">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j4a5p9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tq9mph">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1886vu9">
+          <text>"createHearingRequestC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qiofq0">
+          <text>"Create Hearing Request"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vx1wai">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z5z3z1">
+          <text>"HearingRequest"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1c547bl">
+        <inputEntry id="UnaryTests_0bbu6sq">
+          <text>
+"editAndApproveAnOrder"
+          </text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lrwiyo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uipn9i">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h6lbns">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xdskef">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19zrtoi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x0qd56">
+          <text>"true"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03cwkcy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oayjps">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zf6qp3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gm8kmi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01vwptc">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fhg10a">
+          <text>"createHearingRequestFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d36n5k">
+          <text>"Create Hearing Request"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0slh1v4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09lmabo">
+          <text>"HearingRequest"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0z5s2qi">

@@ -267,6 +267,19 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     ),
                     Map.of()
                 )
+            ),
+            Arguments.of(
+                "hmcCaseUpdPrepForHearing",
+                asList(
+                    Map.of(
+                        "taskType", "createHearingRequestC100",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "createHearingRequestFL401",
+                        "completionMode", "Auto"
+                    )
+                )
             )
         );
     }
@@ -289,7 +302,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(49));
+        assertThat(logic.getRules().size(), is(51));
     }
 
 

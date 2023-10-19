@@ -268,7 +268,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "produceHearingBundleFL401", "updateHearingActualsFL401",
+        "produceHearingBundleFL401", "updateHearingActualsFL401","createHearingRequestFL401"
     })
     void evaluate_task_admin_hearingManagementfl401(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -400,7 +400,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "produceHearingBundleC100", "updateHearingActualsC100",
+        "produceHearingBundleC100", "updateHearingActualsC100", "createHearingRequestC100"
     })
     void evaluate_task_ctsc_hearingManagementc100(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();

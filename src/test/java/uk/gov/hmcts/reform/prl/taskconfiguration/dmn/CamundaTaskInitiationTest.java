@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(12));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(45));
+        assertThat(logic.getRules().size(), is(47));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -260,11 +260,16 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
                                       + "   }"
                                       + "}"),
-                singletonList(
+                List.of(
                     Map.of(
                         "taskId", "adminServeOrderC100",
                         "name", "Service of Order",
                         "processCategories", "adminServeOrderC100"
+                    ),
+                    Map.of(
+                        "taskId", "createHearingRequestC100",
+                        "name", "Create Hearing Request",
+                        "processCategories", "HearingRequest"
                     )
                 )
             ),
@@ -277,11 +282,16 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
                                       + "   }"
                                       + "}"),
-                singletonList(
+                List.of(
                     Map.of(
                         "taskId", "adminServeOrderFL401",
                         "name", "Service of Order",
                         "processCategories", "adminServeOrderFL401"
+                    ),
+                    Map.of(
+                        "taskId", "createHearingRequestFL401",
+                        "name", "Create Hearing Request",
+                        "processCategories", "HearingRequest"
                     )
                 )
             ),

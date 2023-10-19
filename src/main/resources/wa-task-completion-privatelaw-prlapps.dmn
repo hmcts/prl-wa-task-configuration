@@ -537,6 +537,28 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0rirdh6">
+        <inputEntry id="UnaryTests_0sp8vq3">
+          <text>"hmcCaseUpdPrepForHearing"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02uppqa">
+          <text>"createHearingRequestC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0t1xa57">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0zgi9tq">
+        <inputEntry id="UnaryTests_01cjz7x">
+          <text>"hmcCaseUpdPrepForHearing"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1833zm4">
+          <text>"createHearingRequestFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17itb7d">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_05kvogz">
         <inputEntry id="UnaryTests_0cb5u2c">
           <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","editAndApproveAnOrder","returnApplication","sendOrReplyToMessages","issueAndSendToLocalCourtCallback"</text>
