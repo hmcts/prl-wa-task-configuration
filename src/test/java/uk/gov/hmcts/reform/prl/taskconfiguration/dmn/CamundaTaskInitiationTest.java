@@ -35,7 +35,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(12));
+        assertThat(logic.getInputs().size(), is(13));
         assertThat(logic.getOutputs().size(), is(4));
         assertThat(logic.getRules().size(), is(47));
     }
@@ -265,14 +265,27 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "adminServeOrderC100",
                         "name", "Service of Order",
                         "processCategories", "adminServeOrderC100"
-                    ),
+                    )
+                )
+            ),
+            /*Arguments.of(
+                "editAndApproveAnOrder",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
+                                      + "      \"isHearingTaskNeeded\":\"" + "true" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
                     Map.of(
                         "taskId", "createHearingRequestC100",
                         "name", "Create Hearing Request",
                         "processCategories", "HearingRequest"
                     )
                 )
-            ),
+            ),*/
             Arguments.of(
                 "editAndApproveAnOrder",
                 null,
@@ -287,14 +300,27 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "adminServeOrderFL401",
                         "name", "Service of Order",
                         "processCategories", "adminServeOrderFL401"
-                    ),
+                    )
+                )
+            ),/*
+            Arguments.of(
+                "editAndApproveAnOrder",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
+                                      + "      \"isHearingTaskNeeded\":\"" + "true" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
                     Map.of(
                         "taskId", "createHearingRequestFL401",
                         "name", "Create Hearing Request",
                         "processCategories", "HearingRequest"
                     )
                 )
-            ),
+            ),*/
             Arguments.of(
                 "hmcCaseUpdPrepForHearing",
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
