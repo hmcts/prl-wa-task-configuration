@@ -9,12 +9,7 @@
       </input>
       <input id="InputClause_1gmuynt" label="Task type" biodi:width="375" camunda:inputVariable="taskType">
         <inputExpression id="LiteralExpression_06iiuqg" typeRef="string">
-          <text>if(taskAttributes != null and taskAttributes.taskType != null) then
-                        taskAttributes. taskType
-                        else if(taskType != null) then
-                        taskType
-                        else
-                        null</text>
+          <text></text>
         </inputExpression>
       </input>
       <output id="Output_1" label="Name" name="name" typeRef="string" biodi:width="351" />
@@ -541,7 +536,7 @@
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1h1xvth">
-          <text>if (caseDate.isUrgentFlag != null and caseData.isUrgentFlag="Yes") then 2000 else if (caseData.allegationsOfHarmYesNo != null and caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
+          <text>if (caseData.isUrgentFlag != null and caseData.isUrgentFlag="Yes") then 2000 else if (caseData.allegationsOfHarmYesNo != null and caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0gfut7a">
           <text></text>
@@ -571,13 +566,13 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0jxn4rd">
-          <text>"checkApplicationC100"</text>
+          <text>"adminServeOrderCreatedByJudgeC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1810xzt">
           <text>"title"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03ujaid">
-          <text>if (taskAttributes != null and taskAttributes.name !=null) then (taskAttributes.name + "locationName") else taskAttributes.name</text>
+          <text>taskAttributes.name + " - " + caseData.orderNameForWA</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1bjmkpf">
           <text></text>
