@@ -2438,6 +2438,106 @@
           <text>"reviewRAFL401"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1dykfg4">
+        <inputEntry id="UnaryTests_10bq6dw">
+          <text>"c100ManageSupport"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rudede">
+          <text>"SUBMITTED_PAID", "CASE_ISSUED","JUDICIAL_REVIEW","PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08r676d">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vk8a50">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hzla3j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r5y0v5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p4q6lx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k7diy4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tccgyq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jpck35">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0by11x4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00l2njk">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0l0no3k">
+          <text>"reviewRaRequestC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0stxyz9">
+          <text>"Review RA request"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hhmx2f">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0r1dnhu">
+          <text>"reviewRAC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ausnm8">
+        <inputEntry id="UnaryTests_10ek504">
+          <text>"fl401ManageSupport"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j1d03c">
+          <text>"SUBMITTED_PAID", "CASE_ISSUED","JUDICIAL_REVIEW","PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pod1jv">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qywzkl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p1m9ik">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e20pem">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0icfjde">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hx5fzm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v780he">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16ja360">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14xt5y8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18ugxny">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0l9r0df">
+          <text>"reviewRaRequestsFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0luxyk4">
+          <text>"Review RA request"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15sfmcq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1x9oo9k">
+          <text>"reviewRAFL401"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>

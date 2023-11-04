@@ -1077,7 +1077,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0f5lzsz">
-          <text>"[Review RA request](/cases/case-details/${[CASE_REFERENCE]}/trigger/c100ManageFlags/c100ManageFlags)"</text>
+          <text>"[Review RA request](/cases/case-details/${[CASE_REFERENCE]}/trigger/c100ManageFlagsWA/c100ManageFlagsWA)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0fb957q">
           <text></text>
@@ -1094,7 +1094,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0obqxbo">
-          <text>"[Review RA request](/cases/case-details/${[CASE_REFERENCE]}/trigger/fl401ManageFlags/fl401ManageFlags)"</text>
+          <text>"[Review RA request](/cases/case-details/${[CASE_REFERENCE]}/trigger/fl401ManageFlagsWA/fl401ManageFlagsWA)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0notc5c">
           <text></text>
