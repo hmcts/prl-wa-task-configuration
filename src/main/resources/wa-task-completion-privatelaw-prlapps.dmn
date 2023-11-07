@@ -537,20 +537,9 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_05kvogz">
-        <inputEntry id="UnaryTests_0cb5u2c">
-          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","editAndApproveAnOrder","returnApplication","sendOrReplyToMessages","issueAndSendToLocalCourtCallback"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1o5rfjh">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_09pxu1a">
-          <text></text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0atr8e3">
         <inputEntry id="UnaryTests_0tzwc02">
-          <text>"c100ManageFlagsWA"</text>
+          <text>"c100ManageFlags"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vkor0k">
           <text>"reviewRaRequestC100"</text>
@@ -561,13 +550,24 @@
       </rule>
       <rule id="DecisionRule_0djzqgn">
         <inputEntry id="UnaryTests_16os9kl">
-          <text>"fl401ManageFlagsWA"</text>
+          <text>"fl401ManageFlags"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0k450gu">
           <text>"reviewRaRequestsFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_096zfw3">
           <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05kvogz">
+        <inputEntry id="UnaryTests_0cb5u2c">
+          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","editAndApproveAnOrder","returnApplication","sendOrReplyToMessages","issueAndSendToLocalCourtCallback","c100ManageFlags","fl401ManageFlags"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1o5rfjh">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09pxu1a">
+          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
