@@ -242,20 +242,22 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "adminRemoveLegalRepresentativeC100",
-                singletonList(
+                asList(
                     Map.of(
                         "taskType", "removeLegalRepresentativeC100",
                         "completionMode", "Auto"
-                    )
+                    ),
+                    Map.of()
                 )
             ),
             Arguments.of(
                 "adminRemoveLegalRepresentativeFL401",
-                singletonList(
+                asList(
                     Map.of(
                         "taskType", "removeLegalRepresentativeFL401",
                         "completionMode", "Auto"
-                    )
+                    ),
+                    Map.of()
                 )
             ),
             Arguments.of(
