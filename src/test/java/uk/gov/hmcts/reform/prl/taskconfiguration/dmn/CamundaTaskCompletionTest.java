@@ -241,7 +241,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "adminRemoveLegalRepresentativeC100WA",
+                "adminRemoveLegalRepresentativeC100",
                 singletonList(
                     Map.of(
                         "taskType", "removeLegalRepresentativeC100",
@@ -250,7 +250,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "adminRemoveLegalRepresentativeFL401WA",
+                "adminRemoveLegalRepresentativeFL401",
                 singletonList(
                     Map.of(
                         "taskType", "removeLegalRepresentativeFL401",
