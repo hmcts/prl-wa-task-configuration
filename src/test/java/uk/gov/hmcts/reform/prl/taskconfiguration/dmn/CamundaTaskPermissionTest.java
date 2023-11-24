@@ -556,9 +556,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "reviewRaRequestC100"
+        "reviewRaRequestsC100"
     })
-    void evaluate_task_admin_reviewRaRequestC100(String taskType) {
+    void evaluate_task_admin_reviewRaRequestsC100(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
 
