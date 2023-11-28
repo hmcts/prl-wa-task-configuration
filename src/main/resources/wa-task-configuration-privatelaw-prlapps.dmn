@@ -518,7 +518,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_02twz7w">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401","adminServeOrderCreatedByJudgeFL401","removeLegalRepresentativeFL401", "replyToMessageForCourtAdminFL401", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLAFL401","reviewRaRequestsFL401"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401","adminServeOrderCreatedByJudgeFL401","removeLegalRepresentativeFL401", "replyToMessageForCourtAdminFL401", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLAFL401"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0o0dcmv">
           <text>"majorPriority"</text>
@@ -535,7 +535,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0f0gzeq">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","adminServeOrderCreatedByJudgeC100","removeLegalRepresentativeC100", "replyToMessageForCourtAdminC100","reviewDocumentsForSolAndCafcassC100","replyToMessageForLA","reviewRaRequestsC100"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","adminServeOrderCreatedByJudgeC100","removeLegalRepresentativeC100", "replyToMessageForCourtAdminC100","reviewDocumentsForSolAndCafcassC100","replyToMessageForLA"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jiva8u">
           <text>"majorPriority"</text>
@@ -563,6 +563,23 @@ else if (caseData.caseTypeOfApplication = "C100" and caseData.allegationsOfHarmY
 caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ve8n1e">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ciq3lu">
+        <inputEntry id="UnaryTests_1jzjl1e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0irt7go">
+          <text>"reviewRaRequestsC100","reviewRaRequestsFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0o8u35i">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vyj8hi">
+          <text>3000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sgcv95">
           <text></text>
         </outputEntry>
       </rule>
