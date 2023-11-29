@@ -2476,16 +2476,16 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0l0no3k">
-          <text>"reviewRaRequestsC100"</text>
+          <text>"reviewInactiveRaRequestsC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0stxyz9">
-          <text>"Review RA request"</text>
+          <text>"Review inactive RA request"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1hhmx2f">
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0r1dnhu">
-          <text>"reviewRAC100"</text>
+          <text>"reviewInactiveRAC100"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ausnm8">
@@ -2526,16 +2526,16 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0l9r0df">
-          <text>"reviewRaRequestsFL401"</text>
+          <text>"reviewInactiveRaRequestsFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0luxyk4">
-          <text>"Review RA request"</text>
+          <text>"Review inactive RA request"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_15sfmcq">
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1x9oo9k">
-          <text>"reviewRAFL401"</text>
+          <text>"reviewInactiveRAFL401"</text>
         </outputEntry>
       </rule>
     </decisionTable>

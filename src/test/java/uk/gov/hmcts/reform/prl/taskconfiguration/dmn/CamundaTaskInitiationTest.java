@@ -439,9 +439,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "reviewRaRequestsC100",
-                        "name", "Review RA request",
-                        "processCategories", "reviewRAC100"
+                        "taskId", "reviewInactiveRaRequestsC100",
+                        "name", "Review inactive RA request",
+                        "processCategories", "reviewInactiveRAC100"
                     )
                 )
             ),
@@ -455,9 +455,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "reviewRaRequestsFL401",
-                        "name", "Review RA request",
-                        "processCategories", "reviewRAFL401"
+                        "taskId", "reviewInactiveRaRequestsFL401",
+                        "name", "Review inactive RA request",
+                        "processCategories", "reviewInactiveRAFL401"
                     )
                 )
             )
