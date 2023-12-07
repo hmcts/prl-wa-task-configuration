@@ -566,7 +566,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0jxn4rd">
-          <text>"adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","reviewSolicitorOrderProvided","reviewAdminOrderProvided","adminServeOrderC100","adminServeOrderFL401"</text>
+          <text>"adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","adminServeOrderC100","adminServeOrderFL401"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1810xzt">
           <text>"title"</text>
@@ -575,6 +575,40 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>taskAttributes.name + "  " + caseData.orderNameForWA</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1bjmkpf">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0t67k3y">
+        <inputEntry id="UnaryTests_1ykrmcp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e5tpiv">
+          <text>"reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wal1va">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nmff8z">
+          <text>taskAttributes.name + "  " + caseData.orderNameForWA</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xkvvns">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01pqt6a">
+        <inputEntry id="UnaryTests_1n8t807">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0snqn0t">
+          <text>"reviewAdminOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1casjyd">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nr7gfe">
+          <text>taskAttributes.name + "  " + caseData.orderNameForWA</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0iicns5">
           <text></text>
         </outputEntry>
       </rule>
