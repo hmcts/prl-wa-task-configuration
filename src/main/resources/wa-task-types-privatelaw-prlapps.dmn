@@ -447,7 +447,7 @@
           <text>-</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_14y9nhg">
-          <text>"reviewRaRequestC100"</text>
+          <text>"reviewRaRequestsC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0cl6qkf">
           <text>"Review RA requests"</text>
@@ -463,6 +463,30 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_19i1eqm">
           <text>"Review RA requests"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0oy0rje">
+        <description>RRRIC100</description>
+        <inputEntry id="UnaryTests_17gnhji">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_095os2f">
+          <text>"reviewInactiveRaRequestsC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kjqei6">
+          <text>"Review inactive RA requests"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bf4udd">
+        <description>RRRIFL401</description>
+        <inputEntry id="UnaryTests_0elkawd">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0j6ycon">
+          <text>"reviewInactiveRaRequestsFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18qms98">
+          <text>"Review inactive RA requests"</text>
         </outputEntry>
       </rule>
     </decisionTable>
