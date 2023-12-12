@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":dependencyDashboard",
+    "regexManagers:dockerfileVersions"
+  ],
+  "description": "Onboarding preset for use with HMCTS's repositories",
+  "timezone": "Europe/London",
+  "schedule": "after 7am and before 11am every weekday",
+  "labels": [
+    "dependencies"
+  ],
+  "helmv3": {
+    "fileMatch": [
+      "\\Chart.yaml$"
+    ],
+    "bumpVersion": "patch",
+    "registryAliases": {
+      "hmctspublic": "https://hmctspublic.azurecr.io/helm/v1/repo/"
+    }
+  }
+}
