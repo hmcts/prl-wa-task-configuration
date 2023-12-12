@@ -71,6 +71,19 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "roleCategory", "CTSC",
         "value", "Read,Own,Claim,Unclaim,CompleteOwn,CancelOwn"
     );
+    private static final Map<String, Serializable> hearingJudge = Map.of(
+        "autoAssignable", true,
+        "name", "hearing-judge",
+        "roleCategory", "JUDICIAL",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+    );
+    private static final Map<String, Serializable> tribunalCaseworker = Map.of(
+        "autoAssignable", false,
+        "name", "tribunal-caseworker",
+        "roleCategory", "LEGAL_OPERATIONS",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+        "authorisations","SKILL:ABA5:GATEKEEPING"
+    );
 
 
     @BeforeAll
@@ -112,7 +125,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     taskSupervisor,
                     judgeOne,
-                    circuitJudge
+                    circuitJudge,
+                    hearingJudge,
+                    tribunalCaseworker
 
                 )
             )
@@ -229,6 +244,12 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "authorisations", "315",
                 "autoAssignable", false
             ),Map.of(
+                "name", "hearing-judge",
+                "value","Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "roleCategory", "JUDICIAL",
+                "autoAssignable", true
+            )
+            ,Map.of(
                 "name", "tribunal-caseworker",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
                 "roleCategory", "LEGAL_OPERATIONS",
@@ -584,6 +605,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(18));
+        assertThat(logic.getRules().size(), is(20));
     }
 }

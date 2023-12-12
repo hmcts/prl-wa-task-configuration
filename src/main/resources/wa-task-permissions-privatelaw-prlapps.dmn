@@ -114,6 +114,37 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_14yzfg2">
+        <description>Judicial task permissions</description>
+        <inputEntry id="UnaryTests_14aju9j">
+          <text>"gateKeeping",
+"gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided", "replyToMessageForJudiciary"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11uxc42">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1fnlkbc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bb1b46">
+          <text>"hearing-judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i3bpr2">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g0w413">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1c7j9z3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fcgcjv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ypgqub">
+          <text>true</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1tvtlre">
         <description>Judicial task permissions</description>
         <inputEntry id="UnaryTests_13ukkz6">
@@ -172,6 +203,36 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kjalwr">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_184tk0y">
+        <description>Tribunal caseworker task permissions</description>
+        <inputEntry id="UnaryTests_0vk2yuq">
+          <text>"reviewSolicitorOrderProvided","reviewAdminOrderProvided"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u14lp0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03t8db4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ibe40g">
+          <text>"tribunal-caseworker"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dspoo2">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03yetpt">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xlkovj">
+          <text>"SKILL:ABA5:GATEKEEPING"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0t4cnrl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_165ws04">
           <text>false</text>
         </outputEntry>
       </rule>
