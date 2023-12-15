@@ -9,7 +9,8 @@
       </input>
       <input id="InputClause_1gmuynt" label="Task type" biodi:width="375" camunda:inputVariable="taskType">
         <inputExpression id="LiteralExpression_06iiuqg" typeRef="string">
-          <text></text>
+          <text>if(taskAttributes != null and taskAttributes.taskType != null) then
+taskAttributes. taskType else if(taskType != null) then taskType else null</text>
         </inputExpression>
       </input>
       <output id="Output_1" label="Name" name="name" typeRef="string" biodi:width="351" />
