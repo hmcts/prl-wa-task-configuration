@@ -539,7 +539,7 @@
       </rule>
       <rule id="DecisionRule_05kvogz">
         <inputEntry id="UnaryTests_0cb5u2c">
-          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","editAndApproveAnOrder","returnApplication","sendOrReplyToMessages","issueAndSendToLocalCourtCallback","adminRemoveLegalRepresentativeC100","adminRemoveLegalRepresentativeFL401"</text>
+          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","editAndApproveAnOrder","returnApplication","sendOrReplyToMessages","adminRemoveLegalRepresentativeC100","adminRemoveLegalRepresentativeFL401"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1o5rfjh">
           <text></text>

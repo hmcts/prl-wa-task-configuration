@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN">
     <decisionTable id="DecisionTable_14cx079" hitPolicy="COLLECT">
       <input id="InputClause_1gxyo7f" label="CCD Case Data" camunda:inputVariable="caseData">
@@ -10,11 +10,7 @@
       <input id="InputClause_1gmuynt" label="Task type" biodi:width="375" camunda:inputVariable="taskType">
         <inputExpression id="LiteralExpression_06iiuqg" typeRef="string">
           <text>if(taskAttributes != null and taskAttributes.taskType != null) then
-                        taskAttributes. taskType
-                        else if(taskType != null) then
-                        taskType
-                        else
-                        null</text>
+taskAttributes. taskType else if(taskType != null) then taskType else null</text>
         </inputExpression>
       </input>
       <output id="Output_1" label="Name" name="name" typeRef="string" biodi:width="351" />
@@ -541,7 +537,7 @@
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1h1xvth">
-          <text>if (caseDate.isUrgentFlag != null and caseData.isUrgentFlag="Yes") then 2000 else if (caseData.allegationsOfHarmYesNo != null and caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
+          <text>if (caseData.isUrgentFlag != null and caseData.isUrgentFlag="Yes") then 2000 else if (caseData.allegationsOfHarmYesNo != null and caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0gfut7a">
           <text></text>
@@ -563,6 +559,74 @@ else if (caseData.caseTypeOfApplication = "C100" and caseData.allegationsOfHarmY
 caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ve8n1e">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mgvh88">
+        <inputEntry id="UnaryTests_1djpz2a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jxn4rd">
+          <text>"adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1810xzt">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03ujaid">
+          <text>taskAttributes.name + " - " + caseData.orderNameForJudgeCreatedOrder</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bjmkpf">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p49p1x">
+        <inputEntry id="UnaryTests_11cjlzm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cknzbw">
+          <text>"adminServeOrderC100","adminServeOrderFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vst95g">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vimqnf">
+          <text>taskAttributes.name + " - " + caseData.orderNameForJudgeApproved</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ba9wt9">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0t67k3y">
+        <inputEntry id="UnaryTests_1ykrmcp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e5tpiv">
+          <text>"reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wal1va">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nmff8z">
+          <text>taskAttributes.name + " - " + caseData.orderNameForSolicitorCreatedOrder</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xkvvns">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01pqt6a">
+        <inputEntry id="UnaryTests_1n8t807">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0snqn0t">
+          <text>"reviewAdminOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1casjyd">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nr7gfe">
+          <text>taskAttributes.name + " - " + caseData.orderNameForAdminCreatedOrder</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0iicns5">
           <text></text>
         </outputEntry>
       </rule>
@@ -1026,7 +1090,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ep77sp">
-          <text>"[Check for Confidential Documents](/cases/case-details/${[CASE_REFERENCE]}#Case File View"</text>
+          <text>"[Check for Confidential Documents](/cases/case-details/${[CASE_REFERENCE]}#Case%20File%20View"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02lku50">
           <text></text>
