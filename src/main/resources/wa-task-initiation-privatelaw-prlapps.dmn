@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.15.1">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -375,6 +375,56 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_138zrjw">
+          <text>"applicationCheck"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dolujc">
+        <inputEntry id="UnaryTests_15of9sj">
+          <text>"citizen-case-submit"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_148slq0">
+          <text>"SUBMITTED_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h0x34x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_113basm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uqsre2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1oqb2gx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fvsfqe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0seot7t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hzdp3u">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05cowje">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n58c61">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1na7wp8">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00tib88">
+          <text>"checkApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i7fw8x">
+          <text>"Check Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qoayn6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d6n3uo">
           <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
@@ -919,7 +969,7 @@
           <text>"reviewSolicitorOrderProvided"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_05wsi4k">
-          <text>"Review and Approve Solicitor Order"</text>
+          <text>"Review and Approve Legal rep Order"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19zz5f9">
           <text></text>
