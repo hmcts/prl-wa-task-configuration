@@ -217,8 +217,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "gateKeeping",
-                        "name", "Gatekeeping",
+                        "taskId", "directionOnIssue",
+                        "name", "Directions on Issue",
                         "processCategories", "gateKeeping"
                     )
                 )

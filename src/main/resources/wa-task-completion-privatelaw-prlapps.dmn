@@ -251,6 +251,28 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0q5nwqd">
+        <inputEntry id="UnaryTests_0mjsdfn">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a2jq5b">
+          <text>"directionOnIssue"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04lzxsi">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15tex9n">
+        <inputEntry id="UnaryTests_0nj45ah">
+          <text>"returnApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0euiann">
+          <text>"directionOnIssue"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hnhngn">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_19m181l">
         <inputEntry id="UnaryTests_1fa5tqp">
           <text>"manageOrders"</text>
