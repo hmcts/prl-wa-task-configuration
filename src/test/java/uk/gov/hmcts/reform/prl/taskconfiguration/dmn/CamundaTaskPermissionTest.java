@@ -203,6 +203,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @ParameterizedTest
     @CsvSource(value = {
         "directionOnIssue",
+        "directionOnIssueResubmitted",
         "gateKeeping",
         "gateKeepingResubmitted"
     })
