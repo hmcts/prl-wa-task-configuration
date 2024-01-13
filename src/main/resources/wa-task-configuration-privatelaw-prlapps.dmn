@@ -310,7 +310,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0tvsteh">
-          <text>"directionOnIssue","gateKeeping","gateKeepingResubmitted","serviceOfApplicationC100","serviceOfApplicationFL401","adminServeOrderC100","adminServeOrderFL401","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","reviewAdminOrderProvided"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","serviceOfApplicationC100","serviceOfApplicationFL401","adminServeOrderC100","adminServeOrderFL401","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","reviewAdminOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ixfp2h">
           <text>"dueDateIntervalDays"</text>
@@ -378,7 +378,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1tb79v4">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided", "replyToMessageForJudiciary"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided", "replyToMessageForJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0tucp7d">
           <text>"calculatedDates"</text>
@@ -395,7 +395,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0iktol6">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ijqt0h">
           <text>"nextHearingDatePreDateOriginRef"</text>
@@ -412,7 +412,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0g9qqrs">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0uhqm5x">
           <text>"nextHearingDatePreDateIntervalDays"</text>
@@ -429,7 +429,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0vgvmxc">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_06l1dup">
           <text>"nextHearingDatePreDateNonWorkingCalendar"</text>
@@ -446,7 +446,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0yds9g8">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18wcq2b">
           <text>"nextHearingDatePreDateNonWorkingDaysOfWeek"</text>
@@ -463,7 +463,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1i9hse8">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0gykh0v">
           <text>"nextHearingDatePreDateSkipNonWorkingDays"</text>
@@ -480,7 +480,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_19i7035">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0z0xy3x">
           <text>"nextHearingDatePreDateMustBeWorkingDay"</text>
@@ -497,7 +497,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_06p8hre">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_07bc3mo">
           <text>"priorityDateOriginEarliest"</text>
@@ -548,7 +548,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_05latny">
-          <text>"directionOnIssue","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA", "replyToMessageForJudiciary"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA", "replyToMessageForJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_121l57m">
           <text>"majorPriority"</text>
@@ -652,7 +652,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gm06lg">
-          <text>"directionOnIssue","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0omxasv">
           <text>"workType"</text>
@@ -737,7 +737,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_10f3uas">
-          <text>"directionOnIssue","gateKeeping", "gateKeepingResubmitted", "reviewSpecificAccessRequestLegalOps","replyToMessageForLAC100","replyToMessageForLA"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping", "gateKeepingResubmitted", "reviewSpecificAccessRequestLegalOps","replyToMessageForLAC100","replyToMessageForLA"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_05l5bvs">
           <text>"roleCategory"</text>
@@ -999,7 +999,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1wgrovz">
-          <text>"directionOnIssue"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1i5mia9">
           <text>"description"</text>
@@ -1022,7 +1022,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1o6t7rz">
-          <text>"[Gatekeeping]"</text>
+          <text>"[Directions on Issues Resubmitted]"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xk4f3f">
           <text></text>

@@ -141,6 +141,18 @@
           <text>"Directions on Issue"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1002mwy">
+        <description>DOI</description>
+        <inputEntry id="UnaryTests_1f9fslf">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17lu7wa">
+          <text>"directionOnIssueResubmitted"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wmhtm3">
+          <text>"Directions on Issue Resubmitted"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_09isqs0">
         <description>GK</description>
         <inputEntry id="UnaryTests_030i0zo">
