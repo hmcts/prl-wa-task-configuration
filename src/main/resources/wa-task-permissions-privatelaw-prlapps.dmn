@@ -117,7 +117,7 @@
       <rule id="DecisionRule_14yzfg2">
         <description>Judicial task permissions</description>
         <inputEntry id="UnaryTests_14aju9j">
-          <text>"gateKeeping",
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping",
 "gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided", "replyToMessageForJudiciary"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_11uxc42">
