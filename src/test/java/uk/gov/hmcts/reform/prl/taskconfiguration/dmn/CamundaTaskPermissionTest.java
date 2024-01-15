@@ -217,6 +217,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
+        "directionOnIssue",
+        "directionOnIssueResubmitted",
         "gateKeeping",
         "gateKeepingResubmitted"
     })

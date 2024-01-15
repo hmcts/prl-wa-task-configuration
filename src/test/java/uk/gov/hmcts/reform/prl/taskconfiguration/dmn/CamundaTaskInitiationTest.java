@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(12));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(45));
+        assertThat(logic.getRules().size(), is(46));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -71,6 +71,22 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "checkApplicationResubmittedC100",
                         "name", "Check Resubmitted Application",
+                        "processCategories", "applicationCheck"
+                    )
+                )
+            ),
+            Arguments.of(
+                "citizen-case-submit",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "checkApplicationC100",
+                        "name", "Check Application",
                         "processCategories", "applicationCheck"
                     )
                 )
@@ -201,9 +217,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "gateKeeping",
-                        "name", "Gatekeeping",
-                        "processCategories", "gateKeeping"
+                        "taskId", "directionOnIssue",
+                        "name", "Directions on Issue",
+                        "processCategories", "directionOnIssue"
                     )
                 )
             ),
@@ -217,9 +233,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "gateKeepingResubmitted",
-                        "name", "Gatekeeping Resubmitted",
-                        "processCategories", "gateKeepingResubmitted"
+                        "taskId", "directionOnIssueResubmitted",
+                        "name", "Directions on Issue Resubmitted",
+                        "processCategories", "directionOnIssue"
                     )
                 )
             ),
@@ -246,7 +262,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 singletonList(
                     Map.of(
                         "taskId", "reviewSolicitorOrderProvided",
-                        "name", "Review and Approve Solicitor Order",
+                        "name", "Review and Approve Legal rep Order",
                         "processCategories", "reviewSolicitorOrderByJudge"
                     )
                 )
