@@ -737,7 +737,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_10f3uas">
-          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping", "gateKeepingResubmitted", "reviewSpecificAccessRequestLegalOps","replyToMessageForLAC100","replyToMessageForLA"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping", "gateKeepingResubmitted", "reviewSolicitorOrderProvided","reviewAdminOrderProvided","reviewSpecificAccessRequestLegalOps","replyToMessageForLAC100","replyToMessageForLA"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_05l5bvs">
           <text>"roleCategory"</text>
@@ -795,7 +795,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_15ftuu0">
-          <text>"reviewSpecificAccessRequestJudiciary","reviewSolicitorOrderProvided","reviewAdminOrderProvided","replyToMessageForJudiciary"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping", "gateKeepingResubmitted", "reviewSpecificAccessRequestJudiciary","reviewSolicitorOrderProvided","reviewAdminOrderProvided","replyToMessageForJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_15nowth">
           <text>"roleCategory"</text>
