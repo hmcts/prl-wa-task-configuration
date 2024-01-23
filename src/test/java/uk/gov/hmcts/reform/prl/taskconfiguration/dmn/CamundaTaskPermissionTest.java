@@ -42,7 +42,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
             "name", "allocated-judge",
             "roleCategory", "JUDICIAL",
             "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
-            "assignmentPriority", 2
+            "assignmentPriority", 1
     );
     private static final Map<String, Serializable> judgeOne = Map.of(
             "autoAssignable", false,
@@ -139,7 +139,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     taskSupervisor,
                     hearingJudge,
-                    allocatedJudge,
                     judgeOne,
                     allocatedLegalAdviser,
                     tribunalCaseworker
@@ -150,7 +149,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     taskSupervisor,
                     hearingJudge,
-                    allocatedJudge,
                     judgeOne,
                     allocatedLegalAdviser,
                     tribunalCaseworker
@@ -599,6 +597,23 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
             )
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+        "replyToMessageForJudiciary"
+    })
+    void evaluate_task_admin_replyToMessageForJudiciary(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            allocatedJudge,
+            judgeOne
         )));
     }
 
