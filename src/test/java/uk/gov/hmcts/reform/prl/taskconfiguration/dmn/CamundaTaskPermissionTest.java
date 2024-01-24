@@ -30,13 +30,19 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "name", "task-supervisor",
         "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
     );
-
-    private static final Map<String, Serializable> circuitJudge = Map.of(
-            "autoAssignable", false,
-            "name", "circuit-judge",
+    private static final Map<String, Serializable> gatekeepingJudge = Map.of(
+        "autoAssignable", true,
+        "name", "gatekeeping-judge",
+        "roleCategory", "JUDICIAL",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+        "assignmentPriority", 1
+    );
+    private static final Map<String, Serializable> allocatedJudge = Map.of(
+            "autoAssignable", true,
+            "name", "allocated-judge",
             "roleCategory", "JUDICIAL",
             "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
-            "authorisations", "315"
+            "assignmentPriority", 1
     );
     private static final Map<String, Serializable> judgeOne = Map.of(
             "autoAssignable", false,
@@ -70,6 +76,27 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "name", "specific-access-approver-ctsc",
         "roleCategory", "CTSC",
         "value", "Read,Own,Claim,Unclaim,CompleteOwn,CancelOwn"
+    );
+    private static final Map<String, Serializable> hearingJudge = Map.of(
+        "autoAssignable", true,
+        "name", "hearing-judge",
+        "roleCategory", "JUDICIAL",
+        "assignmentPriority", 1,
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+    );
+    private static final Map<String, Serializable> tribunalCaseworker = Map.of(
+        "autoAssignable", false,
+        "name", "tribunal-caseworker",
+        "roleCategory", "LEGAL_OPERATIONS",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+        "authorisations","SKILL:ABA5:GATEKEEPING"
+    );
+    private static final Map<String, Serializable> allocatedLegalAdviser = Map.of(
+        "autoAssignable", true,
+        "name", "allocated-legal-adviser",
+        "roleCategory", "LEGAL_OPERATIONS",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+        "assignmentPriority", 1
     );
 
 
@@ -111,9 +138,20 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "reviewSolicitorOrderProvided",
                 List.of(
                     taskSupervisor,
+                    hearingJudge,
                     judgeOne,
-                    circuitJudge
-
+                    allocatedLegalAdviser,
+                    tribunalCaseworker
+                )
+            ),
+            Arguments.of(
+                "reviewAdminOrderProvided",
+                List.of(
+                    taskSupervisor,
+                    hearingJudge,
+                    judgeOne,
+                    allocatedLegalAdviser,
+                    tribunalCaseworker
                 )
             )
         );
@@ -202,6 +240,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
+        "directionOnIssue",
+        "directionOnIssueResubmitted",
         "gateKeeping",
         "gateKeepingResubmitted"
     })
@@ -212,29 +252,11 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
-            Map.of(
-                "name", "task-supervisor",
-                "value", "Read,Manage,Complete,Cancel,Assign,Unassign",
-                "autoAssignable", false
-            ),Map.of(
-                "name", "judge",
-                "value","Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
-                "roleCategory", "JUDICIAL",
-                "authorisations", "315",
-                "autoAssignable", false
-            ),Map.of(
-                "name", "circuit-judge",
-                "value","Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
-                "roleCategory", "JUDICIAL",
-                "authorisations", "315",
-                "autoAssignable", false
-            ),Map.of(
-                "name", "tribunal-caseworker",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
-                "roleCategory", "LEGAL_OPERATIONS",
-                "autoAssignable", false,
-                "authorisations", "SKILL:ABA5:GATEKEEPING"
-            )
+            taskSupervisor,
+            gatekeepingJudge,
+            judgeOne,
+            allocatedLegalAdviser,
+            tribunalCaseworker
         )));
     }
 
@@ -683,12 +705,29 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         )));
     }
 
+    @ParameterizedTest
+    @CsvSource(value = {
+        "replyToMessageForJudiciary"
+    })
+    void evaluate_task_admin_replyToMessageForJudiciary(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            allocatedJudge,
+            judgeOne
+        )));
+    }
+
     @Test
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(18));
+        assertThat(logic.getRules().size(), is(23));
     }
 }

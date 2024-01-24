@@ -378,6 +378,56 @@
           <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0dolujc">
+        <inputEntry id="UnaryTests_15of9sj">
+          <text>"citizen-case-submit"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_148slq0">
+          <text>"SUBMITTED_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h0x34x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_113basm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uqsre2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1oqb2gx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fvsfqe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0seot7t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hzdp3u">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05cowje">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n58c61">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1na7wp8">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00tib88">
+          <text>"checkApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i7fw8x">
+          <text>"Check Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qoayn6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d6n3uo">
+          <text>"applicationCheck"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1205pgi">
         <inputEntry id="UnaryTests_1b29g9t">
           <text>"issueAndSendToLocalCourtCallback"</text>
@@ -616,16 +666,16 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_12qxqyj">
-          <text>"gateKeeping"</text>
+          <text>"directionOnIssue"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nfd078">
-          <text>"Gatekeeping"</text>
+          <text>"Directions on Issue"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_05x37ap">
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0c8l5at">
-          <text>"gateKeeping"</text>
+          <text>"directionOnIssue"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1efhgf7">
@@ -666,16 +716,16 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1eycm99">
-          <text>"gateKeepingResubmitted"</text>
+          <text>"directionOnIssueResubmitted"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1arrliz">
-          <text>"Gatekeeping Resubmitted"</text>
+          <text>"Directions on Issue Resubmitted"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1rfbno8">
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08yrseb">
-          <text>"gateKeepingResubmitted"</text>
+          <text>"directionOnIssue"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0awsb0p">
@@ -919,7 +969,7 @@
           <text>"reviewSolicitorOrderProvided"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_05wsi4k">
-          <text>"Review and Approve Solicitor Order"</text>
+          <text>"Review and Approve Legal rep Order"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19zz5f9">
           <text></text>

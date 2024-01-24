@@ -251,6 +251,50 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0q5nwqd">
+        <inputEntry id="UnaryTests_0mjsdfn">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a2jq5b">
+          <text>"directionOnIssue"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04lzxsi">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15tex9n">
+        <inputEntry id="UnaryTests_0nj45ah">
+          <text>"returnApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0euiann">
+          <text>"directionOnIssue"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hnhngn">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rv95b2">
+        <inputEntry id="UnaryTests_1ih7ttg">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dd06pb">
+          <text>"directionOnIssueResubmitted"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0efragp">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1p3stm6">
+        <inputEntry id="UnaryTests_1oy0t8b">
+          <text>"returnApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13oz1bj">
+          <text>"directionOnIssueResubmitted"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0stum1v">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_19m181l">
         <inputEntry id="UnaryTests_1fa5tqp">
           <text>"manageOrders"</text>
