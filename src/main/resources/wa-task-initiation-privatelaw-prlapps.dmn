@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -2386,6 +2386,56 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0dixi4x">
           <text>"reviewDocsFL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1u9bi23">
+        <inputEntry id="UnaryTests_1esafqz">
+          <text>"c100listWithoutNotice"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nf59wp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ktvosy">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jyoirf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vwikzj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sr854b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vg68xz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1f1ggvg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1secech">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0div0ei">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lird95">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qe0ebn">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0co4jkz">
+          <text>"listWithoutNoticeHearingC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wnyzit">
+          <text>"List without notice hearing (see case notes)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0laoe47">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bzxxr8">
+          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
