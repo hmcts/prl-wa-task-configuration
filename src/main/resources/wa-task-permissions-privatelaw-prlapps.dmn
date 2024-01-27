@@ -450,7 +450,7 @@
       <rule id="DecisionRule_1v7zc7t">
         <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_10rpp7x">
-          <text>"adminServeOrderFL401","adminServeOrderCreatedByJudgeFL401"</text>
+          <text>"serviceOfApplicationFL401","adminServeOrderFL401","adminServeOrderCreatedByJudgeFL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ytal4l">
           <text></text>
@@ -662,7 +662,7 @@
       <rule id="DecisionRule_1625m7m">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_17yokon">
-          <text> "adminServeOrderC100", "adminServeOrderCreatedByJudgeC100"</text>
+          <text> "serviceOfApplicationC100","adminServeOrderC100", "adminServeOrderCreatedByJudgeC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1sww3e8">
           <text></text>

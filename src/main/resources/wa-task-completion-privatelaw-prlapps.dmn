@@ -515,6 +515,28 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1xs1q1g">
+        <inputEntry id="UnaryTests_15r8sy9">
+          <text>"serviceOfApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09v3aya">
+          <text>"serviceOfApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uzeslp">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0o7orwp">
+        <inputEntry id="UnaryTests_0l9u480">
+          <text>"serviceOfApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04i9vfl">
+          <text>"serviceOfApplicationFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17t7kuu">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_090duqu">
         <inputEntry id="UnaryTests_14e04mp">
           <text>"sendOrReplyToMessages"</text>

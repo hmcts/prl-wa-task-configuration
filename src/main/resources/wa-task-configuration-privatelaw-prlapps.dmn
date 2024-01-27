@@ -310,7 +310,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0tvsteh">
-          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","serviceOfApplicationC100","serviceOfApplicationFL401","adminServeOrderC100","adminServeOrderFL401","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","reviewAdminOrderProvided","reviewAdminOrderByManager"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","serviceOfApplicationC100","serviceOfApplicationFL401","serviceOfApplicationC100","adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","reviewAdminOrderProvided","reviewAdminOrderByManager"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ixfp2h">
           <text>"dueDateIntervalDays"</text>
@@ -361,7 +361,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08jiuyj">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","reviewAdminOrderProvided","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA", "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLA","reviewAdminOrderByManager","createHearingRequestReserveListAssistC100"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","reviewAdminOrderProvided","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA", "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLA","reviewAdminOrderByManager","createHearingRequestReserveListAssistC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lyogga">
           <text>"priorityDateOriginRef"</text>
@@ -531,7 +531,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0f0gzeq">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","adminServeOrderCreatedByJudgeC100","removeLegalRepresentativeC100", "replyToMessageForCourtAdminC100","reviewDocumentsForSolAndCafcassC100","replyToMessageForLA","createHearingRequestReserveListAssistC100"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","adminServeOrderCreatedByJudgeC100","removeLegalRepresentativeC100", "replyToMessageForCourtAdminC100","reviewDocumentsForSolAndCafcassC100","replyToMessageForLA","createHearingRequestReserveListAssistC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jiva8u">
           <text>"majorPriority"</text>
@@ -635,7 +635,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1y3kj1v">
-          <text>"addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","adminServeOrderC100","adminServeOrderFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","reviewCorrespondenceC100","reviewCorrespondenceFL401","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","replyToMessageForJudiciary"</text>
+          <text>"addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationC100","adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","reviewCorrespondenceC100","reviewCorrespondenceFL401","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","replyToMessageForJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0rvgay2">
           <text>"workType"</text>
@@ -756,7 +756,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         <inputEntry id="UnaryTests_1glizm3">
           <text>"checkApplicationFL401", "checkApplicationResubmittedFL401",
 "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401",
-"produceHearingBundleFL401", "adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewCorrespondenceFL401", "reviewSpecificAccessRequestAdmin", "adminServeOrderCreatedByJudgeFL401","removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401","reviewAdminOrderByManager","createHearingRequestReserveListAssistC100"</text>
+"produceHearingBundleFL401", "serviceOfApplicationFL401","adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewCorrespondenceFL401", "reviewSpecificAccessRequestAdmin", "adminServeOrderCreatedByJudgeFL401","removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401","reviewAdminOrderByManager","createHearingRequestReserveListAssistC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1131kat">
           <text>"roleCategory"</text>
@@ -776,7 +776,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"checkApplicationC100", "checkApplicationResubmittedC100",
 "addCaseNumber", "addCaseNumberResubmitted",
 "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100",
- "produceHearingBundleC100", "adminServeOrderC100",
+ "produceHearingBundleC100", "serviceOfApplicationC100","adminServeOrderC100",
 "updateHearingActualsC100", "requestSolicitorOrderC100",
 "reviewCorrespondenceC100", "reviewSpecificAccessRequestCTSC", "adminServeOrderCreatedByJudgeC100","removeLegalRepresentativeC100","confidentialCheckSOA","reviewDocumentsForSolAndCafcassC100","replyToMessageForCourtAdminC100"</text>
         </inputEntry>
@@ -940,6 +940,23 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"[Service of Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/adminEditAndApproveAnOrder/adminEditAndApproveAnOrder1)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_121bl15">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0jg72qo">
+        <inputEntry id="UnaryTests_1rnpqqn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jcc67q">
+          <text>"serviceOfApplicationC100","serviceOfApplicationFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1o65gft">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1r8b6hh">
+          <text>"[Service of Application](/cases/case-details/${[CASE_REFERENCE]}/trigger/serviceOfApplication/serviceOfApplication1)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14cgusa">
           <text></text>
         </outputEntry>
       </rule>

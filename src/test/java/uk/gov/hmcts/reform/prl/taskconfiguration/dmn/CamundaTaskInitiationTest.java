@@ -35,9 +35,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(15));
+        assertThat(logic.getInputs().size(), is(16));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(48));
+        assertThat(logic.getRules().size(), is(50));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -269,7 +269,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "editAndApproveAnOrder",
-                null,
+                "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
@@ -278,9 +278,43 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
+                        "taskId", "serviceOfApplicationC100",
+                        "name", "Service of Application",
+                        "processCategories", "serviceOfApplication"
+                    )
+                )
+            ),
+            Arguments.of(
+                "editAndApproveAnOrder",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "serviceOfApplicationFL401",
+                        "name", "Service of Application",
+                        "processCategories", "serviceOfApplication"
+                    )
+                )
+            ),
+            Arguments.of(
+                "editAndApproveAnOrder",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"isOrderApproved\":\"" + "true" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
                         "taskId", "adminServeOrderC100",
-                        "name", "Service of Order",
-                        "processCategories", "adminServeOrderC100"
+                        "name", "Complete the Order",
+                        "processCategories", "completeTheOrder"
                     )
                 )
             ),
@@ -290,14 +324,14 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
-                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
+                                      + "      \"isOrderApproved\":\"" + "true" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "adminServeOrderFL401",
-                        "name", "Service of Order",
-                        "processCategories", "adminServeOrderFL401"
+                        "name", "Complete the Order",
+                        "processCategories", "completeTheOrder"
                     )
                 )
             ),

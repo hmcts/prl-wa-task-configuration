@@ -342,7 +342,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "adminServeOrderFL401", "adminServeOrderCreatedByJudgeFL401",
+        "serviceOfApplicationFL401","adminServeOrderFL401", "adminServeOrderCreatedByJudgeFL401",
     })
     void evaluate_task_admin_orderManagementfl401_2(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -474,7 +474,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "adminServeOrderC100","adminServeOrderCreatedByJudgeC100",
+        "serviceOfApplicationC100","adminServeOrderC100","adminServeOrderCreatedByJudgeC100",
     })
     void evaluate_task_ctsc_orderManagementc100_2(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
