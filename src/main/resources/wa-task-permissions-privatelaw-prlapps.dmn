@@ -536,6 +536,36 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_133ysn3">
+        <description>Admin task permissions</description>
+        <inputEntry id="UnaryTests_0u9wzmo">
+          <text>"reviewAdminOrderByManager"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s45p4p">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1182rzj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v6fi2m">
+          <text>"hearing-centre-team-leader"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lg3mf0">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wm6o2m">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0edbmkf">
+          <text>"SKILL:ABA5:ORDERMANAGEMENTFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13s5f76">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pqfebj">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_098qsjq">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_14xrsqw">
@@ -571,7 +601,7 @@
       <rule id="DecisionRule_079udd1">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_0ahkyod">
-          <text>"produceHearingBundleC100", "updateHearingActualsC100"</text>
+          <text>"produceHearingBundleC100", "updateHearingActualsC100","createHearingRequestReserveListAssistC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qchifs">
           <text></text>
