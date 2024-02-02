@@ -390,7 +390,7 @@
       <rule id="DecisionRule_0u17n4d">
         <description>Court admin hearing management skills permission</description>
         <inputEntry id="UnaryTests_0x0kyja">
-          <text>"produceHearingBundleFL401", "updateHearingActualsFL401"</text>
+          <text>"produceHearingBundleFL401", "updateHearingActualsFL401","createHearingRequestReserveListAssist","createHearingRequest","createMultipleHearingRequest"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0473w2g">
           <text></text>
@@ -450,7 +450,7 @@
       <rule id="DecisionRule_1v7zc7t">
         <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_10rpp7x">
-          <text>"serviceOfApplicationFL401","adminServeOrderFL401","adminServeOrderCreatedByJudgeFL401"</text>
+          <text>"serviceOfApplicationFL401","adminServeOrderFL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ytal4l">
           <text></text>
@@ -601,7 +601,7 @@
       <rule id="DecisionRule_079udd1">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_0ahkyod">
-          <text>"produceHearingBundleC100", "updateHearingActualsC100","createHearingRequestReserveListAssistC100"</text>
+          <text>"produceHearingBundleC100", "updateHearingActualsC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qchifs">
           <text></text>
@@ -662,7 +662,8 @@
       <rule id="DecisionRule_1625m7m">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_17yokon">
-          <text> "serviceOfApplicationC100","adminServeOrderC100", "adminServeOrderCreatedByJudgeC100"</text>
+          <text> "serviceOfApplicationC100","adminServeOrderC100"
+          </text>
         </inputEntry>
         <inputEntry id="UnaryTests_1sww3e8">
           <text></text>

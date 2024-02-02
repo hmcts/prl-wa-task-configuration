@@ -20,6 +20,9 @@
             else
             ""</text>
         </inputExpression>
+        <inputValues id="UnaryTests_1yd0c2k">
+          <text>"C100","FL401"</text>
+        </inputValues>
       </input>
       <input id="InputClause_0cdowsz" label="Performing User" biodi:width="150" camunda:inputVariable="performingUser">
         <inputExpression id="LiteralExpression_1ojl2ef" typeRef="string" expressionLanguage="feel">
@@ -1256,11 +1259,11 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       <rule id="DecisionRule_0xzi2j0">
         <inputEntry id="UnaryTests_1xiod7u">
           <text>
-"editAndApproveAnOrder"
+"editAndApproveAnOrder","manageOrders"
           </text>
         </inputEntry>
         <inputEntry id="UnaryTests_08cfchy">
-          <text>"JUDICIAL_REVIEW"</text>
+          <text>"CASE_ISSUED", "JUDICIAL_REVIEW"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_19nc6sw">
           <text>"C100"</text>
@@ -1320,11 +1323,11 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       <rule id="DecisionRule_1f5eahe">
         <inputEntry id="UnaryTests_1jibl36">
           <text>
-"editAndApproveAnOrder"
+"editAndApproveAnOrder","manageOrders"
           </text>
         </inputEntry>
         <inputEntry id="UnaryTests_05c2czl">
-          <text>"JUDICIAL_REVIEW"</text>
+          <text>"CASE_ISSUED", "JUDICIAL_REVIEW"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1lihk8j">
           <text>"FL401"</text>
@@ -1388,7 +1391,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           </text>
         </inputEntry>
         <inputEntry id="UnaryTests_16mopho">
-          <text></text>
+          <text>"CASE_ISSUED", "JUDICIAL_REVIEW"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0lij66m">
           <text>"C100"</text>
@@ -1403,7 +1406,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_19niu5e">
-          <text>"true"</text>
+          <text>"Yes"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_171rkog">
           <text></text>
@@ -1445,6 +1448,70 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"completeTheOrder"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_17oadi0">
+        <inputEntry id="UnaryTests_08550ng">
+          <text>
+"editAndApproveAnOrder"
+          </text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04u7b5y">
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gq9wa9">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vlenpz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y6x4ya">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cc4s4v">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n88pv9">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17czicr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rl9jvz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03gbmpm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vu8z4c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_087nc9h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ez8w0l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dvlllm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r098mv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lc4g6m">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tcmp0s">
+          <text>"adminServeOrderC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nbjd23">
+          <text>"Service Of Order"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15l8pyr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0oa8y5v">
+          <text>"completeTheOrder"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1mm12i7">
         <inputEntry id="UnaryTests_0g99eu7">
           <text>
@@ -1452,7 +1519,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           </text>
         </inputEntry>
         <inputEntry id="UnaryTests_07u1crm">
-          <text></text>
+          <text>"CASE_ISSUED", "JUDICIAL_REVIEW"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c4ip3x">
           <text>"FL401"</text>
@@ -1467,7 +1534,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0woaj7d">
-          <text>"true"</text>
+          <text>"Yes"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0m2ktm9">
           <text></text>
@@ -1507,6 +1574,510 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_0jjs4cg">
           <text>"completeTheOrder"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ovvade">
+        <inputEntry id="UnaryTests_13m93li">
+          <text>
+"editAndApproveAnOrder"
+          </text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p3c2eg">
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01xcji7">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hgexzi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tl5sa7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18admeq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wmp6w3">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pf06uk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n74qck">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dgbpjz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vlyh41">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00kct03">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ghtxpn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06c0b98">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15y31g2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0grb77y">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gpw5gj">
+          <text>"adminServeOrderFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1flhbj5">
+          <text>"Service Of Order"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09ygcp7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j1boqt">
+          <text>"completeTheOrder"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_039ii3n">
+        <inputEntry id="UnaryTests_0rqz87a">
+          <text>"manageOrders"
+          </text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gr5g8k">
+          <text>"CASE_ISSUED", "JUDICIAL_REVIEW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ylve0e">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04goqhw">
+          <text>"JUDGE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14bodvo">
+          <text>"Create an order","Upload an order"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t3shyh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02h4dza">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a43x49">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yupvyc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k0zpxz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1paltud">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04eenoj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cv5t29">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hdedp9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k6i0hr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05yusac">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1s1gn25">
+          <text>"adminServeOrderC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v6ofsp">
+          <text>"Complete the Order"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j5yofa">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xva1cf">
+          <text>"completeTheOrder"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bnpzum">
+        <inputEntry id="UnaryTests_1akqa1d">
+          <text>"manageOrders"
+          </text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1weo7g7">
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gb58k4">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qvleqc">
+          <text>"JUDGE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0579j3z">
+          <text>"Create an order","Upload an order"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1agqyhm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mcnedv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ucqzc3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ej4eru">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16ehu0a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14klnca">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q8ed7w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fdb917">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0c9lvjm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nvakww">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02d6zef">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1wf7frf">
+          <text>"adminServeOrderC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02so2mf">
+          <text>"Service Of Order"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18dhdva">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11ea9we">
+          <text>"completeTheOrder"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1dbtvko">
+        <inputEntry id="UnaryTests_0pgmh2j">
+          <text>
+"manageOrders"
+          </text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bwq27n">
+          <text>"CASE_ISSUED", "JUDICIAL_REVIEW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02j3okd">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jistmq">
+          <text>"JUDGE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u6wn56">
+          <text>"Create an order","Upload an order"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n9w1gt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o4753a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o1x9l7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_034eree">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0thx6yk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u11it2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pq2fg6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eujsza">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0aver4l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14i9hnv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w6yd5m">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1xnq2p6">
+          <text>"adminServeOrderFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hl4jqw">
+          <text>"Complete the Order"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1es7w7b">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dwcz1m">
+          <text>"completeTheOrder"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18m5b8q">
+        <inputEntry id="UnaryTests_1uyg3pv">
+          <text>
+"manageOrders"
+          </text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14tiokr">
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0360k2f">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1585r7c">
+          <text>"JUDGE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ezso9r">
+          <text>"Create an order","Upload an order"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xp8cpx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05kny7o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05qu3qs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pb7ila">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_148fkg0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0c8xv1d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cwlke6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_009ho7f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uybrkt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_042nd9d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n6cxyh">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0sdgmzo">
+          <text>"adminServeOrderFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wiv7bu">
+          <text>"Service Of Order"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ef6cp0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0102ee6">
+          <text>"completeTheOrder"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0u68cm6">
+        <inputEntry id="UnaryTests_15n79ky">
+          <text>"editAndApproveAnOrder"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yfgl54">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0epkfqh">
+          <text>"C100","FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p8n9mg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18lz3ab">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hbp9i8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sxiz71">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0aqp7eb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gz41pt">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fhr8m6">
+          <text>"No"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hgd2zd">
+          <text>"dateReservedWithListAssit"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0infpmt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iikznp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19he9uv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0krau9r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05p8z3q">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_116d3lj">
+          <text>"createHearingRequestReserveListAssist"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1s0kbpe">
+          <text>"Create Hearing Request - Reserved in List Assist"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05tqlsd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ba7xi2">
+          <text>"createHearingRequest"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_063wr1n">
+        <inputEntry id="UnaryTests_09jbcwl">
+          <text>"editAndApproveAnOrder"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fu1h7q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19bh2bm">
+          <text>"C100","FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1911s9s">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13zsofj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09jnxqn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05043yb">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kpsznz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rkkwh3">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xjo130">
+          <text>"No"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16slod0">
+          <text>"dateConfirmedByListingTeam","dateToBeFixed"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l659wx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01eymm4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0v92kf0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05lx3do">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02grw0g">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1q91d3m">
+          <text>"createHearingRequest"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tc2gqn">
+          <text>"Create Hearing Request"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xgr76r">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n6z1eo">
+          <text>"createHearingRequest"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xyv8mc">
+        <inputEntry id="UnaryTests_10839r5">
+          <text>"editAndApproveAnOrder"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07vjwul">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m810hh">
+          <text>"C100","FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0v5ca9s">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gkxxxq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f5c4j1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iksz9a">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ipmirb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1i1z0ms">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12m3275">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cjzrso">
+          <text>"multipleOptionSelected"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pbhg11">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04e4pis">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mqmx31">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13n4iui">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p0pfc7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_034nwff">
+          <text>"createMultipleHearingRequest"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sbvhcq">
+          <text>"Create Multiple Hearing Request"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0m91o1s">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hgujxj">
+          <text>"createHearingRequest"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0z5s2qi">
@@ -1887,130 +2458,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"courtAdminCorrespondenceFL401"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1i1lge9">
-        <inputEntry id="UnaryTests_01pntxz">
-          <text>"manageOrders"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0uojr4k">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1k17vn6">
-          <text>"C100"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0k5s4v3">
-          <text>"JUDGE"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_068gh4t">
-          <text>"Yes"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0vafr7v">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0jugcdy">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1gz0k6w">
-          <text>"true"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1r120jd">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_12iknr5">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0heksn4">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_17is0fl">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1h6w2ga">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1760r7o">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1tp3kag">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_07tk8ip">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1kos9tz">
-          <text>"adminServeOrderCreatedByJudgeC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0m2lwkd">
-          <text>"Service of Order"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_157p4cn">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_14p93z5">
-          <text>"adminServeOrderCreatedByJudgeC100"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1ddgo1a">
-        <inputEntry id="UnaryTests_1x4dlbj">
-          <text>"manageOrders"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1njx91n">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1tw4eh7">
-          <text>"FL401"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0u2jcaq">
-          <text>"JUDGE"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_166hgha">
-          <text>"Yes"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_09b0ch1">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0f8wbqu">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_15l3i9j">
-          <text>"true"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0tgp5ym">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0paqxf8">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0sfwes6">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0q80zzs">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0w9is5t">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0rt5o3j">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1li9zl7">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0qs37el">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1hyj1oo">
-          <text>"adminServeOrderCreatedByJudgeFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_03p00yp">
-          <text>"Service of Order"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1um5dnm">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_05z3lbn">
-          <text>"adminServeOrderCreatedByJudgeFL401"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0ckllpt">
         <inputEntry id="UnaryTests_1lwnj56">
           <text>"manageOrders"</text>
@@ -2143,7 +2590,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0xvsqmv">
-          <text>"C100"</text>
+          <text>"C100","FL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_15366v9">
           <text>"COURT_ADMIN"</text>
@@ -2185,7 +2632,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18zwryp">
-          <text>"createHearingRequestReserveListAssistC100"</text>
+          <text>"createHearingRequestReserveListAssist"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0du80zu">
           <text>"Create Hearing Request - Reserved in List Assist"</text>
@@ -2194,6 +2641,316 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_00nf8ke">
+          <text>"createHearingRequest"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_02aicx7">
+        <inputEntry id="UnaryTests_0u0u5mn">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nso91u">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iq2i37">
+          <text>"C100","FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ok7vcc">
+          <text>"JUDGE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x0l5ex">
+          <text>"Create an order"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j2zuoj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0igv5cw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p8xmdw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gijyyi">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00olp3i">
+          <text>"No"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ldm64b">
+          <text>"dateReservedWithListAssit"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rz43za">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h8ys65">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nvanac">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pxs5ax">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qszddl">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kq32v9">
+          <text>"createHearingRequestReserveListAssist"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00720sc">
+          <text>"Create Hearing Request - Reserved in List Assist"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1q2v46q">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0k7xc9k">
+          <text>"createHearingRequest"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dhur21">
+        <inputEntry id="UnaryTests_0h27d3q">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nrknb1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rjpp7x">
+          <text>"C100","FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p3fh09">
+          <text>"COURT_ADMIN"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l1dkxt">
+          <text>"Create an order"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0urqo0n">
+          <text>"noCheck"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08cs9t7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11ucuvq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15ztns8">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m380lf">
+          <text>"No"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sjws9m">
+          <text>"dateConfirmedByListingTeam","dateToBeFixed"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1guwiov">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ng0v6g">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g5jxjz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qmknyu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17qmrdw">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0me64by">
+          <text>"createHearingRequest"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1e2ixlq">
+          <text>"Create Hearing Request"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0prnjsx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1n8zcqq">
+          <text>"createHearingRequest"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1uk0knx">
+        <inputEntry id="UnaryTests_149bwfo">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hwmvzd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08hqfe9">
+          <text>"C100","FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mnpwwy">
+          <text>"JUDGE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0soiqla">
+          <text>"Create an order"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00ugsrp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02z5grh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qkhclo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s15c4g">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wz2m6c">
+          <text>"No"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0opi6te">
+          <text>"dateConfirmedByListingTeam","dateToBeFixed"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dlhaju">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19ncyqq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u2pi9l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11afmnz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fis02y">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08nwznq">
+          <text>"createHearingRequest"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0y6xoee">
+          <text>"Create Hearing Request"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rvnm30">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09o9uxm">
+          <text>"createHearingRequest"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00w9oj0">
+        <inputEntry id="UnaryTests_0wacid4">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s8kebr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0znyfof">
+          <text>"C100","FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cqt2kv">
+          <text>"COURT_ADMIN"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05qfwof">
+          <text>"Create an order"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lytuvq">
+          <text>"noCheck"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rvb6zt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bbak0c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0veddsc">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u0ob3t">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06vcjkj">
+          <text>"multipleOptionSelected"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ccrrsm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_107ti9h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_079qhzy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x1jmkd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1heh16d">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0f9bdhr">
+          <text>"createMultipleHearingRequest"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mtlliv">
+          <text>"Create Multiple Hearing Request"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02qa5am">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ysllcu">
+          <text>"createHearingRequest"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0jt39dw">
+        <inputEntry id="UnaryTests_186703j">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04tu505">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dwjhbd">
+          <text>"C100","FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jpl1sr">
+          <text>"JUDGE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m7w599">
+          <text>"Create an order"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02fszg8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bi8pfl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t0effq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14aqxk5">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04rjz1c">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b6ykn3">
+          <text>"multipleOptionSelected"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13g8eia">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09zwdnf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15t1mqi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dunin2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1803xqe">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_058a1b7">
+          <text>"createMultipleHearingRequest"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06ncfsc">
+          <text>"Create Multiple Hearing Request"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1oxundz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00qq8eh">
           <text>"createHearingRequest"</text>
         </outputEntry>
       </rule>
