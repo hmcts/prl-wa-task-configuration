@@ -33,7 +33,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0pk2tom">
-          <text>PRIVATELAW</text>
+          <text>"PRIVATELAW"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_07ek7kc">
           <text>"reviewExceptionBulkScanRecord"</text>
