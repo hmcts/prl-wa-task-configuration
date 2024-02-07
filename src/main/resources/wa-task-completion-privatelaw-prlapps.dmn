@@ -438,28 +438,6 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0opuxjr">
-        <inputEntry id="UnaryTests_05gkj34">
-          <text>"adminEditAndApproveAnOrder"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_07xrjoz">
-          <text>"adminServeOrderCreatedByJudgeC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_19ru9rc">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1hjihud">
-        <inputEntry id="UnaryTests_1uvmzrr">
-          <text>"adminEditAndApproveAnOrder"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1qjfyvn">
-          <text>"adminServeOrderCreatedByJudgeFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1mal6pm">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0ikdfsy">
         <inputEntry id="UnaryTests_1gdsev7">
           <text>"editAndApproveAnOrder"</text>
@@ -468,6 +446,17 @@
           <text>"reviewAdminOrderProvided"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1f55nhy">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_147n0jw">
+        <inputEntry id="UnaryTests_0cb26la">
+          <text>"editAndApproveAnOrder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1eezb6u">
+          <text>"reviewAdminOrderByManager"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jf5c13">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
@@ -501,6 +490,28 @@
           <text>"confidentialCheckSOA"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xwj285">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xs1q1g">
+        <inputEntry id="UnaryTests_15r8sy9">
+          <text>"serviceOfApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09v3aya">
+          <text>"serviceOfApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uzeslp">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0o7orwp">
+        <inputEntry id="UnaryTests_0l9u480">
+          <text>"serviceOfApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04i9vfl">
+          <text>"serviceOfApplicationFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17t7kuu">
           <text>"Auto"</text>
         </outputEntry>
       </rule>

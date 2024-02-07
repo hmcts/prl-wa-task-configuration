@@ -35,9 +35,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(12));
+        assertThat(logic.getInputs().size(), is(16));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(46));
+        assertThat(logic.getRules().size(), is(62));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -269,7 +269,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "editAndApproveAnOrder",
-                null,
+                "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
@@ -278,9 +278,164 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
+                        "taskId", "serviceOfApplicationC100",
+                        "name", "Service of Application",
+                        "processCategories", "serviceOfApplication"
+                    )
+                )
+            ),
+            Arguments.of(
+                "editAndApproveAnOrder",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "serviceOfApplicationFL401",
+                        "name", "Service of Application",
+                        "processCategories", "serviceOfApplication"
+                    )
+                )
+            ),
+            Arguments.of(
+                "editAndApproveAnOrder",
+                "CASE_ISSUED",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"isOrderApproved\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
                         "taskId", "adminServeOrderC100",
-                        "name", "Service of Order",
-                        "processCategories", "adminServeOrderC100"
+                        "name", "Complete the Order",
+                        "processCategories", "completeTheOrder"
+                    )
+                )
+            ),
+            Arguments.of(
+                "editAndApproveAnOrder",
+                "CASE_ISSUED",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"isOrderApproved\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "adminServeOrderFL401",
+                        "name", "Complete the Order",
+                        "processCategories", "completeTheOrder"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageOrders",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Create an order" + "\"\n,"
+                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "processCategories", "serviceOfApplication",
+                        "taskId", "serviceOfApplicationC100",
+                        "name", "Service of Application"
+                    ),
+                    Map.of(
+                        "processCategories", "completeTheOrder",
+                        "taskId", "adminServeOrderC100",
+                        "name", "Complete the Order"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageOrders",
+                "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Create an order" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "processCategories", "completeTheOrder",
+                        "taskId", "adminServeOrderC100",
+                        "name", "Service Of Order"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageOrders",
+                "DECISION_OUTCOME",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Upload an order" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "adminServeOrderFL401",
+                        "name", "Service Of Order",
+                        "processCategories", "completeTheOrder"
+                    )
+                )
+            ),
+            Arguments.of(
+                "editAndApproveAnOrder",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
+                                      + "      \"judgeLaManagerReviewRequired\":\"" + "null" + "\"\n,"
+                                      + "      \"isOrderApproved\":\"" + "Yes" + "\"\n,"
+                                      + "      \"isHearingTaskNeeded\":\"" + "Yes" + "\"\n,"
+                                      + "      \"isMultipleHearingSelected\":\"" + "No" + "\"\n,"
+                                      + "      \"hearingOptionSelected\":\"" + "dateReservedWithListAssit" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "createHearingRequestReserveListAssist",
+                        "name", "Create Hearing Request - Reserved in List Assist",
+                        "processCategories", "createHearingRequest"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageOrders",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Create an order" + "\"\n,"
+                                      + "      \"judgeLaManagerReviewRequired\":\"" + "null" + "\"\n,"
+                                      + "      \"isHearingTaskNeeded\":\"" + "Yes" + "\"\n,"
+                                      + "      \"isMultipleHearingSelected\":\"" + "No" + "\"\n,"
+                                      + "      \"hearingOptionSelected\":\"" + "dateReservedWithListAssit" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "createHearingRequestReserveListAssist",
+                        "name", "Create Hearing Request - Reserved in List Assist",
+                        "processCategories", "createHearingRequest"
                     )
                 )
             ),
@@ -290,14 +445,85 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
-                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
+                                      + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
+                                      + "      \"judgeLaManagerReviewRequired\":\"" + "null" + "\"\n,"
+                                      + "      \"isOrderApproved\":\"" + "Yes" + "\"\n,"
+                                      + "      \"isHearingTaskNeeded\":\"" + "Yes" + "\"\n,"
+                                      + "      \"isMultipleHearingSelected\":\"" + "No" + "\"\n,"
+                                      + "      \"hearingOptionSelected\":\"" + "dateReservedWithListAssit" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "adminServeOrderFL401",
-                        "name", "Service of Order",
-                        "processCategories", "adminServeOrderFL401"
+                        "taskId", "createHearingRequestReserveListAssist",
+                        "name", "Create Hearing Request - Reserved in List Assist",
+                        "processCategories", "createHearingRequest"
+                    )
+                ),
+                Arguments.of(
+                    "editAndApproveAnOrder",
+                    null,
+                    mapAdditionalData("{\n"
+                                          + "   \"Data\":{\n"
+                                          + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                          + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
+                                          + "      \"performingAction\":\"" + "Create an order" + "\"\n,"
+                                          + "      \"isOrderApproved\":\"" + "Yes" + "\"\n,"
+                                          + "      \"isHearingTaskNeeded\":\"" + "Yes" + "\"\n,"
+                                          + "      \"isMultipleHearingSelected\":\"" + "No" + "\"\n,"
+                                          + "      \"hearingOptionSelected\":\"" + "dateConfirmedByListingTeam" + "\"\n"
+                                          + "   }"
+                                          + "}"),
+                    singletonList(
+                        Map.of(
+                            "taskId", "createHearingRequest",
+                            "name", "Create Hearing Request",
+                            "processCategories", "createHearingRequest"
+                        )
+                    )
+                ),
+                Arguments.of(
+                    "editAndApproveAnOrder",
+                    null,
+                    mapAdditionalData("{\n"
+                                          + "   \"Data\":{\n"
+                                          + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                          + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
+                                          + "      \"performingAction\":\"" + "Create an order" + "\"\n,"
+                                          + "      \"isOrderApproved\":\"" + "Yes" + "\"\n,"
+                                          + "      \"isHearingTaskNeeded\":\"" + "Yes" + "\"\n,"
+                                          + "      \"isMultipleHearingSelected\":\"" + "No" + "\"\n,"
+                                          + "      \"hearingOptionSelected\":\"" + "dateToBeFixed" + "\"\n"
+                                          + "   }"
+                                          + "}"),
+                    singletonList(
+                        Map.of(
+                            "taskId", "createHearingRequest",
+                            "name", "Create Hearing Request",
+                            "processCategories", "createHearingRequest"
+                        )
+                    )
+                ),
+                Arguments.of(
+                    "editAndApproveAnOrder",
+                    null,
+                    mapAdditionalData("{\n"
+                                          + "   \"Data\":{\n"
+                                          + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                          + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
+                                          + "      \"performingAction\":\"" + "Create an order" + "\"\n,"
+                                          + "      \"isOrderApproved\":\"" + "Yes" + "\"\n,"
+                                          + "      \"isHearingTaskNeeded\":\"" + "Yes" + "\"\n,"
+                                          + "      \"isMultipleHearingSelected\":\"" + "Yes" + "\"\n,"
+                                          + "      \"hearingOptionSelected\":\"" + "multipleOptionSelected" + "\"\n"
+                                          + "   }"
+                                          + "}"),
+                    singletonList(
+                        Map.of(
+                            "taskId", "createMultipleHearingRequest",
+                            "name", "Create Multiple Hearing Request",
+                            "processCategories", "createHearingRequest"
+                        )
                     )
                 )
             ),
@@ -434,7 +660,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
     }
 
-    static Stream<Arguments> scenarioProviderNew() {
+    static Stream<Arguments> scenarioProviderManageOrder() {
         return Stream.of(
             Arguments.of(
                 "manageOrders",
@@ -449,7 +675,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 singletonList(
                     Map.of(
                         "taskId", "adminServeOrderCreatedByJudgeC100",
-                        "name", "Service of Order",
+                        "name", "Service Of Order",
                         "processCategories", "adminServeOrderCreatedByJudgeC100"
                     )
                 ),
@@ -470,7 +696,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     }
 
     /*@ParameterizedTest(name = "event id: {0} post event state: {1} additional data: {2}")
-    @MethodSource("scenarioProviderNew")
+    @MethodSource("scenarioProviderManageOrder")
     void given_multiple_event_ids_should_evaluate_dmn_1(String eventId,
                                                       String postEventState,
                                                       Map<String, Object> map1,

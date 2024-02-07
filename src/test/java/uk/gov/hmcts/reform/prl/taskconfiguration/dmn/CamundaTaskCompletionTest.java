@@ -209,6 +209,10 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "taskType", "reviewAdminOrderProvided",
                         "completionMode", "Auto"
                     ),
+                    Map.of(
+                        "taskType", "reviewAdminOrderByManager",
+                        "completionMode", "Auto"
+                    ),
                     Map.of()
                 )
             ),
@@ -229,14 +233,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     ),
                     Map.of(
                         "taskType", "requestSolicitorOrderFL401",
-                        "completionMode", "Auto"
-                    ),
-                    Map.of(
-                        "taskType", "adminServeOrderCreatedByJudgeC100",
-                        "completionMode", "Auto"
-                    ),
-                    Map.of(
-                        "taskType", "adminServeOrderCreatedByJudgeFL401",
                         "completionMode", "Auto"
                     ),
                     Map.of()
@@ -282,6 +278,14 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "taskType", "confidentialCheckSOA",
                         "completionMode", "Auto"
                     ),
+                    Map.of(
+                        "taskType", "serviceOfApplicationC100",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "serviceOfApplicationFL401",
+                        "completionMode", "Auto"
+                    ),
                     Map.of()
                 )
             )
@@ -306,7 +310,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(53));
+        assertThat(logic.getRules().size(), is(54));
     }
 
 
