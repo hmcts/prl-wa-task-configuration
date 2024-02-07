@@ -26,8 +26,8 @@
       </input>
       <input id="InputClause_0cdowsz" label="Performing User" biodi:width="150" camunda:inputVariable="performingUser">
         <inputExpression id="LiteralExpression_1ojl2ef" typeRef="string" expressionLanguage="feel">
-          <text>if(additionalData != null and additionalData.Data != null 
-and additionalData.Data.performingUser != null) 
+          <text>if(additionalData != null and additionalData.Data != null
+and additionalData.Data.performingUser != null)
 then additionalData.Data.performingUser else ""</text>
         </inputExpression>
         <inputValues id="UnaryTests_1blzsy4">
@@ -36,8 +36,8 @@ then additionalData.Data.performingUser else ""</text>
       </input>
       <input id="InputClause_12gdmzs" label="Performing Action" biodi:width="150" camunda:inputVariable="performingAction">
         <inputExpression id="LiteralExpression_0iqfkk0" typeRef="string">
-          <text>if(additionalData != null and additionalData.Data != null 
-and additionalData.Data.performingAction != null) 
+          <text>if(additionalData != null and additionalData.Data != null
+and additionalData.Data.performingAction != null)
 then additionalData.Data.performingAction else ""</text>
         </inputExpression>
         <inputValues id="UnaryTests_0n44e10">
@@ -46,9 +46,9 @@ then additionalData.Data.performingAction else ""</text>
       </input>
       <input id="InputClause_19o6aaw" label="Order Review By" biodi:width="150" camunda:inputVariable="judgeLaManagerReviewRequired">
         <inputExpression id="LiteralExpression_06e7tqk" typeRef="string">
-          <text>if(additionalData != null and additionalData.Data != null 
-and additionalData.Data.judgeLaManagerReviewRequired != null) 
-then additionalData.Data.judgeLaManagerReviewRequired 
+          <text>if(additionalData != null and additionalData.Data != null
+and additionalData.Data.judgeLaManagerReviewRequired != null)
+then additionalData.Data.judgeLaManagerReviewRequired
 else ""</text>
         </inputExpression>
         <inputValues id="UnaryTests_1vf74p5">
@@ -57,9 +57,9 @@ else ""</text>
       </input>
       <input id="InputClause_1nfoiz2" label="Is Order Approved" camunda:inputVariable="isOrderApproved">
         <inputExpression id="LiteralExpression_1pdk3ev" typeRef="string">
-          <text>if(additionalData != null and additionalData.Data != null 
-and additionalData.Data.isOrderApproved != null) 
-then additionalData.Data.isOrderApproved 
+          <text>if(additionalData != null and additionalData.Data != null
+and additionalData.Data.isOrderApproved != null)
+then additionalData.Data.isOrderApproved
 else ""</text>
         </inputExpression>
       </input>
@@ -74,7 +74,7 @@ else ""</text>
       </input>
       <input id="InputClause_15s8tzp" label="Hearing Task Need" camunda:inputVariable="isHearingTaskNeeded">
         <inputExpression id="LiteralExpression_1yfhw4m" typeRef="string">
-          <text>if(additionalData != null and additionalData.Data != null 
+          <text>if(additionalData != null and additionalData.Data != null
 and additionalData.Data.isHearingTaskNeeded != null) then
             additionalData.Data.isHearingTaskNeeded
             else ""</text>
@@ -1664,7 +1664,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0a43x49">
-          <text></text>
+          <text>"true"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0yupvyc">
           <text></text>
@@ -1791,7 +1791,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1o1x9l7">
-          <text></text>
+          <text>"true"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_034eree">
           <text></text>

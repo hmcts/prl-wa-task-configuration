@@ -573,7 +573,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"title"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1vimqnf">
-          <text>taskAttributes.name + " - " + caseData.orderNameForJudgeApproved</text>
+          <text>if(caseData.orderNameForJudgeApproved !=null) then (taskAttributes.name + " - " + caseData.orderNameForJudgeApproved) else if (caseData.orderNameForJudgeCreatedOrder != null ) then (taskAttributes.name + " - " + caseData.orderNameForJudgeCreatedOrder) else taskAttributes.name</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ba9wt9">
           <text></text>
@@ -590,7 +590,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"title"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1nmff8z">
-          <text>taskAttributes.name + " - " + caseData.orderNameForSolicitorCreatedOrder</text>
+          <text>if(caseData.orderNameForSolicitorCreatedOrder !=null) then (taskAttributes.name + " - " + caseData.orderNameForSolicitorCreatedOrder) else taskAttributes.name</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1xkvvns">
           <text></text>
@@ -607,7 +607,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"title"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nr7gfe">
-          <text>taskAttributes.name + " - " + caseData.orderNameForAdminCreatedOrder</text>
+          <text>if(caseData.orderNameForAdminCreatedOrder !=null) then taskAttributes.name + " - " + caseData.orderNameForAdminCreatedOrder else if (caseData.orderNameForJudgeCreatedOrder != null ) then (taskAttributes.name + " - " + caseData.orderNameForJudgeCreatedOrder) else taskAttributes.name</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0iicns5">
           <text></text>

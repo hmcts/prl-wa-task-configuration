@@ -337,6 +337,30 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "manageOrders",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Create an order" + "\"\n,"
+                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "processCategories", "serviceOfApplication",
+                        "taskId", "serviceOfApplicationC100",
+                        "name", "Service of Application"
+                    ),
+                    Map.of(
+                        "processCategories", "completeTheOrder",
+                        "taskId", "adminServeOrderC100",
+                        "name", "Complete the Order"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageOrders",
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
