@@ -390,7 +390,7 @@
       <rule id="DecisionRule_0u17n4d">
         <description>Court admin hearing management skills permission</description>
         <inputEntry id="UnaryTests_0x0kyja">
-          <text>"produceHearingBundleFL401", "updateHearingActualsFL401"</text>
+          <text>"produceHearingBundleFL401", "updateHearingActualsFL401","createHearingRequestReserveListAssist","createHearingRequest","createMultipleHearingRequest"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0473w2g">
           <text></text>
@@ -450,7 +450,7 @@
       <rule id="DecisionRule_1v7zc7t">
         <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_10rpp7x">
-          <text>"adminServeOrderFL401","adminServeOrderCreatedByJudgeFL401"</text>
+          <text>"serviceOfApplicationFL401","adminServeOrderFL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ytal4l">
           <text></text>
@@ -533,6 +533,36 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0n6tcd2">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_133ysn3">
+        <description>Admin task permissions</description>
+        <inputEntry id="UnaryTests_0u9wzmo">
+          <text>"reviewAdminOrderByManager"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s45p4p">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1182rzj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v6fi2m">
+          <text>"hearing-centre-team-leader"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lg3mf0">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wm6o2m">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0edbmkf">
+          <text>"SKILL:ABA5:ORDERMANAGEMENTFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13s5f76">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pqfebj">
           <text>false</text>
         </outputEntry>
       </rule>
@@ -632,7 +662,8 @@
       <rule id="DecisionRule_1625m7m">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_17yokon">
-          <text> "adminServeOrderC100", "adminServeOrderCreatedByJudgeC100"</text>
+          <text> "serviceOfApplicationC100","adminServeOrderC100"
+          </text>
         </inputEntry>
         <inputEntry id="UnaryTests_1sww3e8">
           <text></text>
