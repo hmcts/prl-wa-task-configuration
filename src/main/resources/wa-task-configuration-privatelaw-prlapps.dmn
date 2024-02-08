@@ -293,7 +293,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gtvl7x">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA", "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack","replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ju1b88">
           <text>"dueDateIntervalDays"</text>
@@ -344,7 +344,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_07bn4jn">
-          <text>"reviewSolicitorOrderProvided", "reviewCorrespondenceC100","reviewCorrespondenceFL401", "replyToMessageForJudiciary"</text>
+          <text>"reviewSolicitorOrderProvided", "reviewCorrespondenceC100","reviewCorrespondenceFL401", "replyToMessageForJudiciary","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0t7q94m">
           <text>"dueDateIntervalDays"</text>
@@ -361,7 +361,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08jiuyj">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewAdminOrderProvided","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA", "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLA","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewAdminOrderProvided","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA","recreateApplicationPack","replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLA","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lyogga">
           <text>"priorityDateOriginRef"</text>
@@ -548,7 +548,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_05latny">
-          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA", "replyToMessageForJudiciary","reviewAdminOrderByManager"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA","recreateApplicationPack","replyToMessageForJudiciary","reviewAdminOrderByManager","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_121l57m">
           <text>"majorPriority"</text>
@@ -618,7 +618,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1y3kj1v">
-          <text>"addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationC100","adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","reviewCorrespondenceC100","reviewCorrespondenceFL401","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","replyToMessageForJudiciary"</text>
+          <text>"addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationC100","adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","reviewCorrespondenceC100","reviewCorrespondenceFL401","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA","recreateApplicationPack","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","replyToMessageForJudiciary","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0rvgay2">
           <text>"workType"</text>
@@ -739,7 +739,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         <inputEntry id="UnaryTests_1glizm3">
           <text>"checkApplicationFL401", "checkApplicationResubmittedFL401",
 "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401",
-"produceHearingBundleFL401", "serviceOfApplicationFL401","adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewCorrespondenceFL401", "reviewSpecificAccessRequestAdmin", "removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist"</text>
+"produceHearingBundleFL401", "serviceOfApplicationFL401","adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewCorrespondenceFL401", "reviewSpecificAccessRequestAdmin", "removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","confidentialCheckSOA","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1131kat">
           <text>"roleCategory"</text>
@@ -761,7 +761,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
 "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100",
  "produceHearingBundleC100", "serviceOfApplicationC100","adminServeOrderC100",
 "updateHearingActualsC100", "requestSolicitorOrderC100",
-"reviewCorrespondenceC100", "reviewSpecificAccessRequestCTSC","removeLegalRepresentativeC100","confidentialCheckSOA","reviewDocumentsForSolAndCafcassC100","replyToMessageForCourtAdminC100"</text>
+"reviewCorrespondenceC100", "reviewSpecificAccessRequestCTSC","removeLegalRepresentativeC100","reviewDocumentsForSolAndCafcassC100","replyToMessageForCourtAdminC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18u6y8m">
           <text>"roleCategory"</text>
@@ -1110,6 +1110,108 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"[Check for Confidential Documents](/cases/case-details/${[CASE_REFERENCE]}#Case%20File%20View"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02lku50">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0akslf9">
+        <inputEntry id="UnaryTests_11wbzcw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jybht5">
+          <text>"recreateApplicationPack"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05a4dxw">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gwgjgv">
+          <text>"[Recreate Application Pack](/cases/case-details/${[CASE_REFERENCE]}/trigger/serviceOfApplication/serviceOfApplication1)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0duac3m">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1t2qke0">
+        <inputEntry id="UnaryTests_1nvnfxn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hp089k">
+          <text>"appStatementOfServiceBySol"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lo1mc9">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00v37w1">
+          <text>"[Waiting for Applicant's Solicitor to upload Statement of Service]()"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0osos09">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lis693">
+        <inputEntry id="UnaryTests_1hhouet">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0smay2o">
+          <text>"appStatementOfServiceByLiP"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1uf98vi">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c8dq32">
+          <text>"[Waiting for Unrepresented Applicant LiP to upload Statement of Service]()"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0baslf3">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12cmpmd">
+        <inputEntry id="UnaryTests_1p5vv08">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tcjgsv">
+          <text>"appStatementOfServiceByBailiff"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1kqjcpp">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09eb2af">
+          <text>"[Upload Statement of Service provided by Court Bailiff]()"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gik79u">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06zki20">
+        <inputEntry id="UnaryTests_06h4sd8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tui58q">
+          <text>"arrangeBailiffSOA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18edt29">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tfxv8f">
+          <text>"[Arrange bailiff service of application]()"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nn4wwv">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18vyxii">
+        <inputEntry id="UnaryTests_0unqpgp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19fl4pa">
+          <text>"appStatementOfServiceByAdmin"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qenr8u">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dzd5ey">
+          <text>"[Upload Statement of Service]()"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hpl9e1">
           <text></text>
         </outputEntry>
       </rule>

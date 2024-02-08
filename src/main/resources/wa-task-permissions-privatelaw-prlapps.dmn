@@ -360,7 +360,7 @@
         <description>Court admin check application skills permission</description>
         <inputEntry id="UnaryTests_0m16bpv">
           <text>"checkApplicationFL401", "checkApplicationResubmittedFL401",
-"sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401","removeLegalRepresentativeFL401","confidentialCheckSOA","replyToMessageForCourtAdminFL401"</text>
+"sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401","removeLegalRepresentativeFL401","replyToMessageForCourtAdminFL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_132ys7j">
           <text></text>
@@ -450,7 +450,7 @@
       <rule id="DecisionRule_1v7zc7t">
         <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_10rpp7x">
-          <text>"serviceOfApplicationFL401","adminServeOrderFL401"</text>
+          <text>"serviceOfApplicationFL401","adminServeOrderFL401","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ytal4l">
           <text></text>
@@ -539,7 +539,7 @@
       <rule id="DecisionRule_133ysn3">
         <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_0u9wzmo">
-          <text>"reviewAdminOrderByManager"</text>
+          <text>"reviewAdminOrderByManager","confidentialCheckSOA"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0s45p4p">
           <text></text>

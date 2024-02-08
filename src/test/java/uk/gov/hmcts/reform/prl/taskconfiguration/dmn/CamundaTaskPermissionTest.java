@@ -16,6 +16,7 @@ import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.stream.Stream;
 
@@ -586,15 +587,12 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
-            Map.of(
+            taskSupervisor
+            , Map.of(
                 "autoAssignable", false,
-                "name", "task-supervisor",
-                "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
-            ), Map.of(
-                "autoAssignable", false,
-                "name", "hearing-centre-admin",
+                "name", "hearing-centre-team-leader",
                 "roleCategory", "ADMIN",
-                "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401",
+                "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
             )
         )));
@@ -637,6 +635,34 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "roleCategory", "ADMIN",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
                 "authorisations", "SKILL:ABA5:HEARINGMANAGEMENTFL401"
+            )
+
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+        "recreateApplicationPack",
+        "appStatementOfServiceBySol",
+        "appStatementOfServiceByLiP",
+        "appStatementOfServiceByBailiff",
+        "arrangeBailiffSOA",
+        "appStatementOfServiceByAdmin"
+    })
+    void evaluate_task_admin_statementOfService(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401"
             )
 
         )));

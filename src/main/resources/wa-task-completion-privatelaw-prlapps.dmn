@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.15.1">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
   <decision id="wa-task-completion-privatelaw-prlapps" name="Private Law Task completion DMN">
     <decisionTable id="DecisionTable_01re27m" hitPolicy="COLLECT">
       <input id="eventId" label="Event ID" biodi:width="437">
@@ -484,12 +484,23 @@
       </rule>
       <rule id="DecisionRule_1acksuo">
         <inputEntry id="UnaryTests_0kncjs4">
-          <text>"serviceOfApplication"</text>
+          <text>"confidentialityCheck"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_10kurbr">
           <text>"confidentialCheckSOA"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xwj285">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0aotla0">
+        <inputEntry id="UnaryTests_1hyh340">
+          <text>"serviceOfApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13z4ws2">
+          <text>"recreateApplicationPack"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n9387m">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
@@ -512,6 +523,39 @@
           <text>"serviceOfApplicationFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_17t7kuu">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1il8xts">
+        <inputEntry id="UnaryTests_1329lp6">
+          <text>"statementOfService"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13pq4xs">
+          <text>"appStatementOfServiceByBailiff"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e2zof6">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ce4tnj">
+        <inputEntry id="UnaryTests_0w7j3i8">
+          <text>"statementOfService"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05ux0gn">
+          <text>"arrangeBailiffSOA"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10jvn7d">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0b51q3m">
+        <inputEntry id="UnaryTests_0ifusp9">
+          <text>"statementOfService"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00eg9ls">
+          <text>"appStatementOfServiceByAdmin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rm80oy">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
