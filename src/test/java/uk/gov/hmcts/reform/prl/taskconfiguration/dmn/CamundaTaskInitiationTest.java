@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(17));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(70));
+        assertThat(logic.getRules().size(), is(72));
     }
 
     static Stream<Arguments> scenarioProvider() {
