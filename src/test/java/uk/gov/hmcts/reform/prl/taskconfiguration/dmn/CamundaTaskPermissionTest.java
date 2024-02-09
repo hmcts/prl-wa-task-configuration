@@ -16,7 +16,6 @@ import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 
 import java.io.Serializable;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 import java.util.stream.Stream;
 
@@ -692,8 +691,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
-            taskSupervisor
-            , Map.of(
+            taskSupervisor,
+            Map.of(
                 "autoAssignable", false,
                 "name", "hearing-centre-team-leader",
                 "roleCategory", "ADMIN",
