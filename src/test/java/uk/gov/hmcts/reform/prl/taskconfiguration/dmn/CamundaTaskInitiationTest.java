@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(17));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(68));
+        assertThat(logic.getRules().size(), is(70));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -636,6 +636,70 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "name", "Remove legal representative",
                         "processCategories", "citizenNoC",
                         "taskId", "removeLegalRepresentativeFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "c100RequestSupport",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewRaRequestsC100",
+                        "name", "Review RA request",
+                        "processCategories", "reviewRAC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "fl401RequestSupport",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewRaRequestsFL401",
+                        "name", "Review RA request",
+                        "processCategories", "reviewRAFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "c100ManageSupport",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewInactiveRaRequestsC100",
+                        "name", "Review inactive RA request",
+                        "processCategories", "reviewInactiveRAC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "fl401ManageSupport",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewInactiveRaRequestsFL401",
+                        "name", "Review inactive RA request",
+                        "processCategories", "reviewInactiveRAFL401"
                     )
                 )
             ),
