@@ -35,9 +35,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(17));
+        assertThat(logic.getInputs().size(), is(18));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(72));
+        assertThat(logic.getRules().size(), is(77));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -720,11 +720,11 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "serviceOfApplication",
+                "confidentialityCheck",
                 "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"isC8CheckNeeded\":\"" + "No" + "\"\n"
+                                      + "      \"isC8CheckApproved\":\"" + "No" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -740,16 +740,11 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"isC8CheckNeeded\":\"" + "Yes" + "\"\n,"
+                                      + "      \"isC8CheckNeeded\":\"" + "No" + "\"\n,"
                                       + "      \"responsibleForService\":\"" + "applicantLegalRepresentative" + "\"\n"
                                       + "   }"
                                       + "}"),
                 List.of(
-                    Map.of(
-                        "name", "C8 - Confidential details check",
-                        "processCategories", "confidentialCheck",
-                        "taskId", "confidentialCheckSOA"
-                    ),
                     Map.of(
                         "name", "Application statement of service due for Application",
                         "processCategories", "statementOfServiceBySolicitor",
@@ -768,11 +763,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 List.of(
                     Map.of(
-                        "name", "Recreate Application Pack",
-                        "processCategories", "recreateApplicationPack",
-                        "taskId", "recreateApplicationPack"
-                    ),
-                    Map.of(
                         "name", "Application statement of service due for Application",
                         "processCategories", "statementOfServiceByCitizen",
                         "taskId", "appStatementOfServiceByLiP"
@@ -784,16 +774,11 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"isC8CheckNeeded\":\"" + "Yes" + "\"\n,"
+                                      + "      \"isC8CheckNeeded\":\"" + "No" + "\"\n,"
                                       + "      \"responsibleForService\":\"" + "courtBailiff" + "\"\n"
                                       + "   }"
                                       + "}"),
                 List.of(
-                    Map.of(
-                        "name", "C8 - Confidential details check",
-                        "processCategories", "confidentialCheck",
-                        "taskId", "confidentialCheckSOA"
-                    ),
                     Map.of(
                         "name", "Application statement of service due for Application",
                         "processCategories", "statementOfServiceByBailiff",
@@ -817,10 +802,78 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 List.of(
                     Map.of(
-                        "name", "Recreate Application Pack",
-                        "processCategories", "recreateApplicationPack",
-                        "taskId", "recreateApplicationPack"
+                        "name", "Arrange personal service of application and upload statement of service",
+                        "processCategories", "statementOfServiceByAdmin",
+                        "taskId", "appStatementOfServiceByAdmin"
+                    )
+                )
+            ),
+            Arguments.of(
+                "confidentialityCheck",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckApproved\":\"" + "Yes" + "\"\n,"
+                                      + "      \"responsibleForService\":\"" + "applicantLegalRepresentative" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Application statement of service due for Application",
+                        "processCategories", "statementOfServiceBySolicitor",
+                        "taskId", "appStatementOfServiceBySol"
+                    )
+                )
+            ),
+            Arguments.of(
+                "confidentialityCheck",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckApproved\":\"" + "Yes" + "\"\n,"
+                                      + "      \"responsibleForService\":\"" + "unrepresentedApplicant" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Application statement of service due for Application",
+                        "processCategories", "statementOfServiceByCitizen",
+                        "taskId", "appStatementOfServiceByLiP"
+                    )
+                )
+            ),
+            Arguments.of(
+                "confidentialityCheck",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckApproved\":\"" + "Yes" + "\"\n,"
+                                      + "      \"responsibleForService\":\"" + "courtBailiff" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Application statement of service due for Application",
+                        "processCategories", "statementOfServiceByBailiff",
+                        "taskId", "appStatementOfServiceByBailiff"
                     ),
+                    Map.of(
+                        "name", "Arrange bailiff service of application",
+                        "processCategories", "arrangeBailiffSOA",
+                        "taskId", "arrangeBailiffSOA"
+                    )
+                )
+            ),
+            Arguments.of(
+                "confidentialityCheck",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckApproved\":\"" + "Yes" + "\"\n,"
+                                      + "      \"responsibleForService\":\"" + "courtAdmin" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
                     Map.of(
                         "name", "Arrange personal service of application and upload statement of service",
                         "processCategories", "statementOfServiceByAdmin",
