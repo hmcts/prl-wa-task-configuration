@@ -751,7 +751,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "appStatementOfServiceByLiP",
         "appStatementOfServiceByBailiff",
         "arrangeBailiffSOA",
-        "appStatementOfServiceByAdmin"
+        "appStatementOfServiceByAdmin",
+        "completefl416AndServe"
     })
     void evaluate_task_admin_statementOfService(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();

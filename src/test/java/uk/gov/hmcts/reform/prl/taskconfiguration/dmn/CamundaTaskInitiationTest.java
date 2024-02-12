@@ -35,9 +35,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(18));
+        assertThat(logic.getInputs().size(), is(19));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(77));
+        assertThat(logic.getRules().size(), is(78));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -746,7 +746,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 List.of(
                     Map.of(
-                        "name", "Application statement of service due for Application",
+                        "name", "Application statement of service due",
                         "processCategories", "statementOfServiceBySolicitor",
                         "taskId", "appStatementOfServiceBySol"
                     )
@@ -763,7 +763,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 List.of(
                     Map.of(
-                        "name", "Application statement of service due for Application",
+                        "name", "Application statement of service due",
                         "processCategories", "statementOfServiceByCitizen",
                         "taskId", "appStatementOfServiceByLiP"
                     )
@@ -780,7 +780,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 List.of(
                     Map.of(
-                        "name", "Application statement of service due for Application",
+                        "name", "Application statement of service due",
                         "processCategories", "statementOfServiceByBailiff",
                         "taskId", "appStatementOfServiceByBailiff"
                     ),
@@ -809,6 +809,23 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "serviceOfApplication",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"isOccupationOrderSelected\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Complete FL416 and serve applicant only",
+                        "processCategories", "completefl416AndServe",
+                        "taskId", "completefl416AndServe"
+                    )
+                )
+            ),
+            Arguments.of(
                 "confidentialityCheck",
                 "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
@@ -819,7 +836,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 List.of(
                     Map.of(
-                        "name", "Application statement of service due for Application",
+                        "name", "Application statement of service due",
                         "processCategories", "statementOfServiceBySolicitor",
                         "taskId", "appStatementOfServiceBySol"
                     )
@@ -836,7 +853,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 List.of(
                     Map.of(
-                        "name", "Application statement of service due for Application",
+                        "name", "Application statement of service due",
                         "processCategories", "statementOfServiceByCitizen",
                         "taskId", "appStatementOfServiceByLiP"
                     )
@@ -853,7 +870,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 List.of(
                     Map.of(
-                        "name", "Application statement of service due for Application",
+                        "name", "Application statement of service due",
                         "processCategories", "statementOfServiceByBailiff",
                         "taskId", "appStatementOfServiceByBailiff"
                     ),
