@@ -34,21 +34,21 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "autoAssignable", true,
         "name", "gatekeeping-judge",
         "roleCategory", "JUDICIAL",
-        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
         "assignmentPriority", 1
     );
     private static final Map<String, Serializable> allocatedJudge = Map.of(
             "autoAssignable", true,
             "name", "allocated-judge",
             "roleCategory", "JUDICIAL",
-            "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+            "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
             "assignmentPriority", 1
     );
     private static final Map<String, Serializable> judgeOne = Map.of(
             "autoAssignable", false,
             "name", "judge",
             "roleCategory", "JUDICIAL",
-            "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+            "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
             "authorisations", "315"
     );
 
@@ -82,20 +82,20 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "name", "hearing-judge",
         "roleCategory", "JUDICIAL",
         "assignmentPriority", 1,
-        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
     );
     private static final Map<String, Serializable> tribunalCaseworker = Map.of(
         "autoAssignable", false,
         "name", "tribunal-caseworker",
         "roleCategory", "LEGAL_OPERATIONS",
-        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
         "authorisations","SKILL:ABA5:GATEKEEPING"
     );
     private static final Map<String, Serializable> allocatedLegalAdviser = Map.of(
         "autoAssignable", true,
         "name", "allocated-legal-adviser",
         "roleCategory", "LEGAL_OPERATIONS",
-        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
         "assignmentPriority", 1
     );
 
@@ -281,7 +281,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401"
             )
         )));
@@ -307,7 +307,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:HEARINGMANAGEMENTFL401"
             )
         )));
@@ -359,7 +359,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401"
             )
         )));
@@ -385,7 +385,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "value", "Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:REVIEWCORRESPONDENCEFL401"
             )
         )));
@@ -413,7 +413,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "ctsc",
                 "roleCategory", "CTSC",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations","SKILL:ABA5:CHECKAPPLICATIONC100"
             )
         )));
@@ -439,7 +439,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "ctsc",
                 "roleCategory", "CTSC",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:HEARINGMANAGEMENTC100"
             )
         )));
@@ -491,7 +491,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "ctsc",
                 "roleCategory", "CTSC",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations","SKILL:ABA5:ORDERMANAGEMENTC100"
             )
         )));
@@ -517,7 +517,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "ctsc",
                 "roleCategory", "CTSC",
-                "value", "Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "value", "Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:REVIEWCORRESPONDENCEC100"
             )
         )));
@@ -544,7 +544,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "ctsc",
                 "roleCategory", "CTSC",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONC100",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
             )
         )));
     }
@@ -570,7 +570,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
             )
         )));
     }
@@ -596,7 +596,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "ctsc",
                 "roleCategory", "CTSC",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONC100",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
             )
         )));
     }
@@ -622,7 +622,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
             )
         )));
     }
@@ -649,7 +649,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "ctsc",
                 "roleCategory", "CTSC",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONC100",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
             )
         )));
     }
@@ -675,7 +675,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
             )
         )));
     }
@@ -697,7 +697,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "hearing-centre-team-leader",
                 "roleCategory", "ADMIN",
                 "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
             )
         )));
     }
@@ -737,7 +737,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:HEARINGMANAGEMENTFL401"
             )
 
@@ -766,7 +766,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401"
             )
 

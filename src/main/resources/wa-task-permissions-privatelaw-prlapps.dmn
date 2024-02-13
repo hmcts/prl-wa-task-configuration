@@ -68,7 +68,7 @@
           <text>"gatekeeping-judge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1p95vwv">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_04guyo0">
           <text>"JUDICIAL"</text>
@@ -98,7 +98,7 @@
           <text>"hearing-judge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1i3bpr2">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0g0w413">
           <text>"JUDICIAL"</text>
@@ -128,7 +128,7 @@
           <text>"allocated-judge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1j6thxt">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0wycvta">
           <text>"JUDICIAL"</text>
@@ -159,7 +159,7 @@
           <text>"judge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ekjswr">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1tlohef">
           <text>"JUDICIAL"</text>
@@ -220,7 +220,7 @@
           <text>"allocated-legal-adviser"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1bg25yb">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_04obl9v">
           <text>"LEGAL_OPERATIONS"</text>
@@ -251,7 +251,7 @@
           <text>"tribunal-caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1nhvpem">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03nq5c0">
           <text>"LEGAL_OPERATIONS"</text>
@@ -281,7 +281,7 @@
           <text>"allocated-legal-adviser"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0kj8zo2">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xg3b8t">
           <text>"LEGAL_OPERATIONS"</text>
@@ -311,7 +311,7 @@
           <text>"tribunal-caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0dspoo2">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03yetpt">
           <text>"LEGAL_OPERATIONS"</text>
@@ -372,7 +372,7 @@
           <text>"hearing-centre-admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08cueo7">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0sd0fo0">
           <text>"ADMIN"</text>
@@ -402,7 +402,7 @@
           <text>"hearing-centre-admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_194ifzv">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_12csz1u">
           <text>"ADMIN"</text>
@@ -462,7 +462,7 @@
           <text>"hearing-centre-admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1r2erhs">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19b8517">
           <text>"ADMIN"</text>
@@ -491,7 +491,7 @@
           <text>"hearing-centre-admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1rj11t8">
-          <text>"Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1awke1s">
           <text>"ADMIN"</text>
@@ -551,7 +551,7 @@
           <text>"hearing-centre-team-leader"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1lg3mf0">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0wm6o2m">
           <text>"ADMIN"</text>
@@ -583,7 +583,7 @@
           <text>"ctsc"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09o2reg">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1sso00i">
           <text>"CTSC"</text>
@@ -613,7 +613,7 @@
           <text>"ctsc"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09ijhe4">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1wy8ulv">
           <text>"CTSC"</text>
@@ -675,7 +675,7 @@
           <text>"ctsc"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1htvolh">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ls2v9q">
           <text>"CTSC"</text>
@@ -705,7 +705,7 @@
           <text>"ctsc"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0wy7hbb">
-          <text>"Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1t4uyg3">
           <text>"CTSC"</text>
