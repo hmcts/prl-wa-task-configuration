@@ -35,9 +35,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(16));
+        assertThat(logic.getInputs().size(), is(19));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(66));
+        assertThat(logic.getRules().size(), is(78));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -702,6 +702,201 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "processCategories", "reviewInactiveRAFL401"
                     )
                 )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckNeeded\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "name", "C8 - Confidential details check",
+                        "processCategories", "confidentialCheck",
+                        "taskId", "confidentialCheckSOA"
+                    )
+                )
+            ),
+            Arguments.of(
+                "confidentialityCheck",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckApproved\":\"" + "No" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "name", "Recreate Application Pack",
+                        "processCategories", "recreateApplicationPack",
+                        "taskId", "recreateApplicationPack"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckNeeded\":\"" + "No" + "\"\n,"
+                                      + "      \"responsibleForService\":\"" + "applicantLegalRepresentative" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Application statement of service due",
+                        "processCategories", "statementOfServiceBySolicitor",
+                        "taskId", "appStatementOfServiceBySol"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckNeeded\":\"" + "No" + "\"\n,"
+                                      + "      \"responsibleForService\":\"" + "unrepresentedApplicant" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Application statement of service due",
+                        "processCategories", "statementOfServiceByCitizen",
+                        "taskId", "appStatementOfServiceByLiP"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckNeeded\":\"" + "No" + "\"\n,"
+                                      + "      \"responsibleForService\":\"" + "courtBailiff" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Application statement of service due",
+                        "processCategories", "statementOfServiceByBailiff",
+                        "taskId", "appStatementOfServiceByBailiff"
+                    ),
+                    Map.of(
+                        "name", "Arrange bailiff service of application",
+                        "processCategories", "arrangeBailiffSOA",
+                        "taskId", "arrangeBailiffSOA"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckNeeded\":\"" + "No" + "\"\n,"
+                                      + "      \"responsibleForService\":\"" + "courtAdmin" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Arrange personal service of application and upload statement of service",
+                        "processCategories", "statementOfServiceByAdmin",
+                        "taskId", "appStatementOfServiceByAdmin"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"isOccupationOrderSelected\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Complete FL416 and serve applicant only",
+                        "processCategories", "completefl416AndServe",
+                        "taskId", "completefl416AndServe"
+                    )
+                )
+            ),
+            Arguments.of(
+                "confidentialityCheck",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckApproved\":\"" + "Yes" + "\"\n,"
+                                      + "      \"responsibleForService\":\"" + "applicantLegalRepresentative" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Application statement of service due",
+                        "processCategories", "statementOfServiceBySolicitor",
+                        "taskId", "appStatementOfServiceBySol"
+                    )
+                )
+            ),
+            Arguments.of(
+                "confidentialityCheck",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckApproved\":\"" + "Yes" + "\"\n,"
+                                      + "      \"responsibleForService\":\"" + "unrepresentedApplicant" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Application statement of service due",
+                        "processCategories", "statementOfServiceByCitizen",
+                        "taskId", "appStatementOfServiceByLiP"
+                    )
+                )
+            ),
+            Arguments.of(
+                "confidentialityCheck",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckApproved\":\"" + "Yes" + "\"\n,"
+                                      + "      \"responsibleForService\":\"" + "courtBailiff" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Application statement of service due",
+                        "processCategories", "statementOfServiceByBailiff",
+                        "taskId", "appStatementOfServiceByBailiff"
+                    ),
+                    Map.of(
+                        "name", "Arrange bailiff service of application",
+                        "processCategories", "arrangeBailiffSOA",
+                        "taskId", "arrangeBailiffSOA"
+                    )
+                )
+            ),
+            Arguments.of(
+                "confidentialityCheck",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckApproved\":\"" + "Yes" + "\"\n,"
+                                      + "      \"responsibleForService\":\"" + "courtAdmin" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Arrange personal service of application and upload statement of service",
+                        "processCategories", "statementOfServiceByAdmin",
+                        "taskId", "appStatementOfServiceByAdmin"
+                    )
+                )
             )
         );
     }
@@ -723,58 +918,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
 
         assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
     }
-
-    static Stream<Arguments> scenarioProviderManageOrder() {
-        return Stream.of(
-            Arguments.of(
-                "manageOrders",
-                null,
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
-                                      + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
-                                      + "      \"performingAction\":\"" + "Yes" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "adminServeOrderCreatedByJudgeC100",
-                        "name", "Service Of Order",
-                        "processCategories", "adminServeOrderCreatedByJudgeC100"
-                    )
-                ),
-                Arguments.of(
-                    "serviceOfApplication",
-                    "JUDICIAL_REVIEW",
-                    null,
-                    singletonList(
-                        Map.of(
-                            "name", "Confidentiality Check  before Serving the Application",
-                            "processCategories", "confidentialCheck",
-                            "taskId", "confidentialCheckSOA"
-                        )
-                    )
-                )
-            )
-        );
-    }
-
-    /*@ParameterizedTest(name = "event id: {0} post event state: {1} additional data: {2}")
-    @MethodSource("scenarioProviderManageOrder")
-    void given_multiple_event_ids_should_evaluate_dmn_1(String eventId,
-                                                      String postEventState,
-                                                      Map<String, Object> map1,
-                                                      List<Map<String, String>> expectation) {
-
-        VariableMap inputVariables = new VariableMapImpl();
-        inputVariables.putValue("eventId", eventId);
-        inputVariables.putValue("postEventState", postEventState);
-        inputVariables.putValue("additionalData ", map1);
-
-        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
-
-        assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
-    }*/
 
     private static Map<String, Object> mapAdditionalData(String additionalData) {
         ObjectMapper mapper = new ObjectMapper();

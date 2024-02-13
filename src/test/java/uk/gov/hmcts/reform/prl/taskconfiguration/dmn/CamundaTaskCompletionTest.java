@@ -275,7 +275,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                 "serviceOfApplication",
                 asList(
                     Map.of(
-                        "taskType", "confidentialCheckSOA",
+                        "taskType", "recreateApplicationPack",
                         "completionMode", "Auto"
                     ),
                     Map.of(
@@ -287,6 +287,32 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of()
+                )
+            ),
+            Arguments.of(
+                "statementOfService",
+                asList(
+                    Map.of(
+                        "taskType", "appStatementOfServiceByBailiff",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "arrangeBailiffSOA",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "appStatementOfServiceByAdmin",
+                        "completionMode", "Auto"
+                    )
+                )
+            ),
+            Arguments.of(
+                "confidentialityCheck",
+                asList(
+                    Map.of(
+                        "taskType", "confidentialCheckSOA",
+                        "completionMode", "Auto"
+                    )
                 )
             ),
             Arguments.of(
@@ -330,7 +356,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(56));
+        assertThat(logic.getRules().size(), is(60));
     }
 
 
