@@ -67,6 +67,29 @@
           <text>"requestSolicitorOrder"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1djj0fm">
+        <inputEntry id="UnaryTests_1akpob1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r737uf">
+          <text>"statementOfService"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14j8nej">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lztqp4">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x6v2g0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1leuf57">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rhbhrs">
+          <text>"statementOfServiceBySolicitor"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_17vm1l0">
         <inputEntry id="UnaryTests_1ohkznv">
           <text></text>
