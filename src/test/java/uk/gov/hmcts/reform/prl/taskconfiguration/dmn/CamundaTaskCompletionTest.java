@@ -252,6 +252,15 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "hmcCaseUpdPrepForHearing",
+                asList(
+                    Map.of(
+                        "taskType", "createHearingRequest",
+                        "completionMode", "Auto"
+                    )
+                )
+            ),
+            Arguments.of(
                 "adminRemoveLegalRepresentativeC100",
                 asList(
                     Map.of(
@@ -357,7 +366,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(60));
+        assertThat(logic.getRules().size(), is(61));
     }
 
 

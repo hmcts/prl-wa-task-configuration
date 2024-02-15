@@ -1453,6 +1453,77 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"reviewSolicitorOrderByJudge"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1emjzjf">
+        <inputEntry id="UnaryTests_0olh9v4">
+          <text>"editReturnedOrder"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bouv0p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_086cd3t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zak84u">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1li2cr6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u7afos">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xvq26z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uwposs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11mpha0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dam6cm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_152cs6a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ey4q4c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iizlxm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16rmwuk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ixyoeg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mkpayy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yibzz4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_157wrn7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00056ra">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0cwoaw4">
+          <text>"reviewSolicitorOrderProvided"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1un7iwm">
+          <text>"Review resubmitted Order"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z3p7cl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0618645">
+          <text>"reviewReturnedSolicitorOrderByJudge"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0xzi2j0">
         <inputEntry id="UnaryTests_1xiod7u">
           <text>
