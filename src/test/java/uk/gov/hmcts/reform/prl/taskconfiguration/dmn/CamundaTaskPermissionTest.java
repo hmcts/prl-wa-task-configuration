@@ -96,6 +96,13 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "name", "allocated-legal-adviser",
         "roleCategory", "LEGAL_OPERATIONS",
         "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
+        "assignmentPriority", 2
+    );
+    private static final Map<String, Serializable> allocatedLegalAdviserOne = Map.of(
+        "autoAssignable", true,
+        "name", "allocated-legal-adviser",
+        "roleCategory", "LEGAL_OPERATIONS",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
         "assignmentPriority", 1
     );
 
@@ -255,7 +262,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
             taskSupervisor,
             gatekeepingJudge,
             judgeOne,
-            allocatedLegalAdviser,
+            allocatedLegalAdviserOne,
             tribunalCaseworker
         )));
     }
