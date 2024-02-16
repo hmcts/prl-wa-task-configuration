@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(19));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(81));
+        assertThat(logic.getRules().size(), is(82));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -826,6 +826,25 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"isC8CheckNeeded\":\"" + "No" + "\"\n,"
+                                      + "      \"isOccupationOrderSelected\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Complete FL416 and serve applicant only",
+                        "processCategories", "completefl416AndServe",
+                        "taskId", "completefl416AndServe"
+                    )
+                )
+            ),
+            Arguments.of(
+                "confidentialityCheck",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"isOccupationOrderSelected\":\"" + "Yes" + "\"\n,"
                                       + "      \"isOccupationOrderSelected\":\"" + "Yes" + "\"\n"
                                       + "   }"
                                       + "}"),
