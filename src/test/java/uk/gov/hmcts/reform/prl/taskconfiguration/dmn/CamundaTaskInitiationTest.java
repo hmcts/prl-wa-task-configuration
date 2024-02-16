@@ -844,7 +844,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
-                                      + "      \"isOccupationOrderSelected\":\"" + "Yes" + "\"\n,"
+                                      + "      \"isC8CheckApproved\":\"" + "Yes" + "\"\n,"
                                       + "      \"isOccupationOrderSelected\":\"" + "Yes" + "\"\n"
                                       + "   }"
                                       + "}"),
