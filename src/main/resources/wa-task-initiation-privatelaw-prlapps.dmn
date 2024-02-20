@@ -131,7 +131,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"Yes","No"</text>
         </inputValues>
       </input>
-      <input id="InputClause_1ap6y2o" label="C8 Confident Approved" biodi:width="150" camunda:inputVariable="confidentialCheck">
+      <input id="InputClause_1ap6y2o" label="Occupational Order" biodi:width="150" camunda:inputVariable="confidentialCheck">
         <inputExpression id="LiteralExpression_1ae63a2" typeRef="string">
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.isOccupationOrderSelected
             != null) then
