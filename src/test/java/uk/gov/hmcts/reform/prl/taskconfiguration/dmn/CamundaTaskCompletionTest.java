@@ -40,7 +40,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "checkResubmittedApplicationC100",
+                        "taskType", "checkApplicationResubmittedC100",
                         "completionMode", "Auto"
                     )
                 )
@@ -53,7 +53,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "checkResubmittedApplicationC100",
+                        "taskType", "checkApplicationResubmittedC100",
                         "completionMode", "Auto"
                     ),
                     Map.of(
@@ -61,7 +61,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "checkResubmittedFL401Application",
+                        "taskType", "checkApplicationResubmittedFL401",
                         "completionMode", "Auto"
                     ),
                     Map.of(
@@ -149,7 +149,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "checkResubmittedFL401Application",
+                        "taskType", "checkApplicationResubmittedFL401",
                         "completionMode", "Auto"
                     )
                 )

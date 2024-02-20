@@ -36,7 +36,7 @@
           <text>"issueAndSendToLocalCourtCallback"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1fvs4ef">
-          <text>"checkResubmittedApplicationC100"	</text>
+          <text>"checkApplicationResubmittedC100"	</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ap5cbf">
           <text>"Auto"</text>
@@ -47,7 +47,7 @@
           <text>"returnApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_03n9vmg">
-          <text>"checkResubmittedApplicationC100"</text>
+          <text>"checkApplicationResubmittedC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1q9qfqc">
           <text>"Auto"</text>
@@ -80,7 +80,7 @@
           <text>"fl401AddCaseNumber"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0pskzq1">
-          <text>"checkResubmittedFL401Application"</text>
+          <text>"checkApplicationResubmittedFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1rpsgob">
           <text>"Auto"</text>
@@ -91,7 +91,7 @@
           <text>"returnApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_11aiwcs">
-          <text>"checkResubmittedFL401Application"</text>
+          <text>"checkApplicationResubmittedFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_07wwxgc">
           <text>"Auto"</text>
