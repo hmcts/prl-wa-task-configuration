@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(19));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(87));
+        assertThat(logic.getRules().size(), is(88));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -926,6 +926,18 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "name", "Arrange personal service of application and upload statement of service",
                         "processCategories", "statementOfServiceByAdmin",
                         "taskId", "appStatementOfServiceByAdmin"
+                    )
+                )
+            ),
+            Arguments.of(
+                "listWithoutNoticeHearingC100",
+                null,
+                null,
+                List.of(
+                    Map.of(
+                        "name", "List without notice hearing (see case notes)",
+                        "processCategories", "listWithoutNoticeHearingC100",
+                        "taskId", "listWithoutNoticeHearingC100"
                     )
                 )
             )
