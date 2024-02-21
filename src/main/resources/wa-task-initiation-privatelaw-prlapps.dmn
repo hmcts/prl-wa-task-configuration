@@ -6021,75 +6021,359 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"reviewDocsFL401"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1hhgnzo">
-        <inputEntry id="UnaryTests_00xmbx7">
-          <text>"listWithoutNoticeHearingC100"</text>
+      <rule id="DecisionRule_07v6ebu">
+        <inputEntry id="UnaryTests_0erfvoy">
+          <text>"c100ResSolSubmitA"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_02ufd53">
+        <inputEntry id="UnaryTests_19c5meo">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1qh3onj">
+        <inputEntry id="UnaryTests_1ldrwqf">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1u42d7s">
+        <inputEntry id="UnaryTests_0crmjjt">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0e7ytab">
+        <inputEntry id="UnaryTests_1b515xu">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0oecvt2">
+        <inputEntry id="UnaryTests_0xxh57o">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_16fii3s">
+        <inputEntry id="UnaryTests_0twk9zn">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_04e81ul">
+        <inputEntry id="UnaryTests_1tbqdky">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0t0rcio">
+        <inputEntry id="UnaryTests_0nttowp">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0fnhatn">
+        <inputEntry id="UnaryTests_1nuvq9o">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_04n5iwo">
+        <inputEntry id="UnaryTests_17tof8l">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0kuqjl5">
+        <inputEntry id="UnaryTests_17nghzq">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_11q86yd">
+        <inputEntry id="UnaryTests_1v2u1pv">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1cq0eyq">
+        <inputEntry id="UnaryTests_1uz1k5g">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1buiag2">
+        <inputEntry id="UnaryTests_1qhl0eu">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0x9p8xv">
+        <inputEntry id="UnaryTests_1jv4v4g">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1ekcpjp">
+        <inputEntry id="UnaryTests_1vmhid0">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_05h91i6">
-          <text></text>
+        <inputEntry id="UnaryTests_018nfqz">
+          <text>"SOLICITOR"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_141dbv9">
-          <text></text>
+        <inputEntry id="UnaryTests_0k51l5i">
+          <text>"True"</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_1ffa1g7">
-          <text>"listWithoutNoticeHearingC100"</text>
+        <outputEntry id="LiteralExpression_1qpy0gk">
+          <text>"reviewDocumentsForSolAndCafcassC100"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0ro05nn">
-          <text>"List without notice hearing (see case notes)"</text>
+        <outputEntry id="LiteralExpression_1ot849g">
+          <text>"Review Documents"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1jl56cm">
+        <outputEntry id="LiteralExpression_1c41o3j">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1221c1c">
-          <text>"listWithoutNoticeHearingC100"</text>
+        <outputEntry id="LiteralExpression_1m31vkt">
+          <text>"reviewDocsC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_182qhdy">
+        <inputEntry id="UnaryTests_1uwr923">
+          <text>"c100ResSolSubmitB"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qki2vm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12d0lkj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1081drp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00vhcal">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09qmccq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vnm8ld">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vj2ncx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19mwthx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hv83un">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_083who1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uchhnt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uw2a4y">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nuxwkj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gm7rg9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uhr3vq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ry6di0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1f7fbz9">
+          <text>"SOLICITOR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rp87u1">
+          <text>"True"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12o9orv">
+          <text>"reviewDocumentsForSolAndCafcassC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dv60o2">
+          <text>"Review Documents"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16qji5b">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_141fmbj">
+          <text>"reviewDocsC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xga7x4">
+        <inputEntry id="UnaryTests_13ggvtb">
+          <text>"c100ResSolSubmitC"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f5qtu5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vddj1j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qede54">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qd1rqs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yy96m4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r51681">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r7m0l6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1prw63k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xs6ggv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14ve70t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u4l9uk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19skmwt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m1pyrc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mf380x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08f02d6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nx21zr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rh4rjk">
+          <text>"SOLICITOR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gxf1h1">
+          <text>"True"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1v6s14q">
+          <text>"reviewDocumentsForSolAndCafcassC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1w6wofb">
+          <text>"Review Documents"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lk2cg7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0127hfy">
+          <text>"reviewDocsC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kq4ia9">
+        <inputEntry id="UnaryTests_0y8mfe6">
+          <text>"c100ResSolSubmitD"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wo89it">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h839v5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hukh0u">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0obdpj0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08rszbs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16vxn9k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nghvwo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zvqkac">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j0j1oq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nvhmmz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h5pxti">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uq98sr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03yi9oz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_170h5ty">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03cbmm6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09wnhw4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pxxrw9">
+          <text>"SOLICITOR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h4c9a1">
+          <text>"True"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bset8m">
+          <text>"reviewDocumentsForSolAndCafcassC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_045tbqk">
+          <text>"Review Documents"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18dqss6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x5m42j">
+          <text>"reviewDocsC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08m45bm">
+        <inputEntry id="UnaryTests_1ut1op2">
+          <text>"c100ResSolSubmitE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17sijc0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xlu0u1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gto08c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pdyrl5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uwmg27">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xekdlr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1whqx47">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vnq9fn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d11vi5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xq48h9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o4z1h4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jqh3a7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1byiu83">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l778ok">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rv62mf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13xunc4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19lro40">
+          <text>"SOLICITOR"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0olfo6v">
+          <text>"True"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0308pnn">
+          <text>"reviewDocumentsForSolAndCafcassC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16lshwd">
+          <text>"Review Documents"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jk8h29">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ww6pnb">
+          <text>"reviewDocsC100"</text>
         </outputEntry>
       </rule>
     </decisionTable>

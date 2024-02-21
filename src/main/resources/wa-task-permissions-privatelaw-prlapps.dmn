@@ -610,13 +610,13 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19obhmm">
-          <text>"ctsc"</text>
+          <text>"hearing-centre-admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09ijhe4">
           <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1wy8ulv">
-          <text>"CTSC"</text>
+          <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0kj034r">
           <text>"SKILL:ABA5:HEARINGMANAGEMENTC100"</text>
@@ -640,13 +640,13 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1535ski">
-          <text>"ctsc"</text>
+          <text>"hearing-centre-admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1shehdx">
           <text>"Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_16qbdgi">
-          <text>"CTSC"</text>
+          <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0qdcdmu">
           <text>
@@ -672,13 +672,13 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1da4luj">
-          <text>"ctsc"</text>
+          <text>"hearing-centre-admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1htvolh">
           <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ls2v9q">
-          <text>"CTSC"</text>
+          <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0fsxebg">
           <text>"SKILL:ABA5:ORDERMANAGEMENTC100"</text>
@@ -702,13 +702,13 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0g7141c">
-          <text>"ctsc"</text>
+          <text>"hearing-centre-admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0wy7hbb">
           <text>"Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1t4uyg3">
-          <text>"CTSC"</text>
+          <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kx6utj">
           <text>"SKILL:ABA5:REVIEWCORRESPONDENCEC100"</text>
