@@ -444,8 +444,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false
             ), Map.of(
                 "autoAssignable", false,
-                "name", "ctsc",
-                "roleCategory", "CTSC",
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:HEARINGMANAGEMENTC100"
             )
@@ -470,8 +470,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false
             ), Map.of(
                 "autoAssignable", false,
-                "name", "ctsc",
-                "roleCategory", "CTSC",
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
                 "value", "Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
                 "authorisations","SKILL:ABA5:ORDERMANAGEMENTC100"
             )
@@ -496,8 +496,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false
             ), Map.of(
                 "autoAssignable", false,
-                "name", "ctsc",
-                "roleCategory", "CTSC",
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations","SKILL:ABA5:ORDERMANAGEMENTC100"
             )
@@ -522,8 +522,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false
             ), Map.of(
                 "autoAssignable", false,
-                "name", "ctsc",
-                "roleCategory", "CTSC",
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
                 "value", "Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:REVIEWCORRESPONDENCEC100"
             )
