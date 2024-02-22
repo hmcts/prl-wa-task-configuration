@@ -201,7 +201,7 @@
           <text>"sendToGateKeeper"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1pe5d3j">
-          <text>"sendToGateKeeperC100Resubmitted"</text>
+          <text>"sendToGateKeeperResubmittedC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0qwly2w">
           <text>"Auto"</text>
@@ -209,10 +209,10 @@
       </rule>
       <rule id="DecisionRule_1sijzow">
         <inputEntry id="UnaryTests_0yqlsr0">
-          <text>"fl401resubmit"</text>
+          <text>"fl401SendToGateKeeper"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0oik8xs">
-          <text>"sendToGateKeeperFL401Resubmitted"</text>
+          <text>"sendToGateKeeperResubmittedFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ifotbk">
           <text>"Auto"</text>
@@ -223,7 +223,7 @@
           <text>"returnApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_11ou54c">
-          <text>"sendToGateKeeperC100Resubmitted"</text>
+          <text>"sendToGateKeeperResubmittedC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1r3dutw">
           <text>"Auto"</text>
@@ -234,7 +234,7 @@
           <text>"returnApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_14rrads">
-          <text>"sendToGateKeeperFL401Resubmitted"</text>
+          <text>"sendToGateKeeperResubmittedFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0hyngcq">
           <text>"Auto"</text>
@@ -245,7 +245,7 @@
           <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0p6awc8">
-          <text>"sendToGateKeeperC100Resubmitted"</text>
+          <text>"sendToGateKeeperResubmittedC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_106s5o5">
           <text>"Auto"</text>
@@ -256,7 +256,7 @@
           <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_137xux7">
-          <text>"sendToGateKeeperFL401Resubmitted"</text>
+          <text>"sendToGateKeeperResubmittedFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_13c5hhf">
           <text>"Auto"</text>
