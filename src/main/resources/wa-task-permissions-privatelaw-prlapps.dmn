@@ -113,6 +113,36 @@
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_09n6w7e">
+        <description>Judicial task permissions</description>
+        <inputEntry id="UnaryTests_0sdetz8">
+          <text>"reviewSolicitorOrderProvided","reviewAdminOrderProvided"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qpumrg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zf45nc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1x807zt">
+          <text>"allocated-judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vvsynb">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b9hkxn">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wke5xs">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mrd42n">
+          <text>2</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09afhfs">
+          <text>true</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0mgj8vp">
         <description>Judicial task permissions</description>
         <inputEntry id="UnaryTests_04v6cwo">

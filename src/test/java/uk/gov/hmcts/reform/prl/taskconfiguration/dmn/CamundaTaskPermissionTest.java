@@ -44,6 +44,13 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
             "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
             "assignmentPriority", 1
     );
+    private static final Map<String, Serializable> allocatedJudgeTwo = Map.of(
+        "autoAssignable", true,
+        "name", "allocated-judge",
+        "roleCategory", "JUDICIAL",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
+        "assignmentPriority", 2
+    );
     private static final Map<String, Serializable> judgeOne = Map.of(
             "autoAssignable", false,
             "name", "judge",
@@ -146,6 +153,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     taskSupervisor,
                     hearingJudge,
+                    allocatedJudgeTwo,
                     judgeOne,
                     allocatedLegalAdviser,
                     tribunalCaseworker
@@ -156,6 +164,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     taskSupervisor,
                     hearingJudge,
+                    allocatedJudgeTwo,
                     judgeOne,
                     allocatedLegalAdviser,
                     tribunalCaseworker
@@ -786,6 +795,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(24));
+        assertThat(logic.getRules().size(), is(25));
     }
 }
