@@ -17,7 +17,6 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 import static java.util.Arrays.asList;
-import static java.util.Collections.singletonList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTable.WA_TASK_COMPLETION;
@@ -77,11 +76,11 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "sendToGateKeeperC100Resubmitted",
+                        "taskType", "sendToGateKeeperResubmittedC100",
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "sendToGateKeeperFL401Resubmitted",
+                        "taskType", "sendToGateKeeperResubmittedFL401",
                         "completionMode", "Auto"
                     ),
                     Map.of(
@@ -115,11 +114,11 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "sendToGateKeeperC100Resubmitted",
+                        "taskType", "sendToGateKeeperResubmittedC100",
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "sendToGateKeeperFL401Resubmitted",
+                        "taskType", "sendToGateKeeperResubmittedFL401",
                         "completionMode", "Auto"
                     ),
                     Map.of(
@@ -174,16 +173,19 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "taskType", "sendToGateKeeperC100",
                         "completionMode", "Auto"
                     ), Map.of(
-                        "taskType", "sendToGateKeeperC100Resubmitted",
+                        "taskType", "sendToGateKeeperResubmittedC100",
                         "completionMode", "Auto"
                     )
                 )
             ),
             Arguments.of(
                 "fl401SendToGateKeeper",
-                singletonList(
+                asList(
                     Map.of(
                         "taskType", "sendToGateKeeperFL401",
+                        "completionMode", "Auto"
+                    ), Map.of(
+                        "taskType", "sendToGateKeeperResubmittedFL401",
                         "completionMode", "Auto"
                     )
                 )
