@@ -579,29 +579,12 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0mgvh88">
-        <inputEntry id="UnaryTests_1djpz2a">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0jxn4rd">
-          <text>"adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1810xzt">
-          <text>"title"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_03ujaid">
-          <text>taskAttributes.name + " - " + caseData.orderNameForJudgeCreatedOrder</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1bjmkpf">
-          <text></text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0p49p1x">
         <inputEntry id="UnaryTests_11cjlzm">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0cknzbw">
-          <text>"adminServeOrderC100","adminServeOrderFL401"</text>
+          <text>"adminServeOrderC100","adminServeOrderFL401","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0vst95g">
           <text>"title"</text>
