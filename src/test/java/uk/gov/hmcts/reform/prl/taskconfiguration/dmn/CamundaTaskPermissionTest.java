@@ -44,6 +44,13 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
             "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
             "assignmentPriority", 1
     );
+    private static final Map<String, Serializable> allocatedJudgeTwo = Map.of(
+        "autoAssignable", true,
+        "name", "allocated-judge",
+        "roleCategory", "JUDICIAL",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
+        "assignmentPriority", 2
+    );
     private static final Map<String, Serializable> judgeOne = Map.of(
             "autoAssignable", false,
             "name", "judge",
@@ -91,19 +98,19 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
         "authorisations","SKILL:ABA5:GATEKEEPING"
     );
-    private static final Map<String, Serializable> allocatedLegalAdviser = Map.of(
-        "autoAssignable", true,
-        "name", "allocated-legal-adviser",
-        "roleCategory", "LEGAL_OPERATIONS",
-        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
-        "assignmentPriority", 2
-    );
     private static final Map<String, Serializable> allocatedLegalAdviserOne = Map.of(
         "autoAssignable", true,
         "name", "allocated-legal-adviser",
         "roleCategory", "LEGAL_OPERATIONS",
         "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
         "assignmentPriority", 1
+    );
+    private static final Map<String, Serializable> allocatedLegalAdviserThree = Map.of(
+        "autoAssignable", true,
+        "name", "allocated-legal-adviser",
+        "roleCategory", "LEGAL_OPERATIONS",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
+        "assignmentPriority", 3
     );
 
 
@@ -146,8 +153,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     taskSupervisor,
                     hearingJudge,
+                    allocatedJudgeTwo,
+                    allocatedLegalAdviserThree,
                     judgeOne,
-                    allocatedLegalAdviser,
                     tribunalCaseworker
                 )
             ),
@@ -156,8 +164,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     taskSupervisor,
                     hearingJudge,
+                    allocatedJudgeTwo,
+                    allocatedLegalAdviserThree,
                     judgeOne,
-                    allocatedLegalAdviser,
                     tribunalCaseworker
                 )
             )
@@ -786,6 +795,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(24));
+        assertThat(logic.getRules().size(), is(25));
     }
 }
