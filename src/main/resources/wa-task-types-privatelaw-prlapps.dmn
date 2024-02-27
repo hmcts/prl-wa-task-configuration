@@ -525,6 +525,29 @@
           <text>"List without notice hearing(see case notes)"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0c7vr0h">
+        <description>LNHCFL401</description>
+        <inputEntry id="UnaryTests_15ovwxb">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1otbief">
+          <text>"listOnNoticeHearingFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nt9jcd">
+          <text>"List on notice hearing(see case notes)"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1d1xj9j">
+        <inputEntry id="UnaryTests_07ikmzh">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1co403w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g6zo6n">
+          <text></text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
