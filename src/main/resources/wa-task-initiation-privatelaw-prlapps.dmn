@@ -459,6 +459,77 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"localCourtGatekeepingFL401"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_06d5lu6">
+        <inputEntry id="UnaryTests_1qp0a46">
+          <text>"courtnav-case-creation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mg9eer">
+          <text>"SUBMITTED_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10kpczc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02hir1m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jgvnae">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15gj0jz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g7hxjk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fwz89h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vfqp9e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a6z33l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r4plhr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uqgjcp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cuj77v">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19k5dsn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iz7ibw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wcqoqd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nkiob2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0goe9pj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dq38wg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1o7ffqx">
+          <text>"sendToGateKeeperFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_162a9c5">
+          <text>"Send to Gatekeeper"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_081dc7l">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_016yh8f">
+          <text>"localCourtGatekeepingFL401"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_04rx9im">
         <inputEntry id="UnaryTests_0ex8hvo">
           <text>"fl401resubmit"</text>
