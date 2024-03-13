@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN">
     <decisionTable id="DecisionTable_14cx079" hitPolicy="COLLECT">
       <input id="InputClause_1gxyo7f" label="CCD Case Data" camunda:inputVariable="caseData">
@@ -630,6 +630,23 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1gb0oe3">
+        <inputEntry id="UnaryTests_0qzor64">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dqe4w3">
+          <text>"adminServeOrderC100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ix2vnz">
+          <text>"additionalProperties_orderId"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_069etbk" expressionLanguage="javascript">
+          <text>variableContext.keySet().stream().filter(function (a) {return a.startsWith('__processCategory__orderId_')}).map(function (a) { return(a.substring(27)}).findFirst.get()</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1omo7lx">
+          <text>"false"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0ikmf14">
         <inputEntry id="UnaryTests_0epux74">
           <text></text>
@@ -641,7 +658,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"workType"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zoponq">
-          <text>"routine_work"</text>
+          <text>"routine_work</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19npk6t">
           <text></text>
