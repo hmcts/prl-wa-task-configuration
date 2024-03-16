@@ -624,7 +624,7 @@ caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"title"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nr7gfe">
-          <text>if(caseData.orderNameForAdminCreatedOrder !=null) then taskAttributes.name + " - " + caseData.orderNameForAdminCreatedOrder else if (caseData.orderNameForJudgeCreatedOrder != null ) then taskAttributes.name + " - " + caseData.orderNameForJudgeCreatedOrder else taskAttributes.name</text>
+          <text>if(caseData.orderNameForAdminCreatedOrder !=null) then (taskAttributes.name + " - " + caseData.orderNameForAdminCreatedOrder) else if (caseData.orderNameForJudgeCreatedOrder != null ) then taskAttributes.name + " - " + caseData.orderNameForJudgeCreatedOrder else taskAttributes.name</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0iicns5">
           <text></text>
