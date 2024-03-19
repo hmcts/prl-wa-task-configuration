@@ -647,6 +647,23 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"false"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1jmxtok">
+        <inputEntry id="UnaryTests_0eytl66">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0atoz9l">
+          <text>"reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ph6gpj">
+          <text>"additionalProperties_orderId"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kytwvw" expressionLanguage="javascript">
+          <text>variableContext.keySet().stream().filter(function (a) {return a.startsWith('__processCategory__orderId_')}).map(function (a) { return(a.substring(27)}).findFirst.get()</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00jyyl9">
+          <text>"false"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0ikmf14">
         <inputEntry id="UnaryTests_0epux74">
           <text></text>

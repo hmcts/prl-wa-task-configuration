@@ -1592,7 +1592,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_00rbli9">
-          <text>"reviewSolicitorOrderByJudge"</text>
+          <text>"orderId_"+additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1emjzjf">
