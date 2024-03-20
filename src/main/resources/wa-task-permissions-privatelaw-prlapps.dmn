@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-permissions-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-permissions-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
   <decision id="wa-task-permissions-privatelaw-prlapps" name="Private Law Permissions DMN">
     <decisionTable id="DecisionTable_1pr5oic" hitPolicy="RULE ORDER">
       <input id="InputClause_12crj6e" label="Task Type" biodi:width="578" camunda:inputVariable="taskType">
@@ -601,7 +601,7 @@
         <inputEntry id="UnaryTests_14xrsqw">
           <text>"checkApplicationC100", "checkApplicationResubmittedC100",
 "addCaseNumber", "addCaseNumberResubmitted",
-"sendToGateKeeperC100", "sendToGateKeeperResubmittedC100","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","listWithoutNoticeHearingC100"</text>
+"sendToGateKeeperC100", "sendToGateKeeperResubmittedC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1pv1c0z">
           <text></text>
@@ -625,6 +625,36 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ckfsm8">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1evorlb">
+        <description>CTSC task permissions</description>
+        <inputEntry id="UnaryTests_1k15vbg">
+          <text>"removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","listWithoutNoticeHearingC100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12k147l">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0eepq06">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06cc2sz">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1p4iqsg">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o80ap0">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08xtbog">
+          <text>"SKILL:ABA5:CHECKAPPLICATIONC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o7342c">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gg5ytu">
           <text>false</text>
         </outputEntry>
       </rule>
