@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(19));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(90));
+        assertThat(logic.getRules().size(), is(89));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -163,11 +163,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "   }"
                                       + "}"),
                 List.of(
-                    Map.of(
-                        "taskId", "addCaseNumberResubmitted",
-                        "name", "Add Case Number Resubmitted",
-                        "processCategories", "addCaseNumberC100Resubmit"
-                    ),
                     Map.of(
                         "taskId", "sendToGateKeeperResubmittedC100",
                         "name", "Send to Gatekeeper Resubmitted",

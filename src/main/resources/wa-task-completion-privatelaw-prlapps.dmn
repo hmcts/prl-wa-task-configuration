@@ -108,17 +108,6 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0tirx14">
-        <inputEntry id="UnaryTests_1b60snt">
-          <text>"caseNumber"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_190p0iw">
-          <text>"addCaseNumberResubmitted"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_00j054y">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1v9cegc">
         <inputEntry id="UnaryTests_1ckmgqx">
           <text>"returnApplication"</text>

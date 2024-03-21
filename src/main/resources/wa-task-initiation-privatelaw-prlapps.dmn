@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.20.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -883,77 +883,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_1pyp879">
           <text>"addCaseNumberC100"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0pk1qey">
-        <inputEntry id="UnaryTests_0jegrfu">
-          <text>"submit"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0hrb9kr">
-          <text>"CASE_ISSUED"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1onere6">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0skgkao">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1uth2bi">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1nlkptv">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_102eo4x">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_03vi0o9">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0z0vuo3">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0gnf6gj">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0efb6yt">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1h9grbw">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1d3cy61">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0246l2g">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0agnqif">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1sukj1e">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_18r9f61">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1r1q3k6">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1s0pvkk">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_13xfo34">
-          <text>"addCaseNumberResubmitted"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_039q3af">
-          <text>"Add Case Number Resubmitted"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0fc4ypw">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1javb3l">
-          <text>"addCaseNumberC100Resubmit"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_141yqc4">
