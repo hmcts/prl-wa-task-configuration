@@ -6589,6 +6589,77 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"listWithoutNoticeHearingC100"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_13py6g8">
+        <inputEntry id="UnaryTests_1gbyki3">
+          <text>"fl401ListOnNotice"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rqhomh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04467p9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e5ozqt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xgd001">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07tfgrg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_115ikox">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wuuiv2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wxt12o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uarfzo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0crtmyh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mwoqvs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h0nmm0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04yyruc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wovrks">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0frz2ud">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14m3u27">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tv3ece">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gikb1f">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0e9oebw">
+          <text>"listOnNoticeHearingFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07p5fx4">
+          <text>"Listing Instructions - refer to case notes"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02lx5e1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hhdghz">
+          <text>"listOnNoticeHearingFL401"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
