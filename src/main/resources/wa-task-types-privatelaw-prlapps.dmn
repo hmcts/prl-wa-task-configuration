@@ -525,6 +525,18 @@
           <text>"List without notice hearing(see case notes)"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1epamws">
+        <description>LONHFL401</description>
+        <inputEntry id="UnaryTests_1flpes9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0u5l586">
+          <text>"listOnNoticeHearingFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17r22b3">
+          <text>"Listing instructions (refer to case notes)"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
