@@ -930,7 +930,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "c100listWithoutNotice",
+                "listWithoutNotice",
                 null,
                 null,
                 List.of(
