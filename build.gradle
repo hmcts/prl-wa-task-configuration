@@ -176,9 +176,9 @@ dependencyCheck {
   analyzers {
     // Disable scanning of .NET related binaries
     assemblyEnabled = false
-    retirejs {
+    /*retirejs {
       enabled = false
-    }
+    }*/
   }
 }
 
