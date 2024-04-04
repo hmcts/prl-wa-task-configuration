@@ -14,3 +14,6 @@ management:
 spring:
   application:
     name: prl-wa-task-configuration
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
