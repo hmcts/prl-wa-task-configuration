@@ -28,6 +28,9 @@
     </notes>
     <cve>CVE-2015-0897</cve>
     <cve>CVE-2016-1000027</cve>
+    <cve>CVE-2023-5072</cve>
+    <cve>CVE-2022-45688</cve>
+    <cve>CVE-2023-6378</cve>
   </suppress>
 </suppressions>
 
