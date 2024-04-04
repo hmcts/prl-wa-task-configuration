@@ -33,14 +33,6 @@
     <cve>CVE-2022-45688</cve>
     <!--logback-->
     <cve>CVE-2023-6378</cve>
-    <!--snake-yaml-->
-    <!--<cve>CVE-2022-1471</cve>
-    <cve>CVE-2022-25857</cve>
-    <cve>CVE-2022-38749</cve>
-    <cve>CVE-2022-38751</cve>
-    <cve>CVE-2022-38752</cve>
-    <cve>CVE-2022-41854</cve>
-    <cve>CVE-2022-38750</cve>-->
   </suppress>
 </suppressions>
 
