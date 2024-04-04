@@ -197,7 +197,7 @@ dependencyManagement {
     dependency group: 'commons-io', name: 'commons-io', version: '2.7'
 
     //CVE-2021-42550
-    dependencySet(group: 'ch.qos.logback', version: '1.5.3') {
+    dependencySet(group: 'ch.qos.logback', version: '1.2.10') {
       entry 'logback-classic'
       entry 'logback-core'
     }
@@ -227,9 +227,9 @@ dependencyManagement {
     }
 
     //CVE-2022-1471
-    /*dependencySet(group: 'org.yaml', version: '2.2') {
+    dependencySet(group: 'org.yaml', version: '2.0') {
       entry 'snakeyaml'
-    }*/
+    }
   }
 }
 
@@ -248,7 +248,7 @@ def versions = [
   pitest          : '1.5.2',
   sonarPitest     : '0.5',
   tomcat          : '9.0.83',
-  log4j           : '2.23.1'
+  log4j           : '2.17.1'
 
 ]
 
@@ -277,7 +277,6 @@ dependencies {
 
   implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: versions.log4j
   implementation group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: versions.log4j
-  implementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j2-impl', version: '2.23.1'
 
   implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-core', version: versions.tomcat
   implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-websocket', version: versions.tomcat
