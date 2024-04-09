@@ -36,7 +36,7 @@
           <text>"issueAndSendToLocalCourtCallback"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1fvs4ef">
-          <text>"checkResubmittedApplicationC100"	</text>
+          <text>"checkApplicationResubmittedC100"	</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ap5cbf">
           <text>"Auto"</text>
@@ -47,7 +47,7 @@
           <text>"returnApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_03n9vmg">
-          <text>"checkResubmittedApplicationC100"</text>
+          <text>"checkApplicationResubmittedC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1q9qfqc">
           <text>"Auto"</text>
@@ -80,7 +80,7 @@
           <text>"fl401AddCaseNumber"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0pskzq1">
-          <text>"checkResubmittedFL401Application"</text>
+          <text>"checkApplicationResubmittedFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1rpsgob">
           <text>"Auto"</text>
@@ -91,7 +91,7 @@
           <text>"returnApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_11aiwcs">
-          <text>"checkResubmittedFL401Application"</text>
+          <text>"checkApplicationResubmittedFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_07wwxgc">
           <text>"Auto"</text>
@@ -105,6 +105,17 @@
           <text>"addCaseNumber"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nx8xz4">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0tirx14">
+        <inputEntry id="UnaryTests_1b60snt">
+          <text>"caseNumber"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_190p0iw">
+          <text>"addCaseNumberResubmitted"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00j054y">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
@@ -190,7 +201,7 @@
           <text>"sendToGateKeeper"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1pe5d3j">
-          <text>"sendToGateKeeperC100Resubmitted"</text>
+          <text>"sendToGateKeeperResubmittedC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0qwly2w">
           <text>"Auto"</text>
@@ -198,10 +209,10 @@
       </rule>
       <rule id="DecisionRule_1sijzow">
         <inputEntry id="UnaryTests_0yqlsr0">
-          <text>"fl401resubmit"</text>
+          <text>"fl401SendToGateKeeper"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0oik8xs">
-          <text>"sendToGateKeeperFL401Resubmitted"</text>
+          <text>"sendToGateKeeperResubmittedFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ifotbk">
           <text>"Auto"</text>
@@ -212,7 +223,7 @@
           <text>"returnApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_11ou54c">
-          <text>"sendToGateKeeperC100Resubmitted"</text>
+          <text>"sendToGateKeeperResubmittedC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1r3dutw">
           <text>"Auto"</text>
@@ -223,7 +234,7 @@
           <text>"returnApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_14rrads">
-          <text>"sendToGateKeeperFL401Resubmitted"</text>
+          <text>"sendToGateKeeperResubmittedFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0hyngcq">
           <text>"Auto"</text>
@@ -234,7 +245,7 @@
           <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0p6awc8">
-          <text>"sendToGateKeeperC100Resubmitted"</text>
+          <text>"sendToGateKeeperResubmittedC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_106s5o5">
           <text>"Auto"</text>
@@ -245,9 +256,53 @@
           <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_137xux7">
-          <text>"sendToGateKeeperFL401Resubmitted"</text>
+          <text>"sendToGateKeeperResubmittedFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_13c5hhf">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0q5nwqd">
+        <inputEntry id="UnaryTests_0mjsdfn">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a2jq5b">
+          <text>"directionOnIssue"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04lzxsi">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15tex9n">
+        <inputEntry id="UnaryTests_0nj45ah">
+          <text>"returnApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0euiann">
+          <text>"directionOnIssue"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hnhngn">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rv95b2">
+        <inputEntry id="UnaryTests_1ih7ttg">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1dd06pb">
+          <text>"directionOnIssueResubmitted"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0efragp">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1p3stm6">
+        <inputEntry id="UnaryTests_1oy0t8b">
+          <text>"returnApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13oz1bj">
+          <text>"directionOnIssueResubmitted"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0stum1v">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
@@ -394,25 +449,14 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0opuxjr">
-        <inputEntry id="UnaryTests_05gkj34">
-          <text>"adminEditAndApproveAnOrder"</text>
+      <rule id="DecisionRule_1i2yc5d">
+        <inputEntry id="UnaryTests_1ctu2u9">
+          <text>"hmcCaseUpdPrepForHearing"</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_07xrjoz">
-          <text>"adminServeOrderCreatedByJudgeC100"</text>
+        <outputEntry id="LiteralExpression_0l6m25w">
+          <text>"createHearingRequest"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_19ru9rc">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1hjihud">
-        <inputEntry id="UnaryTests_1uvmzrr">
-          <text>"adminEditAndApproveAnOrder"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1qjfyvn">
-          <text>"adminServeOrderCreatedByJudgeFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1mal6pm">
+        <outputEntry id="LiteralExpression_0tioapw">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
@@ -424,6 +468,17 @@
           <text>"reviewAdminOrderProvided"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1f55nhy">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_147n0jw">
+        <inputEntry id="UnaryTests_0cb26la">
+          <text>"editAndApproveAnOrder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1eezb6u">
+          <text>"reviewAdminOrderByManager"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jf5c13">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
@@ -451,12 +506,78 @@
       </rule>
       <rule id="DecisionRule_1acksuo">
         <inputEntry id="UnaryTests_0kncjs4">
-          <text>"serviceOfApplication"</text>
+          <text>"confidentialityCheck"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_10kurbr">
           <text>"confidentialCheckSOA"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xwj285">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0aotla0">
+        <inputEntry id="UnaryTests_1hyh340">
+          <text>"serviceOfApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13z4ws2">
+          <text>"recreateApplicationPack"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0n9387m">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xs1q1g">
+        <inputEntry id="UnaryTests_15r8sy9">
+          <text>"serviceOfApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09v3aya">
+          <text>"serviceOfApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uzeslp">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0o7orwp">
+        <inputEntry id="UnaryTests_0l9u480">
+          <text>"serviceOfApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04i9vfl">
+          <text>"serviceOfApplicationFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17t7kuu">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1il8xts">
+        <inputEntry id="UnaryTests_1329lp6">
+          <text>"statementOfService"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13pq4xs">
+          <text>"appStatementOfServiceByBailiff"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e2zof6">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ce4tnj">
+        <inputEntry id="UnaryTests_0w7j3i8">
+          <text>"statementOfService"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05ux0gn">
+          <text>"arrangeBailiffSOA"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10jvn7d">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0b51q3m">
+        <inputEntry id="UnaryTests_0ifusp9">
+          <text>"statementOfService"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00eg9ls">
+          <text>"appStatementOfServiceByAdmin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rm80oy">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
@@ -537,9 +658,31 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0atr8e3">
+        <inputEntry id="UnaryTests_0tzwc02">
+          <text>"c100ManageFlags"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vkor0k">
+          <text>"reviewRaRequestsC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mwbmhx">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0djzqgn">
+        <inputEntry id="UnaryTests_16os9kl">
+          <text>"fl401ManageFlags"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0k450gu">
+          <text>"reviewRaRequestsFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_096zfw3">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_05kvogz">
         <inputEntry id="UnaryTests_0cb5u2c">
-          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","editAndApproveAnOrder","returnApplication","sendOrReplyToMessages","issueAndSendToLocalCourtCallback"</text>
+          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","returnApplication","sendOrReplyToMessages","adminRemoveLegalRepresentativeC100","adminRemoveLegalRepresentativeFL401","c100ManageFlags","fl401ManageFlags","statementOfService"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1o5rfjh">
           <text></text>

@@ -30,19 +30,32 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "name", "task-supervisor",
         "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
     );
-
-    private static final Map<String, Serializable> circuitJudge = Map.of(
-            "autoAssignable", false,
-            "name", "circuit-judge",
+    private static final Map<String, Serializable> gatekeepingJudge = Map.of(
+        "autoAssignable", true,
+        "name", "gatekeeping-judge",
+        "roleCategory", "JUDICIAL",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
+        "assignmentPriority", 1
+    );
+    private static final Map<String, Serializable> allocatedJudge = Map.of(
+            "autoAssignable", true,
+            "name", "allocated-judge",
             "roleCategory", "JUDICIAL",
-            "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
-            "authorisations", "315"
+            "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
+            "assignmentPriority", 1
+    );
+    private static final Map<String, Serializable> allocatedJudgeTwo = Map.of(
+        "autoAssignable", true,
+        "name", "allocated-judge",
+        "roleCategory", "JUDICIAL",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
+        "assignmentPriority", 2
     );
     private static final Map<String, Serializable> judgeOne = Map.of(
             "autoAssignable", false,
             "name", "judge",
             "roleCategory", "JUDICIAL",
-            "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+            "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
             "authorisations", "315"
     );
 
@@ -70,6 +83,34 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "name", "specific-access-approver-ctsc",
         "roleCategory", "CTSC",
         "value", "Read,Own,Claim,Unclaim,CompleteOwn,CancelOwn"
+    );
+    private static final Map<String, Serializable> hearingJudge = Map.of(
+        "autoAssignable", true,
+        "name", "hearing-judge",
+        "roleCategory", "JUDICIAL",
+        "assignmentPriority", 1,
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
+    );
+    private static final Map<String, Serializable> tribunalCaseworker = Map.of(
+        "autoAssignable", false,
+        "name", "tribunal-caseworker",
+        "roleCategory", "LEGAL_OPERATIONS",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
+        "authorisations","SKILL:ABA5:GATEKEEPING"
+    );
+    private static final Map<String, Serializable> allocatedLegalAdviserOne = Map.of(
+        "autoAssignable", true,
+        "name", "allocated-legal-adviser",
+        "roleCategory", "LEGAL_OPERATIONS",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
+        "assignmentPriority", 1
+    );
+    private static final Map<String, Serializable> allocatedLegalAdviserThree = Map.of(
+        "autoAssignable", true,
+        "name", "allocated-legal-adviser",
+        "roleCategory", "LEGAL_OPERATIONS",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
+        "assignmentPriority", 3
     );
 
 
@@ -111,9 +152,22 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "reviewSolicitorOrderProvided",
                 List.of(
                     taskSupervisor,
+                    hearingJudge,
+                    allocatedJudgeTwo,
+                    allocatedLegalAdviserThree,
                     judgeOne,
-                    circuitJudge
-
+                    tribunalCaseworker
+                )
+            ),
+            Arguments.of(
+                "reviewAdminOrderProvided",
+                List.of(
+                    taskSupervisor,
+                    hearingJudge,
+                    allocatedJudgeTwo,
+                    allocatedLegalAdviserThree,
+                    judgeOne,
+                    tribunalCaseworker
                 )
             )
         );
@@ -202,6 +256,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
+        "directionOnIssue",
+        "directionOnIssueResubmitted",
         "gateKeeping",
         "gateKeepingResubmitted"
     })
@@ -212,29 +268,11 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
-            Map.of(
-                "name", "task-supervisor",
-                "value", "Read,Manage,Complete,Cancel,Assign,Unassign",
-                "autoAssignable", false
-            ),Map.of(
-                "name", "judge",
-                "value","Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
-                "roleCategory", "JUDICIAL",
-                "authorisations", "315",
-                "autoAssignable", false
-            ),Map.of(
-                "name", "circuit-judge",
-                "value","Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
-                "roleCategory", "JUDICIAL",
-                "authorisations", "315",
-                "autoAssignable", false
-            ),Map.of(
-                "name", "tribunal-caseworker",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
-                "roleCategory", "LEGAL_OPERATIONS",
-                "autoAssignable", false,
-                "authorisations", "SKILL:ABA5:GATEKEEPING"
-            )
+            taskSupervisor,
+            gatekeepingJudge,
+            judgeOne,
+            allocatedLegalAdviserOne,
+            tribunalCaseworker
         )));
     }
 
@@ -259,7 +297,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401"
             )
         )));
@@ -285,7 +323,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:HEARINGMANAGEMENTFL401"
             )
         )));
@@ -320,7 +358,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "adminServeOrderFL401", "adminServeOrderCreatedByJudgeFL401",
+        "serviceOfApplicationFL401","adminServeOrderFL401",
     })
     void evaluate_task_admin_orderManagementfl401_2(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -337,7 +375,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401"
             )
         )));
@@ -363,7 +401,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "value", "Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:REVIEWCORRESPONDENCEFL401"
             )
         )));
@@ -373,8 +411,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @ParameterizedTest
     @CsvSource(value = {
         "checkApplicationC100", "checkApplicationResubmittedC100",
-        "addCaseNumber", "addCaseNumberResubmitted",
-        "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100"
+        "addCaseNumber", "addCaseNumberResubmitted"
     })
     void evaluate_task_ctsc_checkApplicationc100(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -391,7 +428,33 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "ctsc",
                 "roleCategory", "CTSC",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
+                "authorisations","SKILL:ABA5:CHECKAPPLICATIONC100"
+            )
+        )));
+    }
+
+    @SuppressWarnings("checkstyle:indentation")
+    @ParameterizedTest
+    @CsvSource(value = {
+        "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100"
+    })
+    void evaluate_task_ctsc_sendToGateKeeperc100(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            Map.of(
+                "name", "task-supervisor",
+                "value", "Read,Manage,Complete,Cancel,Assign,Unassign",
+                "autoAssignable", false
+            ), Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations","SKILL:ABA5:CHECKAPPLICATIONC100"
             )
         )));
@@ -415,9 +478,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false
             ), Map.of(
                 "autoAssignable", false,
-                "name", "ctsc",
-                "roleCategory", "CTSC",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:HEARINGMANAGEMENTC100"
             )
         )));
@@ -441,8 +504,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false
             ), Map.of(
                 "autoAssignable", false,
-                "name", "ctsc",
-                "roleCategory", "CTSC",
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
                 "value", "Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
                 "authorisations","SKILL:ABA5:ORDERMANAGEMENTC100"
             )
@@ -452,7 +515,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "adminServeOrderC100","adminServeOrderCreatedByJudgeC100",
+        "serviceOfApplicationC100","adminServeOrderC100",
     })
     void evaluate_task_ctsc_orderManagementc100_2(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -467,9 +530,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false
             ), Map.of(
                 "autoAssignable", false,
-                "name", "ctsc",
-                "roleCategory", "CTSC",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations","SKILL:ABA5:ORDERMANAGEMENTC100"
             )
         )));
@@ -493,9 +556,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false
             ), Map.of(
                 "autoAssignable", false,
-                "name", "ctsc",
-                "roleCategory", "CTSC",
-                "value", "Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,CompleteOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations", "SKILL:ABA5:REVIEWCORRESPONDENCEC100"
             )
         )));
@@ -519,10 +582,10 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
             ), Map.of(
                 "autoAssignable", false,
-                "name", "ctsc",
-                "roleCategory", "CTSC",
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONC100",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
             )
         )));
     }
@@ -548,16 +611,43 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
             )
         )));
     }
 
+    @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "confidentialCheckSOA"
+        "reviewRaRequestsC100"
     })
-    void evaluate_task_admin_confidentialCheckSoa(String taskType) {
+    void evaluate_task_admin_reviewRaRequestsC100(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            Map.of(
+                "autoAssignable", false,
+                "name", "task-supervisor",
+                "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
+            ), Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "authorisations", "SKILL:ABA5:CHECKAPPLICATIONC100",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
+            )
+        )));
+    }
+
+    @SuppressWarnings("checkstyle:indentation")
+    @ParameterizedTest
+    @CsvSource(value = {
+        "reviewRaRequestsFL401"
+    })
+    void evaluate_task_admin_reviewRaRequestFL401(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
 
@@ -573,8 +663,154 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
             )
+        )));
+    }
+
+
+    @SuppressWarnings("checkstyle:indentation")
+    @ParameterizedTest
+    @CsvSource(value = {
+        "reviewInactiveRaRequestsC100"
+    })
+    void evaluate_task_admin_reviewInactiveRaRequestsC100(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            Map.of(
+                "autoAssignable", false,
+                "name", "task-supervisor",
+                "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
+            ), Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "authorisations", "SKILL:ABA5:CHECKAPPLICATIONC100",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
+            )
+        )));
+    }
+
+    @SuppressWarnings("checkstyle:indentation")
+    @ParameterizedTest
+    @CsvSource(value = {
+        "reviewRaRequestsFL401"
+    })
+    void evaluate_task_admin_reviewInactiveRaRequestFL401(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            Map.of(
+                "autoAssignable", false,
+                "name", "task-supervisor",
+                "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
+            ), Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
+            )
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+        "confidentialCheckSOA"
+    })
+    void evaluate_task_admin_confidentialCheckSoa(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-team-leader",
+                "roleCategory", "ADMIN",
+                "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
+            )
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+        "replyToMessageForJudiciary"
+    })
+    void evaluate_task_admin_replyToMessageForJudiciary(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            allocatedJudge,
+            judgeOne
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+        "createHearingRequestReserveListAssist",
+        "createHearingRequest",
+        "createMultipleHearingRequest"
+    })
+    void evaluate_task_admin_createHearingRequest(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
+                "authorisations", "SKILL:ABA5:HEARINGMANAGEMENTFL401"
+            )
+
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+        "recreateApplicationPack",
+        "appStatementOfServiceBySol",
+        "appStatementOfServiceByLiP",
+        "appStatementOfServiceByBailiff",
+        "arrangeBailiffSOA",
+        "appStatementOfServiceByAdmin",
+        "completefl416AndServe"
+    })
+    void evaluate_task_admin_statementOfService(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
+                "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401"
+            )
+
         )));
     }
 
@@ -584,6 +820,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(18));
+        assertThat(logic.getRules().size(), is(26));
     }
 }

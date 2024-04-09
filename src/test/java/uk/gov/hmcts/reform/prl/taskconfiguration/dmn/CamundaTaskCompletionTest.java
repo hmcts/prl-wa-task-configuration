@@ -17,7 +17,6 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 import static java.util.Arrays.asList;
-import static java.util.Collections.singletonList;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTable.WA_TASK_COMPLETION;
@@ -40,10 +39,9 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "checkResubmittedApplicationC100",
+                        "taskType", "checkApplicationResubmittedC100",
                         "completionMode", "Auto"
-                    ),
-                    Map.of()
+                    )
                 )
             ),
             Arguments.of(
@@ -54,7 +52,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "checkResubmittedApplicationC100",
+                        "taskType", "checkApplicationResubmittedC100",
                         "completionMode", "Auto"
                     ),
                     Map.of(
@@ -62,7 +60,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "checkResubmittedFL401Application",
+                        "taskType", "checkApplicationResubmittedFL401",
                         "completionMode", "Auto"
                     ),
                     Map.of(
@@ -78,11 +76,19 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "sendToGateKeeperC100Resubmitted",
+                        "taskType", "sendToGateKeeperResubmittedC100",
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "sendToGateKeeperFL401Resubmitted",
+                        "taskType", "sendToGateKeeperResubmittedFL401",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "directionOnIssue",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "directionOnIssueResubmitted",
                         "completionMode", "Auto"
                     ),
                     Map.of(
@@ -108,11 +114,19 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "sendToGateKeeperC100Resubmitted",
+                        "taskType", "sendToGateKeeperResubmittedC100",
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "sendToGateKeeperFL401Resubmitted",
+                        "taskType", "sendToGateKeeperResubmittedFL401",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "directionOnIssue",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "directionOnIssueResubmitted",
                         "completionMode", "Auto"
                     ),
                     Map.of(
@@ -134,16 +148,20 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "checkResubmittedFL401Application",
+                        "taskType", "checkApplicationResubmittedFL401",
                         "completionMode", "Auto"
                     )
                 )
             ),
             Arguments.of(
                 "caseNumber",
-                singletonList(
+                asList(
                     Map.of(
                         "taskType", "addCaseNumber",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "addCaseNumberResubmitted",
                         "completionMode", "Auto"
                     )
                 )
@@ -155,16 +173,19 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "taskType", "sendToGateKeeperC100",
                         "completionMode", "Auto"
                     ), Map.of(
-                        "taskType", "sendToGateKeeperC100Resubmitted",
+                        "taskType", "sendToGateKeeperResubmittedC100",
                         "completionMode", "Auto"
                     )
                 )
             ),
             Arguments.of(
                 "fl401SendToGateKeeper",
-                singletonList(
+                asList(
                     Map.of(
                         "taskType", "sendToGateKeeperFL401",
+                        "completionMode", "Auto"
+                    ), Map.of(
+                        "taskType", "sendToGateKeeperResubmittedFL401",
                         "completionMode", "Auto"
                     )
                 )
@@ -194,7 +215,10 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "taskType", "reviewAdminOrderProvided",
                         "completionMode", "Auto"
                     ),
-                    Map.of()
+                    Map.of(
+                        "taskType", "reviewAdminOrderByManager",
+                        "completionMode", "Auto"
+                    )
                 )
             ),
             Arguments.of(
@@ -216,14 +240,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "taskType", "requestSolicitorOrderFL401",
                         "completionMode", "Auto"
                     ),
-                    Map.of(
-                        "taskType", "adminServeOrderCreatedByJudgeC100",
-                        "completionMode", "Auto"
-                    ),
-                    Map.of(
-                        "taskType", "adminServeOrderCreatedByJudgeFL401",
-                        "completionMode", "Auto"
-                    ),
                     Map.of()
                 )
             ),
@@ -241,28 +257,94 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "adminRemoveLegalRepresentativeC100",
-                singletonList(
+                "hmcCaseUpdPrepForHearing",
+                asList(
                     Map.of(
-                        "taskType", "removeLegalRepresentativeC100",
+                        "taskType", "createHearingRequest",
                         "completionMode", "Auto"
                     )
                 )
             ),
             Arguments.of(
+                "adminRemoveLegalRepresentativeC100",
+                asList(
+                    Map.of(
+                        "taskType", "removeLegalRepresentativeC100",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of()
+                )
+            ),
+            Arguments.of(
                 "adminRemoveLegalRepresentativeFL401",
-                singletonList(
+                asList(
                     Map.of(
                         "taskType", "removeLegalRepresentativeFL401",
                         "completionMode", "Auto"
-                    )
+                    ),
+                    Map.of()
                 )
             ),
             Arguments.of(
                 "serviceOfApplication",
                 asList(
                     Map.of(
+                        "taskType", "recreateApplicationPack",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "serviceOfApplicationC100",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "serviceOfApplicationFL401",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of()
+                )
+            ),
+            Arguments.of(
+                "statementOfService",
+                asList(
+                    Map.of(
+                        "taskType", "appStatementOfServiceByBailiff",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "arrangeBailiffSOA",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "appStatementOfServiceByAdmin",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of()
+                )
+            ),
+            Arguments.of(
+                "confidentialityCheck",
+                asList(
+                    Map.of(
                         "taskType", "confidentialCheckSOA",
+                        "completionMode", "Auto"
+                    )
+                )
+            ),
+            Arguments.of(
+                "c100ManageFlags",
+                asList(
+                    Map.of(
+                        "taskType", "reviewRaRequestsC100",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of()
+                )
+            ),
+            Arguments.of(
+                "fl401ManageFlags",
+                asList(
+                    Map.of(
+                        "taskType", "reviewRaRequestsFL401",
                         "completionMode", "Auto"
                     ),
                     Map.of()
@@ -289,7 +371,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(49));
+        assertThat(logic.getRules().size(), is(62));
     }
 
 

@@ -129,6 +129,30 @@
           <text>"Send to Gatekeeper Resubmitted C100"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0b3mdzp">
+        <description>DOI</description>
+        <inputEntry id="UnaryTests_00jcqzv">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ffv2rz">
+          <text>"directionOnIssue"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ql6tu9">
+          <text>"Directions on Issue"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1002mwy">
+        <description>DOI</description>
+        <inputEntry id="UnaryTests_1f9fslf">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17lu7wa">
+          <text>"directionOnIssueResubmitted"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wmhtm3">
+          <text>"Directions on Issue Resubmitted"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_09isqs0">
         <description>GK</description>
         <inputEntry id="UnaryTests_030i0zo">
@@ -439,6 +463,66 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1ugtsa6">
           <text>"FL401 Review Documents Submitted By Sol or Cafcass"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00bghi1">
+        <description>RRRC100</description>
+        <inputEntry id="UnaryTests_1qay4vn">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14y9nhg">
+          <text>"reviewRaRequestsC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cl6qkf">
+          <text>"Review RA requests"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09y54lh">
+        <description>RRRFL401</description>
+        <inputEntry id="UnaryTests_06dx08t">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15w1hpw">
+          <text>"reviewRaRequestsFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19i1eqm">
+          <text>"Review RA requests"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0oy0rje">
+        <description>RRRIC100</description>
+        <inputEntry id="UnaryTests_17gnhji">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_095os2f">
+          <text>"reviewInactiveRaRequestsC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kjqei6">
+          <text>"Review inactive RA requests"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bf4udd">
+        <description>RRRIFL401</description>
+        <inputEntry id="UnaryTests_0elkawd">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0j6ycon">
+          <text>"reviewInactiveRaRequestsFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18qms98">
+          <text>"Review inactive RA requests"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1fnnxm3">
+        <description>LWNHC100</description>
+        <inputEntry id="UnaryTests_0pcfffj">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1nuycri">
+          <text>"listWithoutNoticeHearingC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_175m60d">
+          <text>"List without notice hearing(see case notes)"</text>
         </outputEntry>
       </rule>
     </decisionTable>

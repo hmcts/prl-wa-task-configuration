@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN">
     <decisionTable id="DecisionTable_14cx079" hitPolicy="COLLECT">
       <input id="InputClause_1gxyo7f" label="CCD Case Data" camunda:inputVariable="caseData">
@@ -10,11 +10,7 @@
       <input id="InputClause_1gmuynt" label="Task type" biodi:width="375" camunda:inputVariable="taskType">
         <inputExpression id="LiteralExpression_06iiuqg" typeRef="string">
           <text>if(taskAttributes != null and taskAttributes.taskType != null) then
-                        taskAttributes. taskType
-                        else if(taskType != null) then
-                        taskType
-                        else
-                        null</text>
+taskAttributes. taskType else if(taskType != null) then taskType else null</text>
         </inputExpression>
       </input>
       <output id="Output_1" label="Name" name="name" typeRef="string" biodi:width="351" />
@@ -297,7 +293,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gtvl7x">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA", "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack","replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","completefl416AndServe","listWithoutNoticeHearingC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ju1b88">
           <text>"dueDateIntervalDays"</text>
@@ -314,7 +310,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0tvsteh">
-          <text>"gateKeeping","gateKeepingResubmitted","serviceOfApplicationC100","serviceOfApplicationFL401","adminServeOrderC100","adminServeOrderFL401","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","reviewAdminOrderProvided"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","serviceOfApplicationC100","serviceOfApplicationFL401","serviceOfApplicationC100","adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401","reviewAdminOrderProvided","reviewAdminOrderByManager","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ixfp2h">
           <text>"dueDateIntervalDays"</text>
@@ -348,7 +344,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_07bn4jn">
-          <text>"reviewSolicitorOrderProvided", "reviewCorrespondenceC100","reviewCorrespondenceFL401", "replyToMessageForJudiciary"</text>
+          <text>"reviewSolicitorOrderProvided", "reviewCorrespondenceC100","reviewCorrespondenceFL401", "replyToMessageForJudiciary","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0t7q94m">
           <text>"dueDateIntervalDays"</text>
@@ -365,7 +361,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08jiuyj">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","reviewAdminOrderProvided","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA", "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLA"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewAdminOrderProvided","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA", "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLA","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lyogga">
           <text>"priorityDateOriginRef"</text>
@@ -382,7 +378,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1tb79v4">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided", "replyToMessageForJudiciary"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided", "replyToMessageForJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0tucp7d">
           <text>"calculatedDates"</text>
@@ -399,7 +395,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0iktol6">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ijqt0h">
           <text>"nextHearingDatePreDateOriginRef"</text>
@@ -416,7 +412,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0g9qqrs">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0uhqm5x">
           <text>"nextHearingDatePreDateIntervalDays"</text>
@@ -433,7 +429,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0vgvmxc">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_06l1dup">
           <text>"nextHearingDatePreDateNonWorkingCalendar"</text>
@@ -450,7 +446,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0yds9g8">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18wcq2b">
           <text>"nextHearingDatePreDateNonWorkingDaysOfWeek"</text>
@@ -467,7 +463,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1i9hse8">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0gykh0v">
           <text>"nextHearingDatePreDateSkipNonWorkingDays"</text>
@@ -484,7 +480,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_19i7035">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0z0xy3x">
           <text>"nextHearingDatePreDateMustBeWorkingDay"</text>
@@ -501,7 +497,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_06p8hre">
-          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
+          <text>"reviewCorrespondenceFL401","produceHearingBundleFL401","reviewCorrespondenceC100","produceHearingBundleC100","directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_07bc3mo">
           <text>"priorityDateOriginEarliest"</text>
@@ -518,7 +514,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_02twz7w">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401","adminServeOrderCreatedByJudgeFL401","removeLegalRepresentativeFL401", "replyToMessageForCourtAdminFL401", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLAFL401"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401","removeLegalRepresentativeFL401", "replyToMessageForCourtAdminFL401", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLAFL401","listWithoutNoticeHearingC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0o0dcmv">
           <text>"majorPriority"</text>
@@ -535,13 +531,13 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0f0gzeq">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","adminServeOrderCreatedByJudgeC100","removeLegalRepresentativeC100", "replyToMessageForCourtAdminC100","reviewDocumentsForSolAndCafcassC100","replyToMessageForLA"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","removeLegalRepresentativeC100", "replyToMessageForCourtAdminC100","reviewDocumentsForSolAndCafcassC100","replyToMessageForLA","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jiva8u">
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1h1xvth">
-          <text>if (caseDate.isUrgentFlag != null and caseData.isUrgentFlag="Yes") then 2000 else if (caseData.allegationsOfHarmYesNo != null and caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
+          <text>if (caseData.isCaseUrgent != null and caseData.isCaseUrgent="Yes") then 2000 else if (caseData.newAllegationsOfHarmYesNo != null and caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0gfut7a">
           <text></text>
@@ -552,18 +548,86 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_05latny">
-          <text>"gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA", "replyToMessageForJudiciary"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA","recreateApplicationPack","replyToMessageForJudiciary","reviewAdminOrderByManager","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_121l57m">
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0w906jt">
           <text>if (caseData.caseTypeOfApplication = "FL401") then 1000 else if (caseData.caseTypeOfApplication = "C100" and caseDate.isCaseUrgent != null and caseData.isCaseUrgent="Yes") then 2000
-else if (caseData.caseTypeOfApplication = "C100" and caseData.allegationsOfHarmYesNo != null and
-caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
+else if (caseData.caseTypeOfApplication = "C100" and caseData.newAllegationsOfHarmYesNo != null and
+caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ve8n1e">
           <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ciq3lu">
+        <inputEntry id="UnaryTests_1jzjl1e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0irt7go">
+          <text>"reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0o8u35i">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vyj8hi">
+          <text>3000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sgcv95">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0p49p1x">
+        <inputEntry id="UnaryTests_11cjlzm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cknzbw">
+          <text>"adminServeOrderC100","adminServeOrderFL401","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vst95g">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vimqnf">
+          <text>if(caseData.orderNameForJudgeApproved !=null) then (taskAttributes.name + " - " + caseData.orderNameForJudgeApproved) else if (caseData.orderNameForJudgeCreatedOrder != null ) then (taskAttributes.name + " - " + caseData.orderNameForJudgeCreatedOrder) else taskAttributes.name</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ba9wt9">
+          <text>"false"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0t67k3y">
+        <inputEntry id="UnaryTests_1ykrmcp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e5tpiv">
+          <text>"reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wal1va">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nmff8z">
+          <text>if(caseData.orderNameForSolicitorCreatedOrder !=null) then (taskAttributes.name + " - " + caseData.orderNameForSolicitorCreatedOrder) else taskAttributes.name</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xkvvns">
+          <text>"false"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01pqt6a">
+        <inputEntry id="UnaryTests_1n8t807">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0snqn0t">
+          <text>"reviewAdminOrderProvided","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1casjyd">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nr7gfe">
+          <text>if(caseData.orderNameForAdminCreatedOrder !=null) then (taskAttributes.name + " - " + caseData.orderNameForAdminCreatedOrder) else if (caseData.orderNameForJudgeCreatedOrder != null ) then taskAttributes.name + " - " + caseData.orderNameForJudgeCreatedOrder else taskAttributes.name</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0iicns5">
+          <text>"false"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ikmf14">
@@ -571,7 +635,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1y3kj1v">
-          <text>"addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","adminServeOrderC100","adminServeOrderFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","reviewCorrespondenceC100","reviewCorrespondenceFL401","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","replyToMessageForJudiciary"</text>
+          <text>"addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationC100","adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","reviewCorrespondenceC100","reviewCorrespondenceFL401","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","replyToMessageForJudiciary","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","listWithoutNoticeHearingC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0rvgay2">
           <text>"workType"</text>
@@ -588,7 +652,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gm06lg">
-          <text>"gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided","reviewAdminOrderByManager"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0omxasv">
           <text>"workType"</text>
@@ -605,7 +669,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ps3x4j">
-          <text>"produceHearingBundleC100","produceHearingBundleFL401","updateHearingActualsC100","updateHearingActualsFL401"</text>
+          <text>"produceHearingBundleC100","produceHearingBundleFL401","updateHearingActualsC100","updateHearingActualsFL401","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0c3eia6">
           <text>"workType"</text>
@@ -673,7 +737,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_10f3uas">
-          <text>"gateKeeping", "gateKeepingResubmitted", "reviewSpecificAccessRequestLegalOps","replyToMessageForLAC100","replyToMessageForLA"</text>
+          <text>"reviewSpecificAccessRequestLegalOps","replyToMessageForLAC100","replyToMessageForLA"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_05l5bvs">
           <text>"roleCategory"</text>
@@ -691,8 +755,10 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1glizm3">
           <text>"checkApplicationFL401", "checkApplicationResubmittedFL401",
-"sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401",
-"produceHearingBundleFL401", "adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewCorrespondenceFL401", "reviewSpecificAccessRequestAdmin", "adminServeOrderCreatedByJudgeFL401","removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401"</text>
+"sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401", "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100",
+"produceHearingBundleFL401",  "produceHearingBundleC100", "serviceOfApplicationFL401","adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewCorrespondenceFL401", "serviceOfApplicationC100","adminServeOrderC100",
+"updateHearingActualsC100", "requestSolicitorOrderC100",
+"reviewCorrespondenceC100", "reviewSpecificAccessRequestAdmin", "removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401","reviewDocumentsForSolAndCafcassC100","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","reviewRaRequestsFL401","reviewInactiveRaRequestsFL401","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","confidentialCheckSOA","completefl416AndServe","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","listWithoutNoticeHearingC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1131kat">
           <text>"roleCategory"</text>
@@ -711,10 +777,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         <inputEntry id="UnaryTests_1cssptr">
           <text>"checkApplicationC100", "checkApplicationResubmittedC100",
 "addCaseNumber", "addCaseNumberResubmitted",
-"sendToGateKeeperC100", "sendToGateKeeperResubmittedC100",
- "produceHearingBundleC100", "adminServeOrderC100",
-"updateHearingActualsC100", "requestSolicitorOrderC100",
-"reviewCorrespondenceC100", "reviewSpecificAccessRequestCTSC", "adminServeOrderCreatedByJudgeC100","removeLegalRepresentativeC100","confidentialCheckSOA","reviewDocumentsForSolAndCafcassC100","replyToMessageForCourtAdminC100"</text>
+"reviewSpecificAccessRequestCTSC"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18u6y8m">
           <text>"roleCategory"</text>
@@ -731,7 +794,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_15ftuu0">
-          <text>"reviewSpecificAccessRequestJudiciary","reviewSolicitorOrderProvided","reviewAdminOrderProvided","replyToMessageForJudiciary"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping", "gateKeepingResubmitted", "reviewSpecificAccessRequestJudiciary","reviewSolicitorOrderProvided","reviewAdminOrderProvided","replyToMessageForJudiciary"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_15nowth">
           <text>"roleCategory"</text>
@@ -867,15 +930,32 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1kvz75o">
-          <text>"adminServeOrderFL401", "adminServeOrderC100","adminServeOrderCreatedByJudgeC100","adminServeOrderCreatedByJudgeFL401"</text>
+          <text>"adminServeOrderFL401", "adminServeOrderC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0z94w12">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_05zl31d">
-          <text>"[Service of Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/adminEditAndApproveAnOrder/adminEditAndApproveAnOrder1)"</text>
+          <text>"[Complete the Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/adminEditAndApproveAnOrder/adminEditAndApproveAnOrder1)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_121bl15">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0jg72qo">
+        <inputEntry id="UnaryTests_1rnpqqn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jcc67q">
+          <text>"serviceOfApplicationC100","serviceOfApplicationFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1o65gft">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1r8b6hh">
+          <text>"[Service of Application](/cases/case-details/${[CASE_REFERENCE]}/trigger/serviceOfApplication/serviceOfApplication1)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14cgusa">
           <text></text>
         </outputEntry>
       </rule>
@@ -930,6 +1010,23 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1ax3bcz">
+        <inputEntry id="UnaryTests_1n2b1d3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wgrovz">
+          <text>"directionOnIssue","directionOnIssueResubmitted"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1i5mia9">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_021pzlj">
+          <text>"[Directions on Issue]"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10jxi2e">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0lmjovk">
         <inputEntry id="UnaryTests_1y6skp2">
           <text></text>
@@ -958,7 +1055,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1pnixna">
-          <text>"[Review and Approve Solicitor Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/editAndApproveAnOrder/editAndApproveAnOrder1)"</text>
+          <text>"[Review and Approve Legal rep Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/editAndApproveAnOrder/editAndApproveAnOrder1)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1z0pkcv">
           <text></text>
@@ -969,7 +1066,7 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0lgh8ap">
-          <text>"reviewAdminOrderProvided"</text>
+          <text>"reviewAdminOrderProvided","reviewAdminOrderByManager"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1amegaa">
           <text>"description"</text>
@@ -1026,9 +1123,128 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ep77sp">
-          <text>"[Check for Confidential Documents](/cases/case-details/${[CASE_REFERENCE]}#Case File View"</text>
+          <text>"[Confidential Check](/cases/case-details/${[CASE_REFERENCE]}/trigger/confidentialityCheck/confidentialityCheck1)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02lku50">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0akslf9">
+        <inputEntry id="UnaryTests_11wbzcw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jybht5">
+          <text>"recreateApplicationPack"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05a4dxw">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gwgjgv">
+          <text>"[Recreate Application Pack](/cases/case-details/${[CASE_REFERENCE]}/trigger/serviceOfApplication/serviceOfApplication1)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0duac3m">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1t2qke0">
+        <inputEntry id="UnaryTests_1nvnfxn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hp089k">
+          <text>"appStatementOfServiceBySol"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lo1mc9">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00v37w1">
+          <text>"[Waiting for Applicant's Solicitor to upload Statement of Service]"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0osos09">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lis693">
+        <inputEntry id="UnaryTests_1hhouet">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0smay2o">
+          <text>"appStatementOfServiceByLiP"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1uf98vi">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c8dq32">
+          <text>"[Waiting for Unrepresented Applicant LiP to upload Statement of Service]"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0baslf3">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12cmpmd">
+        <inputEntry id="UnaryTests_1p5vv08">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tcjgsv">
+          <text>"appStatementOfServiceByBailiff"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1kqjcpp">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09eb2af">
+          <text>"[Upload Statement of Service provided by Court Bailiff](/cases/case-details/${[CASE_REFERENCE]}/trigger/statementOfService/statementOfService1)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gik79u">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06zki20">
+        <inputEntry id="UnaryTests_06h4sd8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tui58q">
+          <text>"arrangeBailiffSOA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18edt29">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tfxv8f">
+          <text>"[Arrange bailiff service of application]"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nn4wwv">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18vyxii">
+        <inputEntry id="UnaryTests_0unqpgp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19fl4pa">
+          <text>"appStatementOfServiceByAdmin"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qenr8u">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dzd5ey">
+          <text>"[Upload Statement of Service](/cases/case-details/${[CASE_REFERENCE]}/trigger/statementOfService/statementOfService1)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hpl9e1">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hj0iza">
+        <inputEntry id="UnaryTests_16xtdx5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d65g3s">
+          <text>"completefl416AndServe"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bc9ea5">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1z0ihhq">
+          <text>"[Complete FL416 and serve applicant only]"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09663ea">
           <text></text>
         </outputEntry>
       </rule>
@@ -1063,6 +1279,108 @@ caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"[Review Documents](/cases/case-details/${[CASE_REFERENCE]}/trigger/reviewDocuments)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0mtevpl">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0s9d93h">
+        <inputEntry id="UnaryTests_0uwa0yu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04e459g">
+          <text>"reviewRaRequestsC100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fco2ps">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f5lzsz">
+          <text>"[Review RA request](/cases/case-details/${[CASE_REFERENCE]}/trigger/c100ManageFlags/c100ManageFlags)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fb957q">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bdjm54">
+        <inputEntry id="UnaryTests_18iv6rg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09q0ilm">
+          <text>"reviewRaRequestsFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ols5sc">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0obqxbo">
+          <text>"[Review RA request](/cases/case-details/${[CASE_REFERENCE]}/trigger/fl401ManageFlags/fl401ManageFlags)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0notc5c">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bda3av">
+        <inputEntry id="UnaryTests_1gaoaov">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14lcn5s">
+          <text>"reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1yd2pgy">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vcg4ri">
+          <text>"[Review inactive case flags](/cases/case-details/${[CASE_REFERENCE]}#Case%20Flags)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tx3ws1">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1afd2oi">
+        <inputEntry id="UnaryTests_1lulg6u">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xvvfsf">
+          <text>"createHearingRequestReserveListAssist"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1a9e2xm">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rsjiuo">
+          <text>"[Reserve Hearings in List Assist]"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13xbicy">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bvyvpl">
+        <inputEntry id="UnaryTests_1yn9t2e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_088truk">
+          <text>"createHearingRequest","createMultipleHearingRequest"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08m9umq">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ib893w">
+          <text>"[Create Hearing Request](/cases/case-details/${[CASE_REFERENCE]}/hearings)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ga256r">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1cpr55n">
+        <inputEntry id="UnaryTests_02xgesy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17rymvk">
+          <text>"listWithoutNoticeHearingC100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0he0eks">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0oxopul">
+          <text>""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z83sm9">
           <text></text>
         </outputEntry>
       </rule>
