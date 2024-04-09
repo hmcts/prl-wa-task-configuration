@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
+  <decision id="wa-task-configuration-privatelaw-privatelaw_exceptionrecord" name="Private Law Bulk Scan Task configuration DMN">
+    <decisionTable id="DecisionTable_14cx079" hitPolicy="COLLECT">
+      <input id="InputClause_1gxyo7f" label="CCD Case Data" camunda:inputVariable="caseData">
+        <inputExpression id="LiteralExpression_0mra7c4" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1gmuynt" label="Task type" biodi:width="375" camunda:inputVariable="taskType">
+        <inputExpression id="LiteralExpression_06iiuqg" typeRef="string">
+          <text>if(taskAttributes != null and taskAttributes.taskType != null) then
+                        taskAttributes. taskType
+                        else if(taskType != null) then
+                        taskType
+                        else
+                        null</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Name" name="name" typeRef="string" biodi:width="351" />
+      <output id="OutputClause_021y3bb" label="Value" name="value" typeRef="string" biodi:width="803" />
+      <output id="OutputClause_06m3ktt" label="Can Reconfigure?" name="canReconfigure" typeRef="boolean" biodi:width="192" />
+      <rule id="DecisionRule_0tmyr2c">
+        <inputEntry id="UnaryTests_0w1nlpg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gtvl7x">
+          <text>"reviewExceptionBulkScanRecord"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ju1b88">
+          <text>"dueDateIntervalDays"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02isqg6">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0myx3mr">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00tvixh">
+        <inputEntry id="UnaryTests_0yqsbvn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02twz7w">
+          <text>"reviewExceptionBulkScanRecord"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0o0dcmv">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gh6ptw">
+          <text>1000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nx7ijw">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ikmf14">
+        <inputEntry id="UnaryTests_0epux74">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y3kj1v">
+          <text>"reviewExceptionBulkScanRecord"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rvgay2">
+          <text>"workType"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zoponq">
+          <text>"routine_work"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19npk6t">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01muxrj">
+        <inputEntry id="UnaryTests_0ullysh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1glizm3">
+          <text>"reviewExceptionBulkScanRecord"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1131kat">
+          <text>"roleCategory"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0el7tae">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1exp16h">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_17ypugq">
+        <inputEntry id="UnaryTests_1i0b00r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cssptr">
+          <text>"reviewExceptionBulkScanRecord"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18u6y8m">
+          <text>"roleCategory"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gaslys">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vv9t0l">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1yej6qy">
+        <inputEntry id="UnaryTests_1as93to">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11we62u">
+          <text>"reviewExceptionBulkScanRecord"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gsslsr">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bbvx6d">
+          <text>"[Review Exception Record Documents](/cases/case-details/${[CASE_REFERENCE]}/trigger/attachToExistingCase/attachToExistingCase1)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_121sg0a">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_1ifewa3">
+      <dmndi:DMNShape id="DMNShape_0ijg0or" dmnElementRef="wa-task-configuration-privatelaw-privatelaw_exceptionrecord">
+        <dc:Bounds height="80" width="180" x="150" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
