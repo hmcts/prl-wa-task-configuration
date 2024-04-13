@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
+  <decision id="wa-task-initiation-privatelaw-privatelaw_exceptionrecord" name="Private Law Bulk Scan Task initiation DMN">
+    <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
+      <input id="Input_1" label="Event Id" biodi:width="319" camunda:inputVariable="eventId">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0gxli97" label="Post event state" biodi:width="196" camunda:inputVariable="postEventState">
+        <inputExpression id="LiteralExpression_0dijl5x" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0a0i7vo" label="Jurisdiction" biodi:width="173" camunda:inputVariable="poBoxJurisdiction">
+        <inputExpression id="LiteralExpression_18qwedg" typeRef="string">
+          <text>if(AdditionalData != null and AdditionalData.Data != null and AdditionalData.Data.poBoxJurisdiction
+            != null) then
+            AdditionalData.Data.poBoxJurisdiction
+            else
+            ""</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Task Id" name="taskId" typeRef="string" biodi:width="368" />
+      <output id="OutputClause_0p5fhhd" label="Name" name="name" typeRef="string" biodi:width="150" />
+      <output id="OutputClause_165p3r3" label="Delay Until" name="delayUntil" typeRef="string" biodi:width="232" />
+      <output id="OutputClause_10rno4c" label="Process Categories Identifiers" name="processCategories" typeRef="string" biodi:width="268" />
+      <rule id="DecisionRule_0ke5wf0">
+        <inputEntry id="UnaryTests_02j40ye">
+          <text>"createException"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a8mbvc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pk2tom">
+          <text>"PRIVATELAW"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07ek7kc">
+          <text>"reviewExceptionBulkScanRecord"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1de4voi">
+          <text>"Review Exceptional Record from Bulk Scan"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0k53v3k">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_013a2c0">
+          <text>"bulkScanExceptionalRecord"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_0b2rkcb">
+      <dmndi:DMNShape id="DMNShape_0wc7glt" dmnElementRef="wa-task-initiation-privatelaw-privatelaw_exceptionrecord">
+        <dc:Bounds height="80" width="180" x="150" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

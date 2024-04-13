@@ -411,8 +411,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @ParameterizedTest
     @CsvSource(value = {
         "checkApplicationC100", "checkApplicationResubmittedC100",
-        "addCaseNumber", "addCaseNumberResubmitted",
-        "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100"
+        "addCaseNumber", "addCaseNumberResubmitted"
     })
     void evaluate_task_ctsc_checkApplicationc100(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -429,6 +428,32 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "ctsc",
                 "roleCategory", "CTSC",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
+                "authorisations","SKILL:ABA5:CHECKAPPLICATIONC100"
+            )
+        )));
+    }
+
+    @SuppressWarnings("checkstyle:indentation")
+    @ParameterizedTest
+    @CsvSource(value = {
+        "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100"
+    })
+    void evaluate_task_ctsc_sendToGateKeeperc100(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            Map.of(
+                "name", "task-supervisor",
+                "value", "Read,Manage,Complete,Cancel,Assign,Unassign",
+                "autoAssignable", false
+            ), Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn",
                 "authorisations","SKILL:ABA5:CHECKAPPLICATIONC100"
             )
@@ -557,8 +582,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
             ), Map.of(
                 "autoAssignable", false,
-                "name", "ctsc",
-                "roleCategory", "CTSC",
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONC100",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
             )
@@ -609,8 +634,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
             ), Map.of(
                 "autoAssignable", false,
-                "name", "ctsc",
-                "roleCategory", "CTSC",
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONC100",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
             )
@@ -662,8 +687,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
             ), Map.of(
                 "autoAssignable", false,
-                "name", "ctsc",
-                "roleCategory", "CTSC",
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONC100",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
             )
@@ -795,6 +820,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(25));
+        assertThat(logic.getRules().size(), is(26));
     }
 }
