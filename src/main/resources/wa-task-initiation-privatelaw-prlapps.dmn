@@ -6731,6 +6731,148 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"reviewLangAndSmReqIdent"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0iv9bu2">
+        <inputEntry id="UnaryTests_10p94m9">
+          <text>"awpPaymentSuccessCallback"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bf5o3w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fhixnc">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05u7tbr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0whv5kw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0isnylq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h0h8dt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y3in6q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1omib6m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cuovsq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11xdpmf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r1zc4c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wyeii9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19zx0d0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02i9o55">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10h2tpw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ee4sc8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kuhr74">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ek7a6g">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0404eo1">
+          <text>"reviewAdditionalApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vkv64n">
+          <text>"Review additional application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l6gxlt">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rhpllo">
+          <text>"reviewAddtlAppC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1j8jo40">
+        <inputEntry id="UnaryTests_12so564">
+          <text>"awpPaymentSuccessCallback"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rmklmy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0husv36">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pwgumh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xsgixm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lju9pj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hxk17m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ayxds5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1alzk0d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m6o4w9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j00u8i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oe9wcn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e1aqm5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01uc5dr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lrx0vl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13xs164">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05oh2dq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0094wq0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rxhtma">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_000w071">
+          <text>"reviewAdditionalApplicationFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sjpl8u">
+          <text>"Review additional application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g986w4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01hivz6">
+          <text>"reviewAddtlAppFL401"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
