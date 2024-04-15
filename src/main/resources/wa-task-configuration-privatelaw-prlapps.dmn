@@ -1409,6 +1409,8 @@ caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1f4sv4x">
           <text>"[Review case notes](/cases/case-details/${[CASE_REFERENCE]}#Case%20Notes)"</text>
+        <outputEntry id="LiteralExpression_1f4sv4x">
+          <text>"[Review inactive case flags](/cases/case-details/${[CASE_REFERENCE]}#Case%20Notes)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0vwtzxj">
           <text></text>

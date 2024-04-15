@@ -525,28 +525,27 @@
           <text>"List without notice hearing(see case notes)"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1s2sf3o">
-        <description>RAAC100</description>
-        <inputEntry id="UnaryTests_0vbypjf">
+      <rule id="DecisionRule_0t6sq87">
+        <description>RLSMR</description>
+        <inputEntry id="UnaryTests_01slexa">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_1l5fniu">
-          <text>"reviewAdditionalApplicationC100"</text>
+        <outputEntry id="LiteralExpression_0c1kpzo">
+          <text>"reviewLangAndSmReq"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_19eiipu">
-          <text>"Review additional application"</text>
+        <outputEntry id="LiteralExpression_0xr6vi2">
+          <text>"Review Language and SM requirements"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1t90scq">
-        <description>RAAFL401</description>
-        <inputEntry id="UnaryTests_1my9v1t">
+      <rule id="DecisionRule_1g1tgpq">
+        <inputEntry id="UnaryTests_0f8mj3t">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_12eifl3">
-          <text>"reviewAdditionalApplicationFL401"</text>
+        <outputEntry id="LiteralExpression_0bbc7fx">
+          <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0f3g2pa">
-          <text>"Review additional application"</text>
+        <outputEntry id="LiteralExpression_13cvrnd">
+          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
