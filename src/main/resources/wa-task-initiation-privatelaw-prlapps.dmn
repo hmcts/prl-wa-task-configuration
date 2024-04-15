@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.20.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -6660,146 +6660,75 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"listWithoutNoticeHearingC100"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0ru56s9">
-        <inputEntry id="UnaryTests_0gdc64w">
-          <text>"uploadAdditionalApplications"</text>
+      <rule id="DecisionRule_1tbkzv4">
+        <inputEntry id="UnaryTests_08mxqon">
+          <text>"citizenLanguageSupportNotes"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1j69rzo">
+        <inputEntry id="UnaryTests_1kd4g38">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1hbr8o7">
-          <text>"C100"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ey1i4o">
+        <inputEntry id="UnaryTests_085hpep">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0yhq4gq">
+        <inputEntry id="UnaryTests_0mif790">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_042hjvp">
+        <inputEntry id="UnaryTests_0vtrsz5">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_054hrjm">
+        <inputEntry id="UnaryTests_16u5cy4">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1rr0sn5">
+        <inputEntry id="UnaryTests_0bjidvy">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1kuue5p">
+        <inputEntry id="UnaryTests_03ooi4n">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0ekzgf6">
+        <inputEntry id="UnaryTests_0yj2ocs">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_01p2jyv">
+        <inputEntry id="UnaryTests_07tgu7v">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1w6ziov">
+        <inputEntry id="UnaryTests_1o02m3m">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0uaoa4n">
+        <inputEntry id="UnaryTests_0a3f2ac">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_13qs1o2">
+        <inputEntry id="UnaryTests_00eph3l">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0yc3i6t">
+        <inputEntry id="UnaryTests_0ds3ouw">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0qerq4q">
+        <inputEntry id="UnaryTests_1bq40md">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0e9h6e4">
+        <inputEntry id="UnaryTests_11upfhc">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_09te9qd">
+        <inputEntry id="UnaryTests_14lzwql">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0h9w2d4">
+        <inputEntry id="UnaryTests_0fn9990">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_12y51ys">
-          <text>"reviewAdditionalApplicationC100"</text>
+        <inputEntry id="UnaryTests_1f9iwlw">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1fagqty">
+          <text>"reviewLangAndSmReq"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0aq5ikw">
-          <text>"Review additional application"</text>
+        <outputEntry id="LiteralExpression_0hdnxf2">
+          <text>"Review Language and SM requirements"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0nqp5qa">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_13qy74f">
-          <text>"reviewAdditionalApplicationC100"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_00igo1a">
-        <inputEntry id="UnaryTests_0s9xdvq">
-          <text>"uploadAdditionalApplications"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0h50htu">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1fs3cqm">
-          <text>"FL401"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1cn4a80">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1kuaqvd">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_00xg8q5">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0av4l36">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0cwck1d">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1qek6ii">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1i4tlos">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_174m87d">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0x2qm65">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_16u2eh6">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1sm8y7j">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1nklc0x">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0vs3yay">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_02cm2tq">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_17rxvih">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1gqj4h6">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1m8ja9c">
-          <text>"reviewAdditionalApplicationFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0cfj8fa">
-          <text>"Review additional application"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_09rj7eb">
+        <outputEntry id="LiteralExpression_1kjgxbu">
           <text></text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0f4qzri">
-          <text>"reviewAdditionalApplicationFL401"</text>
+        <outputEntry id="LiteralExpression_1adqt65">
+          <text>"reviewLangAndSmReqIdent"</text>
         </outputEntry>
       </rule>
     </decisionTable>
