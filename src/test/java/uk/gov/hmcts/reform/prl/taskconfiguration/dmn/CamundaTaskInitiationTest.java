@@ -288,7 +288,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "serviceOfApplicationC100",
                         "name", "Service of Application",
-                        "processCategories", "serviceOfApplication"
+                        "processCategories", "orderId_" + "C100"
                     )
                 )
             ),
@@ -356,7 +356,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 List.of(
                     Map.of(
-                        "processCategories", "serviceOfApplication",
+                        "processCategories", "orderId_" + "C100",
                         "taskId", "serviceOfApplicationC100",
                         "name", "Service of Application"
                     ),

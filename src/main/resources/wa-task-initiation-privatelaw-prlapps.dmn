@@ -1665,7 +1665,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0wnnmif">
-          <text>"serviceOfApplication"</text>
+          <text>"orderId_"+additionalData.Data.caseTypeOfApplication</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1f5eahe">
