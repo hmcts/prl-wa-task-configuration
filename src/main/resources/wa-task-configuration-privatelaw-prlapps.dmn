@@ -310,7 +310,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0tvsteh">
-          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","serviceOfApplicationC100","serviceOfApplicationFL401","serviceOfApplicationC100","adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401","reviewAdminOrderProvided","reviewAdminOrderByManager","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","serviceOfApplicationC100","serviceOfApplicationFL401","serviceOfApplicationC100","adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401","reviewAdminOrderProvided","reviewAdminOrderByManager","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","reviewAdditionalApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ixfp2h">
           <text>"dueDateIntervalDays"</text>
@@ -361,7 +361,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08jiuyj">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewAdminOrderProvided","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA", "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLA","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewAdminOrderProvided","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA", "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLA","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","reviewAdditionalApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lyogga">
           <text>"priorityDateOriginRef"</text>
@@ -562,6 +562,23 @@ caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_17ghg55">
+        <inputEntry id="UnaryTests_0ym1v2b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ajgl5w">
+          <text>"reviewAdditionalApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02f2ykx">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13n5p9m">
+          <text>1000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f5dkmt">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0ciq3lu">
         <inputEntry id="UnaryTests_1jzjl1e">
           <text></text>
@@ -652,7 +669,7 @@ caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1y3kj1v">
-          <text>"addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationC100","adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","reviewCorrespondenceC100","reviewCorrespondenceFL401","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA","reviewDocumentsForSolAndCafcassC100","reviewDocumentsForSolAndCafcassFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","replyToMessageForJudiciary","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","listWithoutNoticeHearingC100","citizenLanguageSupportNotes"</text>
+          <text>"addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationC100","adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","reviewCorrespondenceC100","reviewCorrespondenceFL401","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA","reviewDocumentsForSolAndCafcassC100","reviewDocumentsForSolAndCafcassFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","replyToMessageForJudiciary","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","listWithoutNoticeHearingC100","citizenLanguageSupportNotes","reviewAdditionalApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0rvgay2">
           <text>"workType"</text>
@@ -771,7 +788,7 @@ caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1glizm3">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleFL401","produceHearingBundleC100","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewCorrespondenceFL401","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewCorrespondenceC100","reviewSpecificAccessRequestAdmin","removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401","reviewDocumentsForSolAndCafcassC100","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","reviewRaRequestsFL401","reviewInactiveRaRequestsFL401","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","confidentialCheckSOA","completefl416AndServe","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","listWithoutNoticeHearingC100","citizenLanguageSupportNotes"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleFL401","produceHearingBundleC100","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewCorrespondenceFL401","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewCorrespondenceC100","reviewSpecificAccessRequestAdmin","removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401","reviewDocumentsForSolAndCafcassC100","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","reviewRaRequestsFL401","reviewInactiveRaRequestsFL401","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","confidentialCheckSOA","completefl416AndServe","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","listWithoutNoticeHearingC100","citizenLanguageSupportNotes","reviewAdditionalApplication"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1131kat">
           <text>"roleCategory"</text>
@@ -1411,6 +1428,23 @@ caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"[Review case notes](/cases/case-details/${[CASE_REFERENCE]}#Case%20Notes)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0vwtzxj">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0939nc3">
+        <inputEntry id="UnaryTests_1nengsi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u34pp5">
+          <text>"reviewAdditionalApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ogmsif">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05rqob8">
+          <text>"[Review other applications](/cases/case-details/${[CASE_REFERENCE]}#Other%20applications)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03r9prs">
           <text></text>
         </outputEntry>
       </rule>

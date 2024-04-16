@@ -7,7 +7,7 @@
           <text></text>
         </inputExpression>
       </input>
-      <output id="Output_1" label="Task Type Id" name="taskTypeId" typeRef="string" biodi:width="247" />
+      <output id="Output_1" label="Task Type Id" name="taskTypeId" typeRef="string" biodi:width="367" />
       <output id="OutputClause_05pod8h" label="Task Type Name" name="taskTypeName" typeRef="string" biodi:width="323" />
       <rule id="DecisionRule_083xw98">
         <description>CAC100</description>
@@ -538,26 +538,14 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1g1tgpq">
-        <description>RAAC100</description>
+        <description>RAA</description>
         <inputEntry id="UnaryTests_0f8mj3t">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0bbc7fx">
-          <text>"reviewAdditionalApplicationC100"</text>
+          <text>"reviewAdditionalApplication"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_13cvrnd">
-          <text>"Review additional application"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1vqjs8s">
-        <description>RAAFL401</description>
-        <inputEntry id="UnaryTests_1rynbax">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1p7og39">
-          <text>"reviewAdditionalApplicationFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_11gc8vo">
           <text>"Review additional application"</text>
         </outputEntry>
       </rule>

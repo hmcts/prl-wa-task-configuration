@@ -389,8 +389,7 @@
       <rule id="DecisionRule_0obpeja">
         <description>Court admin check application skills permission</description>
         <inputEntry id="UnaryTests_0m16bpv">
-          <text>"checkApplicationFL401", "checkApplicationResubmittedFL401",
-"sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401","removeLegalRepresentativeFL401","replyToMessageForCourtAdminFL401","reviewRaRequestsFL401","reviewInactiveRaRequestsFL401"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","removeLegalRepresentativeFL401","replyToMessageForCourtAdminFL401","reviewRaRequestsFL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_132ys7j">
           <text></text>
@@ -420,7 +419,7 @@
       <rule id="DecisionRule_0u17n4d">
         <description>Court admin hearing management skills permission</description>
         <inputEntry id="UnaryTests_0x0kyja">
-          <text>"produceHearingBundleFL401", "updateHearingActualsFL401","createHearingRequestReserveListAssist","createHearingRequest","createMultipleHearingRequest"</text>
+          <text>"produceHearingBundleFL401","updateHearingActualsFL401","createHearingRequestReserveListAssist","createHearingRequest","createMultipleHearingRequest","reviewAdditionalApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0473w2g">
           <text></text>
@@ -660,7 +659,7 @@
       <rule id="DecisionRule_079udd1">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_0ahkyod">
-          <text>"produceHearingBundleC100", "updateHearingActualsC100"</text>
+          <text>"produceHearingBundleC100","updateHearingActualsC100","reviewAdditionalApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qchifs">
           <text></text>
