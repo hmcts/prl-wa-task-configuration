@@ -1024,7 +1024,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1tk485o">
-          <text>"localCourtGatekeepingResubmittedC100"</text>
+          <text>"localCourtGatekeepingC100"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1o8khgx">
