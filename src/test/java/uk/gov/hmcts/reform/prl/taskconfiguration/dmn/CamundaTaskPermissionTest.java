@@ -411,7 +411,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @ParameterizedTest
     @CsvSource(value = {
         "checkApplicationC100", "checkApplicationResubmittedC100",
-        "addCaseNumber", "addCaseNumberResubmitted"
+        "addCaseNumber"
     })
     void evaluate_task_ctsc_checkApplicationc100(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();

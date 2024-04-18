@@ -67,6 +67,52 @@
           <text>"requestSolicitorOrder"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1qebhl5">
+        <inputEntry id="UnaryTests_1706lap">
+          <text>"SUBMITTED_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r689ju">
+          <text>"returnApplication"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lgv7m1">
+          <text>"AWAITING_RESUBMISSION_TO_HMCTS"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ifp2wr">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m0fssl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d05123">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1x6bsg5">
+          <text>"applicationCheck"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1df73jg">
+        <inputEntry id="UnaryTests_14m27i6">
+          <text>"CASE_ISSUED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s64lcv">
+          <text>"returnApplication"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qms4qa">
+          <text>"AWAITING_RESUBMISSION_TO_HMCTS"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1iyb6v8">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13121of">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g2fflv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19guof2">
+          <text>"localCourtGatekeepingC100"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1djj0fm">
         <inputEntry id="UnaryTests_1akpob1">
           <text></text>

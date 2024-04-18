@@ -159,10 +159,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskType", "addCaseNumber",
                         "completionMode", "Auto"
-                    ),
-                    Map.of(
-                        "taskType", "addCaseNumberResubmitted",
-                        "completionMode", "Auto"
                     )
                 )
             ),
@@ -371,7 +367,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(62));
+        assertThat(logic.getRules().size(), is(61));
     }
 
 

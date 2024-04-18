@@ -20,17 +20,6 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1tz0sm4">
-        <inputEntry id="UnaryTests_0giaxe8">
-          <text>"returnApplication"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0pout2j">
-          <text>"checkApplicationC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0k6r1te">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0kpx0qx">
         <inputEntry id="UnaryTests_0n7tn1a">
           <text>"issueAndSendToLocalCourtCallback"</text>
@@ -39,17 +28,6 @@
           <text>"checkApplicationResubmittedC100"	</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ap5cbf">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0vdeu8w">
-        <inputEntry id="UnaryTests_12exom5">
-          <text>"returnApplication"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_03n9vmg">
-          <text>"checkApplicationResubmittedC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1q9qfqc">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
@@ -108,17 +86,6 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0tirx14">
-        <inputEntry id="UnaryTests_1b60snt">
-          <text>"caseNumber"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_190p0iw">
-          <text>"addCaseNumberResubmitted"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_00j054y">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1v9cegc">
         <inputEntry id="UnaryTests_1ckmgqx">
           <text>"returnApplication"</text>
@@ -160,17 +127,6 @@
           <text>"sendToGateKeeperFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zje6u0">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_04t60rc">
-        <inputEntry id="UnaryTests_0rhk6ze">
-          <text>"returnApplication"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0p4x9e7">
-          <text>"sendToGateKeeperC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0vvm487">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
