@@ -514,7 +514,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_02twz7w">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401","removeLegalRepresentativeFL401", "replyToMessageForCourtAdminFL401", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLAFL401"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","directionOnIssue","directionOnIssueResubmitted","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401","removeLegalRepresentativeFL401", "replyToMessageForCourtAdminFL401", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLAFL401"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0o0dcmv">
           <text>"majorPriority"</text>
@@ -531,7 +531,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0f0gzeq">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","removeLegalRepresentativeC100", "replyToMessageForCourtAdminC100","reviewDocumentsForSolAndCafcassC100","replyToMessageForLA","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","listWithoutNoticeHearingC100"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","gateKeeping","gateKeepingResubmitted","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","removeLegalRepresentativeC100", "replyToMessageForCourtAdminC100","reviewDocumentsForSolAndCafcassC100","replyToMessageForLA","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","listWithoutNoticeHearingC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jiva8u">
           <text>"majorPriority"</text>
@@ -548,7 +548,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_05latny">
-          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA","recreateApplicationPack","replyToMessageForJudiciary","reviewAdminOrderByManager","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe"</text>
+          <text>"reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA","recreateApplicationPack","replyToMessageForJudiciary","reviewAdminOrderByManager","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_121l57m">
           <text>"majorPriority"</text>
