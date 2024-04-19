@@ -526,20 +526,20 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1ugk4jw">
-        <inputEntry id="UnaryTests_088b2ki">
+      <rule id="DecisionRule_0u5ejff">
+        <inputEntry id="UnaryTests_158wskc">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0f0gzeq">
+        <inputEntry id="UnaryTests_1f7e54s">
           <text>"checkApplicationC100","checkApplicationResubmittedC100","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","gateKeeping","gateKeepingResubmitted"</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0jiva8u">
+        <outputEntry id="LiteralExpression_1ggsvuv">
           <text>"majorPriority"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1h1xvth">
-          <text>if ((caseData.isUrgentFlag != null and caseData.isUrgentFlag="Yes") or (caseData.doYouNeedAWithoutNoticeHearing != null and caseData.doYouNeedAWithoutNoticeHearing="Yes") or (caseData.doYouRequireAHearingWithReducedNotice != null and caseData.doYouRequireAHearingWithReducedNotice="Yes") ) then 2000 else if (caseData.allegationsOfHarmYesNo != null and caseData.allegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
+        <outputEntry id="LiteralExpression_1ho6rmj">
+          <text>if (caseData.isUrgentFlag="Yes" or caseData.doYouNeedAWithoutNoticeHearing="Yes" or caseData.doYouRequireAHearingWithReducedNotice="Yes" or caseData.allegationsOfHarmYesNo="Yes") then 1000 else 5000</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0gfut7a">
+        <outputEntry id="LiteralExpression_0tqf6wr">
           <text></text>
         </outputEntry>
       </rule>
@@ -554,7 +554,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nojyci">
-          <text>3000</text>
+          <text>5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_13iw5bo">
           <text></text>
@@ -571,7 +571,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0w906jt">
-          <text>if (caseData.caseTypeOfApplication = "FL401") then 1000 else 3000</text>
+          <text>if (caseData.caseTypeOfApplication = "FL401") then 1000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ve8n1e">
           <text></text>
