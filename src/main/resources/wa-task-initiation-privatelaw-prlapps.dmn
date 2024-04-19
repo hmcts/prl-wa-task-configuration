@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -6515,6 +6515,77 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ww6pnb">
+          <text>"reviewDocsC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1dq8fxj">
+        <inputEntry id="UnaryTests_1llhs7k">
+          <text>"reviewAndSubmit"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19wo9i1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jwtlz8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19l2hbq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nbks5e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_073d96t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qnyx7a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13kttyw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10ydcvi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l9k4ws">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hl5k59">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rnhkyp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02qls3a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jjj3fw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s99x5j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pnq7yu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1glo8fq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u1vgsr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qvhxb5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wumq3s">
+          <text>"reviewDocumentsForSolAndCafcassC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09n6mn9">
+          <text>"Review Documents"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g0je6w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gsrt7k">
           <text>"reviewDocsC100"</text>
         </outputEntry>
       </rule>

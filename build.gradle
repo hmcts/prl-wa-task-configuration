@@ -4,7 +4,7 @@ plugins {
   id 'pmd'
   id 'jacoco'
   id 'io.spring.dependency-management' version '1.0.11.RELEASE'
-  id 'org.springframework.boot' version '2.4.12'
+  id 'org.springframework.boot' version '2.7.18'
   id 'com.github.ben-manes.versions' version '0.38.0'
   id 'org.owasp.dependencycheck' version '8.0.1'
   id 'org.sonarqube' version '4.3.0.3225'
@@ -183,12 +183,12 @@ dependencyManagement {
   dependencies {
     dependency group: 'org.bouncycastle', name: 'bcpkix-jdk15on', version: '1.68'
     // CVE-2018-10237 - Unbounded memory allocation
-    dependencySet(group: 'com.google.guava', version: '30.1-jre') {
+    dependencySet(group: 'com.google.guava', version: '33.1.0-jre') {
       entry 'guava'
     }
 
     //CVE-2021-28170
-    dependency group: 'org.glassfish', name: 'jakarta.el', version: '4.0.1'
+    //dependency group: 'org.glassfish', name: 'jakarta.el', version: '4.0.1'
 
     //CVE-2021-29425
     dependency group: 'commons-io', name: 'commons-io', version: '2.7'
@@ -200,7 +200,7 @@ dependencyManagement {
     }
 
     //CVE-2021-22060
-    dependencySet(group: 'org.springframework', name: 'spring-core', version: '5.3.19') {
+    dependencySet(group: 'org.springframework', name: 'spring-core', version: '5.3.33') {
       entry 'spring-core'
       entry 'spring-aop'
       entry 'spring-beans'
@@ -208,6 +208,24 @@ dependencyManagement {
       entry 'spring-expression'
       entry 'spring-jcl'
       entry 'spring-web'
+      entry 'spring-webmvc'
+    }
+
+    // CVE-2022-25647
+    dependencySet(group: 'com.google.code.gson', version: '2.10.1') {
+      entry 'gson'
+    }
+
+    // CVE-2023-35116
+    dependencySet(group: 'com.fasterxml.jackson.core', version: '2.17.0') {
+      entry 'jackson-databind'
+      entry 'jackson-annotations'
+      entry 'jackson-core'
+    }
+
+    //CVE-2022-1471
+    dependencySet(group: 'org.yaml', version: '2.0') {
+      entry 'snakeyaml'
     }
   }
 }
@@ -222,11 +240,11 @@ def versions = [
   junit           : '5.7.2',
   junitPlatform   : '1.7.2',
   reformLogging   : '5.1.7',
-  springfoxSwagger: '2.9.2',
+  springfoxSwagger: '3.0.0',
   camunda         : '7.18.0',
-  pitest          : '1.5.2',
+  pitest          : '1.16.0',
   sonarPitest     : '0.5',
-  tomcat          : '9.0.58',
+  tomcat          : '9.0.83',
   log4j           : '2.17.1'
 
 ]
@@ -249,6 +267,7 @@ dependencies {
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-json'
 
   implementation group: 'io.springfox', name: 'springfox-swagger2', version: versions.springfoxSwagger
+  implementation group: 'io.springfox', name: 'springfox-boot-starter', version: versions.springfoxSwagger
 
   implementation group: 'com.github.hmcts.java-logging', name: 'logging', version: versions.reformLogging
   implementation group: 'com.github.hmcts.java-logging', name: 'logging-appinsights', version: versions.reformLogging
@@ -258,6 +277,8 @@ dependencies {
 
   implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-core', version: versions.tomcat
   implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-websocket', version: versions.tomcat
+
+  implementation group: 'jakarta.el', name: 'jakarta.el-api', version: '5.0.1'
 
   testImplementation group: 'org.pitest', name: 'pitest', version: versions.pitest
   testImplementation 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.5.2'
