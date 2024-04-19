@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-permissions-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
+  <decision id="wa-task-permissions-privatelaw-privatelaw_exceptionrecord" name="Private Law Bulk Scan Permissions DMN">
+    <decisionTable id="DecisionTable_1pr5oic" hitPolicy="RULE ORDER">
+      <input id="InputClause_12crj6e" label="Task Type" biodi:width="554" camunda:inputVariable="taskType">
+        <inputExpression id="LiteralExpression_11cu08d" typeRef="string" expressionLanguage="feel">
+          <text>if(taskAttributes != null and taskAttributes.taskType != null) then
+            taskAttributes.taskType
+            else
+            "r1"</text>
+        </inputExpression>
+      </input>
+      <input id="Input_1" label="Case Data" biodi:width="150" camunda:inputVariable="case">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1q156ce" label="Case Access Category" name="caseAccessCategory" typeRef="string" biodi:width="179" />
+      <output id="Output_1" label="Name" name="name" typeRef="string" biodi:width="150" />
+      <output id="OutputClause_1mzxe7i" label="Value" name="value" typeRef="string" biodi:width="249" />
+      <output id="OutputClause_05whhwf" label="RoleCategory" name="roleCategory" typeRef="string" biodi:width="168" />
+      <output id="OutputClause_16bocer" label="Authorisations" name="authorisations" typeRef="string" biodi:width="150" />
+      <output id="OutputClause_1n914lw" label="Assignment Priority" name="assignmentPriority" typeRef="integer" biodi:width="150" />
+      <output id="OutputClause_04cbxc1" label="Auto Assignable" name="autoAssignable" typeRef="boolean" biodi:width="150" />
+      <rule id="DecisionRule_0obpeja">
+        <description>Court admin check application skills permission</description>
+        <inputEntry id="UnaryTests_0m16bpv">
+          <text>"reviewExceptionBulkScanRecord"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_132ys7j">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0f7gbzp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00srfsu">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08cueo7">
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sd0fo0">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hhi01m">
+          <text>"SKILL:ABA5:CHECKAPPLICATIONFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0frmr9q">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ejj2eo">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_098qsjq">
+        <description>CTSC task permissions</description>
+        <inputEntry id="UnaryTests_14xrsqw">
+          <text>"reviewExceptionBulkScanRecord"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pv1c0z">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rygc2e">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08der8z">
+          <text>"ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09o2reg">
+          <text>"Read,Own,CompleteOwn,CancelOwn,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1sso00i">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cigjw1">
+          <text>"SKILL:ABA5:CHECKAPPLICATIONC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1sopskr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ckfsm8">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="wa-task-permissions-privatelaw-privatelaw_exceptionrecord">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
