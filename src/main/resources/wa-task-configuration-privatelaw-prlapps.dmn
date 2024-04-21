@@ -514,7 +514,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_02twz7w">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","directionOnIssue","directionOnIssueResubmitted","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401","removeLegalRepresentativeFL401", "replyToMessageForCourtAdminFL401", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLAFL401","listOnNoticeHearingFL401"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","directionOnIssue","directionOnIssueResubmitted","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401","removeLegalRepresentativeFL401", "replyToMessageForCourtAdminFL401", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLAFL401","listOnNoticeHearingFL401","listWithoutNoticeHearingC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0o0dcmv">
           <text>"majorPriority"</text>
@@ -537,7 +537,10 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ho6rmj">
-          <text>if (caseData.isUrgentFlag="Yes" or caseData.doYouNeedAWithoutNoticeHearing="Yes" or caseData.doYouRequireAHearingWithReducedNotice="Yes" or caseData.allegationsOfHarmYesNo="Yes") then 1000 else 5000</text>
+          <text>if ((caseData.isCaseUrgent != null and caseData.isCaseUrgent="Yes") or 
+    (caseData.doYouNeedAWithoutNoticeHearing != null and caseData.doYouNeedAWithoutNoticeHearing="Yes") or 
+    (caseData.doYouRequireAHearingWithReducedNotice != null and caseData.doYouRequireAHearingWithReducedNotice="Yes")) then 1000  
+    else else if (caseData.newAllegationsOfHarmYesNo != null and caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0tqf6wr">
           <text></text>
@@ -548,7 +551,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_02xhoqj">
-          <text>"serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","removeLegalRepresentativeC100", "replyToMessageForCourtAdminC100","reviewDocumentsForSolAndCafcassC100","listWithoutNoticeHearingC100"</text>
+          <text>"addCaseNumber","addCaseNumberResubmitted","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","removeLegalRepresentativeC100", "replyToMessageForCourtAdminC100","reviewDocumentsForSolAndCafcassC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0a8okqv">
           <text>"majorPriority"</text>
@@ -571,26 +574,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0w906jt">
-          <text>if (caseData.caseTypeOfApplication = "FL401") then 1000 else 5000</text>
+          <text>if (caseData.caseTypeOfApplication!=null and caseData.caseTypeOfApplication = "FL401") then 1000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ve8n1e">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1qj2t85">
-        <inputEntry id="UnaryTests_08nxiy2">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1y4w2b5">
-          <text>"addCaseNumber","addCaseNumberResubmitted"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1khn04e">
-          <text>"majorPriority"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1lbtt9x">
-          <text>5000</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1lf2yyk">
           <text></text>
         </outputEntry>
       </rule>
