@@ -664,6 +664,23 @@ caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"false"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_13dj1jh">
+        <inputEntry id="UnaryTests_0574ili">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dqlmc6">
+          <text>"reviewAdditionalApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zj9urq">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_103kk50">
+          <text>if(caseData.awpWaName !=null) then (taskAttributes.name + " - " + caseData.awpWaName) else taskAttributes.name</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1voclbp">
+          <text>"false"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0ikmf14">
         <inputEntry id="UnaryTests_0epux74">
           <text></text>
