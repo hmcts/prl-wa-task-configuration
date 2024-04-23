@@ -952,6 +952,34 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "processCategories", "reviewLangAndSmReqIdent"
                     )
                 )
+            ),
+            Arguments.of(
+                "awpPaymentSuccessCallback",
+                null,
+                null,
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdditionalApplication",
+                        "name", "Review additional application",
+                        "processCategories", "reviewAddtlApp"
+                    )
+                )
+            ),
+            Arguments.of(
+                "uploadAdditionalApplications",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"awpWaTaskToBeCreated\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdditionalApplication",
+                        "name", "Review additional application",
+                        "processCategories", "reviewAddtlApp"
+                    )
+                )
             )
         );
     }

@@ -675,7 +675,7 @@ caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
           <text>"title"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_103kk50">
-          <text>if(caseData.awpWaName !=null) then (taskAttributes.name + " - " + caseData.awpWaName) else taskAttributes.name</text>
+          <text>if(caseData.awpWaTaskName !=null) then (taskAttributes.name + " - " + caseData.awpWaTaskName) else taskAttributes.name</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1voclbp">
           <text>"false"</text>

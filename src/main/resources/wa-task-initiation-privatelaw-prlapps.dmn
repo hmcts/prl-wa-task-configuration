@@ -171,9 +171,9 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocumentsRestrictedFlag != null) then additionalData.Data.manageDocumentsRestrictedFlag else ""</text>
         </inputExpression>
       </input>
-      <input id="InputClause_1hshfk6" label="awp create task?">
+      <input id="InputClause_1hshfk6" label="awpWaTaskToBeCreated" camunda:inputVariable="awpWaTaskToBeCreated">
         <inputExpression id="LiteralExpression_17cg87l" typeRef="string">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.awpWaTaskToBeCreated != null) then additionalData.Data.awpCreateTask else ""</text>
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.awpWaTaskToBeCreated != null) then additionalData.Data.awpWaTaskToBeCreated else ""</text>
         </inputExpression>
         <inputValues id="UnaryTests_1om6csl">
           <text>"Yes","No"</text>
