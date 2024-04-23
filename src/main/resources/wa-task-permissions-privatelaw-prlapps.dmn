@@ -480,7 +480,7 @@
       <rule id="DecisionRule_1v7zc7t">
         <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_10rpp7x">
-          <text>"serviceOfApplicationFL401","adminServeOrderFL401","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe"</text>
+          <text>"serviceOfApplicationFL401","adminServeOrderFL401","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","listOnNoticeHearingFL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ytal4l">
           <text></text>
