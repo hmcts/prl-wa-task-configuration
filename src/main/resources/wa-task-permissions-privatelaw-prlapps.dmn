@@ -660,7 +660,7 @@
       <rule id="DecisionRule_079udd1">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_0ahkyod">
-          <text>"produceHearingBundleC100", "updateHearingActualsC100"</text>
+          <text>"produceHearingBundleC100","updateHearingActualsC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qchifs">
           <text></text>
@@ -721,8 +721,7 @@
       <rule id="DecisionRule_1625m7m">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_17yokon">
-          <text> "serviceOfApplicationC100","adminServeOrderC100"
-          </text>
+          <text>"serviceOfApplicationC100","adminServeOrderC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1sww3e8">
           <text></text>

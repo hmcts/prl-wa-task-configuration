@@ -537,17 +537,6 @@
           <text>"Review Language and SM requirements"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1g1tgpq">
-        <inputEntry id="UnaryTests_0f8mj3t">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0bbc7fx">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_13cvrnd">
-          <text></text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1epamws">
         <description>LONHFL401</description>
         <inputEntry id="UnaryTests_1flpes9">
