@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.20.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN">
     <decisionTable id="DecisionTable_14cx079" hitPolicy="COLLECT">
       <input id="InputClause_1gxyo7f" label="CCD Case Data" camunda:inputVariable="caseData">
@@ -514,7 +514,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_02twz7w">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401","removeLegalRepresentativeFL401", "replyToMessageForCourtAdminFL401", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLAFL401","listWithoutNoticeHearingC100","listOnNoticeHearingFL401"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","directionOnIssue","directionOnIssueResubmitted","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401","removeLegalRepresentativeFL401", "replyToMessageForCourtAdminFL401", "reviewDocumentsForSolAndCafcassFL401","replyToMessageForLAFL401","listWithoutNoticeHearingC100","listOnNoticeHearingFL401"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0o0dcmv">
           <text>"majorPriority"</text>
@@ -526,20 +526,40 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1ugk4jw">
-        <inputEntry id="UnaryTests_088b2ki">
+      <rule id="DecisionRule_0u5ejff">
+        <inputEntry id="UnaryTests_158wskc">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0f0gzeq">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","removeLegalRepresentativeC100", "replyToMessageForCourtAdminC100","reviewDocumentsForSolAndCafcassC100","replyToMessageForLA","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist"</text>
+        <inputEntry id="UnaryTests_1f7e54s">
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","gateKeeping","gateKeepingResubmitted"</text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0jiva8u">
+        <outputEntry id="LiteralExpression_1ggsvuv">
           <text>"majorPriority"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1h1xvth">
-          <text>if (caseData.isCaseUrgent != null and caseData.isCaseUrgent="Yes") then 2000 else if (caseData.newAllegationsOfHarmYesNo != null and caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
+        <outputEntry id="LiteralExpression_1ho6rmj">
+          <text>if ((caseData.isCaseUrgent != null and caseData.isCaseUrgent="Yes") or 
+    (caseData.doYouNeedAWithoutNoticeHearing != null and caseData.doYouNeedAWithoutNoticeHearing="Yes") or 
+    (caseData.doYouRequireAHearingWithReducedNotice != null and caseData.doYouRequireAHearingWithReducedNotice="Yes")) then 1000  
+    else if (caseData.newAllegationsOfHarmYesNo != null and caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0gfut7a">
+        <outputEntry id="LiteralExpression_0tqf6wr">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1pm7day">
+        <inputEntry id="UnaryTests_029rpk0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02xhoqj">
+          <text>"addCaseNumber","addCaseNumberResubmitted","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","removeLegalRepresentativeC100", "replyToMessageForCourtAdminC100","reviewDocumentsForSolAndCafcassC100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a8okqv">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nojyci">
+          <text>5000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13iw5bo">
           <text></text>
         </outputEntry>
       </rule>
@@ -548,15 +568,13 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_05latny">
-          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA","recreateApplicationPack","replyToMessageForJudiciary","reviewAdminOrderByManager","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe"</text>
+          <text>"reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA","recreateApplicationPack","replyToMessageForJudiciary","reviewAdminOrderByManager","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","replyToMessageForLA","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_121l57m">
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0w906jt">
-          <text>if (caseData.caseTypeOfApplication = "FL401") then 1000 else if (caseData.caseTypeOfApplication = "C100" and caseDate.isCaseUrgent != null and caseData.isCaseUrgent="Yes") then 2000
-else if (caseData.caseTypeOfApplication = "C100" and caseData.newAllegationsOfHarmYesNo != null and
-caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
+          <text>if (caseData.caseTypeOfApplication!=null and caseData.caseTypeOfApplication = "FL401") then 1000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ve8n1e">
           <text></text>
