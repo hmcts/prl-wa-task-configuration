@@ -145,6 +145,17 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                         "action", "Reconfigure"
                     )
                 )
+            ),
+            Arguments.of(
+                null,
+                "allAwPInReview",
+                null,
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "reviewAddtlApp"
+                    )
+                )
             )
         );
     }
@@ -171,7 +182,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(14));
+        assertThat(logic.getRules().size(), is(15));
 
     }
 }
