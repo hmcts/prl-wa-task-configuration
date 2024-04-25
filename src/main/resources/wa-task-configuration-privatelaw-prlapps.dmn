@@ -540,7 +540,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>if ((caseData.isCaseUrgent != null and caseData.isCaseUrgent="Yes") or 
     (caseData.doYouNeedAWithoutNoticeHearing != null and caseData.doYouNeedAWithoutNoticeHearing="Yes") or 
     (caseData.doYouRequireAHearingWithReducedNotice != null and caseData.doYouRequireAHearingWithReducedNotice="Yes")) then 1000  
-    else else if (caseData.newAllegationsOfHarmYesNo != null and caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
+    else if (caseData.newAllegationsOfHarmYesNo != null and caseData.newAllegationsOfHarmYesNo="Yes") then 3000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0tqf6wr">
           <text></text>
