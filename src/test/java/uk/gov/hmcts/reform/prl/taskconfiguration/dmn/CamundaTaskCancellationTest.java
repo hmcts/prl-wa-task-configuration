@@ -145,6 +145,17 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                         "action", "Reconfigure"
                     )
                 )
+            ),
+            Arguments.of(
+                null,
+                "allAwPInReview",
+                null,
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "reviewAddtlApp"
+                    )
+                )
             )
         );
     }
