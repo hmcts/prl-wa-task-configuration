@@ -389,7 +389,7 @@
       <rule id="DecisionRule_0obpeja">
         <description>Court admin check application skills permission</description>
         <inputEntry id="UnaryTests_0m16bpv">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","removeLegalRepresentativeFL401","replyToMessageForCourtAdminFL401","reviewRaRequestsFL401"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","removeLegalRepresentativeFL401","replyToMessageForCourtAdminFL401","reviewRaRequestsFL401","reviewInactiveRaRequestsFL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_132ys7j">
           <text></text>
@@ -629,7 +629,7 @@
       <rule id="DecisionRule_1evorlb">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_1k15vbg">
-          <text>"sendToGateKeeperC100","sendToGateKeeperResubmittedC100","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100"</text>
+          <text>"sendToGateKeeperC100","sendToGateKeeperResubmittedC100","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","listWithoutNoticeHearingC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_12k147l">
           <text></text>
