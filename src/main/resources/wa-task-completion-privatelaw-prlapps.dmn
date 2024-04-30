@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.12.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
   <decision id="wa-task-completion-privatelaw-prlapps" name="Private Law Task completion DMN">
     <decisionTable id="DecisionTable_01re27m" hitPolicy="COLLECT">
       <input id="eventId" label="Event ID" biodi:width="437">
@@ -682,7 +682,7 @@
       </rule>
       <rule id="DecisionRule_05kvogz">
         <inputEntry id="UnaryTests_0cb5u2c">
-          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","returnApplication","sendOrReplyToMessages","adminRemoveLegalRepresentativeC100","adminRemoveLegalRepresentativeFL401","c100ManageFlags","fl401ManageFlags","statementOfService","issueAndSendToLocalCourtCallback"</text>
+          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","returnApplication","sendOrReplyToMessages","adminRemoveLegalRepresentativeC100","adminRemoveLegalRepresentativeFL401","c100ManageFlags","fl401ManageFlags","statementOfService"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1o5rfjh">
           <text></text>
