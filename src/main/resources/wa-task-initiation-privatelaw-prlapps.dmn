@@ -7175,7 +7175,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rkz30m">
-          <text></text>
+          <text>"C100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ompefe">
           <text></text>
@@ -7239,6 +7239,80 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_1sfk27z">
           <text>"reviewRAC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09a3guf">
+        <inputEntry id="UnaryTests_19u7rse">
+          <text>"createWaTaskForCtscCaseFlags"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ucrbxa">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kmerlh">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05wsznb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_184b8zw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vncxop">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pyvnm8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ce7qkx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02qwg19">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j1grkg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l5nmmk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15y78r3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0me4a5a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wldle8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p9hlsf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0887aut">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1whin0b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05d7hki">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fser3m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cdtv8e">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1egz7i6">
+          <text>"reviewRaRequestsFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1758z63">
+          <text>"Review RA request"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01msixg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03bh3xy">
+          <text>"reviewRAFL401"</text>
         </outputEntry>
       </rule>
     </decisionTable>
