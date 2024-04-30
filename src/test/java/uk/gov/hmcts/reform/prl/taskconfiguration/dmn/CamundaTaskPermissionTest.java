@@ -814,32 +814,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         )));
     }
 
-    @SuppressWarnings("checkstyle:indentation")
-    @ParameterizedTest
-    @CsvSource(value = {
-        "reviewLangAndSmReq"
-    })
-    void evaluate_task_admin_reviewLangAndSmReq(String taskType) {
-        VariableMap inputVariables = new VariableMapImpl();
-        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
-
-        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
-
-        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
-            Map.of(
-                "autoAssignable", false,
-                "name", "task-supervisor",
-                "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
-            ), Map.of(
-                "autoAssignable", false,
-                "name", "hearing-centre-admin",
-                "roleCategory", "ADMIN",
-                "authorisations", "SKILL:ABA5:CHECKAPPLICATIONC100",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
-            )
-        )));
-    }
-
     @Test
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.20.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN">
     <decisionTable id="DecisionTable_14cx079" hitPolicy="COLLECT">
       <input id="InputClause_1gxyo7f" label="CCD Case Data" camunda:inputVariable="caseData">
@@ -1452,21 +1452,6 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <outputEntry id="LiteralExpression_0z83sm9">
           <text></text>
         </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0dqgsb8">
-        <inputEntry id="UnaryTests_1nir0xy">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0sopse9">
-          <text>"reviewLangAndSmReq"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_021ixwb">
-          <text>"description"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1f4sv4x">
-          <text>"[Review case notes for language support](/cases/case-details/${[CASE_REFERENCE]}#Case%20Notes)"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0vwtzxj" />
       </rule>
       <rule id="DecisionRule_1p3gg1m">
         <inputEntry id="UnaryTests_1c6e3ps">

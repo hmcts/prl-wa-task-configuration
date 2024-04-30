@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.20.0">
   <decision id="wa-task-cancellation-privatelaw-prlapps" name="Private Law Task cancellation DMN">
     <decisionTable id="DecisionTable_0z3jx1g" hitPolicy="COLLECT">
       <input id="Input_1" label="From State">
@@ -318,29 +318,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0oym0cy">
           <text>"reviewDocsFL401"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_06yrhpv">
-        <inputEntry id="UnaryTests_1crdbqb">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1cilr5v">
-          <text>"reviewLangAndSmReq"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1mzlz37">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_02gld2h">
-          <text>"Reconfigure"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1fx5i7i">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0kvypgb">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1cx4u15">
-          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0eb469o">

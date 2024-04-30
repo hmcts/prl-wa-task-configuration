@@ -942,18 +942,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "citizenLanguageSupportNotes",
-                null,
-                null,
-                singletonList(
-                    Map.of(
-                        "taskId", "reviewLangAndSmReq",
-                        "name", "Review Language and SM requirements",
-                        "processCategories", "reviewLangAndSmReqIdent"
-                    )
-                )
-            ),
-            Arguments.of(
                 "awpPaymentSuccessCallback",
                 null,
                 null,

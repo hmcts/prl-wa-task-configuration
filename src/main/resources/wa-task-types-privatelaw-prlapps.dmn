@@ -525,16 +525,16 @@
           <text>"List without notice hearing(see case notes)"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0t6sq87">
-        <description>RLSMR</description>
-        <inputEntry id="UnaryTests_01slexa">
+      <rule id="DecisionRule_1epamws">
+        <description>LONHFL401</description>
+        <inputEntry id="UnaryTests_1flpes9">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0c1kpzo">
-          <text>"reviewLangAndSmReq"</text>
+        <outputEntry id="LiteralExpression_0u5l586">
+          <text>"listOnNoticeHearingFL401"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0xr6vi2">
-          <text>"Review Language and SM requirements"</text>
+        <outputEntry id="LiteralExpression_17r22b3">
+          <text>"Listing instructions (refer to case notes)"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1g1tgpq">
@@ -547,18 +547,6 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_13cvrnd">
           <text>"Review additional application"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1epamws">
-        <description>LONHFL401</description>
-        <inputEntry id="UnaryTests_1flpes9">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0u5l586">
-          <text>"listOnNoticeHearingFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_17r22b3">
-          <text>"Listing instructions (refer to case notes)"</text>
         </outputEntry>
       </rule>
     </decisionTable>

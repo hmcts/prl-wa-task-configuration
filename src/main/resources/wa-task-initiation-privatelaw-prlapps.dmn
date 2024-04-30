@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.20.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -6945,80 +6945,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"listWithoutNoticeHearingC100"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1tbkzv4">
-        <inputEntry id="UnaryTests_08mxqon">
-          <text>"citizenLanguageSupportNotes"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1kd4g38">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_085hpep">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0mif790">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0vtrsz5">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_16u5cy4">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0bjidvy">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_03ooi4n">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0yj2ocs">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_07tgu7v">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1o02m3m">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0a3f2ac">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_00eph3l">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ds3ouw">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1bq40md">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_11upfhc">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_14lzwql">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0fn9990">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1f9iwlw">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1a4xpcb">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1fagqty">
-          <text>"reviewLangAndSmReq"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0hdnxf2">
-          <text>"Review Language and SM requirements"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1kjgxbu">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1adqt65">
-          <text>"reviewLangAndSmReqIdent"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1juzupt">
         <inputEntry id="UnaryTests_0txzny0">
           <text>"fl401ListOnNotice"</text>
@@ -7239,6 +7165,80 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_0nwprl1">
           <text>"reviewAddtlApp"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0zd63mk">
+        <inputEntry id="UnaryTests_09g99gh">
+          <text>"createWaTaskForCtscCaseFlags"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k1t5mx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rkz30m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ompefe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1azx70q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tdbu01">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e1szno">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14tm9j9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02ba258">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pvajkb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17mvlsz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10qjdbn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wm7k8i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rbr4k3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qgpabr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p4o9lq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c1gy0h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09u0w4h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tl2niv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pozbre">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0e6w375">
+          <text>"reviewRaRequestsC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1e5vqn5">
+          <text>"Review RA request"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l4lsn2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1sfk27z">
+          <text>"reviewRAC100"</text>
         </outputEntry>
       </rule>
     </decisionTable>
