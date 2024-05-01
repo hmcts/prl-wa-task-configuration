@@ -705,6 +705,80 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1259kbj">
+        <inputEntry id="UnaryTests_1m5bd0z">
+          <text>"adminCreate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ohe7p0">
+          <text>"SUBMITTED_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wqng4f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19wfilb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0043yfs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09y6kco">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s04msw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ppm6v0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05vbb14">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vdsodg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hu25ap">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nylsre">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0amykt4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gws981">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16bpdc0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02wspu2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u2o3ir">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w801ae">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wujvnf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i2c19q">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1nnvv20">
+          <text>"checkApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1eeydvu">
+          <text>"Check Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m835ow">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1221wqs">
+          <text>"applicationCheck"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1as56x2">
         <inputEntry id="UnaryTests_1flvbac">
           <text>"submit"</text>
