@@ -60,6 +60,22 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "adminCreate",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "checkApplicationC100",
+                        "name", "Check Application",
+                        "processCategories", "applicationCheck"
+                    )
+                )
+            ),
+            Arguments.of(
                 "submit",
                 "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
@@ -966,6 +982,38 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "reviewAdditionalApplication",
                         "name", "Review additional application",
                         "processCategories", "reviewAddtlApp"
+                    )
+                )
+            ),
+            Arguments.of(
+                "createWaTaskForCtscCaseFlags",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewRaRequestsC100",
+                        "name", "Review RA request",
+                        "processCategories", "reviewRAC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "createWaTaskForCtscCaseFlags",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewRaRequestsFL401",
+                        "name", "Review RA request",
+                        "processCategories", "reviewRAFL401"
                     )
                 )
             )
