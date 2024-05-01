@@ -320,29 +320,6 @@
           <text>"reviewDocsFL401"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_06yrhpv">
-        <inputEntry id="UnaryTests_1crdbqb">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1cilr5v">
-          <text>"reviewLangAndSmReq"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1mzlz37">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_02gld2h">
-          <text>"Reconfigure"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1fx5i7i">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0kvypgb">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1cx4u15">
-          <text></text>
-        </outputEntry>
-      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>

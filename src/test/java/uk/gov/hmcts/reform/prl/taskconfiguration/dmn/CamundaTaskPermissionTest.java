@@ -567,7 +567,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "removeLegalRepresentativeC100"
+        "removeLegalRepresentativeC100",
+        "reviewLangAndSmReq"
     })
     void evaluate_task_admin_removeLegalRepresentativeC100(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -811,32 +812,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401"
             )
 
-        )));
-    }
-
-    @SuppressWarnings("checkstyle:indentation")
-    @ParameterizedTest
-    @CsvSource(value = {
-        "reviewLangAndSmReq"
-    })
-    void evaluate_task_admin_reviewLangAndSmReq(String taskType) {
-        VariableMap inputVariables = new VariableMapImpl();
-        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
-
-        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
-
-        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
-            Map.of(
-                "autoAssignable", false,
-                "name", "task-supervisor",
-                "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
-            ), Map.of(
-                "autoAssignable", false,
-                "name", "hearing-centre-admin",
-                "roleCategory", "ADMIN",
-                "authorisations", "SKILL:ABA5:CHECKAPPLICATIONC100",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
-            )
         )));
     }
 
