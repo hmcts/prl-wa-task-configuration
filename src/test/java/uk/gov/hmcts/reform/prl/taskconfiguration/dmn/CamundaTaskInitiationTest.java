@@ -260,6 +260,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
                                       + "   }"
                                       + "}"),
@@ -560,6 +561,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
                                       + "   }"
                                       + "}"),
@@ -576,6 +578,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
                                       + "   }"
                                       + "}"),
@@ -592,6 +595,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
                                       + "   }"
                                       + "}"),
