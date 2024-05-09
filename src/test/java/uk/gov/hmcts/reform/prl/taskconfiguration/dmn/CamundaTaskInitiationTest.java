@@ -35,9 +35,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(19));
+        assertThat(logic.getInputs().size(), is(20));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(93));
+        assertThat(logic.getRules().size(), is(97));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -45,6 +45,22 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         return Stream.of(
             Arguments.of(
                 "paymentSuccessCallback",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "checkApplicationC100",
+                        "name", "Check Application",
+                        "processCategories", "applicationCheck"
+                    )
+                )
+            ),
+            Arguments.of(
+                "adminCreate",
                 "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
@@ -244,6 +260,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
                                       + "   }"
                                       + "}"),
@@ -544,6 +561,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
                                       + "   }"
                                       + "}"),
@@ -560,6 +578,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
                                       + "   }"
                                       + "}"),
@@ -576,6 +595,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
                                       + "   }"
                                       + "}"),
@@ -942,14 +962,62 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "citizenLanguageSupportNotes",
+                "awpPaymentSuccessCallback",
                 null,
                 null,
                 singletonList(
                     Map.of(
-                        "taskId", "reviewLangAndSmReq",
-                        "name", "Review Language and SM requirements",
-                        "processCategories", "reviewLangAndSmReqIdent"
+                        "taskId", "reviewAdditionalApplication",
+                        "name", "Review additional application",
+                        "processCategories", "reviewAddtlApp"
+                    )
+                )
+            ),
+            Arguments.of(
+                "uploadAdditionalApplications",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"awpWaTaskToBeCreated\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdditionalApplication",
+                        "name", "Review additional application",
+                        "processCategories", "reviewAddtlApp"
+                    )
+                )
+            ),
+            Arguments.of(
+                "createWaTaskForCtscCaseFlags",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewRaRequestsC100",
+                        "name", "Review RA request",
+                        "processCategories", "reviewRAC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "createWaTaskForCtscCaseFlags",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewRaRequestsFL401",
+                        "name", "Review RA request",
+                        "processCategories", "reviewRAFL401"
                     )
                 )
             )

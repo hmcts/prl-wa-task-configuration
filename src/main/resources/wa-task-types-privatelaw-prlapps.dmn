@@ -7,7 +7,7 @@
           <text></text>
         </inputExpression>
       </input>
-      <output id="Output_1" label="Task Type Id" name="taskTypeId" typeRef="string" biodi:width="247" />
+      <output id="Output_1" label="Task Type Id" name="taskTypeId" typeRef="string" biodi:width="367" />
       <output id="OutputClause_05pod8h" label="Task Type Name" name="taskTypeName" typeRef="string" biodi:width="323" />
       <rule id="DecisionRule_083xw98">
         <description>CAC100</description>
@@ -525,18 +525,6 @@
           <text>"List without notice hearing(see case notes)"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0t6sq87">
-        <description>RLSMR</description>
-        <inputEntry id="UnaryTests_01slexa">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0c1kpzo">
-          <text>"reviewLangAndSmReq"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0xr6vi2">
-          <text>"Review Language and SM requirements"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1epamws">
         <description>LONHFL401</description>
         <inputEntry id="UnaryTests_1flpes9">
@@ -547,6 +535,18 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_17r22b3">
           <text>"Listing instructions (refer to case notes)"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1g1tgpq">
+        <description>RAA</description>
+        <inputEntry id="UnaryTests_0f8mj3t">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bbc7fx">
+          <text>"reviewAdditionalApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13cvrnd">
+          <text>"Review additional application"</text>
         </outputEntry>
       </rule>
     </decisionTable>
