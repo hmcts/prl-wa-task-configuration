@@ -60,7 +60,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "adminCreate",
+                "submitAndPay",
                 "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
