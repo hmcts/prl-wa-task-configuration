@@ -335,6 +335,80 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1mgqoux">
+        <inputEntry id="UnaryTests_1h34ynp">
+          <text>"testingSupportDummySolicitorCreateCourtNav"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17bm1no">
+          <text>"SUBMITTED_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0032nly">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vbezn1">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jnuwl2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s97l3d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cxgfnu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gzbuwm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ca7ao2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j686mg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qv2ig1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qlld5o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zjzoom">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z0q9fs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17pm8kc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e47fza">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n0y0f0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h03yqh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15z3s5d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bgq3n1">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0oz67pr">
+          <text>"checkApplicationFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fsb0m2">
+          <text>"Check Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13qnbsy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13mi2qv">
+          <text>"applicationCheck"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0mh63vx">
         <inputEntry id="UnaryTests_0s8sdff">
           <text>"fl401resubmit"</text>
@@ -554,6 +628,80 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_016yh8f">
+          <text>"localCourtGatekeepingFL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1r515e6">
+        <inputEntry id="UnaryTests_1h3ugq0">
+          <text>"testingSupportDummySolicitorCreateCourtNav"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1imsof4">
+          <text>"SUBMITTED_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_047hx5q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y4av4m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dyjzfs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1aqvqyn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x4pifv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gzko3q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wvdwks">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wc8iu6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gnwhb4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00evfpr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n3s19v">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xosos6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05lkcrr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10pbhss">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m5xr9p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xf0rzn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12yab93">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w0umrb">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11cxspx">
+          <text>"sendToGateKeeperFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ria8hs">
+          <text>"Send to Gatekeeper"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0se2lc0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ynh68e">
           <text>"localCourtGatekeepingFL401"</text>
         </outputEntry>
       </rule>
