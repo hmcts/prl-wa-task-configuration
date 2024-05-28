@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(20));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(97));
+        assertThat(logic.getRules().size(), is(99));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -109,6 +109,48 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "fl401StatementOfTruthAndSubmit",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "taskId", "checkApplicationFL401",
+                        "name", "Check Application",
+                        "processCategories", "applicationCheck"
+                    ),
+                    Map.of(
+                        "taskId", "sendToGateKeeperFL401",
+                        "name", "Send to Gatekeeper",
+                        "processCategories", "localCourtGatekeepingFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "courtnav-case-creation",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "taskId", "checkApplicationFL401",
+                        "name", "Check Application",
+                        "processCategories", "applicationCheck"
+                    ),
+                    Map.of(
+                        "taskId", "sendToGateKeeperFL401",
+                        "name", "Send to Gatekeeper",
+                        "processCategories", "localCourtGatekeepingFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "testingSupportDummySolicitorCreateCourtNav",
                 "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
