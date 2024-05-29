@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.20.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.13.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN">
     <decisionTable id="DecisionTable_14cx079" hitPolicy="COLLECT">
       <input id="InputClause_1gxyo7f" label="CCD Case Data" camunda:inputVariable="caseData">
@@ -810,7 +810,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
 "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401", "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100",
 "produceHearingBundleFL401",  "produceHearingBundleC100", "serviceOfApplicationFL401","adminServeOrderFL401", "updateHearingActualsFL401", "requestSolicitorOrderFL401", "reviewCorrespondenceFL401", "serviceOfApplicationC100","adminServeOrderC100",
 "updateHearingActualsC100", "requestSolicitorOrderC100",
-"reviewCorrespondenceC100", "reviewSpecificAccessRequestAdmin", "removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401","reviewDocumentsForSolAndCafcassC100","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","reviewRaRequestsFL401","reviewInactiveRaRequestsFL401","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","confidentialCheckSOA","completefl416AndServe","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewAdditionalApplication"</text>
+"reviewCorrespondenceC100", "reviewSpecificAccessRequestAdmin", "removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401","reviewDocumentsForSolAndCafcassC100","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","reviewRaRequestsFL401","reviewInactiveRaRequestsFL401","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","confidentialCheckSOA","completefl416AndServe","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewAdditionalApplication","transferToAnotherCourt"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1131kat">
           <text>"roleCategory"</text>
@@ -1467,6 +1467,23 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"[Review other applications](/cases/case-details/${[CASE_REFERENCE]}#Other%20applications)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03r9prs">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1oawwzv">
+        <inputEntry id="UnaryTests_1iinaaq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k6k0iz">
+          <text>"newCaseTransferredToCourt"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1rc69t9">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10imkuo">
+          <text>"[Case transferred to your court]"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_082fo65">
           <text></text>
         </outputEntry>
       </rule>
