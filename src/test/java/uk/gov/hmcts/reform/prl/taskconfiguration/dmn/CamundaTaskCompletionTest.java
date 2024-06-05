@@ -179,6 +179,10 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskType", "addCaseNumberResubmitted",
                         "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "transferToAnotherCourt",
+                        "completionMode", "Auto"
                     )
                 )
             ),
@@ -190,6 +194,10 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ), Map.of(
                         "taskType", "sendToGateKeeperResubmittedC100",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "transferToAnotherCourt",
                         "completionMode", "Auto"
                     )
                 )
