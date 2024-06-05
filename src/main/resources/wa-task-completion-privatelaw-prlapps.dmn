@@ -449,17 +449,6 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1i2yc5d">
-        <inputEntry id="UnaryTests_1ctu2u9">
-          <text>"hmcCaseUpdPrepForHearing"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0l6m25w">
-          <text>"createHearingRequest"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0tioapw">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0ikdfsy">
         <inputEntry id="UnaryTests_1gdsev7">
           <text>"editAndApproveAnOrder"</text>

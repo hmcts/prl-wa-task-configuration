@@ -88,16 +88,6 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 null,
-                "hmcCaseUpdPrepForHearing",
-                null,
-                List.of(
-                    Map.of(
-                        "action", "Reconfigure"
-                    )
-                )
-            ),
-            Arguments.of(
-                null,
                 "hmcCaseUpdDecOutcome",
                 null,
                 List.of(
@@ -146,7 +136,18 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                         "processCategories", "reviewAddtlApp"
                     )
                 )
-            )
+            ),
+                Arguments.of(
+                        null,
+                        "hmcCaseUpdPrepForHearing",
+                        null,
+                        List.of(
+                                Map.of(
+                                        "action", "Cancel",
+                                        "processCategories", "createHearingRequest"
+                                )
+                        )
+                )
         );
     }
 
