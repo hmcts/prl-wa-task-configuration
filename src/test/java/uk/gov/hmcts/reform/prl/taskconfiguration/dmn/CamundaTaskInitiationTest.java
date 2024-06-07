@@ -1011,23 +1011,23 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "reviewAdditionalApplication",
                         "name", "Review additional application",
-                        "processCategories", "reviewAddtlApp"
+                        "processCategories", "\"awpTaskName_\"+additionalData.Data.awpWaTaskName"
                     )
                 )
             ),
             Arguments.of(
                 "uploadAdditionalApplications",
                 null,
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"awpWaTaskToBeCreated\":\"" + "Yes" + "\"\n"
-                                      + "   }"
-                                      + "}"),
+                mapAdditionalData("{\n" +
+                                      "   \"Data\":{\n" +
+                                      "      \"awpWaTaskToBeCreated\":\"Yes\",\n" +
+                                      "      \"awpWaTaskName\":\"D89 - Request for personal service by a court bailiff\"\n" +
+                                      "   }}"),
                 singletonList(
                     Map.of(
                         "taskId", "reviewAdditionalApplication",
                         "name", "Review additional application",
-                        "processCategories", "reviewAddtlApp"
+                        "processCategories", "\"awpTaskName_\"+additionalData.Data.awpWaTaskName"
                     )
                 )
             ),
