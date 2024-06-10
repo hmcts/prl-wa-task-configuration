@@ -1011,23 +1011,23 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "reviewAdditionalApplication",
                         "name", "Review additional application",
-                        "processCategories", "\"awpTaskName_\"+additionalData.Data.awpWaTaskName"
+                        "processCategories", "reviewAddtlApp"
                     )
                 )
             ),
             Arguments.of(
                 "uploadAdditionalApplications",
                 null,
-                mapAdditionalData("{\n" +
-                                      "   \"Data\":{\n" +
-                                      "      \"awpWaTaskToBeCreated\":\"Yes\",\n" +
-                                      "      \"awpWaTaskName\":\"D89 - " +
-                                      "Request for personal service by a court bailiff\"\n" +
-                                      "   }}"),
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"awpWaTaskToBeCreated\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "reviewAdditionalApplication",
-                        "name", "Review additional application"
+                        "name", "Review additional application",
+                        "processCategories", "reviewAddtlApp"
                     )
                 )
             ),
@@ -1079,8 +1079,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         inputVariables.putValue("additionalData", map);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
-        System.out.println("actual is: "+dmnDecisionTableResult);
-        System.out.println("expectation is : "+expectation);
+        System.out.println(dmnDecisionTableResult);
 
         assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
     }
