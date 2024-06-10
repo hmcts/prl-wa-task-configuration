@@ -1027,8 +1027,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 singletonList(
                     Map.of(
                         "taskId", "reviewAdditionalApplication",
-                        "name", "Review additional application",
-                        "processCategories", "\"awpTaskName_\"+additionalData.Data.awpWaTaskName"
+                        "name", "Review additional application"
                     )
                 )
             ),
@@ -1080,7 +1079,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         inputVariables.putValue("additionalData", map);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
-        System.out.println(dmnDecisionTableResult);
+        System.out.println("actual is: "+dmnDecisionTableResult);
+        System.out.println("expectation is : "+expectation);
 
         assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
     }

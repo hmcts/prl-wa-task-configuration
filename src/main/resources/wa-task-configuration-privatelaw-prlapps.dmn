@@ -679,7 +679,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"title"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_103kk50">
-          <text>awpWaTaskName</text>
+          <text>AWP_TASK_NAME</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1voclbp">
           <text>"false"</text>
@@ -1475,8 +1475,8 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
       </rule>
     </decisionTable>
   </decision>
-  <decision id="Decision_1h75wxw" name="Additional application task name">
-    <variable id="InformationItem_1x37n1q" name="awpWaTaskName" typeRef="string" />
+  <decision id="Decision_1h75wxw" name="AWP_TASK_NAME">
+    <variable id="InformationItem_1x37n1q" name="AWP_TASK_NAME" typeRef="string" />
     <literalExpression id="LiteralExpression_13pcbsj">
       <text>{
   "__prefix" : "__processCategory__awpTaskName_",
