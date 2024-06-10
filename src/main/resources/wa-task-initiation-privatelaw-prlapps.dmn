@@ -7537,6 +7537,80 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"reviewRAFL401"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0rwl62w">
+        <inputEntry id="UnaryTests_0n38qyo">
+          <text>"transferToAnotherCourt"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19tlae8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03b46kf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mr2m5o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wpnahl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0c2ydmt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ec85a6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x3o8qj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t5azmk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jb51y0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_001cqwd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p5qwdv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13pxxk5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hnd89a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pg31ku">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0miiyzi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xotk5h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ar5380">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_029nvds">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ns54ck">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ia2yhy">
+          <text>"newCaseTransferredToCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0s7hbnw">
+          <text>"Case transferred to your court"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02rm4a6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rcz482">
+          <text>"newCaseTransferredToCourt"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
