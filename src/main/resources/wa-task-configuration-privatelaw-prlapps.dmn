@@ -1498,12 +1498,12 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
     <variable id="InformationItem_1x37n1q" name="awpWaTaskName" typeRef="string" />
     <literalExpression id="LiteralExpression_13pcbsj">
       <text>{
-  "__prefix" : "__processCategory__awpTaskName_",
-  "__attribute_entries" : get entries(taskAttributes),
-  "__matching_keys" : for __item in __attribute_entries return if starts with(__item.key, __prefix) then substring(__item.key, string length(__prefix) + 1) else null,
-  "__filtered_keys" : __matching_keys[item != null],
-  "__nonempty_keys" : append(__filtered_keys, null),
-  "__nullable_awp_taskname" : __nonempty_keys[1]
+  "__prefix" : "__processCategory__awpTaskName_",
+  "__attribute_entries" : get entries(taskAttributes),
+  "__matching_keys" : for __item in __attribute_entries return if starts with(__item.key, __prefix) then substring(__item.key, string length(__prefix) + 1) else null,
+  "__filtered_keys" : __matching_keys[item != null],
+  "__nonempty_keys" : append(__filtered_keys, null),
+  "__nullable_awp_taskname" : __nonempty_keys[1]
 }.__nullable_awp_taskname</text>
     </literalExpression>
   </decision>
