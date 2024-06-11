@@ -682,7 +682,7 @@
       </rule>
       <rule id="DecisionRule_0ziomsy">
         <inputEntry id="UnaryTests_1xriz0v">
-          <text></text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0t0twxp">
           <text>"transferToAnotherCourt"</text>
