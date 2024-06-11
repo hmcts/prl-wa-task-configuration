@@ -7312,7 +7312,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0rhpllo">
-          <text>"awpTaskName_"+AdditionalData.Data.awpWaTaskName</text>
+          <text>"awpTaskName_"+additionalData.Data.awpWaTaskName</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_13y2216">
@@ -7386,7 +7386,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nwprl1">
-          <text>"awpTaskName_"+AdditionalData.Data.awpWaTaskName</text>
+          <text>"awpTaskName_"+additionalData.Data.awpWaTaskName</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0zd63mk">
