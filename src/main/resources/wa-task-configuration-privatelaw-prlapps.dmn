@@ -795,13 +795,13 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"reviewAdditionalApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qz9fd2">
-          <text>not(null)</text>
+          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0zj9urq">
           <text>"title"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_103kk50">
-          <text>AWP_TASK_NAME</text>
+          <text>"Review additional application -  " + AWP_TASK_NAME</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1voclbp">
           <text>"false"</text>
@@ -1737,13 +1737,13 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
   </decision>
   <decision id="Decision_1h75wxw" name="AWP_TASK_NAME">
     <variable id="InformationItem_1x37n1q" name="AWP_TASK_NAME" typeRef="string" />
-    <literalExpression id="LiteralExpression_13pcbsj">
+    <literalExpression id="LiteralExpression_13pcbsj" expressionLanguage="feel">
       <text>{
   "__prefix" : "__processCategory__awpTaskName_",
-  "__attribute_entries" : get entries(taskAttributes),
+  "__attribute_entries" : if (taskAttributes != null) then get entries(taskAttributes) else [],
   "__matching_keys" : for __item in __attribute_entries return if starts with(__item.key, __prefix) then substring(__item.key, string length(__prefix) + 1) else null,
   "__filtered_keys" : __matching_keys[item != null],
-  "__nonempty_keys" : append(__filtered_keys, null),
+  "__nonempty_keys" : append(__filtered_keys,null),
   "__nullable_awp_taskname" : __nonempty_keys[1]
 }.__nullable_awp_taskname</text>
     </literalExpression>
