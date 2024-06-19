@@ -474,7 +474,7 @@
           <text>"reviewRaRequestsC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0cl6qkf">
-          <text>"Review RA requests"</text>
+          <text>"Review RA request"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_09y54lh">
@@ -486,7 +486,7 @@
           <text>"reviewRaRequestsFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19i1eqm">
-          <text>"Review RA requests"</text>
+          <text>"Review RA request"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0oy0rje">
@@ -498,7 +498,7 @@
           <text>"reviewInactiveRaRequestsC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0kjqei6">
-          <text>"Review inactive RA requests"</text>
+          <text>"Review inactive RA request"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1bf4udd">
@@ -510,7 +510,7 @@
           <text>"reviewInactiveRaRequestsFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_18qms98">
-          <text>"Review inactive RA requests"</text>
+          <text>"Review inactive RA request"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1fnnxm3">
