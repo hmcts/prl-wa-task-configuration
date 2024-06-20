@@ -7537,6 +7537,80 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"reviewRAFL401"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1aki53v">
+        <inputEntry id="UnaryTests_092xk34">
+          <text>"citizenLanguageSupportNotes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0udzcws">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tyieqp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j6t69t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ontubi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ddo5bn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13yiur7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yj1q92">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uognhn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pxu8qw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00aafwj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wq143d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hg8k9h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nz65qx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05o0qy0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qoprb3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xhin33">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ocnef1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pvie6s">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lmfhhe">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1f47nk2">
+          <text>"reviewLangAndSmReq"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05cpp0d">
+          <text>"Review Language and SM requirements"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03er1ed">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00f4c4v">
+          <text>"reviewLangAndSmReqIdent"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
