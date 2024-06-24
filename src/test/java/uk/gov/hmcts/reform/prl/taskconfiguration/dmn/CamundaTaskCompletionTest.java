@@ -137,11 +137,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "taskType", "gateKeepingResubmitted",
                         "completionMode", "Auto"
                     ),
-                    Map.of(),
-                    Map.of(
-                        "taskType", "transferToAnotherCourt",
-                        "completionMode", "Auto"
-                    )
+                    Map.of()
                 )
             ),
             Arguments.of(
@@ -178,9 +174,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ), Map.of(
                         "taskType", "sendToGateKeeperResubmittedC100",
-                        "completionMode", "Auto"
-                    ), Map.of(
-                        "taskType", "transferToAnotherCourt",
                         "completionMode", "Auto"
                     )
                 )
@@ -225,10 +218,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskType", "reviewAdminOrderByManager",
                         "completionMode", "Auto"
-                    ),
-                    Map.of(
-                        "taskType", "transferToAnotherCourt",
-                        "completionMode", "Auto"
                     )
                 )
             ),
@@ -251,11 +240,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "taskType", "requestSolicitorOrderFL401",
                         "completionMode", "Auto"
                     ),
-                    Map.of(),
-                    Map.of(
-                        "taskType", "transferToAnotherCourt",
-                        "completionMode", "Auto"
-                    )
+                    Map.of()
                 )
             ),
             Arguments.of(
@@ -377,7 +362,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(62));
+        assertThat(logic.getRules().size(), is(61));
     }
 
 

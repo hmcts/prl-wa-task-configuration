@@ -680,17 +680,6 @@
           <text></text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0ziomsy">
-        <inputEntry id="UnaryTests_1xriz0v">
-          <text>"manageOrders","sendOrReplyToMessages","sendToGateKeeper","adminEditAndApproveAnOrder","editAndApproveAnOrder"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0t0twxp">
-          <text>"transferToAnotherCourt"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0qqfysj">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>

@@ -348,7 +348,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1wpxhzc">
-          <text>"hmcCaseUpdPrepForHearing"</text>
+          <text>"hmcCaseUpdPrepForHearing","manageOrders","editAndApproveAnOrder","sendOrReplyToMessages","sendToGateKeeper","adminEditAndApproveAnOrder"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0wtzv6k">
           <text></text>
