@@ -22,17 +22,7 @@
     <vulnerabilityName>CWE-94: Improper Control of Generation of Code ('Code Injection')</vulnerabilityName>
   </suppress>
   <suppress>
-    <notes>
-      <![CDATA[https://nvd.nist.gov/vuln/detail/CVE-2020-36518]]>
-      <![CDATA[https://github.com/FasterXML/jackson-databind/issues/2816]]>
-    </notes>
     <cve>CVE-2015-0897</cve>
-    <cve>CVE-2016-1000027</cve>
-    <!--jackson-->
-    <cve>CVE-2023-5072</cve>
-    <cve>CVE-2022-45688</cve>
-    <!--logback-->
-    <cve>CVE-2023-6378</cve>
   </suppress>
 </suppressions>
 
