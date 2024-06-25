@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.13.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
   <decision id="wa-task-completion-privatelaw-prlapps" name="Private Law Task completion DMN">
     <decisionTable id="DecisionTable_01re27m" hitPolicy="COLLECT">
       <input id="eventId" label="Event ID" biodi:width="437">
@@ -666,6 +666,17 @@
           <text>"reviewRaRequestsFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_096zfw3">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bj5i0u">
+        <inputEntry id="UnaryTests_14tqy3d">
+          <text>"hwfProcessCaseUpdate"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0dtz2vp">
+          <text>"checkHwfApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0t0dxwv">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
