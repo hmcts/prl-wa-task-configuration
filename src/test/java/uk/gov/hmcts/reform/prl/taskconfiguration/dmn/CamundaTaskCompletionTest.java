@@ -41,9 +41,9 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskType", "checkApplicationResubmittedC100",
                         "completionMode", "Auto"
-                    )
-                ),
-                Map.of()
+                    ),
+                    Map.of()
+                )
             ),
             Arguments.of(
                 "returnApplication",
