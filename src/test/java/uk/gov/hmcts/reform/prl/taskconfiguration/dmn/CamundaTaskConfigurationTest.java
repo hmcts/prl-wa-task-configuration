@@ -1034,6 +1034,334 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertDescriptionField(taskType, dmnDecisionTableResult);
     }
 
+    @ParameterizedTest
+    @CsvSource({
+        "addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100",
+        "sendToGateKeeperResubmittedC100","sendToGateKeeperFL401",
+        "sendToGateKeeperResubmittedFL401","serviceOfApplicationC100",
+        "adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401",
+        "requestSolicitorOrderC100","requestSolicitorOrderFL401","reviewCorrespondenceC100",
+        "reviewCorrespondenceFL401","removeLegalRepresentativeC100",
+        "removeLegalRepresentativeFL401","confidentialCheckSOA",
+        "reviewDocumentsForSolAndCafcassC100","reviewDocumentsForSolAndCafcassFL401",
+        "replyToMessageForCourtAdminC100","replyToMessageForLA","replyToMessageForJudiciary",
+        "reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100",
+        "reviewInactiveRaRequestsFL401","appStatementOfServiceBySol",
+        "appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA",
+        "appStatementOfServiceByAdmin","completefl416AndServe","listWithoutNoticeHearingC100",
+        "listOnNoticeHearingFL401","reviewAdditionalApplication","reviewLangAndSmReq"
+    })
+    void when_given_task_type_then_return_workType_and_validate_description(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "FirstName"
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("workType"))
+            .collect(Collectors.toList());
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "workType",
+            "value", "routine_work"
+        )));
+
+        assertDescriptionField(taskType, dmnDecisionTableResult);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "directionOnIssue","directionOnIssueResubmitted","gateKeeping",
+        "gateKeepingResubmitted","reviewSolicitorOrderProvided",
+        "reviewAdminOrderProvided","reviewAdminOrderByManager"
+    })
+    void when_given_task_type_then_return_workTypeForValueDecision_making_work_and_validate_description(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "FirstName"
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("workType"))
+            .collect(Collectors.toList());
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "workType",
+            "value", "decision_making_work"
+        )));
+
+        assertDescriptionField(taskType, dmnDecisionTableResult);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "produceHearingBundleC100","produceHearingBundleFL401","updateHearingActualsC100",
+        "updateHearingActualsFL401","createHearingRequest","createMultipleHearingRequest",
+        "createHearingRequestReserveListAssist"
+    })
+    void when_given_task_type_then_return_workTypeForValueHearing_work_and_validate_description(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "FirstName"
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("workType"))
+            .collect(Collectors.toList());
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "workType",
+            "value", "hearing_work"
+        )));
+
+        assertDescriptionField(taskType, dmnDecisionTableResult);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "checkApplicationC100", "checkApplicationFL401",
+        "checkApplicationResubmittedC100", "checkApplicationResubmittedFL401"
+    })
+    void when_given_task_type_then_return_workTypeForValueApplications_and_validate_description(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "FirstName"
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("workType"))
+            .collect(Collectors.toList());
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "workType",
+            "value", "applications"
+        )));
+
+        assertDescriptionField(taskType, dmnDecisionTableResult);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "reviewSpecificAccessRequestJudiciary", "reviewSpecificAccessRequestLegalOps",
+        "reviewSpecificAccessRequestAdmin","reviewSpecificAccessRequestCTSC"
+    })
+    void when_given_task_type_then_return_workTypeForValueAccess_requests_and_not_validate_description(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "FirstName"
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("workType"))
+            .collect(Collectors.toList());
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "workType",
+            "value", "access_requests"
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "reviewSpecificAccessRequestJudiciary", "reviewSpecificAccessRequestLegalOps",
+        "reviewSpecificAccessRequestAdmin","reviewSpecificAccessRequestCTSC"
+    })
+    void when_given_task_type_then_return_additionalProperties_roleAssignmentId_and_validate_description(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "FirstName",
+                   "roleAssignmentId", "roleAssignmentId"
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("additionalProperties_roleAssignmentId"))
+            .collect(Collectors.toList());
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "additionalProperties_roleAssignmentId",
+            "value", "roleAssignmentId"
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "reviewSpecificAccessRequestLegalOps","replyToMessageForLAC100","replyToMessageForLA"
+    })
+    void when_given_task_type_then_return_roleCategory_and_validate_description(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("roleCategory"))
+            .collect(Collectors.toList());
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "roleCategory",
+            "value", "LEGAL_OPERATIONS"
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401",
+        "sendToGateKeeperResubmittedFL401","sendToGateKeeperC100",
+        "sendToGateKeeperResubmittedC100","produceHearingBundleFL401",
+        "produceHearingBundleC100","serviceOfApplicationFL401","adminServeOrderFL401",
+        "updateHearingActualsFL401","requestSolicitorOrderFL401","reviewCorrespondenceFL401",
+        "serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100",
+        "requestSolicitorOrderC100","reviewCorrespondenceC100","reviewSpecificAccessRequestAdmin",
+        "removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401",
+        "reviewDocumentsForSolAndCafcassC100","reviewAdminOrderByManager","createHearingRequest",
+        "createMultipleHearingRequest","createHearingRequestReserveListAssist",
+        "reviewRaRequestsFL401","reviewInactiveRaRequestsFL401","recreateApplicationPack",
+        "appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff",
+        "arrangeBailiffSOA","appStatementOfServiceByAdmin","confidentialCheckSOA",
+        "completefl416AndServe","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100",
+        "replyToMessageForCourtAdminFL401","reviewRaRequestsC100","reviewInactiveRaRequestsC100",
+        "listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewAdditionalApplication",
+        "reviewLangAndSmReq"
+    })
+    void when_given_task_type_then_return_roleCategoryForValueAdmin_and_validate_description(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "FirstName"
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("roleCategory"))
+            .collect(Collectors.toList());
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "roleCategory",
+            "value", "ADMIN"
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "checkApplicationC100", "checkApplicationResubmittedC100",
+        "addCaseNumber", "addCaseNumberResubmitted",
+        "reviewSpecificAccessRequestCTSC"
+    })
+    void when_given_task_type_then_return_roleCategoryForValueCtsc_and_validate_description(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "FirstName"
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("roleCategory"))
+            .collect(Collectors.toList());
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "roleCategory",
+            "value", "CTSC"
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "directionOnIssue","directionOnIssueResubmitted","gateKeeping",
+        "gateKeepingResubmitted", "reviewSpecificAccessRequestJudiciary",
+        "reviewSolicitorOrderProvided","reviewAdminOrderProvided",
+        "replyToMessageForJudiciary"
+    })
+    void when_given_task_type_then_return_roleCategoryForValueJudicial_and_validate_description(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "FirstName"
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("roleCategory"))
+            .collect(Collectors.toList());
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "roleCategory",
+            "value", "JUDICIAL"
+        )));
+    }
+
     private void validatePriorityDateOriginEarliest(DmnDecisionTableResult dmnDecisionTableResult) {
         List<Map<String, Object>> workTypeResultListPriorityDateOriginEarliest =
             dmnDecisionTableResult.getResultList().stream()
