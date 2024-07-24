@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(20));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(102));
+        assertThat(logic.getRules().size(), is(103));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1060,6 +1060,22 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "reviewRaRequestsFL401",
                         "name", "Review RA request",
                         "processCategories", "reviewRAFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "courtnav-document-upload",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewDocumentsForSolAndCafcassFL401",
+                        "name", "Review Documents",
+                        "processCategories", "reviewDocsFL401"
                     )
                 )
             ),
