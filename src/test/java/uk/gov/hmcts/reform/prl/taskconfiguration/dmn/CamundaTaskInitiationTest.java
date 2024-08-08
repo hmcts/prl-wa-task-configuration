@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(20));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(100));
+        assertThat(logic.getRules().size(), is(102));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1091,7 +1091,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         inputVariables.putValue("additionalData", map);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
-        System.out.println(dmnDecisionTableResult);
 
         assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
     }
