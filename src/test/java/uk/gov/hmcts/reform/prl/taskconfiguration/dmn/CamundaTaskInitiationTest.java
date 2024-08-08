@@ -320,9 +320,11 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 null,
                 singletonList(
                     Map.of(
-                        "taskId", "reviewSolicitorOrderProvided",
+                        "processCategories", "null",
                         "name", "Review and Approve Legal rep Order",
-                        "processCategories", "reviewSolicitorOrderByJudge"
+                        "taskId", "reviewSolicitorOrderProvided"
+
+
                     )
                 )
             ),
