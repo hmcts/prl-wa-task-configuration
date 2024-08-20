@@ -317,26 +317,32 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "draftAnOrder",
                 null,
-                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
                 singletonList(
                     Map.of(
-                        "processCategories", "null",
+                        "processCategories", "orderId_1234567890",
                         "name", "Review and Approve Legal rep Order",
                         "taskId", "reviewSolicitorOrderProvided"
-
-
                     )
                 )
             ),
             Arguments.of(
                 "editReturnedOrder",
                 null,
-                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "reviewSolicitorOrderProvided",
                         "name", "Review resubmitted Order",
-                        "processCategories", "reviewReturnedSolicitorOrderByJudge"
+                        "processCategories", "orderId_1234567890"
                     )
                 )
             ),
@@ -487,6 +493,82 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "createHearingRequestReserveListAssist",
                         "name", "Create Hearing Request - Reserved in List Assist",
                         "processCategories", "createHearingRequest"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageOrders",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Create an order" + "\"\n,"
+                                      + "      \"judgeLaManagerReviewRequired\":\"" + "judgeOrLegalAdvisorCheck" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdminOrderProvided",
+                        "name", "Review and Approve Admin Order",
+                        "processCategories", "orderId_1234567890"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageOrders",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Upload an order" + "\"\n,"
+                                      + "      \"judgeLaManagerReviewRequired\":\"" + "judgeOrLegalAdvisorCheck" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdminOrderProvided",
+                        "name", "Review and Approve Admin Order",
+                        "processCategories", "orderId_1234567890"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageOrders",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Create an order" + "\"\n,"
+                                      + "      \"judgeLaManagerReviewRequired\":\"" + "managerCheck" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdminOrderByManager",
+                        "name", "Review and Approve Admin Order",
+                        "processCategories", "orderId_1234567890"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageOrders",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Upload an order" + "\"\n,"
+                                      + "      \"judgeLaManagerReviewRequired\":\"" + "managerCheck" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdminOrderByManager",
+                        "name", "Review and Approve Admin Order",
+                        "processCategories", "orderId_1234567890"
                     )
                 )
             ),
