@@ -3464,7 +3464,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0bczv01">
-          <text>"reviewAdminOrderByJudge"</text>
+          <text>"orderId_"+additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1kuegvg">
@@ -3538,7 +3538,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1h7tjko">
-          <text>"reviewAdminOrderByManager"</text>
+          <text>"orderId_"+additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_09oesow">
