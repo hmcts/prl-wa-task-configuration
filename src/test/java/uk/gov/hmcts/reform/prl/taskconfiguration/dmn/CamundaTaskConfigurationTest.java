@@ -45,6 +45,15 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         caseData.put("appealType", "appealType");
         inputVariables.putValue("caseData", caseData);
 
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", "reviewSolicitorOrderProvided",
+                   "name", "additionalProperties_1234",
+                   "orderId", "1234"
+            )
+        );
+
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         assertTrue(dmnDecisionTableResult.getResultList().contains(Map.of(
@@ -66,6 +75,14 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         caseData.put("caseManagementLocation", caseManagementLocation);
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("caseData", caseData);
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", "reviewSolicitorOrderProvided",
+                   "name", "additionalProperties_1234",
+                   "orderId", "1234"
+            )
+        );
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
@@ -94,6 +111,14 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         Map<String, Object> caseData = new HashMap<>(); // allow null values
         caseData.put("caseTypeOfApplication", "C100");
         inputVariables.putValue("caseData", caseData);
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", "reviewSolicitorOrderProvided",
+                   "name", "additionalProperties_1234",
+                   "orderId", "1234"
+            )
+        );
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
@@ -115,6 +140,14 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("caseData", caseData);
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", "reviewSolicitorOrderProvided",
+                   "name", "additionalProperties_1234",
+                   "orderId", "1234"
+            )
+        );
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
@@ -134,6 +167,14 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @Test
     void when_caseData_then_return_expected_dueDateFields() {
         VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", "reviewSolicitorOrderProvided",
+                   "name", "additionalProperties_1234",
+                   "orderId", "1234"
+            )
+        );
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         assertTrue(dmnDecisionTableResult.getResultList().contains(Map.of(
