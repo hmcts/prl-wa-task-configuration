@@ -503,7 +503,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "   \"Data\":{\n"
                                       + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
                                       + "      \"performingAction\":\"" + "Create an order" + "\"\n,"
-                                      + "      \"judgeLaManagerReviewRequired\":\"" + "judgeOrLegalAdvisorCheck" + "\"\n,"
+                                      + "      \"judgeLaManagerReviewRequired\":\""
+                                      + "judgeOrLegalAdvisorCheck" + "\"\n,"
                                       + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
                                       + "   }"
                                       + "}"),
@@ -522,7 +523,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "   \"Data\":{\n"
                                       + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
                                       + "      \"performingAction\":\"" + "Upload an order" + "\"\n,"
-                                      + "      \"judgeLaManagerReviewRequired\":\"" + "judgeOrLegalAdvisorCheck" + "\"\n,"
+                                      + "      \"judgeLaManagerReviewRequired\":\""
+                                      + "judgeOrLegalAdvisorCheck" + "\"\n,"
                                       + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
                                       + "   }"
                                       + "}"),
