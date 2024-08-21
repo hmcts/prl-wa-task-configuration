@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN">
-    <informationRequirement id="InformationRequirement_0ypjvxy">
-      <requiredDecision href="#Decision_078hzpk" />
+    <informationRequirement id="InformationRequirement_18w9dg3">
+      <requiredDecision href="#Decision_08rco2r" />
     </informationRequirement>
     <decisionTable id="DecisionTable_14cx079" hitPolicy="COLLECT">
       <input id="InputClause_1gxyo7f" label="CCD Case Data" camunda:inputVariable="caseData">
@@ -812,7 +812,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1uli2o6">
-          <text>"reviewSolicitorOrderProvided"</text>
+          <text>"reviewSolicitorOrderProvided","reviewAdminOrderProvided","reviewAdminOrderByManager"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0oinvmg">
           <text>not(null)</text>
@@ -1771,9 +1771,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
       </rule>
     </decisionTable>
   </decision>
-  <decision id="Decision_078hzpk" name="Order ID">
-    <variable id="InformationItem_0e9cpbl" name="orderId" typeRef="string" />
-    <literalExpression id="LiteralExpression_143brq4">
+  <decision id="Decision_08rco2r" name="Order Id">
+    <variable id="InformationItem_1y8t99b" name="orderId" typeRef="string" />
+    <literalExpression id="LiteralExpression_0ynn9bk">
       <text>{
   "__prefix" : "__processCategory__orderId_",
   "__attribute_entries" : get entries(taskAttributes),
@@ -1789,14 +1789,14 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
       <dmndi:DMNShape id="DMNShape_0ijg0or" dmnElementRef="wa-task-configuration-privatelaw-prlapps">
         <dc:Bounds height="80" width="180" x="150" y="80" />
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="DMNShape_0um9uxb" dmnElementRef="Decision_078hzpk">
-        <dc:Bounds height="80" width="180" x="490" y="80" />
-      </dmndi:DMNShape>
-      <dmndi:DMNEdge id="DMNEdge_1s5iehw" dmnElementRef="InformationRequirement_0ypjvxy">
+      <dmndi:DMNEdge id="DMNEdge_18dgufy" dmnElementRef="InformationRequirement_18w9dg3">
         <di:waypoint x="490" y="120" />
         <di:waypoint x="350" y="120" />
         <di:waypoint x="330" y="120" />
       </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0ed7lf9" dmnElementRef="Decision_08rco2r">
+        <dc:Bounds height="80" width="180" x="490" y="80" />
+      </dmndi:DMNShape>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
 </definitions>
