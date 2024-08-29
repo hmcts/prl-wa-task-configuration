@@ -293,7 +293,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gtvl7x">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack","replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq","checkHwfApplicationC100"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack","replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ju1b88">
           <text>"dueDateIntervalDays"</text>
@@ -327,7 +327,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1jc6qee">
-          <text>"removeLegalRepresentativeC100","removeLegalRepresentativeFL401", "reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401"</text>
+          <text>"removeLegalRepresentativeC100","removeLegalRepresentativeFL401", "reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401", "checkHwfApplicationC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1qc3zk6">
           <text>"dueDateIntervalDays"</text>
@@ -1494,7 +1494,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_13698wf">
-          <text>"[Check HWF application](/cases/case-details/${[CASE_REFERENCE]}#Summary)"</text>
+          <text>"[Check HWF application](/cases/case-details/${[CASE_REFERENCE]}#Application_)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0zsqgz0">
           <text></text>

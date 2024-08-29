@@ -183,18 +183,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"Yes","No"</text>
         </inputValues>
       </input>
-      <input id="InputClause_1tk87eg" label="Help with fees" camunda:inputVariable="helpWithFees">
-        <inputExpression id="LiteralExpression_08reaog" typeRef="string">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.helpWithFees
-            != null) then
-            additionalData.Data.helpWithFees
-            else
-            ""</text>
-        </inputExpression>
-        <inputValues id="UnaryTests_1203pbd">
-          <text>"Yes","No"</text>
-        </inputValues>
-      </input>
       <output id="Output_1" label="Task Id" name="taskId" typeRef="string" biodi:width="368" />
       <output id="OutputClause_0p5fhhd" label="Name" name="name" typeRef="string" biodi:width="150" />
       <output id="OutputClause_165p3r3" label="Delay Until" name="delayUntil" typeRef="json" biodi:width="232" />
@@ -258,9 +246,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_061h679">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1rsm5r9">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_14cvrmv">
@@ -337,9 +322,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0gvta1r">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0hf5bzt">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_15fngz9">
           <text>"checkApplicationFL401"</text>
         </outputEntry>
@@ -412,9 +394,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0bgq3n1">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0mdmboe">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0oz67pr">
@@ -491,9 +470,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_14gn2ym">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_00qj3l1">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0ax6ek0">
           <text>"checkApplicationResubmittedFL401"</text>
         </outputEntry>
@@ -566,9 +542,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0x33jxj">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ushtgd">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_16lr65j">
@@ -645,9 +618,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0kldhi1">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0mlo5gg">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1o7ffqx">
           <text>"sendToGateKeeperFL401"</text>
         </outputEntry>
@@ -720,9 +690,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0w0umrb">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_067e7gs">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_11cxspx">
@@ -799,9 +766,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0hkf449">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1g8iyzh">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0vsz3nt">
           <text>"sendToGateKeeperResubmittedFL401"</text>
         </outputEntry>
@@ -874,9 +838,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0bc77t3">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0opijs6">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0tbxmk0">
@@ -953,9 +914,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0i2c19q">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1c6m7nj">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1nnvv20">
           <text>"checkApplicationC100"</text>
         </outputEntry>
@@ -1028,9 +986,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_17f2y0d">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ghunuv">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0r22tf3">
@@ -1107,9 +1062,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_07n6tyn">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0k1a6v9">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_00tib88">
           <text>"checkApplicationC100"</text>
         </outputEntry>
@@ -1182,9 +1134,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0zfqg45">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0slet2b">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0axzr7q">
@@ -1261,9 +1210,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_12yafbc">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0xl63vd">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_13xfo34">
           <text>"addCaseNumberResubmitted"</text>
         </outputEntry>
@@ -1336,9 +1282,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0pt3biy">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_192zvgb">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_171625f">
@@ -1415,9 +1358,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1k48qzp">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0hsk6i7">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0i24s4n">
           <text>"sendToGateKeeperResubmittedC100"</text>
         </outputEntry>
@@ -1490,9 +1430,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_13150jt">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0vhgak2">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_12qxqyj">
@@ -1569,9 +1506,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_08k4yse">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1k97kg8">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1eycm99">
           <text>"directionOnIssueResubmitted"</text>
         </outputEntry>
@@ -1644,9 +1578,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_13hm6pl">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_12qwxsy">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0sfd5sj">
@@ -1723,9 +1654,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_06gkh3z">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0g4ykiq">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0ll9di2">
           <text>"gateKeepingResubmitted"</text>
         </outputEntry>
@@ -1798,9 +1726,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1nlnww5">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1hoxtpi">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lnnahe">
@@ -1877,9 +1802,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0b8q9gh">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1u2j68w">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0rugf3j">
           <text>"produceHearingBundleFL100"</text>
         </outputEntry>
@@ -1954,9 +1876,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1h6uwlk">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1lprsx2">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_15ab7vt">
           <text>"reviewSolicitorOrderProvided"</text>
         </outputEntry>
@@ -2029,9 +1948,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0h9salu">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0kr8ou6">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0cwoaw4">
@@ -2110,9 +2026,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1cvqe3w">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_12jhyw2">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_14i0saf">
           <text>"serviceOfApplicationC100"</text>
         </outputEntry>
@@ -2187,9 +2100,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0r0ddli">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0hoxexg">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_06c4eqf">
@@ -2268,9 +2178,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0tjeq7r">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_12603er">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1u2g51g">
           <text>"adminServeOrderC100"</text>
         </outputEntry>
@@ -2345,9 +2252,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0dngwqc">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1bg4gwu">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0tcmp0s">
@@ -2426,9 +2330,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1m74p2a">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0nr930d">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1k59uok">
           <text>"adminServeOrderFL401"</text>
         </outputEntry>
@@ -2503,9 +2404,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1h6v7lb">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_063hvk1">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0gpw5gj">
@@ -2583,9 +2481,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1043ycc">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_17zv2iu">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1s1gn25">
           <text>"adminServeOrderC100"</text>
         </outputEntry>
@@ -2659,9 +2554,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0jq0gba">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_14vtnzy">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1wf7frf">
@@ -2740,9 +2632,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1ah9de3">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1y8tp96">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1xnq2p6">
           <text>"adminServeOrderFL401"</text>
         </outputEntry>
@@ -2819,9 +2708,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1msskgm">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0sjst4t">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0sdgmzo">
           <text>"adminServeOrderFL401"</text>
         </outputEntry>
@@ -2894,9 +2780,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0jpau68">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ya34cs">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_116d3lj">
@@ -2973,9 +2856,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1bk8bng">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_03fmco8">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1q91d3m">
           <text>"createHearingRequest"</text>
         </outputEntry>
@@ -3048,9 +2928,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1pweo2j">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0yh39e7">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_034nwff">
@@ -3127,9 +3004,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0euvpn7">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0efvctv">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0lzt4h1">
           <text>"updateHearingActualsC100"</text>
         </outputEntry>
@@ -3204,9 +3078,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_18acvfr">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1ncgf0w">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0n5n8dg">
           <text>"updateHearingActualsFL100"</text>
         </outputEntry>
@@ -3279,9 +3150,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1r4vayd">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0vmly7p">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0603xs2">
@@ -3360,9 +3228,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0moapid">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1dgg866">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1p72r5o">
           <text>"requestSolicitorOrderFL100"</text>
         </outputEntry>
@@ -3437,9 +3302,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_11areso">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_12p0yeh">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1f28uac">
@@ -3518,9 +3380,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0qo8aay">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1c28oh5">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1y680ep">
           <text>"reviewCorrespondenceFL401"</text>
         </outputEntry>
@@ -3593,9 +3452,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0tz2d7f">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_04kje7k">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1xvlp8o">
@@ -3672,9 +3528,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1daw0hp">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1n2fjfc">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0in341y">
           <text>"reviewAdminOrderByManager"</text>
         </outputEntry>
@@ -3747,9 +3600,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1dv91v3">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0e27yb9">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18zwryp">
@@ -3826,9 +3676,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_13fg9tb">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_115iyvi">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0kq32v9">
           <text>"createHearingRequestReserveListAssist"</text>
         </outputEntry>
@@ -3901,9 +3748,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1yixlqd">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ij24je">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0me64by">
@@ -3980,9 +3824,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1ycre6l">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_062ohrr">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_08nwznq">
           <text>"createHearingRequest"</text>
         </outputEntry>
@@ -4055,9 +3896,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0x24pdw">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1fbrrfh">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0f9bdhr">
@@ -4134,9 +3972,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0pd4mpm">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_06pb7j2">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_058a1b7">
           <text>"createMultipleHearingRequest"</text>
         </outputEntry>
@@ -4209,9 +4044,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_13v65cn">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1jap1lb">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_13dass3">
@@ -4288,9 +4120,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0fsl5ld">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0j1u1dq">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0vgivhy">
           <text>"removeLegalRepresentativeFL401"</text>
         </outputEntry>
@@ -4363,9 +4192,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0hg3uwt">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_01zxyjj">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_003f1q7">
@@ -4442,9 +4268,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1j7qze0">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0dh21xx">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0muv75r">
           <text>"appStatementOfServiceBySol"</text>
         </outputEntry>
@@ -4517,9 +4340,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0nvai8q">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1foahtw">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_04grc7y">
@@ -4596,9 +4416,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1qca5uy">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_122mcvw">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0monbpm">
           <text>"appStatementOfServiceByBailiff"</text>
         </outputEntry>
@@ -4671,9 +4488,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0xhoivx">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0meai8w">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0r1fpm6">
@@ -4750,9 +4564,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0erbwfn">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0j3da58">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_038jkh9">
           <text>"appStatementOfServiceByAdmin"</text>
         </outputEntry>
@@ -4825,9 +4636,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0dro2ez">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_17f0039">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0tdikmj">
@@ -4904,9 +4712,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0tnlvij">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0bqhsv0">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1cz16ya">
           <text>"completefl416AndServe"</text>
         </outputEntry>
@@ -4979,9 +4784,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1duydjv">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1viaofi">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_07filfp">
@@ -5058,9 +4860,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_01c7e8m">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0w661s6">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1beq50m">
           <text>"appStatementOfServiceBySol"</text>
         </outputEntry>
@@ -5133,9 +4932,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1g2ss3i">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1d3ox48">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1629lrc">
@@ -5212,9 +5008,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_115sxad">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_040u38z">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1mgjpzw">
           <text>"appStatementOfServiceByBailiff"</text>
         </outputEntry>
@@ -5287,9 +5080,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1hqxbyj">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0aj9zu6">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_07wl9k5">
@@ -5366,9 +5156,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0gj868f">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1shxoi2">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_17ena2p">
           <text>"appStatementOfServiceByAdmin"</text>
         </outputEntry>
@@ -5441,9 +5228,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1062cwo">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_06b50ys">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_12x4cvt">
@@ -5520,9 +5304,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_13v0s2s">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0ox4yji">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1i3pue9">
           <text>"replyToMessageForCourtAdminFL401"</text>
         </outputEntry>
@@ -5595,9 +5376,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_02nijjm">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_14fzgd3">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1h8vaeg">
@@ -5674,9 +5452,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0oan0tl">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0e8kx0o">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0fi9f8g">
           <text>"replyToMessageForCourtAdminC100"</text>
         </outputEntry>
@@ -5749,9 +5524,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_16axm5k">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1umlpug">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0wwya9h">
@@ -5828,9 +5600,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0j9x3aa">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_13cvu1g">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0m7l092">
           <text>"replyToMessageForLA"</text>
         </outputEntry>
@@ -5903,9 +5672,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08cw9bo">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_01sdyw8">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1b5ddxc">
@@ -5982,9 +5748,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_00afevi">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1cc6kob">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0alaynb">
           <text>"replyToMessageForJudiciary"</text>
         </outputEntry>
@@ -6057,9 +5820,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"True"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0wsfn56">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0mpbh5k">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0i8np5r">
@@ -6136,9 +5896,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_19k0wy1">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0zstf7c">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0et23bb">
           <text>"reviewDocumentsForSolAndCafcassFL401"</text>
         </outputEntry>
@@ -6211,9 +5968,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"True"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1fou6lf">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0mwdqyc">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_09vquza">
@@ -6290,9 +6044,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0jmgnru">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1a30cuy">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0asclo9">
           <text>"reviewDocumentsForSolAndCafcassFL401"</text>
         </outputEntry>
@@ -6365,9 +6116,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"True"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0momrt0">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1uqzb24">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08fhvyp">
@@ -6444,9 +6192,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0mguqa3">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1jc2qr5">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1d98twj">
           <text>"reviewDocumentsForSolAndCafcassFL401"</text>
         </outputEntry>
@@ -6519,9 +6264,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"True"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1hsfejo">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1a3adak">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_12kx0zd">
@@ -6598,9 +6340,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_022rvyw">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_10e8rgz">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1w8gr8d">
           <text>"reviewDocumentsForSolAndCafcassFL401"</text>
         </outputEntry>
@@ -6673,9 +6412,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1d8fm5l">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0a0gbmp">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0i11fb4">
@@ -6752,9 +6488,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1fg95ot">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1s55uoq">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1agnaty">
           <text>"reviewInactiveRaRequestsC100"</text>
         </outputEntry>
@@ -6827,9 +6560,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0i3qjme">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1n19gr0">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_17siwnh">
@@ -6906,9 +6636,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_05hynp9">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0yihknz">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1sbwxq9">
           <text>"reviewInactiveRaRequestsFL401"</text>
         </outputEntry>
@@ -6981,9 +6708,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0q5d1dy">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_005secr">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0n4dvqd">
@@ -7060,9 +6784,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0u12989">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_09k9feo">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1uu19me">
           <text>"reviewDocumentsForSolAndCafcassFL401"</text>
         </outputEntry>
@@ -7135,9 +6856,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"True"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gc5itc">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0br97mm">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1qpy0gk">
@@ -7214,9 +6932,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_0yur316">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_12831xe">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_12o9orv">
           <text>"reviewDocumentsForSolAndCafcassC100"</text>
         </outputEntry>
@@ -7289,9 +7004,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"True"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0ldz8yy">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0b8fxnu">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1v6s14q">
@@ -7368,9 +7080,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_13hfd94">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_104l7ah">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0bset8m">
           <text>"reviewDocumentsForSolAndCafcassC100"</text>
         </outputEntry>
@@ -7443,9 +7152,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"True"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0mbs2jq">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_16ynl3r">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0308pnn">
@@ -7522,9 +7228,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1syosew">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_18nazb2">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0wumq3s">
           <text>"reviewDocumentsForSolAndCafcassC100"</text>
         </outputEntry>
@@ -7597,9 +7300,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_032waa5">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_074k7qa">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0b96u6r">
@@ -7676,9 +7376,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_19jxk2i">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1act2kt">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0jnd1ma">
           <text>"listOnNoticeHearingFL401"</text>
         </outputEntry>
@@ -7751,9 +7448,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1tixhke">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0y5qfdi">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0404eo1">
@@ -7830,9 +7524,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1prnibs">
           <text>"Yes"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0rfq0dk">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_09mdmrw">
           <text>"reviewAdditionalApplication"</text>
         </outputEntry>
@@ -7905,9 +7596,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0pozbre">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_00j6gfv">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0e6w375">
@@ -7984,9 +7672,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1cdtv8e">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0q40o80">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_1egz7i6">
           <text>"reviewRaRequestsFL401"</text>
         </outputEntry>
@@ -8059,9 +7744,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1lmfhhe">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_07bf8c4">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1f47nk2">
@@ -8138,9 +7820,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <inputEntry id="UnaryTests_1jdhgse">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0iz9adc">
-          <text></text>
-        </inputEntry>
         <outputEntry id="LiteralExpression_0ef1dqn">
           <text>"checkApplicationC100"</text>
         </outputEntry>
@@ -8156,10 +7835,10 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0q328ep">
         <inputEntry id="UnaryTests_09j040s">
-          <text>"citizen-case-submit"</text>
+          <text>"citizenCaseSubmitWithHWF"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_05f88bm">
-          <text></text>
+          <text>"SUBMITTED_NOT_PAID"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0fijpoz">
           <text></text>
@@ -8214,9 +7893,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </inputEntry>
         <inputEntry id="UnaryTests_0c23o2d">
           <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1qh39li">
-          <text>"Yes"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1syg2gk">
           <text>"checkHwfApplicationC100"</text>

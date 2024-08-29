@@ -343,29 +343,6 @@
           <text>"reviewAddtlApp"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1afhyz4">
-        <inputEntry id="UnaryTests_16mt6lq">
-          <text>"SUBMITTED_NOT_PAID"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0frl7pg">
-          <text>"hwfProcessCaseUpdate"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1pcu7ff">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1f30xg0">
-          <text>"Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_11upi6w">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0rqf1dd">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1ss1653">
-          <text>"applicationHwfCheck"</text>
-        </outputEntry>
-      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
