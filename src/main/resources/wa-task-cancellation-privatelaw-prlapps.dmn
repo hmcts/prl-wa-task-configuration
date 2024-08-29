@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.13.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0">
   <decision id="wa-task-cancellation-privatelaw-prlapps" name="Private Law Task cancellation DMN">
     <decisionTable id="DecisionTable_0z3jx1g" hitPolicy="COLLECT">
       <input id="Input_1" label="From State">
@@ -341,6 +341,29 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0lgic8g">
           <text>"reviewAddtlApp"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1afhyz4">
+        <inputEntry id="UnaryTests_16mt6lq">
+          <text>"SUBMITTED_NOT_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0frl7pg">
+          <text>"hwfProcessCaseUpdate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pcu7ff">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1f30xg0">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11upi6w">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rqf1dd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ss1653">
+          <text>"applicationHwfCheck"</text>
         </outputEntry>
       </rule>
     </decisionTable>

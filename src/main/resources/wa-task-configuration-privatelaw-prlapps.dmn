@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.13.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN">
     <decisionTable id="DecisionTable_14cx079" hitPolicy="COLLECT">
       <input id="InputClause_1gxyo7f" label="CCD Case Data" camunda:inputVariable="caseData">
@@ -293,7 +293,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gtvl7x">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack","replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack","replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq","checkHwfApplicationC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ju1b88">
           <text>"dueDateIntervalDays"</text>
@@ -531,7 +531,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1f7e54s">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","gateKeeping","gateKeepingResubmitted"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","gateKeeping","gateKeepingResubmitted","checkHwfApplicationC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ggsvuv">
           <text>"majorPriority"</text>
@@ -738,7 +738,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0uoqs4p">
-          <text>"checkApplicationC100", "checkApplicationFL401", "checkApplicationResubmittedC100", "checkApplicationResubmittedFL401"</text>
+          <text>"checkApplicationC100", "checkApplicationFL401", "checkApplicationResubmittedC100", "checkApplicationResubmittedFL401", "checkHwfApplicationC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1qi2rsb">
           <text>"workType"</text>
@@ -825,7 +825,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1cssptr">
           <text>"checkApplicationC100", "checkApplicationResubmittedC100",
 "addCaseNumber", "addCaseNumberResubmitted",
-"reviewSpecificAccessRequestCTSC"</text>
+"reviewSpecificAccessRequestCTSC", "checkHwfApplicationC100"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18u6y8m">
           <text>"roleCategory"</text>
@@ -1480,6 +1480,23 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"[Review case notes](/cases/case-details/${[CASE_REFERENCE]}#Case%20Notes)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1fxpvn9">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0meco08">
+        <inputEntry id="UnaryTests_0c7xw7w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x9qwwj">
+          <text>"checkHwfApplicationC100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jj1pse">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13698wf">
+          <text>"[Check HWF application](/cases/case-details/${[CASE_REFERENCE]}#Summary)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zsqgz0">
           <text></text>
         </outputEntry>
       </rule>
