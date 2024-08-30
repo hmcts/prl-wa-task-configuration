@@ -669,17 +669,6 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_10si2hv">
-        <inputEntry id="UnaryTests_02tgd28">
-          <text>"hwfProcessCaseUpdate"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1arguxx">
-          <text>"checkHwfApplicationC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1dhsffl">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_05kvogz">
         <inputEntry id="UnaryTests_0cb5u2c">
           <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","returnApplication","sendOrReplyToMessages","adminRemoveLegalRepresentativeC100","adminRemoveLegalRepresentativeFL401","c100ManageFlags","fl401ManageFlags","statementOfService","issueAndSendToLocalCourtCallback","confidentialityCheck"</text>

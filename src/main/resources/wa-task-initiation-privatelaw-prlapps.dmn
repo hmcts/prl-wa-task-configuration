@@ -1003,7 +1003,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0dolujc">
         <inputEntry id="UnaryTests_15of9sj">
-          <text>"citizen-case-submit"</text>
+          <text>"citizen-case-submit", "hwfProcessCaseUpdate"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_148slq0">
           <text>"SUBMITTED_PAID"</text>
@@ -1073,6 +1073,80 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_0d6n3uo">
           <text>"applicationCheck"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0awbhzo">
+        <inputEntry id="UnaryTests_0vtqyav">
+          <text>"citizenCaseSubmitWithHWF"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gpko05">
+          <text>"SUBMITTED_NOT_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xivwa9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_196uax2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1omwjom">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uti49n">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1roh4zg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dn4h1e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kce3cj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mdw9zh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01ol2ex">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lezioq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1furhs9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x3rfve">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zgefbl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0awqkmm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19025bu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qp65e1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rnjwfb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_160s9ce">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0m3broa">
+          <text>"checkHwfApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f2mkax">
+          <text>"Check HWF application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pspuu9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kenp5l">
+          <text>"applicationHwfCheck"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1205pgi">
@@ -7537,6 +7611,154 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"reviewAddtlApp"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1stn34d">
+        <inputEntry id="UnaryTests_1fnmfbb">
+          <text>"citizenAwpCreate", "processHwfUpdateAwpStatus"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01seeb9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15mlsul">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m2gz58">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18mmypt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r50isx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pd0ahy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gvbg3x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18nvp2w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bwo0lq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r59gd3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ny1fhs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16versg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o0ot89">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xpu7us">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hpkwh8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c7p72r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ul9az0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08s2niv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1parmoa">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hq6ptx">
+          <text>"reviewAdditionalApplication"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gs58wj">
+          <text>"Review additional application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j4byry">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1umse6a">
+          <text>"reviewAddtlAppCitizen"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ykj4qb">
+        <inputEntry id="UnaryTests_1juzsb2">
+          <text>"citizenAwpHwfCreate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ii5lae">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f1f33e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1anqk7s">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04byder">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10pey47">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ot7a0k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eeekqj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06hgoap">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u0d3wr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z05pzu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13extug">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_051pm4x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ipmzm1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jo5zbw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h3h1t5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0eehftw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16gbs9f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15ek4vv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0solqpb">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1q676w1">
+          <text>"checkAwpHwfCitizen"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18gohpj">
+          <text>"Check HWF on additional application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ufh4uj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05j8d6k">
+          <text>"checkAwpHwfCitizen"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0zd63mk">
         <inputEntry id="UnaryTests_09g99gh">
           <text>"createWaTaskForCtscCaseFlags"</text>
@@ -7757,154 +7979,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_00f4c4v">
           <text>"reviewLangAndSmReqIdent"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1j6m0v6">
-        <inputEntry id="UnaryTests_04gw2op">
-          <text>"hwfProcessCaseUpdate"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1rvua7l">
-          <text>"SUBMITTED_PAID"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1kyy12w">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0qin5x9">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0fnjir1">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0q8nrht">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0b6qtr9">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0hsxri3">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0de5ni1">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_18dr6ew">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1gyk41c">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1mxgxby">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1a44gex">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1bduxf2">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ro5yh1">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1cbi2ai">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0c4ojx8">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0klrzgk">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0yrpamq">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1jdhgse">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ef1dqn">
-          <text>"checkApplicationC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_09sxji5">
-          <text>"Check Application"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1gor1u6">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0odtrt0">
-          <text>"applicationCheck"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0q328ep">
-        <inputEntry id="UnaryTests_09j040s">
-          <text>"citizenCaseSubmitWithHWF"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_05f88bm">
-          <text>"SUBMITTED_NOT_PAID"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0fijpoz">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1tda6kz">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0g4wmzn">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1yi1agt">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0t7prh8">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1e62coh">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0zv7465">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0mzr8bn">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1xyha71">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0zxlg2i">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_08anz4l">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0h10euv">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ja8n68">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_160buro">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1fjg2vh">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_11bd7v1">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_00cydtx">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0c23o2d">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1syg2gk">
-          <text>"checkHwfApplicationC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0cq1eht">
-          <text>"Check HWF application"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_00c9duh">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_01dvo1v">
-          <text>"applicationHwfCheck"</text>
         </outputEntry>
       </rule>
     </decisionTable>

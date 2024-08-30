@@ -599,7 +599,7 @@
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_14xrsqw">
           <text>"checkApplicationC100", "checkApplicationResubmittedC100",
-"addCaseNumber", "addCaseNumberResubmitted", "checkHwfApplicationC100"</text>
+"addCaseNumber", "addCaseNumberResubmitted", "checkHwfApplicationC100","checkAwpHwfCitizen"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1pv1c0z">
           <text></text>

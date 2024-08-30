@@ -343,6 +343,75 @@
           <text>"reviewAddtlApp"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0eyjjpe">
+        <inputEntry id="UnaryTests_12elxm0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kq76gg">
+          <text>"hwfProcessCaseUpdate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jm3pt5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0c6xnwr">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0se8zi8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mr0mbv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dvlgcm">
+          <text>"applicationHwfCheck"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0u7udiy">
+        <inputEntry id="UnaryTests_1oinda2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1suv25v">
+          <text>"processHwfUpdateAwpStatus"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sn2zet">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0doefxc">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_140hu88">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ypn5y4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12b8jie">
+          <text>"checkAwpHwfCitizen"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_10rdb4r">
+        <inputEntry id="UnaryTests_1b543ak">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0109n6e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1firvcm">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14mcm4r">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18p40we">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tge9pp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_083b1os">
+          <text></text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
