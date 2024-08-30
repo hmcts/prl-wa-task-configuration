@@ -389,29 +389,6 @@
           <text>"checkAwpHwfCitizen"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_10rdb4r">
-        <inputEntry id="UnaryTests_1b543ak">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0109n6e">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1firvcm">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_14mcm4r">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_18p40we">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1tge9pp">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_083b1os">
-          <text></text>
-        </outputEntry>
-      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
