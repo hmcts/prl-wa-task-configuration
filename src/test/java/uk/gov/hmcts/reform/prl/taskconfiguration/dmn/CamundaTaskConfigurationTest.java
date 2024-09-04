@@ -35,7 +35,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(86));
+        assertThat(logic.getRules().size(), is(87));
     }
 
     @Test
@@ -187,7 +187,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100",
         "requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack",
         "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA",
-        "completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq"
+        "completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq","listWithoutNoticeHearingFL401"
     })
     void when_given_task_type_then_return_dueDateIntervalDays_and_validate_description(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -610,7 +610,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401",
         "requestSolicitorOrderFL401", "reviewCorrespondenceFL401","produceHearingBundleFL401",
         "removeLegalRepresentativeFL401", "replyToMessageForCourtAdminFL401",
-        "reviewDocumentsForSolAndCafcassFL401","listWithoutNoticeHearingC100","listOnNoticeHearingFL401"
+        "reviewDocumentsForSolAndCafcassFL401","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","listWithoutNoticeHearingFL401"
     })
     void when_given_task_type_then_return_majorPriorityForValue1000_and_validate_description(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -1049,7 +1049,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "reviewInactiveRaRequestsFL401","appStatementOfServiceBySol",
         "appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA",
         "appStatementOfServiceByAdmin","completefl416AndServe","listWithoutNoticeHearingC100",
-        "listOnNoticeHearingFL401","reviewAdditionalApplication","reviewLangAndSmReq"
+        "listOnNoticeHearingFL401","reviewAdditionalApplication","reviewLangAndSmReq","listWithoutNoticeHearingFL401"
     })
     void when_given_task_type_then_return_workType_and_validate_description(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -1275,7 +1275,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "completefl416AndServe","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100",
         "replyToMessageForCourtAdminFL401","reviewRaRequestsC100","reviewInactiveRaRequestsC100",
         "listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewAdditionalApplication",
-        "reviewLangAndSmReq"
+        "reviewLangAndSmReq","listWithoutNoticeHearingFL401"
     })
     void when_given_task_type_then_return_roleCategoryForValueAdmin_and_validate_description(
         String taskType) {
@@ -1627,6 +1627,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
             case "listWithoutNoticeHearingC100":
             case "listOnNoticeHearingFL401":
+            case "listWithoutNoticeHearingFL401":
                 return "";
 
             case "reviewAdditionalApplication":
