@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.20.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.13.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-types-privatelaw-prlapps" name="Private Law Task Types DMN">
     <decisionTable id="DecisionTable_07kcj0o" hitPolicy="COLLECT">
       <input id="Input_1">
@@ -75,7 +75,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_06eqcww">
-          <text>"AddCaseNumberResubmitted"</text>
+          <text>"addCaseNumberResubmitted"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0rnmzpm">
           <text>"Add Case Number Resubmitted"</text>
@@ -201,30 +201,6 @@
           <text>"Service Of Application FL401"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1qadfnt">
-        <description>SoOC100</description>
-        <inputEntry id="UnaryTests_0s9wesh">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1rino2x">
-          <text>"serviceOfOrderC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1lup6p8">
-          <text>"Service Of Order C100"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0rb3vtl">
-        <description>SoCFL401</description>
-        <inputEntry id="UnaryTests_0mzfq7g">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_13sjfhs">
-          <text>"serviceOfOrderFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1e7chqz">
-          <text>"Service Of Order FL401"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0bfc7i0">
         <description>HMC100</description>
         <inputEntry id="UnaryTests_08gqryo">
@@ -243,34 +219,10 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1iv02zu">
-          <text>"produceHearingBundleFL401"</text>
+          <text>"produceHearingBundleFL100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_07wfh38">
           <text>"Produce Hearing Bundle FL401"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0t5qcd3">
-        <description>OMC100</description>
-        <inputEntry id="UnaryTests_02l862t">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_10r2r8y">
-          <text>"createOrderC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_07t65e7">
-          <text>"Create Order C100"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1xw65eo">
-        <description>OMFL401</description>
-        <inputEntry id="UnaryTests_0zd1qnt">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0t1sgqg">
-          <text>"createOrderFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0of22tl">
-          <text>"Create Order FL401"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0dkyo52">
@@ -282,7 +234,7 @@
           <text>"reviewSolicitorOrderProvided"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1goyaxs">
-          <text>"Review Solicitor Order"</text>
+          <text>"Review and Approve Legal rep Order / Review resubmitted Order"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_09pfq52">
@@ -303,7 +255,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1tfodbe">
-          <text>"requestSolicitorOrderFL401"</text>
+          <text>"requestSolicitorOrderFL100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_11347sz">
           <text>"Request Solicitor Order FL401"</text>
@@ -327,7 +279,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_17opci5">
-          <text>"updateHearingActualsFL401"</text>
+          <text>"updateHearingActualsFL100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1bbas8n">
           <text>"Update Hearing Actuals FL401"</text>
@@ -342,7 +294,7 @@
           <text>"reviewCorrespondenceC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1idgoa5">
-          <text>"Review Correspondence C100"</text>
+          <text>"Review Documents C100"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0x6pvwi">
@@ -354,7 +306,7 @@
           <text>"reviewCorrespondenceFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02vsyqy">
-          <text>"Review Correspondence FL401"</text>
+          <text>"Review Documents FL401"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_04gekfy">
@@ -559,6 +511,174 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1ueuokf">
           <text>"Review Language and SM requirements"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ojmr70">
+        <description>ASOC</description>
+        <inputEntry id="UnaryTests_1uadpay">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0tvmi1v">
+          <text>"adminServeOrderC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12t6yo0">
+          <text>"Complete the Order / Service Of Order C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1anf9vt">
+        <description>ASOF</description>
+        <inputEntry id="UnaryTests_1rddvz5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1auh93d">
+          <text>"adminServeOrderFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_046h9a7">
+          <text>"Complete the Order / Service Of Order FL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0l89138">
+        <description>ASOFSBA</description>
+        <inputEntry id="UnaryTests_1lmydd9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1urdvca">
+          <text>"appStatementOfServiceByAdmin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ln1srm">
+          <text>"Arrange personal service of application and upload statement of service"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_16kilkt">
+        <description>ASOFSBB</description>
+        <inputEntry id="UnaryTests_16djku9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18a1qdi">
+          <text>"appStatementOfServiceByBailiff"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0by73vy">
+          <text>"Application statement of service due"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1gyjp59">
+        <description>ASOFSBL</description>
+        <inputEntry id="UnaryTests_0xwcaoc">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1d2gy0a">
+          <text>"appStatementOfServiceByLiP"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1necb75">
+          <text>"Application statement of service due"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rn68eg">
+        <description>ASOFSBS</description>
+        <inputEntry id="UnaryTests_11b0pn7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1yj00r9">
+          <text>"appStatementOfServiceBySol"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0t1dhvc">
+          <text>"Application statement of service due"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18z744d">
+        <description>ABSOA</description>
+        <inputEntry id="UnaryTests_07camzy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17bsbfb">
+          <text>"arrangeBailiffSOA"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18tp8yh">
+          <text>"Arrange bailiff service of application"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0wuni1v">
+        <description>CFL416S</description>
+        <inputEntry id="UnaryTests_04js2h3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14dqg4g">
+          <text>"completefl416AndServe"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16chigo">
+          <text>"Complete FL416 and serve applicant only"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vmrpaf">
+        <description>CHA</description>
+        <inputEntry id="UnaryTests_0p8icfy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14nqrvp">
+          <text>"createHearingRequest"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z2j1o2">
+          <text>"Create Hearing Request"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1illjzq">
+        <description>CHAALA</description>
+        <inputEntry id="UnaryTests_1q6e5b7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1yjd2ne">
+          <text>"createHearingRequestReserveListAssist"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kefequ">
+          <text>"Create Hearing Request"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_13u53vw">
+        <description>CMHR</description>
+        <inputEntry id="UnaryTests_19qu9yc">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rf3p2i">
+          <text>"createMultipleHearingRequest"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jsb9dd">
+          <text>"Create Multiple Hearing Request"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vw90pm">
+        <description>RAP</description>
+        <inputEntry id="UnaryTests_0vre9xp">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gwnafh">
+          <text>"recreateApplicationPack"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qbm5bz">
+          <text>"Recreate Application Pack"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04j094y">
+        <description>RAOP</description>
+        <inputEntry id="UnaryTests_1o6x5ko">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wi4urk">
+          <text>"reviewAdminOrderProvided"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09fxph2">
+          <text>"Review and Approve Admin Order"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1fopiy8">
+        <description>RAAO</description>
+        <inputEntry id="UnaryTests_1ny52jo">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1x0jae7">
+          <text>"reviewAdminOrderByManager"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0u4y0cj">
+          <text>"Review and Approve Admin Order"</text>
         </outputEntry>
       </rule>
     </decisionTable>
