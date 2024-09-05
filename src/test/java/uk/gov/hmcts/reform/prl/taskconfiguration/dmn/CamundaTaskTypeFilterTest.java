@@ -212,6 +212,14 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
             Map.of(
                 "taskTypeId", "reviewLangAndSmReq",
                 "taskTypeName", "Review Language and SM requirements"
+            ),
+            Map.of(
+                "taskTypeId", "checkHwfApplicationC100",
+                "taskTypeName", "Check HWF application"
+            ),
+            Map.of(
+                "taskTypeId", "checkAwpHwfCitizen",
+                "taskTypeName", "Check HWF on additional application"
             )
         );
         return Stream.of(
@@ -237,6 +245,6 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(46));
+        assertThat(logic.getRules().size(), is(48));
     }
 }

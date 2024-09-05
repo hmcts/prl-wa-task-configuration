@@ -137,17 +137,54 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                     )
                 )
             ),
-                Arguments.of(
-                        null,
-                        "hmcCaseUpdPrepForHearing",
-                        null,
-                        List.of(
-                                Map.of(
-                                        "action", "Cancel",
-                                        "processCategories", "createHearingRequest"
-                                )
-                        )
+            Arguments.of(
+                null,
+                "hmcCaseUpdPrepForHearing",
+                null,
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "createHearingRequest"
+                    )
                 )
+            ),
+            Arguments.of(
+                null,
+                "hwfProcessCaseUpdate",
+                null,
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "applicationHwfCheck"
+                    )
+                )
+            ),
+            Arguments.of(
+                null,
+                "processHwfUpdateAwpStatus",
+                null,
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "checkAwpHwfCitizen"
+                    )
+                )
+            ),
+            Arguments.of(
+                null,
+                "processUrgentHelpWithFees",
+                null,
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "applicationHwfCheck"
+                    ),
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "checkAwpHwfCitizen"
+                    )
+                )
+            )
         );
     }
 
@@ -173,7 +210,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(14));
+        assertThat(logic.getRules().size(), is(16));
 
     }
 }

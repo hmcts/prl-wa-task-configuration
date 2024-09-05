@@ -35,9 +35,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(20));
+        assertThat(logic.getInputs().size(), is(21));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(102));
+        assertThat(logic.getRules().size(), is(107));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1072,6 +1072,102 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "reviewLangAndSmReq",
                         "name", "Review Language and SM requirements",
                         "processCategories", "reviewLangAndSmReqIdent"
+                    )
+                )
+            ),
+            Arguments.of(
+                "citizenCaseSubmitWithHWF",
+                "SUBMITTED_NOT_PAID",
+                null,
+                singletonList(
+                    Map.of(
+                        "taskId", "checkHwfApplicationC100",
+                        "name", "Check HWF application",
+                        "processCategories", "applicationHwfCheck"
+                    )
+                )
+            ),
+            Arguments.of(
+                "hwfProcessCaseUpdate",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "checkApplicationC100",
+                        "name", "Check Application",
+                        "processCategories", "applicationCheck"
+                    )
+                )
+            ),
+            Arguments.of(
+                "processUrgentHelpWithFees",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isTheCaseInDraftState\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "checkApplicationC100",
+                        "name", "Check Application",
+                        "processCategories", "applicationCheck"
+                    )
+                )
+            ),
+            Arguments.of(
+                "citizenAwpCreate",
+                null,
+                null,
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdditionalApplication",
+                        "name", "Review additional application",
+                        "processCategories", "reviewAddtlAppCitizen"
+                    )
+                )
+            ),
+            Arguments.of(
+                "citizenAwpHwfCreate",
+                null,
+                null,
+                singletonList(
+                    Map.of(
+                        "taskId", "checkAwpHwfCitizen",
+                        "name", "Check HWF on additional application",
+                        "processCategories", "checkAwpHwfCitizen"
+                    )
+                )
+            ),
+            Arguments.of(
+                "processHwfUpdateAwpStatus",
+                null,
+                null,
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdditionalApplication",
+                        "name", "Review additional application",
+                        "processCategories", "reviewAddtlAppCitizen"
+                    )
+                )
+            ),
+            Arguments.of(
+                "processUrgentHelpWithFees",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isTheCaseInDraftState\":\"" + "No" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdditionalApplication",
+                        "name", "Review additional application",
+                        "processCategories", "reviewAddtlAppCitizen"
                     )
                 )
             )
