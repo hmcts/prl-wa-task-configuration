@@ -838,6 +838,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
 
         )));
     }
+
     @ParameterizedTest
     @CsvSource(value = {
         "listOnNoticeHearingFL401","listWithoutNoticeHearingFL401"
