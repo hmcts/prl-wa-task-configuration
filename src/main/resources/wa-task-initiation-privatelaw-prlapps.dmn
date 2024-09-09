@@ -8462,6 +8462,83 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"reviewLangAndSmReqIdent"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1p43kpk">
+        <inputEntry id="UnaryTests_12by7z8">
+          <text>"courtnav-document-upload"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j2evl8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lew4zc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0opobad">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1juhiks">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07j9zic">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0npyjga">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08rhrew">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b6gw8q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ewo23y">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_185pzy4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t4w4bi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o9nde9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11dbv8f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bjn4sn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08x01dg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18ualzw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00moyl1">
+          <text>"COURTNAV"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i7ik1j">
+          <text>"TRUE"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zjxm4t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w3aedi">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1aslh08">
+          <text>"reviewDocumentsForSolAndCafcassFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dy49xi">
+          <text>"Review Documents"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1om647t">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jurupo">
+          <text>"reviewDocsFL401"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
