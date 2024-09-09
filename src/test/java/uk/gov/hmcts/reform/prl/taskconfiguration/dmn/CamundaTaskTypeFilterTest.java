@@ -13,6 +13,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTable;
 import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
@@ -28,204 +29,127 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
     }
 
     static Stream<Arguments> scenarioProvider() {
-        List<Map<String, String>> taskTypes = List.of(
-            Map.of(
-                "taskTypeId", "checkApplicationC100",
-                "taskTypeName", "Check application C100"
-            ),
-            Map.of(
-                "taskTypeId", "checkApplicationResubmittedC100",
-                "taskTypeName", "Check resubmitted application C100"
-            ),
-            Map.of(
-                "taskTypeId", "checkApplicationFL401",
-                "taskTypeName", "Check application FL401"
-            ),
-            Map.of(
-                "taskTypeId", "checkApplicationResubmittedFL401",
-                "taskTypeName", "Check resubmitted application FL401"
-            ),
-            Map.of(
-                "taskTypeId", "addCaseNumber",
-                "taskTypeName", "Add Case Number"
-            ),
-            Map.of(
-                "taskTypeId", "AddCaseNumberResubmitted",
-                "taskTypeName", "Add Case Number Resubmitted"
-            ),
-            Map.of(
-                "taskTypeId", "sendToGateKeeperFL401",
-                "taskTypeName", "Send To Gatekeeper FL401"
-            ),
-            Map.of(
-                "taskTypeId", "sendToGateKeeperC100",
-                "taskTypeName", "Send To Gatekeeper C100"
-            ),
-            Map.of(
-                "taskTypeId", "sendToGateKeeperResubmittedFL401",
-                "taskTypeName", "Send to Gatekeeper Resubmitted FL401"
-            ),
-            Map.of(
-                "taskTypeId", "sendToGateKeeperResubmittedC100",
-                "taskTypeName", "Send to Gatekeeper Resubmitted C100"
-            ),
-            Map.of(
-                "taskTypeId", "directionOnIssue",
-                "taskTypeName", "Directions on Issue"
-            ),
-            Map.of(
-                "taskTypeId", "directionOnIssueResubmitted",
-                "taskTypeName", "Directions on Issue Resubmitted"
-            ),
-            Map.of(
-                "taskTypeId", "gateKeeping",
-                "taskTypeName", "Gatekeeping"
-            ),
-            Map.of(
-                "taskTypeId", "gateKeepingResubmitted",
-                "taskTypeName", "Gatekeeping Resubmitted"
-            ),
-            Map.of(
-                "taskTypeId", "serviceOfApplicationC100",
-                "taskTypeName", "Service Of Application C100"
-            ),
-            Map.of(
-                "taskTypeId", "serviceOfApplicationFL401",
-                "taskTypeName", "Service Of Application FL401"
-            ),
-            Map.of(
-                "taskTypeId", "serviceOfOrderC100",
-                "taskTypeName", "Service Of Order C100"
-            ),
-            Map.of(
-                "taskTypeId", "serviceOfOrderFL401",
-                "taskTypeName", "Service Of Order FL401"
-            ),
-            Map.of(
-                "taskTypeId", "produceHearingBundleC100",
-                "taskTypeName", "Produce Hearing Bundle C100"
-            ),
-            Map.of(
-                "taskTypeId", "produceHearingBundleFL401",
-                "taskTypeName", "Produce Hearing Bundle FL401"
-            ),
-            Map.of(
-                "taskTypeId", "createOrderC100",
-                "taskTypeName", "Create Order C100"
-            ),
-            Map.of(
-                "taskTypeId", "createOrderFL401",
-                "taskTypeName", "Create Order FL401"
-            ),
-            Map.of(
-                "taskTypeId", "reviewSolicitorOrderProvided",
-                "taskTypeName", "Review Solicitor Order"
-            ),
-            Map.of(
-                "taskTypeId", "requestSolicitorOrderC100",
-                "taskTypeName", "Request Solicitor Order C100"
-            ),
-            Map.of(
-                "taskTypeId", "requestSolicitorOrderFL401",
-                "taskTypeName", "Request Solicitor Order FL401"
-            ),
-            Map.of(
-                "taskTypeId", "updateHearingActualsC100",
-                "taskTypeName", "Update Hearing Actuals C100"
-            ),
-            Map.of(
-                "taskTypeId", "updateHearingActualsFL401",
-                "taskTypeName", "Update Hearing Actuals FL401"
-            ),
-            Map.of(
-                "taskTypeId", "reviewCorrespondenceC100",
-                "taskTypeName", "Review Correspondence C100"
-            ),
-            Map.of(
-                "taskTypeId", "reviewCorrespondenceFL401",
-                "taskTypeName", "Review Correspondence FL401"
-            ),
-            Map.of(
-                "taskTypeId", "removeLegalRepresentativeC100",
-                "taskTypeName", "Remove legal representative C100"
-            ),
-            Map.of(
-                "taskTypeId", "removeLegalRepresentativeFL401",
-                "taskTypeName", "Remove legal representative FL401"
-            ),
-            Map.of(
-                "taskTypeId", "confidentialCheckSOA",
-                "taskTypeName", "C8 - Confidential details check"
-            ),
-            Map.of(
-                "taskTypeId", "replyToMessageForCourtAdminFL401",
-                "taskTypeName", "Reply To Message FL401"
-            ),
-            Map.of(
-                "taskTypeId", "replyToMessageForCourtAdminC100",
-                "taskTypeName", "Reply To Message C100"
-            ),
-            Map.of(
-                "taskTypeId", "replyToMessageForLA",
-                "taskTypeName", "Reply To Message C100"
-            ),
-            Map.of(
-                "taskTypeId", "replyToMessageForJudiciary",
-                "taskTypeName", "Reply To Message Judicial"
-            ),
-            Map.of(
-                "taskTypeId", "reviewDocumentsForSolAndCafcassC100",
-                "taskTypeName", "C100 Review Documents Submitted By Sol or Cafcass"
-            ),
-            Map.of(
-                "taskTypeId", "reviewDocumentsForSolAndCafcassFL401",
-                "taskTypeName", "FL401 Review Documents Submitted By Sol or Cafcass"
-            ),
-            Map.of(
-                "taskTypeId", "reviewRaRequestsC100",
-                "taskTypeName", "Review RA request"
-            ),
-            Map.of(
-                "taskTypeId", "reviewRaRequestsFL401",
-                "taskTypeName", "Review RA request"
-            ),
-            Map.of(
-                "taskTypeId", "reviewInactiveRaRequestsC100",
-                "taskTypeName", "Review inactive RA request"
-            ),
-            Map.of(
-                "taskTypeId", "reviewInactiveRaRequestsFL401",
-                "taskTypeName", "Review inactive RA request"
-            ),
-            Map.of(
-                "taskTypeId", "listWithoutNoticeHearingC100",
-                "taskTypeName", "List without notice hearing(see case notes)"
-            ),
-            Map.of(
-                "taskTypeId", "listOnNoticeHearingFL401",
-                "taskTypeName", "Listing instructions (refer to case notes)"
-            ),
-            Map.of(
-                "taskTypeId", "reviewAdditionalApplication",
-                "taskTypeName", "Review additional application"
-            ),
-            Map.of(
-                "taskTypeId", "reviewLangAndSmReq",
-                "taskTypeName", "Review Language and SM requirements"
-            ),
-            Map.of(
-                "taskTypeId", "checkHwfApplicationC100",
-                "taskTypeName", "Check HWF application"
-            ),
-            Map.of(
-                "taskTypeId", "checkAwpHwfCitizen",
-                "taskTypeName", "Check HWF on additional application"
-            )
-        );
+        List<Map<String, String>> taskTypes = new ArrayList<>();
+        taskTypes.add(Map.of("taskTypeId", "checkApplicationC100",
+                "taskTypeName", "Check application C100"));
+        taskTypes.add(Map.of("taskTypeId", "checkApplicationResubmittedC100",
+                "taskTypeName", "Check resubmitted application C100"));
+        taskTypes.add(Map.of("taskTypeId", "checkApplicationFL401",
+                "taskTypeName", "Check application FL401"));
+        taskTypes.add(Map.of("taskTypeId", "checkApplicationResubmittedFL401",
+                "taskTypeName", "Check resubmitted application FL401"));
+        taskTypes.add(Map.of("taskTypeId", "addCaseNumber",
+                "taskTypeName", "Add Case Number"));
+        taskTypes.add(Map.of("taskTypeId", "addCaseNumberResubmitted",
+                "taskTypeName", "Add Case Number Resubmitted"));
+        taskTypes.add(Map.of("taskTypeId", "sendToGateKeeperFL401",
+                "taskTypeName", "Send To Gatekeeper FL401"));
+        taskTypes.add(Map.of("taskTypeId", "sendToGateKeeperC100",
+                "taskTypeName", "Send To Gatekeeper C100"));
+        taskTypes.add(Map.of("taskTypeId", "sendToGateKeeperResubmittedFL401",
+                "taskTypeName", "Send to Gatekeeper Resubmitted FL401"));
+        taskTypes.add(Map.of("taskTypeId", "sendToGateKeeperResubmittedC100",
+                "taskTypeName", "Send to Gatekeeper Resubmitted C100"));
+        taskTypes.add(Map.of("taskTypeId", "directionOnIssue",
+                "taskTypeName", "Directions on Issue"));
+        taskTypes.add(Map.of("taskTypeId", "directionOnIssueResubmitted",
+                "taskTypeName", "Directions on Issue Resubmitted"));
+        taskTypes.add(Map.of("taskTypeId", "gateKeeping",
+                "taskTypeName", "Gatekeeping"));
+        taskTypes.add(Map.of("taskTypeId", "gateKeepingResubmitted",
+                "taskTypeName", "Gatekeeping Resubmitted"));
+        taskTypes.add(Map.of("taskTypeId", "serviceOfApplicationC100",
+                "taskTypeName", "Service Of Application C100"));
+        taskTypes.add(Map.of("taskTypeId", "serviceOfApplicationFL401",
+                "taskTypeName", "Service Of Application FL401"));
+        taskTypes.add(Map.of("taskTypeId", "produceHearingBundleC100",
+                "taskTypeName", "Produce Hearing Bundle C100"));
+        taskTypes.add(Map.of("taskTypeId", "produceHearingBundleFL100",
+                "taskTypeName", "Produce Hearing Bundle FL401"));
+        taskTypes.add(Map.of("taskTypeId", "reviewSolicitorOrderProvided",
+                "taskTypeName", "Review and Approve Legal rep Order / Review resubmitted Order"));
+        taskTypes.add(Map.of("taskTypeId", "requestSolicitorOrderC100",
+                "taskTypeName", "Request Solicitor Order C100"));
+        taskTypes.add(Map.of("taskTypeId", "requestSolicitorOrderFL100",
+                "taskTypeName", "Request Solicitor Order FL401"));
+        taskTypes.add(Map.of("taskTypeId", "updateHearingActualsC100",
+                "taskTypeName", "Update Hearing Actuals C100"));
+        taskTypes.add(Map.of("taskTypeId", "updateHearingActualsFL100",
+                "taskTypeName", "Update Hearing Actuals FL401"));
+        taskTypes.add(Map.of("taskTypeId", "reviewCorrespondenceC100",
+                "taskTypeName", "Review Documents C100"));
+        taskTypes.add(Map.of("taskTypeId", "reviewCorrespondenceFL401",
+                "taskTypeName", "Review Documents FL401"));
+        taskTypes.add(Map.of("taskTypeId", "removeLegalRepresentativeC100",
+                "taskTypeName", "Remove legal representative C100"));
+        taskTypes.add(Map.of("taskTypeId", "removeLegalRepresentativeFL401",
+                "taskTypeName", "Remove legal representative FL401"));
+        taskTypes.add(Map.of("taskTypeId", "confidentialCheckSOA",
+                "taskTypeName", "C8 - Confidential details check"));
+        taskTypes.add(Map.of("taskTypeId", "replyToMessageForCourtAdminFL401",
+                "taskTypeName", "Reply To Message FL401"));
+        taskTypes.add(Map.of("taskTypeId", "replyToMessageForCourtAdminC100",
+                "taskTypeName", "Reply To Message C100"));
+        taskTypes.add(Map.of("taskTypeId", "replyToMessageForLA",
+                "taskTypeName", "Reply To Message C100"));
+        taskTypes.add(Map.of("taskTypeId", "replyToMessageForJudiciary",
+                "taskTypeName", "Reply To Message Judicial"));
+        taskTypes.add(Map.of("taskTypeId", "reviewDocumentsForSolAndCafcassC100",
+                "taskTypeName", "C100 Review Documents Submitted By Sol or Cafcass"));
+        taskTypes.add(Map.of("taskTypeId", "reviewDocumentsForSolAndCafcassFL401",
+                "taskTypeName", "FL401 Review Documents Submitted By Sol or Cafcass"));
+        taskTypes.add(Map.of("taskTypeId", "reviewRaRequestsC100",
+                "taskTypeName", "Review RA request"));
+        taskTypes.add(Map.of("taskTypeId", "reviewRaRequestsFL401",
+                "taskTypeName", "Review RA request"));
+        taskTypes.add(Map.of("taskTypeId", "reviewInactiveRaRequestsC100",
+                "taskTypeName", "Review inactive RA request"));
+        taskTypes.add(Map.of("taskTypeId", "reviewInactiveRaRequestsFL401",
+                "taskTypeName", "Review inactive RA request"));
+        taskTypes.add(Map.of("taskTypeId", "listWithoutNoticeHearingC100",
+                "taskTypeName", "List without notice hearing(see case notes)"));
+        taskTypes.add(Map.of("taskTypeId", "listOnNoticeHearingFL401",
+                "taskTypeName", "Listing instructions (refer to case notes)"));
+        taskTypes.add(Map.of("taskTypeId", "reviewAdditionalApplication",
+                "taskTypeName", "Review additional application"));
+        taskTypes.add(Map.of("taskTypeId", "reviewLangAndSmReq",
+                "taskTypeName", "Review Language and SM requirements"));
+        taskTypes.add(Map.of("taskTypeId", "adminServeOrderC100",
+                "taskTypeName", "Complete the Order / Service Of Order C100"));
+        taskTypes.add(Map.of("taskTypeId", "adminServeOrderFL401",
+                "taskTypeName", "Complete the Order / Service Of Order FL401"));
+        taskTypes.add(Map.of("taskTypeId", "appStatementOfServiceByAdmin",
+                "taskTypeName", "Arrange personal service of application and upload statement of service"));
+        taskTypes.add(Map.of("taskTypeId", "appStatementOfServiceByBailiff",
+                "taskTypeName", "Application statement of service due"));
+        taskTypes.add(Map.of("taskTypeId", "appStatementOfServiceByLiP",
+                "taskTypeName", "Application statement of service due"));
+        taskTypes.add(Map.of("taskTypeId", "appStatementOfServiceBySol",
+                "taskTypeName", "Application statement of service due"));
+        taskTypes.add(Map.of("taskTypeId", "arrangeBailiffSOA",
+                "taskTypeName", "Arrange bailiff service of application"));
+        taskTypes.add(Map.of("taskTypeId", "completefl416AndServe",
+                "taskTypeName", "Complete FL416 and serve applicant only"));
+        taskTypes.add(Map.of("taskTypeId", "createHearingRequest",
+                "taskTypeName", "Create Hearing Request"));
+        taskTypes.add(Map.of("taskTypeId", "createHearingRequestReserveListAssist",
+                "taskTypeName", "Create Hearing Request"));
+        taskTypes.add(Map.of("taskTypeId", "createMultipleHearingRequest",
+                "taskTypeName", "Create Multiple Hearing Request"));
+        taskTypes.add(Map.of("taskTypeId", "recreateApplicationPack",
+                "taskTypeName", "Recreate Application Pack"));
+        taskTypes.add(Map.of("taskTypeId", "reviewAdminOrderProvided",
+                "taskTypeName", "Review and Approve Admin Order"));
+        taskTypes.add(Map.of("taskTypeId", "reviewAdminOrderByManager",
+                "taskTypeName", "Review and Approve Admin Order"));
+        taskTypes.add(Map.of("taskTypeId", "checkHwfApplicationC100",
+                             "taskTypeName", "Check HWF application"));
+        taskTypes.add(Map.of("taskTypeId", "checkAwpHwfCitizen",
+                             "taskTypeName", "Check HWF on additional application"));
         return Stream.of(
-            Arguments.of(
-                taskTypes
-            )
+                Arguments.of(
+                        taskTypes
+                )
         );
     }
 
@@ -245,6 +169,6 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(48));
+        assertThat(logic.getRules().size(), is(58));
     }
 }
