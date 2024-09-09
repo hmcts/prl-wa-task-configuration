@@ -682,6 +682,23 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"false"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1wmd6g9">
+        <inputEntry id="UnaryTests_1enry43">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uq8kpl">
+          <text>"checkAwpHwfCitizen"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vq8zqj">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1oeygyt">
+          <text>if(caseData.awpHwfRefNo !=null) then (taskAttributes.name + " - " + caseData.awpHwfRefNo) else taskAttributes.name</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09zuhvk">
+          <text>"false"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0ikmf14">
         <inputEntry id="UnaryTests_0epux74">
           <text></text>
