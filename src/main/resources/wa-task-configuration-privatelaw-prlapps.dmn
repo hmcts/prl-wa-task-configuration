@@ -696,7 +696,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"routine_work"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19npk6t">
-          <text>"true"</text>
+          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1csczvs">
