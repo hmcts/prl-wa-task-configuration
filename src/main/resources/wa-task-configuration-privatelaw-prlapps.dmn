@@ -1776,7 +1776,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
     <literalExpression id="LiteralExpression_0ynn9bk">
       <text>{
   "__prefix" : "__processCategory__orderId_",
-  "__attribute_entries" : get entries(taskAttributes),
+  "__attribute_entries" : get or else (entries(taskAttributes), []),
   "__matching_keys" : for __item in __attribute_entries return if starts with(__item.key, __prefix) then substring(__item.key, string length(__prefix) + 1) else null,
   "__filtered_keys" : __matching_keys[item != null],
   "__nonempty_keys" : append(__filtered_keys, null),
