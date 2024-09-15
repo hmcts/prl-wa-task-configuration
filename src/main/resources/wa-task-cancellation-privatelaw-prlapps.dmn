@@ -348,7 +348,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1kq76gg">
-          <text>"hwfProcessCaseUpdate","processUrgentHelpWithFees"</text>
+          <text>"hwfProcessCaseUpdate"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1jm3pt5">
           <text></text>
@@ -371,7 +371,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1suv25v">
-          <text>"processHwfUpdateAwpStatus","processUrgentHelpWithFees"</text>
+          <text>"processHwfUpdateAwpStatus"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0sn2zet">
           <text></text>
