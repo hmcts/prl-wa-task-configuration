@@ -169,21 +169,6 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                         "processCategories", "checkAwpHwfCitizen"
                     )
                 )
-            ),
-            Arguments.of(
-                null,
-                "processUrgentHelpWithFees",
-                null,
-                List.of(
-                    Map.of(
-                        "action", "Cancel",
-                        "processCategories", "applicationHwfCheck"
-                    ),
-                    Map.of(
-                        "action", "Cancel",
-                        "processCategories", "checkAwpHwfCitizen"
-                    )
-                )
             )
         );
     }

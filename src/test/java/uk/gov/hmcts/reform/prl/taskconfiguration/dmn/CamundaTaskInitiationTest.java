@@ -1177,7 +1177,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"manageDocumentsTriggeredBy\":\"" + "COURTNAV" + "\"\n,"
-                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "TRUE" + "\"\n"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(

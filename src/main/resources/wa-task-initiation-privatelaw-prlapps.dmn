@@ -8518,7 +8518,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"COURTNAV"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0i7ik1j">
-          <text>"TRUE"</text>
+          <text>"True"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0zjxm4t">
           <text></text>
