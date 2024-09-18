@@ -202,6 +202,10 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
                 "taskTypeName", "List without notice hearing(see case notes)"
             ),
             Map.of(
+                "taskTypeId", "listWithoutNoticeHearingFL401",
+                "taskTypeName", "List without notice hearing(see case notes)"
+            ),
+            Map.of(
                 "taskTypeId", "listOnNoticeHearingFL401",
                 "taskTypeName", "Listing instructions (refer to case notes)"
             ),
