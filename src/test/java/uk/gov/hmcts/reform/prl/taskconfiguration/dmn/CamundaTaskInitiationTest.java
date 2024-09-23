@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(20));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(102));
+        assertThat(logic.getRules().size(), is(104));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1072,6 +1072,38 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "reviewLangAndSmReq",
                         "name", "Review Language and SM requirements",
                         "processCategories", "reviewLangAndSmReqIdent"
+                    )
+                )
+            ),
+            Arguments.of(
+                "reopenClosedCases",
+                "CASE_ISSUED",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "sendToGateKeeperFL401",
+                        "name", "Send to Gatekeeper",
+                        "processCategories", "localCourtGatekeepingFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "reopenClosedCases",
+                "CASE_ISSUED",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "sendToGateKeeperC100",
+                        "name", "Send to Gatekeeper",
+                        "processCategories", "localCourtGatekeepingC100"
                     )
                 )
             )
