@@ -35,7 +35,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(20));
+        assertThat(logic.getInputs().size(), is(21));
         assertThat(logic.getOutputs().size(), is(4));
         assertThat(logic.getRules().size(), is(102));
     }
@@ -294,6 +294,74 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "directionOnIssueResubmitted",
                         "name", "Directions on Issue Resubmitted",
                         "processCategories", "directionOnIssue"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isApplicantRepresented\":\"" + "No" + "\"\n,"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "produceHearingBundleC100",
+                        "name", "Produce hearing bundle",
+                        "processCategories", "produceHearingBundleC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isApplicantRepresented\":\"" + "No" + "\"\n,"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "produceHearingBundleC100",
+                        "name", "Produce hearing bundle",
+                        "processCategories", "producHearingBundleC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isApplicantRepresented\":\"" + "No" + "\"\n,"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "produceHearingBundleFL100",
+                        "name", "Produce hearing bundle",
+                        "processCategories", "produceHearingBundleFL100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isApplicantRepresented\":\"" + "No" + "\"\n,"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "produceHearingBundleFL100",
+                        "name", "Produce hearing bundle",
+                        "processCategories", "produceHearingBundleFL100"
                     )
                 )
             ),
