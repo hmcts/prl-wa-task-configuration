@@ -52,6 +52,28 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+                "draftAnOrder",
+                "DECISION_OUTCOME",
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "requestSolicitorOrder"
+                    )
+                )
+            ),
+            Arguments.of(
+                "JUDICIAL_REVIEW",
+                "draftAnOrder",
+                "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "requestSolicitorOrder"
+                    )
+                )
+            ),
+            Arguments.of(
                 null,
                 "statementOfService",
                 null,
