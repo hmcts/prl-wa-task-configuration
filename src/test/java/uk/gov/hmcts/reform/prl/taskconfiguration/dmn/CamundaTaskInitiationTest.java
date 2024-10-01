@@ -37,7 +37,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(20));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(102));
+        assertThat(logic.getRules().size(), is(104));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1072,6 +1072,42 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "reviewLangAndSmReq",
                         "name", "Review Language and SM requirements",
                         "processCategories", "reviewLangAndSmReqIdent"
+                    )
+                )
+            ),
+            Arguments.of(
+                "cafcass-document-upload",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Review Documents",
+                        "processCategories", "reviewDocsC100",
+                        "taskId", "reviewDocumentsForSolAndCafcassC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "cafcass-document-upload",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Review Documents",
+                        "processCategories", "reviewDocsFL401",
+                        "taskId", "reviewDocumentsForSolAndCafcassFL401"
                     )
                 )
             )
