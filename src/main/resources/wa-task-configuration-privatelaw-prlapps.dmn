@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.13.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.27.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN">
     <decisionTable id="DecisionTable_14cx079" hitPolicy="COLLECT">
       <input id="InputClause_1gxyo7f" label="CCD Case Data" camunda:inputVariable="caseData">
@@ -1480,6 +1480,23 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"[Review case notes](/cases/case-details/${[CASE_REFERENCE]}#Case%20Notes)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1fxpvn9">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0j7f8rl">
+        <inputEntry id="UnaryTests_156u9qs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13vpogy">
+          <text>"reqSafeguardingLetterUpdate"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mh4jbx">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zowgas">
+          <text>"[Request SER Update]"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11z34q8">
           <text></text>
         </outputEntry>
       </rule>
