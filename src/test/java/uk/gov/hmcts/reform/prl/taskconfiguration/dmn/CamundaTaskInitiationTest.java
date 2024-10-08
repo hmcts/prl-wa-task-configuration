@@ -15,6 +15,10 @@ import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTable;
 import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,6 +33,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     @BeforeAll
     public static void initialization() {
         CURRENT_DMN_DECISION_TABLE = DmnDecisionTable.WA_TASK_INITIATION;
+
     }
 
     @Test
@@ -41,6 +46,11 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     }
 
     static Stream<Arguments> scenarioProvider() {
+
+        LocalDate currentDate = LocalDate.now();
+        LocalTime currentTime = LocalTime.now();
+        ZoneId myZone = ZoneId.systemDefault();
+        ZonedDateTime zonedDateTime = ZonedDateTime.of(currentDate, currentTime, myZone);
 
         return Stream.of(
             Arguments.of(
@@ -303,14 +313,16 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"isApplicantRepresented\":\"" + "No" + "\"\n,"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"productHearingBundleOn\":\"" + zonedDateTime + "\"\n,"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "produceHearingBundleC100",
                         "name", "Produce hearing bundle",
-                        "processCategories", "produceHearingBundleC100"
+                        "processCategories", "produceHearingBundleC100",
+                        "delayUntil", "{delayUntil=" + zonedDateTime + "}"
                     )
                 )
             ),
@@ -327,7 +339,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskId", "produceHearingBundleC100",
                         "name", "Produce hearing bundle",
-                        "processCategories", "producHearingBundleC100"
+                        "processCategories", "produceHearingBundleC100",
+                        "delayUntil", "{delayUntil=" + zonedDateTime + "}"
                     )
                 )
             ),
