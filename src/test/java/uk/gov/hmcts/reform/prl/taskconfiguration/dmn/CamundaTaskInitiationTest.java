@@ -1103,7 +1103,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         inputVariables.putValue("additionalData", map);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
-        System.out.println(dmnDecisionTableResult);
 
         assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
     }
