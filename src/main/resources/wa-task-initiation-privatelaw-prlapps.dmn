@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.13.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -2945,7 +2945,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0z5s2qi">
         <inputEntry id="UnaryTests_1xhq1rj">
-          <text>"hmcCaseUpdPrepForHearing"</text>
+          <text>"enableUpdateHearingActualTask"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1iw6d2r">
           <text>"JUDICIAL_REVIEW", "PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
@@ -2954,7 +2954,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"C100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0kpkunw">
-          <text>"TO BE REMOVED LATER"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_11ioqfs">
           <text></text>
@@ -3019,7 +3019,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0ip67cc">
         <inputEntry id="UnaryTests_03d0lry">
-          <text>"hmcCaseUpdPrepForHearing"</text>
+          <text>"enableUpdateHearingActualTask"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1lsoqm7">
           <text>"JUDICIAL_REVIEW", "PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
@@ -3028,7 +3028,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"FL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_06vhodi">
-          <text>"TO BE REMOVED LATER"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_12aaa92">
           <text></text>
@@ -3093,7 +3093,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0bu2jfj">
         <inputEntry id="UnaryTests_1sy5sab">
-          <text>"hmcCaseUpdDecOutcome"</text>
+          <text>"enableUpdateHearingActualTask"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c225g3">
           <text>"DECISION_OUTCOME"</text>
@@ -3102,7 +3102,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"C100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_09a30yi">
-          <text>"TO BE REMOVED LATER"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1bc6ynb">
           <text></text>
@@ -3169,7 +3169,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0dr66m3">
         <inputEntry id="UnaryTests_1wkw41q">
-          <text>"hmcCaseUpdDecOutcome"</text>
+          <text>"enableUpdateHearingActualTask"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1tz6dvs">
           <text>"DECISION_OUTCOME"</text>
@@ -3178,7 +3178,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"FL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0lvgsm5">
-          <text>"TO BE REMOVED LATER"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_00oxowq">
           <text></text>
