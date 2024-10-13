@@ -681,6 +681,30 @@
           <text>"Review and Approve Admin Order"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1hsrb9a">
+        <description>CAHWFC100</description>
+        <inputEntry id="UnaryTests_0tigjkg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hjv9ox">
+          <text>"checkHwfApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wdyij5">
+          <text>"Check HWF application"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1sh5730">
+        <description>CADDHWF</description>
+        <inputEntry id="UnaryTests_07n41t5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ymnx6e">
+          <text>"checkAwpHwfCitizen"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17zurww">
+          <text>"Check HWF on additional application"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
