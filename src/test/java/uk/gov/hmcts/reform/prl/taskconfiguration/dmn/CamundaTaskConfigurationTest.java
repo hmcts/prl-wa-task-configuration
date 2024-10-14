@@ -34,7 +34,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(87));
+        assertThat(logic.getRules().size(), is(88));
     }
 
     @Test
@@ -1636,6 +1636,12 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
             case "reviewLangAndSmReq":
                 return "[Review case notes](/cases/case-details/${[CASE_REFERENCE]}#Case%20Notes)";
+
+            case "checkAwpHwfCitizen":
+                return "[Review other applications](/cases/case-details/${[CASE_REFERENCE]}#Other%20applications)";
+
+            case "checkHwfApplicationC100":
+                return "[Check HWF application](/cases/case-details/${[CASE_REFERENCE]}#Application_)";
 
             default:
                 break;

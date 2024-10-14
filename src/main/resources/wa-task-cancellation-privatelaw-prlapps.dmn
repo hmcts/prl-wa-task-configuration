@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0">
   <decision id="wa-task-cancellation-privatelaw-prlapps" name="Private Law Task cancellation DMN">
     <decisionTable id="DecisionTable_0z3jx1g" hitPolicy="COLLECT">
       <input id="Input_1" label="From State">
@@ -318,6 +318,52 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0lgic8g">
           <text>"reviewAddtlApp"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0eyjjpe">
+        <inputEntry id="UnaryTests_12elxm0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kq76gg">
+          <text>"hwfProcessCaseUpdate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jm3pt5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0c6xnwr">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0se8zi8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mr0mbv">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dvlgcm">
+          <text>"applicationHwfCheck"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0u7udiy">
+        <inputEntry id="UnaryTests_1oinda2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1suv25v">
+          <text>"processHwfUpdateAwpStatus"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sn2zet">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0doefxc">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_140hu88">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ypn5y4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12b8jie">
+          <text>"checkAwpHwfCitizen"</text>
         </outputEntry>
       </rule>
     </decisionTable>
