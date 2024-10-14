@@ -251,29 +251,6 @@
           <text></text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_17pk5ev">
-        <inputEntry id="UnaryTests_1y0yan6">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0jt0qzv">
-          <text>"issueAndSendToLocalCourtCallback"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0672vpr">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_08r52s3">
-          <text>"Reconfigure"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_07anxjk">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0m2lskf">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0jj3e4u">
-          <text></text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0a92soj">
         <inputEntry id="UnaryTests_0i4qys8">
           <text></text>
