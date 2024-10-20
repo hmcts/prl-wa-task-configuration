@@ -15,6 +15,10 @@ import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTable;
 import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -35,12 +39,17 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(21));
+        assertThat(logic.getInputs().size(), is(22));
         assertThat(logic.getOutputs().size(), is(4));
         assertThat(logic.getRules().size(), is(108));
     }
 
     static Stream<Arguments> scenarioProvider() {
+
+        LocalDate currentDate = LocalDate.now();
+        LocalTime currentTime = LocalTime.now();
+        ZoneId myZone = ZoneId.systemDefault();
+        ZonedDateTime zonedDateTime = ZonedDateTime.of(currentDate, currentTime, myZone);
 
         return Stream.of(
             Arguments.of(
@@ -297,6 +306,77 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     )
                 )
             ),
+            /*Arguments.of(
+                "serviceOfApplication",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isApplicantRepresented\":\"" + "No" + "\"\n,"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"productHearingBundleOn\":\"" + zonedDateTime + "\"\n,"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "produceHearingBundleC100",
+                        "name", "Produce hearing bundle",
+                        "processCategories", "produceHearingBundleC100",
+                        "delayUntil", "{delayUntil=" + zonedDateTime + "}"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isApplicantRepresented\":\"" + "No" + "\"\n,"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "produceHearingBundleC100",
+                        "name", "Produce hearing bundle",
+                        "processCategories", "produceHearingBundleC100",
+                        "delayUntil", "{delayUntil=" + zonedDateTime + "}"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isApplicantRepresented\":\"" + "No" + "\"\n,"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "produceHearingBundleFL100",
+                        "name", "Produce hearing bundle",
+                        "processCategories", "produceHearingBundleFL100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isApplicantRepresented\":\"" + "No" + "\"\n,"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "produceHearingBundleFL100",
+                        "name", "Produce hearing bundle",
+                        "processCategories", "produceHearingBundleFL100"
+                    )
+                )
+            ),*/
             Arguments.of(
                 "hmcCaseUpdPrepForHearing",
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
