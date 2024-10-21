@@ -41,7 +41,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(22));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(108));
+        assertThat(logic.getRules().size(), is(109));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -397,24 +397,32 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "draftAnOrder",
                 null,
-                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "reviewSolicitorOrderProvided",
+                        "processCategories", "orderId_1234567890",
                         "name", "Review and Approve Legal rep Order",
-                        "processCategories", "reviewSolicitorOrderByJudge"
+                        "taskId", "reviewSolicitorOrderProvided"
                     )
                 )
             ),
             Arguments.of(
                 "editReturnedOrder",
                 null,
-                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "reviewSolicitorOrderProvided",
                         "name", "Review resubmitted Order",
-                        "processCategories", "reviewReturnedSolicitorOrderByJudge"
+                        "processCategories", "orderId_1234567890"
                     )
                 )
             ),
@@ -1084,6 +1092,18 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "listWithoutNotice",
+                null,
+                null,
+                List.of(
+                    Map.of(
+                        "name", "List without notice hearing (see case notes)",
+                        "processCategories", "listWithoutNoticeHearingFL401",
+                        "taskId", "listWithoutNoticeHearingFL401"
+                    )
+                )
+            ),
+            Arguments.of(
                 "awpPaymentSuccessCallback",
                 null,
                 null,
@@ -1265,6 +1285,46 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "reviewDocumentsForSolAndCafcassFL401",
                         "name", "Review Documents",
                         "processCategories", "reviewDocsFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageOrders",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Create an order" + "\"\n,"
+                                      + "      \"judgeLaManagerReviewRequired\":\""
+                                      + "judgeOrLegalAdvisorCheck" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdminOrderProvided",
+                        "name", "Review and Approve Admin Order",
+                        "processCategories", "orderId_1234567890"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageOrders",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Upload an order" + "\"\n,"
+                                      + "      \"judgeLaManagerReviewRequired\":\""
+                                      + "judgeOrLegalAdvisorCheck" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdminOrderProvided",
+                        "name", "Review and Approve Admin Order",
+                        "processCategories", "orderId_1234567890"
                     )
                 )
             )
