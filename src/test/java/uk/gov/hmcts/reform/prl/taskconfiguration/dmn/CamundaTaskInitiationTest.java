@@ -1084,6 +1084,18 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "listWithoutNotice",
+                null,
+                null,
+                List.of(
+                    Map.of(
+                        "name", "List without notice hearing (see case notes)",
+                        "processCategories", "listWithoutNoticeHearingFL401",
+                        "taskId", "listWithoutNoticeHearingFL401"
+                    )
+                )
+            ),
+            Arguments.of(
                 "awpPaymentSuccessCallback",
                 null,
                 null,

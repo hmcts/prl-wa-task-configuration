@@ -477,6 +477,18 @@
           <text>"List without notice hearing(see case notes)"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_03hl5vt">
+        <description>LWNHFL401</description>
+        <inputEntry id="UnaryTests_1tymna0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04xt6jb">
+          <text>"listWithoutNoticeHearingFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hjbzo9">
+          <text>"List without notice hearing(see case notes)"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1epamws">
         <description>LONHFL401</description>
         <inputEntry id="UnaryTests_1flpes9">
