@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN">
     <informationRequirement id="InformationRequirement_1iac9a2">
       <requiredDecision href="#Decision_11ew6tt" />
@@ -1304,7 +1304,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_021pzlj">
-          <text>"[Directions on Issue]"</text>
+          <text>"[Perform Manage Orders or List on Notice or List without Notice in the Next Steps]"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_10jxi2e">
           <text></text>
@@ -1324,7 +1324,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1o6t7rz">
-          <text>"[Gatekeeping]"</text>
+          <text>"[Perform Service of Applicaiton in the Next Steps]"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xk4f3f">
           <text></text>
