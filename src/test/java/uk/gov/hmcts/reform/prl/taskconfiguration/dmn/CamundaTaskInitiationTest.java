@@ -354,9 +354,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "produceHearingBundleFL100",
+                        "taskId", "produceHearingBundleFL401",
                         "name", "Produce hearing bundle",
-                        "processCategories", "produceHearingBundleFL100"
+                        "processCategories", "produceHearingBundleFL401"
                     )
                 )
             ),
@@ -371,9 +371,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "produceHearingBundleFL100",
+                        "taskId", "produceHearingBundleFL401,
                         "name", "Produce hearing bundle",
-                        "processCategories", "produceHearingBundleFL100"
+                        "processCategories", "produceHearingBundleFL401"
                     )
                 )
             ),*/
