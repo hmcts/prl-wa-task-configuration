@@ -479,7 +479,7 @@
       <rule id="DecisionRule_1v7zc7t">
         <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_10rpp7x">
-          <text>"serviceOfApplicationFL401","adminServeOrderFL401","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe"</text>
+          <text>"serviceOfApplicationFL401","adminServeOrderFL401","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","checkAndReServeDocuments"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ytal4l">
           <text></text>
@@ -628,7 +628,7 @@
       <rule id="DecisionRule_133ysn3">
         <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_0u9wzmo">
-          <text>"reviewAdminOrderByManager","confidentialCheckSOA"</text>
+          <text>"reviewAdminOrderByManager","confidentialCheckSOA","confidentialCheckDocuments"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0s45p4p">
           <text></text>
@@ -780,7 +780,7 @@
       <rule id="DecisionRule_1625m7m">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_17yokon">
-          <text>"serviceOfApplicationC100","adminServeOrderC100"</text>
+          <text>"serviceOfApplicationC100","adminServeOrderC100","checkAndReServeDocuments"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1sww3e8">
           <text></text>

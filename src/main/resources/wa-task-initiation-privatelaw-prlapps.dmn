@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -8953,6 +8953,166 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_1jurupo">
           <text>"reviewDocsFL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0vjcoi2">
+        <inputEntry id="UnaryTests_14ppxna">
+          <text>"serviceOfDocuments"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cvpd3l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ojffba">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gctes3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ugl32m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wmf1wd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xdmihn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12cpsip">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0orhpqh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0muhwbj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m2qeya">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04sx3t5">
+          <text>"Yes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ypu6tz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18ncqlu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kpkz4g">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tsjt9l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pnm6tg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jdhzbg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ezng6z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b9tsnf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ncj0ow">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x6ya3h">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1b34pt8">
+          <text>"confidentialCheckDocuments"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j01str">
+          <text>"Confidential check - Documents"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lbi887">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pmkvby">
+          <text>"confidentialCheckDocuments"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0vk5h26">
+        <inputEntry id="UnaryTests_11w4fkw">
+          <text>"serviceOfDocumentsConfCheck"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18qk6o4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00t5iue">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nohesh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ly37fl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cvr7qn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0v4s7kz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z43qkt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ao27vo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vs6w8t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02ecehd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01rc10e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e985bg">
+          <text>"No"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ey0qje">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g3e5f8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kqmolw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l6ztgw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16rvaqg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rhieot">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xley96">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1i1lrlz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p1s2vv">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1fci2rl">
+          <text>"checkAndReServeDocuments"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fhx6mx">
+          <text>"Check and re-serve documents"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vsajgw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0scng2x">
+          <text>"checkAndReServeDocuments"</text>
         </outputEntry>
       </rule>
     </decisionTable>

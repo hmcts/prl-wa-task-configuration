@@ -515,7 +515,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "serviceOfApplicationC100","adminServeOrderC100",
+        "serviceOfApplicationC100","adminServeOrderC100"
     })
     void evaluate_task_ctsc_orderManagementc100_2(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -725,7 +725,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @CsvSource(value = {
-        "confidentialCheckSOA"
+        "reviewAdminOrderByManager",
+        "confidentialCheckSOA",
+        "confidentialCheckDocuments"
     })
     void evaluate_task_admin_confidentialCheckSoa(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -794,8 +796,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "appStatementOfServiceByLiP",
         "appStatementOfServiceByBailiff",
         "arrangeBailiffSOA",
+        "arrangeBailiffSOA",
         "appStatementOfServiceByAdmin",
-        "completefl416AndServe"
+        "completefl416AndServe",
     })
     void evaluate_task_admin_statementOfService(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
