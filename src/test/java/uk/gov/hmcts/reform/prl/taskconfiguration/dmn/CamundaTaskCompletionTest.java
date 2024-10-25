@@ -382,7 +382,8 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskType", "checkAndReServeDocuments",
                         "completionMode", "Auto"
-                    )
+                    ),
+                    Map.of()
                 )
             )
         );
