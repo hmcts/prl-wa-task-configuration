@@ -107,7 +107,9 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
         taskTypes.add(Map.of("taskTypeId", "reviewInactiveRaRequestsFL401",
                 "taskTypeName", "Review inactive RA request"));
         taskTypes.add(Map.of("taskTypeId", "listWithoutNoticeHearingC100",
-                "taskTypeName", "List without notice hearing(see case notes)"));
+                "taskTypeName", "List without notice hearing - C100"));
+        taskTypes.add(Map.of("taskTypeId", "listWithoutNoticeHearingFL401",
+                             "taskTypeName", "List without notice hearing - FL401"));
         taskTypes.add(Map.of("taskTypeId", "listOnNoticeHearingFL401",
                 "taskTypeName", "Listing instructions (refer to case notes)"));
         taskTypes.add(Map.of("taskTypeId", "reviewAdditionalApplication",
@@ -142,6 +144,10 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
                 "taskTypeName", "Review and Approve Admin Order"));
         taskTypes.add(Map.of("taskTypeId", "reviewAdminOrderByManager",
                 "taskTypeName", "Review and Approve Admin Order"));
+        taskTypes.add(Map.of("taskTypeId", "checkHwfApplicationC100",
+                             "taskTypeName", "Check HWF application"));
+        taskTypes.add(Map.of("taskTypeId", "checkAwpHwfCitizen",
+                             "taskTypeName", "Check HWF on additional application"));
         taskTypes.add(Map.of("taskTypeId", "reqSafeguardingLetterUpdate",
                              "taskTypeName", "Request to upload Safeguarding Letter from Cafcass / Cafcass Cymru"));
         return Stream.of(
@@ -167,6 +173,6 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(57));
+        assertThat(logic.getRules().size(), is(60));
     }
 }

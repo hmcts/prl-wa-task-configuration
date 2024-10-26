@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.27.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-types-privatelaw-prlapps" name="Private Law Task Types DMN">
     <decisionTable id="DecisionTable_07kcj0o" hitPolicy="COLLECT">
       <input id="Input_1">
@@ -474,7 +474,19 @@
           <text>"listWithoutNoticeHearingC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_175m60d">
-          <text>"List without notice hearing(see case notes)"</text>
+          <text>"List without notice hearing - C100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_193mm9u">
+        <description>LWNHFL401</description>
+        <inputEntry id="UnaryTests_0qpey30">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0l9uayr">
+          <text>"listWithoutNoticeHearingFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1t21fwc">
+          <text>"List without notice hearing - FL401"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1epamws">
@@ -681,16 +693,28 @@
           <text>"Review and Approve Admin Order"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1ixfm2y">
-        <description>REQSERUPD</description>
-        <inputEntry id="UnaryTests_1pqs8qo">
+      <rule id="DecisionRule_1hsrb9a">
+        <description>CAHWFC100</description>
+        <inputEntry id="UnaryTests_0tigjkg">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_1yygkag">
-          <text>"reqSafeguardingLetterUpdate"</text>
+        <outputEntry id="LiteralExpression_0hjv9ox">
+          <text>"checkHwfApplicationC100"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_08wa0o4">
-          <text>"Request to upload Safeguarding Letter from Cafcass / Cafcass Cymru"</text>
+        <outputEntry id="LiteralExpression_1wdyij5">
+          <text>"Check HWF application"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1sh5730">
+        <description>CADDHWF</description>
+        <inputEntry id="UnaryTests_07n41t5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ymnx6e">
+          <text>"checkAwpHwfCitizen"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17zurww">
+          <text>"Check HWF on additional application"</text>
         </outputEntry>
       </rule>
     </decisionTable>
