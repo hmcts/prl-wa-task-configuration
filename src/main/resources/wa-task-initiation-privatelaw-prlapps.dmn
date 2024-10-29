@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.27.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -8953,6 +8953,166 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_1jurupo">
           <text>"reviewDocsFL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0xsini9">
+        <inputEntry id="UnaryTests_0545wl3">
+          <text>"reopenClosedCases"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ra99jm">
+          <text>"CASE_ISSUED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w514nn">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jagig0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_040mn0f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14fkhcr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05vqukk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jcy4fl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0q3c29f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yz3thz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11ewz8f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ny2j87">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y3cvp5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mexn10">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1apb18b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yz6y3r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kx77q9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ycb70t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mnlxde">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qh6h1e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k46bcc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ptl632">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mn2jgm">
+          <text>"sendToGateKeeperFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12tk6mj">
+          <text>"Send to Gatekeeper"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14o04mm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05m2ouc">
+          <text>"localCourtGatekeepingFL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1r3zs2b">
+        <inputEntry id="UnaryTests_1qe737h">
+          <text>"reopenClosedCases"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ag0rbs">
+          <text>"CASE_ISSUED"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xfkm88">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cfxiz4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nnq4f6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hgd62s">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ioy2qk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rky4u3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jqpuem">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w2d9q8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l3eaam">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17kuwq0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jtzo3e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12pharj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ltmvq5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mgd5p3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hvaszv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_180phmw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jenm56">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pahxe2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gctedx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xaoqeg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gz9bdp">
+          <text>"sendToGateKeeperC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vygr2v">
+          <text>"Send to Gatekeeper"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qtvrm6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mehy87">
+          <text>"localCourtGatekeepingC100"</text>
         </outputEntry>
       </rule>
     </decisionTable>
