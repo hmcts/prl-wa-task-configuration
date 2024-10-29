@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.13.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.1.0">
   <decision id="wa-task-completion-privatelaw-prlapps" name="Private Law Task completion DMN">
     <decisionTable id="DecisionTable_01re27m" hitPolicy="COLLECT">
       <input id="eventId" label="Event ID" biodi:width="437">
@@ -284,6 +284,28 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1bwy9uj">
+        <inputEntry id="UnaryTests_0493prq">
+          <text>"fl401ListOnNotice"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0x72xlg">
+          <text>"directionOnIssue"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qb9ciq">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1inazzf">
+        <inputEntry id="UnaryTests_1jagps6">
+          <text>"listWithoutNotice"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0c8s65y">
+          <text>"directionOnIssue"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0abgz2p">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0rv95b2">
         <inputEntry id="UnaryTests_1ih7ttg">
           <text>"manageOrders"</text>
@@ -295,14 +317,36 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0iy0937">
+        <inputEntry id="UnaryTests_0llq19g">
+          <text>"returnApplication"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1t8s33k">
+          <text>"directionOnIssueResubmitted"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02qywv3">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1p3stm6">
         <inputEntry id="UnaryTests_1oy0t8b">
-          <text>"returnApplication"</text>
+          <text>"fl401ListOnNotice"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_13oz1bj">
           <text>"directionOnIssueResubmitted"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0stum1v">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_104f1eq">
+        <inputEntry id="UnaryTests_0dahw6a">
+          <text>"listWithoutNotice"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a5k5hg">
+          <text>"directionOnIssueResubmitted"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_110b3ax">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
