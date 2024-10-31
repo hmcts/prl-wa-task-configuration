@@ -41,7 +41,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(22));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(109));
+        assertThat(logic.getRules().size(), is(111));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1325,6 +1325,38 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "reviewAdminOrderProvided",
                         "name", "Review and Approve Admin Order",
                         "processCategories", "orderId_1234567890"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfDocuments",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckNeeded\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "name", "Confidential check - Documents",
+                        "processCategories", "confidentialCheckDocuments",
+                        "taskId", "confidentialCheckDocuments"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfDocumentsConfCheck",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckApproved\":\"" + "No" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "name", "Check and re-serve documents",
+                        "processCategories", "checkAndReServeDocuments",
+                        "taskId", "checkAndReServeDocuments"
                     )
                 )
             )
