@@ -717,6 +717,30 @@
           <text>"Check HWF on additional application"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0xwt5ew">
+        <description>CCSOD</description>
+        <inputEntry id="UnaryTests_1j0b2rg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17idxzt">
+          <text>"confidentialCheckDocuments"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03t2i9a">
+          <text>"Confidential check - Documents"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0awyz9k">
+        <description>CHKRESDOCS</description>
+        <inputEntry id="UnaryTests_1b2ivhz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0klibzw">
+          <text>"checkAndReServeDocuments"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1483rtk">
+          <text>"Check and re-serve documents"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
