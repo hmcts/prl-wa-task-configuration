@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.27.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
   <decision id="wa-task-types-privatelaw-prlapps" name="Private Law Task Types DMN">
     <decisionTable id="DecisionTable_07kcj0o" hitPolicy="COLLECT">
       <input id="Input_1">
@@ -717,16 +717,28 @@
           <text>"Check HWF on additional application"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0qhh4tw">
-        <description>REQSERUPD</description>
-        <inputEntry id="UnaryTests_1cy8o5e">
+      <rule id="DecisionRule_0xwt5ew">
+        <description>CCSOD</description>
+        <inputEntry id="UnaryTests_1j0b2rg">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0d3xt11">
-          <text>"reqSafeguardingLetterUpdate"</text>
+        <outputEntry id="LiteralExpression_17idxzt">
+          <text>"confidentialCheckDocuments"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0cw8671">
-          <text>"Request to upload Safeguarding Letter from Cafcass / Cafcass Cymru"</text>
+        <outputEntry id="LiteralExpression_03t2i9a">
+          <text>"Confidential check - Documents"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0awyz9k">
+        <description>CHKRESDOCS</description>
+        <inputEntry id="UnaryTests_1b2ivhz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0klibzw">
+          <text>"checkAndReServeDocuments"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1483rtk">
+          <text>"Check and re-serve documents"</text>
         </outputEntry>
       </rule>
     </decisionTable>

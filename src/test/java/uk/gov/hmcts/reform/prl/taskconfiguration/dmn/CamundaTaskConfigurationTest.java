@@ -34,7 +34,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(90));
+        assertThat(logic.getRules().size(), is(92));
     }
 
 
@@ -232,7 +232,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100",
         "requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack",
         "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA",
-        "completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq"
+        "completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq",
+        "listWithoutNoticeHearingFL401","confidentialCheckDocuments","checkAndReServeDocuments"
     })
     void when_given_task_type_then_return_dueDateIntervalDays_and_validate_description(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -510,7 +511,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100",
         "reviewInactiveRaRequestsFL401","appStatementOfServiceBySol","appStatementOfServiceByLiP",
         "appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin",
-        "completefl416AndServe","reviewAdditionalApplication","reviewLangAndSmReq"
+        "completefl416AndServe","reviewAdditionalApplication","reviewLangAndSmReq","confidentialCheckDocuments"
     })
     void when_given_task_type_then_return_priorityDateOriginRef_and_validate_description(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -813,7 +814,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff",
         "arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe",
         "replyToMessageForLA","createHearingRequest","createMultipleHearingRequest",
-        "createHearingRequestReserveListAssist"
+        "createHearingRequestReserveListAssist","confidentialCheckDocuments","checkAndReServeDocuments"
     })
     void when_given_task_type_then_return_majorPriorityForCaseTypeOfApplication_and_validate_description(
         String taskType) {
@@ -1155,7 +1156,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "completefl416AndServe","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100",
         "replyToMessageForCourtAdminFL401","reviewRaRequestsC100","reviewInactiveRaRequestsC100",
         "listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewAdditionalApplication",
-        "reviewLangAndSmReq"
+        "reviewLangAndSmReq","confidentialCheckDocuments","checkAndReServeDocuments"
     })
     void when_given_task_type_then_return_roleCategoryForValueAdmin_and_validate_description(
         String taskType) {
@@ -1507,6 +1508,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
             case "listWithoutNoticeHearingC100":
             case "listOnNoticeHearingFL401":
+            case "listWithoutNoticeHearingFL401":
                 return "";
 
             case "reviewAdditionalApplication":
@@ -1520,6 +1522,14 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
             case "checkHwfApplicationC100":
                 return "[Check HWF application](/cases/case-details/${[CASE_REFERENCE]}#Application_)";
+
+            case "confidentialCheckDocuments":
+                return "[Confidential check - Documents](/cases/case-details/${[CASE_REFERENCE]}"
+                    + "/trigger/serviceOfDocumentsConfCheck/serviceOfDocumentsConfCheck1)";
+
+            case "checkAndReServeDocuments":
+                return "[Check and re-serve documents](/cases/case-details/${[CASE_REFERENCE]}"
+                    + "/trigger/serviceOfDocuments/serviceOfDocuments1)";
 
             default:
                 break;
@@ -1547,7 +1557,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "arrangeBailiffSOA", "appStatementOfServiceByAdmin",
             "completefl416AndServe", "listWithoutNoticeHearingC100",
             "listOnNoticeHearingFL401", "reviewAdditionalApplication",
-            "reviewLangAndSmReq", "recreateApplicationPack", "replyToMessageForCourtAdminFL401"
+            "reviewLangAndSmReq", "recreateApplicationPack", "replyToMessageForCourtAdminFL401",
+            "confidentialCheckDocuments","checkAndReServeDocuments"
     })
     void when_given_task_type_then_name_workType_and_validate_value_routine_work(
             String taskType) {
