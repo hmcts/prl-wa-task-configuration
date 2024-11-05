@@ -118,16 +118,6 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 null,
-                "issueAndSendToLocalCourtCallback",
-                null,
-                List.of(
-                    Map.of(
-                        "action", "Reconfigure"
-                    )
-                )
-            ),
-            Arguments.of(
-                null,
                 "allAwPInReview",
                 null,
                 List.of(
@@ -137,21 +127,43 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                     )
                 )
             ),
-                Arguments.of(
-                        null,
-                        "hmcCaseUpdPrepForHearing",
-                        null,
-                        List.of(
-                                Map.of(
-                                        "action", "Cancel",
-                                        "processCategories", "createHearingRequest"
-                                ),
-                                Map.of(
-                                        "action", "Cancel",
-                                        "processCategories", "newCaseTransferredToCourt"
-                                )
-                        )
+            Arguments.of(
+                null,
+                "hmcCaseUpdPrepForHearing",
+                null,
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "createHearingRequest"
+                    ),
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "newCaseTransferredToCourt"
+                    )
                 )
+            ),
+            Arguments.of(
+                null,
+                "hwfProcessCaseUpdate",
+                null,
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "applicationHwfCheck"
+                    )
+                )
+            ),
+            Arguments.of(
+                null,
+                "processHwfUpdateAwpStatus",
+                null,
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "checkAwpHwfCitizen"
+                    )
+                )
+            )
         );
     }
 
