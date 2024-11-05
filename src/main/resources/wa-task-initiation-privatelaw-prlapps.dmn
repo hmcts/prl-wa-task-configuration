@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.13.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -9114,80 +9114,86 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <outputEntry id="LiteralExpression_0scng2x">
           <text>"checkAndReServeDocuments"</text>
         </outputEntry>
-        </rule>
-        <rule id="DecisionRule_0rwl62w">
-                <inputEntry id="UnaryTests_0n38qyo">
-                  <text>"transferToAnotherCourt"</text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_19tlae8">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_03b46kf">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_1mr2m5o">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_0wpnahl">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_0c2ydmt">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_1ec85a6">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_0x3o8qj">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_1t5azmk">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_0jb51y0">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_001cqwd">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_1p5qwdv">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_13pxxk5">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_1hnd89a">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_1pg31ku">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_0miiyzi">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_0xotk5h">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_0ar5380">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_029nvds">
-                  <text></text>
-                </inputEntry>
-                <inputEntry id="UnaryTests_0ns54ck">
-                  <text></text>
-                </inputEntry>
-                <outputEntry id="LiteralExpression_1ia2yhy">
-                  <text>"newCaseTransferredToCourt"</text>
-                </outputEntry>
-                <outputEntry id="LiteralExpression_0s7hbnw">
-                  <text>"Case transferred to your court"</text>
-                </outputEntry>
-                <outputEntry id="LiteralExpression_02rm4a6">
-                  <text></text>
-                </outputEntry>
-                <outputEntry id="LiteralExpression_0rcz482">
-                  <text>"newCaseTransferredToCourt"</text>
-                </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0pkx6um">
+        <inputEntry id="UnaryTests_059200v">
+          <text>"transferToAnotherCourt"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fwfgv6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k6u37r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c5sio6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c1tzm9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_037sfxc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qfb7rc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r2657i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e3uzy7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sn7o7w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ps5xvu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p5fay4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kyrq6a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h6xsg6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12rhmpl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15b4xvt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19vblh1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pxlols">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0llxogr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iy6i1m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_112lvyd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vymlt3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1acy1rw">
+          <text>"newCaseTransferredToCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18apejh">
+          <text>"Case transferred to your court"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10mh250">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gg1eiy">
+          <text>"newCaseTransferredToCourt"</text>
+        </outputEntry>
       </rule>
     </decisionTable>
   </decision>
