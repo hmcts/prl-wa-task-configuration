@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.13.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN">
     <informationRequirement id="InformationRequirement_1iac9a2">
       <requiredDecision href="#Decision_11ew6tt" />
@@ -349,7 +349,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gtvl7x">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack","replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq","listWithoutNoticeHearingFL401","confidentialCheckDocuments","checkAndReServeDocuments"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack","replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq","listWithoutNoticeHearingFL401","confidentialCheckDocuments","checkAndReServeDocuments","newCaseTransferredToCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_17b07qz">
           <text></text>
@@ -429,7 +429,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08jiuyj">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewAdminOrderProvided","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA","replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","reviewDocumentsForSolAndCafcassC100","reviewDocumentsForSolAndCafcassFL401","replyToMessageForLA","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","reviewAdditionalApplication","reviewLangAndSmReq","checkAwpHwfCitizen","confidentialCheckDocuments"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewAdminOrderProvided","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA","replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","reviewDocumentsForSolAndCafcassC100","reviewDocumentsForSolAndCafcassFL401","replyToMessageForLA","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","reviewAdditionalApplication","reviewLangAndSmReq","checkAwpHwfCitizen","confidentialCheckDocuments","newCaseTransferredToCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1qu6bwj">
           <text></text>
@@ -712,7 +712,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0irt7go">
-          <text>"reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","reviewLangAndSmReq"</text>
+          <text>"reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","reviewLangAndSmReq","newCaseTransferredToCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rwm1v2">
           <text></text>
@@ -993,7 +993,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1glizm3">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleFL401","produceHearingBundleC100","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewCorrespondenceFL401","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewCorrespondenceC100","reviewSpecificAccessRequestAdmin","removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401","reviewDocumentsForSolAndCafcassC100","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","reviewRaRequestsFL401","reviewInactiveRaRequestsFL401","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","confidentialCheckSOA","completefl416AndServe","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","replyToMessageForCourtAdminFL401","reviewRaRequestsC100","reviewInactiveRaRequestsC100","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewAdditionalApplication","reviewLangAndSmReq","listWithoutNoticeHearingFL401","confidentialCheckDocuments","checkAndReServeDocuments"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleFL401","produceHearingBundleC100","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewCorrespondenceFL401","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewCorrespondenceC100","reviewSpecificAccessRequestAdmin","removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401","reviewDocumentsForSolAndCafcassC100","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","reviewRaRequestsFL401","reviewInactiveRaRequestsFL401","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","confidentialCheckSOA","completefl416AndServe","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","replyToMessageForCourtAdminFL401","reviewRaRequestsC100","reviewInactiveRaRequestsC100","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewAdditionalApplication","reviewLangAndSmReq","listWithoutNoticeHearingFL401","confidentialCheckDocuments","checkAndReServeDocuments","newCaseTransferredToCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1yzitym">
           <text></text>
@@ -1847,6 +1847,26 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"[Check and re-serve documents](/cases/case-details/${[CASE_REFERENCE]}/trigger/serviceOfDocuments/serviceOfDocuments1)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1qgmgmy">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1k1t9lk">
+        <inputEntry id="UnaryTests_1ep6dbi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vfkcpi">
+          <text>"newCaseTransferredToCourt"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_039ji4o">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zjkr82">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1inoiu9">
+          <text>"[Case transferred to your court]"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0szngte">
           <text></text>
         </outputEntry>
       </rule>

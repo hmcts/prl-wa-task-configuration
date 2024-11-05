@@ -41,7 +41,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(22));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(111));
+        assertThat(logic.getRules().size(), is(112));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1120,9 +1120,10 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"awpWaTaskToBeCreated\":\"" + "Yes" + "\"\n"
-                                      + "   }"
-                                      + "}"),
+                                      + "      \"awpWaTaskToBeCreated\":\"Yes\",\n"
+                                      + "      \"awpWaTaskName\":\"D89 - "
+                                      + "Request for personal service by a court bailiff\"\n"
+                                      + "   }}"),
                 singletonList(
                     Map.of(
                         "taskId", "reviewAdditionalApplication",
