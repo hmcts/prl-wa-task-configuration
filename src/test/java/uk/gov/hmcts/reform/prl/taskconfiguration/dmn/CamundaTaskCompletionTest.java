@@ -340,6 +340,51 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     ),
                     Map.of()
                 )
+            ),
+            Arguments.of(
+                "listWithoutNotice",
+                asList(
+                    Map.of(
+                        "taskType", "directionOnIssue",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "directionOnIssueResubmitted",
+                        "completionMode", "Auto"
+                    )
+                )
+            ),
+            Arguments.of(
+                "fl401ListOnNotice",
+                asList(
+                    Map.of(
+                        "taskType", "directionOnIssue",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "directionOnIssueResubmitted",
+                        "completionMode", "Auto"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfDocumentsConfCheck",
+                List.of(
+                    Map.of(
+                        "taskType", "confidentialCheckDocuments",
+                        "completionMode", "Auto"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfDocuments",
+                List.of(
+                    Map.of(
+                        "taskType", "checkAndReServeDocuments",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of()
+                )
             )
         );
     }
@@ -362,7 +407,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(61));
+        assertThat(logic.getRules().size(), is(67));
     }
 
 

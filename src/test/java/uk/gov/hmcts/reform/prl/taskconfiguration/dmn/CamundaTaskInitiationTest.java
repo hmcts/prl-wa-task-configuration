@@ -15,6 +15,10 @@ import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTable;
 import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -35,12 +39,17 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(20));
+        assertThat(logic.getInputs().size(), is(22));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(102));
+        assertThat(logic.getRules().size(), is(112));
     }
 
     static Stream<Arguments> scenarioProvider() {
+
+        LocalDate currentDate = LocalDate.now();
+        LocalTime currentTime = LocalTime.now();
+        ZoneId myZone = ZoneId.systemDefault();
+        ZonedDateTime zonedDateTime = ZonedDateTime.of(currentDate, currentTime, myZone);
 
         return Stream.of(
             Arguments.of(
@@ -297,6 +306,77 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     )
                 )
             ),
+            /*Arguments.of(
+                "serviceOfApplication",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isApplicantRepresented\":\"" + "No" + "\"\n,"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"productHearingBundleOn\":\"" + zonedDateTime + "\"\n,"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "produceHearingBundleC100",
+                        "name", "Produce hearing bundle",
+                        "processCategories", "produceHearingBundleC100",
+                        "delayUntil", "{delayUntil=" + zonedDateTime + "}"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isApplicantRepresented\":\"" + "No" + "\"\n,"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "produceHearingBundleC100",
+                        "name", "Produce hearing bundle",
+                        "processCategories", "produceHearingBundleC100",
+                        "delayUntil", "{delayUntil=" + zonedDateTime + "}"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isApplicantRepresented\":\"" + "No" + "\"\n,"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "produceHearingBundleFL401",
+                        "name", "Produce hearing bundle",
+                        "processCategories", "produceHearingBundleFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfApplication",
+                "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isApplicantRepresented\":\"" + "No" + "\"\n,"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "produceHearingBundleFL401,
+                        "name", "Produce hearing bundle",
+                        "processCategories", "produceHearingBundleFL401"
+                    )
+                )
+            ),*/
             Arguments.of(
                 "enableUpdateHearingActualTask",
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
@@ -316,24 +396,32 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "draftAnOrder",
                 null,
-                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "reviewSolicitorOrderProvided",
+                        "processCategories", "orderId_1234567890",
                         "name", "Review and Approve Legal rep Order",
-                        "processCategories", "reviewSolicitorOrderByJudge"
+                        "taskId", "reviewSolicitorOrderProvided"
                     )
                 )
             ),
             Arguments.of(
                 "editReturnedOrder",
                 null,
-                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "reviewSolicitorOrderProvided",
                         "name", "Review resubmitted Order",
-                        "processCategories", "reviewReturnedSolicitorOrderByJudge"
+                        "processCategories", "orderId_1234567890"
                     )
                 )
             ),
@@ -1000,6 +1088,18 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "listWithoutNotice",
+                null,
+                null,
+                List.of(
+                    Map.of(
+                        "name", "List without notice hearing (see case notes)",
+                        "processCategories", "listWithoutNoticeHearingFL401",
+                        "taskId", "listWithoutNoticeHearingFL401"
+                    )
+                )
+            ),
+            Arguments.of(
                 "awpPaymentSuccessCallback",
                 null,
                 null,
@@ -1016,9 +1116,10 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"awpWaTaskToBeCreated\":\"" + "Yes" + "\"\n"
-                                      + "   }"
-                                      + "}"),
+                                      + "      \"awpWaTaskToBeCreated\":\"Yes\",\n"
+                                      + "      \"awpWaTaskName\":\"D89 - "
+                                      + "Request for personal service by a court bailiff\"\n"
+                                      + "   }}"),
                 singletonList(
                     Map.of(
                         "taskId", "reviewAdditionalApplication",
@@ -1068,6 +1169,191 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "reviewLangAndSmReq",
                         "name", "Review Language and SM requirements",
                         "processCategories", "reviewLangAndSmReqIdent"
+                    )
+                )
+            ),
+            Arguments.of(
+                "citizenCaseSubmitWithHWF",
+                "SUBMITTED_NOT_PAID",
+                null,
+                singletonList(
+                    Map.of(
+                        "taskId", "checkHwfApplicationC100",
+                        "name", "Check HWF application",
+                        "processCategories", "applicationHwfCheck"
+                    )
+                )
+            ),
+            Arguments.of(
+                "hwfProcessCaseUpdate",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "checkApplicationC100",
+                        "name", "Check Application",
+                        "processCategories", "applicationCheck"
+                    )
+                )
+            ),
+            Arguments.of(
+                "processUrgentHelpWithFees",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isTheCaseInDraftState\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "checkApplicationC100",
+                        "name", "Check Application",
+                        "processCategories", "applicationCheck"
+                    )
+                )
+            ),
+            Arguments.of(
+                "citizenAwpCreate",
+                null,
+                null,
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdditionalApplication",
+                        "name", "Review additional application",
+                        "processCategories", "reviewAddtlAppCitizen"
+                    )
+                )
+            ),
+            Arguments.of(
+                "citizenAwpHwfCreate",
+                null,
+                null,
+                singletonList(
+                    Map.of(
+                        "taskId", "checkAwpHwfCitizen",
+                        "name", "Check HWF on additional application",
+                        "processCategories", "checkAwpHwfCitizen"
+                    )
+                )
+            ),
+            Arguments.of(
+                "processHwfUpdateAwpStatus",
+                null,
+                null,
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdditionalApplication",
+                        "name", "Review additional application",
+                        "processCategories", "reviewAddtlAppCitizen"
+                    )
+                )
+            ),
+            Arguments.of(
+                "processUrgentHelpWithFees",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isTheCaseInDraftState\":\"" + "No" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdditionalApplication",
+                        "name", "Review additional application",
+                        "processCategories", "reviewAddtlAppCitizen"
+                    )
+                )
+            ),
+            Arguments.of(
+                "courtnav-document-upload",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "COURTNAV" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewDocumentsForSolAndCafcassFL401",
+                        "name", "Review Documents",
+                        "processCategories", "reviewDocsFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageOrders",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Create an order" + "\"\n,"
+                                      + "      \"judgeLaManagerReviewRequired\":\""
+                                      + "judgeOrLegalAdvisorCheck" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdminOrderProvided",
+                        "name", "Review and Approve Admin Order",
+                        "processCategories", "orderId_1234567890"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageOrders",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Upload an order" + "\"\n,"
+                                      + "      \"judgeLaManagerReviewRequired\":\""
+                                      + "judgeOrLegalAdvisorCheck" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewAdminOrderProvided",
+                        "name", "Review and Approve Admin Order",
+                        "processCategories", "orderId_1234567890"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfDocuments",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckNeeded\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "name", "Confidential check - Documents",
+                        "processCategories", "confidentialCheckDocuments",
+                        "taskId", "confidentialCheckDocuments"
+                    )
+                )
+            ),
+            Arguments.of(
+                "serviceOfDocumentsConfCheck",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC8CheckApproved\":\"" + "No" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "name", "Check and re-serve documents",
+                        "processCategories", "checkAndReServeDocuments",
+                        "taskId", "checkAndReServeDocuments"
                     )
                 )
             )

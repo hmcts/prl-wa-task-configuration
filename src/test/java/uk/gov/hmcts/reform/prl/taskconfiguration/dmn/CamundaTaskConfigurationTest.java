@@ -32,10 +32,11 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(2));
+        assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(86));
+        assertThat(logic.getRules().size(), is(92));
     }
+
 
     @Test
     void when_caseData_then_return_expected_appealType() {
@@ -43,6 +44,15 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         Map<String, Object> caseData = new HashMap<>(); // allow null values
         caseData.put("appealType", "appealType");
         inputVariables.putValue("caseData", caseData);
+
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", "reviewSolicitorOrderProvided",
+                   "name", "additionalProperties_1234",
+                   "orderId", "1234"
+            )
+        );
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
@@ -65,6 +75,14 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         caseData.put("caseManagementLocation", caseManagementLocation);
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("caseData", caseData);
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", "reviewSolicitorOrderProvided",
+                   "name", "additionalProperties_1234",
+                   "orderId", "1234"
+            )
+        );
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
@@ -93,6 +111,14 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         Map<String, Object> caseData = new HashMap<>(); // allow null values
         caseData.put("caseTypeOfApplication", "C100");
         inputVariables.putValue("caseData", caseData);
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", "reviewSolicitorOrderProvided",
+                   "name", "additionalProperties_1234",
+                   "orderId", "1234"
+            )
+        );
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
@@ -114,6 +140,14 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("caseData", caseData);
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", "reviewSolicitorOrderProvided",
+                   "name", "additionalProperties_1234",
+                   "orderId", "1234"
+            )
+        );
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
@@ -133,6 +167,18 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @Test
     void when_caseData_then_return_expected_dueDateFields() {
         VariableMap inputVariables = new VariableMapImpl();
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("appealType", "appealType");
+        inputVariables.putValue("caseData", caseData);
+
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", "reviewSolicitorOrderProvided",
+                   "name", "additionalProperties_1234",
+                   "orderId", "1234"
+            )
+        );
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         assertTrue(dmnDecisionTableResult.getResultList().contains(Map.of(
@@ -186,7 +232,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100",
         "requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack",
         "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA",
-        "completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq"
+        "completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq",
+        "listWithoutNoticeHearingFL401","confidentialCheckDocuments","checkAndReServeDocuments"
     })
     void when_given_task_type_then_return_dueDateIntervalDays_and_validate_description(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -464,7 +511,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100",
         "reviewInactiveRaRequestsFL401","appStatementOfServiceBySol","appStatementOfServiceByLiP",
         "appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin",
-        "completefl416AndServe","reviewAdditionalApplication","reviewLangAndSmReq"
+        "completefl416AndServe","reviewAdditionalApplication","reviewLangAndSmReq","confidentialCheckDocuments"
     })
     void when_given_task_type_then_return_priorityDateOriginRef_and_validate_description(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -767,7 +814,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff",
         "arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe",
         "replyToMessageForLA","createHearingRequest","createMultipleHearingRequest",
-        "createHearingRequestReserveListAssist"
+        "createHearingRequestReserveListAssist","confidentialCheckDocuments","checkAndReServeDocuments"
     })
     void when_given_task_type_then_return_majorPriorityForCaseTypeOfApplication_and_validate_description(
         String taskType) {
@@ -1109,7 +1156,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "completefl416AndServe","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100",
         "replyToMessageForCourtAdminFL401","reviewRaRequestsC100","reviewInactiveRaRequestsC100",
         "listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewAdditionalApplication",
-        "reviewLangAndSmReq"
+        "reviewLangAndSmReq","confidentialCheckDocuments","checkAndReServeDocuments"
     })
     void when_given_task_type_then_return_roleCategoryForValueAdmin_and_validate_description(
         String taskType) {
@@ -1461,6 +1508,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
             case "listWithoutNoticeHearingC100":
             case "listOnNoticeHearingFL401":
+            case "listWithoutNoticeHearingFL401":
                 return "";
 
             case "reviewAdditionalApplication":
@@ -1468,6 +1516,20 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
             case "reviewLangAndSmReq":
                 return "[Review case notes](/cases/case-details/${[CASE_REFERENCE]}#Case%20Notes)";
+
+            case "checkAwpHwfCitizen":
+                return "[Review other applications](/cases/case-details/${[CASE_REFERENCE]}#Other%20applications)";
+
+            case "checkHwfApplicationC100":
+                return "[Check HWF application](/cases/case-details/${[CASE_REFERENCE]}#Application_)";
+
+            case "confidentialCheckDocuments":
+                return "[Confidential check - Documents](/cases/case-details/${[CASE_REFERENCE]}"
+                    + "/trigger/serviceOfDocumentsConfCheck/serviceOfDocumentsConfCheck1)";
+
+            case "checkAndReServeDocuments":
+                return "[Check and re-serve documents](/cases/case-details/${[CASE_REFERENCE]}"
+                    + "/trigger/serviceOfDocuments/serviceOfDocuments1)";
 
             default:
                 break;
@@ -1495,7 +1557,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "arrangeBailiffSOA", "appStatementOfServiceByAdmin",
             "completefl416AndServe", "listWithoutNoticeHearingC100",
             "listOnNoticeHearingFL401", "reviewAdditionalApplication",
-            "reviewLangAndSmReq", "recreateApplicationPack", "replyToMessageForCourtAdminFL401"
+            "reviewLangAndSmReq", "recreateApplicationPack", "replyToMessageForCourtAdminFL401",
+            "confidentialCheckDocuments","checkAndReServeDocuments"
     })
     void when_given_task_type_then_name_workType_and_validate_value_routine_work(
             String taskType) {

@@ -15,6 +15,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
@@ -246,7 +247,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                                                                                 List<Map<String, String>> expectation) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
-        inputVariables.putValue("case", caseData);
+        inputVariables.putValue("caseData", caseData);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
@@ -515,7 +516,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "serviceOfApplicationC100","adminServeOrderC100",
+        "serviceOfApplicationC100","adminServeOrderC100"
     })
     void evaluate_task_ctsc_orderManagementc100_2(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -725,11 +726,62 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @CsvSource(value = {
-        "confidentialCheckSOA"
+        "reviewAdminOrderByManager",
+        "confidentialCheckDocuments"
     })
     void evaluate_task_admin_confidentialCheckSoa(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-team-leader",
+                "roleCategory", "ADMIN",
+                "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+            )
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+        "confidentialCheckSOA",
+    })
+    void evaluate_task_admin_confidentialCheckSoaC100(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("caseTypeOfApplication", "C100");
+        inputVariables.putValue("caseData", caseData);
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-team-leader",
+                "roleCategory", "ADMIN",
+                "authorisations", "SKILL:ABA5:ORDERMANAGEMENTC100",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+            )
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+        "confidentialCheckSOA",
+    })
+    void evaluate_task_admin_confidentialCheckSoaFl401(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("caseTypeOfApplication", "FL401");
+        inputVariables.putValue("caseData", caseData);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
@@ -768,9 +820,12 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "createHearingRequest",
         "createMultipleHearingRequest"
     })
-    void evaluate_task_admin_createHearingRequest(String taskType) {
+    void evaluate_task_admin_createHearingRequestFL401(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("caseTypeOfApplication", "FL401");
+        inputVariables.putValue("caseData", caseData);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
@@ -789,13 +844,35 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @CsvSource(value = {
-        "recreateApplicationPack",
-        "appStatementOfServiceBySol",
-        "appStatementOfServiceByLiP",
-        "appStatementOfServiceByBailiff",
-        "arrangeBailiffSOA",
-        "appStatementOfServiceByAdmin",
-        "completefl416AndServe"
+        "createHearingRequestReserveListAssist",
+        "createHearingRequest",
+        "createMultipleHearingRequest"
+    })
+    void evaluate_task_admin_createHearingRequestC100(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("caseTypeOfApplication", "C100");
+        inputVariables.putValue("caseData", caseData);
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations", "SKILL:ABA5:HEARINGMANAGEMENTC100"
+            )
+
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+        "completefl416AndServe",
     })
     void evaluate_task_admin_statementOfService(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -816,12 +893,122 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         )));
     }
 
+    @ParameterizedTest
+    @CsvSource(value = {
+        "appStatementOfServiceBySol",
+        "recreateApplicationPack",
+        "appStatementOfServiceByLiP",
+        "appStatementOfServiceByBailiff",
+        "arrangeBailiffSOA",
+        "arrangeBailiffSOA",
+        "appStatementOfServiceByAdmin",
+    })
+    void evaluate_task_admin_statementOfServiceBySol(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("caseTypeOfApplication", "C100");
+        inputVariables.putValue("caseData", caseData);
+
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations", "SKILL:ABA5:ORDERMANAGEMENTC100"
+            )
+
+        )));
+    }
+
+
+    @ParameterizedTest
+    @CsvSource(value = {
+        "appStatementOfServiceBySol",
+        "recreateApplicationPack",
+        "appStatementOfServiceByLiP",
+        "appStatementOfServiceByBailiff",
+        "arrangeBailiffSOA",
+        "arrangeBailiffSOA",
+        "appStatementOfServiceByAdmin",
+    })
+    void evaluate_task_admin_statementOfServiceBySolFL401(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("caseTypeOfApplication", "FL401");
+        inputVariables.putValue("caseData", caseData);
+
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401"
+            )
+
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {"listWithoutNoticeHearingC100"})
+    void evaluate_task_admin_listWithoutNoticeC100(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+        MatcherAssert.assertThat(
+            dmnDecisionTableResult.getResultList(),
+            is(List.of(
+                taskSupervisor,
+                Map.of(
+                    "autoAssignable", false,
+                    "name", "hearing-centre-admin",
+                    "roleCategory", "ADMIN",
+                    "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                    "authorisations", "SKILL:ABA5:HEARINGMANAGEMENTC100"
+                )
+            ))
+        );
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {"listOnNoticeHearingFL401", "listWithoutNoticeHearingFL401"})
+    void evaluate_task_admin_listOnNoticeWithoutNoticeFL401(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+        MatcherAssert.assertThat(
+            dmnDecisionTableResult.getResultList(),
+            is(List.of(
+                taskSupervisor,
+                Map.of(
+                    "autoAssignable", false,
+                    "name", "hearing-centre-admin",
+                    "roleCategory", "ADMIN",
+                    "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                    "authorisations", "SKILL:ABA5:HEARINGMANAGEMENTFL401"
+                )
+            ))
+        );
+    }
+
+
     @Test
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(26));
+        assertThat(logic.getRules().size(), is(35));
     }
 }
