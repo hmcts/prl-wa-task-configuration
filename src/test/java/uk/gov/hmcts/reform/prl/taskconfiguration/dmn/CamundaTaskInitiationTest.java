@@ -39,9 +39,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(22));
+        assertThat(logic.getInputs().size(), is(23));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(114));
+        assertThat(logic.getRules().size(), is(118));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1390,6 +1390,42 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "sendToGateKeeperC100",
                         "name", "Send to Gatekeeper",
                         "processCategories", "localCourtGatekeepingC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "cafcass-document-upload",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Review Documents",
+                        "processCategories", "reviewDocsC100",
+                        "taskId", "reviewDocumentsForSolAndCafcassC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "cafcass-document-upload",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Review Documents",
+                        "processCategories", "reviewDocsFL401",
+                        "taskId", "reviewDocumentsForSolAndCafcassFL401"
                     )
                 )
             )
