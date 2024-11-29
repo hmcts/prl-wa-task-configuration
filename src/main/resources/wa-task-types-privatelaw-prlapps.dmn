@@ -741,6 +741,18 @@
           <text>"Check and re-serve documents"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_18yyuwr">
+              <description>NCTTC</description>
+              <inputEntry id="UnaryTests_1lvag5l">
+                <text></text>
+              </inputEntry>
+              <outputEntry id="LiteralExpression_001b1qm">
+                <text>"newCaseTransferredToCourt"</text>
+              </outputEntry>
+              <outputEntry id="LiteralExpression_02u7xnk">
+                <text>"Case transferred to your court"</text>
+              </outputEntry>
+            </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>

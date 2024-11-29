@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-permissions-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-permissions-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.13.0">
   <decision id="wa-task-permissions-privatelaw-prlapps" name="Private Law Permissions DMN">
     <decisionTable id="DecisionTable_1pr5oic" hitPolicy="RULE ORDER">
       <input id="InputClause_12crj6e" label="Task Type" biodi:width="578" camunda:inputVariable="taskType">
@@ -10,7 +10,7 @@
             "r1"</text>
         </inputExpression>
       </input>
-      <input id="Input_1" label="Case Data" biodi:width="150" camunda:inputVariable="case">
+      <input id="Input_1" label="Case Data" biodi:width="150" camunda:inputVariable="caseData">
         <inputExpression id="InputExpression_1" typeRef="string">
           <text></text>
         </inputExpression>
@@ -419,7 +419,7 @@
       <rule id="DecisionRule_0u17n4d">
         <description>Court admin hearing management skills permission</description>
         <inputEntry id="UnaryTests_0x0kyja">
-          <text>"produceHearingBundleFL401","updateHearingActualsFL401","createHearingRequestReserveListAssist","createHearingRequest","createMultipleHearingRequest"</text>
+          <text>"produceHearingBundleFL401","updateHearingActualsFL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0473w2g">
           <text></text>
@@ -479,7 +479,7 @@
       <rule id="DecisionRule_1v7zc7t">
         <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_10rpp7x">
-          <text>"serviceOfApplicationFL401","adminServeOrderFL401","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","checkAndReServeDocuments"</text>
+          <text>"serviceOfApplicationFL401","adminServeOrderFL401","completefl416AndServe","checkAndReServeDocuments"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ytal4l">
           <text></text>
@@ -628,7 +628,7 @@
       <rule id="DecisionRule_133ysn3">
         <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_0u9wzmo">
-          <text>"reviewAdminOrderByManager","confidentialCheckSOA","confidentialCheckDocuments"</text>
+          <text>"reviewAdminOrderByManager","confidentialCheckDocuments"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0s45p4p">
           <text></text>
@@ -864,6 +864,216 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_04gckbd">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ybpkod">
+        <description>Admin task permissions</description>
+        <inputEntry id="UnaryTests_0s053pk">
+          <text>"newCaseTransferredToCourt"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02vdw8y">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1bnrcam">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0swczxz">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17189bh">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1y0fs26">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16qrqab">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00knnaz">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1f9y7sp">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wmp417">
+        <description>Admin task permissions</description>
+        <inputEntry id="UnaryTests_1b9e6ab">
+          <text>"appStatementOfServiceBySol","recreateApplicationPack","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jpdjum">
+          <text>caseData.caseTypeOfApplication = "FL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0luyxi9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qs5lif">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_152xhtz">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1c7p3r2">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cp9r3m">
+          <text>"SKILL:ABA5:ORDERMANAGEMENTFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lf5cg7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wm0gr2">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1cmdl00">
+        <description>Admin task permissions</description>
+        <inputEntry id="UnaryTests_1wcv9ek">
+          <text>"appStatementOfServiceBySol","recreateApplicationPack","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0247s4f">
+          <text>caseData.caseTypeOfApplication = "C100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0kw099t">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ktie57">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mbkszt">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0twvc56">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1p7yzym">
+          <text>"SKILL:ABA5:ORDERMANAGEMENTC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0h368ua">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11fovnr">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_07h88ax">
+        <description>Admin task permissions</description>
+        <inputEntry id="UnaryTests_1ymzm3o">
+          <text>"confidentialCheckSOA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jjihwu">
+          <text>caseData.caseTypeOfApplication = "FL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0t7wncb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hv7bnw">
+          <text>"hearing-centre-team-leader"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yr4j8q">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0beygl8">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yjvtam">
+          <text>"SKILL:ABA5:ORDERMANAGEMENTFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hmliyr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09v3py7">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dz97dx">
+        <description>Admin task permissions</description>
+        <inputEntry id="UnaryTests_1gas47t">
+          <text>"confidentialCheckSOA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01d13mg">
+          <text>caseData.caseTypeOfApplication = "C100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18bdc5f">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_124mmnx">
+          <text>"hearing-centre-team-leader"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08pgk1c">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1win44b">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_021dhns">
+          <text>"SKILL:ABA5:ORDERMANAGEMENTC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ntgj5i">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zvtaf7">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0wxorvv">
+        <description>Court admin hearing management skills permission</description>
+        <inputEntry id="UnaryTests_0hjpmm1">
+          <text>"createHearingRequestReserveListAssist","createHearingRequest","createMultipleHearingRequest"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_004lbha">
+          <text>caseData.caseTypeOfApplication = "FL401"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vr89kd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yag0ut">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z9v5yk">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tw3l7z">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07epi40">
+          <text>"SKILL:ABA5:HEARINGMANAGEMENTFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05eai2t">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1q5ue4q">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1hn9trj">
+        <description>Court admin hearing management skills permission</description>
+        <inputEntry id="UnaryTests_1b3ltpm">
+          <text>"createHearingRequestReserveListAssist","createHearingRequest","createMultipleHearingRequest"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ydl8jn">
+          <text>caseData.caseTypeOfApplication = "C100"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vez8ie">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11bpq5s">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11p9r4k">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09bak1q">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xku5od">
+          <text>"SKILL:ABA5:HEARINGMANAGEMENTC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ei6339">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0oezizc">
           <text>false</text>
         </outputEntry>
       </rule>

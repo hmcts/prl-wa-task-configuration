@@ -34,7 +34,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(91));
+        assertThat(logic.getRules().size(), is(92));
     }
 
 
