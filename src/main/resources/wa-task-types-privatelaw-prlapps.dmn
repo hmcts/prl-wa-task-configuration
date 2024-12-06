@@ -752,7 +752,19 @@
               <outputEntry id="LiteralExpression_02u7xnk">
                 <text>"Case transferred to your court"</text>
               </outputEntry>
-            </rule>
+      </rule>
+      <rule id="DecisionRule_0gfcus8">
+        <description>REQSERUPD</description>
+        <inputEntry id="UnaryTests_1dp67zg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0uoerah">
+          <text>"reqSafeguardingLetterUpdate"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vqnczr">
+          <text>"Request to upload Safeguarding Letter from Cafcass / Cafcass Cymru"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
