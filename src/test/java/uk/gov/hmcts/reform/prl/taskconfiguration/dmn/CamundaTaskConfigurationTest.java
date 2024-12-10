@@ -34,7 +34,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(93));
+        assertThat(logic.getRules().size(), is(94));
     }
 
 
@@ -1531,6 +1531,9 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
                 return "[Check and re-serve documents](/cases/case-details/${[CASE_REFERENCE]}"
                     + "/trigger/serviceOfDocuments/serviceOfDocuments1)";
 
+            case "hearingListed":
+                return "[Create notice of proceeding or add date to Judge's order]";
+
             default:
                 break;
         }
@@ -1733,5 +1736,25 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
                 "name", "workType",
                 "value", "access_requests"
         )));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "hearingListed"
+    })
+    void when_given_task_type_then_ForHearingListed_and_validate_description(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "LastName"
+            )
+        );
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        assertDescriptionField(taskType, dmnDecisionTableResult);
     }
 }

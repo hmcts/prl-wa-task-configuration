@@ -1890,6 +1890,26 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </outputEntry>
       </rule>
+        <rule id="DecisionRule_1etrohr">
+        <inputEntry id="UnaryTests_0h7unfd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lbkiwr">
+          <text>"hearingListed"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t4ex04">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13vazdt">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hdvmpk">
+          <text>"[Create notice of proceeding or add date to Judge's order]"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o8u5ip">
+          <text></text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <decision id="Decision_11ew6tt" name="Order ID">
