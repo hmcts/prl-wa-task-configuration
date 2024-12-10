@@ -39,9 +39,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(23));
+        assertThat(logic.getInputs().size(), is(24));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(118));
+        assertThat(logic.getRules().size(), is(119));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1426,6 +1426,22 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "name", "Review Documents",
                         "processCategories", "reviewDocsFL401",
                         "taskId", "reviewDocumentsForSolAndCafcassFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "hmcCaseUpdPrepForHearing",
+                "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"hearingListed\":\"" + "true" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "hearingListed",
+                        "name", "Hearing has been listed",
+                        "processCategories", "hearingListed"
                     )
                 )
             )
