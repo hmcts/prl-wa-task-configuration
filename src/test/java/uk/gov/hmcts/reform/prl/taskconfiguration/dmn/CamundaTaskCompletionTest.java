@@ -351,7 +351,8 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskType", "directionOnIssueResubmitted",
                         "completionMode", "Auto"
-                    )
+                    ),
+                    Map.of()
                 )
             ),
             Arguments.of(
@@ -364,7 +365,8 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskType", "directionOnIssueResubmitted",
                         "completionMode", "Auto"
-                    )
+                    ),
+                    Map.of()
                 )
             ),
             Arguments.of(
