@@ -188,7 +188,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "taskType", "sendToGateKeeperResubmittedFL401",
                         "completionMode", "Auto"
                     ),
-                    map.of()
+                    Map.of()
                 )
             ),
             Arguments.of(
