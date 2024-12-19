@@ -229,8 +229,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted",
         "sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100",
         "sendToGateKeeperResubmittedC100","produceHearingBundleC100",
-        "updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100",
-        "requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack",
+        "updateHearingActuals","requestSolicitorOrder","confidentialCheckSOA","recreateApplicationPack",
         "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA",
         "completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq",
         "listWithoutNoticeHearingFL401","confidentialCheckDocuments","checkAndReServeDocuments"
@@ -498,11 +497,10 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @CsvSource({
         "checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401",
         "sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401",
-        "updateHearingActualsFL401","requestSolicitorOrderFL401",
         "checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber",
         "addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100",
-        "serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100",
-        "requestSolicitorOrderC100","reviewAdminOrderProvided",
+        "serviceOfApplicationC100","adminServeOrderC100","updateHearingActuals",
+        "requestSolicitorOrder","reviewAdminOrderProvided",
         "removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA",
         "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100",
         "replyToMessageForJudiciary","reviewDocumentsForSolAndCafcassC100",
@@ -653,8 +651,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @CsvSource({
         "checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401",
         "sendToGateKeeperResubmittedFL401","directionOnIssue","directionOnIssueResubmitted",
-        "serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401",
-        "requestSolicitorOrderFL401", "reviewCorrespondenceFL401","produceHearingBundleFL401",
+        "serviceOfApplicationFL401","adminServeOrderFL401", "reviewCorrespondenceFL401","produceHearingBundleFL401",
         "removeLegalRepresentativeFL401", "replyToMessageForCourtAdminFL401",
         "reviewDocumentsForSolAndCafcassFL401","listWithoutNoticeHearingC100","listOnNoticeHearingFL401"
     })
@@ -749,7 +746,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @ParameterizedTest
     @CsvSource({
         "addCaseNumber","addCaseNumberResubmitted","serviceOfApplicationC100",
-        "adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100",
+        "adminServeOrderC100","updateHearingActuals","requestSolicitorOrder",
         "reviewCorrespondenceC100", "produceHearingBundleC100",
         "removeLegalRepresentativeC100","replyToMessageForCourtAdminC100"
     })
@@ -1144,9 +1141,9 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "sendToGateKeeperResubmittedFL401","sendToGateKeeperC100",
         "sendToGateKeeperResubmittedC100","produceHearingBundleFL401",
         "produceHearingBundleC100","serviceOfApplicationFL401","adminServeOrderFL401",
-        "updateHearingActualsFL401","requestSolicitorOrderFL401","reviewCorrespondenceFL401",
-        "serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100",
-        "requestSolicitorOrderC100","reviewCorrespondenceC100","reviewSpecificAccessRequestAdmin",
+        "updateHearingActuals","requestSolicitorOrder","reviewCorrespondenceFL401",
+        "serviceOfApplicationC100","adminServeOrderC100","updateHearingActuals",
+        "requestSolicitorOrder","reviewCorrespondenceC100","reviewSpecificAccessRequestAdmin",
         "removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401",
         "reviewDocumentsForSolAndCafcassC100","reviewAdminOrderByManager","createHearingRequest",
         "createMultipleHearingRequest","createHearingRequestReserveListAssist",
@@ -1415,19 +1412,13 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             case "reviewCorrespondenceFL401":
             case "reviewCorrespondenceC100":
                 return "[Review Correspondence](/cases/case-details/${[CASE_REFERENCE]}#Casedocuments)";
-
-            case "updateHearingActualsFL401":
-            case "updateHearingActualsC100":
+            case "updateHearingActuals":
                 return "[Update Hearing Actuals](/cases/case-details/${[CASE_REFERENCE]}/trigger/)";
-
-            case "requestSolicitorOrderFL401":
-            case "requestSolicitorOrderC100":
+            case "requestSolicitorOrder":
                 return "[Request Solicitor to Submit the Order]";
-
             case "directionOnIssue":
             case "directionOnIssueResubmitted":
                 return "[Directions on Issue]";
-
             case "gateKeeping":
             case "gateKeepingResubmitted":
                 return "[Gatekeeping]";
@@ -1547,7 +1538,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401",
             "serviceOfApplicationC100", "adminServeOrderC100",
             "serviceOfApplicationFL401", "adminServeOrderFL401",
-            "requestSolicitorOrderC100", "requestSolicitorOrderFL401",
+            "requestSolicitorOrder",
             "reviewCorrespondenceC100", "reviewCorrespondenceFL401",
             "removeLegalRepresentativeC100", "removeLegalRepresentativeFL401",
             "confidentialCheckSOA", "reviewDocumentsForSolAndCafcassC100",
@@ -1634,8 +1625,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @ParameterizedTest
     @CsvSource({
             "produceHearingBundleC100", "produceHearingBundleFL401",
-            "updateHearingActualsC100", "updateHearingActualsFL401",
-            "createHearingRequest", "createMultipleHearingRequest",
+            "updateHearingActuals", "createHearingRequest", "createMultipleHearingRequest",
             "createHearingRequestReserveListAssist"
     })
     void when_given_task_type_then_name_workType_and_validate_value_hearing_work(

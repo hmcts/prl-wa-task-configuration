@@ -387,9 +387,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "updateHearingActualsC100",
+                        "taskId", "updateHearingActuals",
                         "name", "Update Hearing Actuals",
-                        "processCategories", "updateHearingActualsC100"
+                        "processCategories", "updateHearingActuals"
                     )
                 )
             ),
@@ -695,9 +695,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "updateHearingActualsFL100",
+                        "taskId", "updateHearingActuals",
                         "name", "Update Hearing Actuals",
-                        "processCategories", "updateHearingActualsFL100"
+                        "processCategories", "updateHearingActuals"
                     )
                 )
             ),
@@ -711,9 +711,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "updateHearingActualsC100",
+                        "taskId", "updateHearingActuals",
                         "name", "Update Hearing Actuals",
-                        "processCategories", "updateHearingActualsC100"
+                        "processCategories", "updateHearingActuals"
                     )
                 )
             ),
@@ -727,9 +727,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "updateHearingActualsFL100",
+                        "taskId", "updateHearingActuals",
                         "name", "Update Hearing Actuals",
-                        "processCategories", "updateHearingActualsFL100"
+                        "processCategories", "updateHearingActuals"
                     )
                 )
             ),
