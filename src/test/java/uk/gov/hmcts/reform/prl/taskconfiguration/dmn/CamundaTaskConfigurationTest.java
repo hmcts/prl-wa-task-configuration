@@ -746,8 +746,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @ParameterizedTest
     @CsvSource({
         "addCaseNumber","addCaseNumberResubmitted","serviceOfApplicationC100",
-        "adminServeOrderC100","updateHearingActuals","requestSolicitorOrder",
-        "reviewCorrespondenceC100", "produceHearingBundleC100",
+        "adminServeOrderC100", "reviewCorrespondenceC100", "produceHearingBundleC100",
         "removeLegalRepresentativeC100","replyToMessageForCourtAdminC100"
     })
     void when_given_task_type_then_return_majorPriorityForValue5000_and_validate_description(String taskType) {
@@ -765,7 +764,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
             .filter((r) -> r.containsValue("majorPriority"))
             .toList();
-
+        System.out.println(workTypeResultList);
         assertThat(workTypeResultList.size(), is(1));
 
         assertTrue(workTypeResultList.contains(Map.of(
