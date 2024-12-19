@@ -41,7 +41,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(24));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(119));
+        assertThat(logic.getRules().size(), is(117));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -378,19 +378,18 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),*/
             Arguments.of(
-                "hmcCaseUpdPrepForHearing",
+                "enableUpdateHearingActualTask",
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "updateHearingActualsC100",
+                        "taskId", "updateHearingActuals",
                         "name", "Update Hearing Actuals",
-                        "processCategories", "updateHearingActualsC100"
+                        "processCategories", "updateHearingActuals"
                     )
                 )
             ),
@@ -687,53 +686,50 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "hmcCaseUpdPrepForHearing",
+                "enableUpdateHearingActualTask",
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "updateHearingActualsFL100",
+                        "taskId", "updateHearingActuals",
                         "name", "Update Hearing Actuals",
-                        "processCategories", "updateHearingActualsFL100"
+                        "processCategories", "updateHearingActuals"
                     )
                 )
             ),
             Arguments.of(
-                "hmcCaseUpdPrepForHearing",
+                "enableUpdateHearingActualTask",
                 "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "updateHearingActualsC100",
+                        "taskId", "updateHearingActuals",
                         "name", "Update Hearing Actuals",
-                        "processCategories", "updateHearingActualsC100"
+                        "processCategories", "updateHearingActuals"
                     )
                 )
             ),
             Arguments.of(
-                "hmcCaseUpdPrepForHearing",
+                "enableUpdateHearingActualTask",
                 "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "updateHearingActualsFL100",
+                        "taskId", "updateHearingActuals",
                         "name", "Update Hearing Actuals",
-                        "processCategories", "updateHearingActualsFL100"
+                        "processCategories", "updateHearingActuals"
                     )
                 )
             ),
