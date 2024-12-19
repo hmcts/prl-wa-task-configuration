@@ -1009,6 +1009,27 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(35));
+        assertThat(logic.getRules().size(), is(36));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+        "hearingListed"
+    })
+    void evaluate_task_admin_hearingListed(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,Complete,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+
+            )
+        )));
     }
 }

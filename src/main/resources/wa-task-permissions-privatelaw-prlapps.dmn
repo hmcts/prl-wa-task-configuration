@@ -689,7 +689,7 @@
       <rule id="DecisionRule_1evorlb">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_1k15vbg">
-          <text>"sendToGateKeeperC100","sendToGateKeeperResubmittedC100","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","reviewAdditionalApplication","reviewLangAndSmReq"</text>
+          <text>"sendToGateKeeperC100","sendToGateKeeperResubmittedC100","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","reviewAdditionalApplication","reviewLangAndSmReq","reqSafeguardingLetterUpdate"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_12k147l">
           <text></text>
@@ -1074,6 +1074,36 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0oezizc">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+       <rule id="DecisionRule_1xep2c2">
+        <description>Admin task permissions</description>
+        <inputEntry id="UnaryTests_0dei4nf">
+          <text>"hearingListed"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bjrz7g">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0toxnv7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kyqsbk">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0h7h7r2">
+          <text>"Read,Own,Complete,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1asnhdw">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05h37z5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m18hv5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mzevoj">
           <text>false</text>
         </outputEntry>
       </rule>

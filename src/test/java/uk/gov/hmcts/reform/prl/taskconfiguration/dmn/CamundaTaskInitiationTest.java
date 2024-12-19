@@ -39,9 +39,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(22));
+        assertThat(logic.getInputs().size(), is(24));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(112));
+        assertThat(logic.getRules().size(), is(119));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1354,6 +1354,90 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "name", "Check and re-serve documents",
                         "processCategories", "checkAndReServeDocuments",
                         "taskId", "checkAndReServeDocuments"
+                    )
+                )
+            ),
+            Arguments.of(
+                "reopenClosedCases",
+                "CASE_ISSUED",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "sendToGateKeeperFL401",
+                        "name", "Send to Gatekeeper",
+                        "processCategories", "localCourtGatekeepingFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "reopenClosedCases",
+                "CASE_ISSUED",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "sendToGateKeeperC100",
+                        "name", "Send to Gatekeeper",
+                        "processCategories", "localCourtGatekeepingC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "cafcass-document-upload",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Review Documents",
+                        "processCategories", "reviewDocsC100",
+                        "taskId", "reviewDocumentsForSolAndCafcassC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "cafcass-document-upload",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Review Documents",
+                        "processCategories", "reviewDocsFL401",
+                        "taskId", "reviewDocumentsForSolAndCafcassFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "hmcCaseUpdPrepForHearing",
+                "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"hearingListed\":\"" + "true" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "hearingListed",
+                        "name", "Hearing has been listed",
+                        "processCategories", "hearingListed"
                     )
                 )
             )

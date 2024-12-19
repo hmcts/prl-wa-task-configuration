@@ -718,15 +718,27 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_18yyuwr">
-        <description>NCTTC</description>
-        <inputEntry id="UnaryTests_1lvag5l">
+              <description>NCTTC</description>
+              <inputEntry id="UnaryTests_1lvag5l">
+                <text></text>
+              </inputEntry>
+              <outputEntry id="LiteralExpression_001b1qm">
+                <text>"newCaseTransferredToCourt"</text>
+              </outputEntry>
+              <outputEntry id="LiteralExpression_02u7xnk">
+                <text>"Case transferred to your court"</text>
+              </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gfcus8">
+        <description>REQSERUPD</description>
+        <inputEntry id="UnaryTests_1dp67zg">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_001b1qm">
-          <text>"newCaseTransferredToCourt"</text>
+        <outputEntry id="LiteralExpression_0uoerah">
+          <text>"reqSafeguardingLetterUpdate"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_02u7xnk">
-          <text>"Case transferred to your court"</text>
+        <outputEntry id="LiteralExpression_0vqnczr">
+          <text>"Request to upload Safeguarding Letter from Cafcass / Cafcass Cymru"</text>
         </outputEntry>
       </rule>
     </decisionTable>
