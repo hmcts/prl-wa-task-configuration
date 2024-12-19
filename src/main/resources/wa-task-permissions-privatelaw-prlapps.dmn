@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-permissions-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.13.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-permissions-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.11.0">
   <decision id="wa-task-permissions-privatelaw-prlapps" name="Private Law Permissions DMN">
     <decisionTable id="DecisionTable_1pr5oic" hitPolicy="RULE ORDER">
       <input id="InputClause_12crj6e" label="Task Type" biodi:width="578" camunda:inputVariable="taskType">
@@ -419,7 +419,7 @@
       <rule id="DecisionRule_0u17n4d">
         <description>Court admin hearing management skills permission</description>
         <inputEntry id="UnaryTests_0x0kyja">
-          <text>"produceHearingBundleFL401","updateHearingActualsFL401"</text>
+          <text>"produceHearingBundleFL401","updateHearingActuals"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0473w2g">
           <text></text>
@@ -449,7 +449,7 @@
       </rule>
       <rule id="DecisionRule_0qf60gz">
         <inputEntry id="UnaryTests_19oywac">
-          <text>"requestSolicitorOrderFL401"</text>
+          <text>"requestSolicitorOrder"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1braxwh">
           <text></text>
@@ -719,7 +719,7 @@
       <rule id="DecisionRule_079udd1">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_0ahkyod">
-          <text>"produceHearingBundleC100","updateHearingActualsC100"</text>
+          <text>"produceHearingBundleC100","updateHearingActuals"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qchifs">
           <text></text>
@@ -749,7 +749,7 @@
       <rule id="DecisionRule_1vv5vra">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_10kndmd">
-          <text>"requestSolicitorOrderC100"</text>
+          <text>"requestSolicitorOrder"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_093g86j">
           <text></text>
