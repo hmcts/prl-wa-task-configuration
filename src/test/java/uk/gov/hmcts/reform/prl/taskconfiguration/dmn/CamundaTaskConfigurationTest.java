@@ -256,8 +256,6 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "name", "dueDateIntervalDays",
             "value", "1"
         )));
-        System.out.println(taskType);
-        System.out.println(dmnDecisionTableResult);
         assertDescriptionField(taskType, dmnDecisionTableResult);
     }
 
@@ -1366,8 +1364,6 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertThat(descriptionResultList.size(), is(1));
 
         String description = getDescriptionBasedOnTaskType(taskType);
-        System.out.println(description);
-        System.out.println(descriptionResultList);
         assertTrue(descriptionResultList.contains(Map.of(
             "name", "description",
             "value", description
