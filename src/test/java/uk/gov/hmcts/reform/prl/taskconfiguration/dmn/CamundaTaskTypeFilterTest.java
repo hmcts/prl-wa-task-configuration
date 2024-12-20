@@ -68,10 +68,14 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
                 "taskTypeName", "Produce Hearing Bundle FL401"));
         taskTypes.add(Map.of("taskTypeId", "reviewSolicitorOrderProvided",
                 "taskTypeName", "Review and Approve Legal rep Order / Review resubmitted Order"));
-        taskTypes.add(Map.of("taskTypeId", "requestSolicitorOrder",
-                "taskTypeName", "Request Solicitor Order"));
-        taskTypes.add(Map.of("taskTypeId", "updateHearingActuals",
-                "taskTypeName", "Update Hearing Actuals"));
+        taskTypes.add(Map.of("taskTypeId", "requestSolicitorOrderC100",
+                "taskTypeName", "Request Solicitor Order C100"));
+        taskTypes.add(Map.of("taskTypeId", "requestSolicitorOrderFL100",
+                "taskTypeName", "Request Solicitor Order FL401"));
+        taskTypes.add(Map.of("taskTypeId", "updateHearingActualsC100",
+                "taskTypeName", "Update Hearing Actuals C100"));
+        taskTypes.add(Map.of("taskTypeId", "updateHearingActualsFL100",
+                "taskTypeName", "Update Hearing Actuals FL401"));
         taskTypes.add(Map.of("taskTypeId", "reviewCorrespondenceC100",
                 "taskTypeName", "Review Documents C100"));
         taskTypes.add(Map.of("taskTypeId", "reviewCorrespondenceFL401",
@@ -175,6 +179,6 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(61));
+        assertThat(logic.getRules().size(), is(63));
     }
 }

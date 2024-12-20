@@ -41,7 +41,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(24));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(117));
+        assertThat(logic.getRules().size(), is(119));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -387,9 +387,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "updateHearingActuals",
+                        "taskId", "updateHearingActualsC100",
                         "name", "Update Hearing Actuals",
-                        "processCategories", "updateHearingActuals"
+                        "processCategories", "updateHearingActualsC100"
                     )
                 )
             ),
@@ -695,9 +695,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "updateHearingActuals",
+                        "taskId", "updateHearingActualsFL100",
                         "name", "Update Hearing Actuals",
-                        "processCategories", "updateHearingActuals"
+                        "processCategories", "updateHearingActualsFL100"
                     )
                 )
             ),
@@ -711,9 +711,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "updateHearingActuals",
+                        "taskId", "updateHearingActualsC100",
                         "name", "Update Hearing Actuals",
-                        "processCategories", "updateHearingActuals"
+                        "processCategories", "updateHearingActualsC100"
                     )
                 )
             ),
@@ -727,9 +727,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "updateHearingActuals",
+                        "taskId", "updateHearingActualsFL100",
                         "name", "Update Hearing Actuals",
-                        "processCategories", "updateHearingActuals"
+                        "processCategories", "updateHearingActualsFL100"
                     )
                 )
             ),

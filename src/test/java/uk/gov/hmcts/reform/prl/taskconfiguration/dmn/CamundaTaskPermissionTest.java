@@ -307,7 +307,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "produceHearingBundleFL401",
+        "produceHearingBundleFL401", "updateHearingActualsFL401",
     })
     void evaluate_task_admin_hearingManagementfl401(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -333,7 +333,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "requestSolicitorOrder",
+        "requestSolicitorOrderFL401",
     })
     void evaluate_task_admin_orderManagementfl401(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -352,12 +352,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "roleCategory", "ADMIN",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
                 "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401"
-            ), Map.of(
-                "autoAssignable", false,
-                "name", "hearing-centre-admin",
-                "roleCategory", "ADMIN",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
-                "authorisations", "SKILL:ABA5:ORDERMANAGEMENTC100"
             )
         )));
     }
@@ -470,7 +464,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "produceHearingBundleC100",
+        "produceHearingBundleC100", "updateHearingActualsC100",
     })
     void evaluate_task_ctsc_hearingManagementc100(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -489,6 +483,32 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "roleCategory", "ADMIN",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
                 "authorisations", "SKILL:ABA5:HEARINGMANAGEMENTC100"
+            )
+        )));
+    }
+
+    @SuppressWarnings("checkstyle:indentation")
+    @ParameterizedTest
+    @CsvSource(value = {
+        "requestSolicitorOrderC100"
+    })
+    void evaluate_task_ctsc_orderManagementc100(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            Map.of(
+                "name", "task-supervisor",
+                "value", "Read,Manage,Complete,Cancel,Assign,Unassign",
+                "autoAssignable", false
+            ), Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations","SKILL:ABA5:ORDERMANAGEMENTC100"
             )
         )));
     }
