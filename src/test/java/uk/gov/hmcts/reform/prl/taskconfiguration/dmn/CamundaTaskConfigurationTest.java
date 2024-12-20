@@ -256,7 +256,6 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "name", "dueDateIntervalDays",
             "value", "1"
         )));
-
         assertDescriptionField(taskType, dmnDecisionTableResult);
     }
 
@@ -1365,7 +1364,6 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertThat(descriptionResultList.size(), is(1));
 
         String description = getDescriptionBasedOnTaskType(taskType);
-
         assertTrue(descriptionResultList.contains(Map.of(
             "name", "description",
             "value", description
@@ -1418,7 +1416,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
             case "updateHearingActualsFL401":
             case "updateHearingActualsC100":
-                return "[Update Hearing Actuals](/cases/case-details/${[CASE_REFERENCE]}/trigger/)";
+                return "[Update Hearing Actuals](/cases/case-details/${[CASE_REFERENCE]}/hearings)";
 
             case "requestSolicitorOrderFL401":
             case "requestSolicitorOrderC100":
