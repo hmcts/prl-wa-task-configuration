@@ -3683,7 +3683,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_05baaz0">
-          <text>"updateHearingActualsC100"</text>
+          <text>"updateHearingActuals"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ip67cc">
@@ -3769,7 +3769,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1gsyxkc">
-          <text>"updateHearingActualsFL100"</text>
+          <text>"updateHearingActuals"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0bu2jfj">
@@ -3777,7 +3777,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"enableRequestSolicitorOrderTask"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c225g3">
-          <text>"DECISION_OUTCOME"</text>
+          <text>"DECISION_OUTCOME","JUDICIAL_REVIEW","PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0zm0mqb">
           <text>"C100"</text>
@@ -3865,7 +3865,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"enableRequestSolicitorOrderTask"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1tz6dvs">
-          <text>"DECISION_OUTCOME"</text>
+          <text>"DECISION_OUTCOME","JUDICIAL_REVIEW","PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0r2gcoz">
           <text>"FL401"</text>
