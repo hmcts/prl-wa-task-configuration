@@ -1186,7 +1186,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @CsvSource({
        "hearingListed"
     })
-    void when_given_task_type_then_return_roleCategoryForValueAdmin_and_validate_description(
+    void when_given_task_type_hearingListed_then_return_roleCategoryForValueAdmin_and_validate_description(
         String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue(
