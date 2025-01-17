@@ -34,7 +34,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(94));
+        assertThat(logic.getRules().size(), is(95));
     }
 
 
@@ -1179,6 +1179,35 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertTrue(workTypeResultList.contains(Map.of(
             "name", "roleCategory",
             "value", "ADMIN"
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "hearingListed"
+    })
+    void when_given_task_type_hearingListed_then_return_roleCategoryForValueAdmin_and_validate_description(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "FirstName"
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("roleCategory"))
+            .toList();
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "roleCategory",
+            "value", "ADMIN",
+            "canReconfigure", true
         )));
     }
 
