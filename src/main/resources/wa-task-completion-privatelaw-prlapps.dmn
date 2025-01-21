@@ -473,7 +473,7 @@
       </rule>
       <rule id="DecisionRule_0agwzd9">
         <inputEntry id="UnaryTests_0dn1cxw">
-          <text>"updateHearingActuals"</text>
+          <text>"hmcHearingCompleted"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1pt5rks">
           <text>"updateHearingActualsC100"</text>
@@ -484,7 +484,7 @@
       </rule>
       <rule id="DecisionRule_0woh718">
         <inputEntry id="UnaryTests_01py4h5">
-          <text>"updateHearingActuals"</text>
+          <text>"hmcHearingCompleted"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1kqv32x">
           <text>"updateHearingActualsFL401"</text>
