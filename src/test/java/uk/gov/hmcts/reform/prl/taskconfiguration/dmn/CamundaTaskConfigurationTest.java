@@ -1590,7 +1590,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "completefl416AndServe", "listWithoutNoticeHearingC100",
             "listOnNoticeHearingFL401", "reviewAdditionalApplication",
             "reviewLangAndSmReq", "recreateApplicationPack", "replyToMessageForCourtAdminFL401",
-            "confidentialCheckDocuments","checkAndReServeDocuments"
+            "confidentialCheckDocuments","checkAndReServeDocuments","reqSafeguardingLetterUpdate","newCaseTransferredToCourt"
     })
     void when_given_task_type_then_name_workType_and_validate_value_routine_work(
             String taskType) {
@@ -1665,7 +1665,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "produceHearingBundleC100", "produceHearingBundleFL401",
             "updateHearingActualsC100", "updateHearingActualsFL401",
             "createHearingRequest", "createMultipleHearingRequest",
-            "createHearingRequestReserveListAssist"
+            "createHearingRequestReserveListAssist","hearingListed"
     })
     void when_given_task_type_then_name_workType_and_validate_value_hearing_work(
             String taskType) {
