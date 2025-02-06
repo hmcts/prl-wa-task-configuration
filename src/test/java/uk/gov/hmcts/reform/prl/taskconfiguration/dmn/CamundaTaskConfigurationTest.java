@@ -1590,7 +1590,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "completefl416AndServe", "listWithoutNoticeHearingC100",
             "listOnNoticeHearingFL401", "reviewAdditionalApplication",
             "reviewLangAndSmReq", "recreateApplicationPack", "replyToMessageForCourtAdminFL401",
-            "confidentialCheckDocuments","checkAndReServeDocuments","reqSafeguardingLetterUpdate","newCaseTransferredToCourt"
+            "confidentialCheckDocuments","checkAndReServeDocuments"
     })
     void when_given_task_type_then_name_workType_and_validate_value_routine_work(
             String taskType) {
@@ -1764,6 +1764,40 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertTrue(workTypeResultList.contains(Map.of(
                 "name", "workType",
                 "value", "access_requests"
+        )));
+    }
+
+
+    @ParameterizedTest
+    @CsvSource({
+        "reqSafeguardingLetterUpdate",
+        "newCaseTransferredToCourt"
+    })
+    void when_given_task_type_then_name_workType_and_validate_value_routine_work_without_description(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "workType"
+            )
+        );
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("caseTypeOfApplication", "C100");
+        inputVariables.putValue("caseData", caseData);
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("routine_work"))
+            .toList();
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "workType",
+            "value", "routine_work"
         )));
     }
 
