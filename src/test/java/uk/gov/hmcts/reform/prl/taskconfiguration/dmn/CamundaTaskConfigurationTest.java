@@ -1663,7 +1663,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "produceHearingBundleC100", "produceHearingBundleFL401",
             "updateHearingActualsC100", "updateHearingActualsFL401",
             "createHearingRequest", "createMultipleHearingRequest",
-            "createHearingRequestReserveListAssist"
+            "createHearingRequestReserveListAssist","hearingListed"
     })
     void when_given_task_type_then_name_workType_and_validate_value_hearing_work(
             String taskType) {
@@ -1762,6 +1762,40 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertTrue(workTypeResultList.contains(Map.of(
                 "name", "workType",
                 "value", "access_requests"
+        )));
+    }
+
+
+    @ParameterizedTest
+    @CsvSource({
+        "reqSafeguardingLetterUpdate",
+        "newCaseTransferredToCourt"
+    })
+    void when_given_task_type_then_name_workType_and_validate_value_routine_work_without_description(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "workType"
+            )
+        );
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("caseTypeOfApplication", "C100");
+        inputVariables.putValue("caseData", caseData);
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("routine_work"))
+            .toList();
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "workType",
+            "value", "routine_work"
         )));
     }
 
