@@ -378,11 +378,10 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),*/
             Arguments.of(
-                "hmcCaseUpdPrepForHearing",
+                "enableUpdateHearingActualTask",
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
                                       + "   }"
                                       + "}"),
@@ -687,28 +686,26 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "hmcCaseUpdPrepForHearing",
+                "enableUpdateHearingActualTask",
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "updateHearingActualsFL100",
+                        "taskId", "updateHearingActualsFL401",
                         "name", "Update Hearing Actuals",
-                        "processCategories", "updateHearingActualsFL100"
+                        "processCategories", "updateHearingActualsFL401"
                     )
                 )
             ),
             Arguments.of(
-                "hmcCaseUpdPrepForHearing",
+                "enableUpdateHearingActualTask",
                 "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
                                       + "   }"
                                       + "}"),
@@ -721,19 +718,18 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "hmcCaseUpdPrepForHearing",
+                "enableUpdateHearingActualTask",
                 "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"performingUser\":\"" + "TO BE REMOVED LATER" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "taskId", "updateHearingActualsFL100",
+                        "taskId", "updateHearingActualsFL401",
                         "name", "Update Hearing Actuals",
-                        "processCategories", "updateHearingActualsFL100"
+                        "processCategories", "updateHearingActualsFL401"
                     )
                 )
             ),
