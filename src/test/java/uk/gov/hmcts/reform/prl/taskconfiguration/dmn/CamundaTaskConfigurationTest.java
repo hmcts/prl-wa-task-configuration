@@ -1663,7 +1663,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "produceHearingBundleC100", "produceHearingBundleFL401",
             "updateHearingActualsC100", "updateHearingActualsFL401",
             "createHearingRequest", "createMultipleHearingRequest",
-            "createHearingRequestReserveListAssist","hearingListed"
+            "createHearingRequestReserveListAssist"
     })
     void when_given_task_type_then_name_workType_and_validate_value_hearing_work(
             String taskType) {
