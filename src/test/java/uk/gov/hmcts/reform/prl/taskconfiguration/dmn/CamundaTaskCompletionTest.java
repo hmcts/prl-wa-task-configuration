@@ -245,7 +245,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "updateHearingActuals",
+                "hmcHearingCompleted",
                 asList(
                     Map.of(
                         "taskType", "updateHearingActualsC100",

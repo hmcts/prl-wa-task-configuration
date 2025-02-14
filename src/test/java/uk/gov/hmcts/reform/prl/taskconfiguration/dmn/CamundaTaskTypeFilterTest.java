@@ -70,11 +70,11 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
                 "taskTypeName", "Review and Approve Legal rep Order / Review resubmitted Order"));
         taskTypes.add(Map.of("taskTypeId", "requestSolicitorOrderC100",
                 "taskTypeName", "Request Solicitor Order C100"));
-        taskTypes.add(Map.of("taskTypeId", "requestSolicitorOrderFL100",
+        taskTypes.add(Map.of("taskTypeId", "requestSolicitorOrderFL401",
                 "taskTypeName", "Request Solicitor Order FL401"));
         taskTypes.add(Map.of("taskTypeId", "updateHearingActualsC100",
                 "taskTypeName", "Update Hearing Actuals C100"));
-        taskTypes.add(Map.of("taskTypeId", "updateHearingActualsFL100",
+        taskTypes.add(Map.of("taskTypeId", "updateHearingActualsFL401",
                 "taskTypeName", "Update Hearing Actuals FL401"));
         taskTypes.add(Map.of("taskTypeId", "reviewCorrespondenceC100",
                 "taskTypeName", "Review Documents C100"));

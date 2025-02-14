@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.27.0">
   <decision id="wa-task-cancellation-privatelaw-prlapps" name="Private Law Task cancellation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0z3jx1g" hitPolicy="COLLECT">
       <input id="Input_1" label="From State">
@@ -46,13 +46,13 @@
       </rule>
       <rule id="DecisionRule_0apzh7f">
         <inputEntry id="UnaryTests_1sc5v50">
-          <text>"DECISION_OUTCOME"</text>
+          <text>"JUDICIAL_REVIEW", "PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0e0k7ss">
           <text>"draftAnOrder"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ppyzd0">
-          <text>"DECISION_OUTCOME"</text>
+          <text>"JUDICIAL_REVIEW", "PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0dxmk9p">
           <text>"Cancel"</text>
