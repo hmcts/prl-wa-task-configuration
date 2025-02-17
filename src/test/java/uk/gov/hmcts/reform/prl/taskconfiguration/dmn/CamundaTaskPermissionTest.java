@@ -1009,7 +1009,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(36));
+        assertThat(logic.getRules().size(), is(37));
     }
 
     @ParameterizedTest
@@ -1029,6 +1029,32 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "roleCategory", "ADMIN",
                 "value", "Read,Own,Complete,UnclaimAssign,Claim,Unclaim,UnassignClaim"
 
+            )
+        )));
+    }
+
+    @SuppressWarnings("checkstyle:indentation")
+    @ParameterizedTest
+    @CsvSource(value = {
+        "checkHwfApplicationC100", "checkAwpHwfCitizen"
+    })
+    void evaluate_task_ctsc_checkHwfApplications(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            Map.of(
+                "name", "task-supervisor",
+                "value", "Read,Manage,Complete,Cancel,Assign,Unassign",
+                "autoAssignable", false
+            ), Map.of(
+                "autoAssignable", false,
+                "name", "ctsc",
+                "roleCategory", "CTSC",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete",
+                "authorisations","SKILL:ABA5:CHECKAPPLICATIONC100"
             )
         )));
     }
