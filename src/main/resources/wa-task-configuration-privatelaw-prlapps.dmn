@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.13.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.12.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN" camunda:historyTimeToLive="P90D">
     <informationRequirement id="InformationRequirement_1iac9a2">
       <requiredDecision href="#Decision_11ew6tt" />
@@ -893,7 +893,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ps3x4j">
-          <text>"produceHearingBundleC100","produceHearingBundleFL401","updateHearingActualsC100","updateHearingActualsFL401","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","hearingListed"</text>
+          <text>"produceHearingBundleC100","produceHearingBundleFL401","updateHearingActualsC100","updateHearingActualsFL401","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1kodvn7">
           <text></text>
@@ -1025,6 +1025,26 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0l8pe9u">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1i2dfyf">
+        <inputEntry id="UnaryTests_1aih50r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16v5lhc">
+          <text>"hearingListed"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lx7d87">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04usyt8">
+          <text>"workType"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0keqqas">
+          <text>"hearing_work"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0erqz7h">
           <text>"true"</text>
         </outputEntry>
       </rule>

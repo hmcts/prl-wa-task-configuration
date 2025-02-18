@@ -34,7 +34,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(95));
+        assertThat(logic.getRules().size(), is(96));
     }
 
 
@@ -1663,7 +1663,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "produceHearingBundleC100", "produceHearingBundleFL401",
             "updateHearingActualsC100", "updateHearingActualsFL401",
             "createHearingRequest", "createMultipleHearingRequest",
-            "createHearingRequestReserveListAssist","hearingListed"
+            "createHearingRequestReserveListAssist"
     })
     void when_given_task_type_then_name_workType_and_validate_value_hearing_work(
             String taskType) {
