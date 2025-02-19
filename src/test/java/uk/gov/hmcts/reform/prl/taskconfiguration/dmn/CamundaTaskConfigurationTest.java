@@ -34,7 +34,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(95));
+        assertThat(logic.getRules().size(), is(96));
     }
 
 
@@ -256,7 +256,6 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "name", "dueDateIntervalDays",
             "value", "1"
         )));
-
         assertDescriptionField(taskType, dmnDecisionTableResult);
     }
 
@@ -1394,7 +1393,6 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertThat(descriptionResultList.size(), is(1));
 
         String description = getDescriptionBasedOnTaskType(taskType);
-
         assertTrue(descriptionResultList.contains(Map.of(
             "name", "description",
             "value", description
@@ -1447,7 +1445,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
             case "updateHearingActualsFL401":
             case "updateHearingActualsC100":
-                return "[Update Hearing Actuals](/cases/case-details/${[CASE_REFERENCE]}/trigger/)";
+                return "[Update Hearing Actuals](/cases/case-details/${[CASE_REFERENCE]}/hearings)";
 
             case "requestSolicitorOrderFL401":
             case "requestSolicitorOrderC100":
@@ -1764,6 +1762,40 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertTrue(workTypeResultList.contains(Map.of(
                 "name", "workType",
                 "value", "access_requests"
+        )));
+    }
+
+
+    @ParameterizedTest
+    @CsvSource({
+        "reqSafeguardingLetterUpdate",
+        "newCaseTransferredToCourt"
+    })
+    void when_given_task_type_then_name_workType_and_validate_value_routine_work_without_description(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "workType"
+            )
+        );
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("caseTypeOfApplication", "C100");
+        inputVariables.putValue("caseData", caseData);
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("routine_work"))
+            .toList();
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "workType",
+            "value", "routine_work"
         )));
     }
 
