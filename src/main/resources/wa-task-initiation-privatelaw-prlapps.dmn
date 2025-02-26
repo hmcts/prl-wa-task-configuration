@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.15.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.16.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -10581,7 +10581,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"create-case-privatelaw-bs-c100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_11ro9lt">
-          <text>"SUBMITTED_PAID"</text>
+          <text>"SUBMITTED_NOT_PAID"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0pc9227">
           <text></text>
@@ -10650,15 +10650,101 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_109fr33">
-          <text>"checkApplicationC100"</text>
+          <text>"checkHwfApplicationC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_07y74eg">
-          <text>"Check Application - bulk scan"</text>
+          <text>"Confirm payment - bulk scan"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1g1tlgn">
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1yttkd2">
+          <text>"applicationHwfCheck"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19pe5ci">
+        <inputEntry id="UnaryTests_1etqfqy">
+          <text>"processPaymentForBulkscan"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j0hlgq">
+          <text>"SUBMITTED_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jrvcc7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nr4uy3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1381wtb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rjh00x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qbe4nw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yfqfup">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_159rmlh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05s6bwq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w2006f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sk2kj9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_173mi85">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g8bcl0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iibw31">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nmt8fl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dvh4ar">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15r0u0e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xoowvf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xp1upm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r52w7v">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zqe8qm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0u3wr54">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_085r7fx">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07zzr1g">
+          <text>"checkApplicationC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cmaoa4">
+          <text>"Check Application - bulk scan"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bwkk3x">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ikirrl">
           <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
