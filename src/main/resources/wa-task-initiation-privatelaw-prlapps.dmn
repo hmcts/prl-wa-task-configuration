@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.14.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -393,6 +393,92 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1tinucn">
+          <text>"applicationCheck"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15doynz">
+        <inputEntry id="UnaryTests_08esrbp">
+          <text>"submitDssDaEdgeCase"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t9j0ta">
+          <text>"SUBMITTED_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kqt0lp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1go1pwh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xozori">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17i54w0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qqnn2j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j2ycxj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wj01ql">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17nth2o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04gc59o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xtb1xr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ziv5iw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u5r5ol">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wzcput">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00votj2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nds9ko">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lrc9y8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1637zg7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03uarar">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1105guk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fkhoit">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c5m7d0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0v30zqg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fa4cp8">
+          <text>"checkApplicationFL401EdgeCase"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16gmkxk">
+          <text>"Check Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03b36hc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0v76cki">
           <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
@@ -1256,6 +1342,92 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"applicationCheck"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0ps3ben">
+        <inputEntry id="UnaryTests_0w7uimv">
+          <text>"submitDssCaEdgeCase"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xw8tr8">
+          <text>"SUBMITTED_PAID"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yilvdb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pge259">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pize9u">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s4h9rh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z6h223">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16b9tkt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0noktit">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uut7hm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1aspp38">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hdzw94">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fyj6re">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03et028">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tk7k6i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12f9eal">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1httij5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xihchk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1naqb30">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qceoqh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hx65m0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16wwqm2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06g4azw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iyrnnd">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0crthav">
+          <text>"checkApplicationC100EdgeCase"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0v410ln">
+          <text>"Check Application"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ah3wzg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1e9gv4m">
+          <text>"applicationCheck"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1heq79e">
         <inputEntry id="UnaryTests_19dxua7">
           <text>"processUrgentHelpWithFees"</text>
@@ -1344,7 +1516,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0awbhzo">
         <inputEntry id="UnaryTests_0vtqyav">
-          <text>"citizenCaseSubmitWithHWF"</text>
+          <text>"citizenCaseSubmitWithHWF","submitDssCaEdgeCaseWithHwf"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gpko05">
           <text>"SUBMITTED_NOT_PAID"</text>
