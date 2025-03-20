@@ -689,7 +689,7 @@
       <rule id="DecisionRule_180qdvp">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_11znsc6">
-          <text>"checkHwfApplicationC100","checkAwpHwfCitizen"</text>
+          <text>"checkHwfApplicationC100","checkAwpHwfCitizen", "checkHwfApplicationC100EdgeCase"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0rn63cj">
           <text></text>

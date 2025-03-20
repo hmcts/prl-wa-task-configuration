@@ -389,7 +389,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1jc6qee">
-          <text>"removeLegalRepresentativeC100","removeLegalRepresentativeFL401", "reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401", "checkHwfApplicationC100"</text>
+          <text>"removeLegalRepresentativeC100","removeLegalRepresentativeFL401", "reviewDocumentsForSolAndCafcassC100", "reviewDocumentsForSolAndCafcassFL401", "checkHwfApplicationC100", "checkHwfApplicationC100EdgeCase"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1xtddq2">
           <text></text>
@@ -629,7 +629,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1f7e54s">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","gateKeeping","gateKeepingResubmitted","checkHwfApplicationC100","reqSafeguardingLetterUpdate"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","gateKeeping","gateKeepingResubmitted","checkHwfApplicationC100","reqSafeguardingLetterUpdate", "checkHwfApplicationC100EdgeCase"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1a564vk">
           <text></text>
@@ -832,7 +832,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1i54x18">
-          <text>"checkApplicationFL401EdgeCase", "checkApplicationC100EdgeCase"</text>
+          <text>"checkApplicationFL401EdgeCase", "checkApplicationC100EdgeCase", "checkHwfApplicationC100EdgeCase"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gwv4il">
           <text></text>
@@ -933,7 +933,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0uoqs4p">
-          <text>"checkApplicationC100", "checkApplicationFL401", "checkApplicationResubmittedC100", "checkApplicationResubmittedFL401", "checkHwfApplicationC100", "checkApplicationFL401EdgeCase", "checkApplicationC100EdgeCase"</text>
+          <text>"checkApplicationC100", "checkApplicationFL401", "checkApplicationResubmittedC100", "checkApplicationResubmittedFL401", "checkHwfApplicationC100", "checkApplicationFL401EdgeCase", "checkApplicationC100EdgeCase", "checkHwfApplicationC100EdgeCase"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_08w4zu7">
           <text></text>
@@ -1075,7 +1075,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1cssptr">
           <text>"checkApplicationC100", "checkApplicationResubmittedC100",
 "addCaseNumber", "addCaseNumberResubmitted",
-"reviewSpecificAccessRequestCTSC", "checkHwfApplicationC100", "checkAwpHwfCitizen", "checkApplicationC100EdgeCase"</text>
+"reviewSpecificAccessRequestCTSC", "checkHwfApplicationC100", "checkAwpHwfCitizen", "checkApplicationC100EdgeCase", "checkHwfApplicationC100EdgeCase"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0hq30kv">
           <text></text>
@@ -1855,7 +1855,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1x9qwwj">
-          <text>"checkHwfApplicationC100"</text>
+          <text>"checkHwfApplicationC100", "checkHwfApplicationC100EdgeCase"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1j3nfg5">
           <text></text>
