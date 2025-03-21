@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.28.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0">
   <decision id="wa-task-completion-privatelaw-prlapps" name="Private Law Task completion DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_01re27m" hitPolicy="COLLECT">
       <input id="eventId" label="Event ID" biodi:width="437">
@@ -17,6 +17,17 @@
           <text>"checkApplicationC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ap1s9l">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0b98k41">
+        <inputEntry id="UnaryTests_1lw01nz">
+          <text>"issueAndSendToLocalCourtCallback"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1udp9y7">
+          <text>"checkApplicationC100EdgeCase"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cjgq7j">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
@@ -61,6 +72,17 @@
           <text>"checkApplicationFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_15mqpgr">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0q94gnd">
+        <inputEntry id="UnaryTests_0wk9g6g">
+          <text>"fl401AddCaseNumber"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0e0xyil">
+          <text>"checkApplicationFL401EdgeCase"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hiahj3">
           <text>"Auto"</text>
         </outputEntry>
       </rule>

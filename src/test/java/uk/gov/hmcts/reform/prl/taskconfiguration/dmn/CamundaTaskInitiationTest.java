@@ -39,9 +39,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(24));
+        assertThat(logic.getInputs().size(), is(25));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(119));
+        assertThat(logic.getRules().size(), is(125));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1189,7 +1189,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
+                                      + "      \"isC100EdgeCase\":\"" + "No" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -1205,7 +1205,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"isTheCaseInDraftState\":\"" + "Yes" + "\"\n"
+                                      + "      \"isTheCaseInDraftState\":\"" + "Yes" + "\"\n,"
+                                      + "      \"isC100EdgeCase\":\"" + "No" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -1438,6 +1439,92 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "hearingListed",
                         "name", "Hearing has been listed",
                         "processCategories", "hearingListed"
+                    )
+                )
+            ),
+            Arguments.of(
+                "submitDssDaEdgeCase",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "taskId", "checkApplicationFL401EdgeCase",
+                        "name", "Check Application",
+                        "processCategories", "applicationCheck"
+                    ),
+                    Map.of(
+                        "taskId", "sendToGateKeeperFL401",
+                        "name", "Send to Gatekeeper",
+                        "processCategories", "localCourtGatekeepingFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "submitDssCaEdgeCase",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "checkApplicationC100EdgeCase",
+                        "name", "Check Application",
+                        "processCategories", "applicationCheck"
+                    )
+                )
+            ),
+            Arguments.of(
+                "submitDssCaEdgeCaseWithHwf",
+                "SUBMITTED_NOT_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "checkHwfApplicationC100EdgeCase",
+                        "name", "Check HWF application",
+                        "processCategories", "applicationHwfCheck"
+                    )
+                )
+            ),
+            Arguments.of(
+                "processUrgentHelpWithFees",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isTheCaseInDraftState\":\"" + "Yes" + "\"\n,"
+                                      + "      \"isC100EdgeCase\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "checkApplicationC100EdgeCase",
+                        "name", "Check Application",
+                        "processCategories", "applicationCheck"
+                    )
+                )
+            ),
+            Arguments.of(
+                "hwfProcessCaseUpdate",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"isC100EdgeCase\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "checkApplicationC100EdgeCase",
+                        "name", "Check Application",
+                        "processCategories", "applicationCheck"
                     )
                 )
             )
