@@ -41,7 +41,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(25));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(123));
+        assertThat(logic.getRules().size(), is(125));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1189,7 +1189,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
+                                      + "      \"isC100EdgeCase\":\"" + "No" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -1501,6 +1501,22 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"isTheCaseInDraftState\":\"" + "Yes" + "\"\n,"
+                                      + "      \"isC100EdgeCase\":\"" + "Yes" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "checkApplicationC100EdgeCase",
+                        "name", "Check Application",
+                        "processCategories", "applicationCheck"
+                    )
+                )
+            ),
+            Arguments.of(
+                "hwfProcessCaseUpdate",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
                                       + "      \"isC100EdgeCase\":\"" + "Yes" + "\"\n"
                                       + "   }"
                                       + "}"),
