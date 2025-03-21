@@ -1155,7 +1155,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "completefl416AndServe","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100",
         "replyToMessageForCourtAdminFL401","reviewRaRequestsC100","reviewInactiveRaRequestsC100",
         "listWithoutNoticeHearingC100","listOnNoticeHearingFL401","reviewAdditionalApplication",
-        "reviewLangAndSmReq","confidentialCheckDocuments","checkAndReServeDocuments"
+        "reviewLangAndSmReq","confidentialCheckDocuments","checkAndReServeDocuments",
+        "checkApplicationFL401EdgeCase"
     })
     void when_given_task_type_then_return_roleCategoryForValueAdmin_and_validate_description(
         String taskType) {
@@ -1214,7 +1215,9 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @CsvSource({
         "checkApplicationC100", "checkApplicationResubmittedC100",
         "addCaseNumber", "addCaseNumberResubmitted",
-        "reviewSpecificAccessRequestCTSC"
+        "reviewSpecificAccessRequestCTSC",
+        "checkHwfApplicationC100", "checkAwpHwfCitizen",
+        "checkApplicationC100EdgeCase", "checkHwfApplicationC100EdgeCase"
     })
     void when_given_task_type_then_return_roleCategoryForValueCtsc_and_validate_description(
         String taskType) {
@@ -1403,11 +1406,13 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         switch (taskType) {
             case "checkApplicationFL401":
             case "checkApplicationResubmittedFL401":
+            case "checkApplicationFL401EdgeCase":
                 return "[Add Case Number](/cases/case-details/${[CASE_REFERENCE]}/trigger/"
                     + "fl401AddCaseNumber/fl401AddCaseNumber1)";
 
             case "checkApplicationC100":
             case "checkApplicationResubmittedC100":
+            case "checkApplicationC100EdgeCase":
                 return "[Issue and send to local Court](/cases/case-details/${[CASE_REFERENCE]}"
                     + "/trigger/issueAndSendToLocalCourtCallback/issueAndSendToLocalCourtCallback1)";
 
@@ -1548,6 +1553,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
                 return "[Review other applications](/cases/case-details/${[CASE_REFERENCE]}#Other%20applications)";
 
             case "checkHwfApplicationC100":
+            case "checkHwfApplicationC100EdgeCase":
                 return "[Check HWF application](/cases/case-details/${[CASE_REFERENCE]}#Application_)";
 
             case "confidentialCheckDocuments":
@@ -1698,7 +1704,9 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @ParameterizedTest
     @CsvSource({
             "checkApplicationC100", "checkApplicationFL401",
-            "checkApplicationResubmittedC100", "checkApplicationResubmittedFL401"
+            "checkApplicationResubmittedC100", "checkApplicationResubmittedFL401",
+        "checkHwfApplicationC100", "checkHwfApplicationC100EdgeCase",
+        "checkApplicationC100EdgeCase", "checkApplicationFL401EdgeCase"
     })
     void when_given_task_type_then_name_workType_and_validate_value_applications(
             String taskType) {
@@ -1817,5 +1825,72 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         assertDescriptionField(taskType, dmnDecisionTableResult);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "checkApplicationFL401EdgeCase", "checkApplicationC100EdgeCase"
+    })
+    void when_given_task_type_then_return_dueDateIntervalDays_and_validate_description_for_edge_cases(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "Check application"
+            )
+        );
+
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("edgeCaseTypeOfApplicationDisplayValue", "Parental orders");
+        inputVariables.putValue("caseData", caseData);
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("dueDateIntervalDays"))
+            .toList();
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "dueDateIntervalDays",
+            "value", "1"
+        )));
+
+        assertDescriptionField(taskType, dmnDecisionTableResult);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "checkApplicationFL401EdgeCase", "checkApplicationC100EdgeCase"
+    })
+    void when_given_task_type_then_return_priorityDateOriginRef_and_not_validate_description_for_edge_cases(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "Check application"
+            )
+        );
+
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("edgeCaseTypeOfApplicationDisplayValue", "Parental orders");
+        inputVariables.putValue("caseData", caseData);
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("majorPriority"))
+            .toList();
+
+        assertThat(workTypeResultList.size(), is(1));
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "majorPriority",
+            "value", "1000"
+        )));
     }
 }
