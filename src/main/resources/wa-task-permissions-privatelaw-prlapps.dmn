@@ -1050,7 +1050,7 @@
       <rule id="DecisionRule_0wxorvv">
         <description>Court admin hearing management skills permission</description>
         <inputEntry id="UnaryTests_0hjpmm1">
-          <text>"createHearingRequestReserveListAssist","createHearingRequest","createMultipleHearingRequest"</text>
+          <text>"createHearingRequestReserveListAssist","createHearingRequest","createMultipleHearingRequest","automatedHearingRequestFailed"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_004lbha">
           <text>caseData.caseTypeOfApplication = "FL401"</text>
@@ -1080,7 +1080,7 @@
       <rule id="DecisionRule_1hn9trj">
         <description>Court admin hearing management skills permission</description>
         <inputEntry id="UnaryTests_1b3ltpm">
-          <text>"createHearingRequestReserveListAssist","createHearingRequest","createMultipleHearingRequest"</text>
+          <text>"createHearingRequestReserveListAssist","createHearingRequest","createMultipleHearingRequest","automatedHearingRequestFailed"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ydl8jn">
           <text>caseData.caseTypeOfApplication = "C100"</text>
