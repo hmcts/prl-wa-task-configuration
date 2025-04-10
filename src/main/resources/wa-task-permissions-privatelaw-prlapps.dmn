@@ -389,7 +389,7 @@
       <rule id="DecisionRule_0obpeja">
         <description>Court admin check application skills permission</description>
         <inputEntry id="UnaryTests_0m16bpv">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","removeLegalRepresentativeFL401","replyToMessageForCourtAdminFL401","reviewRaRequestsFL401","reviewInactiveRaRequestsFL401"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","removeLegalRepresentativeFL401","replyToMessageForCourtAdminFL401","reviewRaRequestsFL401","reviewInactiveRaRequestsFL401"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_132ys7j">
           <text></text>
@@ -416,38 +416,8 @@
           <text>false</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0l47vle">
-        <description>Court admin send to gate keeper skills permission</description>
-        <inputEntry id="UnaryTests_0vmn7dz">
-          <text>"sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_00qgjrv">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1sedudw">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0b5wjjo">
-          <text>"hearing-centre-admin"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1f6udu6">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_08wi9s6">
-          <text>"ADMIN"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0jer1oh">
-          <text>"SKILL:ABA5:CHECKAPPLICATIONFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_00ijqc9">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1pfjfrb">
-          <text>false</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_19jxx7a">
-        <description>CTSC send to gate keeper skills permission</description>
+        <description>Team Leader send to gate keeper skills permission</description>
         <inputEntry id="UnaryTests_188y2ck">
           <text>"sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401"</text>
         </inputEntry>
@@ -458,13 +428,13 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1111khd">
-          <text>"ctsc"</text>
+          <text>"hearing-centre-team-leader"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0s95asq">
           <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0j2kvbk">
-          <text>"CTSC"</text>
+          <text>"ADMIN"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1tfmmv3">
           <text>"SKILL:ABA5:CHECKAPPLICATIONFL401"</text>

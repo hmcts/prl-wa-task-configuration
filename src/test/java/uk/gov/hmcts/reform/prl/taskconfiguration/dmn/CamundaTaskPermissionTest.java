@@ -322,12 +322,12 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401"
             ), Map.of(
                 "autoAssignable", false,
-                "name", "ctsc",
-                "roleCategory", "CTSC",
+                "name", "hearing-centre-team-leader",
+                "roleCategory", "ADMIN",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401"
             )
@@ -1039,7 +1039,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(39));
+        assertThat(logic.getRules().size(), is(38));
     }
 
     @ParameterizedTest
