@@ -199,8 +199,8 @@ dependencyManagement {
       entry 'logback-core'
     }
 
-    //CVE-2021-22060
-    dependencySet(group: 'org.springframework', name: 'spring-core', version: '5.3.33') {
+    //CVE-2021-22060, CVE-2024-38820
+    dependencySet(group: 'org.springframework', name: 'spring-core', version: '5.3.39') {
       entry 'spring-core'
       entry 'spring-aop'
       entry 'spring-beans'
