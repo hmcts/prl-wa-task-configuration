@@ -200,7 +200,7 @@ dependencyManagement {
     }
 
     //CVE-2021-22060, CVE-2024-38820
-    dependencySet(group: 'org.springframework', name: 'spring-core', version: '5.3.41') {
+    dependencySet(group: 'org.springframework', name: 'spring-core', version: '6.1.14') {
       entry 'spring-core'
       entry 'spring-aop'
       entry 'spring-beans'
@@ -244,7 +244,7 @@ def versions = [
   camunda         : '7.18.0',
   pitest          : '1.16.0',
   sonarPitest     : '0.5',
-  tomcat          : '9.0.83',
+  tomcat          : '9.0.99',
   log4j           : '2.17.1'
 
 ]
