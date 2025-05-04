@@ -389,7 +389,7 @@
       <rule id="DecisionRule_0obpeja">
         <description>Court admin check application skills permission</description>
         <inputEntry id="UnaryTests_0m16bpv">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","removeLegalRepresentativeFL401","replyToMessageForCourtAdminFL401","reviewRaRequestsFL401","reviewInactiveRaRequestsFL401"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","removeLegalRepresentativeFL401","replyToMessageForCourtAdminFL401","reviewRaRequestsFL401","reviewInactiveRaRequestsFL401","checkApplicationFL401EdgeCase"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_132ys7j">
           <text></text>
@@ -659,7 +659,7 @@
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_14xrsqw">
           <text>"checkApplicationC100", "checkApplicationResubmittedC100",
-"addCaseNumber", "addCaseNumberResubmitted"</text>
+"addCaseNumber", "addCaseNumberResubmitted","checkApplicationC100EdgeCase"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1pv1c0z">
           <text></text>
@@ -689,7 +689,7 @@
       <rule id="DecisionRule_180qdvp">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_11znsc6">
-          <text>"checkHwfApplicationC100","checkAwpHwfCitizen"</text>
+          <text>"checkHwfApplicationC100","checkAwpHwfCitizen", "checkHwfApplicationC100EdgeCase"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0rn63cj">
           <text></text>

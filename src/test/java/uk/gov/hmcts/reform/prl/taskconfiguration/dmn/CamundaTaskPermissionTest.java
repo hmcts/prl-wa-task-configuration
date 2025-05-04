@@ -281,7 +281,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @ParameterizedTest
     @CsvSource(value = {
         "checkApplicationFL401", "checkApplicationResubmittedFL401",
-        "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401"
+        "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401",
+        "checkApplicationFL401EdgeCase"
     })
     void evaluate_task_admin_checkapplicationfl401(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -412,7 +413,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @ParameterizedTest
     @CsvSource(value = {
         "checkApplicationC100", "checkApplicationResubmittedC100",
-        "addCaseNumber", "addCaseNumberResubmitted"
+        "addCaseNumber", "addCaseNumberResubmitted", "checkApplicationC100EdgeCase"
     })
     void evaluate_task_ctsc_checkApplicationc100(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -1036,7 +1037,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "checkHwfApplicationC100", "checkAwpHwfCitizen"
+        "checkHwfApplicationC100", "checkAwpHwfCitizen", "checkHwfApplicationC100EdgeCase"
     })
     void evaluate_task_ctsc_checkHwfApplications(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
