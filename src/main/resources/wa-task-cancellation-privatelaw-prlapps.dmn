@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.27.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.29.0">
   <decision id="wa-task-cancellation-privatelaw-prlapps" name="Private Law Task cancellation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0z3jx1g" hitPolicy="COLLECT">
       <input id="Input_1" label="From State">
@@ -387,6 +387,52 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_04pltpt">
           <text>"newCaseTransferredToCourt"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0q4yeni">
+        <inputEntry id="UnaryTests_1ry1icw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wvr45o">
+          <text>"processPaymentForBulkscan"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kpmdw7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18tmd8o">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_184rlv1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lz0qnw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xlx9vu">
+          <text>"applicationBspCheck"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bbl3qz">
+        <inputEntry id="UnaryTests_0by0t6f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cjqv1i">
+          <text>"submitBulkScanCase"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uwmz7a">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1kwxusv">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jo5r02">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13jkcv6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lsmw16">
+          <text>"applicationBspCheck"</text>
         </outputEntry>
       </rule>
     </decisionTable>

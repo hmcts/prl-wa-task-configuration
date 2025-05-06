@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.26.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
-  <decision id="wa-task-types-privatelaw-prlapps" name="Private Law Task Types DMN"  camunda:historyTimeToLive="P90D">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_1u2v3e3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.27.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="wa-task-types-privatelaw-prlapps" name="Private Law Task Types DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_07kcj0o" hitPolicy="COLLECT">
       <input id="Input_1">
         <inputExpression id="InputExpression_1" typeRef="string">
@@ -742,16 +742,16 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_18yyuwr">
-              <description>NCTTC</description>
-              <inputEntry id="UnaryTests_1lvag5l">
-                <text></text>
-              </inputEntry>
-              <outputEntry id="LiteralExpression_001b1qm">
-                <text>"newCaseTransferredToCourt"</text>
-              </outputEntry>
-              <outputEntry id="LiteralExpression_02u7xnk">
-                <text>"Case transferred to your court"</text>
-              </outputEntry>
+        <description>NCTTC</description>
+        <inputEntry id="UnaryTests_1lvag5l">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_001b1qm">
+          <text>"newCaseTransferredToCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02u7xnk">
+          <text>"Case transferred to your court"</text>
+        </outputEntry>
       </rule>
       <rule id="DecisionRule_0gfcus8">
         <description>REQSERUPD</description>
@@ -763,6 +763,18 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0vqnczr">
           <text>"Request to upload Safeguarding Letter from Cafcass / Cafcass Cymru"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0o1p9bl">
+        <description>CBPCC100</description>
+        <inputEntry id="UnaryTests_1x1cnua">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17f2igf">
+          <text>"confirmBspPaymentC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10iqojr">
+          <text>"Confirm payment - Bulk scan"</text>
         </outputEntry>
       </rule>
     </decisionTable>
