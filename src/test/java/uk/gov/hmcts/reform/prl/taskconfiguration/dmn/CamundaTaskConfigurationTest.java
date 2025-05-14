@@ -1574,8 +1574,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
                 return "";
 
             case "reviewAdditionalApplication":
-                return "[Review other applications]"
-                    + "(/cases/case-details/${[CASE_REFERENCE]}/trigger/reviewAdditionalApplication)";
+                return "[Review other applications](/cases/case-details/${[CASE_REFERENCE]}"
+                    + "/trigger/reviewAdditionalApplication/reviewAdditionalApplication1)";
 
             case "reviewLangAndSmReq":
                 return "[Review case notes](/cases/case-details/${[CASE_REFERENCE]}#Case%20Notes)";

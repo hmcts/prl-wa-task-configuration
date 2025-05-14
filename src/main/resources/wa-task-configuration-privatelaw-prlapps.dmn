@@ -2126,7 +2126,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0epgsq5">
-          <text>"[Review other applications](/cases/case-details/${[CASE_REFERENCE]}/trigger/reviewAdditionalApplication)"</text>
+          <text>"[Review other applications](/cases/case-details/${[CASE_REFERENCE]}/trigger/reviewAdditionalApplication/reviewAdditionalApplication1)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0inxdyc">
           <text></text>
