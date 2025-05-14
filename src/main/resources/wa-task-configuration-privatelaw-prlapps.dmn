@@ -2091,7 +2091,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0u34pp5">
-          <text>"reviewAdditionalApplication", "checkAwpHwfCitizen"</text>
+          <text>"checkAwpHwfCitizen"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0a5q8yp">
           <text></text>
@@ -2106,6 +2106,29 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"[Review other applications](/cases/case-details/${[CASE_REFERENCE]}#Other%20applications)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03r9prs">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1guxlb0">
+        <inputEntry id="UnaryTests_1qko632">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xjcavl">
+          <text>"reviewAdditionalApplication"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_003oufs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rjepls">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1q21vcv">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0epgsq5">
+          <text>"[Review other applications](/cases/case-details/${[CASE_REFERENCE]}/trigger/reviewAdditionalApplication)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0inxdyc">
           <text></text>
         </outputEntry>
       </rule>
