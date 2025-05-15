@@ -1542,7 +1542,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
                 return "[Review other applications](/cases/case-details/${[CASE_REFERENCE]}#Other%20applications)";
 
             case "reviewLangAndSmReq":
-                return "[Review case notes](/cases/case-details/${[CASE_REFERENCE]}#Case%20Notes)";
+                return "[Review case notes and create flag]"
+                    + "(/cases/case-details/${[CASE_REFERENCE]}/trigger/c100ManageFlags/c100ManageFlags)";
 
             case "checkAwpHwfCitizen":
                 return "[Review other applications](/cases/case-details/${[CASE_REFERENCE]}#Other%20applications)";
