@@ -394,13 +394,13 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0i00lps">
-          <text>"reviewAdditionalApplication"</text>
+          <text>"systemReviewAdditionalApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_03us8v9">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_10xk1wk">
-          <text>"Reconfigure"</text>
+          <text>"Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19bo07v">
           <text></text>
@@ -409,7 +409,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0p8vgk2">
-          <text></text>
+          <text>"additionalApplicationId_"+additionalData.Data.additionalApplicationsBundleId</text>
         </outputEntry>
       </rule>
     </decisionTable>
