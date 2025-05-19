@@ -394,7 +394,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0i00lps">
-          <text>"reviewAdditionalApplication"</text>
+          <text>"systemReviewAdditionalApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_03us8v9">
           <text></text>
@@ -409,29 +409,6 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0p8vgk2">
-          <text>"additionalApplicationId_"+additionalData.Data.additionalApplicationsBundleId</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1f6cbfb">
-        <inputEntry id="UnaryTests_0s5nz01">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0fj9wm6">
-          <text>"systemReviewAdditionalApplication"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0vr5dew">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1oglhop">
-          <text>"Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_09gd4ep">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1bnnmaz">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1nhimh3">
           <text>"additionalApplicationId_"+additionalData.Data.additionalApplicationsBundleId</text>
         </outputEntry>
       </rule>
