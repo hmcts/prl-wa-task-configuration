@@ -389,29 +389,6 @@
           <text>"newCaseTransferredToCourt"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1sewafk">
-        <inputEntry id="UnaryTests_0m4cfie">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0i00lps">
-          <text>"systemReviewAdditionalApplication"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_03us8v9">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_10xk1wk">
-          <text>"Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_19bo07v">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1cfah3b">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0p8vgk2">
-          <text>"additionalApplicationId_"+additionalData.Data.additionalApplicationsBundleId</text>
-        </outputEntry>
-      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
