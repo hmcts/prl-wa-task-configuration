@@ -929,9 +929,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "recreateApplicationPack",
         "appStatementOfServiceByLiP",
         "appStatementOfServiceByBailiff",
-        "arrangeBailiffSOA",
-        "arrangeBailiffSOA",
-        "appStatementOfServiceByAdmin",
+        "appStatementOfServiceByAdmin"
     })
     void evaluate_task_admin_statementOfServiceBySol(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -956,6 +954,34 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         )));
     }
 
+    @ParameterizedTest
+    @CsvSource(value = {
+        "arrangeBailiffSOA",
+        "arrangeBailiffSOA",
+    })
+    void evaluate_task_admin_arrangeBailiffSoaByHearingCenterAdminC100(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("caseTypeOfApplication", "C100");
+        inputVariables.putValue("caseData", caseData);
+
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete",
+                "authorisations", "SKILL:ABA5:ORDERMANAGEMENTC100"
+            )
+
+        )));
+    }
+
 
     @ParameterizedTest
     @CsvSource(value = {
@@ -963,9 +989,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "recreateApplicationPack",
         "appStatementOfServiceByLiP",
         "appStatementOfServiceByBailiff",
-        "arrangeBailiffSOA",
-        "arrangeBailiffSOA",
-        "appStatementOfServiceByAdmin",
+        "appStatementOfServiceByAdmin"
     })
     void evaluate_task_admin_statementOfServiceBySolFL401(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -984,6 +1008,34 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401"
+            )
+
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+        "arrangeBailiffSOA",
+        "arrangeBailiffSOA"
+    })
+    void evaluate_task_admin_arrangeBailiffSoaByHearingCentreAdminFL401(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("caseTypeOfApplication", "FL401");
+        inputVariables.putValue("caseData", caseData);
+
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete",
                 "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401"
             )
 
@@ -1039,7 +1091,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(38));
+        assertThat(logic.getRules().size(), is(40));
     }
 
     @ParameterizedTest
