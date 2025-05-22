@@ -280,8 +280,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "checkApplicationFL401", "checkApplicationResubmittedFL401",
-        "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401"
+        "checkApplicationFL401", "checkApplicationResubmittedFL401"
     })
     void evaluate_task_admin_checkapplicationfl401(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
@@ -299,6 +298,37 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401"
+            )
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+        "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401"
+    })
+    void evaluate_task_admin_and_ctsc_sendToGateKeeperFL401(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            Map.of(
+                "name", "task-supervisor",
+                "value", "Read,Manage,Complete,Cancel,Assign,Unassign",
+                "autoAssignable", false
+            ), Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+                "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401"
+            ), Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-team-leader",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401"
             )
         )));
