@@ -310,6 +310,10 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "taskType", "appStatementOfServiceByAdmin",
                         "completionMode", "Auto"
                     ),
+                    Map.of(
+                        "taskType", "appStatementOfServiceBySol",
+                        "completionMode", "Auto"
+                    ),
                     Map.of()
                 )
             ),
