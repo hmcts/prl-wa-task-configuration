@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.14.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -10488,6 +10488,178 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_0ne44mp">
           <text>"hearingListed"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19vrkcb">
+        <inputEntry id="UnaryTests_1ozt21y">
+          <text>"createWaTaskForC100ReviewCaseNotesAndCreateFlags"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15qc1eu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0097egb">
+          <text>"C100","FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pj0try">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z0j0l1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nq3rc0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g18la4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p3t2vf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d9z2i6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_032d0j1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vq3hlz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09p4nex">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xq3384">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02etxfy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yum5zs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kmptr4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07wu9t1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sg7b8d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_142llam">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bu8u6a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vnbysv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bvhdeh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j4wcza">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a8gdv3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1w46rhy">
+          <text>"reviewCaseNotesAndCreateFlags"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10x9yhu">
+          <text>"Case notes reviewed and flag created"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ga4jzj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08azlht">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_17zfj0c">
+        <inputEntry id="UnaryTests_1545e4q">
+          <text>"createWaTaskForFL401ReviewCaseNotesAndCreateFlags"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uuk4k6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x89shw">
+          <text>"C100","FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wzd11l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_144w8i9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ft4c5p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18m896c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xsipi9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n91sg5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04xv8fb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vt2dft">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bgwdhq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mu4s72">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qs404e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fx31lt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02eomgj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yjhcwa">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09rbpf5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1oro6f8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t5pl66">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yuypoc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tn9oyy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d7ni6b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r7kbe5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nu91by">
+          <text>"reviewCaseNotesAndCreateFlags"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jbkbxe">
+          <text>"Case notes reviewed and flag created"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dpebp7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1h9wqfl">
+          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
