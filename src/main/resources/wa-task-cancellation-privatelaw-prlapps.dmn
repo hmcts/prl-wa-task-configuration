@@ -389,6 +389,29 @@
           <text>"newCaseTransferredToCourt"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1bsjxkn">
+        <inputEntry id="UnaryTests_1arm7i8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16hxdy7">
+          <text>"citizenStatementOfService"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0horrj5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02suz3b">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_163385c">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09yqfrg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kw59jw">
+          <text>"statementOfServiceByCitizen"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>

@@ -748,12 +748,23 @@
       </rule>
       <rule id="DecisionRule_05kvogz">
         <inputEntry id="UnaryTests_0cb5u2c">
-          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","returnApplication","sendOrReplyToMessages","adminRemoveLegalRepresentativeC100","adminRemoveLegalRepresentativeFL401","c100ManageFlags","fl401ManageFlags","statementOfService","serviceOfDocuments","fl401ListOnNotice","listWithoutNotice","caseNumber","fl401SendToGateKeeper"</text>
+          <text>"statementOfService"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1o5rfjh">
-          <text></text>
+          <text>"appStatementOfServiceBySol"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09pxu1a">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ttgpjf">
+        <inputEntry id="UnaryTests_1v7zhnr">
+          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","returnApplication","sendOrReplyToMessages","adminRemoveLegalRepresentativeC100","adminRemoveLegalRepresentativeFL401","c100ManageFlags","fl401ManageFlags","statementOfService","serviceOfDocuments","fl401ListOnNotice","listWithoutNotice","caseNumber"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1g8kdqq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wnyjff">
           <text></text>
         </outputEntry>
       </rule>
