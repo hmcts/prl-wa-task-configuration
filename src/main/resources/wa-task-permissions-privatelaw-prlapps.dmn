@@ -234,6 +234,37 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0x8fgsl">
+        <description>Judicial task permissions</description>
+        <inputEntry id="UnaryTests_01o0ofx">
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping",
+"gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided", "replyToMessageForJudiciary"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wbmqfn">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ds6u2n">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pdjj5h">
+          <text>"fl401-judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1te6s75">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bbrh75">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01gv21b">
+          <text>294</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rm2j4h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0oggfgn">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1tvtlre">
         <description>Judicial task permissions</description>
         <inputEntry id="UnaryTests_13ukkz6">
