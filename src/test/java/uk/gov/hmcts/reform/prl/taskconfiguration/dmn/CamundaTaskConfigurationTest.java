@@ -1516,7 +1516,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
             case "reviewRaRequestsC100":
                 return "[Review RA request](/cases/case-details/${[CASE_REFERENCE]}/trigger"
-                    + "/c100ManageFlags/c100ManageFlags)";
+                    + "/c100CheckWaTaskStatus/c100CheckWaTaskStatus)";
 
             case "reviewRaRequestsFL401":
                 return "[Review RA request](/cases/case-details/${[CASE_REFERENCE]}"
