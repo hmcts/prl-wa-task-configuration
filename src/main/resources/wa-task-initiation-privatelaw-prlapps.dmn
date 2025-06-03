@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.14.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -6188,7 +6188,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0r8hxul">
         <inputEntry id="UnaryTests_0gnrm2d">
-          <text>"sendOrReplyToMessages"</text>
+          <text>"sendOrReplyToMessages","reviewAdditionalApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1jald4g">
           <text></text>
@@ -6360,7 +6360,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0df7jsz">
         <inputEntry id="UnaryTests_1sygclg">
-          <text>"sendOrReplyToMessages"</text>
+          <text>"sendOrReplyToMessages","reviewAdditionalApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1k05qkm">
           <text></text>
@@ -6532,7 +6532,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0vppllf">
         <inputEntry id="UnaryTests_1pp1kwo">
-          <text>"sendOrReplyToMessages"</text>
+          <text>"sendOrReplyToMessages","reviewAdditionalApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1j2ccjw">
           <text></text>
@@ -6704,7 +6704,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0m557gk">
         <inputEntry id="UnaryTests_1pr8xyx">
-          <text>"sendOrReplyToMessages"</text>
+          <text>"sendOrReplyToMessages","reviewAdditionalApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0q375k1">
           <text></text>
@@ -8935,7 +8935,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0rhpllo">
-          <text>"reviewAddtlApp"</text>
+          <text>"additionalApplicationId_"+additionalData.Data.additionalApplicationsBundleId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_13y2216">
@@ -9021,7 +9021,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nwprl1">
-          <text>"reviewAddtlApp"</text>
+          <text>"additionalApplicationId_"+additionalData.Data.additionalApplicationsBundleId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1stn34d">
@@ -9107,7 +9107,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1umse6a">
-          <text>"reviewAddtlAppCitizen"</text>
+          <text>"additionalApplicationId_"+additionalData.Data.additionalApplicationsBundleId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_146igrl">
@@ -9193,7 +9193,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1v8dffw">
-          <text>"reviewAddtlAppCitizen"</text>
+          <text>"additionalApplicationId_"+additionalData.Data.additionalApplicationsBundleId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1ykj4qb">

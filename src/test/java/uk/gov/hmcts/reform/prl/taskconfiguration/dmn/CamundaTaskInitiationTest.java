@@ -1102,12 +1102,18 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "awpPaymentSuccessCallback",
                 null,
-                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"awpWaTaskToBeCreated\":\"Yes\",\n"
+                                      + "      \"awpWaTaskName\":\"D89 - "
+                                      + "Request for personal service by a court bailiff\"\n,"
+                                      + "\"additionalApplicationsBundleId\":\"" + null + "\"\n"
+                                      + "   }}"),
                 singletonList(
                     Map.of(
                         "taskId", "reviewAdditionalApplication",
                         "name", "Review additional application",
-                        "processCategories", "reviewAddtlApp"
+                        "processCategories", "additionalApplicationId_null"
                     )
                 )
             ),
@@ -1118,13 +1124,14 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "   \"Data\":{\n"
                                       + "      \"awpWaTaskToBeCreated\":\"Yes\",\n"
                                       + "      \"awpWaTaskName\":\"D89 - "
-                                      + "Request for personal service by a court bailiff\"\n"
+                                      + "Request for personal service by a court bailiff\"\n,"
+                                      + "\"additionalApplicationsBundleId\":\"" + "1234567890" + "\"\n"
                                       + "   }}"),
                 singletonList(
                     Map.of(
                         "taskId", "reviewAdditionalApplication",
                         "name", "Review additional application",
-                        "processCategories", "reviewAddtlApp"
+                        "processCategories", "additionalApplicationId_1234567890"
                     )
                 )
             ),
@@ -1205,7 +1212,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"isTheCaseInDraftState\":\"" + "Yes" + "\"\n"
+                                      + "      \"isTheCaseInDraftState\":\"" + "Yes" + "\"\n,"
+                                      + "      \"additionalApplicationsBundleId\":\"" + "1234567890" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
@@ -1219,12 +1227,18 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "citizenAwpCreate",
                 null,
-                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"awpWaTaskToBeCreated\":\"Yes\",\n"
+                                      + "      \"awpWaTaskName\":\"D89 - "
+                                      + "Request for personal service by a court bailiff\"\n,"
+                                      + "\"additionalApplicationsBundleId\":\"" + null + "\"\n"
+                                      + "   }}"),
                 singletonList(
                     Map.of(
                         "taskId", "reviewAdditionalApplication",
                         "name", "Review additional application",
-                        "processCategories", "reviewAddtlAppCitizen"
+                        "processCategories", "additionalApplicationId_null"
                     )
                 )
             ),
@@ -1243,12 +1257,17 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "processHwfUpdateAwpStatus",
                 null,
-                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"awpWaTaskToBeCreated\":\"Yes\",\n"
+                                      + "      \"awpWaTaskName\":\"Review additional application\"\n,"
+                                      + "\"additionalApplicationsBundleId\":\"" + null + "\"\n"
+                                      + "   }}"),
                 singletonList(
                     Map.of(
                         "taskId", "reviewAdditionalApplication",
                         "name", "Review additional application",
-                        "processCategories", "reviewAddtlAppCitizen"
+                        "processCategories", "additionalApplicationId_null"
                     )
                 )
             ),
@@ -1257,14 +1276,15 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"isTheCaseInDraftState\":\"" + "No" + "\"\n"
+                                      + "      \"isTheCaseInDraftState\":\"" + "No" + "\"\n,"
+                                      + "      \"additionalApplicationsBundleId\":\"" + "1234567890" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "reviewAdditionalApplication",
                         "name", "Review additional application",
-                        "processCategories", "reviewAddtlAppCitizen"
+                        "processCategories", "additionalApplicationId_1234567890"
                     )
                 )
             ),
