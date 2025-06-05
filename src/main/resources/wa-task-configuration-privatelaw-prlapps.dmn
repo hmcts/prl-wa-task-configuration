@@ -1257,6 +1257,29 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1cdeboi">
+        <inputEntry id="UnaryTests_17hhv59">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tbjt71">
+          <text>"reviewLangAndSmReq"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1muipym">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1resgz6">
+          <text>not(null)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1x12rf4">
+          <text>"additionalProperties_caseNoteId"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gvrlfm">
+          <text>caseNoteId</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lh7ecy">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_01ktw4o">
         <inputEntry id="UnaryTests_0jyxna7">
           <text></text>
@@ -2243,29 +2266,6 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"[Create notice of proceeding or add date to Judge's order]"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1o8u5ip">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1jw6wyz">
-        <inputEntry id="UnaryTests_0awlsk7">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_02078zh">
-          <text>"reviewLangAndSmReq"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_00pi96s">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_05t8hjt">
-          <text>not(null)</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0gugltz">
-          <text>"additionalProperties_caseNoteId"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1klw9gh">
-          <text>caseNoteId</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1aj9yfr">
           <text></text>
         </outputEntry>
       </rule>
