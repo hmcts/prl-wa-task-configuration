@@ -337,6 +337,15 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "c100CheckWaTaskStatus",
+                asList(
+                    Map.of(
+                        "taskType", "reviewRaRequestsC100",
+                        "completionMode", "Auto"
+                    )
+                )
+            ),
+            Arguments.of(
                 "fl401ManageFlags",
                 asList(
                     Map.of(
@@ -414,7 +423,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(68));
+        assertThat(logic.getRules().size(), is(69));
     }
 
 
