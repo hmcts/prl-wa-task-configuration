@@ -704,7 +704,7 @@
       </rule>
       <rule id="DecisionRule_0gmd5ub">
         <inputEntry id="UnaryTests_1m0rmfe">
-          <text>"c100CheckWaTaskStatus"</text>
+          <text>"c100ReviewRARequest"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1xd52kz">
           <text>"reviewRaRequestsC100"</text>
@@ -721,6 +721,17 @@
           <text>"reviewRaRequestsFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_096zfw3">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1131aho">
+        <inputEntry id="UnaryTests_1ctsyx7">
+          <text>"fl401ReviewRARequest"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0dcxrh1">
+          <text>"reviewRaRequestsFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0x484f3">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
