@@ -4,6 +4,7 @@ package uk.gov.hmcts.reform.prl.taskconfiguration.dmn;
 import org.camunda.bpm.dmn.engine.DmnDecisionTableResult;
 import org.camunda.bpm.dmn.engine.impl.DmnDecisionTableImpl;
 import org.camunda.bpm.engine.variable.VariableMap;
+import org.camunda.bpm.engine.variable.Variables;
 import org.camunda.bpm.engine.variable.impl.VariableMapImpl;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -32,9 +33,9 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(3));
+        assertThat(logic.getInputs().size(), is(4));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(96));
+        assertThat(logic.getRules().size(), is(97));
     }
 
 
@@ -1110,6 +1111,31 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         )));
     }
 
+    @Test
+    void when_given_task_reviewLangAndSmReq_then_return_additionalProperties_caseNoteId() {
+        VariableMap inputVariables = Variables.createVariables();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", "reviewLangAndSmReq",
+                   "name", "Review Language and SM requirements",
+                   "__processCategory__caseNoteId_123",""
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("additionalProperties_caseNoteId"))
+            .toList();
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "additionalProperties_caseNoteId",
+            "value", "123"
+        )));
+    }
+
     @ParameterizedTest
     @CsvSource({
         "reviewSpecificAccessRequestLegalOps","replyToMessageForLAC100","replyToMessageForLA"
@@ -1542,7 +1568,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
                 return "[Review other applications](/cases/case-details/${[CASE_REFERENCE]}#Other%20applications)";
 
             case "reviewLangAndSmReq":
-                return "[Review case notes](/cases/case-details/${[CASE_REFERENCE]}#Case%20Notes)";
+                return "[Create Case Flag](/cases/case-details/${[CASE_REFERENCE]}/trigger/c100CreateFlagsForGivenCaseNote/c100CreateFlagsForGivenCaseNote1)";
 
             case "checkAwpHwfCitizen":
                 return "[Review other applications](/cases/case-details/${[CASE_REFERENCE]}#Other%20applications)";
