@@ -35,7 +35,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(4));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(97));
+        assertThat(logic.getRules().size(), is(98));
     }
 
 
@@ -379,6 +379,41 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
         Map<String, Object> caseData = new HashMap<>(); // allow null values
         caseData.put("orderNameForAdminCreatedOrder", "Cooper");
+        inputVariables.putValue("caseData", caseData);
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("dueDateIntervalDays"))
+            .toList();
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "dueDateIntervalDays",
+            "value", "2"
+        )));
+
+        assertDescriptionField(taskType, dmnDecisionTableResult);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "checkAwpHwfCitizen"
+    })
+    void when_given_task_type_then_return_dueDateIntervalDays_and_validate_description_for_checkAwpHwfCitizen(
+        String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "awpWaTaskLastName"
+            )
+        );
+
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("awpWaTaskName", "awpWaTaskFirstName");
         inputVariables.putValue("caseData", caseData);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
@@ -1565,7 +1600,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
                 return "";
 
             case "reviewAdditionalApplication":
-                return "[Review other applications](/cases/case-details/${[CASE_REFERENCE]}#Other%20applications)";
+                return "[Review other applications](/cases/case-details/${[CASE_REFERENCE]}"
+                    + "/trigger/reviewAdditionalApplication/reviewAdditionalApplication1)";
 
             case "reviewLangAndSmReq":
                 return "[Create Case Flag](/cases/case-details/${[CASE_REFERENCE]}/trigger"
