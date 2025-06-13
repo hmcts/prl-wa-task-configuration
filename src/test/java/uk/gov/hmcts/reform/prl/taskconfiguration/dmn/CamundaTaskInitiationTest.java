@@ -1450,14 +1450,15 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"hearingListed\":\"" + "true" + "\"\n"
+                                      + "      \"hearingListed\":\"" + "true" + "\"\n,"
+                                      + "      \"currentHearingId\": \"123\""
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "hearingListed",
                         "name", "Hearing has been listed",
-                        "processCategories", "hearingListed"
+                        "processCategories", "hearingId_123"
                     )
                 )
             )

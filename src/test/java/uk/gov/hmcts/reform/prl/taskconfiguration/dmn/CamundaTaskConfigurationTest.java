@@ -4,6 +4,7 @@ package uk.gov.hmcts.reform.prl.taskconfiguration.dmn;
 import org.camunda.bpm.dmn.engine.DmnDecisionTableResult;
 import org.camunda.bpm.dmn.engine.impl.DmnDecisionTableImpl;
 import org.camunda.bpm.engine.variable.VariableMap;
+import org.camunda.bpm.engine.variable.Variables;
 import org.camunda.bpm.engine.variable.impl.VariableMapImpl;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -32,9 +33,9 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(4));
+        assertThat(logic.getInputs().size(), is(5));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(98));
+        assertThat(logic.getRules().size(), is(99));
     }
 
 
@@ -1595,7 +1596,10 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
                     + "/trigger/serviceOfDocuments/serviceOfDocuments1)";
 
             case "hearingListed":
-                return "[Create notice of proceeding or add date to Judge's order]";
+                return "[Create notice of proceeding](/cases/case-details/${[CASE_REFERENCE]}"
+                    + "/trigger/manageOrders/manageOrders1) or\n"
+                    + "[Edit and serve an order](/cases/case-details/${[CASE_REFERENCE]}"
+                    + "/trigger/editAndApproveAnOrder/editAndApproveAnOrder1)";
 
             default:
                 break;
@@ -1853,5 +1857,30 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         assertDescriptionField(taskType, dmnDecisionTableResult);
+    }
+
+    @Test
+    void when_given_task_hearingListed_then_return_additionalProperties_hearingId() {
+        VariableMap inputVariables = Variables.createVariables();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", "hearingListed",
+                   "name", "Hearing has been listed",
+                   "__processCategory__hearingId_123",""
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("additionalProperties_hearingId"))
+            .toList();
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "additionalProperties_hearingId",
+            "value", "123"
+        )));
     }
 }
