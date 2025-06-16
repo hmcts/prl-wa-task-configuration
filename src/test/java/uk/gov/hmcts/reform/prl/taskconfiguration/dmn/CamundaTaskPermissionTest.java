@@ -639,7 +639,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "autoAssignable", false,
                 "name", "hearing-centre-team-leader",
                 "roleCategory", "ADMIN",
-                "authorisations", "SKILL:ABA5:CHECKAPPLICATIONC100",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete"
             )
             )));
