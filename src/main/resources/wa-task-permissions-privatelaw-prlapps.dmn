@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-permissions-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-permissions-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.32.0">
   <decision id="wa-task-permissions-privatelaw-prlapps" name="Private Law Permissions DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_1pr5oic" hitPolicy="RULE ORDER">
       <input id="InputClause_12crj6e" label="Task Type" biodi:width="578" camunda:inputVariable="taskType">
@@ -1254,6 +1254,36 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0wxi2vw">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1joirlp">
+        <description>Team Leader task permission</description>
+        <inputEntry id="UnaryTests_1oqx15p">
+          <text>"reviewLangAndSmReq"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jo2thi">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0uz67n9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01ob1oa">
+          <text>"hearing-centre-team-leader"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07mzv82">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ir6v19">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0htdljv">
+          <text>"SKILL:ABA5:CHECKAPPLICATIONC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0v8jfk3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bksgnm">
           <text>false</text>
         </outputEntry>
       </rule>
