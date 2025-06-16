@@ -693,7 +693,7 @@
       </rule>
       <rule id="DecisionRule_0atr8e3">
         <inputEntry id="UnaryTests_0tzwc02">
-          <text>"c100ManageFlags"</text>
+          <text>"closeReviewRARequestTask"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vkor0k">
           <text>"reviewRaRequestsC100"</text>
@@ -702,36 +702,14 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0gmd5ub">
-        <inputEntry id="UnaryTests_1m0rmfe">
-          <text>"c100ReviewRARequest"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1xd52kz">
-          <text>"reviewRaRequestsC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1t938h8">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0djzqgn">
         <inputEntry id="UnaryTests_16os9kl">
-          <text>"fl401ManageFlags"</text>
+          <text>"closeReviewRARequestTask"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0k450gu">
           <text>"reviewRaRequestsFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_096zfw3">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1131aho">
-        <inputEntry id="UnaryTests_1ctsyx7">
-          <text>"fl401ReviewRARequest"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0dcxrh1">
-          <text>"reviewRaRequestsFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0x484f3">
           <text>"Auto"</text>
         </outputEntry>
       </rule>

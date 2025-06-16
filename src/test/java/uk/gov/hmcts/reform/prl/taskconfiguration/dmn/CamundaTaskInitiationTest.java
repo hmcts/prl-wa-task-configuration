@@ -41,7 +41,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(24));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(119));
+        assertThat(logic.getRules().size(), is(117));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -794,38 +794,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "name", "Remove legal representative",
                         "processCategories", "citizenNoC",
                         "taskId", "removeLegalRepresentativeFL401"
-                    )
-                )
-            ),
-            Arguments.of(
-                "c100RequestSupport",
-                "JUDICIAL_REVIEW",
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "reviewRaRequestsC100",
-                        "name", "Review RA request",
-                        "processCategories", "reviewRAC100"
-                    )
-                )
-            ),
-            Arguments.of(
-                "fl401RequestSupport",
-                "JUDICIAL_REVIEW",
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "reviewRaRequestsFL401",
-                        "name", "Review RA request",
-                        "processCategories", "reviewRAFL401"
                     )
                 )
             ),
