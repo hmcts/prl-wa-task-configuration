@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.32.0">
   <decision id="wa-task-cancellation-privatelaw-prlapps" name="Private Law Task cancellation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0z3jx1g" hitPolicy="COLLECT">
       <input id="Input_1" label="From State">
@@ -410,6 +410,29 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0kw59jw">
           <text>"statementOfServiceByCitizen"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vrxny8">
+        <inputEntry id="UnaryTests_1qs3jhm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_123t1jn">
+          <text>"hmcCloseHearingList"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0eiz9y2">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05ayftk">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1n2ic59">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ejm4vn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jwgk21">
+          <text>"hearingId_"+additionalData.Data.currentHearingId </text>
         </outputEntry>
       </rule>
     </decisionTable>
