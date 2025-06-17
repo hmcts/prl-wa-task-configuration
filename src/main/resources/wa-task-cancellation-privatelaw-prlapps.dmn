@@ -432,7 +432,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1i5useq">
-          <text>"reviewRaRequestsC100"</text>
+          <text>"reviewRAC100"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1fmbgee">
@@ -455,7 +455,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1g6ceip">
-          <text>"reviewRaRequestsFL401"</text>
+          <text>"reviewRAFL401"</text>
         </outputEntry>
       </rule>
     </decisionTable>
