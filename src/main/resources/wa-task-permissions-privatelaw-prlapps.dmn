@@ -1258,6 +1258,36 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_07r3v1b">
+        <description>Team Leader task permission</description>
+        <inputEntry id="UnaryTests_1yde18z">
+          <text>"reviewAdditionalApplication"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d5q21k">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fnl5i5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1udulib">
+          <text>"hearing-centre-team-leader"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rbpc0b">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_146a01b">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d7wkby">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03xgzwg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wxi2vw">
+          <text>false</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
