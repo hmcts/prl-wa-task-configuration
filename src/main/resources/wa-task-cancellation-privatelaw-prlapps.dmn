@@ -412,29 +412,6 @@
           <text>"statementOfServiceByCitizen"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1vrxny8">
-        <inputEntry id="UnaryTests_1qs3jhm">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_123t1jn">
-          <text>"hmcCloseHearingList"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0eiz9y2">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_05ayftk">
-          <text>"Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1n2ic59">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0ejm4vn">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1jwgk21">
-          <text>"hearingId_"+additionalData.Data.currentHearingId </text>
-        </outputEntry>
-      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
