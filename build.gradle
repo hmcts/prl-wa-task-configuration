@@ -127,9 +127,9 @@ pitest {
   mutationThreshold = 80
 }
 
-project.tasks['pitest'].group = "Verification"
-
-project.tasks['sonarqube'].dependsOn test, integration, jacocoTestReport
+tasks.named("sonarqube") {
+  dependsOn(test, integration, jacocoTestReport)
+}
 
 sonarqube {
   properties {
