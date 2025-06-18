@@ -1,7 +1,5 @@
 # prl-wa-task-configuration
 
-[![Build Status](https://travis-ci.org/hmcts/prl-wa-task-configuration.svg?branch=master)](https://travis-ci.org/hmcts/prl-wa-task-configuration)
-
 ## Notes
 
 Since Spring Boot 2.1 bean overriding is disabled. If you want to enable it you will need to set `spring.main.allow-bean-definition-overriding` to `true`.
