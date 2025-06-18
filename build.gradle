@@ -1,7 +1,6 @@
 plugins {
   id 'application'
   id 'checkstyle'
-  id 'pmd'
   id 'jacoco'
   id 'io.spring.dependency-management' version '1.0.11.RELEASE'
   id 'org.springframework.boot' version '2.7.18'
@@ -12,8 +11,11 @@ plugins {
   id 'io.freefair.lombok' version '8.1.0'
 }
 
-group = 'uk.gov.hmcts.reform'
-version = '0.0.1'
+application {
+    mainClass = 'uk.gov.hmcts.reform.prl.taskconfiguration.Application'
+    group = 'uk.gov.hmcts.reform'
+    version = '0.0.1'
+}
 
 java {
   toolchain {
@@ -50,11 +52,11 @@ sourceSets {
   }
 }
 
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
   options.compilerArgs << "-Xlint:unchecked" << "-Werror"
 }
 
-tasks.withType(Test) {
+tasks.withType(Test).configureEach {
   useJUnitPlatform()
 
   testLogging {
@@ -62,18 +64,14 @@ tasks.withType(Test) {
   }
 }
 
-test {
-  failFast = true
-}
-
-task functional(type: Test) {
+tasks.register('functional', Test) {
   description = "Runs functional tests"
   group = "Verification"
   testClassesDirs = sourceSets.functionalTest.output.classesDirs
   classpath = sourceSets.functionalTest.runtimeClasspath
 }
 
-task integration(type: Test) {
+tasks.register('integration', Test) {
   description = "Runs integration tests"
   group = "Verification"
   testClassesDirs = sourceSets.integrationTest.output.classesDirs
@@ -81,13 +79,13 @@ task integration(type: Test) {
   failFast = true
 }
 
-task smoke(type: Test) {
+tasks.register('smoke', Test) {
   description = "Runs Smoke Tests"
   testClassesDirs = sourceSets.smokeTest.output.classesDirs
   classpath = sourceSets.smokeTest.runtimeClasspath
 }
 
-task tests {
+tasks.register('tests') {
   description = "Runs junit , integration and functional tests"
   group = "Verification"
   dependsOn test, integration, smoke, functional
@@ -97,15 +95,6 @@ checkstyle {
   maxWarnings = 0
   toolVersion = '8.29'
   getConfigDirectory().set(new File(rootDir, 'config/checkstyle'))
-}
-
-pmd {
-  toolVersion = "6.18.0"
-  sourceSets = [sourceSets.main]
-  reportsDir = file("$project.buildDir/reports/pmd")
-  // https://github.com/pmd/pmd/issues/876
-  ruleSets = []
-  ruleSetFiles = files("config/pmd/ruleset.xml")
 }
 
 jacocoTestCoverageVerification {
@@ -237,8 +226,6 @@ repositories {
 }
 
 def versions = [
-  junit           : '5.7.2',
-  junitPlatform   : '1.7.2',
   reformLogging   : '5.1.7',
   springfoxSwagger: '3.0.0',
   camunda         : '7.18.0',
@@ -246,17 +233,6 @@ def versions = [
   sonarPitest     : '0.5',
   tomcat          : '9.0.104',
   log4j           : '2.17.1'
-
-]
-
-ext.libraries = [
-  junit5: [
-    "org.junit.jupiter:junit-jupiter-api:${versions.junit}",
-    "org.junit.jupiter:junit-jupiter-engine:${versions.junit}",
-    "org.junit.jupiter:junit-jupiter-params:${versions.junit}",
-    "org.junit.platform:junit-platform-commons:${versions.junitPlatform}",
-    "org.junit.platform:junit-platform-engine:${versions.junitPlatform}"
-  ]
 ]
 
 dependencies {
@@ -283,18 +259,14 @@ dependencies {
   testImplementation group: 'org.pitest', name: 'pitest', version: versions.pitest
   testImplementation 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.5.2'
 
-  testImplementation "org.junit.vintage:junit-vintage-engine:${versions.junit}"
   testImplementation group: 'org.codehaus.sonar-plugins', name: 'sonar-pitest-plugin', version: versions.sonarPitest
-  testImplementation libraries.junit5
-  testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', {
-    exclude group: 'junit', module: 'junit'
-    exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-  }
+  testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
 
   testImplementation group: 'org.camunda.bpm.dmn', name: 'camunda-engine-dmn', version: versions.camunda
   testImplementation group: 'org.camunda.bpm.assert', name: 'camunda-bpm-assert', version: '8.0.0'
   testImplementation group: 'org.camunda.bpm', name: 'camunda-engine', version: versions.camunda
 
+  integrationTestImplementation 'org.apiguardian:apiguardian-api:1.1.2'
   integrationTestImplementation sourceSets.main.runtimeClasspath
   integrationTestImplementation sourceSets.test.runtimeClasspath
 
@@ -303,11 +275,9 @@ dependencies {
   smokeTestImplementation sourceSets.main.runtimeClasspath
 }
 
-tasks.withType(Copy) {
+tasks.withType(Copy).configureEach {
   duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
-
-mainClassName = 'uk.gov.hmcts.reform.prl.taskconfiguration.Application'
 
 bootJar {
   getArchiveFileName().set(provider {
