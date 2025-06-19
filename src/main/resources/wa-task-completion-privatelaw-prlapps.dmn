@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.32.0">
   <decision id="wa-task-completion-privatelaw-prlapps" name="Private Law Task completion DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_01re27m" hitPolicy="COLLECT">
       <input id="eventId" label="Event ID" biodi:width="437">
@@ -54,7 +54,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1q8g2nu">
-        <inputEntry id="UnaryTests_0htkc9k">        
+        <inputEntry id="UnaryTests_0htkc9k">
           <text>"fl401AddCaseNumber"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1pxkm8l">
@@ -759,7 +759,7 @@
       </rule>
       <rule id="DecisionRule_0amdm31">
         <inputEntry id="UnaryTests_1aj31gy">
-          <text>"c100CreateFlagsForGivenCaseNote"</text>
+          <text>"createFlagsForGivenCaseNote"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_02gcm0i">
           <text>"reviewLangAndSmReq"</text>
@@ -770,7 +770,7 @@
       </rule>
       <rule id="DecisionRule_0ttgpjf">
         <inputEntry id="UnaryTests_1v7zhnr">
-          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","returnApplication","sendOrReplyToMessages","adminRemoveLegalRepresentativeC100","adminRemoveLegalRepresentativeFL401","c100ManageFlags","fl401ManageFlags","statementOfService","serviceOfDocuments","fl401ListOnNotice","listWithoutNotice","caseNumber","c100CreateFlagsForGivenCaseNote"</text>
+          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","returnApplication","sendOrReplyToMessages","adminRemoveLegalRepresentativeC100","adminRemoveLegalRepresentativeFL401","c100ManageFlags","fl401ManageFlags","statementOfService","serviceOfDocuments","fl401ListOnNotice","listWithoutNotice","caseNumber","createFlagsForGivenCaseNote"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1g8kdqq">
           <text></text>

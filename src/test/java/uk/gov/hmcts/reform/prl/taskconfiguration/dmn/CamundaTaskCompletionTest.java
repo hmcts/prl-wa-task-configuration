@@ -394,7 +394,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "c100CreateFlagsForGivenCaseNote",
+                "createFlagsForGivenCaseNote",
                 List.of(
                     Map.of(
                         "taskType", "reviewLangAndSmReq",
