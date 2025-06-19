@@ -1230,7 +1230,7 @@
       <rule id="DecisionRule_07r3v1b">
         <description>Team Leader task permission</description>
         <inputEntry id="UnaryTests_1yde18z">
-          <text>"reviewAdditionalApplication"</text>
+          <text>"reviewAdditionalApplication","reviewLangAndSmReq"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0d5q21k">
           <text></text>
@@ -1254,36 +1254,6 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0wxi2vw">
-          <text>false</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1joirlp">
-        <description>Team Leader task permission</description>
-        <inputEntry id="UnaryTests_1oqx15p">
-          <text>"reviewLangAndSmReq"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0jo2thi">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0uz67n9">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_01ob1oa">
-          <text>"hearing-centre-team-leader"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_07mzv82">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1ir6v19">
-          <text>"ADMIN"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0htdljv">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0v8jfk3">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0bksgnm">
           <text>false</text>
         </outputEntry>
       </rule>
