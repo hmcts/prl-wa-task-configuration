@@ -59,6 +59,13 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
             "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
             "authorisations", "315"
     );
+    private static final Map<String, Serializable> judgefl401 = Map.of(
+        "autoAssignable", false,
+        "name", "fl401-judge",
+        "roleCategory", "JUDICIAL",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+        "authorisations", "294"
+    );
 
     private static final Map<String, Serializable> specificJudge = Map.of(
         "autoAssignable", false,
@@ -157,6 +164,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                     allocatedJudgeTwo,
                     allocatedLegalAdviserThree,
                     judgeOne,
+                    judgefl401,
                     tribunalCaseworker
                 )
             ),
@@ -168,6 +176,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                     allocatedJudgeTwo,
                     allocatedLegalAdviserThree,
                     judgeOne,
+                    judgefl401,
                     tribunalCaseworker
                 )
             )
@@ -272,6 +281,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
             taskSupervisor,
             gatekeepingJudge,
             judgeOne,
+            judgefl401,
             allocatedLegalAdviserOne,
             tribunalCaseworker
         )));
@@ -892,7 +902,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
             taskSupervisor,
             allocatedJudge,
-            judgeOne
+            judgeOne,
+            judgefl401
         )));
     }
 
