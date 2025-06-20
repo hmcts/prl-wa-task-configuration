@@ -183,8 +183,15 @@ dependencyManagement {
   dependencies {
     dependency group: 'org.bouncycastle', name: 'bcpkix-jdk15on', version: '1.68'
     // CVE-2018-10237 - Unbounded memory allocation
+
     dependencySet(group: 'com.google.guava', version: '33.1.0-jre') {
       entry 'guava'
+    }
+
+    // spring boot 2.7.x bundled logging
+    dependencySet(group: 'ch.qos.logback', version: '1.4.14') {
+      entry 'logback-classic'
+      entry 'logback-core'
     }
 
     //CVE-2021-28170
