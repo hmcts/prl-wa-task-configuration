@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.32.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN" camunda:historyTimeToLive="P90D">
     <informationRequirement id="InformationRequirement_1iac9a2">
       <requiredDecision href="#Decision_11ew6tt" />
     </informationRequirement>
     <informationRequirement id="InformationRequirement_1pga9vx">
       <requiredDecision href="#Decision_1c9anyl" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0hvv1mt">
+      <requiredDecision href="#Decision_1xj18f0" />
     </informationRequirement>
     <decisionTable id="DecisionTable_14cx079" hitPolicy="COLLECT">
       <input id="InputClause_1gxyo7f" label="CCD Case Data" camunda:inputVariable="caseData">
@@ -29,6 +32,11 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>additionalApplicationId</text>
         </inputExpression>
       </input>
+      <input id="InputClause_0bwrqte" label="Case Note ID">
+        <inputExpression id="LiteralExpression_1dryxy4" typeRef="string">
+          <text>caseNoteId</text>
+        </inputExpression>
+      </input>
       <output id="Output_1" label="Name" name="name" typeRef="string" biodi:width="351" />
       <output id="OutputClause_021y3bb" label="Value" name="value" typeRef="string" biodi:width="803" />
       <output id="OutputClause_06m3ktt" label="Can Reconfigure?" name="canReconfigure" typeRef="boolean" biodi:width="192" />
@@ -43,6 +51,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_05yw74c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17s6mu9">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0nkps91">
@@ -68,6 +79,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1s3tgte">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1lj9r1x">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0selern">
           <text>"appealType"</text>
         </outputEntry>
@@ -89,6 +103,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0l13ezh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d596yp">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0etwrk3">
@@ -114,6 +131,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_186uq8r">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0u3nn03">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0kun6mv">
           <text>"location"</text>
         </outputEntry>
@@ -135,6 +155,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c86qsn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iw5sbi">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1lvlmxm">
@@ -160,6 +183,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0ng29w7">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1n1wmqq">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_04r7w97">
           <text>"caseManagementCategory"</text>
         </outputEntry>
@@ -181,6 +207,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0y2434h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oc5syr">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08ngy8w">
@@ -206,6 +235,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_19nhrlt">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0m5d2fv">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_01lchmp">
           <text>"nextHearingId"</text>
         </outputEntry>
@@ -227,6 +259,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1fzcqdb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uskpql">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1flz794">
@@ -252,6 +287,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0xfqk56">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1cgqhgr">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1wg7sho">
           <text>"calculatedDates"</text>
         </outputEntry>
@@ -273,6 +311,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_08ox58k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0daw6jm">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ddqql0">
@@ -298,6 +339,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_04n1da4">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1dvve08">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0y42a5i">
           <text>"dueDateTime"</text>
         </outputEntry>
@@ -319,6 +363,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_02easpq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nn0rm9">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0sqhvby">
@@ -344,6 +391,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1ug32f7">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0knnwze">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1hw3roc">
           <text>"dueDateNonWorkingDaysOfWeek"</text>
         </outputEntry>
@@ -365,6 +415,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0fmjxfr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12f9g8z">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0hkzf00">
@@ -390,6 +443,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0o42d0d">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1f66gq5">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1nj5nei">
           <text>"dueDateMustBeWorkingDay"</text>
         </outputEntry>
@@ -411,6 +467,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0amytux">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02skoul">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ju1b88">
@@ -436,6 +495,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0gzheui">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1xpg9g0">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0ixfp2h">
           <text>"dueDateIntervalDays"</text>
         </outputEntry>
@@ -457,6 +519,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0jstcy2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tlbnbg">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1qc3zk6">
@@ -482,6 +547,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1lymzi6">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0qksqa4">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0t7q94m">
           <text>"dueDateIntervalDays"</text>
         </outputEntry>
@@ -503,6 +571,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1oinriz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16h7f6h">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lyogga">
@@ -528,6 +599,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1aih52y">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1hkr896">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0tucp7d">
           <text>"calculatedDates"</text>
         </outputEntry>
@@ -549,6 +623,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0quntrl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1evxkuj">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ijqt0h">
@@ -574,6 +651,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1wbnb0p">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0xjv0j9">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0uhqm5x">
           <text>"nextHearingDatePreDateIntervalDays"</text>
         </outputEntry>
@@ -595,6 +675,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_00jmzae">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16fs3iy">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_06l1dup">
@@ -620,6 +703,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1bz9xf0">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1xvqwyv">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_18wcq2b">
           <text>"nextHearingDatePreDateNonWorkingDaysOfWeek"</text>
         </outputEntry>
@@ -641,6 +727,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ogni0u">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hen029">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0gykh0v">
@@ -666,6 +755,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_003afa4">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0m185cw">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0z0xy3x">
           <text>"nextHearingDatePreDateMustBeWorkingDay"</text>
         </outputEntry>
@@ -687,6 +779,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0i6onaf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0unzsk1">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_07bc3mo">
@@ -712,6 +807,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0fuuk7x">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_03kb6fo">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0o0dcmv">
           <text>"majorPriority"</text>
         </outputEntry>
@@ -733,6 +831,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0e25fpb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cwd5r6">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1ggsvuv">
@@ -761,6 +862,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_14nfj53">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_17de4vz">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0a8okqv">
           <text>"majorPriority"</text>
         </outputEntry>
@@ -782,6 +886,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_09jcuej">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kpdxsc">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_121l57m">
@@ -807,6 +914,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0xc7i8z">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_01lavwg">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_02f2ykx">
           <text>"majorPriority"</text>
         </outputEntry>
@@ -828,6 +938,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1snpofn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c6nw57">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0o8u35i">
@@ -853,6 +966,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0ui69zc">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1rannek">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0vst95g">
           <text>"title"</text>
         </outputEntry>
@@ -874,6 +990,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_075dkhx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0re7hit">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0wal1va">
@@ -899,6 +1018,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0e138vq">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_034ci40">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1casjyd">
           <text>"title"</text>
         </outputEntry>
@@ -922,6 +1044,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1kqk8ki">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0a323mm">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0zj9urq">
           <text>"title"</text>
         </outputEntry>
@@ -943,6 +1068,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0fgwqvc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jgpn5n">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vq8zqj">
@@ -969,6 +1097,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_04d63tt">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0noojhm">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0qulahp">
           <text>"additionalProperties_orderId"</text>
         </outputEntry>
@@ -993,6 +1124,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1klzhd6">
           <text>not(null)</text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0pgk6wy">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_033pomr">
           <text>"additionalProperties_additionalApplicationId"</text>
         </outputEntry>
@@ -1014,6 +1148,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0m5yl4a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gi46qa">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0rvgay2">
@@ -1039,6 +1176,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0i5eujp">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_13jl5n7">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0omxasv">
           <text>"workType"</text>
         </outputEntry>
@@ -1060,6 +1200,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gdg0wx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13z7n84">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0c3eia6">
@@ -1085,6 +1228,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1768dku">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_00gts49">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1qi2rsb">
           <text>"workType"</text>
         </outputEntry>
@@ -1106,6 +1252,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_02yzkd6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y02vpk">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0bjcvtf">
@@ -1131,6 +1280,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1j8zryr">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_046prd2">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1hrei14">
           <text>"additionalProperties_roleAssignmentId"</text>
         </outputEntry>
@@ -1152,6 +1304,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_01buhfa">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m6ckms">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_05l5bvs">
@@ -1177,6 +1332,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0b0em09">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0m39vns">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1131kat">
           <text>"roleCategory"</text>
         </outputEntry>
@@ -1200,6 +1358,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1aosm2x">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0jthsqw">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1hj393l">
           <text>"roleCategory"</text>
         </outputEntry>
@@ -1221,6 +1382,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1yecisw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1spzrqd">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_04usyt8">
@@ -1248,6 +1412,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1mob2f0">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1erbx8l">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_18u6y8m">
           <text>"roleCategory"</text>
         </outputEntry>
@@ -1271,6 +1438,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_15wwp6l">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1hggaar">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_15nowth">
           <text>"roleCategory"</text>
         </outputEntry>
@@ -1278,6 +1448,32 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"JUDICIAL"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0me2qfr">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1n1k19f">
+        <inputEntry id="UnaryTests_0cyor39">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rysunx">
+          <text>"reviewLangAndSmReq"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zacatk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qkl0q5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12akz7m">
+          <text>not(null)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0v6gld5">
+          <text>"additionalProperties_caseNoteId"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dspkkc">
+          <text>caseNoteId</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0iegsdq">
           <text></text>
         </outputEntry>
       </rule>
@@ -1292,6 +1488,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0w7em26">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1no6eml">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vphrgr">
@@ -1317,6 +1516,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1fe2hjd">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0vw5vgf">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0mie2zu">
           <text>"description"</text>
         </outputEntry>
@@ -1338,6 +1540,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_07qwoyd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18dxr51">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0mpsunv">
@@ -1363,6 +1568,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0b34kqj">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0igg2qo">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_10z2t2a">
           <text>"description"</text>
         </outputEntry>
@@ -1384,6 +1592,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0xcyqzj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ybm8e0">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1xdwv1u">
@@ -1409,6 +1620,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1a1t5gv">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1f9hx2t">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0nno6iv">
           <text>"description"</text>
         </outputEntry>
@@ -1430,6 +1644,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_19iemse">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j08rgl">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1lprxe9">
@@ -1455,6 +1672,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0teilmw">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1nkty21">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0z94w12">
           <text>"description"</text>
         </outputEntry>
@@ -1476,6 +1696,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_03w7opp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nikbpi">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1o65gft">
@@ -1501,6 +1724,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0fqnbun">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1pd40s9">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_013ea43">
           <text>"description"</text>
         </outputEntry>
@@ -1522,6 +1748,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qyppgw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hb18ij">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_18362fg">
@@ -1547,6 +1776,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0zp6zwz">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1g3yjes">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1drdfke">
           <text>"description"</text>
         </outputEntry>
@@ -1568,6 +1800,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0dcqyxb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p6h447">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1i5mia9">
@@ -1593,6 +1828,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1aw55qj">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1pvv08c">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0jqlc9c">
           <text>"description"</text>
         </outputEntry>
@@ -1614,6 +1852,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_061qsr8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o5rgf1">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1mjj9t0">
@@ -1639,6 +1880,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1wvuxjm">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1fdlmdy">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1amegaa">
           <text>"description"</text>
         </outputEntry>
@@ -1660,6 +1904,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0kirweo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d2jv1y">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_05rnnqk">
@@ -1685,6 +1932,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1e6j66c">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1qiy7d1">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1dqc8iy">
           <text>"description"</text>
         </outputEntry>
@@ -1706,6 +1956,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_07zcksj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mlnm2x">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jycpq1">
@@ -1731,6 +1984,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0191s5t">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_18varvg">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_05a4dxw">
           <text>"description"</text>
         </outputEntry>
@@ -1752,6 +2008,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ap0sk7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y7o9ac">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0lo1mc9">
@@ -1777,6 +2036,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0cc6s2n">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1191vjl">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1uf98vi">
           <text>"description"</text>
         </outputEntry>
@@ -1798,6 +2060,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_14vw63n">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mf6i35">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1kqjcpp">
@@ -1823,6 +2088,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0uo1uwe">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0h94syc">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_18edt29">
           <text>"description"</text>
         </outputEntry>
@@ -1844,6 +2112,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_16jo2nu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12njdo2">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1qenr8u">
@@ -1869,6 +2140,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1nfpmgp">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1r04fa3">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0bc9ea5">
           <text>"description"</text>
         </outputEntry>
@@ -1890,6 +2164,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qwjqj5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0olwc56">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0zgm7ll">
@@ -1915,6 +2192,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0vnvxlp">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_02kk035">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1kpgsgn">
           <text>"description"</text>
         </outputEntry>
@@ -1936,6 +2216,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0zlumdi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1htz5vd">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0fco2ps">
@@ -1961,6 +2244,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1ns4heb">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_00bfdhv">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0ols5sc">
           <text>"description"</text>
         </outputEntry>
@@ -1982,6 +2268,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_15e1wyn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n8j2oa">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1yd2pgy">
@@ -2007,6 +2296,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1lozzqj">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1lvrwhp">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1a9e2xm">
           <text>"description"</text>
         </outputEntry>
@@ -2028,6 +2320,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0z93pm2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18nu2cm">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_08m9umq">
@@ -2053,6 +2348,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_0zwbg47">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_157j96m">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0he0eks">
           <text>"description"</text>
         </outputEntry>
@@ -2074,6 +2372,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1xxdnsp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ut0eqb">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_068pn5d">
@@ -2099,6 +2400,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_176nuec">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0643qf1">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0ogmsif">
           <text>"description"</text>
         </outputEntry>
@@ -2120,6 +2424,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rjepls">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x2wi36">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1q21vcv">
@@ -2145,11 +2452,14 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1gm3opd">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_15pje0f">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0ftzh7y">
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0epsd8x">
-          <text>"[Review case notes](/cases/case-details/${[CASE_REFERENCE]}#Case%20Notes)"</text>
+          <text>"[Create Case Flag](/cases/case-details/${[CASE_REFERENCE]}/trigger/createFlagsForGivenCaseNote/createFlagsForGivenCaseNote1)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1fxpvn9">
           <text></text>
@@ -2166,6 +2476,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qlque4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1875seb">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jj1pse">
@@ -2191,6 +2504,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1afro18">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_0lsd9kp">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_1mtoj34">
           <text>"description"</text>
         </outputEntry>
@@ -2212,6 +2528,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1d504ld">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13bm9e2">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0oa1drw">
@@ -2237,6 +2556,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_10i8e7i">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1pt87nn">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_0zjkr82">
           <text>"description"</text>
         </outputEntry>
@@ -2260,6 +2582,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1n802m1">
           <text></text>
         </inputEntry>
+        <inputEntry id="UnaryTests_1swxn03">
+          <text></text>
+        </inputEntry>
         <outputEntry id="LiteralExpression_04s96bn">
           <text>"description"</text>
         </outputEntry>
@@ -2281,6 +2606,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1n1lcbq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_095kmz1">
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_13vazdt">
@@ -2321,6 +2649,19 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
 }.__nullable_additional_application_id</text>
     </literalExpression>
   </decision>
+  <decision id="Decision_1xj18f0" name="Case Note Id">
+    <variable id="InformationItem_107gf4r" name="caseNoteId" typeRef="string" />
+    <literalExpression id="LiteralExpression_0ucnop5">
+      <text>{
+  "__prefix" : "__processCategory__caseNoteId_",
+  "__attribute_entries" : get entries(taskAttributes),
+  "__matching_keys" : for __item in __attribute_entries return if starts with(__item.key, __prefix) then substring(__item.key, string length(__prefix) + 1) else null,
+  "__filtered_keys" : __matching_keys[item != null],
+  "__nonempty_keys" : append(__filtered_keys, null),
+  "__nullable_caseNoteId" : __nonempty_keys[1]
+}.__nullable_caseNoteId</text>
+    </literalExpression>
+  </decision>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="DMNDiagram_1ifewa3">
       <dmndi:DMNShape id="DMNShape_0ijg0or" dmnElementRef="wa-task-configuration-privatelaw-prlapps">
@@ -2338,11 +2679,18 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <dc:Bounds height="80" width="180" x="490" y="190" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_0kj8b1h" dmnElementRef="InformationRequirement_1pga9vx">
-        <di:waypoint x="490" y="199" />
-        <di:waypoint x="390" y="210" />
-        <di:waypoint x="240" y="180" />
-        <di:waypoint x="240" y="160" />
+        <di:waypoint x="580" y="190" />
+        <di:waypoint x="270" y="180" />
+        <di:waypoint x="270" y="160" />
       </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_11kacaa" dmnElementRef="InformationRequirement_0hvv1mt">
+        <di:waypoint x="240" y="190" />
+        <di:waypoint x="210" y="180" />
+        <di:waypoint x="210" y="160" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_06xbp6b" dmnElementRef="Decision_1xj18f0">
+        <dc:Bounds height="80" width="180" x="150" y="190" />
+      </dmndi:DMNShape>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
 </definitions>

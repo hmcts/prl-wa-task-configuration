@@ -392,6 +392,15 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     ),
                     Map.of()
                 )
+            ),
+            Arguments.of(
+                "createFlagsForGivenCaseNote",
+                List.of(
+                    Map.of(
+                        "taskType", "reviewLangAndSmReq",
+                        "completionMode", "Auto"
+                    )
+                )
             )
         );
     }
@@ -414,7 +423,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(69));
+        assertThat(logic.getRules().size(), is(70));
     }
 
 
