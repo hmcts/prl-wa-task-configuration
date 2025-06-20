@@ -198,7 +198,7 @@ dependencyManagement {
     dependency group: 'commons-io', name: 'commons-io', version: '2.7'
 
     // spring boot 2.7.x bundled logging
-    dependencySet(group: 'ch.qos.logback', version: '1.2.12') {
+    dependencySet(group: 'ch.qos.logback', version: '1.2.13') {
       entry 'logback-classic'
       entry 'logback-core'
     }
