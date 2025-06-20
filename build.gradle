@@ -188,17 +188,17 @@ dependencyManagement {
       entry 'guava'
     }
 
-    // spring boot 2.7.x bundled logging
-    dependencySet(group: 'ch.qos.logback', version: '1.4.14') {
-      entry 'logback-classic'
-      entry 'logback-core'
-    }
-
     //CVE-2021-28170
     //dependency group: 'org.glassfish', name: 'jakarta.el', version: '4.0.1'
 
     //CVE-2021-29425
     dependency group: 'commons-io', name: 'commons-io', version: '2.7'
+
+    // spring boot 2.7.x bundled logging
+    dependencySet(group: 'ch.qos.logback', version: '1.4.14') {
+      entry 'logback-classic'
+      entry 'logback-core'
+    }
 
     //CVE-2021-22060
     dependencySet(group: 'org.springframework', name: 'spring-core', version: '5.3.33') {
