@@ -193,12 +193,6 @@ dependencyManagement {
     //CVE-2021-29425
     dependency group: 'commons-io', name: 'commons-io', version: '2.7'
 
-    //CVE-2021-42550
-    dependencySet(group: 'ch.qos.logback', version: '1.2.13') {
-      entry 'logback-classic'
-      entry 'logback-core'
-    }
-
     //CVE-2021-22060
     dependencySet(group: 'org.springframework', name: 'spring-core', version: '5.3.33') {
       entry 'spring-core'
@@ -232,8 +226,10 @@ dependencyManagement {
 
 repositories {
   mavenLocal()
-  maven { url 'https://jitpack.io' }
   mavenCentral()
+  maven {
+    url = uri('https://pkgs.dev.azure.com/hmcts/Artifacts/_packaging/hmcts-lib/maven/v1')
+  }
 }
 
 def versions = [
