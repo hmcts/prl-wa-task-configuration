@@ -9365,7 +9365,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_00f4c4v">
-          <text>"reviewLangAndSmReqIdent"</text>
+          <text>"caseNoteId_"+additionalData.Data.caseNoteId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1p43kpk">
