@@ -6188,7 +6188,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0r8hxul">
         <inputEntry id="UnaryTests_0gnrm2d">
-          <text>"sendOrReplyToMessages"</text>
+          <text>"sendOrReplyToMessages","reviewAdditionalApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1jald4g">
           <text></text>
@@ -6360,7 +6360,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0df7jsz">
         <inputEntry id="UnaryTests_1sygclg">
-          <text>"sendOrReplyToMessages"</text>
+          <text>"sendOrReplyToMessages","reviewAdditionalApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1k05qkm">
           <text></text>
@@ -6532,7 +6532,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0vppllf">
         <inputEntry id="UnaryTests_1pp1kwo">
-          <text>"sendOrReplyToMessages"</text>
+          <text>"sendOrReplyToMessages","reviewAdditionalApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1j2ccjw">
           <text></text>
@@ -6704,7 +6704,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0m557gk">
         <inputEntry id="UnaryTests_1pr8xyx">
-          <text>"sendOrReplyToMessages"</text>
+          <text>"sendOrReplyToMessages","reviewAdditionalApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0q375k1">
           <text></text>
