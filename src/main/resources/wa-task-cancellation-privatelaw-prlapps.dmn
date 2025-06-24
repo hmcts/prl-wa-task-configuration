@@ -412,6 +412,52 @@
           <text>"statementOfServiceByCitizen"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1vc50ua">
+        <inputEntry id="UnaryTests_1pl3xfr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ws4duv">
+          <text>"closeReviewRARequestTask"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rcedt8">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1kxdqkm">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16mc0o8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1o819j9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1i5useq">
+          <text>"reviewRAC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1fmbgee">
+        <inputEntry id="UnaryTests_0x5i9o5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hhrxn6">
+          <text>"closeReviewRARequestTask"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_045vti7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03f4fo5">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j99bip">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ntxvtr">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1g6ceip">
+          <text>"reviewRAFL401"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
