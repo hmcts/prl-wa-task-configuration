@@ -1599,7 +1599,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
                 return "[Create notice of proceeding](/cases/case-details/${[CASE_REFERENCE]}"
                     + "/trigger/manageOrders/manageOrders1) or\n"
                     + "[Edit and serve an order](/cases/case-details/${[CASE_REFERENCE]}"
-                    + "/trigger/editAndApproveAnOrder/editAndApproveAnOrder1)";
+                    + "/trigger/adminEditAndApproveAnOrder/adminEditAndApproveAnOrder1)";
 
             default:
                 break;
