@@ -759,7 +759,7 @@
       </rule>
       <rule id="DecisionRule_0p2hsw5">
         <inputEntry id="UnaryTests_1yues84">
-          <text>"manageOrders"</text>
+          <text>"waManageOrders"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_14hl037">
           <text>"hearingListed"</text>
