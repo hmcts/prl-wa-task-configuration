@@ -770,7 +770,7 @@
       </rule>
       <rule id="DecisionRule_0esrphv">
         <inputEntry id="UnaryTests_1p3tk3s">
-          <text>"adminEditAndApproveAnOrder"</text>
+          <text>"hearingEditAndApproveAnOrder"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_13lgq9l">
           <text>"hearingListed"</text>

@@ -245,11 +245,16 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "taskType", "requestSolicitorOrderFL401",
                         "completionMode", "Auto"
                     ),
+                    Map.of()
+                )
+            ),
+            Arguments.of(
+                "hearingEditAndApproveAnOrder",
+                asList(
                     Map.of(
                         "taskType", "hearingListed",
                         "completionMode", "Auto"
-                    ),
-                    Map.of()
+                    )
                 )
             ),
             Arguments.of(
