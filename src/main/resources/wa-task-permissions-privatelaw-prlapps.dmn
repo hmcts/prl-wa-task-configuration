@@ -1289,6 +1289,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0d62w8u">
+        <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_197g624">
           <text>"reviewSolicitorOrderProvided"</text>
         </inputEntry>
@@ -1314,6 +1315,36 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0t5ko8l">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1157yn8">
+        <description>Team Leader task permission</description>
+        <inputEntry id="UnaryTests_0u0uwiu">
+          <text>"reviewSolicitorOrderProvided"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zsarfs">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1hpve3g">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1aqwol1">
+          <text>"hearing-centre-team-leader"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0g9vtg7">
+          <text>"Read"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19g1jz8">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0h8jhm5">
+          <text>"SKILL:ABA5:ORDERMANAGEMENTFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0juqbxl">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1k4gu9v">
           <text>false</text>
         </outputEntry>
       </rule>
