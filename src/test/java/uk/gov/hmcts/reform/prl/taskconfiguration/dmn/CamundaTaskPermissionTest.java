@@ -38,6 +38,13 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401",
         "value", "Read"
     );
+    private static final Map<String, Serializable> hearingCentreTeamLeader = Map.of(
+        "autoAssignable", false,
+        "name", "hearing-centre-team-leader",
+        "roleCategory", "ADMIN",
+        "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401",
+        "value", "Read"
+    );
     private static final Map<String, Serializable> gatekeepingJudge = Map.of(
         "autoAssignable", true,
         "name", "gatekeeping-judge",
@@ -173,7 +180,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                     judgeOne,
                     judgefl401,
                     tribunalCaseworker,
-                    hearingCentreAdmin
+                    hearingCentreAdmin,
+                    hearingCentreTeamLeader
                 )
             ),
             Arguments.of(
@@ -1162,7 +1170,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(43));
+        assertThat(logic.getRules().size(), is(44));
     }
 
     @ParameterizedTest
