@@ -137,10 +137,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "taskType", "gateKeepingResubmitted",
                         "completionMode", "Auto"
                     ),
-                    Map.of(
-                        "taskType", "hearingListed",
-                        "completionMode", "Auto"
-                    ),
                     Map.of()
                 )
             ),
@@ -246,15 +242,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of()
-                )
-            ),
-            Arguments.of(
-                "hearingEditAndApproveAnOrder",
-                asList(
-                    Map.of(
-                        "taskType", "hearingListed",
-                        "completionMode", "Auto"
-                    )
                 )
             ),
             Arguments.of(
@@ -404,6 +391,15 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of()
+                )
+            ),
+            Arguments.of(
+                "waManageOrders",
+                List.of(
+                    Map.of(
+                        "taskType", "hearingListed",
+                        "completionMode", "Auto"
+                    )
                 )
             )
         );
