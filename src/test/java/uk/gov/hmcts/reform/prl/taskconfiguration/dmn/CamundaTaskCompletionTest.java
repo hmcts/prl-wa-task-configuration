@@ -381,6 +381,15 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     )
                 )
+            ),
+            Arguments.of(
+                "waManageOrders",
+                List.of(
+                    Map.of(
+                        "taskType", "hearingListed",
+                        "completionMode", "Auto"
+                    )
+                )
             )
         );
     }
@@ -403,7 +412,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(68));
+        assertThat(logic.getRules().size(), is(69));
     }
 
 
