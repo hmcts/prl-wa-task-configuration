@@ -1597,9 +1597,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
             case "hearingListed":
                 return "[Create notice of proceeding](/cases/case-details/${[CASE_REFERENCE]}"
-                    + "/trigger/waManageOrders/waManageOrders1) or\n"
-                    + "[Edit and serve an order](/cases/case-details/${[CASE_REFERENCE]}"
-                    + "/trigger/editAndApproveAnOrder/editAndApproveAnOrder1)";
+                    + "/trigger/waManageOrders/waManageOrders1)";
 
             default:
                 break;
