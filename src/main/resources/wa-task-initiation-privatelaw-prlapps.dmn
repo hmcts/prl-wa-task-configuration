@@ -7562,92 +7562,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"reviewDocsFL401"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0qv9tjo">
-        <inputEntry id="UnaryTests_0z8e4ec">
-          <text>"c100RequestSupport"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_02hv9xs">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0e57rs3">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_00xdykh">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1f65swl">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1qhkrn7">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_042z28r">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1iwo0xn">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1pge81m">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ce190y">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1iee4ae">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_06ysf5g">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1jj2v4s">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0yr5v6a">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1q2t0zi">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_197jv39">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ahd4c1">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1fvbttv">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1xkbkdp">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1m6udd2">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1d8fm5l">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_07xwlad">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_17shfsp">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1hq2gye">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0i11fb4">
-          <text>"reviewRaRequestsC100"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1487914">
-          <text>"Review RA request"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1evnror">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0mjf95h">
-          <text>"reviewRAC100"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1v2z6as">
         <inputEntry id="UnaryTests_0w8xeem">
           <text>"c100ManageSupport"</text>
@@ -7732,92 +7646,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_08trltf">
           <text>"reviewInactiveRAC100"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0jez1p1">
-        <inputEntry id="UnaryTests_0f7fp2s">
-          <text>"fl401RequestSupport"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ywjzf7">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0cswsin">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_04wsevb">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0u09np3">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1gmc4cu">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1arx7lf">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1dv1tuf">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0acgcmm">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1s2uaqc">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0gu561p">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1h2e9if">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_01kirfp">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_11d3xm4">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_02zve6u">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0c7yyl4">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0o27dkz">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1mss6sn">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_13artzc">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1j4jvrc">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0i3qjme">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ottw6d">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_15fgkzx">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_00iljxc">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_17siwnh">
-          <text>"reviewRaRequestsFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0tzrvpy">
-          <text>"Review RA request"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0boazox">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1v6qqvg">
-          <text>"reviewRAFL401"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0hubeqk">
@@ -9537,7 +9365,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_00f4c4v">
-          <text>"reviewLangAndSmReqIdent"</text>
+          <text>"caseNoteId_"+additionalData.Data.caseNoteId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1p43kpk">

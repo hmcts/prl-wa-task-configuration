@@ -41,7 +41,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(24));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(119));
+        assertThat(logic.getRules().size(), is(117));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -798,38 +798,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "c100RequestSupport",
-                "JUDICIAL_REVIEW",
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "reviewRaRequestsC100",
-                        "name", "Review RA request",
-                        "processCategories", "reviewRAC100"
-                    )
-                )
-            ),
-            Arguments.of(
-                "fl401RequestSupport",
-                "JUDICIAL_REVIEW",
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "reviewRaRequestsFL401",
-                        "name", "Review RA request",
-                        "processCategories", "reviewRAFL401"
-                    )
-                )
-            ),
-            Arguments.of(
                 "c100ManageSupport",
                 "JUDICIAL_REVIEW",
                 mapAdditionalData("{\n"
@@ -1169,13 +1137,17 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "citizenLanguageSupportNotes",
-                null,
-                null,
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseNoteId\":\"" + "19842f84-faa2-4928-bc8d-928b0321b346" + "\"\n"
+                                      + "   }"
+                                      + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "reviewLangAndSmReq",
                         "name", "Review Language and SM requirements",
-                        "processCategories", "reviewLangAndSmReqIdent"
+                        "processCategories", "caseNoteId_19842f84-faa2-4928-bc8d-928b0321b346"
                     )
                 )
             ),

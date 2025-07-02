@@ -33,9 +33,9 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(5));
+        assertThat(logic.getInputs().size(), is(6));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(99));
+        assertThat(logic.getRules().size(), is(100));
     }
 
 
@@ -1146,6 +1146,31 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         )));
     }
 
+    @Test
+    void when_given_task_reviewLangAndSmReq_then_return_additionalProperties_caseNoteId() {
+        VariableMap inputVariables = Variables.createVariables();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", "reviewLangAndSmReq",
+                   "name", "Review Language and SM requirements",
+                   "__processCategory__caseNoteId_123",""
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("additionalProperties_caseNoteId"))
+            .toList();
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "additionalProperties_caseNoteId",
+            "value", "123"
+        )));
+    }
+
     @ParameterizedTest
     @CsvSource({
         "reviewSpecificAccessRequestLegalOps","replyToMessageForLAC100","replyToMessageForLA"
@@ -1552,11 +1577,11 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
             case "reviewRaRequestsC100":
                 return "[Review RA request](/cases/case-details/${[CASE_REFERENCE]}/trigger"
-                    + "/c100ManageFlags/c100ManageFlags)";
+                    + "/c100ReviewRARequest/c100ReviewRARequest1)";
 
             case "reviewRaRequestsFL401":
                 return "[Review RA request](/cases/case-details/${[CASE_REFERENCE]}"
-                    + "/trigger/fl401ManageFlags/fl401ManageFlags)";
+                    + "/trigger/fl401ReviewRARequest/fl401ReviewRARequest1)";
 
             case "reviewInactiveRaRequestsC100":
             case "reviewInactiveRaRequestsFL401":
@@ -1579,7 +1604,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
                     + "/trigger/reviewAdditionalApplication/reviewAdditionalApplication1)";
 
             case "reviewLangAndSmReq":
-                return "[Review case notes](/cases/case-details/${[CASE_REFERENCE]}#Case%20Notes)";
+                return "[Create Case Flag](/cases/case-details/${[CASE_REFERENCE]}/trigger"
+                    + "/createFlagsForGivenCaseNote/createFlagsForGivenCaseNote1)";
 
             case "checkAwpHwfCitizen":
                 return "[Review other applications](/cases/case-details/${[CASE_REFERENCE]}#Other%20applications)";
