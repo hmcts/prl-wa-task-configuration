@@ -1294,7 +1294,7 @@
           <text>"reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qzqzf7">
-          <text></text>
+          <text>caseData.caseTypeOfApplication = "FL401"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_12m8e69">
           <text></text>
@@ -1324,7 +1324,7 @@
           <text>"reviewSolicitorOrderProvided"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0zsarfs">
-          <text></text>
+          <text>caseData.caseTypeOfApplication = "FL401"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1hpve3g">
           <text></text>
