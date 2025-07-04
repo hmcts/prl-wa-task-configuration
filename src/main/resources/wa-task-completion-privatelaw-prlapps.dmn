@@ -757,6 +757,17 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0esrphv">
+        <inputEntry id="UnaryTests_1p3tk3s">
+          <text>"hearingEditAndApproveAnOrder"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13lgq9l">
+          <text>"hearingListed"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tl0ta6">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0ttgpjf">
         <inputEntry id="UnaryTests_1v7zhnr">
           <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","returnApplication","sendOrReplyToMessages","adminRemoveLegalRepresentativeC100","adminRemoveLegalRepresentativeFL401","c100ManageFlags","fl401ManageFlags","statementOfService","serviceOfDocuments","fl401ListOnNotice","listWithoutNotice","caseNumber"</text>
