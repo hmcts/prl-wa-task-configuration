@@ -171,20 +171,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "reviewSolicitorOrderProvided",
-                List.of(
-                    taskSupervisor,
-                    hearingJudge,
-                    allocatedJudgeTwo,
-                    allocatedLegalAdviserThree,
-                    judgeOne,
-                    judgefl401,
-                    tribunalCaseworker,
-                    hearingCentreAdmin,
-                    hearingCentreTeamLeader
-                )
-            ),
-            Arguments.of(
                 "reviewAdminOrderProvided",
                 List.of(
                     taskSupervisor,
@@ -272,12 +258,46 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                                                                                 List<Map<String, String>> expectation) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
+    }
+
+    static Stream<Arguments> scenarioProviderWithCaseTypeOfApplication() {
+        return Stream.of(
+            Arguments.of(
+                "reviewSolicitorOrderProvided",
+                List.of(
+                    taskSupervisor,
+                    hearingJudge,
+                    allocatedJudgeTwo,
+                    allocatedLegalAdviserThree,
+                    judgeOne,
+                    judgefl401,
+                    tribunalCaseworker,
+                    hearingCentreAdmin,
+                    hearingCentreTeamLeader
+                )
+            )
+        );
+    }
+
+    @ParameterizedTest(name = "task type: {0}")
+    @MethodSource("scenarioProviderWithCaseTypeOfApplication")
+    void given_null_or_empty_inputs_when_evaluate_dmn_it_returns_expected_rulesWithCaseTypeOfApplication(
+            String taskType,List<Map<String, String>> expectation) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+        Map<String, Object> caseData = new HashMap<>();
+        caseData.put("caseTypeOfApplication", "FL401");
         inputVariables.putValue("caseData", caseData);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
     }
+
 
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
