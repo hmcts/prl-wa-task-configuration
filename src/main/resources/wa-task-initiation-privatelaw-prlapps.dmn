@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.32.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -8594,6 +8594,92 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"listWithoutNoticeHearingFL401"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1minhk8">
+        <inputEntry id="UnaryTests_1ctm43y">
+          <text>"c100ListOnNotice"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_049mrz1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pfflwf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ddx793">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mmd1oa">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qgrljn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ebjdu4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16yiaiy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0an4t0o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09887z5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qfggqe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o97ub7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cmjqzw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11fqu07">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16aw7x9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1atrwqd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pewjpt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05vmco0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n4dpo1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ntwe76">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17uiz40">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eabl7p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_023fxu3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q9onrp">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ox0ws6">
+          <text>"listOnNoticeHearingC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0asdlx8">
+          <text>"Listing instructions (refer to case notes)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13v44cm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1755w2u">
+          <text>"listOnNoticeHearingC100"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1juzupt">
         <inputEntry id="UnaryTests_0txzny0">
           <text>"fl401ListOnNotice"</text>
@@ -8677,7 +8763,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1pf48mw">
-          <text>"listWithoutNoticeHearingC100"</text>
+          <text>"listOnNoticeHearingFL401"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0iv9bu2">
