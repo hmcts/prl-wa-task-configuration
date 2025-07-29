@@ -8596,7 +8596,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_1minhk8">
         <inputEntry id="UnaryTests_1ctm43y">
-          <text>"c100ListOnNotice"</text>
+          <text>"listOnNotice"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_049mrz1">
           <text></text>
