@@ -68,4 +68,9 @@
     <cve>CVE-2025-49124</cve>
     <cve>CVE-2025-49125</cve>
   </suppress>
+  <suppress>
+    <notes><![CDATA[file name: logstash-logback-encoder-6.4.jar (shaded: org.apache.commons:commons-lang3:3.10)]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.apache\.commons/commons\-lang3@.*$</packageUrl>
+    <cve>CVE-2025-48924</cve>
+  </suppress>
 </suppressions>

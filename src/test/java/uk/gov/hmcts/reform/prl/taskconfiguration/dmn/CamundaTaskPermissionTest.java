@@ -31,6 +31,20 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "name", "task-supervisor",
         "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
     );
+    private static final Map<String, Serializable> hearingCentreAdmin = Map.of(
+        "autoAssignable", false,
+        "name", "hearing-centre-admin",
+        "roleCategory", "ADMIN",
+        "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401",
+        "value", "Read"
+    );
+    private static final Map<String, Serializable> hearingCentreTeamLeader = Map.of(
+        "autoAssignable", false,
+        "name", "hearing-centre-team-leader",
+        "roleCategory", "ADMIN",
+        "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401",
+        "value", "Read"
+    );
     private static final Map<String, Serializable> gatekeepingJudge = Map.of(
         "autoAssignable", true,
         "name", "gatekeeping-judge",
@@ -58,6 +72,13 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
             "roleCategory", "JUDICIAL",
             "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
             "authorisations", "315"
+    );
+    private static final Map<String, Serializable> judgefl401 = Map.of(
+        "autoAssignable", false,
+        "name", "fl401-judge",
+        "roleCategory", "JUDICIAL",
+        "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim",
+        "authorisations", "294"
     );
 
     private static final Map<String, Serializable> specificJudge = Map.of(
@@ -150,17 +171,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "reviewSolicitorOrderProvided",
-                List.of(
-                    taskSupervisor,
-                    hearingJudge,
-                    allocatedJudgeTwo,
-                    allocatedLegalAdviserThree,
-                    judgeOne,
-                    tribunalCaseworker
-                )
-            ),
-            Arguments.of(
                 "reviewAdminOrderProvided",
                 List.of(
                     taskSupervisor,
@@ -168,6 +178,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                     allocatedJudgeTwo,
                     allocatedLegalAdviserThree,
                     judgeOne,
+                    judgefl401,
                     tribunalCaseworker
                 )
             )
@@ -247,12 +258,46 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                                                                                 List<Map<String, String>> expectation) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
+    }
+
+    static Stream<Arguments> scenarioProviderWithCaseTypeOfApplication() {
+        return Stream.of(
+            Arguments.of(
+                "reviewSolicitorOrderProvided",
+                List.of(
+                    taskSupervisor,
+                    hearingJudge,
+                    allocatedJudgeTwo,
+                    allocatedLegalAdviserThree,
+                    judgeOne,
+                    judgefl401,
+                    tribunalCaseworker,
+                    hearingCentreAdmin,
+                    hearingCentreTeamLeader
+                )
+            )
+        );
+    }
+
+    @ParameterizedTest(name = "task type: {0}")
+    @MethodSource("scenarioProviderWithCaseTypeOfApplication")
+    void given_null_or_empty_inputs_when_evaluate_dmn_it_returns_expected_rulesWithCaseTypeOfApplication(
+            String taskType,List<Map<String, String>> expectation) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
+        Map<String, Object> caseData = new HashMap<>();
+        caseData.put("caseTypeOfApplication", "FL401");
         inputVariables.putValue("caseData", caseData);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
     }
+
 
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
@@ -272,6 +317,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
             taskSupervisor,
             gatekeepingJudge,
             judgeOne,
+            judgefl401,
             allocatedLegalAdviserOne,
             tribunalCaseworker
         )));
@@ -892,7 +938,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
             taskSupervisor,
             allocatedJudge,
-            judgeOne
+            judgeOne,
+            judgefl401
         )));
     }
 
@@ -1143,7 +1190,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(41));
+        assertThat(logic.getRules().size(), is(44));
     }
 
     @ParameterizedTest
