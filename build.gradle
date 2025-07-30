@@ -191,7 +191,7 @@ dependencyManagement {
     //dependency group: 'org.glassfish', name: 'jakarta.el', version: '4.0.1'
 
     //CVE-2021-29425
-    dependency group: 'commons-io', name: 'commons-io', version: '2.7'
+    dependency group: 'commons-io', name: 'commons-io', version: '2.14.0'
 
     //CVE-2021-42550
     dependencySet(group: 'ch.qos.logback', version: '1.2.13') {
@@ -246,7 +246,7 @@ def versions = [
   camunda         : '7.18.0',
   pitest          : '1.16.0',
   sonarPitest     : '0.5',
-  tomcat          : '9.0.104',
+  tomcat          : '9.0.107',
   log4j           : '2.17.1'
 
 ]
