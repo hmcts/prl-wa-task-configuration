@@ -372,6 +372,50 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_15pxzoe">
+        <inputEntry id="UnaryTests_154yddu">
+          <text>"listOnNotice"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wocodz">
+          <text>"gateKeeping"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0htxcim">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0pml568">
+        <inputEntry id="UnaryTests_184aolx">
+          <text>"c100listWithoutNotice"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_188zw87">
+          <text>"gateKeeping"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jv3lpu">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1em554w">
+        <inputEntry id="UnaryTests_0co4as8">
+          <text>"listOnNotice"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1641vny">
+          <text>"gateKeepingResubmitted"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1sko8lu">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1nskln6">
+        <inputEntry id="UnaryTests_13uf63h">
+          <text>"c100listWithoutNotice"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1t30lyl">
+          <text>"gateKeepingResubmitted"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zcitg6">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_06chwh2">
         <inputEntry id="UnaryTests_1r717r8">
           <text>"manageOrders"</text>
