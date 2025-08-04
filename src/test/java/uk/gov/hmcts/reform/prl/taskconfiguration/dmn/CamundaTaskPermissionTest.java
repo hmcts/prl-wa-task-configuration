@@ -1142,8 +1142,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     }
 
     @ParameterizedTest
-    @CsvSource(value = {"listWithoutNoticeHearingC100"})
-    void evaluate_task_admin_listWithoutNoticeC100(String taskType) {
+    @CsvSource(value = {"listOnNoticeHearingC100", "listWithoutNoticeHearingC100"})
+    void evaluate_task_admin_listOnNoticeWithoutNoticeC100(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);

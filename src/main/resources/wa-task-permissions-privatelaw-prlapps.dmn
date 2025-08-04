@@ -600,7 +600,7 @@
       <rule id="DecisionRule_0uxc4q8">
         <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_0kqegcf">
-          <text>"listWithoutNoticeHearingC100"</text>
+          <text>"listOnNoticeHearingC100","listWithoutNoticeHearingC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_19c7tid">
           <text></text>
