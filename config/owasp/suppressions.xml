@@ -74,4 +74,18 @@
     <packageUrl regex="true">^pkg:maven/org\.apache\.commons/commons\-lang3@.*$</packageUrl>
     <cve>CVE-2025-48924</cve>
   </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: tomcat-embed-core-9.0.107.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.apache\.tomcat\.embed/tomcat\-embed\-core@.*$</packageUrl>
+    <cve>CVE-2025-48989</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: tomcat-embed-websocket-9.0.107.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.apache\.tomcat\.embed/tomcat\-embed\-websocket@.*$</packageUrl>
+    <cve>CVE-2025-48989</cve>
+  </suppress>
 </suppressions>
