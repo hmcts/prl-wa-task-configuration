@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.36.1">
   <decision id="wa-task-completion-privatelaw-prlapps" name="Private Law Task completion DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_01re27m" hitPolicy="COLLECT">
       <input id="eventId" label="Event ID" biodi:width="437">
@@ -814,7 +814,7 @@
       </rule>
       <rule id="DecisionRule_0ttgpjf">
         <inputEntry id="UnaryTests_1v7zhnr">
-          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","returnApplication","sendOrReplyToMessages","adminRemoveLegalRepresentativeC100","adminRemoveLegalRepresentativeFL401","c100ManageFlags","fl401ManageFlags","statementOfService","serviceOfDocuments","fl401ListOnNotice","listOnNotice","listWithoutNotice","c100listWithoutNotice","caseNumber"</text>
+          <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","returnApplication","sendOrReplyToMessages","adminRemoveLegalRepresentativeC100","adminRemoveLegalRepresentativeFL401","c100ManageFlags","fl401ManageFlags","statementOfService","serviceOfDocuments","fl401ListOnNotice","listOnNotice","listWithoutNotice","c100listWithoutNotice","caseNumber","fl401SendToGateKeeper","sendToGateKeeper"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1g8kdqq">
           <text></text>
