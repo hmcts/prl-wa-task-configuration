@@ -393,9 +393,106 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     )
                 )
             ),
+            // reviewSolicitorOrderProvided — only when draftAnOrder AND postEventState is allowed
             Arguments.of(
                 "draftAnOrder",
-                null,
+                "SUBMITTED_NOT_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "processCategories", "orderId_1234567890",
+                        "name", "Review and Approve Legal rep Order",
+                        "taskId", "reviewSolicitorOrderProvided"
+                    )
+                )
+            ),
+            Arguments.of(
+                "draftAnOrder",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "processCategories", "orderId_1234567890",
+                        "name", "Review and Approve Legal rep Order",
+                        "taskId", "reviewSolicitorOrderProvided"
+                    )
+                )
+            ),
+            Arguments.of(
+                "draftAnOrder",
+                "CASE_ISSUED",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "processCategories", "orderId_1234567890",
+                        "name", "Review and Approve Legal rep Order",
+                        "taskId", "reviewSolicitorOrderProvided"
+                    )
+                )
+            ),
+            Arguments.of(
+                "draftAnOrder",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "processCategories", "orderId_1234567890",
+                        "name", "Review and Approve Legal rep Order",
+                        "taskId", "reviewSolicitorOrderProvided"
+                    )
+                )
+            ),
+            Arguments.of(
+                "draftAnOrder",
+                "ALL_FINAL_ORDERS_ISSUED",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "processCategories", "orderId_1234567890",
+                        "name", "Review and Approve Legal rep Order",
+                        "taskId", "reviewSolicitorOrderProvided"
+                    )
+                )
+            ),
+            Arguments.of(
+                "draftAnOrder",
+                "PREPARE_FOR_HEARING_CONDUCT_HEARING",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "processCategories", "orderId_1234567890",
+                        "name", "Review and Approve Legal rep Order",
+                        "taskId", "reviewSolicitorOrderProvided"
+                    )
+                )
+            ),
+            Arguments.of(
+                "draftAnOrder",
+                "DECISION_OUTCOME",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"

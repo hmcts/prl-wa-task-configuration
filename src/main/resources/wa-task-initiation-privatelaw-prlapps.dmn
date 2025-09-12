@@ -2297,7 +2297,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"draftAnOrder"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0cfzt6p">
-          <text></text>
+          <text>"SUBMITTED_NOT_PAID","SUBMITTED_PAID","CASE_ISSUED","JUDICIAL_REVIEW","ALL_FINAL_ORDERS_ISSUED","PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_02d78jv">
           <text></text>
