@@ -825,7 +825,7 @@
       </rule>
       <rule id="DecisionRule_13jkgn7">
         <inputEntry id="UnaryTests_1w1hqfi">
-          <text>"issueAndSendToLocalCourtCallback","fl401AddCaseNumber", "caseNumber", "fl401SendToGateKeeper", "sendToGateKeeper"</text>
+          <text>"issueAndSendToLocalCourtCallback","fl401AddCaseNumber","fl401SendToGateKeeper","sendToGateKeeper"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_078aa37">
           <text></text>
