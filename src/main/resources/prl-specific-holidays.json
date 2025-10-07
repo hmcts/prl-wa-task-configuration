@@ -1,6 +1,10 @@
 {
   "events": [
     {
+      "title": "Testing day",
+      "date": "2025-10-08"
+    },
+    {
       "title": "Fixed Christmas Privilege Day 2025",
       "date": "2025-12-24"
     }
