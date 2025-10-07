@@ -419,7 +419,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"dueDateNonWorkingCalendar"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08frem4">
-          <text>"https://raw.githubusercontent.com/hmcts/prl-wa-task-configuration/FPVTL-1200/src/main/resources/prl-specific-holidays.json,https://www.gov.uk/bank-holidays/england-and-wales.json"</text>
+          <text>"https://raw.githubusercontent.com/hmcts/prl-wa-task-configuration/master/src/main/resources/prl-specific-holidays.json,https://www.gov.uk/bank-holidays/england-and-wales.json"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1i07xzc">
           <text></text>
@@ -767,7 +767,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"nextHearingDatePreDateNonWorkingCalendar"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0y0lx3c">
-          <text>"https://raw.githubusercontent.com/hmcts/prl-wa-task-configuration/FPVTL-1200/src/main/resources/prl-specific-holidays.json,https://www.gov.uk/bank-holidays/england-and-wales.json"</text>
+          <text>"https://raw.githubusercontent.com/hmcts/prl-wa-task-configuration/master/src/main/resources/prl-specific-holidays.json,https://www.gov.uk/bank-holidays/england-and-wales.json"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19mavp9">
           <text>"true"</text>

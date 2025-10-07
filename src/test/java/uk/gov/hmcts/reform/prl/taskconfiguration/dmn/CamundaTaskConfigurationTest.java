@@ -205,7 +205,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
         assertTrue(dmnDecisionTableResult.getResultList().contains(Map.of(
             "name", "dueDateNonWorkingCalendar",
-            "value", "https://raw.githubusercontent.com/hmcts/prl-wa-task-configuration/FPVTL-1200/src/main/"
+            "value", "https://raw.githubusercontent.com/hmcts/prl-wa-task-configuration/master/src/main/"
                  + "resources/prl-specific-holidays.json,https://www.gov.uk/bank-holidays/england-and-wales.json"
         )));
 
@@ -1429,7 +1429,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertTrue(workTypeResultListNextHearingDatePreDateNonWorkingCalendar.contains(Map.of(
             "name", "nextHearingDatePreDateNonWorkingCalendar",
             "value",
-            "https://raw.githubusercontent.com/hmcts/prl-wa-task-configuration/FPVTL-1200/src/main/resources/"
+            "https://raw.githubusercontent.com/hmcts/prl-wa-task-configuration/master/src/main/resources/"
                 + "prl-specific-holidays.json,https://www.gov.uk/bank-holidays/england-and-wales.json",
             "canReconfigure", true
         )));
