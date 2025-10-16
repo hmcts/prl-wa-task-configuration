@@ -355,7 +355,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
         assertTrue(workTypeResultList.contains(Map.of(
             "name", "title",
-            "value", "GateKeeping (Without Notice)",
+            "value", "GateKeeping (without notice)",
             "canReconfigure", false
         )));
 
