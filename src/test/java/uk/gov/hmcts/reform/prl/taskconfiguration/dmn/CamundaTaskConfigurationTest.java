@@ -35,7 +35,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(6));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(100));
+        assertThat(logic.getRules().size(), is(101));
     }
 
 
@@ -298,7 +298,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @CsvSource({
-        "directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted",
+        "directionOnIssue","directionOnIssueResubmitted",
         "serviceOfApplicationC100","serviceOfApplicationFL401","serviceOfApplicationC100",
         "serviceOfApplicationFL401","reviewRaRequestsC100","reviewRaRequestsFL401",
         "reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401"
@@ -323,6 +323,40 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertTrue(workTypeResultList.contains(Map.of(
             "name", "dueDateIntervalDays",
             "value", "2"
+        )));
+
+        assertDescriptionField(taskType, dmnDecisionTableResult);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "gateKeeping","gateKeepingResubmitted"
+    })
+    void when_given_task_type_then_return_titleForGateKeeping_and_validate_description(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "GateKeeping"
+            )
+        );
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("doYouNeedAWithoutNoticeHearing", "Yes");
+        inputVariables.putValue("caseData", caseData);
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("title"))
+            .toList();
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "title",
+            "value", "GateKeeping (Without Notice)",
+            "canReconfigure", false
         )));
 
         assertDescriptionField(taskType, dmnDecisionTableResult);
