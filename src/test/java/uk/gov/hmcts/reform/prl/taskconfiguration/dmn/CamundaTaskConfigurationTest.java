@@ -1,6 +1,5 @@
 package uk.gov.hmcts.reform.prl.taskconfiguration.dmn;
 
-
 import org.camunda.bpm.dmn.engine.DmnDecisionTableResult;
 import org.camunda.bpm.dmn.engine.impl.DmnDecisionTableImpl;
 import org.camunda.bpm.engine.variable.VariableMap;
@@ -15,6 +14,7 @@ import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -330,9 +330,13 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @CsvSource({
-        "gateKeeping","gateKeepingResubmitted"
+        "gateKeeping, C100",
+        "gateKeepingResubmitted, C100",
+        "gateKeeping, FL401",
+        "gateKeepingResubmitted, FL401"
     })
-    void when_given_task_type_then_return_titleForGateKeeping_and_validate_description(String taskType) {
+    void when_given_task_type_then_return_titleForGateKeeping_and_validate_description(String taskType,
+                                                                                       String caseType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue(
             "taskAttributes",
@@ -342,7 +346,13 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             )
         );
         Map<String, Object> caseData = new HashMap<>(); // allow null values
+        caseData.put("caseTypeOfApplication", caseType);
+        //C100
         caseData.put("doYouNeedAWithoutNoticeHearing", "Yes");
+        //FL401
+        Map<String, Object> orderWithoutGivingNoticeToRespondent = new LinkedHashMap<>();
+        orderWithoutGivingNoticeToRespondent.put("orderWithoutGivingNotice","Yes");
+        caseData.put("orderWithoutGivingNoticeToRespondent", orderWithoutGivingNoticeToRespondent);
         inputVariables.putValue("caseData", caseData);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);

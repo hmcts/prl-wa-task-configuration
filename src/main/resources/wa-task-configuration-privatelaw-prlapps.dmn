@@ -1234,7 +1234,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"title"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1l6kzcq">
-          <text>if(caseData.doYouNeedAWithoutNoticeHearing !=null and caseData.doYouNeedAWithoutNoticeHearing = "Yes") then (taskAttributes.name + " (without notice)") else taskAttributes.name</text>
+          <text>if(caseData.caseTypeOfApplication = "C100" and caseData.doYouNeedAWithoutNoticeHearing = "Yes") then (taskAttributes.name + " (without notice)") 
+    else if (caseData.caseTypeOfApplication = "FL401" and caseData.orderWithoutGivingNoticeToRespondent != null and caseData.orderWithoutGivingNoticeToRespondent.orderWithoutGivingNotice="Yes") then (taskAttributes.name + " (without notice)") 
+    else taskAttributes.name</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1g16j6x">
           <text>"false"</text>
