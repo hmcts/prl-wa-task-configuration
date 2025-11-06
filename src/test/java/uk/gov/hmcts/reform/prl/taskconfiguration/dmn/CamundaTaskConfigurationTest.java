@@ -1,6 +1,5 @@
 package uk.gov.hmcts.reform.prl.taskconfiguration.dmn;
 
-
 import org.camunda.bpm.dmn.engine.DmnDecisionTableResult;
 import org.camunda.bpm.dmn.engine.impl.DmnDecisionTableImpl;
 import org.camunda.bpm.engine.variable.VariableMap;
@@ -15,6 +14,7 @@ import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -35,7 +35,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(6));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(101));
+        assertThat(logic.getRules().size(), is(102));
     }
 
 
@@ -298,7 +298,6 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @CsvSource({
-        "directionOnIssue","directionOnIssueResubmitted",
         "serviceOfApplicationC100","serviceOfApplicationFL401","serviceOfApplicationC100",
         "serviceOfApplicationFL401","reviewRaRequestsC100","reviewRaRequestsFL401",
         "reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401"
@@ -332,7 +331,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @CsvSource({
         "gateKeeping","gateKeepingResubmitted"
     })
-    void when_given_task_type_then_return_titleForGateKeeping_and_validate_description(String taskType) {
+    void when_given_task_type_then_return_title_gateKeeping_and_validate_description(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue(
             "taskAttributes",
@@ -356,6 +355,43 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertTrue(workTypeResultList.contains(Map.of(
             "name", "title",
             "value", "GateKeeping (without notice)",
+            "canReconfigure", false
+        )));
+
+        assertDescriptionField(taskType, dmnDecisionTableResult);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "directionOnIssue","directionOnIssueResubmitted"
+    })
+    void when_given_task_type_then_return_title_directionOnIssue_and_validate_description(String taskType) {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "DirectionOnIssue"
+            )
+        );
+        Map<String, Object> caseData = new HashMap<>(); // allow null values
+        Map<String, Object> orderWithoutGivingNoticeToRespondent = new LinkedHashMap<>();
+        caseData.put("caseTypeOfApplication", "FL401");
+        orderWithoutGivingNoticeToRespondent.put("orderWithoutGivingNotice","Yes");
+        caseData.put("orderWithoutGivingNoticeToRespondent", orderWithoutGivingNoticeToRespondent);
+        inputVariables.putValue("caseData", caseData);
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("title"))
+            .toList();
+
+        assertThat(workTypeResultList.size(), is(1));
+
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "title",
+            "value", "DirectionOnIssue (without notice)",
             "canReconfigure", false
         )));
 

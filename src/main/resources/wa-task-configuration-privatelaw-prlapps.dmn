@@ -1234,9 +1234,39 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"title"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1l6kzcq">
-          <text>if(caseData.doYouNeedAWithoutNoticeHearing !=null and caseData.doYouNeedAWithoutNoticeHearing = "Yes") then (taskAttributes.name + " (without notice)") else taskAttributes.name</text>
+          <text>if(caseData.doYouNeedAWithoutNoticeHearing = "Yes") then (taskAttributes.name + " (without notice)") else taskAttributes.name</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1g16j6x">
+          <text>"false"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gkrn2l">
+        <inputEntry id="UnaryTests_0eevohy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pljb3p">
+          <text>"directionOnIssue","directionOnIssueResubmitted"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17uvwpa">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0axzgki">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11z4av0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o6oew2">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bfynae">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nc3mna">
+          <text>if(caseData.caseTypeOfApplication = "FL401" and caseData.orderWithoutGivingNoticeToRespondent != null and caseData.orderWithoutGivingNoticeToRespondent.orderWithoutGivingNotice="Yes") then (taskAttributes.name + " (without notice)") 
+    else taskAttributes.name</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09ifae1">
           <text>"false"</text>
         </outputEntry>
       </rule>
