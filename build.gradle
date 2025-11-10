@@ -183,7 +183,7 @@ dependencyManagement {
   dependencies {
     dependency group: 'org.bouncycastle', name: 'bcpkix-jdk15on', version: '1.68'
     // CVE-2018-10237 - Unbounded memory allocation
-    dependencySet(group: 'com.google.guava', version: '33.1.0-jre') {
+    dependencySet(group: 'com.google.guava', version: '33.5.0-jre') {
       entry 'guava'
     }
 
@@ -191,7 +191,7 @@ dependencyManagement {
     //dependency group: 'org.glassfish', name: 'jakarta.el', version: '4.0.1'
 
     //CVE-2021-29425
-    dependency group: 'commons-io', name: 'commons-io', version: '2.14.0'
+    dependency group: 'commons-io', name: 'commons-io', version: '2.21.0'
 
     //CVE-2021-42550
     dependencySet(group: 'ch.qos.logback', version: '1.2.13') {
@@ -246,7 +246,7 @@ def versions = [
   camunda         : '7.18.0',
   pitest          : '1.16.0',
   sonarPitest     : '0.5',
-  tomcat          : '9.0.107',
+  tomcat          : '9.0.111',
   log4j           : '2.17.1'
 
 ]
@@ -274,6 +274,7 @@ dependencies {
   implementation group: 'com.github.hmcts.java-logging', name: 'logging', version: versions.reformLogging
   implementation group: 'com.github.hmcts.java-logging', name: 'logging-appinsights', version: versions.reformLogging
 
+  implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.19.0'
   implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: versions.log4j
   implementation group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: versions.log4j
 
