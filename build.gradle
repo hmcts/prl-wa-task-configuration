@@ -108,6 +108,12 @@ pmd {
   ruleSetFiles = files("config/pmd/ruleset.xml")
 }
 
+configurations {
+  pmd {
+    exclude group: 'org.apache.commons', module: 'commons-lang3'
+  }
+}
+
 jacocoTestCoverageVerification {
   violationRules {
     rule {
