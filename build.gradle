@@ -283,7 +283,7 @@ dependencies {
   implementation group: 'jakarta.el', name: 'jakarta.el-api', version: '5.0.1'
 
   testImplementation group: 'org.pitest', name: 'pitest', version: versions.pitest
-  testImplementation 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.5.2'
+  testImplementation 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.15.0'
 
   testImplementation "org.junit.vintage:junit-vintage-engine:${versions.junit}"
   testImplementation group: 'org.codehaus.sonar-plugins', name: 'sonar-pitest-plugin', version: versions.sonarPitest
