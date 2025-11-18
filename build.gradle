@@ -212,7 +212,7 @@ dependencyManagement {
     }
 
     // CVE-2022-25647
-    dependencySet(group: 'com.google.code.gson', version: '2.10.1') {
+    dependencySet(group: 'com.google.code.gson', version: '2.13.2') {
       entry 'gson'
     }
 
