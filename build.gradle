@@ -190,6 +190,12 @@ dependencyManagement {
     //CVE-2021-29425
     dependency group: 'commons-io', name: 'commons-io', version: '2.21.0'
 
+    //CVE-2021-42550
+    dependencySet(group: 'ch.qos.logback', version: '1.2.13') {
+      entry 'logback-classic'
+      entry 'logback-core'
+    }
+
     //CVE-2021-22060
     dependencySet(group: 'org.springframework', name: 'spring-core', version: '5.3.39') {
       entry 'spring-core'
@@ -232,7 +238,7 @@ repositories {
 def versions = [
   junit           : '5.7.2',
   junitPlatform   : '1.7.2',
-  reformLogging   : '6.1.9',
+  reformLogging   : '5.1.7',
   springfoxSwagger: '3.0.0',
   camunda         : '7.18.0',
   pitest          : '1.22.0',
@@ -262,6 +268,7 @@ dependencies {
   implementation group: 'io.springfox', name: 'springfox-boot-starter', version: versions.springfoxSwagger
 
   implementation group: 'com.github.hmcts.java-logging', name: 'logging', version: versions.reformLogging
+  implementation group: 'com.github.hmcts.java-logging', name: 'logging-appinsights', version: versions.reformLogging
 
   implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: versions.log4j
   implementation group: 'org.apache.logging.log4j', name: 'log4j-to-slf4j', version: versions.log4j
