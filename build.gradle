@@ -100,7 +100,7 @@ checkstyle {
 }
 
 pmd {
-  toolVersion = "6.18.0"
+  toolVersion = "6.55.0"
   sourceSets = [sourceSets.main]
   reportsDir = file("$project.buildDir/reports/pmd")
   // https://github.com/pmd/pmd/issues/876
@@ -181,7 +181,7 @@ dependencyCheck {
 
 dependencyManagement {
   dependencies {
-    dependency group: 'org.bouncycastle', name: 'bcpkix-jdk15on', version: '1.68'
+    dependency group: 'org.bouncycastle', name: 'bcpkix-jdk15on', version: '1.70'
     // CVE-2018-10237 - Unbounded memory allocation
     dependencySet(group: 'com.google.guava', version: '33.5.0-jre') {
       entry 'guava'
@@ -191,16 +191,16 @@ dependencyManagement {
     //dependency group: 'org.glassfish', name: 'jakarta.el', version: '4.0.1'
 
     //CVE-2021-29425
-    dependency group: 'commons-io', name: 'commons-io', version: '2.14.0'
+    dependency group: 'commons-io', name: 'commons-io', version: '2.21.0'
 
     //CVE-2021-42550
-    dependencySet(group: 'ch.qos.logback', version: '1.2.13') {
+    dependencySet(group: 'ch.qos.logback', version: '1.5.21') {
       entry 'logback-classic'
       entry 'logback-core'
     }
 
     //CVE-2021-22060
-    dependencySet(group: 'org.springframework', name: 'spring-core', version: '5.3.33') {
+    dependencySet(group: 'org.springframework', name: 'spring-core', version: '5.3.39') {
       entry 'spring-core'
       entry 'spring-aop'
       entry 'spring-beans'
@@ -224,7 +224,7 @@ dependencyManagement {
     }
 
     //CVE-2022-1471
-    dependencySet(group: 'org.yaml', version: '2.0') {
+    dependencySet(group: 'org.yaml', version: '2.5') {
       entry 'snakeyaml'
     }
   }
