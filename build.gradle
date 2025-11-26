@@ -193,6 +193,8 @@ dependencyManagement {
     //CVE-2021-29425
     dependency group: 'commons-io', name: 'commons-io', version: '2.21.0'
 
+    dependency group: 'org.apache.commons', name: 'commons-lang3', version: '3.20.0'
+
     //CVE-2021-42550
     dependencySet(group: 'ch.qos.logback', version: '1.5.21') {
       entry 'logback-classic'
