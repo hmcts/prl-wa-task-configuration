@@ -244,7 +244,7 @@ def versions = [
   reformLogging   : '5.1.7',
   springfoxSwagger: '3.0.0',
   camunda         : '7.18.0',
-  pitest          : '1.21.1',
+  pitest          : '1.22.0',
   sonarPitest     : '0.5',
   tomcat          : '9.0.112',
   log4j           : '2.17.1'
