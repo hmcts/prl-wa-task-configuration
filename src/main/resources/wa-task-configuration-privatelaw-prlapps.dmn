@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.32.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN" camunda:historyTimeToLive="P90D">
     <informationRequirement id="InformationRequirement_1iac9a2">
       <requiredDecision href="#Decision_11ew6tt" />
@@ -3011,6 +3011,35 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"[Create notice of proceedings](/cases/case-details/${[CASE_REFERENCE]}/trigger/waManageOrders/waManageOrders1) or [Edit and serve an order](/cases/case-details/${[CASE_REFERENCE]}/trigger/hearingEditAndApproveAnOrder/hearingEditAndApproveAnOrder1)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1o8u5ip">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_066ltd7">
+        <inputEntry id="UnaryTests_1a2brou">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p86wwk">
+          <text>"sendToGateKeeperC100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rkkm6h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xiukak">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dh8a14">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xp0oh1">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04bopjl">
+          <text>"assignee"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_11hjnvx">
+          <text>"930a5478-3b1d-4fed-bf9d-fdfb2f9e9eaf"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1oe01gl">
           <text></text>
         </outputEntry>
       </rule>
