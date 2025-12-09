@@ -1906,7 +1906,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1a3l05p">
-          <text>if(caseData.dfjArea = "SWANSEA") then "[Add Case Number](/cases/case-details/${[CASE_REFERENCE]}/trigger/caseNumber/caseNumber1)" else "[Send To Gatekeeper](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendToGateKeeper/sendToGateKeeper1)" </text>
+          <text>if(caseData.dfjArea = "SWANSEA") then postEventState + "[Add Case Number](/cases/case-details/${[CASE_REFERENCE]}/trigger/caseNumber/caseNumber1)" else postEventState + "[Send To Gatekeeper](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendToGateKeeper/sendToGateKeeper1)" </text>
         </outputEntry>
         <outputEntry id="LiteralExpression_024sf8n">
           <text></text>
