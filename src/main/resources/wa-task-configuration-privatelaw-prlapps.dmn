@@ -1819,7 +1819,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1xxdcni">
-          <text>if caseData.caseNotes != null and len(caseData.caseNotes) &gt; 0 and caseData.caseNotes[1].value != null then "[Issue and send to local Court]" + caseData.caseNotes[1].value.caseNote else null</text>
+          <text>if caseData.caseNotes != null  then "[Issue and send to local Court]" + caseData.caseNotes[1].value.caseNote else "[should display case note]" + caseData.caseNotes[1]</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0p4gen9">
           <text>true</text>
