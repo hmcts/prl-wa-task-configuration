@@ -1906,7 +1906,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1a3l05p">
-          <text>postEventState + "[Send To Gatekeeper](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendToGateKeeper/sendToGateKeeper1)" </text>
+          <text>"[Send To Gatekeeper](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendToGateKeeper/sendToGateKeeper1) OR [Create notice of proceedings - only applicable in hearing state](/cases/case-details/${[CASE_REFERENCE]}/trigger/waManageOrders/waManageOrders1)" </text>
         </outputEntry>
         <outputEntry id="LiteralExpression_024sf8n">
           <text></text>
