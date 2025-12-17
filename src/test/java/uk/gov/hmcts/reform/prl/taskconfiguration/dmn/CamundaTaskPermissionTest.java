@@ -137,7 +137,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
 
 
     @BeforeAll
-    public static void initialization() {
+    static void initialization() {
         CURRENT_DMN_DECISION_TABLE = WA_TASK_PERMISSION;
     }
 
@@ -1190,7 +1190,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(44));
+        assertThat(logic.getRules().size(), is(45));
     }
 
     @ParameterizedTest
@@ -1237,6 +1237,20 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete",
                 "authorisations","SKILL:ABA5:CHECKAPPLICATIONC100"
             )
+        )));
+    }
+
+    @Test
+    void evaluate_task_admin_replyToMessageForLA() {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", "replyToMessageForLA"));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            taskSupervisor,
+            allocatedLegalAdviserOne,
+            tribunalCaseworker
         )));
     }
 }
