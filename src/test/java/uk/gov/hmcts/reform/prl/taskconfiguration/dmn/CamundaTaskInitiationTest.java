@@ -1530,6 +1530,228 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "processCategories", "hearingId_123"
                     )
                 )
+            ),
+            Arguments.of(
+                "sendOrReplyToMessages",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"sendMessageObject\":{\n"
+                                      + "         \"internalMessageWhoToSendTo\":\"" + "COURT_ADMIN" + "\"\n"
+                                      + "      }\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Reply to the Message",
+                        "processCategories", "sendAndReplyIdent",
+                        "taskId", "replyToMessageForCourtAdminFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "reviewAdditionalApplication",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"sendMessageObject\":{\n"
+                                      + "         \"internalMessageWhoToSendTo\":\"" + "COURT_ADMIN" + "\"\n"
+                                      + "      }\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Reply to the Message",
+                        "processCategories", "sendAndReplyIdent",
+                        "taskId", "replyToMessageForCourtAdminFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "sendOrReplyToMessages",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"replyMessageObject\":{\n"
+                                      + "         \"internalMessageReplyTo\":\"" + "COURT_ADMIN" + "\"\n"
+                                      + "      }\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Reply to the Message",
+                        "processCategories", "sendAndReplyIdent",
+                        "taskId", "replyToMessageForCourtAdminFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "sendOrReplyToMessages",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"sendMessageObject\":{\n"
+                                      + "         \"internalMessageWhoToSendTo\":\"" + "COURT_ADMIN" + "\"\n"
+                                      + "      }\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Reply to the Message",
+                        "processCategories", "sendAndReplyIdent",
+                        "taskId", "replyToMessageForCourtAdminC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "reviewAdditionalApplication",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"sendMessageObject\":{\n"
+                                      + "         \"internalMessageWhoToSendTo\":\"" + "COURT_ADMIN" + "\"\n"
+                                      + "      }\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Reply to the Message",
+                        "processCategories", "sendAndReplyIdent",
+                        "taskId", "replyToMessageForCourtAdminC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "sendOrReplyToMessages",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"replyMessageObject\":{\n"
+                                      + "         \"internalMessageReplyTo\":\"" + "COURT_ADMIN" + "\"\n"
+                                      + "      }\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Reply to the Message",
+                        "processCategories", "sendAndReplyIdent",
+                        "taskId", "replyToMessageForCourtAdminC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "sendOrReplyToMessages",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"sendMessageObject\":{\n"
+                                      + "         \"internalMessageWhoToSendTo\":\"" + "LEGAL_ADVISER" + "\"\n"
+                                      + "      }\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Reply to the Message",
+                        "processCategories", "sendAndReplyIdent",
+                        "taskId", "replyToMessageForLA"
+                    )
+                )
+            ),
+            Arguments.of(
+                "reviewAdditionalApplication",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"sendMessageObject\":{\n"
+                                      + "         \"internalMessageWhoToSendTo\":\"" + "LEGAL_ADVISER" + "\"\n"
+                                      + "      }\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Reply to the Message",
+                        "processCategories", "sendAndReplyIdent",
+                        "taskId", "replyToMessageForLA"
+                    )
+                )
+            ),
+            Arguments.of(
+                "sendOrReplyToMessages",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"replyMessageObject\":{\n"
+                                      + "         \"internalMessageReplyTo\":\"" + "LEGAL_ADVISER" + "\"\n"
+                                      + "      }\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Reply to the Message",
+                        "processCategories", "sendAndReplyIdent",
+                        "taskId", "replyToMessageForLA"
+                    )
+                )
+            ),
+            Arguments.of(
+                "sendOrReplyToMessages",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"sendMessageObject\":{\n"
+                                      + "         \"internalMessageWhoToSendTo\":\"" + "JUDICIARY" + "\"\n"
+                                      + "      }\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Reply to the Message",
+                        "processCategories", "sendAndReplyIdent",
+                        "taskId", "replyToMessageForJudiciary"
+                    )
+                )
+            ),
+            Arguments.of(
+                "reviewAdditionalApplication",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"sendMessageObject\":{\n"
+                                      + "         \"internalMessageWhoToSendTo\":\"" + "JUDICIARY" + "\"\n"
+                                      + "      }\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Reply to the Message",
+                        "processCategories", "sendAndReplyIdent",
+                        "taskId", "replyToMessageForJudiciary"
+                    )
+                )
+            ),
+            Arguments.of(
+                "sendOrReplyToMessages",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"replyMessageObject\":{\n"
+                                      + "         \"internalMessageReplyTo\":\"" + "JUDICIARY" + "\"\n"
+                                      + "      }\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Reply to the Message",
+                        "processCategories", "sendAndReplyIdent",
+                        "taskId", "replyToMessageForJudiciary"
+                    )
+                )
             )
         );
     }
