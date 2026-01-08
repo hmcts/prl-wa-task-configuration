@@ -1253,4 +1253,46 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
             tribunalCaseworker
         )));
     }
+
+    @Test
+    void evaluate_task_admin_replyToMessageForCourtAdminFL401() {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", "replyToMessageForCourtAdminFL401"));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(
+            dmnDecisionTableResult.getResultList(), is(List.of(
+                taskSupervisor,
+                Map.of(
+                    "autoAssignable", false,
+                    "name", "hearing-centre-admin",
+                    "roleCategory", "ADMIN",
+                    "authorisations", "SKILL:ABA5:CHECKAPPLICATIONFL401",
+                    "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                )
+            ))
+        );
+    }
+
+    @Test
+    void evaluate_task_admin_replyToMessageForCourtAdminC100() {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", "replyToMessageForCourtAdminC100"));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(
+            dmnDecisionTableResult.getResultList(), is(List.of(
+                taskSupervisor,
+                Map.of(
+                    "autoAssignable", false,
+                    "name", "hearing-centre-admin",
+                    "roleCategory", "ADMIN",
+                    "authorisations", "SKILL:ABA5:CHECKAPPLICATIONC100",
+                    "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
+                )
+            ))
+        );
+    }
 }
