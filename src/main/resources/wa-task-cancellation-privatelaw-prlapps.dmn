@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.36.1">
   <decision id="wa-task-cancellation-privatelaw-prlapps" name="Private Law Task cancellation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0z3jx1g" hitPolicy="COLLECT">
       <input id="Input_1" label="From State">
@@ -180,6 +180,29 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1key6b4">
           <text>"createHearingRequest"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1shtz5a">
+        <inputEntry id="UnaryTests_12a2z5x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ux973z">
+          <text>"hmcCaseUpdPrepForHearing"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b45fxe">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1sqfxof">
+          <text>"Reconfigure"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1eu86i2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_068y5e3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ach5hc">
+          <text></text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1ty25kk">
