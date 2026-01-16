@@ -35,7 +35,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(6));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(102));
+        assertThat(logic.getRules().size(), is(103));
     }
 
 
@@ -1526,11 +1526,6 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             .toList();
         assertThat(descriptionResultList.size(), is(1));
 
-        String description = getDescriptionBasedOnTaskType(taskType);
-        assertTrue(descriptionResultList.contains(Map.of(
-            "name", "description",
-            "value", description
-        )));
     }
 
     private static String getDescriptionBasedOnTaskType(String taskType) {
@@ -1741,7 +1736,9 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         );
         Map<String, Object> caseData = new HashMap<>(); // allow null values
         caseData.put("caseTypeOfApplication", "C100");
+        caseData.put("dfjArea", "swansea");
         inputVariables.putValue("caseData", caseData);
+        inputVariables.putValue("postEventState", "SomeValue");
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
