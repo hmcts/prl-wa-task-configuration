@@ -1,18 +1,18 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: "ia-task-configuration"
+  name: "prl-wa-task-configuration"
   annotations:
     # This must match folder-name/job-name in Jenkins.
-    jenkins.io/job-full-name: cft:HMCTS_d_to_i/ia-task-configuration
-    github.com/project-slug: hmcts/ia-task-configuration
+    jenkins.io/job-full-name: cft:HMCTS_j_to_z/prl-wa-task-configuration
+    github.com/project-slug: hmcts/prl-wa-task-configuration
   tags:
     - java
   links:
-    - url: https://hmcts-reform.slack.com/app_redirect?channel=ia-tech
-      title: "#ia-tech on Slack"
+    - url: https://hmcts-reform.slack.com/app_redirect?channel=prl-tech-notifications
+      title: "#prl-tech-notifications on Slack"
       icon: chat
 spec:
   type: service
   lifecycle: production
-  owner: dcd_ia
+  owner: dts_family_private_law
