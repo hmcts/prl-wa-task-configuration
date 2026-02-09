@@ -2196,9 +2196,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"Produce hearing bundle"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19rxs4w">
-          <text>{
-"delayUntil": if(additionalData.Data.productHearingBundleOn != null) then (date(additionalData.Data.productHearingBundleOn)) else now()
-}</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_15xnwvl">
           <text>"produceHearingBundleC100"</text>
@@ -2284,9 +2282,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"Produce hearing bundle"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02mk6z6">
-          <text>{
-"delayUntil": if(additionalData.Data.productHearingBundleOn != null and additionalData.Data.productHearingBundleOn != "") then (date(additionalData.Data.productHearingBundleOn)) else now()
-}</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1hptupr">
           <text>"produceHearingBundleFL401"</text>
