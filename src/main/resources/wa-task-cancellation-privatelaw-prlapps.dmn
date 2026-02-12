@@ -481,52 +481,6 @@
           <text>"reviewRAFL401"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_02mozf7">
-        <inputEntry id="UnaryTests_0qigb5w">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_16qwutb">
-          <text>"awaitingInformation"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0hml56f">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1fgwaul">
-          <text>"Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1d5bjae">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1twaors">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0nrt31q">
-          <text>"localCourtGatekeepingC100"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1321qep">
-        <inputEntry id="UnaryTests_0xy3852">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_037ghh6">
-          <text>"awaitingInformation"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1lg3at4">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_07ckty4">
-          <text>"Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0fsl1c8">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1mbzoz9">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_07rtmmw">
-          <text>"gateKeeping"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1cdn1zu">
         <inputEntry id="UnaryTests_1yv1wjy">
           <text></text>
@@ -547,7 +501,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_14w8kzm">
-          <text>"orderId_"+additionalData.Data.draftOrderCollectionId</text>
+          <text>null</text>
         </outputEntry>
       </rule>
     </decisionTable>
