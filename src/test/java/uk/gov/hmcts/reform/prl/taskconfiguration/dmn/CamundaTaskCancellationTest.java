@@ -186,6 +186,19 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                         "processCategories", "newCaseTransferredToCourt"
                     )
                 )
+            ),
+            Arguments.of(
+                "AWAITING_INFORMATION",
+                "sendToGateKeeper",
+                "JUDICIAL_REVIEW",
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "taskCancelled,applicationCheck,"
+                            + "localCourtGatekeepingFL401,localCourtGatekeepingFL401Resubmit,"
+                            + "applicationHwfCheck,gateKeeping"
+                    )
+                )
             )
         );
     }
@@ -212,7 +225,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(20));
+        assertThat(logic.getRules().size(), is(21));
 
     }
 }
