@@ -501,30 +501,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nrt31q">
-          <text>"localCourtGatekeepingC100"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1nbsn7m">
-        <inputEntry id="UnaryTests_0e8m3wf">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0jdt506">
-          <text>"awaitingInformation"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1pa7mhe">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0jw5o0b">
-          <text>"Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1h28u68">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0smh2ck">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0mngwyx">
-          <text>"gateKeeping"</text>
+          <text>"awaitingInfoCancel"</text>
         </outputEntry>
       </rule>
     </decisionTable>

@@ -1683,7 +1683,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0ebf9sj">
-          <text>"localCourtGatekeepingC100"</text>
+          <text>"localCourtGatekeepingC100","awaitingInfoCancel"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_094f0ga">
@@ -2027,7 +2027,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1x4lczj">
-          <text>"gateKeeping"</text>
+          <text>"gateKeeping","awaitingInfoCancel"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1pzdbd8">
@@ -2375,7 +2375,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_00rbli9">
-          <text>"orderId_"+additionalData.Data.draftOrderCollectionId</text>
+          <text>"orderId_"+additionalData.Data.draftOrderCollectionId,"awaitingInfoCancel"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1emjzjf">
@@ -2461,7 +2461,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0618645">
-          <text>"orderId_"+additionalData.Data.draftOrderCollectionId</text>
+          <text>"orderId_"+additionalData.Data.draftOrderCollectionId,"awaitingInfoCancel"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0xzi2j0">
