@@ -501,7 +501,53 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nrt31q">
-          <text>"awaitingInfoCancel"</text>
+          <text>"localCourtGatekeepingC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1321qep">
+        <inputEntry id="UnaryTests_0xy3852">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_037ghh6">
+          <text>"awaitingInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lg3at4">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07ckty4">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fsl1c8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mbzoz9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07rtmmw">
+          <text>"gateKeeping"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1cdn1zu">
+        <inputEntry id="UnaryTests_1yv1wjy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ft0rb8">
+          <text>"awaitingInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_066wsx0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ryw1et">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0td6vuj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wxx80u">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14w8kzm">
+          <text>"orderId_"+additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
     </decisionTable>
