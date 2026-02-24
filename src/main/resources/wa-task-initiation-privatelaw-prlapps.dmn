@@ -10482,9 +10482,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"Response to information requested"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kty4re">
-          <text>{
-"delayUntil": if (additionalData.data.reviewByDate != null and additionalData.data.reviewByDate != "") then date(additionalData.data.reviewByDate) + duration("P1D") else now()
-}</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1gc30py">
           <text>"informationRequestedReviewByDateUpdate"</text>
