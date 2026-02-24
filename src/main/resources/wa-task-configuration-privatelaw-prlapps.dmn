@@ -1567,7 +1567,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0wr2o5i">
-          <text>"hearingListed"</text>
+          <text>"hearingListed","responseToInformationRequested"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1yyd2vc">
           <text></text>
@@ -1656,7 +1656,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         <inputEntry id="UnaryTests_1cssptr">
           <text>"checkApplicationC100", "checkApplicationResubmittedC100",
 "addCaseNumber", "addCaseNumberResubmitted",
-"reviewSpecificAccessRequestCTSC", "checkHwfApplicationC100", "checkAwpHwfCitizen","responseToInformationRequested"</text>
+"reviewSpecificAccessRequestCTSC", "checkHwfApplicationC100", "checkAwpHwfCitizen"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0hq30kv">
           <text></text>
@@ -1678,6 +1678,35 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
         </outputEntry>
         <outputEntry id="LiteralExpression_0vv9t0l">
           <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0n1v1x5">
+        <inputEntry id="UnaryTests_11fb2ey">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bscudy">
+          <text>"responseToInformationRequested"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0piiz8q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uui5pc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_113l5s1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wf48du">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14difkw">
+          <text>"roleCategory"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ora6mc">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1uge890">
+          <text>"true"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_01cmxvs">
@@ -3011,6 +3040,35 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"[Create notice of proceedings](/cases/case-details/${[CASE_REFERENCE]}/trigger/waManageOrders/waManageOrders1) or [Edit and serve an order](/cases/case-details/${[CASE_REFERENCE]}/trigger/hearingEditAndApproveAnOrder/hearingEditAndApproveAnOrder1)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1o8u5ip">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hcqshn">
+        <inputEntry id="UnaryTests_1et0soq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ptrwv8">
+          <text>"responseToInformationRequested"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00vq5ss">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_123vchx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qa8cas">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10hhjtx">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_088bmkn">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0r5i1xn">
+          <text>"Response to information requested"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fk62br">
           <text></text>
         </outputEntry>
       </rule>
