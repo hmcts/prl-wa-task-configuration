@@ -2207,7 +2207,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"enablePrepareHearingBundleTask"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0zq5t6z">
-          <text>"JUDICIAL_REVIEW","PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rlhwd4">
           <text>"FL401"</text>
