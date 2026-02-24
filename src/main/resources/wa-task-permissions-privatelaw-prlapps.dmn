@@ -1438,36 +1438,6 @@
           <text>false</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_043ff2q">
-        <description>Team Leader task permissions</description>
-        <inputEntry id="UnaryTests_139pptb">
-          <text>"responseToInformationRequested"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1gwahmu">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1pxfa8h">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1ptr2dq">
-          <text>"hearing-centre-team-leader"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0yprnlp">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_063zmiu">
-          <text>"ADMIN"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0sqe828">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_17ywli0">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1jiazct">
-          <text>false</text>
-        </outputEntry>
-      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
