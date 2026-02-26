@@ -187,17 +187,6 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                     )
                 )
             ),
-//            Arguments.of(
-//                null,
-//                "awaitingInformation",
-//                null,
-//                List.of(
-//                    Map.of(
-//                        "action", "Reconfigure",
-//                        "processCategories", "informationRequestedReviewByDateUpdate"
-//                    )
-//                )
-//            ),
             Arguments.of(
                 "AWAITING_INFORMATION",
                 "sendToGateKeeper",
