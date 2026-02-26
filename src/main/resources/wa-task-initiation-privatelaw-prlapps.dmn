@@ -2735,7 +2735,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           </text>
         </inputEntry>
         <inputEntry id="UnaryTests_04u7b5y">
-          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME","ALL_FINAL_ORDERS_ISSUED"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gq9wa9">
           <text>"C100"</text>
@@ -2911,7 +2911,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           </text>
         </inputEntry>
         <inputEntry id="UnaryTests_1p3c2eg">
-          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME","ALL_FINAL_ORDERS_ISSUED"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_01xcji7">
           <text>"FL401"</text>
@@ -2994,8 +2994,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_039ii3n">
         <inputEntry id="UnaryTests_0rqz87a">
-          <text>"manageOrders"
-          </text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gr5g8k">
           <text>"CASE_ISSUED", "JUDICIAL_REVIEW"</text>
@@ -3081,11 +3080,10 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_1bnpzum">
         <inputEntry id="UnaryTests_1akqa1d">
-          <text>"manageOrders"
-          </text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1weo7g7">
-          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME","ALL_FINAL_ORDERS_ISSUED"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gb58k4">
           <text>"C100"</text>
@@ -3261,7 +3259,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           </text>
         </inputEntry>
         <inputEntry id="UnaryTests_14tiokr">
-          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME","ALL_FINAL_ORDERS_ISSUED"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0360k2f">
           <text>"FL401"</text>
@@ -10402,6 +10400,99 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_0ne44mp">
           <text>"hearingId_"+additionalData.Data.currentHearingId</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14qw8e4">
+        <inputEntry id="UnaryTests_0xu8fqd">
+          <text>"awaitingInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rk9ygb">
+          <text>"AWAITING_INFORMATION"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_197fvqc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03p1shb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11eoduu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hpmrmh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s694eg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12bgayh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rnv0vo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gb1ior">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15g8ugy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0cvmv7g">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dges76">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15ehcf5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gqe791">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qgz8p3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10ajyeq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0szyaj0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1igks0f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wbfge1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13es81x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q6ll49">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06nxjdw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j82b22">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_025jqev">
+          <text>"responseToInformationRequested"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bhpo6c">
+          <text>"Response to information requested"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kty4re">
+          <text>{
+"delayUntilOrigin":date(additionalData.Data.reviewByDate),
+"delayUntilIntervalDays":1,
+"delayUntilNonWorkingCalendar":"https://www.gov.uk/bank-holidays/england-and-wales.json",
+"delayUntilNonWorkingDaysOfWeek": "SATURDAY,SUNDAY",
+"delayUntilSkipNonWorkingDays": false,
+"delayUntillMustBeWorkingDays": "Next"
+}</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gc30py">
+          <text>"informationRequestedReviewByDateUpdate"</text>
         </outputEntry>
       </rule>
     </decisionTable>
