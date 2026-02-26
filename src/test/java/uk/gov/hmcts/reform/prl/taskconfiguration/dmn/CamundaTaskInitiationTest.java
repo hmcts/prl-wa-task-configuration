@@ -1735,23 +1735,25 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     )
                 )
             ),
-            /*Arguments.of(
+            Arguments.of(
                 "awaitingInformation",
                 "AWAITING_INFORMATION",
                 mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"reviewByDate\":\"" + currentDate + "\"\n"
-                                      + "   }"
+                                      + "   \"data\":{\n"
+                                      + "      \"awaitingInformationDetails\": {\n"
+                                      + "         \"reviewByDate\": \"" + currentDate+ "\"\n"
+                                      + "      }\n"
+                                      + "   }\n"
                                       + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "responseToInformationRequested",
                         "name", "Response to information requested",
                         "processCategories", "informationRequestedReviewByDateUpdate",
-                        "delayUntil", "{delayUntil=" + zonedDateTime + "}"
+                        "delayUntil", Map.of("delayUntil" ,ZonedDateTime.parse(currentDate + "T00:00Z"))
                     )
                 )
-            ),*/
+            ),
             Arguments.of(
                 "sendOrReplyToMessages",
                 null,

@@ -10483,7 +10483,10 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_1kty4re">
           <text>{
-"delayUntil": (date and time(if (additionalData.data.reviewByDate != null and additionalData.data.reviewByDate != "") then date(additionalData.data.reviewByDate) else now()))
+"delayUntil": if (additionalData.data.awaitingInformationDetails.reviewByDate != null
+and additionalData.data.awaitingInformationDetails.reviewByDate != "")
+then date and time(additionalData.data.awaitingInformationDetails.reviewByDate + duration("P1D") + "T00:00:00Z")
+else now()
 }</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1gc30py">
