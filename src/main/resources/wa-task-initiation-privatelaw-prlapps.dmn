@@ -10483,12 +10483,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_1kty4re">
           <text>{
-"delayUntilOrigin":date(additionalData.Data.reviewByDate),
-"delayUntilIntervalDays":1,
-"delayUntilNonWorkingCalendar":"https://www.gov.uk/bank-holidays/england-and-wales.json",
-"delayUntilNonWorkingDaysOfWeek": "SATURDAY,SUNDAY",
-"delayUntilSkipNonWorkingDays": false,
-"delayUntillMustBeWorkingDays": "Next"
+"delayUntil": if (additionalData.data.awaitingInformationDetails.reviewByDate != null and additionalData.data.awaitingInformationDetails.reviewByDate != "") then now() + duration("PT2M") else now()
 }</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1gc30py">
