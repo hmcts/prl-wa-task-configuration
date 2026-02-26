@@ -1750,7 +1750,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "responseToInformationRequested",
                         "name", "Response to information requested",
                         "processCategories", "informationRequestedReviewByDateUpdate",
-                        "delayUntil", Map.of("delayUntil" ,ZonedDateTime.parse(currentDate + "T00:00Z"))
+                        "delayUntil", Map.of("delayUntil" ,ZonedDateTime.parse(currentDate + "T00:00Z").plusDays(1))
                     )
                 )
             ),
