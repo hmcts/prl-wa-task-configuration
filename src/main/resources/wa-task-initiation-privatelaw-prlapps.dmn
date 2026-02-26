@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.35.0">
+=======
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.44.0">
+>>>>>>> Stashed changes
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -173,7 +177,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.replyMessageObject != null and additionalData.Data.replyMessageObject.internalMessageReplyTo != null) then additionalData.Data.replyMessageObject.internalMessageReplyTo else ""</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0gxwuqu" label="manageDocuments TriggeredBy" biodi:width="150" camunda:inputVariable="manageDocumentsTriggeredBy">
+      <input id="InputClause_0gxwuqu" label="manageDocuments TriggeredBy" biodi:width="244" camunda:inputVariable="manageDocumentsTriggeredBy">
         <inputExpression id="LiteralExpression_16khai2" typeRef="string">
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocumentsTriggeredBy != null) then additionalData.Data.manageDocumentsTriggeredBy else ""</text>
         </inputExpression>
@@ -7213,6 +7217,178 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1f0qupk">
+          <text>"reviewDocsFL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_061u2y3">
+        <inputEntry id="UnaryTests_0prbyg6">
+          <text>"manageDocumentsNew"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h3abnq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ctkelg">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1eibprb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0htaaib">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rofjx3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l4obdi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a1714o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j33b4a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0itunpn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kra12c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1br5ddp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qfz3sg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v97jyi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hiez4j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j6wd4f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w6hmuo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fz69ph">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jg325k">
+          <text>"LOCAL_AUTHORITY"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jx0woy">
+          <text>"True"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14ow3nb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tzwosw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fzdxzv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0guwie0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1f981x4">
+          <text>"reviewDocumentsForSolAndCafcassC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zrurgk">
+          <text>"Review Documents"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mtmb6a">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wy8cwr">
+          <text>"reviewDocsC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1562x0g">
+        <inputEntry id="UnaryTests_04xpkbg">
+          <text>"manageDocumentsNew"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_157ordt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g7n861">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ruri4l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rwzms1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1duz2a7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19m03hm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qc2n6m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fmtbxl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11quk6r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b8h04x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15jh625">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v4udvk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y5tmub">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_018mdeu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17ehstv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nmh0wn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11dcaae">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jyzqjl">
+          <text>"LOCAL_AUTHORITY"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00echq3">
+          <text>"True"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1pvhlzt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wchcnj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vm7z9l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vn67ou">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1adxgvn">
+          <text>"reviewDocumentsForSolAndCafcassFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ts58uq">
+          <text>"Review Documents"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_035ahw1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ha9t9n">
           <text>"reviewDocsFL401"</text>
         </outputEntry>
       </rule>
