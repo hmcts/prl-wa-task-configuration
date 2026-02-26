@@ -41,7 +41,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(24));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(119));
+        assertThat(logic.getRules().size(), is(118));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1732,25 +1732,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "name", "Reply to the Message",
                         "processCategories", "sendAndReplyIdent",
                         "taskId", "replyToMessageForJudiciary"
-                    )
-                )
-            ),
-            Arguments.of(
-                "awaitingInformation",
-                "AWAITING_INFORMATION",
-                mapAdditionalData("{\n"
-                                      + "   \"data\":{\n"
-                                      + "      \"awaitingInformationDetails\": {\n"
-                                      + "         \"reviewByDate\": \"" + currentDate+ "\"\n"
-                                      + "      }\n"
-                                      + "   }\n"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "responseToInformationRequested",
-                        "name", "Response to information requested",
-                        "processCategories", "informationRequestedReviewByDateUpdate",
-                        "delayUntil", Map.of("delayUntil" ,zonedDateTime.withSecond(0).plusMinutes(2))
                     )
                 )
             ),
