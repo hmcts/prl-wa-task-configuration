@@ -481,6 +481,29 @@
           <text>"reviewRAFL401"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_01o50pd">
+        <inputEntry id="UnaryTests_091l1kh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0aez9os">
+          <text>"awaitingInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vxq49g">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0egilbz">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19i1xcu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mcrprc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gjmwq0">
+          <text></text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
