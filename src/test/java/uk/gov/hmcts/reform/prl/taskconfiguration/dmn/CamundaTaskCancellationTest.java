@@ -186,6 +186,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                         "processCategories", "newCaseTransferredToCourt"
                     )
                 )
+<<<<<<< HEAD
             ),
             Arguments.of(
                 null,
@@ -210,6 +211,8 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                             + "applicationHwfCheck,gateKeeping"
                     )
                 )
+=======
+>>>>>>> eccf6a6527e855bcaa13d0e6072252f411a812c0
             )
         );
     }

@@ -515,7 +515,7 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0egilbz">
-          <text>"Reconfigure"</text>
+          <text>"Cancel"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19i1xcu">
           <text></text>
@@ -524,7 +524,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0gjmwq0">
-          <text>"informationRequestedReviewByDateUpdate"</text>
+          <text></text>
         </outputEntry>
       </rule>
     </decisionTable>
