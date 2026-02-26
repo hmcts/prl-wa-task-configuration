@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.35.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -2735,7 +2735,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           </text>
         </inputEntry>
         <inputEntry id="UnaryTests_04u7b5y">
-          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME","ALL_FINAL_ORDERS_ISSUED"</text>
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gq9wa9">
           <text>"C100"</text>
@@ -2911,7 +2911,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           </text>
         </inputEntry>
         <inputEntry id="UnaryTests_1p3c2eg">
-          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME","ALL_FINAL_ORDERS_ISSUED"</text>
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_01xcji7">
           <text>"FL401"</text>
@@ -2994,7 +2994,8 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_039ii3n">
         <inputEntry id="UnaryTests_0rqz87a">
-          <text>"manageOrders"</text>
+          <text>"manageOrders"
+          </text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gr5g8k">
           <text>"CASE_ISSUED", "JUDICIAL_REVIEW"</text>
@@ -3080,10 +3081,11 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_1bnpzum">
         <inputEntry id="UnaryTests_1akqa1d">
-          <text>"manageOrders"</text>
+          <text>"manageOrders"
+          </text>
         </inputEntry>
         <inputEntry id="UnaryTests_1weo7g7">
-          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME","ALL_FINAL_ORDERS_ISSUED"</text>
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gb58k4">
           <text>"C100"</text>
@@ -3259,7 +3261,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           </text>
         </inputEntry>
         <inputEntry id="UnaryTests_14tiokr">
-          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME","ALL_FINAL_ORDERS_ISSUED"</text>
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0360k2f">
           <text>"FL401"</text>
