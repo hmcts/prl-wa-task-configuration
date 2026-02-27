@@ -481,29 +481,6 @@
           <text>"reviewRAFL401"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0ah0blf">
-        <inputEntry id="UnaryTests_1acmfmu">
-          <text>"AWAITING_INFORMATION"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0n8b7l9">
-          <text>"sendToGateKeeper"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_09xqooc">
-          <text>"JUDICIAL_REVIEW"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0zae66a">
-          <text>"Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1eqcw5y">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_13xkrmx">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_004eoha">
-          <text>"taskCancelled,applicationCheck,localCourtGatekeepingFL401,localCourtGatekeepingFL401Resubmit,applicationHwfCheck,gateKeeping"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_01o50pd">
         <inputEntry id="UnaryTests_091l1kh">
           <text></text>
