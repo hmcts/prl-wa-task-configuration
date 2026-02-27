@@ -1777,7 +1777,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     @Test
     void given_awaiting_information_event_should_evaluate_dmn() {
         Map<String, Object> additionalData = mapAdditionalData("{\n"
-               + "   \"data\":{\n"
+               + "   \"Data\":{\n"
                + "      \"awaitingInformationDetails\": {\n"
                + "         \"reviewByDate\": \"" + LocalDate.of(2026, 1, 15) + "\"\n"
                + "      }\n"
