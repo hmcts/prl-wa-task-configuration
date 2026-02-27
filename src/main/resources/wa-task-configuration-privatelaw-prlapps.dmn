@@ -2550,35 +2550,6 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0eu12gu">
-        <inputEntry id="UnaryTests_0qxo60f">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0wgqa1k">
-          <text>"replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","replyToMessageForLA"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ok5h6d">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_03y0juz">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1iotxif">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1q8bpj5">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0pbiu2b">
-          <text>"title"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1pj7mpd">
-          <text>if (caseData.messages[1].value.internalOrExternalMessage = "INTERNAL") then if (string length("Reply to the Message From " + caseData.messages[1].value.senderName + " With Subject: " + caseData.messages[1].value.messageSubject) &gt; 97 ) then (substring("Reply to the Message From " + caseData.messages[1].value.senderName + " With Subject: " + caseData.messages[1].value.messageSubject, 1,97) + "...") else "Reply to the Message From " + caseData.messages[1].value.senderName + " With Subject: " + caseData.messages[1].value.messageSubject else "Reply to the Message"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0rribkf">
-          <text></text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1uc1f1e">
         <inputEntry id="UnaryTests_1ys31sh">
           <text></text>
