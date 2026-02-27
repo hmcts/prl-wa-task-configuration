@@ -21,7 +21,6 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
@@ -1774,15 +1773,16 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
 
         assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
     }
+
     @Test
     void given_awaiting_information_event_should_evaluate_dmn() {
         Map<String, Object> additionalData = mapAdditionalData("{\n"
-                                                                   + "   \"Data\":{\n"
-                                                                   + "      \"awaitingInformationDetails\": {\n"
-                                                                   + "         \"reviewByDate\": \"" + LocalDate.of(2026, 1, 15) + "\"\n"
-                                                                   + "      }\n"
-                                                                   + "   }\n"
-                                                                   + "}");
+               + "   \"Data\":{\n"
+               + "      \"awaitingInformationDetails\": {\n"
+               + "         \"reviewByDate\": \"" + LocalDate.of(2026, 1, 15) + "\"\n"
+               + "      }\n"
+               + "   }\n"
+               + "}");
 
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("eventId", "awaitingInformation");
@@ -1813,30 +1813,11 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             actualDelayUntil.get("delayUntilOrigin")
         );
 
-        Assertions.assertEquals(
-           1L,
-           actualDelayUntil.get("delayUntilIntervalDays")
-        );
-
-        Assertions.assertEquals(
-            "https://www.gov.uk/bank-holidays/england-and-wales.json",
-            actualDelayUntil.get("delayUntilNonWorkingCalendar")
-        );
-
-        Assertions.assertEquals(
-            false,
-            actualDelayUntil.get("delayUntilSkipNonWorkingDays")
-        );
-
-        Assertions.assertEquals(
-            "SATURDAY,SUNDAY",
-            actualDelayUntil.get("delayUntilNonWorkingDaysOfWeek")
-        );
-
-        Assertions.assertEquals(
-            "Next",
-            actualDelayUntil.get("delayUntillMustBeWorkingDays")
-        );
+        Assertions.assertEquals(1L, actualDelayUntil.get("delayUntilIntervalDays"));
+        Assertions.assertEquals("https://www.gov.uk/bank-holidays/england-and-wales.json", actualDelayUntil.get("delayUntilNonWorkingCalendar"));
+        Assertions.assertEquals(false, actualDelayUntil.get("delayUntilSkipNonWorkingDays"));
+        Assertions.assertEquals("SATURDAY,SUNDAY", actualDelayUntil.get("delayUntilNonWorkingDaysOfWeek"));
+        Assertions.assertEquals("Next", actualDelayUntil.get("delayUntillMustBeWorkingDays"));
     }
 
 
