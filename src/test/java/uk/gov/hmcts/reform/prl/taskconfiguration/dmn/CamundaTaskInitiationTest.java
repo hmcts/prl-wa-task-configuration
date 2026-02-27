@@ -6,6 +6,7 @@ import org.camunda.bpm.dmn.engine.DmnDecisionTableResult;
 import org.camunda.bpm.dmn.engine.impl.DmnDecisionTableImpl;
 import org.camunda.bpm.engine.variable.VariableMap;
 import org.camunda.bpm.engine.variable.impl.VariableMapImpl;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -20,6 +21,7 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
@@ -1772,6 +1774,71 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
 
         assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
     }
+    @Test
+    void given_awaiting_information_event_should_evaluate_dmn() {
+        Map<String, Object> additionalData = mapAdditionalData("{\n"
+                                                                   + "   \"Data\":{\n"
+                                                                   + "      \"awaitingInformationDetails\": {\n"
+                                                                   + "         \"reviewByDate\": \"" + LocalDate.of(2026, 1, 15) + "\"\n"
+                                                                   + "      }\n"
+                                                                   + "   }\n"
+                                                                   + "}");
+
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("eventId", "awaitingInformation");
+        inputVariables.putValue("postEventState", "AWAITING_INFORMATION");
+        inputVariables.putValue("additionalData", additionalData);
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+
+        Assertions.assertEquals(
+            "responseToInformationRequested",
+            dmnDecisionTableResult.getResultList().get(0).get("taskId")
+        );
+        Assertions.assertEquals(
+            "Response to information requested",
+            dmnDecisionTableResult.getResultList().get(0).get("name")
+        );
+        Assertions.assertEquals(
+            "informationRequestedReviewByDateUpdate",
+            dmnDecisionTableResult.getResultList().get(0).get("processCategories")
+        );
+
+        Map<String, Object> actual = dmnDecisionTableResult.getResultList().get(0);
+        Map actualDelayUntil = (Map) actual.get("delayUntil"); // no generic cast
+
+        Assertions.assertEquals(
+            LocalDate.of(2026, 1, 15),
+            actualDelayUntil.get("delayUntilOrigin")
+        );
+
+        Assertions.assertEquals(
+           1L,
+           actualDelayUntil.get("delayUntilIntervalDays")
+        );
+
+        Assertions.assertEquals(
+            "https://www.gov.uk/bank-holidays/england-and-wales.json",
+            actualDelayUntil.get("delayUntilNonWorkingCalendar")
+        );
+
+        Assertions.assertEquals(
+            false,
+            actualDelayUntil.get("delayUntilSkipNonWorkingDays")
+        );
+
+        Assertions.assertEquals(
+            "SATURDAY,SUNDAY",
+            actualDelayUntil.get("delayUntilNonWorkingDaysOfWeek")
+        );
+
+        Assertions.assertEquals(
+            "Next",
+            actualDelayUntil.get("delayUntillMustBeWorkingDays")
+        );
+    }
+
 
     private static Map<String, Object> mapAdditionalData(String additionalData) {
         ObjectMapper mapper = new ObjectMapper();
