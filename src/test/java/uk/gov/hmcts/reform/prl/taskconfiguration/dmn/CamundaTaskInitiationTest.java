@@ -1778,14 +1778,14 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void given_awaiting_information_event_should_evaluate_dmn() {
         Map<String, Object> additionalData = mapAdditionalData("{\n"
                + "   \"Data\":{\n"
-               + "      \"awaitingInformationDetails\": {\n"
+               + "      \"requestFurtherInformationDetails\": {\n"
                + "         \"reviewByDate\": \"" + LocalDate.of(2026, 1, 15) + "\"\n"
                + "      }\n"
                + "   }\n"
                + "}");
 
         VariableMap inputVariables = new VariableMapImpl();
-        inputVariables.putValue("eventId", "awaitingInformation");
+        inputVariables.putValue("eventId", "requestFurtherInformation");
         inputVariables.putValue("postEventState", "AWAITING_INFORMATION");
         inputVariables.putValue("additionalData", additionalData);
 
