@@ -1793,11 +1793,11 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
 
 
         Assertions.assertEquals(
-            "responseToInformationRequested",
+            "reviewCaseForRequestedInformation",
             dmnDecisionTableResult.getResultList().get(0).get("taskId")
         );
         Assertions.assertEquals(
-            "Response to information requested",
+            "Review Case for Requested Information",
             dmnDecisionTableResult.getResultList().get(0).get("name")
         );
         Assertions.assertEquals(

@@ -10476,10 +10476,10 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_025jqev">
-          <text>"responseToInformationRequested"</text>
+          <text>"reviewCaseForRequestedInformation"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1bhpo6c">
-          <text>"Response to information requested"</text>
+          <text>"Review Case for Requested Information"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kty4re">
           <text>{

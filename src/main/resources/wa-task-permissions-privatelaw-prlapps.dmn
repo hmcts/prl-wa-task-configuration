@@ -1381,7 +1381,7 @@
       <rule id="DecisionRule_1nbulmt">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_0rbp95d">
-          <text>"responseToInformationRequested"</text>
+          <text>"reviewCaseForRequestedInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0q182n2">
           <text></text>
@@ -1411,7 +1411,7 @@
       <rule id="DecisionRule_0py6j5t">
         <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_0r4j2p2">
-          <text>"responseToInformationRequested"</text>
+          <text>"reviewCaseForRequestedInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_11tqmn5">
           <text></text>

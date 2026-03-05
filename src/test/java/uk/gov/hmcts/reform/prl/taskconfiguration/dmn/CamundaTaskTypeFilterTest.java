@@ -156,8 +156,8 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
                              "taskTypeName", "Case transferred to your court"));
         taskTypes.add(Map.of("taskTypeId", "reqSafeguardingLetterUpdate",
                              "taskTypeName", "Request to upload Safeguarding Letter from Cafcass / Cafcass Cymru"));
-        taskTypes.add(Map.of("taskTypeId", "responseToInformationRequested",
-                             "taskTypeName", "Response to information requested"));
+        taskTypes.add(Map.of("taskTypeId", "reviewCaseForRequestedInformation",
+                             "taskTypeName", "Review Case for Requested Information"));
         return Stream.of(
                 Arguments.of(
                         taskTypes
