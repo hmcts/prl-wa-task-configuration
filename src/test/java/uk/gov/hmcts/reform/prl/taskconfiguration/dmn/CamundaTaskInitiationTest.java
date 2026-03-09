@@ -16,10 +16,7 @@ import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTable;
 import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.time.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -1778,9 +1775,12 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void given_awaiting_information_event_should_evaluate_dmn() {
         Map<String, Object> additionalData = mapAdditionalData("{\n"
                + "   \"Data\":{\n"
-               + "      \"requestFurtherInformationDetails\": {\n"
-               + "         \"reviewByDate\": \"" + LocalDate.of(2026, 1, 15) + "\"\n"
-               + "      }\n"
+               + "      \"requestFurtherInformationDetails\": {\n" +
+                                                                   "    \"reviewByDate\": \"2026-03-10T00:00:00.000\",\n" +
+                                                                   "    \"requestFurtherInformationReasonList\": [\n" +
+                                                                   "      \"miamFurtherInformation\"\n" +
+                                                                   "    ]\n" +
+                                                                   "  }\n"
                + "   }\n"
                + "}");
 
@@ -1809,8 +1809,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         Map actualDelayUntil = (Map) actual.get("delayUntil"); // no generic cast
 
         Assertions.assertEquals(
-            LocalDate.of(2026, 1, 15),
-            actualDelayUntil.get("delayUntilOrigin")
+            OffsetDateTime.parse("2026-03-10T00:00Z"),
+            OffsetDateTime.parse(actualDelayUntil.get("delayUntilOrigin").toString())
         );
 
         Assertions.assertEquals(1L, actualDelayUntil.get("delayUntilIntervalDays"));
