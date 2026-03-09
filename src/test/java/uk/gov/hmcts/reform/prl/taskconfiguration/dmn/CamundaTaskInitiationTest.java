@@ -1775,12 +1775,12 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void given_awaiting_information_event_should_evaluate_dmn() {
         Map<String, Object> additionalData = mapAdditionalData("{\n"
                + "   \"Data\":{\n"
-               + "      \"requestFurtherInformationDetails\": {\n" +
-                                                                   "    \"reviewByDate\": \"2026-03-10T00:00:00.000\",\n" +
-                                                                   "    \"requestFurtherInformationReasonList\": [\n" +
-                                                                   "      \"miamFurtherInformation\"\n" +
-                                                                   "    ]\n" +
-                                                                   "  }\n"
+               + "      \"requestFurtherInformationDetails\": {\n"
+               + "    \"reviewByDate\": \"2026-03-10T00:00:00.000\",\n"
+               + "    \"requestFurtherInformationReasonList\": [\n"
+               + "      \"miamFurtherInformation\"\n"
+               + "    ]\n"
+               + "  }\n"
                + "   }\n"
                + "}");
 
