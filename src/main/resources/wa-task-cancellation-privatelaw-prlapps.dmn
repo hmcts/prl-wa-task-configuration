@@ -509,7 +509,7 @@
           <text>"AWAITING_INFORMATION"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0vp4ekr">
-          <text>"issueAndSendToLocalCourtCallback","fl401AddCaseNumber","sendToGateKeeper","returnApplication","transferToAnotherCourt","recordFinalDecision","processUrgentHelpWithFees"</text>
+          <text>"issueAndSendToLocalCourtCallback","fl401AddCaseNumber","sendToGateKeeper","returnApplication","recordFinalDecision","processUrgentHelpWithFees"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0j32naw">
           <text></text>
@@ -524,6 +524,29 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1v0jgnr">
+          <text>"informationRequestedReviewByDateUpdate"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_transferOffline">
+        <inputEntry id="UnaryTests_transferOffline_1">
+          <text>"AWAITING_INFORMATION"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_transferOffline_2">
+          <text>"transferToAnotherCourt"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_transferOffline_3">
+          <text>"PROCEEDING_IN_OFFLINE_FAMILYMAN"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_transferOffline_4">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_transferOffline_5">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_transferOffline_6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_transferOffline_7">
           <text>"informationRequestedReviewByDateUpdate"</text>
         </outputEntry>
       </rule>

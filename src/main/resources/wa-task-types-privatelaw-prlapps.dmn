@@ -774,7 +774,7 @@
           <text>"responseToInformationRequested"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1416xny">
-          <text>"Response to information requested"</text>
+          <text>"Review case for requested information"</text>
         </outputEntry>
       </rule>
     </decisionTable>

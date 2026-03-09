@@ -10479,7 +10479,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"responseToInformationRequested"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1bhpo6c">
-          <text>"Response to information requested"</text>
+          <text>"Review case for requested information"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kty4re">
           <text>{
