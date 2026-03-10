@@ -481,6 +481,29 @@
           <text>"reviewRAFL401"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_cancelCirOnUpload">
+        <inputEntry id="UnaryTests_cancelCirFromState">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_cancelCirEvent">
+          <text>"cafcass-document-upload"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_cancelCirToState">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_cancelCirAction">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_cancelCirWarningCode">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_cancelCirWarningText">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_cancelCirCategory">
+          <text>"requestCirUpdate"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
