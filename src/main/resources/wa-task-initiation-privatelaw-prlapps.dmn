@@ -2118,10 +2118,10 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_1neox9h">
         <inputEntry id="UnaryTests_0s4uzvv">
-          <text>"serviceOfApplication"</text>
+          <text>"enablePrepareHearingBundleTask"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0lz3uxd">
-          <text>"JUDICIAL_REVIEW","PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1jz4zmi">
           <text>"C100"</text>
@@ -2184,7 +2184,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0sb08f5">
-          <text>"No"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1grhrch">
           <text></text>
@@ -2196,9 +2196,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"Produce hearing bundle"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19rxs4w">
-          <text>{
-"delayUntil": if(additionalData.Data.productHearingBundleOn != null) then (date(additionalData.Data.productHearingBundleOn)) else now()
-}</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_15xnwvl">
           <text>"produceHearingBundleC100"</text>
@@ -2206,10 +2204,10 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_040sdqs">
         <inputEntry id="UnaryTests_0lstpsf">
-          <text>"serviceOfApplication"</text>
+          <text>"enablePrepareHearingBundleTask"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0zq5t6z">
-          <text>"JUDICIAL_REVIEW","PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
+          <text>"PREPARE_FOR_HEARING_CONDUCT_HEARING","DECISION_OUTCOME"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rlhwd4">
           <text>"FL401"</text>
@@ -2272,7 +2270,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1mx55ia">
-          <text>"No"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1tjrygx">
           <text></text>
@@ -2284,9 +2282,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"Produce hearing bundle"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02mk6z6">
-          <text>{
-"delayUntil": if(additionalData.Data.productHearingBundleOn != null and additionalData.Data.productHearingBundleOn != "") then (date(additionalData.Data.productHearingBundleOn)) else now()
-}</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1hptupr">
           <text>"produceHearingBundleFL401"</text>
