@@ -18,6 +18,7 @@ import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.OffsetDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.HashMap;
@@ -1811,7 +1812,16 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         Map<String, Object> actual = dmnDecisionTableResult.getResultList().get(0);
         Map actualDelayUntil = (Map) actual.get("delayUntil"); // no generic cast
 
-        Assertions.assertNotNull(actualDelayUntil.get("delayUntilOrigin"));
+        Assertions.assertEquals(
+            OffsetDateTime.parse("2026-03-10T00:00Z"),
+            OffsetDateTime.parse(actualDelayUntil.get("delayUntilOrigin").toString())
+        );
+
+        Assertions.assertEquals(1L, actualDelayUntil.get("delayUntilIntervalDays"));
+        Assertions.assertEquals("https://www.gov.uk/bank-holidays/england-and-wales.json", actualDelayUntil.get("delayUntilNonWorkingCalendar"));
+        Assertions.assertEquals(false, actualDelayUntil.get("delayUntilSkipNonWorkingDays"));
+        Assertions.assertEquals("SATURDAY,SUNDAY", actualDelayUntil.get("delayUntilNonWorkingDaysOfWeek"));
+        Assertions.assertEquals("Next", actualDelayUntil.get("delayUntillMustBeWorkingDays"));
     }
 
 
