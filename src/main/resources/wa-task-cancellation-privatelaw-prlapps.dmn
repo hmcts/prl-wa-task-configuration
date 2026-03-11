@@ -506,13 +506,13 @@
       </rule>
       <rule id="DecisionRule_179g6b0">
         <inputEntry id="UnaryTests_035iuzw">
-          <text>"AWAITING_INFORMATION"</text>
+          <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_024c1st">
           <text>"issueAndSendToLocalCourtCallback","fl401AddCaseNumber","sendToGateKeeper","returnApplication","recordFinalDecision","processUrgentHelpWithFees","transferToAnotherCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0n6x5y6">
-          <text>not("AWAITING_INFORMATION")</text>
+          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_05psys1">
           <text>"Cancel"</text>

@@ -113,6 +113,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     Map.of(
                         "action", "Reconfigure"
+                    ),
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
                     )
                 )
             ),
@@ -208,6 +212,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     Map.of(
                         "action", "Reconfigure"
+                    ),
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
                     )
                 )
             ),
