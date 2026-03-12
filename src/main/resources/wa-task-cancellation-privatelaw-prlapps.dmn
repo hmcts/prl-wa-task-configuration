@@ -512,7 +512,7 @@
           <text>"issueAndSendToLocalCourtCallback","fl401AddCaseNumber","sendToGateKeeper","returnApplication","recordFinalDecision","processUrgentHelpWithFees","transferToAnotherCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_151idnv">
-          <text></text>
+          <text>not("AWAITING_INFORMATION")</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1xyk90x">
           <text>"Cancel"</text>
