@@ -10483,103 +10483,10 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_1kty4re">
           <text>{
-"delayUntilOrigin":date and time(additionalData.Data.requestFurtherInformationDetails.reviewByDate + "Z"),
-"delayUntilIntervalDays":1,
-"delayUntilNonWorkingCalendar":"https://www.gov.uk/bank-holidays/england-and-wales.json",
-"delayUntilNonWorkingDaysOfWeek": "SATURDAY,SUNDAY",
-"delayUntilSkipNonWorkingDays": false,
-"delayUntillMustBeWorkingDays": "Next"
-}</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1gc30py">
-          <text>"informationRequestedReviewByDateUpdate"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_06dnd4l">
-        <inputEntry id="UnaryTests_09t0gcu">
-          <text>"requestFurtherInformation"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_08r31o6">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_08c99pk">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0pojisj">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1bzlho5">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1le6ii4">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_12yi9zg">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_16uu5r6">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1k3j8of">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1vet12k">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_09twy0o">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0fvuus1">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1o2u7zq">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ykrnuv">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0lg4knf">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1rzxvoq">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1wbst68">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_10fsgcd">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1hgai3c">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1jno4sm">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0t3moch">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1g29q8x">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0rjqicy">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ku4djg">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1h5wfnw">
-          <text>"reviewCaseForRequestedInformation"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1asqb2h">
-          <text>"Review Case for Requested Information"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1575lo4">
-          <text>{
 "delayUntilOrigin": now() + duration("PT5M")
 }</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_159wee9">
+        <outputEntry id="LiteralExpression_1gc30py">
           <text>"informationRequestedReviewByDateUpdate"</text>
         </outputEntry>
       </rule>
