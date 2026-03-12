@@ -189,10 +189,38 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                     )
                 )
             ),
-            // Scenario 1: Send to Gatekeeper from Awaiting Information
+            Arguments.of(
+                "AWAITING_INFORMATION",
+                "transferToAnotherCourt",
+                "PROCEEDING_IN_OFFLINE_FAMILYMAN",
+                List.of(
+                    Map.of(
+                        "action", "Reconfigure"
+                    ),
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    )
+                )
+            ),
+            Arguments.of(
+                "AWAITING_INFORMATION",
+                "transferToAnotherCourt",
+                "AWAITING_INFORMATION",
+                List.of(
+                    Map.of(
+                        "action", "Reconfigure"
+                    ),
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    )
+                )
+            ),
             Arguments.of(
                 "AWAITING_INFORMATION",
                 "sendToGateKeeper",
+                "GATEKEEPING",
                 null,
                 List.of(
                     Map.of(
@@ -205,10 +233,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                     )
                 )
             ),
-            // Scenario 2 (CA): Issue and Send to Local Court from Awaiting Information
             Arguments.of(
                 "AWAITING_INFORMATION",
                 "issueAndSendToLocalCourtCallback",
+                "CASE_ISSUED",
                 null,
                 List.of(
                     Map.of(
@@ -217,11 +245,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                     )
                 )
             ),
-            // Scenario 2 (DA): Add case number from Awaiting Information
             Arguments.of(
                 "AWAITING_INFORMATION",
                 "fl401AddCaseNumber",
-                null,
+                "CASE_ISSUED",
                 List.of(
                     Map.of(
                         "action", "Cancel",
@@ -229,11 +256,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                     )
                 )
             ),
-            // Scenario 3: Return Application from Awaiting Information
             Arguments.of(
                 "AWAITING_INFORMATION",
                 "returnApplication",
-                null,
+                "RETURNED",
                 List.of(
                     Map.of(
                         "action", "Cancel",
@@ -241,38 +267,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                     )
                 )
             ),
-            // Scenario 4: Transfer to Another Court (Offline FamilyMan) - exits Awaiting Information
-            Arguments.of(
-                "AWAITING_INFORMATION",
-                "transferToAnotherCourt",
-                "ALL_FINAL_ORDERS_ISSUED",
-                List.of(
-                    Map.of("action", "Reconfigure"),
-                    Map.of(
-                        "action", "Cancel",
-                        "processCategories", "informationRequestedReviewByDateUpdate"
-                    )
-                )
-            ),
-            // Scenario 5: Transfer to Another Court (Online EA Site) - remains in Awaiting Information
-            // Task is cancelled by the DMN; WA framework handles re-scheduling via requestFurtherInformation
-            Arguments.of(
-                "AWAITING_INFORMATION",
-                "transferToAnotherCourt",
-                "AWAITING_INFORMATION",
-                List.of(
-                    Map.of("action", "Reconfigure"),
-                    Map.of(
-                        "action", "Cancel",
-                        "processCategories", "informationRequestedReviewByDateUpdate"
-                    )
-                )
-            ),
-            // Scenario 6: Record Final Decision from Awaiting Information
             Arguments.of(
                 "AWAITING_INFORMATION",
                 "recordFinalDecision",
-                null,
+                "CLOSED",
                 List.of(
                     Map.of(
                         "action", "Cancel",
@@ -280,7 +278,6 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                     )
                 )
             ),
-            // Scenario 7: Process Urgent HWF from Awaiting Information
             Arguments.of(
                 "AWAITING_INFORMATION",
                 "processUrgentHelpWithFees",
@@ -317,7 +314,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(22));
+        assertThat(logic.getRules().size(), is(23));
 
     }
 }
