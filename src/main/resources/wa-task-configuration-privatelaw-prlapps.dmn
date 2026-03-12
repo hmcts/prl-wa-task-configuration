@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.44.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN" camunda:historyTimeToLive="P90D">
     <informationRequirement id="InformationRequirement_1iac9a2">
       <requiredDecision href="#Decision_11ew6tt" />
@@ -2518,6 +2518,64 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"[Reply to Message](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendOrReplyToMessages)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ss75wi">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15keb8b">
+        <inputEntry id="UnaryTests_06n4lyz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14fsr8f">
+          <text>"replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","replyToMessageForLA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fbmr5t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rf2xnv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pnd76z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1285v7p">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vv92d4">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06j36ny">
+          <text>if (caseData.messages[1].value.internalOrExternalMessage = "INTERNAL") then if (string length("Reply to the Message From " + caseData.messages[1].value.senderName + " With Subject: " + caseData.messages[1].value.messageSubject) &gt; 97 ) then (substring("Reply to the Message From " + caseData.messages[1].value.senderName + " With Subject: " + caseData.messages[1].value.messageSubject, 1,97) + "...") else "Reply to the Message From " + caseData.messages[1].value.senderName + " With Subject: " + caseData.messages[1].value.messageSubject else "Reply to the Message"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_035xh5o">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0se2r75">
+        <inputEntry id="UnaryTests_15vm1tu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gqhob7">
+          <text>"replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","replyToMessageForLA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08ifc7c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l4wy72">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yr5lxb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xnyc5s">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1q1de9s">
+          <text>"additionalProperties_messageIdentifier"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00r1ube">
+          <text>if (caseData != null and caseData.messages != null and count(caseData.messages) &gt; 0) then caseData.messages[1].value.messageIdentifier else null</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fobx3t">
           <text></text>
         </outputEntry>
       </rule>
