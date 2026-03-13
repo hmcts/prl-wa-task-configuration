@@ -111,10 +111,8 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 "transferToAnotherCourt",
                 null,
                 List.of(
-                    Map.of("action", "Reconfigure"),
                     Map.of(
-                        "action", "Cancel",
-                        "processCategories", "informationRequestedReviewByDateUpdate"
+                        "action", "Reconfigure"
                     )
                 )
             ),
@@ -186,20 +184,6 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "action", "Cancel",
                         "processCategories", "newCaseTransferredToCourt"
-                    )
-                )
-            ),
-            Arguments.of(
-                "AWAITING_INFORMATION",
-                "transferToAnotherCourt",
-                "PROCEEDS_IN_HERITAGE_SYSTEM",
-                List.of(
-                    Map.of(
-                        "action", "Reconfigure"
-                    ),
-                    Map.of(
-                        "action", "Cancel",
-                        "processCategories", "informationRequestedReviewByDateUpdate"
                     )
                 )
             ),

@@ -506,7 +506,7 @@
       </rule>
       <rule id="DecisionRule_1qzojod">
         <inputEntry id="UnaryTests_1hcdzco">
-          <text></text>
+          <text>"AWAITING_INFORMATION"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1cghd0t">
           <text>"issueAndSendToLocalCourtCallback","fl401AddCaseNumber","sendToGateKeeper","returnApplication","transferToAnotherCourt","recordFinalDecision","processUrgentHelpWithFees"</text>

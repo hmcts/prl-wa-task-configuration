@@ -1808,12 +1808,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             dmnDecisionTableResult.getResultList().get(0).get("processCategories")
         );
 
-        Map<String, Object> actual = dmnDecisionTableResult.getResultList().get(0);
-        Map actualDelayUntil = (Map) actual.get("delayUntil"); // no generic cast
-
-        Assertions.assertNotNull(
-            ZonedDateTime.parse(actualDelayUntil.get("delayUntil").toString())
-        );
     }
 
 

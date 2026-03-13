@@ -10482,9 +10482,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"Review Case for Requested Information"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kty4re">
-          <text>{
-"delayUntil": now() + duration("PT5M")
-}</text>
+          <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1gc30py">
           <text>"informationRequestedReviewByDateUpdate"</text>
