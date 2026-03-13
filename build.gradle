@@ -6,7 +6,7 @@ plugins {
   id 'io.spring.dependency-management' version '1.0.11.RELEASE'
   id 'org.springframework.boot' version '2.7.18'
   id 'com.github.ben-manes.versions' version '0.38.0'
-  id 'org.owasp.dependencycheck' version '9.0.4'
+  id 'org.owasp.dependencycheck' version '11.1.1'
   id 'org.sonarqube' version '4.3.0.3225'
   id 'info.solidsoft.pitest' version '1.5.2'
   id 'io.freefair.lombok' version '8.1.0'
@@ -244,7 +244,7 @@ def versions = [
   camunda         : '7.18.0',
   pitest          : '1.22.0',
   sonarPitest     : '0.5',
-  tomcat          : '9.0.112',
+  tomcat          : '9.0.115',
   log4j           : '2.25.3'
 ]
 
