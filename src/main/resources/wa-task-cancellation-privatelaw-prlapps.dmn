@@ -504,29 +504,6 @@
           <text>"informationRequestedReviewByDateUpdate"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1qzojod">
-        <inputEntry id="UnaryTests_1hcdzco">
-          <text>"AWAITING_INFORMATION"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1cghd0t">
-          <text>"issueAndSendToLocalCourtCallback","fl401AddCaseNumber","sendToGateKeeper","returnApplication","transferToAnotherCourt","recordFinalDecision","processUrgentHelpWithFees"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_151idnv">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1xyk90x">
-          <text>"Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1p2ahkn">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1ajfa9o">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1wgrf43">
-          <text>"informationRequestedReviewByDateUpdate"</text>
-        </outputEntry>
-      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
