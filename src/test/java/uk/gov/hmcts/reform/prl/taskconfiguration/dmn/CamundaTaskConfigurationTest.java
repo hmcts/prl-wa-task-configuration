@@ -1642,7 +1642,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             case "replyToMessageForCourtAdminC100":
             case "replyToMessageForJudiciary":
             case "replyToMessageForLA":
-                return "[Reply to Message](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendOrReplyToMessages)";
+                return "[Reply to Message](/cases/case-details/${[CASE_REFERENCE]}/trigger/waSendOrReplyToMessages)";
 
             case "reviewDocumentsForSolAndCafcassC100":
             case "reviewDocumentsForSolAndCafcassFL401":
