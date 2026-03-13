@@ -504,6 +504,29 @@
           <text>"informationRequestedReviewByDateUpdate"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1djmgpd">
+        <inputEntry id="UnaryTests_0w3mn4l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ntrkdm">
+          <text>"sendToGateKeeper"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ng0frn">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bpw34g">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lvuhgu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_197emb8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sjjzij">
+          <text>"informationRequestedReviewByDateUpdate"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
