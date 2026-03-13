@@ -501,7 +501,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0gjmwq0">
-          <text></text>
+          <text>"informationRequestedReviewByDateUpdate"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1qzojod">
@@ -509,7 +509,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1cghd0t">
-          <text>"issueAndSendToLocalCourtCallback","fl401AddCaseNumber","sendToGateKeeper","returnApplication","recordFinalDecision","processUrgentHelpWithFees"</text>
+          <text>"issueAndSendToLocalCourtCallback","fl401AddCaseNumber","sendToGateKeeper","returnApplication","transferToAnotherCourt","recordFinalDecision","processUrgentHelpWithFees"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_151idnv">
           <text></text>
@@ -524,29 +524,6 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1wgrf43">
-          <text>"informationRequestedReviewByDateUpdate"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_transferToAnotherCourt_Cancel">
-        <inputEntry id="UnaryTests_fromState_transfer">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_event_transfer">
-          <text>"transferToAnotherCourt"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_state_transfer">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_action_transfer">
-          <text>"Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_warningCode_transfer">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_warningText_transfer">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_processCategories_transfer">
           <text>"informationRequestedReviewByDateUpdate"</text>
         </outputEntry>
       </rule>

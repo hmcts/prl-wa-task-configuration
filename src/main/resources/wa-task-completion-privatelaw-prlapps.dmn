@@ -847,7 +847,7 @@
       </rule>
       <rule id="DecisionRule_reviewCaseAutoClose">
         <inputEntry id="UnaryTests_reviewCaseAutoClose">
-          <text>"sendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees","transferToAnotherCourt"</text>
+          <text>"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_reviewCaseAutoClose_taskType">
           <text>"reviewCaseForRequestedInformation"</text>
