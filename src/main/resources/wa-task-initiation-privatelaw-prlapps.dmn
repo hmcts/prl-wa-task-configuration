@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.35.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.44.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -7209,6 +7209,178 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1f0qupk">
+          <text>"reviewDocsFL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01o7ez8">
+        <inputEntry id="UnaryTests_0lubrzz">
+          <text>"manageDocumentsNew"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yuq6cr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0njobza">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_016ox1b">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lqw5y4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09a0odo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fp9i7a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sjn8vj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uwqqwc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ydl36h">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01jx7a3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dbnnqe">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_064embm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yrzxnq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hog2ld">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p9zud8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uhyo57">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0af7bfu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1trdiwn">
+          <text>"LOCAL_AUTHORITY"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1diwi6m">
+          <text>"True"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vrkl7m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k3x7xd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gcxw49">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vqetkg">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0swzsnj">
+          <text>"reviewDocumentsForSolAndCafcassC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18179mz">
+          <text>"Review Documents"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gmay1g">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vfr6pz">
+          <text>"reviewDocsC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1cvkcwh">
+        <inputEntry id="UnaryTests_09ys4hf">
+          <text>"manageDocumentsNew"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l4kw3r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cfkoqh">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rktt9z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vat846">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x6jf57">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gzn0nb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q1xcrq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_029ar8o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_058okfp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d86ppw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14ne799">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0378rn7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tr2qga">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05kp44a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_024g576">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dm5qcy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gcwhoc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1czmqhj">
+          <text>"LOCAL_AUTHORITY"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_143z61j">
+          <text>"True"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x8swu5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01sggq0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jxtg1f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13h9n4s">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0e5n1b8">
+          <text>"reviewDocumentsForSolAndCafcassFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v7habv">
+          <text>"Review Documents"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0awcxb0">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0hs8wc8">
           <text>"reviewDocsFL401"</text>
         </outputEntry>
       </rule>
