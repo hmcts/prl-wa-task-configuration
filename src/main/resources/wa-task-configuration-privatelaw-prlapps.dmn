@@ -2544,7 +2544,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"title"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_06j36ny">
-          <text>if (caseData.messages[1].value.internalOrExternalMessage = "INTERNAL") then if (string length("Reply to the Message From " + caseData.messages[1].value.senderName + " With Subject: " + caseData.messages[1].value.messageSubject) &gt; 97 ) then (substring("Reply to the Message From " + caseData.messages[1].value.senderName + " With Subject: " + caseData.messages[1].value.messageSubject, 1,97) + "...") else "Reply to the Message From " + caseData.messages[1].value.senderName + " With Subject: " + caseData.messages[1].value.messageSubject else "Reply to the Message"</text>
+          <text>if (caseData.messages[1].value.internalOrExternalMessage != "EXTERNAL") then if (string length("Reply to the Message From " + caseData.messages[1].value.senderName + " With Subject: " + caseData.messages[1].value.messageSubject) &gt; 97 ) then (substring("Reply to the Message From " + caseData.messages[1].value.senderName + " With Subject: " + caseData.messages[1].value.messageSubject, 1,97) + "...") else "Reply to the Message From " + caseData.messages[1].value.senderName + " With Subject: " + caseData.messages[1].value.messageSubject else "Reply to the Message"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_035xh5o">
           <text></text>
