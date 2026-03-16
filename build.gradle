@@ -271,8 +271,11 @@ dependencies {
 
   implementation group: 'jakarta.el', name: 'jakarta.el-api', version: '5.0.1'
 
+  //jackson dependencies are required for the DMN engine to work, as it uses jackson to parse the DMN files
   // Source: https://mvnrepository.com/artifact/tools.jackson.core/jackson-core
   implementation("tools.jackson.core:jackson-core:3.1.0")
+  // Source: https://mvnrepository.com/artifact/tools.jackson.core/jackson-databind
+  implementation("tools.jackson.core:jackson-databind:3.1.0")
 
   testImplementation group: 'org.pitest', name: 'pitest', version: versions.pitest
   testImplementation 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.15.0'
