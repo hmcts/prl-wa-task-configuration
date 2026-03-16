@@ -222,11 +222,20 @@ dependencyManagement {
 }
 
 repositories {
-  mavenLocal()
-  mavenCentral()
-  maven {
-    url = uri('https://pkgs.dev.azure.com/hmcts/Artifacts/_packaging/hmcts-lib/maven/v1')
-  }
+    mavenLocal()
+    mavenCentral()
+    maven {
+      url = uri('https://pkgs.dev.azure.com/hmcts/Artifacts/_packaging/hmcts-lib/maven/v1')
+    }
+
+    configurations.all {
+            resolutionStrategy {
+                force 'tools.jackson.core:jackson-databind:3.1.0'
+                force 'tools.jackson.core:jackson-core:3.1.0'
+                force 'com.fasterxml.jackson.core:jackson-databind:2.15.4'
+                force 'com.fasterxml.jackson.core:jackson-core:2.15.4'
+            }
+    }
 }
 
 def versions = [
@@ -253,10 +262,16 @@ ext.libraries = [
 
 dependencies {
 
-  implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+  implementation(group: 'org.springframework.boot', name: 'spring-boot-starter-web') {
+    exclude group: 'com.fasterxml.jackson.core', module: 'jackson-databind'
+  }
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-aop'
-  implementation group: 'org.springframework.boot', name: 'spring-boot-starter-json'
+  implementation(group: 'org.springframework.boot', name: 'spring-boot-starter-json') {
+    exclude group: 'com.fasterxml.jackson.core', module: 'jackson-databind'
+  }
+  // Add safe version of jackson-databind
+  implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.4'
 
   implementation group: 'io.springfox', name: 'springfox-swagger2', version: versions.springfoxSwagger
   implementation group: 'io.springfox', name: 'springfox-boot-starter', version: versions.springfoxSwagger
