@@ -25,27 +25,27 @@
 taskAttributes. taskType else if(taskType != null) then taskType else null</text>
         </inputExpression>
       </input>
-      <input id="InputClause_01659jd" label="Order ID">
+      <input id="InputClause_01659jd" label="Order ID" biodi:width="150">
         <inputExpression id="LiteralExpression_02d4k41" typeRef="string">
           <text>orderId</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0g6yzhb" label="Additional Application ID" biodi:width="192">
+      <input id="InputClause_0g6yzhb" label="Additional Application ID" biodi:width="150">
         <inputExpression id="LiteralExpression_1jjpncz" typeRef="string">
           <text>additionalApplicationId</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0bwrqte" label="Case Note ID">
+      <input id="InputClause_0bwrqte" label="Case Note ID" biodi:width="150">
         <inputExpression id="LiteralExpression_1dryxy4" typeRef="string">
           <text>caseNoteId</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0smc117" label="Hearing ID">
+      <input id="InputClause_0smc117" label="Hearing ID" biodi:width="150">
         <inputExpression id="LiteralExpression_0k6mn62" typeRef="string">
           <text>hearingId</text>
         </inputExpression>
       </input>
-      <output id="Output_1" label="Name" name="name" typeRef="string" biodi:width="351" />
+      <output id="Output_1" label="Name" name="name" typeRef="string" biodi:width="150" />
       <output id="OutputClause_021y3bb" label="Value" name="value" typeRef="string" biodi:width="803" />
       <output id="OutputClause_06m3ktt" label="Can Reconfigure?" name="canReconfigure" typeRef="boolean" biodi:width="192" />
       <rule id="DecisionRule_0u7yi27">
