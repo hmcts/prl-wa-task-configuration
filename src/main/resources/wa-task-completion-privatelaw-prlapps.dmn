@@ -834,6 +834,17 @@
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_cirOverdueCompletion">
+        <inputEntry id="UnaryTests_cirOverdueCompletion">
+          <text>"cirOverdueTaskCreation"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_cirOverdueTaskType">
+          <text>"requestCirUpdate"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_cirOverdueCompletionMode">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
