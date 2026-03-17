@@ -10207,21 +10207,18 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0aeox25">
-          <text>"CIR","SER"</text>
+          <text>"Yes"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_14z5lqo">
           <text>"reqSafeguardingLetterUpdate"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0wstmnd">
-          <text>if (additionalData.Data.requestSafeGuardingLetterUpdate = "CIR") then "Request CIR Update" else "Request SER Update"</text>
+          <text>"Request SER Update"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1v5k7sx">
           <text>{
-            "delayUntil": if (additionalData.Data.safeGuardingLetterUploadDueDate != null and
-            additionalData.Data.safeGuardingLetterUploadDueDate != "") then
-            date(additionalData.Data.safeGuardingLetterUploadDueDate) else now()
-            }
-          </text>
+"delayUntil": if (additionalData.data.safeGuardingLetterUploadDueDate != null and additionalData.data.safeGuardingLetterUploadDueDate != "") then date(additionalData.data.safeGuardingLetterUploadDueDate) else now()
+}</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0jycm43">
           <text>"safeguardingLetterUpdate"</text>
@@ -10298,21 +10295,18 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1l2br0e">
-          <text>"CIR","SER"</text>
+          <text>"Yes"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_16h0xs7">
           <text>"reqSafeguardingLetterUpdate"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0pxplfa">
-          <text>if (additionalData.Data.requestSafeGuardingLetterUpdate = "CIR") then "Request CIR Update" else "Request SER Update"</text>
+          <text>"Request SER Update"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_19667rh">
           <text>{
-            "delayUntil": if (additionalData.Data.safeGuardingLetterUploadDueDate != null and
-            additionalData.Data.safeGuardingLetterUploadDueDate != "") then
-            date(additionalData.Data.safeGuardingLetterUploadDueDate) else now()
-            }
-          </text>
+"delayUntil": if (additionalData.data.safeGuardingLetterUploadDueDate != null and additionalData.data.safeGuardingLetterUploadDueDate != "") then date(additionalData.data.safeGuardingLetterUploadDueDate) else now()
+}</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_079657j">
           <text>"safeguardingLetterUpdate"</text>
