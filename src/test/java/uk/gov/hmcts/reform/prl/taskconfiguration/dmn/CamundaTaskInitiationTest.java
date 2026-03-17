@@ -719,6 +719,28 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "manageOrders",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Create a custom order" + "\"\n,"
+                                      + "      \"judgeLaManagerReviewRequired\":\"" + "null" + "\"\n,"
+                                      + "      \"isHearingTaskNeeded\":\"" + "Yes" + "\"\n,"
+                                      + "      \"isMultipleHearingSelected\":\"" + "No" + "\"\n,"
+                                      + "      \"hearingOptionSelected\":\"" + "dateReservedWithListAssit" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "createHearingRequestReserveListAssist",
+                        "name", "Create Hearing Request - Reserved in List Assist",
+                        "processCategories", "createHearingRequest"
+                    )
+                )
+            ),
+            Arguments.of(
                 "editAndApproveAnOrder",
                 null,
                 mapAdditionalData("{\n"

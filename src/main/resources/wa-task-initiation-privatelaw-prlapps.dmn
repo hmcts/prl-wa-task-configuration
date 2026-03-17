@@ -4305,7 +4305,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"COURT_ADMIN"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_02w08d3">
-          <text>"Create an order"</text>
+          <text>"Create an order","Create a custom order"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0a3g7b1">
           <text>"noCheck"</text>
@@ -4391,7 +4391,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"JUDGE"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1x0l5ex">
-          <text>"Create an order"</text>
+          <text>"Create an order","Create a custom order"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0j2zuoj">
           <text></text>
@@ -4477,7 +4477,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"COURT_ADMIN"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0l1dkxt">
-          <text>"Create an order"</text>
+          <text>"Create an order","Create a custom order"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0urqo0n">
           <text>"noCheck"</text>
@@ -4563,7 +4563,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"JUDGE"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0soiqla">
-          <text>"Create an order"</text>
+          <text>"Create an order","Create a custom order"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_00ugsrp">
           <text></text>
@@ -4649,7 +4649,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"COURT_ADMIN"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_05qfwof">
-          <text>"Create an order"</text>
+          <text>"Create an order","Create a custom order"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0lytuvq">
           <text>"noCheck"</text>
@@ -4735,7 +4735,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"JUDGE"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1m7w599">
-          <text>"Create an order"</text>
+          <text>"Create an order","Create a custom order"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_02fszg8">
           <text></text>
