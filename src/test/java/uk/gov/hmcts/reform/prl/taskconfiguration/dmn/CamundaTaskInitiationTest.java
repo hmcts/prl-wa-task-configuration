@@ -39,9 +39,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(24));
+        assertThat(logic.getInputs().size(), is(25));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(119));
+        assertThat(logic.getRules().size(), is(120));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1750,6 +1750,22 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "name", "Reply to the Message",
                         "processCategories", "sendAndReplyIdent",
                         "taskId", "replyToMessageForJudiciary"
+                    )
+                )
+            ),
+            Arguments.of(
+                "cafcass-document-upload",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"cirDocUploaded\":\"Yes\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewCirUpdate",
+                        "name", "Review CIR Update",
+                        "processCategories", "reviewCirUpdate"
                     )
                 )
             )

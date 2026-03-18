@@ -810,7 +810,7 @@
       <rule id="DecisionRule_1evorlb">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_1k15vbg">
-          <text>"sendToGateKeeperC100","sendToGateKeeperResubmittedC100","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","reviewAdditionalApplication","reviewLangAndSmReq","reqSafeguardingLetterUpdate","requestCirUpdate"</text>
+          <text>"sendToGateKeeperC100","sendToGateKeeperResubmittedC100","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","reviewAdditionalApplication","reviewLangAndSmReq","reqSafeguardingLetterUpdate","requestCirUpdate","reviewCirUpdate"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_12k147l">
           <text></text>
