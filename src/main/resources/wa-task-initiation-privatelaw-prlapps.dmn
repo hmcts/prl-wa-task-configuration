@@ -10482,14 +10482,9 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"Review Case for Requested Information"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kty4re">
-         <text>{
-         "delayUntilOrigin":date and time(additionalData.Data.requestFurtherInformationDetails.reviewByDate + "Z"),
-         "delayUntilIntervalDays":1,
-         "delayUntilNonWorkingCalendar":"https://www.gov.uk/bank-holidays/england-and-wales.json",
-         "delayUntilNonWorkingDaysOfWeek": "SATURDAY,SUNDAY",
-         "delayUntilSkipNonWorkingDays": false,
-         "delayUntillMustBeWorkingDays": "Next"
-         }</text>
+          <text>{
+"delayUntil": now() + duration("PT5M")
+}</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1gc30py">
           <text>"informationRequestedReviewByDateUpdate"</text>
