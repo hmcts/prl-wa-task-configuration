@@ -17,7 +17,7 @@
     ],
     "bumpVersion": "patch",
     "registryAliases": {
-      "hmctspublic": "https://hmctspublic.azurecr.io/helm/v1/repo/"
+      "hmctspublic": "https://hmctsprod.azurecr.io/helm/v1/repo/"
     }
   }
 }
