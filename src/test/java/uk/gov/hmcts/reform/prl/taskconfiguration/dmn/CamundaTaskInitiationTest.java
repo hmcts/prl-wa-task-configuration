@@ -1770,7 +1770,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "cirOverdueTaskCreation",
+                "enterCirDueDate_TODO",
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"

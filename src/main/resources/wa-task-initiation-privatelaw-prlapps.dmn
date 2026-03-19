@@ -10521,9 +10521,9 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"hearingId_"+additionalData.Data.currentHearingId</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_cirOverdueTaskCreation">
+      <rule id="DecisionRule_requestCirUpdate">
         <inputEntry id="UnaryTests_cirOverdue_eventId">
-          <text>"cirOverdueTaskCreation"</text>
+          <text>"enterCirDueDate_TODO"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_cirOverdue_postState">
           <text></text>
