@@ -10603,9 +10603,9 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_cirOverdue_delayUntil">
           <text>{
-            "delayUntil": if (additionalData.Data.cirDueDate != null and
-            additionalData.Data.cirDueDate != "") then
-            date(additionalData.Data.cirDueDate) else now()
+            "delayUntil": if (additionalData.Data.whenReportsMustBeFiledByLocalAuthority != null and
+            additionalData.Data.whenReportsMustBeFiledByLocalAuthority != "") then
+            date(additionalData.Data.whenReportsMustBeFiledByLocalAuthority) else now()
             }
           </text>
         </outputEntry>

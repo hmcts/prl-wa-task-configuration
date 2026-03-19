@@ -1768,6 +1768,22 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "processCategories", "reviewCirUpdate"
                     )
                 )
+            ),
+            Arguments.of(
+                "cirOverdueTaskCreation",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"whenReportsMustBeFiledByLocalAuthority\":\"2026-03-01\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "requestCirUpdate",
+                        "name", "Request CIR Update",
+                        "processCategories", "requestCirUpdate"
+                    )
+                )
             )
         );
     }
