@@ -1190,7 +1190,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(45));
+        assertThat(logic.getRules().size(), is(47));
     }
 
     @ParameterizedTest
@@ -1294,5 +1294,31 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 )
             ))
         );
+    }
+
+    @Test
+    void evaluate_task_ctsc_and_admin_responseToInformationRequested() {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", "responseToInformationRequested"));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            Map.of(
+                "autoAssignable", false,
+                "name", "task-supervisor",
+                "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
+            ), Map.of(
+                "autoAssignable", false,
+                "name", "ctsc",
+                "roleCategory", "CTSC",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete"
+            ), Map.of(
+                "autoAssignable", false,
+                "name", "hearing-centre-admin",
+                "roleCategory", "ADMIN",
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete"
+            )
+        )));
     }
 }
