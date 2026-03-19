@@ -186,6 +186,100 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                         "processCategories", "newCaseTransferredToCourt"
                     )
                 )
+            ),
+            Arguments.of(
+                "AWAITING_INFORMATION",
+                "transferToAnotherCourt",
+                "PROCEEDING_IN_OFFLINE_FAMILYMAN",
+                List.of(
+                    Map.of(
+                        "action", "Reconfigure"
+                    ),
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    )
+                )
+            ),
+            Arguments.of(
+                "AWAITING_INFORMATION",
+                "transferToAnotherCourt",
+                "AWAITING_INFORMATION",
+                List.of(
+                    Map.of(
+                        "action", "Reconfigure"
+                    )
+                )
+            ),
+            Arguments.of(
+                "AWAITING_INFORMATION",
+                "sendToGateKeeper",
+                "GATEKEEPING",
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "newCaseTransferredToCourt"
+                    ),
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    )
+                )
+            ),
+            Arguments.of(
+                "AWAITING_INFORMATION",
+                "issueAndSendToLocalCourtCallback",
+                "CASE_ISSUED",
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    )
+                )
+            ),
+            Arguments.of(
+                "AWAITING_INFORMATION",
+                "fl401AddCaseNumber",
+                "CASE_ISSUED",
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    )
+                )
+            ),
+            Arguments.of(
+                "AWAITING_INFORMATION",
+                "returnApplication",
+                "RETURNED",
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    )
+                )
+            ),
+            Arguments.of(
+                "AWAITING_INFORMATION",
+                "recordFinalDecision",
+                "CLOSED",
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    )
+                )
+            ),
+            Arguments.of(
+                "AWAITING_INFORMATION",
+                "processUrgentHelpWithFees",
+                "SUBMITTED",
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    )
+                )
             )
         );
     }
@@ -212,7 +306,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(20));
+        assertThat(logic.getRules().size(), is(22));
 
     }
 }
