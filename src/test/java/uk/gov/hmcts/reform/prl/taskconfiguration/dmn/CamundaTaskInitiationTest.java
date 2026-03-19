@@ -1782,7 +1782,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "requestCirUpdate",
                         "name", "Request CIR Update",
                         "processCategories", "requestCirUpdate",
-                        "delayUntil", "{delayUntil=2026-03-01}"
+                        "delayUntil", Map.of("delayUntil", LocalDate.of(2026, 3, 1))
                     )
                 )
             )
