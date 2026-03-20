@@ -39,9 +39,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(25));
+        assertThat(logic.getInputs().size(), is(24));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(120));
+        assertThat(logic.getRules().size(), is(119));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1754,22 +1754,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "cafcass-document-upload",
-                null,
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"cirDocUploaded\":\"Yes\"\n"
-                                      + "   }"
-                                      + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "reviewCirUpdate",
-                        "name", "Review CIR Update",
-                        "processCategories", "reviewCirUpdate"
-                    )
-                )
-            ),
-            Arguments.of(
                 "enterCirDueDate_TODO",
                 null,
                 mapAdditionalData("{\n"
@@ -1782,7 +1766,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "requestCirUpdate",
                         "name", "Request CIR Update",
                         "processCategories", "requestCirUpdate",
-                        "delayUntil", Map.of("delayUntil", LocalDate.of(2026, 3, 1))
+                        "delayUntil", Map.of("delayUntil", LocalDate.of(2026, 3, 2))
                     )
                 )
             )
