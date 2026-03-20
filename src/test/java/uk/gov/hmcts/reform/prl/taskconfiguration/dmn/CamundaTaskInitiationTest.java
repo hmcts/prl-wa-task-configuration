@@ -1754,10 +1754,11 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "enterCirDueDate_TODO",
+                "manageOrders",
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
+                                      + "      \"localAuthorityNeedToProvideReport\":\"Yes\",\n"
                                       + "      \"whenReportsMustBeFiledByLocalAuthority\":\"2026-03-01\"\n"
                                       + "   }"
                                       + "}"),

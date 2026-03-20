@@ -10400,7 +10400,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_requestCirUpdate">
         <inputEntry id="UnaryTests_cirOverdue_eventId">
-          <text>"enterCirDueDate_TODO"</text>
+          <text>"manageOrders"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_cirOverdue_postState">
           <text></text>
