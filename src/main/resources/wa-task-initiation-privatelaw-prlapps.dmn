@@ -3935,7 +3935,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_0yhayu9">
           <text>{
-"delayUntil":(date and time(date(now()) + duration("P5D")))
+"delayUntil":(date and time(date(now()) + duration("P1D")))
 }</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_13cxgrq">
