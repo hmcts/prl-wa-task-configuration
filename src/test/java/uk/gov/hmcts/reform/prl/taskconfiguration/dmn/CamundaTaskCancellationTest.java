@@ -282,6 +282,46 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "AWAITING_INFORMATION",
+                "exitAwaitingInformation",
+                "SUBMITTED_NOT_PAID",
+                List.of(
+                    Map.of(
+                        "action", "Cancel"
+                    )
+                )
+            ),
+            Arguments.of(
+                "AWAITING_INFORMATION",
+                "exitAwaitingInformation",
+                "SUBMITTED_PAID",
+                List.of(
+                    Map.of(
+                        "action", "Cancel"
+                    )
+                )
+            ),
+            Arguments.of(
+                "AWAITING_INFORMATION",
+                "exitAwaitingInformation",
+                "CASE_ISSUED",
+                List.of(
+                    Map.of(
+                        "action", "Cancel"
+                    )
+                )
+            ),
+            Arguments.of(
+                "AWAITING_INFORMATION",
+                "exitAwaitingInformation",
+                "JUDICIAL_REVIEW",
+                List.of(
+                    Map.of(
+                        "action", "Cancel",
+                    )
+                )
+            ),
+            Arguments.of(
                 null,
                 "requestFurtherInformation",
                 null,
@@ -316,7 +356,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(23));
+        assertThat(logic.getRules().size(), is(24));
 
     }
 }

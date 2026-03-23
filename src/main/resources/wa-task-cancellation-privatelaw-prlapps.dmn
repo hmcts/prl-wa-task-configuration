@@ -527,6 +527,29 @@
           <text>"informationRequestedReviewByDateUpdate"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_exitAwaitingInformation">
+        <inputEntry id="UnaryTests_exitAwaitingInformation_from">
+          <text>"AWAITING_INFORMATION"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_exitAwaitingInformation_event">
+          <text>"exitAwaitingInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_exitAwaitingInformation_state">
+          <text>"SUBMITTED_NOT_PAID","SUBMITTED_PAID","CASE_ISSUED","JUDICIAL_REVIEW"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_exitAwaitingInformation_action">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_exitAwaitingInformation_warningCode">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_exitAwaitingInformation_warningText">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_exitAwaitingInformation_processCategories">
+          <text>"informationRequestedReviewByDateUpdate"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_transferToCourtOffline">
         <inputEntry id="UnaryTests_transferToCourtOffline_from">
           <text>"AWAITING_INFORMATION"</text>
