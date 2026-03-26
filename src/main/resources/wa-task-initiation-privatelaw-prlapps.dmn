@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.35.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.44.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -6256,7 +6256,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0r8hxul">
         <inputEntry id="UnaryTests_0gnrm2d">
-          <text>"sendOrReplyToMessages","reviewAdditionalApplication"</text>
+          <text>"sendOrReplyToMessages","reviewAdditionalApplication","waSendOrReplyToMessages"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1jald4g">
           <text></text>
@@ -6343,7 +6343,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0sxnkaw">
         <inputEntry id="UnaryTests_1a3f4jq">
-          <text>"sendOrReplyToMessages"</text>
+          <text>"sendOrReplyToMessages","waSendOrReplyToMessages"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1me6z2g">
           <text></text>
@@ -6430,7 +6430,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0df7jsz">
         <inputEntry id="UnaryTests_1sygclg">
-          <text>"sendOrReplyToMessages","reviewAdditionalApplication"</text>
+          <text>"sendOrReplyToMessages","reviewAdditionalApplication","waSendOrReplyToMessages"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1k05qkm">
           <text></text>
@@ -6517,7 +6517,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_1g4v779">
         <inputEntry id="UnaryTests_0oe2od2">
-          <text>"sendOrReplyToMessages"</text>
+          <text>"sendOrReplyToMessages","waSendOrReplyToMessages"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0v83isf">
           <text></text>
@@ -6604,7 +6604,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0vppllf">
         <inputEntry id="UnaryTests_1pp1kwo">
-          <text>"sendOrReplyToMessages","reviewAdditionalApplication"</text>
+          <text>"sendOrReplyToMessages","reviewAdditionalApplication","waSendOrReplyToMessages"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1j2ccjw">
           <text></text>
@@ -6691,7 +6691,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0zytn3v">
         <inputEntry id="UnaryTests_0hyu1g2">
-          <text>"sendOrReplyToMessages"</text>
+          <text>"sendOrReplyToMessages","waSendOrReplyToMessages"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_05rk6pk">
           <text></text>
@@ -6778,7 +6778,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0m557gk">
         <inputEntry id="UnaryTests_1pr8xyx">
-          <text>"sendOrReplyToMessages","reviewAdditionalApplication"</text>
+          <text>"sendOrReplyToMessages","reviewAdditionalApplication","waSendOrReplyToMessages"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0q375k1">
           <text></text>
@@ -6865,7 +6865,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0qgkh4o">
         <inputEntry id="UnaryTests_1r6ovbx">
-          <text>"sendOrReplyToMessages"</text>
+          <text>"sendOrReplyToMessages","waSendOrReplyToMessages"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_119xsd5">
           <text></text>
