@@ -276,7 +276,7 @@ dependencies {
   implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-core', version: versions.tomcat
   implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-websocket', version: versions.tomcat
 
-  implementation group: 'jakarta.el', name: 'jakarta.el-api', version: '5.0.1'
+  implementation group: 'jakarta.el', name: 'jakarta.el-api', version: '6.0.1'
 
   testImplementation group: 'org.pitest', name: 'pitest', version: versions.pitest
   testImplementation 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.15.0'
