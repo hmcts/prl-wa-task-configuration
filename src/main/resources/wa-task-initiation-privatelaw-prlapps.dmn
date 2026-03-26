@@ -7890,7 +7890,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0xl441m">
-          <text></text>
+          <text>"cirExtensionRequestLa"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0qlcqk7">
           <text>"cirExtensionRequestReviewDocumentsC100"</text>
@@ -7979,7 +7979,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qx9ksh">
-          <text></text>
+          <text>"cirTransferRequestLa"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_065efu4">
           <text>"cirTransferRequestReviewDocumentsC100"</text>
