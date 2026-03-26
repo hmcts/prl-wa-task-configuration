@@ -555,7 +555,7 @@
           <text>"AWAITING_INFORMATION"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_transferToCourtOffline_event">
-          <text>"transferToAnotherCourt"</text>
+          <text>"transferToAnotherCourt","exitAwaitingInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_transferToCourtOffline_state">
           <text>not("AWAITING_INFORMATION")</text>
