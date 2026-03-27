@@ -7,7 +7,7 @@
           <text>fromState</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0ain215" label="Event">
+      <input id="InputClause_0ain215" label="Event" biodi:width="450">
         <inputExpression id="LiteralExpression_0h2l2zj" typeRef="string">
           <text>event</text>
         </inputExpression>
@@ -509,7 +509,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ntrkdm">
-          <text>"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees"</text>
+          <text>"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees","exitAwaitingInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ng0frn">
           <text></text>
@@ -527,35 +527,12 @@
           <text>"informationRequestedReviewByDateUpdate"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_exitAwaitingInformation">
-        <inputEntry id="UnaryTests_exitAwaitingInformation_from">
-          <text>"AWAITING_INFORMATION"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_exitAwaitingInformation_event">
-          <text>"exitAwaitingInformation"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_exitAwaitingInformation_state">
-          <text>"SUBMITTED_NOT_PAID","SUBMITTED_PAID","CASE_ISSUED","JUDICIAL_REVIEW"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_exitAwaitingInformation_action">
-          <text>"Cancel"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_exitAwaitingInformation_warningCode">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_exitAwaitingInformation_warningText">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_exitAwaitingInformation_processCategories">
-          <text>"informationRequestedReviewByDateUpdate"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_transferToCourtOffline">
         <inputEntry id="UnaryTests_transferToCourtOffline_from">
           <text>"AWAITING_INFORMATION"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_transferToCourtOffline_event">
-          <text>"transferToAnotherCourt","exitAwaitingInformation"</text>
+          <text>"transferToAnotherCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_transferToCourtOffline_state">
           <text>not("AWAITING_INFORMATION")</text>
