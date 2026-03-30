@@ -220,7 +220,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.requestSafeGuardingLetterUpdate != null) then additionalData.Data.requestSafeGuardingLetterUpdate else ""</text>
         </inputExpression>
       </input>
-      <input id="InputClause_1rn0fmw" label="Manage Document uploaded Category">
+      <input id="InputClause_1rn0fmw" label="Manage Document uploaded Category" biodi:width="223">
         <inputExpression id="LiteralExpression_0s0ljsg" typeRef="string">
           <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocUploadedCategory != null) then additionalData.Data.manageDocUploadedCategory else ""</text>
         </inputExpression>
@@ -7356,7 +7356,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_10mr7cb">
-          <text></text>
+          <text>"childImpactReport1","childImpactReport2","safeguardingLetter", "section7Report", "section37Report", "guardianReport", "specialGuardianshipReport", "otherDocs"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_09vquza">
           <text>"reviewDocumentsForSolAndCafcassC100"</text>
@@ -7445,7 +7445,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1inc9c1">
-          <text></text>
+          <text>"childImpactReport1","childImpactReport2","safeguardingLetter", "section7Report", "section37Report", "guardianReport", "specialGuardianshipReport", "otherDocs"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0asclo9">
           <text>"reviewDocumentsForSolAndCafcassFL401"</text>
@@ -7872,7 +7872,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_04naig9">
-          <text>"LOCAL_AUTHORITY"</text>
+          <text>"LOCAL_AUTHORITY", "CAFCASS"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0vazhi2">
           <text>"True"</text>
@@ -7890,7 +7890,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0xl441m">
-          <text>"cirExtensionRequestLa"</text>
+          <text>"cirExtensionRequestLa",   "cirExtensionRequest"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0qlcqk7">
           <text>"cirExtensionRequestReviewDocumentsC100"</text>
@@ -7961,7 +7961,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_04qlvkn">
-          <text>"LOCAL_AUTHORITY"</text>
+          <text>"LOCAL_AUTHORITY", "CAFCASS"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0x1qq28">
           <text>"True"</text>
@@ -7979,7 +7979,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0qx9ksh">
-          <text>"cirTransferRequestLa"</text>
+          <text>"cirTransferRequestLa","cirTransferRequest"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_065efu4">
           <text>"cirTransferRequestReviewDocumentsC100"</text>
@@ -7991,6 +7991,95 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1juepxt">
+          <text>"reviewDocsC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dzwhns">
+        <inputEntry id="UnaryTests_0l42u6y">
+          <text>"manageDocumentsNew"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xinxns">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_190uidv">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18l9f6y">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14opm94">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1js27sq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15g7ot5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0occ0v3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zctrzq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iq6dpk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1neupsx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ecx2mo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cqukzj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pmc9fv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jj4vyv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ml8o4j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13qrjsz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rwzida">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_136z1uy">
+          <text>"LOCAL_AUTHORITY"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rj0oq8">
+          <text>"True"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0470plg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10n4zw8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1siy5jn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10pv9e4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s93zxo">
+          <text>"16aRiskAssessment"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pd4r5x">
+          <text>"16aRiskAssessmentReviewDocumentsC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o1gprb">
+          <text>"Review 16A Risk Assessment"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yl7sfx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c1sqrs">
           <text>"reviewDocsC100"</text>
         </outputEntry>
       </rule>

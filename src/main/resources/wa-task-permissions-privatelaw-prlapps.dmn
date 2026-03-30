@@ -931,7 +931,7 @@
       <rule id="DecisionRule_0isxg00">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_062rjrz">
-          <text>"reviewCorrespondenceC100","reviewDocumentsForSolAndCafcassC100","cirExtensionRequestReviewDocumentsC100", "cirTransferRequestReviewDocumentsC100"</text>
+          <text>"reviewCorrespondenceC100","reviewDocumentsForSolAndCafcassC100","cirExtensionRequestReviewDocumentsC100", "cirTransferRequestReviewDocumentsC100", "16aRiskAssessmentReviewDocumentsC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0fgfm23">
           <text></text>
