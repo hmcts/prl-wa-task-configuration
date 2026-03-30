@@ -7284,7 +7284,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0zjv2zh">
         <inputEntry id="UnaryTests_1r3v5ht">
-          <text>"manageDocumentsNew"</text>
+          <text>"manageDocumentsNew", "cafcass-document-upload"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1cyi44a">
           <text></text>
@@ -7373,7 +7373,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_1af88qg">
         <inputEntry id="UnaryTests_13rgwdl">
-          <text>"manageDocumentsNew"</text>
+          <text>"manageDocumentsNew", "cafcass-document-upload"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1m5gn57">
           <text></text>
@@ -7818,7 +7818,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_030br9l">
         <inputEntry id="UnaryTests_0iu1uxl">
-          <text>"manageDocumentsNew"</text>
+          <text>"manageDocumentsNew", "cafcass-document-upload"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0jdxbqa">
           <text></text>
@@ -7907,7 +7907,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_1v3kj8y">
         <inputEntry id="UnaryTests_1i3ls4o">
-          <text>"manageDocumentsNew"</text>
+          <text>"manageDocumentsNew", "cafcass-document-upload"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0kk6p7b">
           <text></text>
@@ -7996,7 +7996,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0dzwhns">
         <inputEntry id="UnaryTests_0l42u6y">
-          <text>"manageDocumentsNew"</text>
+          <text>"manageDocumentsNew","cafcass-document-upload"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0xinxns">
           <text></text>
