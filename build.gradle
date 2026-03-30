@@ -198,7 +198,7 @@ dependencyManagement {
     }
 
     //CVE-2021-22060
-    dependencySet(group: 'org.springframework', name: 'spring-core', version: '5.3.39') {
+    dependencySet(group: 'org.springframework', name: 'spring-core', version: '7.0.6') {
       entry 'spring-core'
       entry 'spring-aop'
       entry 'spring-beans'
