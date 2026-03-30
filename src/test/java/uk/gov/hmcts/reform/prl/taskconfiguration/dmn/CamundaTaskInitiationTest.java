@@ -1758,6 +1758,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"localAuthorityNeedToProvideReport\":\"Yes\",\n"
                                       + "      \"whenReportsMustBeFiledByLocalAuthority\":\"2026-03-01\"\n"
                                       + "   }"

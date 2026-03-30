@@ -186,7 +186,18 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                         "processCategories", "newCaseTransferredToCourt"
                     )
                 )
+            ),
+            Arguments.of(
+            null,
+            "manageDocumentsNew",
+            null,
+            List.of(
+                Map.of(
+                    "action", "Cancel",
+                    "processCategories", "requestCirUpdate"
+                )
             )
+           )
         );
     }
 
