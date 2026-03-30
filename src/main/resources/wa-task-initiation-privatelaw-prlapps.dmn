@@ -8050,7 +8050,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_136z1uy">
-          <text>"LOCAL_AUTHORITY"</text>
+          <text>"CAFCASS"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0rj0oq8">
           <text>"True"</text>
