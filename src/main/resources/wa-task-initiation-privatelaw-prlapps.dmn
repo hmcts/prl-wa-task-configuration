@@ -3843,11 +3843,11 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"requestSolicitorOrderC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1175d8m">
-          <text>"Request Solicitor Order"</text>
+          <text>"Request Order"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_140ejeb">
           <text>{
-"delayUntil":(date and time(date(now()) + duration("P5D")))
+"delayUntil":(date and time(date(now()) + duration("P3D")))
 }</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0oqqgxq">
@@ -3931,7 +3931,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"requestSolicitorOrderFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1k6zapd">
-          <text>"Request Solicitor Order"</text>
+          <text>"Request Order"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0yhayu9">
           <text>{

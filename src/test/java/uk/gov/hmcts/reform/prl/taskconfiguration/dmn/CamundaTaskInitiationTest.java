@@ -1764,7 +1764,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 singletonList(
                     mapWithDelayUntil(
                         "requestSolicitorOrderC100",
-                        "Request Solicitor Order",
+                        "Request Order",
                         "requestSolicitorOrder"
                     )
                 )
@@ -1780,7 +1780,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 singletonList(
                     mapWithDelayUntil(
                         "requestSolicitorOrderFL401",
-                        "Request Solicitor Order",
+                        "Request Order",
                         "requestSolicitorOrder"
                     )
                 )
