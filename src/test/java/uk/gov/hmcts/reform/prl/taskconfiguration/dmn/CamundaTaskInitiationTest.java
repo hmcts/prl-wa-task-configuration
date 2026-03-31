@@ -1798,6 +1798,38 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "replyToMessageForJudiciary"
                     )
                 )
+            ),
+            Arguments.of(
+                "enableRequestSolicitorOrderTask",
+                "DECISION_OUTCOME",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    mapRequestOrder(
+                        "requestSolicitorOrderC100",
+                        "Request Order",
+                        "requestSolicitorOrder"
+                    )
+                )
+            ),
+            Arguments.of(
+                "enableRequestSolicitorOrderTask",
+                "DECISION_OUTCOME",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    mapRequestOrder(
+                        "requestSolicitorOrderFL401",
+                        "Request Order",
+                        "requestSolicitorOrder"
+                    )
+                )
             )
         );
     }
@@ -1817,6 +1849,15 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
+    }
+
+    private static Map<String, Object> mapRequestOrder(String taskId, String name,
+                                                       String processCategories) {
+        Map<String, Object> result = new HashMap<>();
+        result.put("taskId", taskId);
+        result.put("name", name);
+        result.put("processCategories", processCategories);
+        return result;
     }
 
     private static Map<String, Object> mapAdditionalData(String additionalData) {
