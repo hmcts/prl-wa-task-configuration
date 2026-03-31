@@ -239,12 +239,12 @@ repositories {
 def versions = [
   junit           : '5.7.2',
   junitPlatform   : '1.7.2',
-  reformLogging   : '6.1.9',
+  reformLogging   : '7.0.0',
   springfoxSwagger: '3.0.0',
   camunda         : '7.24.0',
   pitest          : '1.23.0',
   sonarPitest     : '0.5',
-  tomcat          : '9.0.115',
+  tomcat          : '9.0.116',
   log4j           : '2.25.3'
 ]
 
