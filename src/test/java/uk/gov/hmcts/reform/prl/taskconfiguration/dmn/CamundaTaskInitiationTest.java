@@ -1768,6 +1768,22 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "requestSolicitorOrder"
                     )
                 )
+            ),
+            Arguments.of(
+                "enableRequestSolicitorOrderTask",
+                "DECISION_OUTCOME",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    mapWithDelayUntil(
+                        "requestSolicitorOrderFL401",
+                        "Request Solicitor Order",
+                        "requestSolicitorOrder"
+                    )
+                )
             )
         );
     }
