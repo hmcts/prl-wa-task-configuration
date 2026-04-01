@@ -1752,6 +1752,38 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "replyToMessageForJudiciary"
                     )
                 )
+            ),
+            Arguments.of(
+                "enableRequestSolicitorOrderTask",
+                "DECISION_OUTCOME",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    mapWithDelayUntil(
+                        "requestSolicitorOrderC100",
+                        "Request Order",
+                        "requestSolicitorOrder"
+                    )
+                )
+            ),
+            Arguments.of(
+                "enableRequestSolicitorOrderTask",
+                "DECISION_OUTCOME",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    mapWithDelayUntil(
+                        "requestSolicitorOrderFL401",
+                        "Request Order",
+                        "requestSolicitorOrder"
+                    )
+                )
             )
         );
     }
@@ -1771,6 +1803,18 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
+    }
+
+    private static Map<String, Object> mapWithDelayUntil(String taskId, String name,
+                                                            String processCategories) {
+        Map<String, Object> delayUntilMap = new HashMap<>();
+        delayUntilMap.put("delayUntil", null);
+        Map<String, Object> result = new HashMap<>();
+        result.put("taskId", taskId);
+        result.put("name", name);
+        result.put("processCategories", processCategories);
+        result.put("delayUntil", delayUntilMap);
+        return result;
     }
 
     private static Map<String, Object> mapAdditionalData(String additionalData) {
