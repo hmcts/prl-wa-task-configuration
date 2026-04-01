@@ -25,27 +25,27 @@
 taskAttributes. taskType else if(taskType != null) then taskType else null</text>
         </inputExpression>
       </input>
-      <input id="InputClause_01659jd" label="Order ID">
+      <input id="InputClause_01659jd" label="Order ID" biodi:width="150">
         <inputExpression id="LiteralExpression_02d4k41" typeRef="string">
           <text>orderId</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0g6yzhb" label="Additional Application ID" biodi:width="192">
+      <input id="InputClause_0g6yzhb" label="Additional Application ID" biodi:width="150">
         <inputExpression id="LiteralExpression_1jjpncz" typeRef="string">
           <text>additionalApplicationId</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0bwrqte" label="Case Note ID">
+      <input id="InputClause_0bwrqte" label="Case Note ID" biodi:width="150">
         <inputExpression id="LiteralExpression_1dryxy4" typeRef="string">
           <text>caseNoteId</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0smc117" label="Hearing ID">
+      <input id="InputClause_0smc117" label="Hearing ID" biodi:width="150">
         <inputExpression id="LiteralExpression_0k6mn62" typeRef="string">
           <text>hearingId</text>
         </inputExpression>
       </input>
-      <output id="Output_1" label="Name" name="name" typeRef="string" biodi:width="351" />
+      <output id="Output_1" label="Name" name="name" typeRef="string" biodi:width="150" />
       <output id="OutputClause_021y3bb" label="Value" name="value" typeRef="string" biodi:width="803" />
       <output id="OutputClause_06m3ktt" label="Can Reconfigure?" name="canReconfigure" typeRef="boolean" biodi:width="192" />
       <rule id="DecisionRule_0u7yi27">
@@ -2544,9 +2544,67 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1rvmm7d">
-          <text>"[Reply to Message](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendOrReplyToMessages)"</text>
+          <text>"[Reply to Message](/cases/case-details/${[CASE_REFERENCE]}/trigger/waSendOrReplyToMessages)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ss75wi">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15keb8b">
+        <inputEntry id="UnaryTests_06n4lyz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14fsr8f">
+          <text>"replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","replyToMessageForLA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fbmr5t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rf2xnv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pnd76z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1285v7p">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vv92d4">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06j36ny">
+          <text>if (caseData.messages[1].value.internalOrExternalMessage != "EXTERNAL") then if (string length("Reply to the Message From " + caseData.messages[1].value.senderName + "      Subject: " + caseData.messages[1].value.messageSubject) &gt; 97 ) then (substring("Reply to the Message From " + caseData.messages[1].value.senderName + "      Subject: " + caseData.messages[1].value.messageSubject, 1,97) + "...") else "Reply to the Message From " + caseData.messages[1].value.senderName + "      Subject: " + caseData.messages[1].value.messageSubject else "Reply to the Message"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_035xh5o">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0se2r75">
+        <inputEntry id="UnaryTests_15vm1tu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gqhob7">
+          <text>"replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForJudiciary","replyToMessageForLA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08ifc7c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l4wy72">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yr5lxb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xnyc5s">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1q1de9s">
+          <text>"additionalProperties_messageIdentifier"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00r1ube">
+          <text>if (caseData != null and caseData.messages != null and count(caseData.messages) &gt; 0) then caseData.messages[1].value.messageIdentifier else null</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fobx3t">
           <text></text>
         </outputEntry>
       </rule>
