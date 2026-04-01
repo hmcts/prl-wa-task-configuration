@@ -7284,7 +7284,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0zjv2zh">
         <inputEntry id="UnaryTests_1r3v5ht">
-          <text>"manageDocumentsNew", "cafcass-document-upload"</text>
+          <text>"manageDocumentsNew"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1cyi44a">
           <text></text>
@@ -7373,7 +7373,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_1af88qg">
         <inputEntry id="UnaryTests_13rgwdl">
-          <text>"manageDocumentsNew", "cafcass-document-upload"</text>
+          <text>"manageDocumentsNew"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1m5gn57">
           <text></text>
@@ -10751,6 +10751,184 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_0gg1eiy">
           <text>"newCaseTransferredToCourt"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09c9tmr">
+        <inputEntry id="UnaryTests_0s8d6ht">
+          <text>"cafcass-document-upload"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14ew18m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05yey5h">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bsw442">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12tsa3v">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d6e14v">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01bkg70">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gjewv3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xj7crv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0h6se15">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0lcjxi3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1feqtmr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j09930">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13p8922">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1s6691g">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02d0hcu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11whida">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05o9lg3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kjlzll">
+          <text>"CAFCASS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o58qmw">
+          <text>"True"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lco7bk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19d83ke">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cntu05">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1njygbp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15dcoj8">
+          <text>"childImpactReport1","childImpactReport2","safeguardingLetter", "section7Report", "section37Report", "guardianReport", "specialGuardianshipReport", "otherDocs"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_106nse3">
+          <text>"reviewDocumentsForSolAndCafcassC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0wjcuyd">
+          <text>"Review Documents"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m7tvha">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17ys950">
+          <text>"reviewDocsC100"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_028wljf">
+        <inputEntry id="UnaryTests_1ts3wcf">
+          <text>"cafcass-document-upload"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qwi6u8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d2hpdb">
+          <text>"FL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w9bulh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tuv0vp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n2brmm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i10j9t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nrfabg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gf263e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_004rr61">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ijc5j4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ti9swj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1liqyk1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k7zhzo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16t17nu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yt812c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t8naix">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d9lifq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yajav5">
+          <text>"CAFCASS"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kquv29">
+          <text>"True"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1n36v5q">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ji5hrz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_077bo77">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kabq6p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_120jo2i">
+          <text>"childImpactReport1","childImpactReport2","safeguardingLetter", "section7Report", "section37Report", "guardianReport", "specialGuardianshipReport", "otherDocs"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wbj2k7">
+          <text>"reviewDocumentsForSolAndCafcassFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f6w8gc">
+          <text>"Review Documents"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ptehr6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1t38rir">
+          <text>"reviewDocsFL401"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0wmbxw8">
