@@ -317,7 +317,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 "JUDICIAL_REVIEW",
                 List.of(
                     Map.of(
-                        "action", "Cancel",
+                        "action", "Cancel"
                     )
                 )
             ),
