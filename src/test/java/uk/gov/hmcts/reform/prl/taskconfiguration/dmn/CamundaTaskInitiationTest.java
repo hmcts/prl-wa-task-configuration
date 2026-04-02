@@ -41,7 +41,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(25));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(119));
+        assertThat(logic.getRules().size(), is(120));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1772,7 +1772,27 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "delayUntil", Map.of("delayUntil", LocalDate.of(2026, 3, 2))
                     )
                 )
-            )
+            ),
+                Arguments.of(
+                        "adminEditAndApproveAnOrder",
+                        null,
+                        mapAdditionalData("{\n"
+                                + "   \"Data\":{\n"
+                                + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
+                                + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                + "      \"localAuthorityNeedToProvideReport\":\"Yes\",\n"
+                                + "      \"whenReportsMustBeFiledByLocalAuthority\":\"2026-03-01\"\n"
+                                + "   }"
+                                + "}"),
+                        singletonList(
+                                Map.of(
+                                        "taskId", "requestCirUpdate",
+                                        "name", "Request CIR Update",
+                                        "processCategories", "requestCirUpdate",
+                                        "delayUntil", Map.of("delayUntil", LocalDate.of(2026, 3, 2))
+                                )
+                        )
+                )
         );
     }
 
