@@ -287,7 +287,8 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 "SUBMITTED_NOT_PAID",
                 List.of(
                     Map.of(
-                        "action", "Cancel"
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
                     )
                 )
             ),
@@ -297,7 +298,8 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 "SUBMITTED_PAID",
                 List.of(
                     Map.of(
-                        "action", "Cancel"
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
                     )
                 )
             ),
@@ -307,7 +309,8 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 "CASE_ISSUED",
                 List.of(
                     Map.of(
-                        "action", "Cancel"
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
                     )
                 )
             ),
@@ -317,7 +320,8 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 "JUDICIAL_REVIEW",
                 List.of(
                     Map.of(
-                        "action", "Cancel"
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
                     )
                 )
             ),
