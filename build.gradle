@@ -3,13 +3,13 @@ plugins {
   id 'checkstyle'
   id 'pmd'
   id 'jacoco'
-  id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+  id 'io.spring.dependency-management' version '1.1.7'
   id 'org.springframework.boot' version '2.7.18'
-  id 'com.github.ben-manes.versions' version '0.38.0'
-  id 'org.owasp.dependencycheck' version '9.0.4'
-  id 'org.sonarqube' version '4.3.0.3225'
+  id 'com.github.ben-manes.versions' version '0.53.0'
+  id 'org.owasp.dependencycheck' version '11.1.1'
+  id 'org.sonarqube' version '4.4.1.3373'
   id 'info.solidsoft.pitest' version '1.5.2'
-  id 'io.freefair.lombok' version '8.1.0'
+  id 'io.freefair.lombok' version '8.14.4'
 }
 
 group = 'uk.gov.hmcts.reform'
@@ -222,7 +222,7 @@ dependencyManagement {
     }
 
     //CVE-2022-1471
-    dependencySet(group: 'org.yaml', version: '2.5') {
+    dependencySet(group: 'org.yaml', version: '2.6') {
       entry 'snakeyaml'
     }
   }
@@ -239,12 +239,12 @@ repositories {
 def versions = [
   junit           : '5.7.2',
   junitPlatform   : '1.7.2',
-  reformLogging   : '6.1.9',
+  reformLogging   : '7.0.0',
   springfoxSwagger: '3.0.0',
-  camunda         : '7.18.0',
-  pitest          : '1.22.0',
+  camunda         : '7.24.0',
+  pitest          : '1.23.0',
   sonarPitest     : '0.5',
-  tomcat          : '9.0.112',
+  tomcat          : '9.0.116',
   log4j           : '2.25.3'
 ]
 
@@ -276,7 +276,7 @@ dependencies {
   implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-core', version: versions.tomcat
   implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-websocket', version: versions.tomcat
 
-  implementation group: 'jakarta.el', name: 'jakarta.el-api', version: '5.0.1'
+  implementation group: 'jakarta.el', name: 'jakarta.el-api', version: '6.0.1'
 
   testImplementation group: 'org.pitest', name: 'pitest', version: versions.pitest
   testImplementation 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.15.0'
