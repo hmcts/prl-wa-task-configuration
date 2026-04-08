@@ -35,7 +35,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(6));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(103));
+        assertThat(logic.getRules().size(), is(104));
     }
 
 
@@ -1642,7 +1642,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             case "replyToMessageForCourtAdminC100":
             case "replyToMessageForJudiciary":
             case "replyToMessageForLA":
-                return "[Reply to Message](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendOrReplyToMessages)";
+                return "[Reply to Message](/cases/case-details/${[CASE_REFERENCE]}/trigger/waSendOrReplyToMessages)";
 
             case "reviewDocumentsForSolAndCafcassC100":
             case "reviewDocumentsForSolAndCafcassFL401":
