@@ -604,7 +604,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_07bn4jn">
-          <text>"reviewSolicitorOrderProvided", "reviewCorrespondenceC100","reviewCorrespondenceFL401", "replyToMessageForJudiciary","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin"</text>
+          <text>"reviewSolicitorOrderProvided", "reviewCorrespondenceC100","reviewCorrespondenceFL401", "replyToMessageForJudiciary","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","reviewCaseForRequestedInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0jy6j1o">
           <text></text>
@@ -625,35 +625,6 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>5</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_010oqi1">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_13v3wld">
-        <inputEntry id="UnaryTests_0jqbz3d">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_15lhjbf">
-          <text>"reviewCaseForRequestedInformation"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1h1jwqy">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1t4t5cq">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_02qg0qj">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1hlpbze">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0i02mzx">
-          <text>"dueDateIntervalDays"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0kfuz5x">
-          <text>15</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0mcfk6o">
           <text></text>
         </outputEntry>
       </rule>
