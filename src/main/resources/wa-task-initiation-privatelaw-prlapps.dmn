@@ -10664,7 +10664,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
 }</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1gc30py">
-          <text>"informationRequestedReviewByDateUpdate"+additionalData.Data.requestFurtherInformationDetails.reviewByDate+"Z"</text>
+          <text>"informationRequestedReviewByDateUpdate"+date(additionalData.Data.requestFurtherInformationDetails.reviewByDate+"Z")</text>
         </outputEntry>
       </rule>
     </decisionTable>
