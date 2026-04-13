@@ -10655,7 +10655,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_1kty4re">
           <text>{
-"delayUntilOrigin":date (additionalData.Data.requestFurtherInformationDetails.reviewByDate),
+"delayUntilOrigin":date and time(additionalData.Data.requestFurtherInformationDetails.reviewByDate),
 "delayUntilIntervalDays":0,
 "delayUntilNonWorkingCalendar":"https://www.gov.uk/bank-holidays/england-and-wales.json",
 "delayUntilNonWorkingDaysOfWeek": "SATURDAY,SUNDAY",
