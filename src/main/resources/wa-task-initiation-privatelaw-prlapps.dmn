@@ -10655,7 +10655,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_1kty4re">
           <text>{
-"delayUntilOrigin":date(additionalData.Data.requestFurtherInformationDetails.reviewByDate+"Z"),
+"delayUntilOrigin":substring(additionalData.Data.requestFurtherInformationDetails.reviewByDate, 1, 10),
 "delayUntilIntervalDays":1,
 "delayUntilNonWorkingCalendar":"https://www.gov.uk/bank-holidays/england-and-wales.json",
 "delayUntilNonWorkingDaysOfWeek": "SATURDAY,SUNDAY",
@@ -10664,7 +10664,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
 }</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1gc30py">
-          <text>"informationRequestedReviewByDateUpdate"+date and time(additionalData.Data.requestFurtherInformationDetails.reviewByDate)</text>
+          <text>"informationRequestedReviewByDateUpdate"+substring(additionalData.Data.requestFurtherInformationDetails.reviewByDate, 1, 10)</text>
         </outputEntry>
       </rule>
     </decisionTable>
