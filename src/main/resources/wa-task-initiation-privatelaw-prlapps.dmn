@@ -10656,11 +10656,11 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <outputEntry id="LiteralExpression_1kty4re">
           <text>{
 "delayUntilOrigin":date and time(additionalData.Data.requestFurtherInformationDetails.reviewByDate),
-"delayUntilIntervalDays":0,
+"delayUntilIntervalDays":1,
 "delayUntilNonWorkingCalendar":"https://www.gov.uk/bank-holidays/england-and-wales.json",
 "delayUntilNonWorkingDaysOfWeek": "SATURDAY,SUNDAY",
 "delayUntilSkipNonWorkingDays": false,
-"delayUntillMustBeWorkingDays": "Next"
+"delayUntilMustBeWorkingDays": "Next"
 }</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1gc30py">
