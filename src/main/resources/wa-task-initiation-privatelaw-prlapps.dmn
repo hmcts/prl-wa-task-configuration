@@ -222,27 +222,27 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </input>
       <input id="InputClause_1jxnbna" label="Manage Document Uploaded Category">
         <inputExpression id="LiteralExpression_1u1o6iw" typeRef="boolean">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocUploadedCategory != null) then some x in additionalData.Data.manageDocUploadedCategory satisfies x in ["childImpactReport1","childImpactReport2","safeguardingLetter", "section7Report", "section37Report", "guardianReport", "specialGuardianshipReport", "otherDocs"]  else false</text>
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocUploadedCategory != null) then some x in additionalData.Data.manageDocUploadedCategory satisfies x.value in ["childImpactReport1","childImpactReport2","safeguardingLetter", "section7Report", "section37Report", "guardianReport", "specialGuardianshipReport", "otherDocs"]  else false</text>
         </inputExpression>
       </input>
       <input id="InputClause_1bsy5pg" label="Manage Document uploaded Category - LA">
         <inputExpression id="LiteralExpression_15rkmv6" typeRef="boolean">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocUploadedCategory != null) then some x in additionalData.Data.manageDocUploadedCategory satisfies x in ["childImpactReport1La", "childImpactReport2La","sec37Report", "section7ReportLa","section7AddendumReportLa","localAuthorityInvolvementLa","section47La","localAuthorityOtherDoc"]  else false</text>
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocUploadedCategory != null) then some x in additionalData.Data.manageDocUploadedCategory satisfies x.value in ["childImpactReport1La", "childImpactReport2La","sec37Report", "section7ReportLa","section7AddendumReportLa","localAuthorityInvolvementLa","section47La","localAuthorityOtherDoc"]  else false</text>
         </inputExpression>
       </input>
       <input id="InputClause_0ug4pba" label="Manage Document uploaded Category - CIR Extn">
         <inputExpression id="LiteralExpression_0mr23hy" typeRef="boolean">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocUploadedCategory != null) then some x in additionalData.Data.manageDocUploadedCategory satisfies x in ["cirExtensionRequestLa",   "cirExtensionRequest"]  else false</text>
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocUploadedCategory != null) then some x in additionalData.Data.manageDocUploadedCategory satisfies x.value in ["cirExtensionRequestLa",   "cirExtensionRequest"]  else false</text>
         </inputExpression>
       </input>
       <input id="InputClause_12vvz5y" label="Manage Document uploaded Category - CIR Transfer">
         <inputExpression id="LiteralExpression_0cjohrb" typeRef="boolean">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocUploadedCategory != null) then some x in additionalData.Data.manageDocUploadedCategory satisfies x in ["cirTransferRequestLa","cirTransferRequest"]  else false</text>
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocUploadedCategory != null) then some x in additionalData.Data.manageDocUploadedCategory satisfies x.value in ["cirTransferRequestLa","cirTransferRequest"]  else false</text>
         </inputExpression>
       </input>
       <input id="InputClause_0ary745" label="Manage Document uploaded Category - 16A">
         <inputExpression id="LiteralExpression_0hmk8cx" typeRef="boolean">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocUploadedCategory != null) then some x in additionalData.Data.manageDocUploadedCategory satisfies x in ["16aRiskAssessment"]  else false</text>
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocUploadedCategory != null) then some x in additionalData.Data.manageDocUploadedCategory satisfies x.value in ["16aRiskAssessment"]  else false</text>
         </inputExpression>
       </input>
       <output id="Output_1" label="Task Id" name="taskId" typeRef="string" biodi:width="368" />
