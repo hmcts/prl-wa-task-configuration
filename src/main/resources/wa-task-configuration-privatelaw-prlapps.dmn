@@ -2628,10 +2628,10 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0t8yp6n">
-          <text></text>
+          <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0h3wipl">
-          <text></text>
+          <text>"[Review CIR Extension Request](/cases/case-details/${[CASE_REFERENCE]}/trigger/reviewDocuments)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1drddiy">
           <text></text>
@@ -2657,10 +2657,10 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1gc9bxm">
-          <text></text>
+          <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ocfwma">
-          <text></text>
+          <text>"[Review CIR Transfer Request](/cases/case-details/${[CASE_REFERENCE]}/trigger/reviewDocuments)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1rpde1o">
           <text></text>
@@ -2686,10 +2686,10 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0ngca9r">
-          <text></text>
+          <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0kog4i7">
-          <text></text>
+          <text>"[Review 16A Risk Assessment](/cases/case-details/${[CASE_REFERENCE]}/trigger/reviewDocuments)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_14yri8m">
           <text></text>
