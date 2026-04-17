@@ -39,9 +39,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(24));
+        assertThat(logic.getInputs().size(), is(29));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(120));
+        assertThat(logic.getRules().size(), is(123));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1486,6 +1486,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
                                       + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n"
+                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"section37Report\"}]" + "\"\n"
                                       + "   }"
                                       + "}"),
                 List.of(
@@ -1504,6 +1505,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
                                       + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
                                       + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n"
+                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"section37Report\"}]" + "\"\n"
                                       + "   }"
                                       + "}"),
                 List.of(
@@ -1511,6 +1513,120 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "name", "Review Documents",
                         "processCategories", "reviewDocsFL401",
                         "taskId", "reviewDocumentsForSolAndCafcassFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "cafcass-document-upload",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
+                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"cirTransferRequest\"}]" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Review CIR Transfer Request",
+                        "processCategories", "reviewDocsC100",
+                        "taskId", "cirTransferRequestReviewDocumentsC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageDocumentsNew",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
+                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"section37Report\"}]" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Review Documents",
+                        "processCategories", "reviewDocsC100",
+                        "taskId", "reviewDocumentsForSolAndCafcassC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageDocumentsNew",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
+                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"section37Report\"}]" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Review Documents",
+                        "processCategories", "reviewDocsFL401",
+                        "taskId", "reviewDocumentsForSolAndCafcassFL401"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageDocumentsNew",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
+                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"cirTransferRequest\"}]" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Review CIR Transfer Request",
+                        "processCategories", "reviewDocsC100",
+                        "taskId", "cirTransferRequestReviewDocumentsC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageDocumentsNew",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "LOCAL_AUTHORITY" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
+                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"cirTransferRequestLa\"}]" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Review CIR Transfer Request",
+                        "processCategories", "reviewDocsC100",
+                        "taskId", "cirTransferRequestReviewDocumentsC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageDocumentsNew",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "LOCAL_AUTHORITY" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
+                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"childImpactReport1La\"}]" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Review Documents",
+                        "processCategories", "reviewDocsC100",
+                        "taskId", "reviewDocumentsForSolAndCafcassC100"
                     )
                 )
             ),
@@ -1750,6 +1866,63 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "name", "Reply to the Message",
                         "processCategories", "sendAndReplyIdent",
                         "taskId", "replyToMessageForJudiciary"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageDocumentsNew",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
+                                      + "      \"manageDocUploadedCategory\":\"" + "cirTransferRequest" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Review CIR Transfer Request",
+                        "processCategories", "reviewDocsC100",
+                        "taskId", "cirTransferRequestReviewDocumentsC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageDocumentsNew",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "LOCAL_AUTHORITY" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
+                                      + "      \"manageDocUploadedCategory\":\"" + "cirTransferRequestLa" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Review CIR Transfer Request",
+                        "processCategories", "reviewDocsC100",
+                        "taskId", "cirTransferRequestReviewDocumentsC100"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageDocumentsNew",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"manageDocumentsTriggeredBy\":\"" + "LOCAL_AUTHORITY" + "\"\n,"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
+                                      + "      \"manageDocUploadedCategory\":\"" + "childImpactReport1La" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "name", "Review Documents",
+                        "processCategories", "reviewDocsC100",
+                        "taskId", "reviewDocumentsForSolAndCafcassC100"
                     )
                 )
             )
