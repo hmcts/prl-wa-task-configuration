@@ -41,7 +41,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(25));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(120));
+        assertThat(logic.getRules().size(), is(119));
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1760,7 +1760,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "   \"Data\":{\n"
                                       + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
-                                      + "      \"localAuthorityNeedToProvideReport\":\"Yes\",\n"
+                                      + "      \"localAuthorityNeedToProvideReport\":\"True\",\n"
                                       + "      \"whenReportsMustBeFiledByLocalAuthority\":\"2026-03-01\"\n"
                                       + "   }"
                                       + "}"),
@@ -1780,7 +1780,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                 + "   \"Data\":{\n"
                                 + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
                                 + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
-                                + "      \"localAuthorityNeedToProvideReport\":\"Yes\",\n"
+                                + "      \"localAuthorityNeedToProvideReport\":\"True\",\n"
                                 + "      \"whenReportsMustBeFiledByLocalAuthority\":\"2026-03-01\"\n"
                                 + "   }"
                                 + "}"),

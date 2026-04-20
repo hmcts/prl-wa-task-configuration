@@ -10759,7 +10759,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_requestCirUpdate">
         <inputEntry id="UnaryTests_cirOverdue_eventId">
-          <text>"manageOrders"</text>
+          <text>"manageOrders","adminEditAndApproveAnOrder"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_cirOverdue_postState">
           <text></text>
@@ -10831,7 +10831,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_laReport_cirUpdate">
-          <text>"Yes"</text>
+          <text>"True"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_cirOverdue_taskType">
           <text>"requestCirUpdate"</text>
@@ -10848,100 +10848,6 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           </text>
         </outputEntry>
         <outputEntry id="LiteralExpression_cirOverdue_category">
-          <text>"requestCirUpdate"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0gf6dbz">
-        <inputEntry id="UnaryTests_0wxi89y">
-          <text>"adminEditAndApproveAnOrder"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1juzfo2">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1jv3orm">
-          <text>"C100"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0sediwa">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1cm51z7">
-          <text>"COURT_ADMIN"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_003yho2">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1md6uyl">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0nmi7tm">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_041hk0h">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0f4e6sl">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_12b7lrh">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_040lj1g">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1rbrffu">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0g1qf9w">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1t0jkwy">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1euoxsl">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1om18xo">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0focg16">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_118ok3q">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_06ahreh">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0hej68o">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1acf1bo">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0l7udqn">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_12yg8wt">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0t9ezz9">
-          <text>"Yes"</text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0non96n">
-          <text>"requestCirUpdate"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0x0u2ml">
-          <text>"Request CIR Update"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0l8xvx7">
-          <text>{
-            "delayUntil": if (additionalData.Data.whenReportsMustBeFiledByLocalAuthority != null and
-            additionalData.Data.whenReportsMustBeFiledByLocalAuthority != "") then
-            date(additionalData.Data.whenReportsMustBeFiledByLocalAuthority) + duration("P1D") else now()
-            }
-          </text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_166py08">
           <text>"requestCirUpdate"</text>
         </outputEntry>
       </rule>
