@@ -10831,7 +10831,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_laReport_cirUpdate">
-          <text>"True"</text>
+          <text>"true"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_cirOverdue_taskType">
           <text>"requestCirUpdate"</text>

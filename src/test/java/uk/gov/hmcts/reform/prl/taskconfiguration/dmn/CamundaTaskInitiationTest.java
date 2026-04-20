@@ -1760,7 +1760,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "   \"Data\":{\n"
                                       + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
-                                      + "      \"localAuthorityNeedToProvideReport\":\"True\",\n"
+                                      + "      \"localAuthorityNeedToProvideReport\":\"true\",\n"
                                       + "      \"whenReportsMustBeFiledByLocalAuthority\":\"2026-03-01\"\n"
                                       + "   }"
                                       + "}"),
@@ -1780,7 +1780,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                 + "   \"Data\":{\n"
                                 + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
                                 + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
-                                + "      \"localAuthorityNeedToProvideReport\":\"True\",\n"
+                                + "      \"localAuthorityNeedToProvideReport\":\"true\",\n"
                                 + "      \"whenReportsMustBeFiledByLocalAuthority\":\"2026-03-01\"\n"
                                 + "   }"
                                 + "}"),
