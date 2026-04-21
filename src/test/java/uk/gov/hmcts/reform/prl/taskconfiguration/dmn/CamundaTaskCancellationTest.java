@@ -189,7 +189,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
             null,
-            "manageDocumentsNew",
+            "cancelRequestCirUpdateTask",
             null,
             List.of(
                 Map.of(
