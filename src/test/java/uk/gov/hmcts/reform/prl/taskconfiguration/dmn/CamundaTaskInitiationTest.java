@@ -621,6 +621,30 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "manageOrders",
+                "JUDICIAL_REVIEW",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Create a custom order" + "\"\n,"
+                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    Map.of(
+                        "processCategories", "serviceOfApplication",
+                        "taskId", "serviceOfApplicationC100",
+                        "name", "Service of Application"
+                    ),
+                    Map.of(
+                        "processCategories", "completeTheOrder",
+                        "taskId", "adminServeOrderC100",
+                        "name", "Complete the Order"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageOrders",
                 "PREPARE_FOR_HEARING_CONDUCT_HEARING",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
@@ -685,6 +709,28 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
                                       + "      \"performingAction\":\"" + "Create an order" + "\"\n,"
+                                      + "      \"judgeLaManagerReviewRequired\":\"" + "null" + "\"\n,"
+                                      + "      \"isHearingTaskNeeded\":\"" + "Yes" + "\"\n,"
+                                      + "      \"isMultipleHearingSelected\":\"" + "No" + "\"\n,"
+                                      + "      \"hearingOptionSelected\":\"" + "dateReservedWithListAssit" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "createHearingRequestReserveListAssist",
+                        "name", "Create Hearing Request - Reserved in List Assist",
+                        "processCategories", "createHearingRequest"
+                    )
+                )
+            ),
+            Arguments.of(
+                "manageOrders",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
+                                      + "      \"performingAction\":\"" + "Create a custom order" + "\"\n,"
                                       + "      \"judgeLaManagerReviewRequired\":\"" + "null" + "\"\n,"
                                       + "      \"isHearingTaskNeeded\":\"" + "Yes" + "\"\n,"
                                       + "      \"isMultipleHearingSelected\":\"" + "No" + "\"\n,"
