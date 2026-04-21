@@ -22,6 +22,7 @@ import java.time.ZonedDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import java.util.stream.Stream;
 
 import static java.util.Collections.singletonList;
@@ -42,6 +43,10 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         assertThat(logic.getInputs().size(), is(29));
         assertThat(logic.getOutputs().size(), is(4));
         assertThat(logic.getRules().size(), is(123));
+    }
+
+    private static UUID getId() {
+        return UUID.randomUUID();
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1485,8 +1490,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
-                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n"
-                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"section37Report\"}]" + "\"\n"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
+                                      + "      \"manageDocUploadedCategory\":" + "[{\"id\":\"" + getId() + "\","
+                                      + "      \"value\":\"section37Report\"}]" + "\n"
                                       + "   }"
                                       + "}"),
                 List.of(
@@ -1504,8 +1510,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
                                       + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
-                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n"
-                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"section37Report\"}]" + "\"\n"
+                                      + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
+                                      + "      \"manageDocUploadedCategory\":" + "[{\"id\":\"" + getId() + "\","
+                                      + "      \"value\":\"section37Report\"}]" + "\n"
                                       + "   }"
                                       + "}"),
                 List.of(
@@ -1524,7 +1531,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
                                       + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
-                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"cirTransferRequest\"}]" + "\"\n"
+                                      + "      \"manageDocUploadedCategory\":" + "[{\"id\":\"" + getId() + "\","
+                                      + "      \"value\":\"cirTransferRequest\"}]" + "\n"
                                       + "   }"
                                       + "}"),
                 List.of(
@@ -1543,7 +1551,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
                                       + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
-                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"section37Report\"}]" + "\"\n"
+                                      + "      \"manageDocUploadedCategory\":" + "[{\"id\":\"" + getId() + "\","
+                                      + "      \"value\":\"section37Report\"}]" + "\n"
                                       + "   }"
                                       + "}"),
                 List.of(
@@ -1562,7 +1571,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
                                       + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
                                       + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
-                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"section37Report\"}]" + "\"\n"
+                                      + "      \"manageDocUploadedCategory\":" + "[{\"id\":\"" + getId() + "\","
+                                      + "      \"value\":\"section37Report\"}]" + "\n"
                                       + "   }"
                                       + "}"),
                 List.of(
@@ -1581,7 +1591,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
                                       + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
-                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"cirTransferRequest\"}]" + "\"\n"
+                                      + "      \"manageDocUploadedCategory\":" + "[{\"id\":\"" + getId() + "\","
+                                      + "      \"value\":\"cirTransferRequest\"}]" + "\n"
                                       + "   }"
                                       + "}"),
                 List.of(
@@ -1600,7 +1611,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"manageDocumentsTriggeredBy\":\"" + "LOCAL_AUTHORITY" + "\"\n,"
                                       + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
-                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"cirTransferRequestLa\"}]" + "\"\n"
+                                      + "      \"manageDocUploadedCategory\":" + "[{\"id\":\"" + getId() + "\","
+                                      + "      \"value\":\"cirTransferRequestLa\"}]" + "\n"
                                       + "   }"
                                       + "}"),
                 List.of(
@@ -1619,7 +1631,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"manageDocumentsTriggeredBy\":\"" + "LOCAL_AUTHORITY" + "\"\n,"
                                       + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
-                                      + "      \"manageDocUploadedCategory\":\"" + "[{\"id\":\"24f6bacc-75bc-4202-9ccb-22ee72ebcb6c\",\"value\":\"childImpactReport1La\"}]" + "\"\n"
+                                      + "      \"manageDocUploadedCategory\":" + "[{\"id\":\"" + getId() + "\","
+                                      + "      \"value\":\"childImpactReport1La\"}]" + "\n"
                                       + "   }"
                                       + "}"),
                 List.of(
@@ -1877,7 +1890,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"manageDocumentsTriggeredBy\":\"" + "CAFCASS" + "\"\n,"
                                       + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
-                                      + "      \"manageDocUploadedCategory\":\"" + "cirTransferRequest" + "\"\n"
+                                      + "      \"manageDocUploadedCategory\":" + "[{\"id\":\"" + getId() + "\","
+                                      + "      \"value\":\"cirTransferRequest\"}]" + "\n"
                                       + "   }"
                                       + "}"),
                 List.of(
@@ -1896,7 +1910,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"manageDocumentsTriggeredBy\":\"" + "LOCAL_AUTHORITY" + "\"\n,"
                                       + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
-                                      + "      \"manageDocUploadedCategory\":\"" + "cirTransferRequestLa" + "\"\n"
+                                      + "      \"manageDocUploadedCategory\":" + "[{\"id\":\"" + getId() + "\","
+                                      + "      \"value\":\"cirTransferRequestLa\"}]" + "\n"
                                       + "   }"
                                       + "}"),
                 List.of(
@@ -1915,7 +1930,8 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"manageDocumentsTriggeredBy\":\"" + "LOCAL_AUTHORITY" + "\"\n,"
                                       + "      \"manageDocumentsRestrictedFlag\":\"" + "True" + "\"\n,"
-                                      + "      \"manageDocUploadedCategory\":\"" + "childImpactReport1La" + "\"\n"
+                                      + "      \"manageDocUploadedCategory\":" + "[{\"id\":\"" + getId() + "\","
+                                      + "      \"value\":\"childImpactReport1La\"}]" + "\n"
                                       + "   }"
                                       + "}"),
                 List.of(
