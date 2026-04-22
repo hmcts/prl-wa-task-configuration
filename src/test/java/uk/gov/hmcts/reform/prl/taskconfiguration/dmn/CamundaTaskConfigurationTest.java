@@ -35,7 +35,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(6));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(104));
+        assertThat(logic.getRules().size(), is(105));
     }
 
 
@@ -1583,7 +1583,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
             case "requestSolicitorOrderFL401":
             case "requestSolicitorOrderC100":
-                return "[Request Order]";
+                return "[Request Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/waSendOrReplyToMessages)";
 
             case "directionOnIssue":
             case "directionOnIssueResubmitted":
@@ -1981,5 +1981,59 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "name", "additionalProperties_hearingId",
             "value", "123"
         )));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "requestSolicitorOrderC100",
+        "requestSolicitorOrderFL401"
+    })
+    void when_given_task_requestSolicitorOrder_then_return_additionalProperties_hearingId(String taskType) {
+        VariableMap inputVariables = Variables.createVariables();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "Request Order",
+                   "__processCategory__requestSolicitorOrder", "",
+                   "__processCategory__hearingId_456", ""
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> hearingIdResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("additionalProperties_hearingId"))
+            .toList();
+
+        assertThat(hearingIdResultList.size(), is(1));
+
+        assertTrue(hearingIdResultList.contains(Map.of(
+            "name", "additionalProperties_hearingId",
+            "value", "456"
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "requestSolicitorOrderC100",
+        "requestSolicitorOrderFL401"
+    })
+    void when_given_requestSolicitorOrder_without_hearingId_then_no_additionalProperties_hearingId(String taskType) {
+        VariableMap inputVariables = Variables.createVariables();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "Request Order",
+                   "__processCategory__requestSolicitorOrder", ""
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> hearingIdResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("additionalProperties_hearingId"))
+            .toList();
+
+        assertThat(hearingIdResultList.size(), is(0));
     }
 }

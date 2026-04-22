@@ -1649,6 +1649,35 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_2408cfg01">
+        <inputEntry id="UnaryTests_2408cfg01a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_2408cfg01b">
+          <text>"requestSolicitorOrderC100","requestSolicitorOrderFL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_2408cfg01c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_2408cfg01d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_2408cfg01e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_2408cfg01f">
+          <text>not(null)</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_2408cfg01a">
+          <text>"additionalProperties_hearingId"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_2408cfg01b">
+          <text>hearingId</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_2408cfg01c">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_17ypugq">
         <inputEntry id="UnaryTests_1i0b00r">
           <text></text>
@@ -2080,7 +2109,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0kzirjj">
-          <text>"[Request Order]"</text>
+          <text>"[Request Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/waSendOrReplyToMessages)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0t3f1gd">
           <text></text>

@@ -517,7 +517,7 @@
       </rule>
       <rule id="DecisionRule_2408a01">
         <inputEntry id="UnaryTests_2408a01">
-          <text>"sendOrReplyToMessages","waSendOrReplyToMessages"</text>
+          <text>"waSendOrReplyToMessages"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_2408a01">
           <text>"requestSolicitorOrderC100"</text>
@@ -528,7 +528,7 @@
       </rule>
       <rule id="DecisionRule_2408b01">
         <inputEntry id="UnaryTests_2408b01">
-          <text>"sendOrReplyToMessages","waSendOrReplyToMessages"</text>
+          <text>"waSendOrReplyToMessages"</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_2408b01">
           <text>"requestSolicitorOrderFL401"</text>

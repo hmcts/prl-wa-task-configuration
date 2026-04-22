@@ -399,6 +399,32 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                 "sendOrReplyToMessages",
                 asList(
                     Map.of(
+                        "taskType", "replyToMessageForCourtAdminFL401",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "replyToMessageForLAFL401",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "replyToMessageForCourtAdminC100",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "replyToMessageForLA",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "replyToMessageForJudiciary",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of()
+                )
+            ),
+            Arguments.of(
+                "waSendOrReplyToMessages",
+                asList(
+                    Map.of(
                         "taskType", "requestSolicitorOrderC100",
                         "completionMode", "Auto"
                     ),
