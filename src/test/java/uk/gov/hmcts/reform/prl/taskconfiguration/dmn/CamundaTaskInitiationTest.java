@@ -1804,14 +1804,15 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "DECISION_OUTCOME",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"currentHearingId\": \"789\""
                                       + "   }"
                                       + "}"),
                 singletonList(
                     mapRequestOrder(
                         "requestSolicitorOrderC100",
                         "Request Order",
-                        "requestSolicitorOrder"
+                        "requestSolicitorOrder,hearingId_789"
                     )
                 )
             ),
@@ -1820,12 +1821,29 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 "DECISION_OUTCOME",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"currentHearingId\": \"790\""
                                       + "   }"
                                       + "}"),
                 singletonList(
                     mapRequestOrder(
                         "requestSolicitorOrderFL401",
+                        "Request Order",
+                        "requestSolicitorOrder,hearingId_790"
+                    )
+                )
+            ),
+            Arguments.of(
+                "enableRequestSolicitorOrderTask",
+                "DECISION_OUTCOME",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    mapRequestOrder(
+                        "requestSolicitorOrderC100",
                         "Request Order",
                         "requestSolicitorOrder"
                     )

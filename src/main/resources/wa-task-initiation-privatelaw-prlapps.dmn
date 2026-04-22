@@ -3849,7 +3849,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0oqqgxq">
-          <text>"requestSolicitorOrder"</text>
+          <text>if (additionalData != null and additionalData.Data != null and additionalData.Data.currentHearingId != null) then "requestSolicitorOrder,hearingId_"+additionalData.Data.currentHearingId else "requestSolicitorOrder"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0dr66m3">
@@ -3935,7 +3935,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_13cxgrq">
-          <text>"requestSolicitorOrder"</text>
+          <text>if (additionalData != null and additionalData.Data != null and additionalData.Data.currentHearingId != null) then "requestSolicitorOrder,hearingId_"+additionalData.Data.currentHearingId else "requestSolicitorOrder"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0gm0jgu">
