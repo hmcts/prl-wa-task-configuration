@@ -1289,7 +1289,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 singletonList(
                     Map.of(
                         "taskId", "reviewLangAndSmReq",
-                        "name", "Review Language and SM requirements",
+                        "name", "Review support request",
                         "processCategories", "caseNoteId_19842f84-faa2-4928-bc8d-928b0321b346"
                     )
                 )
