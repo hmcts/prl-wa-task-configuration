@@ -1812,7 +1812,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     mapRequestOrder(
                         "requestSolicitorOrderC100",
                         "Request Order",
-                        "requestSolicitorOrder,hearingId_789"
+                        "hearingId_789"
                     )
                 )
             ),
@@ -1829,7 +1829,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     mapRequestOrder(
                         "requestSolicitorOrderFL401",
                         "Request Order",
-                        "requestSolicitorOrder,hearingId_790"
+                        "hearingId_790"
                     )
                 )
             ),
@@ -1845,7 +1845,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                     mapRequestOrder(
                         "requestSolicitorOrderC100",
                         "Request Order",
-                        "requestSolicitorOrder"
+                        ""
                     )
                 )
             )

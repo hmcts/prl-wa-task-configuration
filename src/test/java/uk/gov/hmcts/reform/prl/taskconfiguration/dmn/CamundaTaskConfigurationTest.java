@@ -1995,7 +1995,6 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             Map.of("taskId", "1234",
                    "taskType", taskType,
                    "name", "Request Order",
-                   "__processCategory__requestSolicitorOrder", "",
                    "__processCategory__hearingId_456", ""
             )
         );
@@ -2024,8 +2023,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "taskAttributes",
             Map.of("taskId", "1234",
                    "taskType", taskType,
-                   "name", "Request Order",
-                   "__processCategory__requestSolicitorOrder", ""
+                   "name", "Request Order"
             )
         );
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
