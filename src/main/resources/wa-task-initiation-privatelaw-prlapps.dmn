@@ -9611,7 +9611,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"reviewLangAndSmReq"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_05cpp0d">
-          <text>"Review Language and SM requirements"</text>
+          <text>"Review support request"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03er1ed">
           <text></text>
