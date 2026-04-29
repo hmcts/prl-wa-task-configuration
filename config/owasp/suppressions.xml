@@ -6,6 +6,8 @@
    ]]></notes>
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-aop@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
+    <cve>CVE-2026-22737</cve>
+    <cve>CVE-2026-22735</cve>
   </suppress>
   <suppress>
     <notes><![CDATA[
@@ -27,6 +29,8 @@
    ]]></notes>
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-core@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
+    <cve>CVE-2026-22737</cve>
+    <cve>CVE-2026-22735</cve>
   </suppress>
   <suppress>
     <notes><![CDATA[
@@ -34,6 +38,8 @@
    ]]></notes>
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-expression@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
+    <cve>CVE-2026-22737</cve>
+    <cve>CVE-2026-22735</cve>
   </suppress>
   <suppress>
     <notes><![CDATA[
@@ -41,6 +47,8 @@
    ]]></notes>
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-jcl@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
+    <cve>CVE-2026-22737</cve>
+    <cve>CVE-2026-22735</cve>
   </suppress>
   <suppress>
     <notes><![CDATA[
@@ -48,5 +56,109 @@
    ]]></notes>
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-webmvc@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
+    <cve>CVE-2026-22737</cve>
+    <cve>CVE-2026-22735</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+    file name: log4j-api-2.25.3.jar
+  ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.apache\.logging\.log4j/log4j-api@.*$</packageUrl>
+    <cve>CVE-2026-34478</cve>
+    <cve>CVE-2026-34480</cve>
+    <cve>CVE-2026-34481</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+    file name: spring-boot-2.7.18.jar
+  ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring-boot@.*$</packageUrl>
+    <cve>CVE-2026-22733</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-beans-5.3.39.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework/spring-beans@.*$</packageUrl>
+    <cve>CVE-2026-22737</cve>
+    <cve>CVE-2026-22735</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-boot-actuator-2.7.18.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring-boot-actuator@.*$</packageUrl>
+    <cve>CVE-2026-22733</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-boot-actuator-autoconfigure-2.7.18.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring-boot-actuator-autoconfigure@.*$</packageUrl>
+    <cve>CVE-2026-22733</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-boot-autoconfigure-2.7.18.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring-boot-autoconfigure@.*$</packageUrl>
+    <cve>CVE-2026-22733</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-boot-starter-2.7.18.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring-boot-starter@.*$</packageUrl>
+    <cve>CVE-2026-22733</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-boot-starter-actuator-2.7.18.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring-boot-starter-actuator@.*$</packageUrl>
+    <cve>CVE-2026-22733</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-boot-starter-aop-2.7.18.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring-boot-starter-aop@.*$</packageUrl>
+    <cve>CVE-2026-22733</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-boot-starter-json-2.7.18.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring-boot-starter-json@.*$</packageUrl>
+    <cve>CVE-2026-22733</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-boot-starter-logging-2.7.18.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring-boot-starter-logging@.*$</packageUrl>
+    <cve>CVE-2026-22733</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-boot-starter-tomcat-2.7.18.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring-boot-starter-tomcat@.*$</packageUrl>
+    <cve>CVE-2026-22733</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-boot-starter-web-2.7.18.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring-boot-starter-web@.*$</packageUrl>
+    <cve>CVE-2026-22733</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-context-5.3.39.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework/spring-context@.*$</packageUrl>
+    <cve>CVE-2026-22737</cve>
+    <cve>CVE-2026-22735</cve>
   </suppress>
 </suppressions>

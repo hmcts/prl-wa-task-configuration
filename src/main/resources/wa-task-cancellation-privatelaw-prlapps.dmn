@@ -7,7 +7,7 @@
           <text>fromState</text>
         </inputExpression>
       </input>
-      <input id="InputClause_0ain215" label="Event">
+      <input id="InputClause_0ain215" label="Event" biodi:width="450">
         <inputExpression id="LiteralExpression_0h2l2zj" typeRef="string">
           <text>event</text>
         </inputExpression>
@@ -479,6 +479,75 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1g6ceip">
           <text>"reviewRAFL401"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01o50pd">
+        <inputEntry id="UnaryTests_091l1kh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0aez9os">
+          <text>"requestFurtherInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vxq49g">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0egilbz">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19i1xcu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mcrprc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0gjmwq0">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1djmgpd">
+        <inputEntry id="UnaryTests_0w3mn4l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ntrkdm">
+          <text>"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees","exitAwaitingInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ng0frn">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0bpw34g">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lvuhgu">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_197emb8">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0sjjzij">
+          <text>"informationRequestedReviewByDateUpdate"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_transferToCourtOffline">
+        <inputEntry id="UnaryTests_transferToCourtOffline_from">
+          <text>"AWAITING_INFORMATION"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_transferToCourtOffline_event">
+          <text>"transferToAnotherCourt"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_transferToCourtOffline_state">
+          <text>not("AWAITING_INFORMATION")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_transferToCourtOffline_action">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_transferToCourtOffline_warningCode">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_transferToCourtOffline_warningText">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_transferToCourtOffline_processCategories">
+          <text>"informationRequestedReviewByDateUpdate"</text>
         </outputEntry>
       </rule>
     </decisionTable>

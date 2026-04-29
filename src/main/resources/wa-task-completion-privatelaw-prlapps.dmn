@@ -834,6 +834,39 @@
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_transferToAnotherCourt">
+        <inputEntry id="UnaryTests_transferToAnotherCourt">
+          <text>"transferToAnotherCourt"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_transferToAnotherCourt_taskType">
+          <text>"transferToAnotherCourt"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_transferToAnotherCourt_mode">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_reviewCaseAutoClose">
+        <inputEntry id="UnaryTests_reviewCaseAutoClose">
+          <text>"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_reviewCaseAutoClose_taskType">
+          <text>"reviewCaseForRequestedInformation"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_reviewCaseAutoClose_mode">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dngvi9">
+        <inputEntry id="UnaryTests_070tfs3">
+          <text>"transferToAnotherCourt","processUrgentHelpWithFees"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0m06bgp">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0y0s1jh">
+          <text></text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>

@@ -12,6 +12,7 @@ plugins {
   id 'io.freefair.lombok' version '8.14.4'
 }
 
+
 group = 'uk.gov.hmcts.reform'
 version = '0.0.1'
 
