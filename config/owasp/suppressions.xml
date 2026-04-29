@@ -6,6 +6,8 @@
    ]]></notes>
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-aop@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
+    <cve>CVE-2026-22737</cve>
+    <cve>CVE-2026-22735</cve>
   </suppress>
   <suppress>
     <notes><![CDATA[
@@ -48,5 +50,21 @@
    ]]></notes>
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-webmvc@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+    file name: log4j-api-2.25.3.jar
+  ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.apache\.logging\.log4j/log4j-api@.*$</packageUrl>
+    <cve>CVE-2026-34478</cve>
+    <cve>CVE-2026-34480</cve>
+    <cve>CVE-2026-34481</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+    file name: spring-boot-2.7.18.jar
+  ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring-boot@.*$</packageUrl>
+    <cve>CVE-2026-22733</cve>
   </suppress>
 </suppressions>
