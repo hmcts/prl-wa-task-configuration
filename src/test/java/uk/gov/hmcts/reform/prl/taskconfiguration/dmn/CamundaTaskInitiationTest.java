@@ -20,8 +20,10 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import java.util.stream.Stream;
 
 import static java.util.Collections.singletonList;
@@ -42,6 +44,10 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         assertThat(logic.getInputs().size(), is(25));
         assertThat(logic.getOutputs().size(), is(4));
         assertThat(logic.getRules().size(), is(121));
+    }
+
+    private static UUID getId() {
+        return UUID.randomUUID();
     }
 
     static Stream<Arguments> scenarioProvider() {
@@ -1806,39 +1812,55 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "   \"Data\":{\n"
                                       + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
-                                      + "      \"localAuthorityNeedToProvideReport\":\"true\",\n"
-                                      + "      \"whenReportsMustBeFiledByLocalAuthority\":\"2026-03-01\"\n"
+                                      + "      \"cirDocumentsRequested\":" + "[{\"id\":\"" + getId() + "\","
+                                      + "      \"value\":\"childImpactReport1\"}]" + "\n,"
+                                      + "      \"whenReportsMustBeFiled\":\""+currentDate+"\"\n"
                                       + "   }"
                                       + "}"),
-                singletonList(
-                    Map.of(
-                        "taskId", "requestCirUpdate",
-                        "name", "Request CIR Update",
-                        "processCategories", "requestCirUpdate",
-                        "delayUntil", Map.of("delayUntil", LocalDate.of(2026, 3, 2))
-                    )
+                List.of(
+                    new HashMap<>(){{
+                        put("name", "Request CIR Update");
+                        put("processCategories", "requestCirUpdate");
+                        put("delayUntil", new LinkedHashMap<>(){{
+                            put("delayUntilIntervalDays", 1L);
+                            put("delayUntilNonWorkingCalendar", "https://www.gov.uk/bank-holidays/england-and-wales.json");
+                            put("delayUntilSkipNonWorkingDays", false);
+                            put("delayUntilOrigin", currentDate);
+                            put("delayUntilMustBeWorkingDays", "Next");
+                            put("delayUntilNonWorkingDaysOfWeek", "SATURDAY,SUNDAY");
+                        }});
+                        put("taskId", "requestCirUpdate");
+                    }}
                 )
             ),
-                Arguments.of(
-                        "adminEditAndApproveAnOrder",
-                        null,
-                        mapAdditionalData("{\n"
-                                + "   \"Data\":{\n"
-                                + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
-                                + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
-                                + "      \"localAuthorityNeedToProvideReport\":\"true\",\n"
-                                + "      \"whenReportsMustBeFiledByLocalAuthority\":\"2026-03-01\"\n"
-                                + "   }"
-                                + "}"),
-                        singletonList(
-                                Map.of(
-                                        "taskId", "requestCirUpdate",
-                                        "name", "Request CIR Update",
-                                        "processCategories", "requestCirUpdate",
-                                        "delayUntil", Map.of("delayUntil", LocalDate.of(2026, 3, 2))
-                                )
-                        )
+            Arguments.of(
+                "adminEditAndApproveAnOrder",
+                null,
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"cirDocumentsRequested\":" + "[{\"id\":\"" + getId() + "\","
+                                      + "      \"value\":\"childImpactReport1\"}]" + "\n,"
+                                      + "      \"whenReportsMustBeFiled\":\""+currentDate+"\"\n"
+                                      + "   }"
+                                      + "}"),
+                List.of(
+                    new HashMap<>(){{
+                        put("name", "Request CIR Update");
+                        put("processCategories", "requestCirUpdate");
+                        put("delayUntil", new LinkedHashMap<>(){{
+                            put("delayUntilIntervalDays", 1L);
+                            put("delayUntilNonWorkingCalendar", "https://www.gov.uk/bank-holidays/england-and-wales.json");
+                            put("delayUntilSkipNonWorkingDays", false);
+                            put("delayUntilOrigin", currentDate);
+                            put("delayUntilMustBeWorkingDays", "Next");
+                            put("delayUntilNonWorkingDaysOfWeek", "SATURDAY,SUNDAY");
+                        }});
+                        put("taskId", "requestCirUpdate");
+                    }}
                 )
+            )
         );
     }
 
