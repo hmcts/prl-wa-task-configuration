@@ -49,4 +49,38 @@
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-webmvc@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
   </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-webmvc-5.3.39.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-webmvc@.*$</packageUrl>
+    <cve>CVE-2026-22735</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-webmvc-5.3.39.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-webmvc@.*$</packageUrl>
+    <cve>CVE-2026-22737</cve>
+  <suppress>
+    <notes><![CDATA[
+   file name: log4j-api-2.25.3.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-webmvc@.*$</packageUrl>
+    <cve>CVE-2026-34478</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: log4j-api-2.25.3.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-webmvc@.*$</packageUrl>
+    <cve>CVE-2026-34480</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: log4j-api-2.25.3.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-webmvc@.*$</packageUrl>
+    <cve>CVE-2026-34481</cve>
+  </suppress>
 </suppressions>
