@@ -1814,23 +1814,28 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"cirDocumentsRequested\":" + "[{\"id\":\"" + getId() + "\","
                                       + "      \"value\":\"childImpactReport1\"}]" + "\n,"
-                                      + "      \"whenReportsMustBeFiled\":\""+currentDate+"\"\n"
+                                      + "      \"whenReportsMustBeFiled\":\"" + currentDate + "\"\n"
                                       + "   }"
                                       + "}"),
                 List.of(
-                    new HashMap<>(){{
-                        put("name", "Request CIR Update");
-                        put("processCategories", "requestCirUpdate");
-                        put("delayUntil", new LinkedHashMap<>(){{
-                            put("delayUntilIntervalDays", 1L);
-                            put("delayUntilNonWorkingCalendar", "https://www.gov.uk/bank-holidays/england-and-wales.json");
-                            put("delayUntilSkipNonWorkingDays", false);
-                            put("delayUntilOrigin", currentDate);
-                            put("delayUntilMustBeWorkingDays", "Next");
-                            put("delayUntilNonWorkingDaysOfWeek", "SATURDAY,SUNDAY");
-                        }});
-                        put("taskId", "requestCirUpdate");
-                    }}
+                    new HashMap<>() {{
+                            put("name", "Request CIR Update");
+                            put("processCategories", "requestCirUpdate");
+                            put(
+                                "delayUntil", new LinkedHashMap<>() {{
+                                            put("delayUntilIntervalDays", 1L);
+                                            put(
+                                                "delayUntilNonWorkingCalendar",
+                                                "https://www.gov.uk/bank-holidays/england-and-wales.json"
+                                            );
+                                            put("delayUntilSkipNonWorkingDays", false);
+                                            put("delayUntilOrigin", currentDate);
+                                            put("delayUntilMustBeWorkingDays", "Next");
+                                            put("delayUntilNonWorkingDaysOfWeek", "SATURDAY,SUNDAY");
+                                        }}
+                            );
+                            put("taskId", "requestCirUpdate");
+                        }}
                 )
             ),
             Arguments.of(
@@ -1842,24 +1847,29 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"cirDocumentsRequested\":" + "[{\"id\":\"" + getId() + "\","
                                       + "      \"value\":\"childImpactReport1\"}]" + "\n,"
-                                      + "      \"whenReportsMustBeFiled\":\""+currentDate+"\"\n"
+                                      + "      \"whenReportsMustBeFiled\":\"" + currentDate + "\"\n"
                                       + "   }"
                                       + "}"),
                 List.of(
-                    new HashMap<>(){{
-                        put("name", "Request CIR Update");
-                        put("processCategories", "requestCirUpdate");
-                        put("delayUntil", new LinkedHashMap<>(){{
-                            put("delayUntilIntervalDays", 1L);
-                            put("delayUntilNonWorkingCalendar", "https://www.gov.uk/bank-holidays/england-and-wales.json");
-                            put("delayUntilSkipNonWorkingDays", false);
-                            put("delayUntilOrigin", currentDate);
-                            put("delayUntilMustBeWorkingDays", "Next");
-                            put("delayUntilNonWorkingDaysOfWeek", "SATURDAY,SUNDAY");
-                        }});
-                        put("taskId", "requestCirUpdate");
-                    }}
-                )
+                    new HashMap<>() {{
+                            put("name", "Request CIR Update");
+                            put("processCategories", "requestCirUpdate");
+                            put(
+                                "delayUntil", new LinkedHashMap<>() {{
+                                        put("delayUntilIntervalDays", 1L);
+                                        put(
+                                            "delayUntilNonWorkingCalendar",
+                                            "https://www.gov.uk/bank-holidays/england-and-wales.json"
+                                        );
+                                        put("delayUntilSkipNonWorkingDays", false);
+                                        put("delayUntilOrigin", currentDate);
+                                        put("delayUntilMustBeWorkingDays", "Next");
+                                        put("delayUntilNonWorkingDaysOfWeek", "SATURDAY,SUNDAY");
+                                    }}
+                                );
+                                put("taskId", "requestCirUpdate");
+                        }}
+                    )
             )
         );
     }
