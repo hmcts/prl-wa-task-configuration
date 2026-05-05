@@ -10937,7 +10937,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </rule>
       <rule id="DecisionRule_0yj1yhr">
         <inputEntry id="UnaryTests_10qe1hc">
-          <text>"manageOrders","adminEditAndApproveAnOrder"</text>
+          <text>"manageOrders","adminEditAndApproveAnOrder", "waManageOrders", "hearingEditAndApproveAnOrder"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0m9r82o">
           <text></text>
