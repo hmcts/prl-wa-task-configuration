@@ -1806,7 +1806,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "manageOrders",
+                "createRequestCirUpdateTask",
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
@@ -1839,7 +1839,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "adminEditAndApproveAnOrder",
+                "createRequestCirUpdateTask",
                 null,
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
