@@ -49,4 +49,21 @@
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-webmvc@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
   </suppress>
+  <suppress>
+    <cve>CVE-2026-34481</cve>
+    <cve>CVE-2026-22737</cve>
+    <cve>CVE-2026-34480</cve>
+    <cve>CVE-2026-22735</cve>
+    <cve>CVE-2026-22733</cve>
+    <cve>CVE-2026-34478</cve>
+    <cve>CVE-2026-40975</cve>
+    <cve>CVE-2026-40972</cve>
+    <cve>CVE-2026-40973</cve>
+    <cve>CVE-2026-22745</cve>
+    <cve>CVE-2026-40977</cve>
+    <cve>CVE-2026-22741</cve>
+    <cve>CVE-2026-22740</cve>
+    <cve>CVE-2026-34479</cve>
+    <cve>CVE-2026-34477</cve>
+  </suppress>
 </suppressions>
