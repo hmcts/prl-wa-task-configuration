@@ -154,8 +154,6 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
                              "taskTypeName", "Check and re-serve documents"));
         taskTypes.add(Map.of("taskTypeId", "newCaseTransferredToCourt",
                              "taskTypeName", "Case transferred to your court"));
-        taskTypes.add(Map.of("taskTypeId", "reqSafeguardingLetterUpdate",
-                             "taskTypeName", "Request to upload Safeguarding Letter from Cafcass / Cafcass Cymru"));
         taskTypes.add(Map.of("taskTypeId", "requestCirUpdate",
                              "taskTypeName", "Request CIR Update"));
         taskTypes.add(Map.of("taskTypeId", "cirExtensionRequestReviewDocumentsC100",
@@ -187,6 +185,6 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(67));
+        assertThat(logic.getRules().size(), is(66));
     }
 }
