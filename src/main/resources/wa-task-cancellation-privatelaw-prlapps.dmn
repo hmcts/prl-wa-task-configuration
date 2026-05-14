@@ -481,6 +481,29 @@
           <text>"reviewRAFL401"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0exxdw6">
+        <inputEntry id="UnaryTests_0r59d1k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16zmfg4">
+          <text>"cancelRequestCirUpdateTask"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mw5huv">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0z850om">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0b8ot7y">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jibk10">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j4mxuu">
+          <text>"requestCirUpdate"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
