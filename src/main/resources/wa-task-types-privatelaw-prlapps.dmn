@@ -777,6 +777,42 @@
           <text>"Request CIR Update"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1p2lblk">
+        <description>CIREXTNREQRD100</description>
+        <inputEntry id="UnaryTests_1wo37qh">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02x3t09">
+          <text>"cirExtensionRequestReviewDocumentsC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pjsd30">
+          <text>"Review CIR Extension Request"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rph0kd">
+        <description>CIRTRANREQRD100</description>
+        <inputEntry id="UnaryTests_0r17aje">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0iimm3g">
+          <text>"cirTransferRequestReviewDocumentsC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08iqfm5">
+          <text>"Review CIR Transfer Request"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_15f10gk">
+        <description>16ARISKASSRD100</description>
+        <inputEntry id="UnaryTests_16t4cml">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_14gi6zx">
+          <text>"16aRiskAssessmentReviewDocumentsC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0eejrpy">
+          <text>"Review 16A Risk Assessment"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
