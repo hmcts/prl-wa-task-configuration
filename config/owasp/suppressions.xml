@@ -22,7 +22,6 @@
     <cve>CVE-2026-40977</cve>
     <cve>CVE-2026-22741</cve>
     <cve>CVE-2026-22740</cve>
-
     <cve>CVE-2026-41888</cve>
     <cve>CVE-2026-40974</cve>
   </suppress>
@@ -61,7 +60,6 @@
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-(aop|beans|context|core|expression|jcl|webmvc)@.*$</packageUrl>
     <cve>CVE-2026-22740</cve>
   </suppress>
-  <suppress>
   <suppress>
     <cve>CVE-2026-34478</cve>
     <cve>CVE-2026-34479</cve>
