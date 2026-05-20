@@ -43,7 +43,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(29));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(122));
+        assertThat(logic.getRules().size(), is(123));
     }
 
     private static UUID getId() {
@@ -1286,6 +1286,22 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "citizenLanguageSupportNotes",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseNoteId\":\"" + "19842f84-faa2-4928-bc8d-928b0321b346" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewLangAndSmReq",
+                        "name", "Review support request",
+                        "processCategories", "caseNoteId_19842f84-faa2-4928-bc8d-928b0321b346"
+                    )
+                )
+            ),
+            Arguments.of(
+                "solicitorLanguageSupportNotes",
                 "SUBMITTED_PAID",
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
