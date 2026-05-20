@@ -765,6 +765,18 @@
           <text>"Request to upload Safeguarding Letter from Cafcass / Cafcass Cymru"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_requestCirUpdate">
+        <description>REQCIRUPD</description>
+        <inputEntry id="UnaryTests_requestCirUpdate">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_requestCirUpdateType">
+          <text>"requestCirUpdate"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_requestCirUpdateName">
+          <text>"Request CIR Update"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
