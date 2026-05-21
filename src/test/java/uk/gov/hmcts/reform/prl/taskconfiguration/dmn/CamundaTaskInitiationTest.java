@@ -17,7 +17,6 @@ import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -2103,8 +2102,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             "informationRequestedReviewByDateUpdate",
             dmnDecisionTableResult.getResultList().get(0).get("processCategories")
         );
+        //TODO: Uncomment when this rule is reinstated after preview testing
 
-        Assertions.assertEquals(
+        /*Assertions.assertEquals(
             Map.of("delayUntilIntervalDays", 1L,
                    "delayUntilNonWorkingCalendar", "https://www.gov.uk/bank-holidays/england-and-wales.json",
                    "delayUntilSkipNonWorkingDays", false,
@@ -2113,7 +2113,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                    "delayUntilMustBeWorkingDays", "Next"),
             dmnDecisionTableResult.getResultList().get(0).get("delayUntil")
         );
-
+        */
     }
 
 
