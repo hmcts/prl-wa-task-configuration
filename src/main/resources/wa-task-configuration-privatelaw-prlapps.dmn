@@ -894,7 +894,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_02twz7w">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","directionOnIssue","directionOnIssueResubmitted","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401","removeLegalRepresentativeFL401","replyToMessageForCourtAdminFL401","reviewDocumentsForSolAndCafcassFL401","replyToMessageForLAFL401","listWithoutNoticeHearingC100","listOnNoticeHearingC100","listOnNoticeHearingFL401","listWithoutNoticeHearingFL401","cirExtensionRequestReviewDocumentsC100", "cirTransferRequestReviewDocumentsC100", "16aRiskAssessmentReviewDocumentsC100"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","directionOnIssue","directionOnIssueResubmitted","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewSpecificAccessRequestAdmin","reviewCorrespondenceFL401","produceHearingBundleFL401","removeLegalRepresentativeFL401","replyToMessageForCourtAdminFL401","reviewDocumentsForSolAndCafcassFL401","replyToMessageForLAFL401","listWithoutNoticeHearingC100","listOnNoticeHearingC100","listOnNoticeHearingFL401","listWithoutNoticeHearingFL401","cirExtensionRequestReviewDocumentsC100", "cirTransferRequestReviewDocumentsC100", "16aRiskAssessmentReviewDocumentsC100","reviewCaseForRequestedInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_13lbtre">
           <text></text>
@@ -1335,7 +1335,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1y3kj1v">
-          <text>"addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationC100","adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","reviewCorrespondenceC100","reviewCorrespondenceFL401","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA","reviewDocumentsForSolAndCafcassC100","reviewDocumentsForSolAndCafcassFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","replyToMessageForJudiciary","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingC100","listOnNoticeHearingFL401","reviewAdditionalApplication","reviewLangAndSmReq","recreateApplicationPack","replyToMessageForCourtAdminFL401","checkAwpHwfCitizen","listWithoutNoticeHearingFL401","confidentialCheckDocuments","checkAndReServeDocuments","newCaseTransferredToCourt", "cirExtensionRequestReviewDocumentsC100", "cirTransferRequestReviewDocumentsC100", "16aRiskAssessmentReviewDocumentsC100","requestCirUpdate"</text>
+          <text>"addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","serviceOfApplicationC100","adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","reviewCorrespondenceC100","reviewCorrespondenceFL401","removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA","reviewDocumentsForSolAndCafcassC100","reviewDocumentsForSolAndCafcassFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","replyToMessageForJudiciary","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingC100","listOnNoticeHearingFL401","reviewAdditionalApplication","reviewLangAndSmReq","recreateApplicationPack","replyToMessageForCourtAdminFL401","checkAwpHwfCitizen","listWithoutNoticeHearingFL401","confidentialCheckDocuments","checkAndReServeDocuments","newCaseTransferredToCourt", "cirExtensionRequestReviewDocumentsC100", "cirTransferRequestReviewDocumentsC100", "16aRiskAssessmentReviewDocumentsC100","requestCirUpdate","reviewCaseForRequestedInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gtxt3y">
           <text></text>
@@ -1538,7 +1538,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1glizm3">
-          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleFL401","produceHearingBundleC100","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewCorrespondenceFL401","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewCorrespondenceC100","reviewSpecificAccessRequestAdmin","removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401","reviewDocumentsForSolAndCafcassC100","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","reviewRaRequestsFL401","reviewInactiveRaRequestsFL401","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","confidentialCheckSOA","completefl416AndServe","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","replyToMessageForCourtAdminFL401","reviewRaRequestsC100","reviewInactiveRaRequestsC100","listWithoutNoticeHearingC100","listOnNoticeHearingC100","listOnNoticeHearingFL401","reviewAdditionalApplication","reviewLangAndSmReq","listWithoutNoticeHearingFL401","confidentialCheckDocuments","checkAndReServeDocuments","newCaseTransferredToCourt","cirExtensionRequestReviewDocumentsC100", "cirTransferRequestReviewDocumentsC100", "16aRiskAssessmentReviewDocumentsC100","requestCirUpdate"</text>
+          <text>"checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleFL401","produceHearingBundleC100","serviceOfApplicationFL401","adminServeOrderFL401","updateHearingActualsFL401","requestSolicitorOrderFL401","reviewCorrespondenceFL401","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewCorrespondenceC100","reviewSpecificAccessRequestAdmin","removeLegalRepresentativeFL401","reviewDocumentsForSolAndCafcassFL401","reviewDocumentsForSolAndCafcassC100","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","reviewRaRequestsFL401","reviewInactiveRaRequestsFL401","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","confidentialCheckSOA","completefl416AndServe","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","replyToMessageForCourtAdminFL401","reviewRaRequestsC100","reviewInactiveRaRequestsC100","listWithoutNoticeHearingC100","listOnNoticeHearingC100","listOnNoticeHearingFL401","reviewAdditionalApplication","reviewLangAndSmReq","listWithoutNoticeHearingFL401","confidentialCheckDocuments","checkAndReServeDocuments","newCaseTransferredToCourt","cirExtensionRequestReviewDocumentsC100", "cirTransferRequestReviewDocumentsC100", "16aRiskAssessmentReviewDocumentsC100","requestCirUpdate","reviewCaseForRequestedInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1yzitym">
           <text></text>
@@ -2845,7 +2845,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_17rymvk">
-          <text>"listWithoutNoticeHearingC100","listWithoutNoticeHearingFL401"</text>
+          <text>"listWithoutNoticeHearingC100","listWithoutNoticeHearingFL401","reviewCaseForRequestedInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1hqcik6">
           <text></text>
@@ -3127,6 +3127,64 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"[Create notice of proceedings](/cases/case-details/${[CASE_REFERENCE]}/trigger/waManageOrders/waManageOrders1) or [Edit and serve an order](/cases/case-details/${[CASE_REFERENCE]}/trigger/hearingEditAndApproveAnOrder/hearingEditAndApproveAnOrder1)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1o8u5ip">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0iuw9jj">
+        <inputEntry id="UnaryTests_0w543gn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rv57p8">
+          <text>"requestCirUpdate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jd9t8g">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1672u0l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k1wlsn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dyfnmy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1yr9i5y">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pbdxmi">
+          <text>"[Request CIR Update](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendOrReplyToMessages)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09s7gco">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0e4x1sh">
+        <inputEntry id="UnaryTests_11nc00a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b69hik">
+          <text>"requestCirUpdate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19dtm81">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d8jkwm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g3kbp9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_057r7wi">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rcr6x0">
+          <text>"additionalProperties_isCirUpdateRequested"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_129aqsr">
+          <text>"Yes"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1s6honl">
           <text></text>
         </outputEntry>
       </rule>
