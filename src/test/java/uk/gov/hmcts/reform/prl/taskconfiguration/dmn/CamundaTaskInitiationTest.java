@@ -2060,7 +2060,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"cirDocumentsRequested\":" + "[{\"id\":\"" + getId() + "\","
                                       + "      \"value\":\"childImpactReport1\"}]" + "\n,"
-                                      + "      \"isCirUpdateFollowUp\":\"" + "Yes" + "\"\n"
+                                      + "     \"isCirUpdateFollowUp\": true\n"
                                       + "   }"
                                       + "}"),
                 List.of(new HashMap<>() {{
