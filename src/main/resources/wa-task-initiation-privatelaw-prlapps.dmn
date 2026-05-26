@@ -12589,7 +12589,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         <outputEntry id="LiteralExpression_1yg7dzm">
           <text>{
 "delayUntilOrigin":date(
-if additionalData.Data.isCirUpdateFollowUp != null
+if additionalData.Data.isCirUpdateFollowUp != null and additionalData.Data.isCirUpdateFollowUp = "Yes"
     then now()
 	else if additionalData.Data.whenReportsMustBeFiledByLocalAuthority != null
     then additionalData.Data.whenReportsMustBeFiledByLocalAuthority
