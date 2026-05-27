@@ -206,7 +206,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertTrue(dmnDecisionTableResult.getResultList().contains(Map.of(
             "name", "dueDateNonWorkingCalendar",
             "value", "https://raw.githubusercontent.com/hmcts/prl-wa-task-configuration/master/src/main/"
-                 + "resources/prl-specific-holidays.json,https://www.gov.uk/bank-holidays/england-and-wales.json"
+                + "resources/prl-specific-holidays.json,https://www.gov.uk/bank-holidays/england-and-wales.json"
         )));
 
         assertTrue(dmnDecisionTableResult.getResultList().contains(Map.of(
@@ -1406,8 +1406,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     private void validatePriorityDateOriginEarliest(DmnDecisionTableResult dmnDecisionTableResult) {
         List<Map<String, Object>> workTypeResultListPriorityDateOriginEarliest =
             dmnDecisionTableResult.getResultList().stream()
-            .filter((r) -> r.containsValue("priorityDateOriginEarliest"))
-            .toList();
+                .filter((r) -> r.containsValue("priorityDateOriginEarliest"))
+                .toList();
 
         assertThat(workTypeResultListPriorityDateOriginEarliest.size(), is(1));
         assertTrue(workTypeResultListPriorityDateOriginEarliest.contains(Map.of(
@@ -1420,8 +1420,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     private void validateNextHearingDatePreDateMustBeWorkingDay(DmnDecisionTableResult dmnDecisionTableResult) {
         List<Map<String, Object>> workTypeResultListNextHearingDatePreDateMustBeWorkingDay =
             dmnDecisionTableResult.getResultList().stream()
-            .filter((r) -> r.containsValue("nextHearingDatePreDateMustBeWorkingDay"))
-            .toList();
+                .filter((r) -> r.containsValue("nextHearingDatePreDateMustBeWorkingDay"))
+                .toList();
 
         assertThat(workTypeResultListNextHearingDatePreDateMustBeWorkingDay.size(), is(1));
         assertTrue(workTypeResultListNextHearingDatePreDateMustBeWorkingDay.contains(Map.of(
@@ -1435,8 +1435,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult) {
         List<Map<String, Object>> workTypeResultListNextHearingDatePreDateSkipNonWorkingDays =
             dmnDecisionTableResult.getResultList().stream()
-            .filter((r) -> r.containsValue("nextHearingDatePreDateSkipNonWorkingDays"))
-            .toList();
+                .filter((r) -> r.containsValue("nextHearingDatePreDateSkipNonWorkingDays"))
+                .toList();
 
         assertThat(workTypeResultListNextHearingDatePreDateSkipNonWorkingDays.size(), is(1));
         assertTrue(workTypeResultListNextHearingDatePreDateSkipNonWorkingDays.contains(Map.of(
@@ -1449,8 +1449,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     private static void validateCalculatedDates(DmnDecisionTableResult dmnDecisionTableResult) {
         List<Map<String, Object>> workTypeResultListCalculatedDates =
             dmnDecisionTableResult.getResultList().stream()
-            .filter((r) -> r.containsValue("calculatedDates"))
-            .toList();
+                .filter((r) -> r.containsValue("calculatedDates"))
+                .toList();
 
         assertThat(workTypeResultListCalculatedDates.size(), is(2));
         assertTrue(workTypeResultListCalculatedDates.contains(Map.of(
@@ -1463,8 +1463,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     private static void validateNextHearingDatePreDateOriginRef(DmnDecisionTableResult dmnDecisionTableResult) {
         List<Map<String, Object>> workTypeResultListNextHearingDatePreDateOriginRef =
             dmnDecisionTableResult.getResultList().stream()
-            .filter((r) -> r.containsValue("nextHearingDatePreDateOriginRef"))
-            .toList();
+                .filter((r) -> r.containsValue("nextHearingDatePreDateOriginRef"))
+                .toList();
 
         assertThat(workTypeResultListNextHearingDatePreDateOriginRef.size(), is(1));
         assertTrue(workTypeResultListNextHearingDatePreDateOriginRef.contains(Map.of(
@@ -1477,8 +1477,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     private static void validateNextHearingDatePreDateIntervalDays(DmnDecisionTableResult dmnDecisionTableResult) {
         List<Map<String, Object>> workTypeResultListNextHearingDatePreDateIntervalDays =
             dmnDecisionTableResult.getResultList().stream()
-            .filter((r) -> r.containsValue("nextHearingDatePreDateIntervalDays"))
-            .toList();
+                .filter((r) -> r.containsValue("nextHearingDatePreDateIntervalDays"))
+                .toList();
 
         assertThat(workTypeResultListNextHearingDatePreDateIntervalDays.size(), is(1));
         assertTrue(workTypeResultListNextHearingDatePreDateIntervalDays.contains(Map.of(
@@ -1492,8 +1492,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult) {
         List<Map<String, Object>> workTypeResultListNextHearingDatePreDateNonWorkingCalendar =
             dmnDecisionTableResult.getResultList().stream()
-            .filter((r) -> r.containsValue("nextHearingDatePreDateNonWorkingCalendar"))
-            .toList();
+                .filter((r) -> r.containsValue("nextHearingDatePreDateNonWorkingCalendar"))
+                .toList();
 
         assertThat(workTypeResultListNextHearingDatePreDateNonWorkingCalendar.size(), is(1));
         assertTrue(workTypeResultListNextHearingDatePreDateNonWorkingCalendar.contains(Map.of(
@@ -1509,8 +1509,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult) {
         List<Map<String, Object>> workTypeResultListNextHearingDatePreDateNonWorkingDaysOfWeek =
             dmnDecisionTableResult.getResultList().stream()
-            .filter((r) -> r.containsValue("nextHearingDatePreDateNonWorkingDaysOfWeek"))
-            .toList();
+                .filter((r) -> r.containsValue("nextHearingDatePreDateNonWorkingDaysOfWeek"))
+                .toList();
 
         assertThat(workTypeResultListNextHearingDatePreDateNonWorkingDaysOfWeek.size(), is(1));
         assertTrue(workTypeResultListNextHearingDatePreDateNonWorkingDaysOfWeek.contains(Map.of(
@@ -1583,7 +1583,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
             case "requestSolicitorOrderFL401":
             case "requestSolicitorOrderC100":
-                return "[Request Solicitor to Submit the Order]";
+                return "[Request Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/waSendOrReplyToMessages)";
 
             case "directionOnIssue":
             case "directionOnIssueResubmitted":
@@ -1708,36 +1708,36 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @CsvSource({
-            "addCaseNumber", "addCaseNumberResubmitted",
-            "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100",
-            "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401",
-            "serviceOfApplicationC100", "adminServeOrderC100",
-            "serviceOfApplicationFL401", "adminServeOrderFL401",
-            "requestSolicitorOrderC100", "requestSolicitorOrderFL401",
-            "reviewCorrespondenceC100", "reviewCorrespondenceFL401",
-            "removeLegalRepresentativeC100", "removeLegalRepresentativeFL401",
-            "confidentialCheckSOA", "reviewDocumentsForSolAndCafcassC100",
-            "reviewDocumentsForSolAndCafcassFL401",
-            "replyToMessageForCourtAdminC100", "replyToMessageForLA",
-            "replyToMessageForJudiciary", "reviewRaRequestsC100",
-            "reviewRaRequestsFL401", "reviewInactiveRaRequestsC100",
-            "reviewInactiveRaRequestsFL401", "appStatementOfServiceBySol",
-            "appStatementOfServiceByLiP", "appStatementOfServiceByBailiff",
-            "arrangeBailiffSOA", "appStatementOfServiceByAdmin",
-            "completefl416AndServe", "listWithoutNoticeHearingC100",
-            "listOnNoticeHearingFL401", "reviewAdditionalApplication",
-            "reviewLangAndSmReq", "recreateApplicationPack", "replyToMessageForCourtAdminFL401",
-            "confidentialCheckDocuments","checkAndReServeDocuments"
+        "addCaseNumber", "addCaseNumberResubmitted",
+        "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100",
+        "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401",
+        "serviceOfApplicationC100", "adminServeOrderC100",
+        "serviceOfApplicationFL401", "adminServeOrderFL401",
+        "requestSolicitorOrderC100", "requestSolicitorOrderFL401",
+        "reviewCorrespondenceC100", "reviewCorrespondenceFL401",
+        "removeLegalRepresentativeC100", "removeLegalRepresentativeFL401",
+        "confidentialCheckSOA", "reviewDocumentsForSolAndCafcassC100",
+        "reviewDocumentsForSolAndCafcassFL401",
+        "replyToMessageForCourtAdminC100", "replyToMessageForLA",
+        "replyToMessageForJudiciary", "reviewRaRequestsC100",
+        "reviewRaRequestsFL401", "reviewInactiveRaRequestsC100",
+        "reviewInactiveRaRequestsFL401", "appStatementOfServiceBySol",
+        "appStatementOfServiceByLiP", "appStatementOfServiceByBailiff",
+        "arrangeBailiffSOA", "appStatementOfServiceByAdmin",
+        "completefl416AndServe", "listWithoutNoticeHearingC100",
+        "listOnNoticeHearingFL401", "reviewAdditionalApplication",
+        "reviewLangAndSmReq", "recreateApplicationPack", "replyToMessageForCourtAdminFL401",
+        "confidentialCheckDocuments","checkAndReServeDocuments"
     })
     void when_given_task_type_then_name_workType_and_validate_value_routine_work(
-            String taskType) {
+        String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue(
-                "taskAttributes",
-                Map.of("taskId", "1234",
-                        "taskType", taskType,
-                        "name", "workType"
-                )
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "workType"
+            )
         );
         Map<String, Object> caseData = new HashMap<>(); // allow null values
         caseData.put("caseTypeOfApplication", "C100");
@@ -1746,14 +1746,14 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
-                .filter((r) -> r.containsValue("routine_work"))
-                .toList();
+            .filter((r) -> r.containsValue("routine_work"))
+            .toList();
 
         assertThat(workTypeResultList.size(), is(1));
 
         assertTrue(workTypeResultList.contains(Map.of(
-                "name", "workType",
-                "value", "routine_work"
+            "name", "workType",
+            "value", "routine_work"
         )));
 
         assertDescriptionField(taskType, dmnDecisionTableResult);
@@ -1762,20 +1762,20 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @CsvSource({
-            "directionOnIssue", "directionOnIssueResubmitted",
-            "gateKeeping", "gateKeepingResubmitted",
-            "reviewSolicitorOrderProvided",
-            "reviewAdminOrderProvided", "reviewAdminOrderByManager"
+        "directionOnIssue", "directionOnIssueResubmitted",
+        "gateKeeping", "gateKeepingResubmitted",
+        "reviewSolicitorOrderProvided",
+        "reviewAdminOrderProvided", "reviewAdminOrderByManager"
     })
     void when_given_task_type_then_name_workType_and_validate_value_decision_making_work(
-            String taskType) {
+        String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue(
-                "taskAttributes",
-                Map.of("taskId", "1234",
-                        "taskType", taskType,
-                        "name", "workType"
-                )
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "workType"
+            )
         );
         Map<String, Object> caseData = new HashMap<>(); // allow null values
         caseData.put("caseTypeOfApplication", "C100");
@@ -1784,14 +1784,14 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
-                .filter((r) -> r.containsValue("decision_making_work"))
-                .toList();
+            .filter((r) -> r.containsValue("decision_making_work"))
+            .toList();
 
         assertThat(workTypeResultList.size(), is(1));
 
         assertTrue(workTypeResultList.contains(Map.of(
-                "name", "workType",
-                "value", "decision_making_work"
+            "name", "workType",
+            "value", "decision_making_work"
         )));
 
         assertDescriptionField(taskType, dmnDecisionTableResult);
@@ -1799,20 +1799,20 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @CsvSource({
-            "produceHearingBundleC100", "produceHearingBundleFL401",
-            "updateHearingActualsC100", "updateHearingActualsFL401",
-            "createHearingRequest", "createMultipleHearingRequest",
-            "createHearingRequestReserveListAssist"
+        "produceHearingBundleC100", "produceHearingBundleFL401",
+        "updateHearingActualsC100", "updateHearingActualsFL401",
+        "createHearingRequest", "createMultipleHearingRequest",
+        "createHearingRequestReserveListAssist"
     })
     void when_given_task_type_then_name_workType_and_validate_value_hearing_work(
-            String taskType) {
+        String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue(
-                "taskAttributes",
-                Map.of("taskId", "1234",
-                        "taskType", taskType,
-                        "name", "workType"
-                )
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "workType"
+            )
         );
         Map<String, Object> caseData = new HashMap<>(); // allow null values
         caseData.put("caseTypeOfApplication", "C100");
@@ -1821,14 +1821,14 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
-                .filter((r) -> r.containsValue("hearing_work"))
-                .toList();
+            .filter((r) -> r.containsValue("hearing_work"))
+            .toList();
 
         assertThat(workTypeResultList.size(), is(1));
 
         assertTrue(workTypeResultList.contains(Map.of(
-                "name", "workType",
-                "value", "hearing_work"
+            "name", "workType",
+            "value", "hearing_work"
         )));
 
         assertDescriptionField(taskType, dmnDecisionTableResult);
@@ -1836,18 +1836,18 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @CsvSource({
-            "checkApplicationC100", "checkApplicationFL401",
-            "checkApplicationResubmittedC100", "checkApplicationResubmittedFL401"
+        "checkApplicationC100", "checkApplicationFL401",
+        "checkApplicationResubmittedC100", "checkApplicationResubmittedFL401"
     })
     void when_given_task_type_then_name_workType_and_validate_value_applications(
-            String taskType) {
+        String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue(
-                "taskAttributes",
-                Map.of("taskId", "1234",
-                        "taskType", taskType,
-                        "name", "workType"
-                )
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "workType"
+            )
         );
         Map<String, Object> caseData = new HashMap<>(); // allow null values
         caseData.put("caseTypeOfApplication", "C100");
@@ -1856,14 +1856,14 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
-                .filter((r) -> r.containsValue("applications"))
-                .toList();
+            .filter((r) -> r.containsValue("applications"))
+            .toList();
 
         assertThat(workTypeResultList.size(), is(1));
 
         assertTrue(workTypeResultList.contains(Map.of(
-                "name", "workType",
-                "value", "applications"
+            "name", "workType",
+            "value", "applications"
         )));
 
         assertDescriptionField(taskType, dmnDecisionTableResult);
@@ -1871,20 +1871,20 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @CsvSource({
-            "reviewSpecificAccessRequestJudiciary",
-            "reviewSpecificAccessRequestLegalOps",
-            "reviewSpecificAccessRequestAdmin",
-            "reviewSpecificAccessRequestCTSC"
+        "reviewSpecificAccessRequestJudiciary",
+        "reviewSpecificAccessRequestLegalOps",
+        "reviewSpecificAccessRequestAdmin",
+        "reviewSpecificAccessRequestCTSC"
     })
     void when_given_task_type_then_name_workType_and_validate_value_access_requests(
-            String taskType) {
+        String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue(
-                "taskAttributes",
-                Map.of("taskId", "1234",
-                        "taskType", taskType,
-                        "name", "workType"
-                )
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "workType"
+            )
         );
         Map<String, Object> caseData = new HashMap<>(); // allow null values
         caseData.put("caseTypeOfApplication", "C100");
@@ -1893,14 +1893,14 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
-                .filter((r) -> r.containsValue("access_requests"))
-                .toList();
+            .filter((r) -> r.containsValue("access_requests"))
+            .toList();
 
         assertThat(workTypeResultList.size(), is(1));
 
         assertTrue(workTypeResultList.contains(Map.of(
-                "name", "workType",
-                "value", "access_requests"
+            "name", "workType",
+            "value", "access_requests"
         )));
     }
 
@@ -1980,5 +1980,57 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "name", "additionalProperties_hearingId",
             "value", "123"
         )));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "requestSolicitorOrderC100",
+        "requestSolicitorOrderFL401"
+    })
+    void when_given_task_requestSolicitorOrder_then_return_additionalProperties_hearingId(String taskType) {
+        VariableMap inputVariables = Variables.createVariables();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "Request Order",
+                   "__processCategory__hearingId_456", ""
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> hearingIdResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("additionalProperties_hearingId"))
+            .toList();
+
+        assertThat(hearingIdResultList.size(), is(1));
+
+        assertTrue(hearingIdResultList.contains(Map.of(
+            "name", "additionalProperties_hearingId",
+            "value", "456"
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "requestSolicitorOrderC100",
+        "requestSolicitorOrderFL401"
+    })
+    void when_given_requestSolicitorOrder_without_hearingId_then_no_additionalProperties_hearingId(String taskType) {
+        VariableMap inputVariables = Variables.createVariables();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "Request Order"
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> hearingIdResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter((r) -> r.containsValue("additionalProperties_hearingId"))
+            .toList();
+
+        assertThat(hearingIdResultList.size(), is(0));
     }
 }

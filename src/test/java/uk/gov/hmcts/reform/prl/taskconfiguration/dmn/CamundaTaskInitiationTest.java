@@ -1932,6 +1932,56 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "enableRequestSolicitorOrderTask",
+                "DECISION_OUTCOME",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                      + "      \"currentHearingId\": \"789\""
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    mapRequestOrder(
+                        "requestSolicitorOrderC100",
+                        "Request Order",
+                        "hearingId_789"
+                    )
+                )
+            ),
+            Arguments.of(
+                "enableRequestSolicitorOrderTask",
+                "DECISION_OUTCOME",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
+                                      + "      \"currentHearingId\": \"790\""
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    mapRequestOrder(
+                        "requestSolicitorOrderFL401",
+                        "Request Order",
+                        "hearingId_790"
+                    )
+                )
+            ),
+            Arguments.of(
+                "enableRequestSolicitorOrderTask",
+                "DECISION_OUTCOME",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    mapRequestOrder(
+                        "requestSolicitorOrderC100",
+                        "Request Order",
+                        ""
+                    )
+                )
+            ),
+            Arguments.of(
                 "manageDocumentsNew",
                 null,
                 mapAdditionalData("{\n"
@@ -2116,6 +2166,14 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
 
     }
 
+    private static Map<String, Object> mapRequestOrder(String taskId, String name,
+                                                       String processCategories) {
+        Map<String, Object> result = new HashMap<>();
+        result.put("taskId", taskId);
+        result.put("name", name);
+        result.put("processCategories", processCategories);
+        return result;
+    }
 
     private static Map<String, Object> mapAdditionalData(String additionalData) {
         ObjectMapper mapper = new ObjectMapper();
