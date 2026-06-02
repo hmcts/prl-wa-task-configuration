@@ -1303,6 +1303,22 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
+                "solicitorLanguageSupportNotes",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseNoteId\":\"" + "19842f84-faa2-4928-bc8d-928b0321b346" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewLangAndSmReq",
+                        "name", "Review support request",
+                        "processCategories", "caseNoteId_19842f84-faa2-4928-bc8d-928b0321b346"
+                    )
+                )
+            ),
+            Arguments.of(
                 "citizenCaseSubmitWithHWF",
                 "SUBMITTED_NOT_PAID",
                 null,
