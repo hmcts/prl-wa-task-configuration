@@ -2757,7 +2757,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_013rjul">
-          <text>"replyToMessageForJudiciary","replyToMessageForLA"</text>
+          <text>"replyToMessageForJudiciary","replyToMessageForLA","waSendOrReplyToMessages","reviewAdditionalApplication"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_16bdez6">
           <text></text>
