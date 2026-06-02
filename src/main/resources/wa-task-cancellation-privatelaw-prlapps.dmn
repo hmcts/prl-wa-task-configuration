@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.44.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-cancellation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.32.0">
   <decision id="wa-task-cancellation-privatelaw-prlapps" name="Private Law Task cancellation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0z3jx1g" hitPolicy="COLLECT">
       <input id="Input_1" label="From State">
@@ -502,6 +502,75 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_0j4mxuu">
           <text>"requestCirUpdate"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_096b797">
+        <inputEntry id="UnaryTests_1k6pzud">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0krz6jx">
+          <text>"requestFurtherInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0blfsek">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1aoisp9">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_05lk55j">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02xt9w7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m3buk8">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14k77ke">
+        <inputEntry id="UnaryTests_05txbrc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07gjhsa">
+          <text>	"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees","exitAwaitingInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1blzkio">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0nwe8g6">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dq91u2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nbdtc9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vkai30">
+          <text>	"informationRequestedReviewByDateUpdate"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1t9gytb">
+        <inputEntry id="UnaryTests_1blbung">
+          <text>	"AWAITING_INFORMATION"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r16isw">
+          <text>	"transferToAnotherCourt"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10ttnj8">
+          <text>not("AWAITING_INFORMATION")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13iwj6b">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0t285q2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19993hj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1pignio">
+          <text>"informationRequestedReviewByDateUpdate"</text>
         </outputEntry>
       </rule>
     </decisionTable>

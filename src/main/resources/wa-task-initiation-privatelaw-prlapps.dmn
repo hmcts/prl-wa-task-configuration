@@ -12602,6 +12602,114 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"requestCirUpdate"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1xbh019">
+        <inputEntry id="UnaryTests_1leakdn">
+          <text>"requestFurtherInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0al6oig">
+          <text>"AWAITING_INFORMATION"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14smic9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rhc5mg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01j3nnk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13ruill">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rxuwv4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0icl34l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sd6q0c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_156n4eq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qjnr6r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jo9chz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sh4z04">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ju4o3w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k8twib">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a3zzro">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cxihk3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bw89bb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01iz1y8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f27y3j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_174dvvk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1naavw2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hcxdvu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iv2xkd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xxczzq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_057biwk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l764xa">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0otsmsk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g15a9t">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pfutcv">
+          <text>"reviewCaseForRequestedInformation"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09snfrj">
+          <text>"Review Case for Requested Information"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06hc4iq">
+          <text>{
+"delayUntilOrigin":date and time(additionalData.Data.requestFurtherInformationDetails.reviewByDate),
+"delayUntilIntervalDays":1,
+"delayUntilNonWorkingCalendar":"https://www.gov.uk/bank-holidays/england-and-wales.json",
+"delayUntilNonWorkingDaysOfWeek": "SATURDAY,SUNDAY",
+"delayUntilSkipNonWorkingDays": false,
+"delayUntilMustBeWorkingDays": "Next"
+}</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08zwsqv">
+          <text>"informationRequestedReviewByDateUpdate"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
