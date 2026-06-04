@@ -573,6 +573,29 @@
           <text>"informationRequestedReviewByDateUpdate"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0ndlmx2">
+        <inputEntry id="UnaryTests_0x3fwtg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01f5gfh">
+          <text>"changeCaseAccess"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gp6xco">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0j3h5r7">
+          <text>"Reconfigure"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16l96g7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fed12k">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0su031z">
+          <text>"informationRequestedReviewByDateUpdate"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
