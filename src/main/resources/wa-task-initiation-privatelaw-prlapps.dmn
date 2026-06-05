@@ -12718,7 +12718,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_09yaci3">
-          <text>"C100","FL401"</text>
+          <text>"C100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1qli84y">
           <text></text>
