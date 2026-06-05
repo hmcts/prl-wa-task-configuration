@@ -3150,13 +3150,13 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1s6y8c7">
-          <text>"majorPriority"</text>
+          <text>"priorityDateOriginRef"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0bylh0z">
-          <text>1000</text>
+          <text>"dueDate"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_029zbg0">
-          <text></text>
+          <text>"true"</text>
         </outputEntry>
       </rule>
     </decisionTable>

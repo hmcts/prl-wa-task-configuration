@@ -45,7 +45,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(29));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(123));
+        assertThat(logic.getRules().size(), is(124));
     }
 
     private static UUID getId() {
