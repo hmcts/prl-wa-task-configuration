@@ -719,7 +719,7 @@
       <rule id="DecisionRule_133ysn3">
         <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_0u9wzmo">
-          <text>"reviewAdminOrderByManager","confidentialCheckDocuments"</text>
+          <text>"reviewAdminOrderByManager","confidentialCheckDocuments","reviewAdminOrderByTest"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0s45p4p">
           <text></text>
@@ -1475,36 +1475,6 @@ Admin task permissions</description>
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1hupyyk">
-          <text>false</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1kxm0x8">
-        <description>Admin task permissions</description>
-        <inputEntry id="UnaryTests_0ar7rrr">
-          <text>"reviewAdminOrderByTest"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0bnrzvg">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0qb49ax">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1rlesa9">
-          <text>"hearing-centre-team-leader"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0uw7qbg">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0qhwgff">
-          <text>"ADMIN"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0tda83w">
-          <text>"SKILL:ABA5:ORDERMANAGEMENTFL401"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0x5lcdn">
-          <text></text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0y2vtax">
           <text>false</text>
         </outputEntry>
       </rule>
