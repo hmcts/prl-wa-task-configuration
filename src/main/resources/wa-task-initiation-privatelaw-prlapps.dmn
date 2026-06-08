@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.32.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.47.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -12708,6 +12708,107 @@ and additionalData.Data.isHearingTaskNeeded != null) then
         </outputEntry>
         <outputEntry id="LiteralExpression_08zwsqv">
           <text>"informationRequestedReviewByDateUpdate"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dat1x6">
+        <inputEntry id="UnaryTests_12v0toq">
+          <text>"manageOrders"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10t9gx0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09yaci3">
+          <text>"C100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qli84y">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0w8uh24">
+          <text>"COURT_ADMIN"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_026wufq">
+          <text>"Create an order","Upload an order","Create a custom order"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d0qhz1">
+          <text>"noCheck"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_025s2a2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ywxspj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yzq1lu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vafg6a">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fne8ga">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y3o2n6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vpo4zl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05ivrbx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07amhj7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1avrpdp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jkbh61">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02u9irs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b6w3yu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rv7wzz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a6tgdu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13nl6pi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yv0cn2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t9vww7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11mwnhb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tbzsp6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bvtdyr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16pm7q3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0z2r4a8">
+          <text>"reviewAdminOrderByTest"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_03fr6f2">
+          <text>"reviewAdminOrderBy.  Test"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bvi6rk">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1wiqbv4">
+          <text>"completeTheOrder"</text>
         </outputEntry>
       </rule>
     </decisionTable>
