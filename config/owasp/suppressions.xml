@@ -91,6 +91,13 @@
    ]]></notes>
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-(aop|beans|context|core|expression|jcl|webmvc)@.*$</packageUrl>
     <cve>CVE-2026-22745</cve>
+    <cve>CVE-2026-41842</cve>
+    <cve>CVE-2026-41849</cve>
+    <cve>CVE-2026-41850</cve>
+    <cve>CVE-2026-41851</cve>
+    <cve>CVE-2026-41840</cve>
+    <cve>CVE-2026-41841</cve>
+    <cve>CVE-2026-41843</cve>
   </suppress>
   <suppress>
     <notes><![CDATA[
