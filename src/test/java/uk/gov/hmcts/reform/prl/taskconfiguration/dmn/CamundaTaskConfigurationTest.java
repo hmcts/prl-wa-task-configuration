@@ -1583,7 +1583,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
             case "requestSolicitorOrderFL401":
             case "requestSolicitorOrderC100":
-                return "[Request Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/waSendOrReplyToMessages)";
+                return "[Request Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendOrReplyToMessages)";
 
             case "directionOnIssue":
             case "directionOnIssueResubmitted":
