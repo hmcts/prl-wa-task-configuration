@@ -2003,7 +2003,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             .filter((r) -> r.containsValue("additionalProperties_hearingId"))
             .toList();
 
-        assertThat(hearingIdResultList.size(), is(1));
+        assertThat(hearingIdResultList.size(), is(2));
 
         assertTrue(hearingIdResultList.contains(Map.of(
             "name", "additionalProperties_hearingId",
