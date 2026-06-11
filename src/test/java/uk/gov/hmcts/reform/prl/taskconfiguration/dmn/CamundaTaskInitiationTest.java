@@ -45,7 +45,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(29));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(123));
+        assertThat(logic.getRules().size(), is(124));
     }
 
     private static UUID getId() {
@@ -1297,7 +1297,23 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 singletonList(
                     Map.of(
                         "taskId", "reviewLangAndSmReq",
-                        "name", "Review Language and SM requirements",
+                        "name", "Review support request",
+                        "processCategories", "caseNoteId_19842f84-faa2-4928-bc8d-928b0321b346"
+                    )
+                )
+            ),
+            Arguments.of(
+                "solicitorLanguageSupportNotes",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseNoteId\":\"" + "19842f84-faa2-4928-bc8d-928b0321b346" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewLangAndSmReq",
+                        "name", "Review support request",
                         "processCategories", "caseNoteId_19842f84-faa2-4928-bc8d-928b0321b346"
                     )
                 )
@@ -2123,6 +2139,15 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
     }
 
+    private static Map<String, Object> mapRequestOrder(String taskId, String name,
+                                                       String processCategories) {
+        Map<String, Object> result = new HashMap<>();
+        result.put("taskId", taskId);
+        result.put("name", name);
+        result.put("processCategories", processCategories);
+        return result;
+    }
+
     @Test
     void given_awaiting_information_event_should_evaluate_dmn() {
         Map<String, Object> additionalData = mapAdditionalData("{\n"
@@ -2164,15 +2189,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             dmnDecisionTableResult.getResultList().get(0).get("delayUntil")
         );
 
-    }
-
-    private static Map<String, Object> mapRequestOrder(String taskId, String name,
-                                                       String processCategories) {
-        Map<String, Object> result = new HashMap<>();
-        result.put("taskId", taskId);
-        result.put("name", name);
-        result.put("processCategories", processCategories);
-        return result;
     }
 
     private static Map<String, Object> mapAdditionalData(String additionalData) {

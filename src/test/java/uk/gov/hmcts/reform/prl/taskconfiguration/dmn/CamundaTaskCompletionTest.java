@@ -421,7 +421,8 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskType", "reviewCaseForRequestedInformation",
                         "completionMode", "Auto"
-                    )
+                    ),
+                    Map.of()
                 )
             ),
             Arguments.of(
@@ -436,6 +437,40 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "sendOrReplyToMessages",
                 asList(
+                    Map.of(
+                        "taskType", "replyToMessageForCourtAdminFL401",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "replyToMessageForLAFL401",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "replyToMessageForCourtAdminC100",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "replyToMessageForLA",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "replyToMessageForJudiciary",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of()
+                )
+            ),
+            Arguments.of(
+                "waSendOrReplyToMessages",
+                asList(
+                    Map.of(
+                        "taskType", "requestSolicitorOrderC100",
+                        "completionMode", "Auto"
+                    ),
+                    Map.of(
+                        "taskType", "requestSolicitorOrderFL401",
+                        "completionMode", "Auto"
+                    ),
                     Map.of(
                         "taskType", "replyToMessageForCourtAdminFL401",
                         "completionMode", "Auto"
