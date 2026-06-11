@@ -12730,7 +12730,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"Create an order","Upload an order","Create a custom order"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0d0qhz1">
-          <text>"noCheck"</text>
+          <text>"managerCheck"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_025s2a2">
           <text></text>
