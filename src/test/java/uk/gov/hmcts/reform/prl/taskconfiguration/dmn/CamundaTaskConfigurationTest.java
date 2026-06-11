@@ -1224,7 +1224,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "taskAttributes",
             Map.of("taskId", "1234",
                    "taskType", "reviewLangAndSmReq",
-                   "name", "Review Language and SM requirements",
+                   "name", "Review support request",
                    "__processCategory__caseNoteId_123",""
             )
         );

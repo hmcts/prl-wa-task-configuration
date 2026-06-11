@@ -31,20 +31,70 @@
    ]]></notes>
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-(aop|beans|context|core|expression|jcl|webmvc)@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
+    <cve>CVE-2026-41842</cve>
+    <cve>CVE-2026-41849</cve>
+    <cve>CVE-2026-41850</cve>
+    <cve>CVE-2026-41851</cve>
+    <cve>CVE-2026-41840</cve>
+    <cve>CVE-2026-41841</cve>
+    <cve>CVE-2026-41843</cve>
+
   </suppress>
   <suppress>
     <notes><![CDATA[
    spring-framework 5.3.39 — covers spring-aop, spring-beans, spring-context, spring-core, spring-expression, spring-jcl, spring-webmvc
    ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-(aop|beans|context|core|expression|jcl|webmvc)@.*$</packageUrl>
-    <cve>CVE-2026-22735</cve>
+    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-beans@.*$</packageUrl>
+    <cve>CVE-2024-38820</cve>
+    <cve>CVE-2026-41842</cve>
+    <cve>CVE-2026-41849</cve>
+    <cve>CVE-2026-41850</cve>
+    <cve>CVE-2026-41851</cve>
+    <cve>CVE-2026-41840</cve>
+    <cve>CVE-2026-41841</cve>
+    <cve>CVE-2026-41843</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-context-5.3.39.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-context@.*$</packageUrl>
+    <cve>CVE-2024-38820</cve>
+    <cve>CVE-2026-41842</cve>
+    <cve>CVE-2026-41849</cve>
+    <cve>CVE-2026-41850</cve>
+    <cve>CVE-2026-41851</cve>
+    <cve>CVE-2026-41840</cve>
+    <cve>CVE-2026-41841</cve>
+    <cve>CVE-2026-41843</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: spring-core-5.3.39.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-core@.*$</packageUrl>
+    <cve>CVE-2024-38820</cve>
+    <cve>CVE-2026-41842</cve>
+    <cve>CVE-2026-41849</cve>
+    <cve>CVE-2026-41850</cve>
+    <cve>CVE-2026-41851</cve>
+    <cve>CVE-2026-41840</cve>
+    <cve>CVE-2026-41841</cve>
+    <cve>CVE-2026-41843</cve>
   </suppress>
   <suppress>
     <notes><![CDATA[
    spring-framework 5.3.39 — covers spring-aop, spring-beans, spring-context, spring-core, spring-expression, spring-jcl, spring-webmvc
    ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-(aop|beans|context|core|expression|jcl|webmvc)@.*$</packageUrl>
-    <cve>CVE-2026-22737</cve>
+    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-expression@.*$</packageUrl>
+    <cve>CVE-2024-38820</cve>
+    <cve>CVE-2026-41842</cve>
+    <cve>CVE-2026-41849</cve>
+    <cve>CVE-2026-41850</cve>
+    <cve>CVE-2026-41851</cve>
+    <cve>CVE-2026-41840</cve>
+    <cve>CVE-2026-41841</cve>
+    <cve>CVE-2026-41843</cve>
   </suppress>
   <suppress>
     <notes><![CDATA[
@@ -52,13 +102,27 @@
    ]]></notes>
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-webmvc@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
+    <cve>CVE-2026-41842</cve>
+    <cve>CVE-2026-41849</cve>
+    <cve>CVE-2026-41850</cve>
+    <cve>CVE-2026-41851</cve>
+    <cve>CVE-2026-41840</cve>
+    <cve>CVE-2026-41841</cve>
+    <cve>CVE-2026-41843</cve>
   </suppress>
   <suppress>
     <notes><![CDATA[
    spring-framework 5.3.39 — covers spring-aop, spring-beans, spring-context, spring-core, spring-expression, spring-jcl, spring-webmvc
    ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-(aop|beans|context|core|expression|jcl|webmvc)@.*$</packageUrl>
-    <cve>CVE-2026-22740</cve>
+    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-webmvc@.*$</packageUrl>
+    <cve>CVE-2024-38820</cve>
+    <cve>CVE-2026-41842</cve>
+    <cve>CVE-2026-41849</cve>
+    <cve>CVE-2026-41850</cve>
+    <cve>CVE-2026-41851</cve>
+    <cve>CVE-2026-41840</cve>
+    <cve>CVE-2026-41841</cve>
+    <cve>CVE-2026-41843</cve>
   </suppress>
   <suppress>
     <cve>CVE-2026-34478</cve>
