@@ -27,9 +27,9 @@
   </suppress>
   <suppress>
     <notes><![CDATA[
-   spring-framework 5.3.39 — covers spring-aop, spring-beans, spring-context, spring-core, spring-expression, spring-jcl, spring-webmvc
+   file name: spring-aop-5.3.39.jar
    ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-(aop|beans|context|core|expression|jcl|webmvc)@.*$</packageUrl>
+    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-aop@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
     <cve>CVE-2026-41842</cve>
     <cve>CVE-2026-41849</cve>
@@ -42,7 +42,7 @@
   </suppress>
   <suppress>
     <notes><![CDATA[
-   spring-framework 5.3.39 — covers spring-aop, spring-beans, spring-context, spring-core, spring-expression, spring-jcl, spring-webmvc
+   file name: spring-beans-5.3.39.jar
    ]]></notes>
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-beans@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
@@ -84,7 +84,7 @@
   </suppress>
   <suppress>
     <notes><![CDATA[
-   spring-framework 5.3.39 — covers spring-aop, spring-beans, spring-context, spring-core, spring-expression, spring-jcl, spring-webmvc
+   file name: spring-expression-5.3.39.jar
    ]]></notes>
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-expression@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
@@ -98,9 +98,9 @@
   </suppress>
   <suppress>
     <notes><![CDATA[
-   spring-framework 5.3.39 — covers spring-aop, spring-beans, spring-context, spring-core, spring-expression, spring-jcl, spring-webmvc
+   file name: spring-jcl-5.3.39.jar
    ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-webmvc@.*$</packageUrl>
+    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-jcl@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
     <cve>CVE-2026-41842</cve>
     <cve>CVE-2026-41849</cve>
@@ -112,7 +112,7 @@
   </suppress>
   <suppress>
     <notes><![CDATA[
-   spring-framework 5.3.39 — covers spring-aop, spring-beans, spring-context, spring-core, spring-expression, spring-jcl, spring-webmvc
+   file name: spring-webmvc-5.3.39.jar
    ]]></notes>
     <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-webmvc@.*$</packageUrl>
     <cve>CVE-2024-38820</cve>
@@ -141,75 +141,5 @@
     <cve>CVE-2026-22741</cve>
     <cve>CVE-2026-22740</cve>
     <cve>CVE-2026-40974</cve>
-  </suppress>
-  <suppress>
-    <notes><![CDATA[
-   spring-framework 5.3.39 — covers spring-aop, spring-beans, spring-context, spring-core, spring-expression, spring-jcl, spring-webmvc
-   ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-(aop|beans|context|core|expression|jcl|webmvc)@.*$</packageUrl>
-    <cve>CVE-2026-22741</cve>
-  </suppress>
-  <suppress>
-    <notes><![CDATA[
-   spring-framework 5.3.39 — covers spring-aop, spring-beans, spring-context, spring-core, spring-expression, spring-jcl, spring-webmvc
-   ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.springframework/spring\-(aop|beans|context|core|expression|jcl|webmvc)@.*$</packageUrl>
-    <cve>CVE-2026-22745</cve>
-  </suppress>
-  <suppress>
-    <notes><![CDATA[
-   file name: log4j-api-2.25.3.jar
-   ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.apache\.logging\.log4j/log4j\-api@.*$</packageUrl>
-    <cve>CVE-2026-34478</cve>
-  </suppress>
-  <suppress>
-    <notes><![CDATA[
-   file name: log4j-api-2.25.3.jar
-   ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.apache\.logging\.log4j/log4j\-api@.*$</packageUrl>
-    <cve>CVE-2026-34480</cve>
-  </suppress>
-  <suppress>
-    <notes><![CDATA[
-   file name: log4j-api-2.25.3.jar
-   ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.apache\.logging\.log4j/log4j\-api@.*$</packageUrl>
-    <cve>CVE-2026-34481</cve>
-  </suppress>
-  <suppress>
-    <notes><![CDATA[
-   spring-boot 2.7.18 — covers spring-boot, spring-boot-actuator, spring-boot-actuator-autoconfigure, spring-boot-autoconfigure and all spring-boot-starter-* artifacts
-   ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring\-boot.*@.*$</packageUrl>
-    <cve>CVE-2026-22733</cve>
-  </suppress>
-  <suppress>
-    <notes><![CDATA[
-   spring-boot 2.7.18 — covers spring-boot, spring-boot-actuator, spring-boot-actuator-autoconfigure, spring-boot-autoconfigure and all spring-boot-starter-* artifacts
-   ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring\-boot.*@.*$</packageUrl>
-    <cve>CVE-2026-40972</cve>
-  </suppress>
-  <suppress>
-    <notes><![CDATA[
-   spring-boot 2.7.18 — covers spring-boot, spring-boot-actuator, spring-boot-actuator-autoconfigure, spring-boot-autoconfigure and all spring-boot-starter-* artifacts
-   ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring\-boot.*@.*$</packageUrl>
-    <cve>CVE-2026-40973</cve>
-  </suppress>
-  <suppress>
-    <notes><![CDATA[
-   spring-boot 2.7.18 — covers spring-boot, spring-boot-actuator, spring-boot-actuator-autoconfigure, spring-boot-autoconfigure and all spring-boot-starter-* artifacts
-   ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring\-boot.*@.*$</packageUrl>
-    <cve>CVE-2026-40975</cve>
-  </suppress>
-  <suppress>
-    <notes><![CDATA[
-   spring-boot 2.7.18 — covers spring-boot, spring-boot-actuator, spring-boot-actuator-autoconfigure, spring-boot-autoconfigure and all spring-boot-starter-* artifacts
-   ]]></notes>
-    <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring\-boot.*@.*$</packageUrl>
-    <cve>CVE-2026-40977</cve>
   </suppress>
 </suppressions>
