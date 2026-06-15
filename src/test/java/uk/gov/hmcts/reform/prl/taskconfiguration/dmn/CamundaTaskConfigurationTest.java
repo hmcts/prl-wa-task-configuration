@@ -35,7 +35,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(7));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(108));
+        assertThat(logic.getRules().size(), is(109));
     }
 
 
@@ -1583,7 +1583,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
             case "requestSolicitorOrderFL401":
             case "requestSolicitorOrderC100":
-                return "[Request Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/waSendOrReplyToMessages)";
+                return "[Request Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendOrReplyToMessages)";
 
             case "directionOnIssue":
             case "directionOnIssueResubmitted":

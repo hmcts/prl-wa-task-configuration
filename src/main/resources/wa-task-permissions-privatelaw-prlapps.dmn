@@ -552,7 +552,7 @@
           <text>"hearing-centre-admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xh39rh">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_06yq22s">
           <text>"ADMIN"</text>
@@ -882,7 +882,7 @@
           <text>"hearing-centre-admin"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1shehdx">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_16qbdgi">
           <text>"ADMIN"</text>
