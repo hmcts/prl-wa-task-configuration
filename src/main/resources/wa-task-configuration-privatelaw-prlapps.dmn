@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.32.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.47.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN" camunda:historyTimeToLive="P90D">
     <informationRequirement id="InformationRequirement_1iac9a2">
       <requiredDecision href="#Decision_11ew6tt" />
@@ -517,7 +517,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gtvl7x">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack","replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq","listWithoutNoticeHearingFL401","confidentialCheckDocuments","checkAndReServeDocuments","newCaseTransferredToCourt","cirExtensionRequestReviewDocumentsC100", "cirTransferRequestReviewDocumentsC100", "16aRiskAssessmentReviewDocumentsC100"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq","listWithoutNoticeHearingFL401","confidentialCheckDocuments","checkAndReServeDocuments","newCaseTransferredToCourt","cirExtensionRequestReviewDocumentsC100","cirTransferRequestReviewDocumentsC100","16aRiskAssessmentReviewDocumentsC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_17b07qz">
           <text></text>
@@ -955,7 +955,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_02xhoqj">
-          <text>"addCaseNumber","addCaseNumberResubmitted","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100"</text>
+          <text>"addCaseNumber","addCaseNumberResubmitted","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","removeLegalRepresentativeC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0m7rghq">
           <text></text>
@@ -3127,6 +3127,122 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"[Create notice of proceedings](/cases/case-details/${[CASE_REFERENCE]}/trigger/waManageOrders/waManageOrders1) or [Edit and serve an order](/cases/case-details/${[CASE_REFERENCE]}/trigger/hearingEditAndApproveAnOrder/hearingEditAndApproveAnOrder1)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1o8u5ip">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0nziblu">
+        <inputEntry id="UnaryTests_17tc2n5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g20t52">
+          <text>"replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01h8tsz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_084zsor">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_004b4my">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i4mo58">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02pdg3f">
+          <text>"dueDateIntervalDays"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0m9495c">
+          <text>if (caseData.sendMessageObject!=null and caseData.sendMessageObject.internalMessageUrgent="Yes") or (caseData.replyMessageObject!=null and caseData.replyMessageObject.internalMessageUrgent="Yes") then 0 else 1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m8t675">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gqzxcv">
+        <inputEntry id="UnaryTests_1jraojv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s2yubh">
+          <text>"replyToMessageForJudiciary"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1naq520">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k85mkz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0btczuz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00i6a97">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0h7swjq">
+          <text>"dueDateIntervalDays"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0o4hqdh">
+          <text>if (caseData.sendMessageObject!=null and caseData.sendMessageObject.internalMessageUrgent="Yes") or (caseData.replyMessageObject!=null and caseData.replyMessageObject.internalMessageUrgent="Yes") then 0 else 5</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1hp355t">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0tzzblv">
+        <inputEntry id="UnaryTests_075cctv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16tifzv">
+          <text>"replyToMessageForCourtAdminC100"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vbxrl5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15hfif7">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11eyod8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d712cn">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0se97u9">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1a8mxca">
+          <text>if (caseData.sendMessageObject!=null and caseData.sendMessageObject.internalMessageUrgent="Yes") or (caseData.replyMessageObject!=null and caseData.replyMessageObject.internalMessageUrgent="Yes") then 1000 else 5000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_167fslk">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0b3zoy4">
+        <inputEntry id="UnaryTests_0bt5ug5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ycg9dv">
+          <text>"replyToMessageForLA","replyToMessageForJudiciary"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_096qej3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nxegv3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1phjdqt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10ppdqx">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0t82wbr">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fv3p85">
+          <text>if ((caseData.caseTypeOfApplication!=null and caseData.caseTypeOfApplication = "FL401") or (caseData.sendMessageObject!=null and caseData.sendMessageObject.internalMessageUrgent="Yes") or (caseData.replyMessageObject!=null and caseData.replyMessageObject.internalMessageUrgent="Yes")) then 1000 else 5000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0c547ux">
           <text></text>
         </outputEntry>
       </rule>
