@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.39.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.32.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -4498,7 +4498,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"requestSolicitorOrderC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1175d8m">
-          <text>"Request Order"</text>
+          <text>"Request Order- Do not mark this task as complete until the order has been received."</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_140ejeb">
           <text></text>
@@ -4599,7 +4599,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"requestSolicitorOrderFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1k6zapd">
-          <text>"Request Order"</text>
+          <text>"Request Order - Do not mark this task as complete until the order has been received."</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0yhayu9">
           <text></text>
