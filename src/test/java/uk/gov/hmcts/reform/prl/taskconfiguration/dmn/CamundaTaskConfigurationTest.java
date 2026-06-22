@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     @BeforeAll
-    public static void initialization() {
+    static void initialization() {
         CURRENT_DMN_DECISION_TABLE = DmnDecisionTable.WA_TASK_CONFIGS;
     }
 
@@ -33,11 +33,10 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     void if_this_test_fails_needs_updating_with_your_changes() {
         //The purpose of this test is to prevent adding new rows without being tested
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
-        assertThat(logic.getInputs().size(), is(6));
+        assertThat(logic.getInputs().size(), is(7));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(108));
+        assertThat(logic.getRules().size(), is(109));
     }
-
 
     @Test
     void when_caseData_then_return_expected_appealType() {
@@ -1978,6 +1977,32 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
         assertTrue(workTypeResultList.contains(Map.of(
             "name", "additionalProperties_hearingId",
+            "value", "123"
+        )));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+        "replyToMessageForJudiciary", "replyToMessageForLA"
+    })
+    void when_given_task_assignee_idam_id_then_return_assignee(String taskType) {
+        VariableMap inputVariables = Variables.createVariables();
+        inputVariables.putValue(
+            "taskAttributes",
+            Map.of("taskId", "1234",
+                   "taskType", taskType,
+                   "name", "Reply to message",
+                   "__processCategory__taskAssigneeIdamId_123", ""
+            )
+        );
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        List<Map<String, Object>> workTypeResultList = dmnDecisionTableResult.getResultList().stream()
+            .filter(r -> r.containsValue("assignee"))
+            .toList();
+        assertThat(workTypeResultList.size(), is(1));
+        assertTrue(workTypeResultList.contains(Map.of(
+            "name", "assignee",
             "value", "123"
         )));
     }
