@@ -31,6 +31,7 @@
     <cve>CVE-2026-41846</cve>
     <cve>CVE-2026-41847</cve>
     <cve>CVE-2026-41852</cve>
+    <cve>CVE-2026-41853</cve>
   </suppress>
   <suppress>
     <notes><![CDATA[
