@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     @BeforeAll
-    public static void initialization() {
+    static void initialization() {
         CURRENT_DMN_DECISION_TABLE = DmnDecisionTable.WA_TASK_CONFIGS;
     }
 
@@ -37,7 +37,6 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         assertThat(logic.getOutputs().size(), is(3));
         assertThat(logic.getRules().size(), is(109));
     }
-
 
     @Test
     void when_caseData_then_return_expected_appealType() {

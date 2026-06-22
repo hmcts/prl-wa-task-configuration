@@ -32,7 +32,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
 
     @BeforeAll
-    public static void initialization() {
+    static void initialization() {
         CURRENT_DMN_DECISION_TABLE = DmnDecisionTable.WA_TASK_INITIATION;
     }
 
@@ -1971,7 +1971,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 singletonList(
                     mapRequestOrder(
                         "requestSolicitorOrderC100",
-                        "Request Order",
+                        "Request Order - Do not mark this task as complete until the order has been received.",
                         "hearingId_789"
                     )
                 )
@@ -1988,7 +1988,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 singletonList(
                     mapRequestOrder(
                         "requestSolicitorOrderFL401",
-                        "Request Order",
+                        "Request Order - Do not mark this task as complete until the order has been received.",
                         "hearingId_790"
                     )
                 )
@@ -2004,7 +2004,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 singletonList(
                     mapRequestOrder(
                         "requestSolicitorOrderC100",
-                        "Request Order",
+                        "Request Order - Do not mark this task as complete until the order has been received.",
                         ""
                     )
                 )

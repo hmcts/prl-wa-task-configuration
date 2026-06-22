@@ -4498,7 +4498,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"requestSolicitorOrderC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1175d8m">
-          <text>"Request Order- Do not mark this task as complete until the order has been received."</text>
+          <text>"Request Order - Do not mark this task as complete until the order has been received."</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_140ejeb">
           <text></text>
