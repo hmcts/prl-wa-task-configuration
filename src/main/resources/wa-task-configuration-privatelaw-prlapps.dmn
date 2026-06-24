@@ -546,7 +546,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0tvsteh">
-          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","serviceOfApplicationC100","serviceOfApplicationFL401","serviceOfApplicationC100","adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401","reviewAdminOrderProvided","reviewAdminOrderByManager","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","reviewAdditionalApplication","checkAwpHwfCitizen"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","serviceOfApplicationC100","serviceOfApplicationFL401","serviceOfApplicationC100","adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401","reviewAdminOrderProvided","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","reviewAdditionalApplication","checkAwpHwfCitizen"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_06726fe">
           <text></text>
@@ -984,7 +984,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_05latny">
-          <text>"reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA","recreateApplicationPack","reviewAdminOrderByManager","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","checkAwpHwfCitizen","confidentialCheckDocuments","checkAndReServeDocuments"</text>
+          <text>"reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","checkAwpHwfCitizen","confidentialCheckDocuments","checkAndReServeDocuments"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_198jf0i">
           <text></text>
@@ -1129,7 +1129,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0snqn0t">
-          <text>"reviewAdminOrderProvided","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist"</text>
+          <text>"reviewAdminOrderProvided","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0g061pu">
           <text></text>
@@ -1263,7 +1263,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"title"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nc3mna">
-          <text>if(caseData.caseTypeOfApplication = "FL401" and caseData.orderWithoutGivingNoticeToRespondent != null and caseData.orderWithoutGivingNoticeToRespondent.orderWithoutGivingNotice="Yes") then (taskAttributes.name + " (without notice)") 
+          <text>if(caseData.caseTypeOfApplication = "FL401" and caseData.orderWithoutGivingNoticeToRespondent != null and caseData.orderWithoutGivingNoticeToRespondent.orderWithoutGivingNotice="Yes") then (taskAttributes.name + " (without notice)")
     else taskAttributes.name</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09ifae1">
@@ -3243,6 +3243,93 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>if ((caseData.caseTypeOfApplication!=null and caseData.caseTypeOfApplication = "FL401") or (caseData.sendMessageObject!=null and caseData.sendMessageObject.internalMessageUrgent="Yes") or (caseData.replyMessageObject!=null and caseData.replyMessageObject.internalMessageUrgent="Yes")) then 1000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0c547ux">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09m79es">
+        <inputEntry id="UnaryTests_1c58jzc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0qwbyoq">
+          <text>"reviewAdminOrderByManager"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02s7hb8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k2vahh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zcuuyj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g5o9ci">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07qoqew">
+          <text>"dueDateIntervalDays"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00oltyq">
+          <text>if (caseData.isThisUrgent!=null and caseData.isThisUrgent="Yes") then 0 else 1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vspu8n">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_12x7aw5">
+        <inputEntry id="UnaryTests_1b00mr1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y74cr4">
+          <text>"reviewAdminOrderByManager"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07ivkiz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rrygxr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wadrcp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x1o9du">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02pxa7m">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0pbftj4">
+          <text>if (caseData.isThisUrgent!=null and caseData.isThisUrgent="Yes") then 1000 else 5000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ebfrju">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bp17gi">
+        <inputEntry id="UnaryTests_0h45esj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1foxl4z">
+          <text>"reviewAdminOrderByManager"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0992umy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s10mnx">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a76bif">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0szj7e3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1qvyl2b">
+          <text>"title"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dk7dqk">
+          <text>if (caseData.isThisUrgent or caseData.isThisUrgent="Yes" or caseData.isThisUrgent=true or caseData.isThisUrgent="true" or isThisUrgent or Data.isThisUrgent) then "present2" else "not present2"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gqdz29">
           <text></text>
         </outputEntry>
       </rule>
