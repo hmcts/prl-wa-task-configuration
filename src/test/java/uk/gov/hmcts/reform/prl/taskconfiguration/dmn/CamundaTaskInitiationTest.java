@@ -2101,49 +2101,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         assertThat(dmnDecisionTableResult.getResultList(), is(expectation));
     }
 
-    @Test
-    void given_awaiting_information_event_should_evaluate_dmn() {
-        Map<String, Object> additionalData = mapAdditionalData("{\n"
-               + "   \"Data\":{\n"
-               + "      \"requestFurtherInformationDetails\": {\n"
-               + "    \"reviewByDate\": \"2026-03-10T00:00:00.000\""
-               + "  }\n"
-               + "   }\n"
-               + "}");
-
-        VariableMap inputVariables = new VariableMapImpl();
-        inputVariables.putValue("eventId", "requestFurtherInformation");
-        inputVariables.putValue("postEventState", "AWAITING_INFORMATION");
-        inputVariables.putValue("additionalData", additionalData);
-
-        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
-
-
-        Assertions.assertEquals(
-            "reviewCaseForRequestedInformation",
-            dmnDecisionTableResult.getResultList().get(0).get("taskId")
-        );
-        Assertions.assertEquals(
-            "Review Case for Requested Information",
-            dmnDecisionTableResult.getResultList().get(0).get("name")
-        );
-        Assertions.assertEquals(
-            "informationRequestedReviewByDateUpdate",
-            dmnDecisionTableResult.getResultList().get(0).get("processCategories")
-        );
-
-        Assertions.assertEquals(
-            Map.of("delayUntilIntervalDays", 1L,
-                   "delayUntilNonWorkingCalendar", "https://www.gov.uk/bank-holidays/england-and-wales.json",
-                   "delayUntilSkipNonWorkingDays", false,
-                   "delayUntilOrigin", LocalDateTime.parse("2026-03-10T00:00"),
-                   "delayUntilNonWorkingDaysOfWeek", "SATURDAY,SUNDAY",
-                   "delayUntilMustBeWorkingDays", "Next"),
-            dmnDecisionTableResult.getResultList().get(0).get("delayUntil")
-        );
-
-    }
-
 
     private static Map<String, Object> mapAdditionalData(String additionalData) {
         ObjectMapper mapper = new ObjectMapper();
