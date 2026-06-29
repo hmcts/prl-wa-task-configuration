@@ -517,7 +517,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0gtvl7x">
-          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq","listWithoutNoticeHearingFL401","confidentialCheckDocuments","checkAndReServeDocuments","newCaseTransferredToCourt","cirExtensionRequestReviewDocumentsC100","cirTransferRequestReviewDocumentsC100","16aRiskAssessmentReviewDocumentsC100"</text>
+          <text>"checkApplicationC100","checkApplicationResubmittedC100","checkApplicationFL401","checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100","produceHearingBundleFL100","updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100","requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack","completefl416AndServe","listWithoutNoticeHearingC100","listOnNoticeHearingC100","listOnNoticeHearingFL401","reviewLangAndSmReq","listWithoutNoticeHearingFL401","confidentialCheckDocuments","checkAndReServeDocuments","newCaseTransferredToCourt","cirExtensionRequestReviewDocumentsC100","cirTransferRequestReviewDocumentsC100","16aRiskAssessmentReviewDocumentsC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_17b07qz">
           <text></text>
@@ -546,7 +546,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0tvsteh">
-          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","serviceOfApplicationC100","serviceOfApplicationFL401","serviceOfApplicationC100","adminServeOrderC100","serviceOfApplicationFL401","adminServeOrderFL401","reviewAdminOrderProvided","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","reviewAdditionalApplication","checkAwpHwfCitizen"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingResubmitted","reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","reviewAdditionalApplication","checkAwpHwfCitizen"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_06726fe">
           <text></text>
@@ -955,7 +955,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_02xhoqj">
-          <text>"addCaseNumber","addCaseNumberResubmitted","serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","removeLegalRepresentativeC100"</text>
+          <text>"addCaseNumber","addCaseNumberResubmitted","updateHearingActualsC100","requestSolicitorOrderC100","reviewSpecificAccessRequestCTSC","reviewCorrespondenceC100","produceHearingBundleC100","removeLegalRepresentativeC100"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0m7rghq">
           <text></text>
@@ -984,7 +984,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_05latny">
-          <text>"reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist","checkAwpHwfCitizen","confidentialCheckDocuments","checkAndReServeDocuments"</text>
+          <text>"reviewSolicitorOrderProvided","confidentialCheckSOA","recreateApplicationPack","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe","checkAwpHwfCitizen","confidentialCheckDocuments","checkAndReServeDocuments"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_198jf0i">
           <text></text>
@@ -1042,7 +1042,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0irt7go">
-          <text>"reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","reviewLangAndSmReq","newCaseTransferredToCourt", "requestCirUpdate"</text>
+          <text>"reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","reviewLangAndSmReq","newCaseTransferredToCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rwm1v2">
           <text></text>
