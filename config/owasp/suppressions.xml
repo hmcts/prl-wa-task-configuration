@@ -46,7 +46,7 @@
     <cve>CVE-2026-41840</cve>
     <cve>CVE-2026-41841</cve>
     <cve>CVE-2026-41843</cve>
-
+    <cve>CVE-2026-41855</cve>
   </suppress>
   <suppress>
     <notes><![CDATA[
@@ -61,6 +61,7 @@
     <cve>CVE-2026-41840</cve>
     <cve>CVE-2026-41841</cve>
     <cve>CVE-2026-41843</cve>
+    <cve>CVE-2026-41855</cve>
   </suppress>
   <suppress>
     <notes><![CDATA[
@@ -226,5 +227,15 @@
    ]]></notes>
     <packageUrl regex="true">^pkg:maven/org\.springframework\.boot/spring\-boot.*@.*$</packageUrl>
     <cve>CVE-2026-40977</cve>
+  </suppress>
+  <suppress>
+    <notes><![CDATA[
+   file name: jackson-databind-2.17.0.jar
+   ]]></notes>
+    <packageUrl regex="true">^pkg:maven/com\.fasterxml\.jackson\.core/jackson-databind@.*$</packageUrl>
+    <cve>CVE-2026-54512</cve>
+    <cve>CVE-2026-54513</cve>
+    <cve>CVE-2026-54514</cve>
+    <cve>CVE-2026-54515</cve>
   </suppress>
 </suppressions>
