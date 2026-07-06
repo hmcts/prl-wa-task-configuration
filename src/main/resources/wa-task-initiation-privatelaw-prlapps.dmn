@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.39.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.44.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -2975,7 +2975,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0wnnmif">
-          <text>"serviceOfApplication"</text>
+          <text>"serviceOfApplication,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1f5eahe">
@@ -3078,7 +3078,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1q2o6h4">
-          <text>"serviceOfApplication"</text>
+          <text>"serviceOfApplication,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1ndb5m9">
@@ -3591,7 +3591,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xva1cf">
-          <text>"completeTheOrder"</text>
+          <text>"completeTheOrder,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1bnpzum">
@@ -3692,7 +3692,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_11ea9we">
-          <text>"completeTheOrder"</text>
+          <text>"completeTheOrder,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1dbtvko">
@@ -3999,7 +3999,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ba7xi2">
-          <text>"createHearingRequest"</text>
+          <text>"createHearingRequest,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_063wr1n">
@@ -4100,7 +4100,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0n6z1eo">
-          <text>"createHearingRequest"</text>
+          <text>"createHearingRequest,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1xyv8mc">
@@ -4201,7 +4201,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1hgujxj">
-          <text>"createHearingRequest"</text>
+          <text>"createHearingRequest,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0z5s2qi">
@@ -5116,7 +5116,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_00nf8ke">
-          <text>"createHearingRequest"</text>
+          <text>"createHearingRequest,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_02aicx7">
@@ -5217,7 +5217,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0k7xc9k">
-          <text>"createHearingRequest"</text>
+          <text>"createHearingRequest,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0dhur21">
@@ -5318,7 +5318,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1n8zcqq">
-          <text>"createHearingRequest"</text>
+          <text>"createHearingRequest,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1uk0knx">
@@ -5419,7 +5419,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09o9uxm">
-          <text>"createHearingRequest"</text>
+          <text>"createHearingRequest,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_00w9oj0">
@@ -5520,7 +5520,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ysllcu">
-          <text>"createHearingRequest"</text>
+          <text>"createHearingRequest,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0jt39dw">
@@ -5621,7 +5621,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_00qq8eh">
-          <text>"createHearingRequest"</text>
+          <text>"createHearingRequest,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0mmr2d6">
@@ -12700,7 +12700,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
 }</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1dn1gce">
-          <text>"requestCirUpdate"</text>
+          <text>"requestCirUpdate,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1xbh019">

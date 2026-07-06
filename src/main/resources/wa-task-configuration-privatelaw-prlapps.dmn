@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.47.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.44.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN" camunda:historyTimeToLive="P90D">
     <informationRequirement id="InformationRequirement_1iac9a2">
       <requiredDecision href="#Decision_11ew6tt" />
@@ -3327,7 +3327,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_18cr10g">
-          <text>if (caseData.draftOrderCollection!=null and caseData.draftOrderCollection[id = orderId][1]!=null and caseData.draftOrderCollection[id = orderId][1].value!=null and caseData.draftOrderCollection[id = orderId][1].value.checkIsThisUrgent="Yes") then 1000 else 5000</text>
+          <text>if (caseData.draftOrderCollection!=null and caseData.draftOrderCollection[id = orderId][1]!=null and caseData.draftOrderCollection[id = orderId][1].value!=null and caseData.draftOrderCollection[id = orderId][1].value.checkIsThisUrgent="Yes") then 1000 
+else if (caseData.orderCollection!=null and caseData.orderCollection[id = orderId][1]!=null and caseData.orderCollection[id = orderId][1].value!=null and caseData.orderCollection[id = orderId][1].value.checkIsThisUrgent="Yes") then 1000 
+else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08skpim">
           <text></text>
@@ -3356,7 +3358,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_17mceqx">
-          <text>if ((caseData.caseTypeOfApplication!=null and caseData.caseTypeOfApplication = "FL401") or (caseData.draftOrderCollection!=null and caseData.draftOrderCollection[id = orderId][1]!=null and caseData.draftOrderCollection[id = orderId][1].value!=null and caseData.draftOrderCollection[id = orderId][1].value.checkIsThisUrgent="Yes")) then 1000 else 5000</text>
+          <text>if ((caseData.caseTypeOfApplication!=null and caseData.caseTypeOfApplication = "FL401") or (caseData.draftOrderCollection!=null and caseData.draftOrderCollection[id = orderId][1]!=null and caseData.draftOrderCollection[id = orderId][1].value!=null and caseData.draftOrderCollection[id = orderId][1].value.checkIsThisUrgent="Yes") or (caseData.orderCollection!=null and caseData.orderCollection[id = orderId][1]!=null and caseData.orderCollection[id = orderId][1].value!=null and caseData.orderCollection[id = orderId][1].value.checkIsThisUrgent="Yes")) then 1000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1sjeqaz">
           <text></text>
@@ -3385,7 +3387,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"majorPriority"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_080gq8c">
-          <text>if (caseData.draftOrderCollection!=null and caseData.draftOrderCollection[id = orderId][1]!=null and caseData.draftOrderCollection[id = orderId][1].value!=null and caseData.draftOrderCollection[id = orderId][1].value.checkIsThisUrgent="Yes") then 1000 else 3000</text>
+          <text>if (caseData.draftOrderCollection!=null and caseData.draftOrderCollection[id = orderId][1]!=null and caseData.draftOrderCollection[id = orderId][1].value!=null and caseData.draftOrderCollection[id = orderId][1].value.checkIsThisUrgent="Yes") then 1000 
+else if (caseData.orderCollection!=null and caseData.orderCollection[id = orderId][1]!=null and caseData.orderCollection[id = orderId][1].value!=null and caseData.orderCollection[id = orderId][1].value.checkIsThisUrgent="Yes") then 1000 
+else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_12nvdkh">
           <text></text>
