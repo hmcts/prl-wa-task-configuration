@@ -4411,7 +4411,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"enableRequestSolicitorOrderTask"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1c225g3">
-          <text>"DECISION_OUTCOME","JUDICIAL_REVIEW","PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
+          <text>"DECISION_OUTCOME","JUDICIAL_REVIEW","PREPARE_FOR_HEARING_CONDUCT_HEARING","ALL_FINAL_ORDERS_ISSUED"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0zm0mqb">
           <text>"C100"</text>
@@ -4512,7 +4512,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"enableRequestSolicitorOrderTask"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1tz6dvs">
-          <text>"DECISION_OUTCOME","JUDICIAL_REVIEW","PREPARE_FOR_HEARING_CONDUCT_HEARING"</text>
+          <text>"DECISION_OUTCOME","JUDICIAL_REVIEW","PREPARE_FOR_HEARING_CONDUCT_HEARING","ALL_FINAL_ORDERS_ISSUED"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0r2gcoz">
           <text>"FL401"</text>
