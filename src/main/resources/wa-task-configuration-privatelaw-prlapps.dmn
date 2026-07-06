@@ -1129,7 +1129,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0snqn0t">
-          <text>"reviewAdminOrderProvided","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist"</text>
+          <text>"reviewAdminOrderProvided","reviewAdminOrderByManager","createHearingRequest","createMultipleHearingRequest","createHearingRequestReserveListAssist"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0g061pu">
           <text></text>

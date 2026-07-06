@@ -35,7 +35,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(6));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(106));
+        assertThat(logic.getRules().size(), is(115));
     }
 
 
@@ -272,7 +272,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "taskAttributes",
             Map.of("taskId", "1234",
                    "taskType", taskType,
-                   "name", "Yolanda"
+                   "name", "Yolanda",
+                   "__processCategory__orderId_123", ""
             )
         );
 
@@ -307,7 +308,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         inputVariables.putValue(
             "taskAttributes",
             Map.of("taskId", "1234",
-                   "taskType", taskType
+                   "taskType", taskType,
+                   "__processCategory__orderId_123", ""
             )
         );
 
@@ -409,7 +411,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "taskAttributes",
             Map.of("taskId", "1234",
                    "taskType", taskType,
-                   "name", "Yolanda"
+                   "name", "Yolanda",
+                   "__processCategory__orderId_123", ""
             )
         );
 
@@ -444,7 +447,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "taskAttributes",
             Map.of("taskId", "1234",
                    "taskType", taskType,
-                   "name", "Yolanda"
+                   "name", "Yolanda",
+                   "__processCategory__orderId_123", ""
             )
         );
 
@@ -865,7 +869,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             "taskAttributes",
             Map.of("taskId", "1234",
                    "taskType", taskType,
-                   "name", "LastName"
+                   "name", "LastName",
+                   "__processCategory__orderId_123", ""
             )
         );
 
@@ -915,12 +920,11 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @CsvSource({
-        "reviewSolicitorOrderProvided","reviewAdminOrderProvided","confidentialCheckSOA",
-        "recreateApplicationPack","replyToMessageForJudiciary","reviewAdminOrderByManager",
+        "reviewSolicitorOrderProvided","confidentialCheckSOA",
+        "recreateApplicationPack","replyToMessageForJudiciary",
         "appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff",
         "arrangeBailiffSOA","appStatementOfServiceByAdmin","completefl416AndServe",
-        "replyToMessageForLA","createHearingRequest","createMultipleHearingRequest",
-        "createHearingRequestReserveListAssist","confidentialCheckDocuments","checkAndReServeDocuments"
+        "replyToMessageForLA", "confidentialCheckDocuments","checkAndReServeDocuments"
     })
     void when_given_task_type_then_return_majorPriorityForCaseTypeOfApplication_and_validate_description(
         String taskType) {

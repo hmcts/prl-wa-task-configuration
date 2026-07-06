@@ -18,9 +18,6 @@ import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -55,9 +52,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     static Stream<Arguments> scenarioProvider() {
 
         LocalDate currentDate = LocalDate.now();
-        LocalTime currentTime = LocalTime.now();
-        ZoneId myZone = ZoneId.systemDefault();
-        ZonedDateTime zonedDateTime = ZonedDateTime.of(currentDate, currentTime, myZone);
 
         return Stream.of(
             Arguments.of(
@@ -536,14 +530,15 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
-                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
+                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "123" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "serviceOfApplicationC100",
                         "name", "Service of Application",
-                        "processCategories", "serviceOfApplication"
+                        "processCategories", "serviceOfApplication,orderId_123"
                     )
                 )
             ),
@@ -553,14 +548,15 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "FL401" + "\"\n,"
-                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
+                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "123" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "serviceOfApplicationFL401",
                         "name", "Service of Application",
-                        "processCategories", "serviceOfApplication"
+                        "processCategories", "serviceOfApplication,orderId_123"
                     )
                 )
             ),
@@ -606,17 +602,18 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
                                       + "      \"performingAction\":\"" + "Create an order" + "\"\n,"
-                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
+                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "123" + "\"\n"
                                       + "   }"
                                       + "}"),
                 List.of(
                     Map.of(
-                        "processCategories", "serviceOfApplication",
+                        "processCategories", "serviceOfApplication,orderId_123",
                         "taskId", "serviceOfApplicationC100",
                         "name", "Service of Application"
                     ),
                     Map.of(
-                        "processCategories", "completeTheOrder",
+                        "processCategories", "completeTheOrder,orderId_123",
                         "taskId", "adminServeOrderC100",
                         "name", "Complete the Order"
                     )
@@ -630,17 +627,18 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
                                       + "      \"performingAction\":\"" + "Create a custom order" + "\"\n,"
-                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n"
+                                      + "      \"isOrderCompleteToServe\":\"" + "true" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "123" + "\"\n"
                                       + "   }"
                                       + "}"),
                 List.of(
                     Map.of(
-                        "processCategories", "serviceOfApplication",
+                        "processCategories", "serviceOfApplication,orderId_123",
                         "taskId", "serviceOfApplicationC100",
                         "name", "Service of Application"
                     ),
                     Map.of(
-                        "processCategories", "completeTheOrder",
+                        "processCategories", "completeTheOrder,orderId_123",
                         "taskId", "adminServeOrderC100",
                         "name", "Complete the Order"
                     )
@@ -653,12 +651,13 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"performingUser\":\"" + "JUDGE" + "\"\n,"
-                                      + "      \"performingAction\":\"" + "Create an order" + "\"\n"
+                                      + "      \"performingAction\":\"" + "Create an order" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "123" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
-                        "processCategories", "completeTheOrder",
+                        "processCategories", "completeTheOrder,orderId_123",
                         "taskId", "adminServeOrderC100",
                         "name", "Service Of Order"
                     )
@@ -693,14 +692,15 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"isOrderApproved\":\"" + "Yes" + "\"\n,"
                                       + "      \"isHearingTaskNeeded\":\"" + "Yes" + "\"\n,"
                                       + "      \"isMultipleHearingSelected\":\"" + "No" + "\"\n,"
-                                      + "      \"hearingOptionSelected\":\"" + "dateReservedWithListAssit" + "\"\n"
+                                      + "      \"hearingOptionSelected\":\"" + "dateReservedWithListAssit" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "123" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "createHearingRequestReserveListAssist",
                         "name", "Create Hearing Request - Reserved in List Assist",
-                        "processCategories", "createHearingRequest"
+                        "processCategories", "createHearingRequest,orderId_123"
                     )
                 )
             ),
@@ -715,14 +715,15 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"judgeLaManagerReviewRequired\":\"" + "null" + "\"\n,"
                                       + "      \"isHearingTaskNeeded\":\"" + "Yes" + "\"\n,"
                                       + "      \"isMultipleHearingSelected\":\"" + "No" + "\"\n,"
-                                      + "      \"hearingOptionSelected\":\"" + "dateReservedWithListAssit" + "\"\n"
+                                      + "      \"hearingOptionSelected\":\"" + "dateReservedWithListAssit" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "123" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "createHearingRequestReserveListAssist",
                         "name", "Create Hearing Request - Reserved in List Assist",
-                        "processCategories", "createHearingRequest"
+                        "processCategories", "createHearingRequest,orderId_123"
                     )
                 )
             ),
@@ -737,14 +738,15 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"judgeLaManagerReviewRequired\":\"" + "null" + "\"\n,"
                                       + "      \"isHearingTaskNeeded\":\"" + "Yes" + "\"\n,"
                                       + "      \"isMultipleHearingSelected\":\"" + "No" + "\"\n,"
-                                      + "      \"hearingOptionSelected\":\"" + "dateReservedWithListAssit" + "\"\n"
+                                      + "      \"hearingOptionSelected\":\"" + "dateReservedWithListAssit" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "123" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "createHearingRequestReserveListAssist",
                         "name", "Create Hearing Request - Reserved in List Assist",
-                        "processCategories", "createHearingRequest"
+                        "processCategories", "createHearingRequest,orderId_123"
                     )
                 )
             ),
@@ -759,14 +761,15 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"isOrderApproved\":\"" + "Yes" + "\"\n,"
                                       + "      \"isHearingTaskNeeded\":\"" + "Yes" + "\"\n,"
                                       + "      \"isMultipleHearingSelected\":\"" + "No" + "\"\n,"
-                                      + "      \"hearingOptionSelected\":\"" + "dateReservedWithListAssit" + "\"\n"
+                                      + "      \"hearingOptionSelected\":\"" + "dateReservedWithListAssit" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "123" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "createHearingRequestReserveListAssist",
                         "name", "Create Hearing Request - Reserved in List Assist",
-                        "processCategories", "createHearingRequest"
+                        "processCategories", "createHearingRequest,orderId_123"
                     )
                 ),
                 Arguments.of(
@@ -2016,12 +2019,13 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"cirDocumentsRequested\":" + "[{\"id\":\"" + getId() + "\","
                                       + "      \"value\":\"childImpactReport1\"}]" + "\n,"
-                                      + "      \"whenReportsMustBeFiled\":\"" + currentDate + "\"\n"
+                                      + "      \"whenReportsMustBeFiled\":\"" + currentDate + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "123" + "\"\n"
                                       + "   }"
                                       + "}"),
                 List.of(new HashMap<>() {{
                         put("name", "Request CIR Update");
-                        put("processCategories", "requestCirUpdate");
+                        put("processCategories", "requestCirUpdate,orderId_123");
                         put("delayUntil", new LinkedHashMap<>() {{
                                 put("delayUntilIntervalDays", 1L);
                                 put(
@@ -2047,12 +2051,13 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
                                       + "      \"cirDocumentsRequested\":" + "[{\"id\":\"" + getId() + "\","
                                       + "      \"value\":\"childImpactReport1\"}]" + "\n,"
-                                      + "      \"whenReportsMustBeFiled\":\"" + currentDate + "\"\n"
+                                      + "      \"whenReportsMustBeFiled\":\"" + currentDate + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "123" + "\"\n"
                                       + "   }"
                                       + "}"),
                 List.of(new HashMap<>() {{
                         put("name", "Request CIR Update");
-                        put("processCategories", "requestCirUpdate");
+                        put("processCategories", "requestCirUpdate,orderId_123");
                         put("delayUntil", new LinkedHashMap<>() {{
                                 put("delayUntilIntervalDays", 1L);
                                 put(
