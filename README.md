@@ -1,6 +1,5 @@
 # prl-wa-task-configuration
 
-
 [![Build Status](https://travis-ci.org/hmcts/prl-wa-task-configuration.svg?branch=master)](https://travis-ci.org/hmcts/prl-wa-task-configuration)
 
 ## Notes
