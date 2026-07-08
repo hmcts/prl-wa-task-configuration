@@ -823,6 +823,17 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0qcjh23">
+        <inputEntry id="UnaryTests_0wjmnwq">
+          <text>"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_010ov0u">
+          <text>	"reviewCaseForRequestedInformation"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lpmm6g">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0ttgpjf">
         <inputEntry id="UnaryTests_1v7zhnr">
           <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","returnApplication","sendOrReplyToMessages","adminRemoveLegalRepresentativeC100","adminRemoveLegalRepresentativeFL401","c100ManageFlags","fl401ManageFlags","statementOfService","serviceOfDocuments","fl401ListOnNotice","listOnNotice","listWithoutNotice","c100listWithoutNotice","caseNumber","waSendOrReplyToMessages"</text>
