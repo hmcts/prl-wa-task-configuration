@@ -217,7 +217,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
       </input>
       <input id="InputClause_1hfenjb" label="Manage Document Uploaded Category">
         <inputExpression id="LiteralExpression_01fu3jk" typeRef="boolean">
-          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocUploadedCategory != null) then some x in additionalData.Data.manageDocUploadedCategory satisfies x.value in ["childImpactReport1","childImpactReport2","safeguardingLetter", "section7Report", "section37Report", "guardianReport", "specialGuardianshipReport", "otherDocs"]  else false</text>
+          <text>if(additionalData != null and additionalData.Data != null and additionalData.Data.manageDocUploadedCategory != null) then some x in additionalData.Data.manageDocUploadedCategory satisfies x.value in ["childImpactReport1","childImpactReport2","safeguardingLetter", "section7Report", "section37Report", "guardianReport", "specialGuardianshipReport", "otherDocs", "enforcementOrderSuitabilityReport", "parentalOrderReporterReport"]  else false</text>
         </inputExpression>
       </input>
       <input id="InputClause_0ya1pyb" label="Manage Document uploaded Category - LA">
