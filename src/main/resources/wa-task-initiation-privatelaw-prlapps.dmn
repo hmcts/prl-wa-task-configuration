@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.32.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="wa-initiation-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.39.0">
   <decision id="wa-task-initiation-privatelaw-prlapps" name="Private Law Task initiation DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_0jtevuc" hitPolicy="COLLECT" biodi:annotationsWidth="400">
       <input id="Input_1" label="Event Id" biodi:width="216" camunda:inputVariable="eventId">
@@ -7742,7 +7742,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0391dye">
-          <text>"sendAndReplyIdent"</text>
+          <text>"sendAndReplyIdent,taskAssigneeIdamId_"+additionalData.Data.taskAssigneeIdamId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0zytn3v">
@@ -7843,7 +7843,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0kkw27k">
-          <text>"sendAndReplyIdent"</text>
+          <text>"sendAndReplyIdent,taskAssigneeIdamId_"+additionalData.Data.taskAssigneeIdamId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0m557gk">
@@ -7944,7 +7944,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0nyp94v">
-          <text>"sendAndReplyIdent"</text>
+          <text>"sendAndReplyIdent,taskAssigneeIdamId_"+additionalData.Data.taskAssigneeIdamId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0qgkh4o">
@@ -8045,7 +8045,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1d8bftf">
-          <text>"sendAndReplyIdent"</text>
+          <text>"sendAndReplyIdent,taskAssigneeIdamId_"+additionalData.Data.taskAssigneeIdamId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1weuwza">
@@ -11574,12 +11574,113 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"reviewLangAndSmReq"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_05cpp0d">
-          <text>"Review Language and SM requirements"</text>
+          <text>"Review support request"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03er1ed">
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_00f4c4v">
+          <text>"caseNoteId_"+additionalData.Data.caseNoteId</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0zcsadx">
+        <inputEntry id="UnaryTests_128aqgr">
+          <text>"solicitorLanguageSupportNotes"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0b102ej">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tmyrst">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sbtws6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1woaaoh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wtabrl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0txcw65">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01ujkhl">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l5qtke">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1e5dqsk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gqour2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l3ge05">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kk8qjo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a58lm5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_107a7ih">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c5ornq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09d7aja">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r87h87">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_173vki9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bwnfff">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gmedxs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xm52oj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0miqx81">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mteve3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ijqgqj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r5w6aj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16uceum">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xcgvqn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d25i3w">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qbpjuw">
+          <text>"reviewLangAndSmReq"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j3a8nd">
+          <text>"Review support request"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19wvp39">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rnmt3z">
           <text>"caseNoteId_"+additionalData.Data.caseNoteId</text>
         </outputEntry>
       </rule>
@@ -12603,6 +12704,114 @@ if additionalData.Data.isCirUpdateFollowUp != null and additionalData.Data.isCir
         </outputEntry>
         <outputEntry id="LiteralExpression_1dn1gce">
           <text>"requestCirUpdate"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xbh019">
+        <inputEntry id="UnaryTests_1leakdn">
+          <text>"requestFurtherInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0al6oig">
+          <text>"AWAITING_INFORMATION"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14smic9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rhc5mg">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01j3nnk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13ruill">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rxuwv4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0icl34l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sd6q0c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_156n4eq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qjnr6r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jo9chz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sh4z04">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ju4o3w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k8twib">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a3zzro">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cxihk3">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bw89bb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01iz1y8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0f27y3j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_174dvvk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1naavw2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hcxdvu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iv2xkd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xxczzq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_057biwk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l764xa">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0otsmsk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1g15a9t">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pfutcv">
+          <text>"reviewCaseForRequestedInformation"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09snfrj">
+          <text>"Review Case for Requested Information"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06hc4iq">
+          <text>{
+"delayUntilOrigin":date and time(additionalData.Data.requestFurtherInformationDetails.reviewByDate),
+"delayUntilIntervalDays":1,
+"delayUntilNonWorkingCalendar":"https://www.gov.uk/bank-holidays/england-and-wales.json",
+"delayUntilNonWorkingDaysOfWeek": "SATURDAY,SUNDAY",
+"delayUntilSkipNonWorkingDays": false,
+"delayUntilMustBeWorkingDays": "Next"
+}</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08zwsqv">
+          <text>"informationRequestedReviewByDateUpdate"</text>
         </outputEntry>
       </rule>
     </decisionTable>
