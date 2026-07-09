@@ -98,7 +98,7 @@
           <text>"hearing-judge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1i3bpr2">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0g0w413">
           <text>"JUDICIAL"</text>
@@ -128,7 +128,7 @@
           <text>"allocated-judge"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0vvsynb">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1b9hkxn">
           <text>"JUDICIAL"</text>
@@ -158,7 +158,7 @@
           <text>"allocated-legal-adviser"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0kj8zo2">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0xg3b8t">
           <text>"LEGAL_OPERATIONS"</text>
@@ -233,11 +233,41 @@
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1c0ro48">
+        <description>Judicial task permissions</description>
+        <inputEntry id="UnaryTests_00u6v4f">
+          <text>"reviewSolicitorOrderProvided","reviewAdminOrderProvided"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0loxyyy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0aatrbx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01bcanq">
+          <text>"judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07uiuko">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_01f8kd2">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jz4gqz">
+          <text>315</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0welxor">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lgate3">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0ivpl63">
         <description>Judicial task permissions</description>
         <inputEntry id="UnaryTests_155q736">
           <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping",
-"gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided", "replyToMessageForJudiciary"</text>
+"gateKeepingResubmitted","replyToMessageForJudiciary"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0buofva">
           <text></text>
@@ -264,11 +294,41 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0fh1gms">
+        <description>Judicial task permissions</description>
+        <inputEntry id="UnaryTests_044twvp">
+          <text>"reviewSolicitorOrderProvided","reviewAdminOrderProvided"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0fvtvr5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1o5n6xm">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0j2b38t">
+          <text>"fl401-judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0whqskw">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yle278">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1aht32i">
+          <text>294</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_08nlfkk">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0egvz3i">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0x8fgsl">
         <description>Judicial task permissions</description>
         <inputEntry id="UnaryTests_01o0ofx">
           <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping",
-"gateKeepingResubmitted","reviewSolicitorOrderProvided","reviewAdminOrderProvided", "replyToMessageForJudiciary"</text>
+"gateKeepingResubmitted","replyToMessageForJudiciary"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0wbmqfn">
           <text></text>
@@ -402,7 +462,7 @@
           <text>"tribunal-caseworker"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0dspoo2">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_03yetpt">
           <text>"LEGAL_OPERATIONS"</text>
@@ -716,10 +776,39 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0ppx823">
+        <inputEntry id="UnaryTests_1pm08cv">
+          <text>"confidentialCheckDocuments"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d4toda">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10jjmdo">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jhrjex">
+          <text>"hearing-centre-team-leader"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0idd7v3">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02rbs0m">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fmlmj7">
+          <text>"SKILL:ABA5:ORDERMANAGEMENTFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ea5ibc">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0y2s9z6">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_133ysn3">
         <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_0u9wzmo">
-          <text>"reviewAdminOrderByManager","confidentialCheckDocuments"</text>
+          <text>"reviewAdminOrderByManager"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0s45p4p">
           <text></text>
@@ -731,7 +820,7 @@
           <text>"hearing-centre-team-leader"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1lg3mf0">
-          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0wm6o2m">
           <text>"ADMIN"</text>
@@ -807,10 +896,39 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0rpb5lf">
+        <inputEntry id="UnaryTests_1chutrr">
+          <text>"reviewAdditionalApplication"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hhhgqj">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1phrd97">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1mca0o5">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yxulmn">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1dj5yfn">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17oxr8c">
+          <text>"SKILL:ABA5:CHECKAPPLICATIONC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ahdw31">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1niayr2">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1evorlb">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_1k15vbg">
-          <text>"sendToGateKeeperC100","sendToGateKeeperResubmittedC100","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","reviewAdditionalApplication","reviewLangAndSmReq","requestCirUpdate"</text>
+          <text>"sendToGateKeeperC100","sendToGateKeeperResubmittedC100","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","reviewLangAndSmReq","requestCirUpdate"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_12k147l">
           <text></text>
@@ -1288,10 +1406,39 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0a1ntsp">
+        <inputEntry id="UnaryTests_0li6yof">
+          <text>"reviewAdditionalApplication"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1x62vja">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1u4dte2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0onne6o">
+          <text>"hearing-centre-team-leader"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xhbf36">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13jjomq">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13vlw67">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d0vqj3">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bg52m2">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_07r3v1b">
         <description>Team Leader task permission</description>
         <inputEntry id="UnaryTests_1yde18z">
-          <text>"reviewAdditionalApplication","reviewLangAndSmReq"</text>
+          <text>"reviewLangAndSmReq"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0d5q21k">
           <text></text>

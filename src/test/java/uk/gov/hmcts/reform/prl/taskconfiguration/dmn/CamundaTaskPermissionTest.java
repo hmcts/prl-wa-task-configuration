@@ -135,6 +135,11 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "assignmentPriority", 3
     );
 
+    private static Map<String, Serializable> withoutCompleteOwn(Map<String, Serializable> map) {
+        HashMap<String, Serializable> mapWithoutCompleteOwn = new HashMap<>(map);
+        mapWithoutCompleteOwn.put("value", map.get("value").toString().replace(",CompleteOwn", ""));
+        return mapWithoutCompleteOwn;
+    }
 
     @BeforeAll
     static void initialization() {
@@ -174,12 +179,12 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "reviewAdminOrderProvided",
                 List.of(
                     taskSupervisor,
-                    hearingJudge,
-                    allocatedJudgeTwo,
-                    allocatedLegalAdviserThree,
-                    judgeOne,
-                    judgefl401,
-                    tribunalCaseworker
+                    withoutCompleteOwn(hearingJudge),
+                    withoutCompleteOwn(allocatedJudgeTwo),
+                    withoutCompleteOwn(allocatedLegalAdviserThree),
+                    withoutCompleteOwn(judgeOne),
+                    withoutCompleteOwn(judgefl401),
+                    withoutCompleteOwn(tribunalCaseworker)
                 )
             )
         );
@@ -270,14 +275,14 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "reviewSolicitorOrderProvided",
                 List.of(
                     taskSupervisor,
-                    hearingJudge,
-                    allocatedJudgeTwo,
-                    allocatedLegalAdviserThree,
-                    judgeOne,
-                    judgefl401,
-                    tribunalCaseworker,
-                    hearingCentreAdmin,
-                    hearingCentreTeamLeader
+                    withoutCompleteOwn(hearingJudge),
+                    withoutCompleteOwn(allocatedJudgeTwo),
+                    withoutCompleteOwn(allocatedLegalAdviserThree),
+                    withoutCompleteOwn(judgeOne),
+                    withoutCompleteOwn(judgefl401),
+                    withoutCompleteOwn(tribunalCaseworker),
+                    withoutCompleteOwn(hearingCentreAdmin),
+                    withoutCompleteOwn(hearingCentreTeamLeader)
                 )
             )
         );
@@ -763,12 +768,12 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "hearing-centre-admin",
                 "roleCategory", "ADMIN",
                 "authorisations", "SKILL:ABA5:CHECKAPPLICATIONC100",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
             ), Map.of(
                 "autoAssignable", false,
                 "name", "hearing-centre-team-leader",
                 "roleCategory", "ADMIN",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete,CompleteOwn"
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete"
             )
         )));
     }
@@ -870,7 +875,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "hearing-centre-team-leader",
                 "roleCategory", "ADMIN",
                 "authorisations", "SKILL:ABA5:ORDERMANAGEMENTFL401",
-                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"
+                "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"
             )
         )));
     }
@@ -1190,7 +1195,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(48));
+        assertThat(logic.getRules().size(), is(53));
     }
 
     @ParameterizedTest

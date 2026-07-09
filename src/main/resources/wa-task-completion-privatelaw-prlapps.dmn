@@ -1081,7 +1081,7 @@
       <rule id="DecisionRule_1tzpoqb">
         <description>Decoupling as per FPVTL-3149</description>
         <inputEntry id="UnaryTests_1y7doma">
-          <text>"c100-all-docs-reviewed","confidentialityCheck","createFlagsForGivenCaseNote","editAndApproveAnOrder","fl401-all-docs-reviewed","hearingEditAndApproveAnOrder","hmcHearingCompleted","processUrgentHelpWithFees","reviewAdditionalApplication","serviceOfDocumentsConfCheck","waManageOrders"</text>
+          <text>"c100-all-docs-reviewed","confidentialityCheck","createFlagsForGivenCaseNote","fl401-all-docs-reviewed","hearingEditAndApproveAnOrder","hmcHearingCompleted","processUrgentHelpWithFees","waManageOrders"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0bgpnqk">
           <text></text>

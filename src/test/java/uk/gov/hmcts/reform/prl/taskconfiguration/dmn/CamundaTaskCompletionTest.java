@@ -243,8 +243,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskType", "reviewAdminOrderByManager",
                         "completionMode", "Auto"
-                    ),
-                    Map.of()
+                    )
                 )
             ),
             Arguments.of(
@@ -387,8 +386,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskType", "confidentialCheckDocuments",
                         "completionMode", "Auto"
-                    ),
-                    Map.of()
+                    )
                 )
             ),
             Arguments.of(
