@@ -2132,15 +2132,15 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             dmnDecisionTableResult.getResultList().get(0).get("processCategories")
         );
 
-//        Assertions.assertEquals(
-//            Map.of("delayUntilIntervalDays", 1L,
-//                   "delayUntilNonWorkingCalendar", "https://www.gov.uk/bank-holidays/england-and-wales.json",
-//                   "delayUntilSkipNonWorkingDays", false,
-//                   "delayUntilOrigin", LocalDateTime.parse("2026-03-10T00:00"),
-//                   "delayUntilNonWorkingDaysOfWeek", "SATURDAY,SUNDAY",
-//                   "delayUntilMustBeWorkingDays", "Next"),
-//            dmnDecisionTableResult.getResultList().get(0).get("delayUntil")
-//        );
+        Assertions.assertEquals(
+            Map.of("delayUntilIntervalDays", 1L,
+                   "delayUntilNonWorkingCalendar", "https://www.gov.uk/bank-holidays/england-and-wales.json",
+                   "delayUntilSkipNonWorkingDays", false,
+                   "delayUntilOrigin", LocalDateTime.parse("2026-03-10T00:00"),
+                   "delayUntilNonWorkingDaysOfWeek", "SATURDAY,SUNDAY",
+                   "delayUntilMustBeWorkingDays", "Next"),
+            dmnDecisionTableResult.getResultList().get(0).get("delayUntil")
+        );
 
     }
 
