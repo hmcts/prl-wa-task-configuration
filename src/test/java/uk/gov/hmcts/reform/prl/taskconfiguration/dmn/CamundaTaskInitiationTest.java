@@ -1971,7 +1971,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 singletonList(
                     mapRequestOrder(
                         "requestSolicitorOrderC100",
-                        "Request Order - Do not mark this task as complete until the order has been received.",
+                        "Request Order",
                         "hearingId_789"
                     )
                 )
@@ -1988,7 +1988,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 singletonList(
                     mapRequestOrder(
                         "requestSolicitorOrderFL401",
-                        "Request Order - Do not mark this task as complete until the order has been received.",
+                        "Request Order",
                         "hearingId_790"
                     )
                 )
@@ -2004,7 +2004,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 singletonList(
                     mapRequestOrder(
                         "requestSolicitorOrderC100",
-                        "Request Order - Do not mark this task as complete until the order has been received.",
+                        "Request Order",
                         ""
                     )
                 )
