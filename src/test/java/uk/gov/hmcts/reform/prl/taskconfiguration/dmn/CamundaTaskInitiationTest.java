@@ -18,9 +18,6 @@ import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -35,7 +32,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
 
     @BeforeAll
-    public static void initialization() {
+    static void initialization() {
         CURRENT_DMN_DECISION_TABLE = DmnDecisionTable.WA_TASK_INITIATION;
     }
 
@@ -45,7 +42,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(29));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(123));
+        assertThat(logic.getRules().size(), is(124));
     }
 
     private static UUID getId() {
@@ -55,9 +52,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
     static Stream<Arguments> scenarioProvider() {
 
         LocalDate currentDate = LocalDate.now();
-        LocalTime currentTime = LocalTime.now();
-        ZoneId myZone = ZoneId.systemDefault();
-        ZonedDateTime zonedDateTime = ZonedDateTime.of(currentDate, currentTime, myZone);
 
         return Stream.of(
             Arguments.of(
@@ -1297,7 +1291,23 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 singletonList(
                     Map.of(
                         "taskId", "reviewLangAndSmReq",
-                        "name", "Review Language and SM requirements",
+                        "name", "Review support request",
+                        "processCategories", "caseNoteId_19842f84-faa2-4928-bc8d-928b0321b346"
+                    )
+                )
+            ),
+            Arguments.of(
+                "solicitorLanguageSupportNotes",
+                "SUBMITTED_PAID",
+                mapAdditionalData("{\n"
+                                      + "   \"Data\":{\n"
+                                      + "      \"caseNoteId\":\"" + "19842f84-faa2-4928-bc8d-928b0321b346" + "\"\n"
+                                      + "   }"
+                                      + "}"),
+                singletonList(
+                    Map.of(
+                        "taskId", "reviewLangAndSmReq",
+                        "name", "Review support request",
                         "processCategories", "caseNoteId_19842f84-faa2-4928-bc8d-928b0321b346"
                     )
                 )
@@ -1826,17 +1836,20 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "sendOrReplyToMessages",
                 null,
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"sendMessageObject\":{\n"
-                                      + "         \"internalMessageWhoToSendTo\":\"" + "LEGAL_ADVISER" + "\"\n"
-                                      + "      }\n"
-                                      + "   }"
-                                      + "}"),
+                mapAdditionalData("""
+                    {
+                      "Data": {
+                        "sendMessageObject": {
+                          "internalMessageWhoToSendTo": "LEGAL_ADVISER"
+                        },
+                        "taskAssigneeIdamId": "123"
+                      }
+                    }
+                    """),
                 List.of(
                     Map.of(
                         "name", "Reply to the Message",
-                        "processCategories", "sendAndReplyIdent",
+                        "processCategories", "sendAndReplyIdent,taskAssigneeIdamId_123",
                         "taskId", "replyToMessageForLA"
                     )
                 )
@@ -1844,17 +1857,20 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "reviewAdditionalApplication",
                 null,
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"sendMessageObject\":{\n"
-                                      + "         \"internalMessageWhoToSendTo\":\"" + "LEGAL_ADVISER" + "\"\n"
-                                      + "      }\n"
-                                      + "   }"
-                                      + "}"),
+                mapAdditionalData("""
+                    {
+                      "Data": {
+                        "sendMessageObject": {
+                          "internalMessageWhoToSendTo": "LEGAL_ADVISER"
+                        },
+                        "taskAssigneeIdamId": "123"
+                      }
+                    }
+                    """),
                 List.of(
                     Map.of(
                         "name", "Reply to the Message",
-                        "processCategories", "sendAndReplyIdent",
+                        "processCategories", "sendAndReplyIdent,taskAssigneeIdamId_123",
                         "taskId", "replyToMessageForLA"
                     )
                 )
@@ -1862,17 +1878,20 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "sendOrReplyToMessages",
                 null,
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"replyMessageObject\":{\n"
-                                      + "         \"internalMessageReplyTo\":\"" + "LEGAL_ADVISER" + "\"\n"
-                                      + "      }\n"
-                                      + "   }"
-                                      + "}"),
+                mapAdditionalData("""
+                    {
+                      "Data": {
+                        "replyMessageObject": {
+                          "internalMessageReplyTo": "LEGAL_ADVISER"
+                        },
+                        "taskAssigneeIdamId": "123"
+                      }
+                    }
+                    """),
                 List.of(
                     Map.of(
                         "name", "Reply to the Message",
-                        "processCategories", "sendAndReplyIdent",
+                        "processCategories", "sendAndReplyIdent,taskAssigneeIdamId_123",
                         "taskId", "replyToMessageForLA"
                     )
                 )
@@ -1880,17 +1899,20 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "sendOrReplyToMessages",
                 null,
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"sendMessageObject\":{\n"
-                                      + "         \"internalMessageWhoToSendTo\":\"" + "JUDICIARY" + "\"\n"
-                                      + "      }\n"
-                                      + "   }"
-                                      + "}"),
+                mapAdditionalData("""
+                    {
+                      "Data": {
+                        "sendMessageObject": {
+                          "internalMessageWhoToSendTo": "JUDICIARY"
+                        },
+                        "taskAssigneeIdamId": "123"
+                      }
+                    }
+                    """),
                 List.of(
                     Map.of(
                         "name", "Reply to the Message",
-                        "processCategories", "sendAndReplyIdent",
+                        "processCategories", "sendAndReplyIdent,taskAssigneeIdamId_123",
                         "taskId", "replyToMessageForJudiciary"
                     )
                 )
@@ -1898,17 +1920,20 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "reviewAdditionalApplication",
                 null,
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"sendMessageObject\":{\n"
-                                      + "         \"internalMessageWhoToSendTo\":\"" + "JUDICIARY" + "\"\n"
-                                      + "      }\n"
-                                      + "   }"
-                                      + "}"),
+                mapAdditionalData("""
+                    {
+                      "Data": {
+                        "sendMessageObject": {
+                          "internalMessageWhoToSendTo": "JUDICIARY"
+                        },
+                        "taskAssigneeIdamId": "123"
+                      }
+                    }
+                    """),
                 List.of(
                     Map.of(
                         "name", "Reply to the Message",
-                        "processCategories", "sendAndReplyIdent",
+                        "processCategories", "sendAndReplyIdent,taskAssigneeIdamId_123",
                         "taskId", "replyToMessageForJudiciary"
                     )
                 )
@@ -1916,17 +1941,20 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             Arguments.of(
                 "sendOrReplyToMessages",
                 null,
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"replyMessageObject\":{\n"
-                                      + "         \"internalMessageReplyTo\":\"" + "JUDICIARY" + "\"\n"
-                                      + "      }\n"
-                                      + "   }"
-                                      + "}"),
+                mapAdditionalData("""
+                    {
+                      "Data": {
+                        "replyMessageObject": {
+                          "internalMessageReplyTo": "JUDICIARY"
+                        },
+                        "taskAssigneeIdamId": "123"
+                      }
+                    }
+                    """),
                 List.of(
                     Map.of(
                         "name", "Reply to the Message",
-                        "processCategories", "sendAndReplyIdent",
+                        "processCategories", "sendAndReplyIdent,taskAssigneeIdamId_123",
                         "taskId", "replyToMessageForJudiciary"
                     )
                 )

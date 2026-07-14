@@ -115,7 +115,7 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
         taskTypes.add(Map.of("taskTypeId", "reviewAdditionalApplication",
                 "taskTypeName", "Review additional application"));
         taskTypes.add(Map.of("taskTypeId", "reviewLangAndSmReq",
-                "taskTypeName", "Review Language and SM requirements"));
+                "taskTypeName", "Review support request"));
         taskTypes.add(Map.of("taskTypeId", "adminServeOrderC100",
                 "taskTypeName", "Complete the Order / Service Of Order C100"));
         taskTypes.add(Map.of("taskTypeId", "adminServeOrderFL401",
