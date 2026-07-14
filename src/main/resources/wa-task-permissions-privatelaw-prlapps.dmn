@@ -928,7 +928,7 @@
       <rule id="DecisionRule_1evorlb">
         <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_1k15vbg">
-          <text>"sendToGateKeeperC100","sendToGateKeeperResubmittedC100","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","reviewLangAndSmReq","requestCirUpdate"</text>
+          <text>"sendToGateKeeperC100","sendToGateKeeperResubmittedC100","removeLegalRepresentativeC100","replyToMessageForCourtAdminC100","reviewRaRequestsC100","reviewInactiveRaRequestsC100","reviewLangAndSmReq"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_12k147l">
           <text></text>
@@ -952,6 +952,35 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0gg5ytu">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dvb2rt">
+        <inputEntry id="UnaryTests_14d0m35">
+          <text>"requestCirUpdate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0xgm4j4">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0mh2szy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ahwfoo">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_185iv5p">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ymrovj">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fihq17">
+          <text>"SKILL:ABA5:CHECKAPPLICATIONC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04e8j88">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0djtw7r">
           <text>false</text>
         </outputEntry>
       </rule>
