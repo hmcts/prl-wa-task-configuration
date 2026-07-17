@@ -594,7 +594,9 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"securityClassification"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0p1ra4z">
-          <text>if caseData.caseSecurityClassification !=null then caseData.caseSecurityClassification else ""</text>
+          <text>if caseData.caseSecurityClassification != null
+then caseData.caseSecurityClassification
+else ""</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0399ljw">
           <text>"true"</text>
