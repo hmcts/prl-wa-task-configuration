@@ -500,10 +500,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "taskType", "replyToMessageForJudiciary",
                         "completionMode", "Auto"
                     ),
-                    Map.of(
-                        "taskType", "requestCirUpdate",
-                        "completionMode", "Auto"
-                    ),
                     Map.of()
                 )
             )

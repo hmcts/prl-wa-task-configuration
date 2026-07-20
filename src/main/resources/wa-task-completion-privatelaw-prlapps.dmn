@@ -1080,7 +1080,7 @@
       </rule>
       <rule id="DecisionRule_06cptwj">
         <inputEntry id="UnaryTests_1l1smbf">
-          <text>"sendOrReplyToMessages","waSendOrReplyToMessages"</text>
+          <text>"sendOrReplyToMessages"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0p2ybbi">
           <text></text>
