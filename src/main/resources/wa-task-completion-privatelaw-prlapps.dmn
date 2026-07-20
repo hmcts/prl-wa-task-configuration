@@ -1050,9 +1050,37 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1a7aqig">
+        <inputEntry id="UnaryTests_05lmstx">
+          <text>"sendOrReplyToMessages"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_163xr5o">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_15filzl">
+          <text>"requestSolicitorOrderC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0u4kddb">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0nux6bg">
+        <inputEntry id="UnaryTests_0v3kptp">
+          <text>"sendOrReplyToMessages"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_031ge9v">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1a4t8f8">
+          <text>"requestSolicitorOrderFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1naamvz">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_06cptwj">
         <inputEntry id="UnaryTests_1l1smbf">
-          <text>"sendOrReplyToMessages"</text>
+          <text>"sendOrReplyToMessages","waSendOrReplyToMessages"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0p2ybbi">
           <text></text>
