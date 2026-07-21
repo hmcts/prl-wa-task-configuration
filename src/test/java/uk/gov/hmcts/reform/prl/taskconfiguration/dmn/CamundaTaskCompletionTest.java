@@ -41,6 +41,9 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskType", "checkApplicationResubmittedC100",
                         "completionMode", "Auto"
+                    ),Map.of(
+                        "taskType", "reviewCaseForRequestedInformation",
+                        "completionMode", "Auto"
                     ),
                     Map.of(
                         "taskType", "reviewCaseForRequestedInformation",
@@ -103,6 +106,9 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskType", "gateKeepingResubmitted",
                         "completionMode", "Auto"
+                    ),Map.of(
+                        "taskType", "reviewCaseForRequestedInformation",
+                        "completionMode", "Auto"
                     ),
                     Map.of(
                         "taskType", "reviewCaseForRequestedInformation",
@@ -159,6 +165,9 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     Map.of(
                         "taskType", "checkApplicationResubmittedFL401",
                         "completionMode", "Auto"
+                    ),   Map.of(
+                        "taskType", "reviewCaseForRequestedInformation",
+                        "completionMode", "Auto"
                     ),
                     Map.of(
                         "taskType", "reviewCaseForRequestedInformation",
@@ -190,6 +199,9 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     ), Map.of(
                         "taskType", "sendToGateKeeperResubmittedC100",
                         "completionMode", "Auto"
+                    ), Map.of(
+                        "taskType", "reviewCaseForRequestedInformation",
+                        "completionMode", "Auto"
                     ),
                     Map.of(
                         "taskType", "reviewCaseForRequestedInformation",
@@ -206,6 +218,9 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ), Map.of(
                         "taskType", "sendToGateKeeperResubmittedFL401",
+                        "completionMode", "Auto"
+                    ), Map.of(
+                        "taskType", "reviewCaseForRequestedInformation",
                         "completionMode", "Auto"
                     ),
                     Map.of(
@@ -460,6 +475,9 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     ),
                     Map.of(
                         "taskType", "replyToMessageForJudiciary",
+                        "completionMode", "Auto"
+                    ), Map.of(
+                        "taskType", "requestCirUpdate",
                         "completionMode", "Auto"
                     ),
                     Map.of()

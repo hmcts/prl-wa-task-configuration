@@ -1036,17 +1036,25 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_19qtnj3">
-        <inputEntry id="UnaryTests_1jqph8w">
+      <rule id="DecisionRule_1ouoc4m">
+        <inputEntry id="UnaryTests_17nam6q">
+          <text>"sendOrReplyToMessages"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gy2n1e">
+          <text>"requestCirUpdate"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0z5amyw">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qcjh23">
+        <inputEntry id="UnaryTests_0wjmnwq">
           <text>"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0md45b3">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1tfplhp">
-          <text>"reviewCaseForRequestedInformation"</text>
+        <outputEntry id="LiteralExpression_010ov0u">
+          <text>	"reviewCaseForRequestedInformation"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1ftg5xh">
+        <outputEntry id="LiteralExpression_1lpmm6g">
           <text>"Auto"</text>
         </outputEntry>
       </rule>

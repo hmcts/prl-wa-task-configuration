@@ -3488,6 +3488,64 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0um6cbb">
+        <inputEntry id="UnaryTests_17c4a1l">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i9lw0m">
+          <text>"requestCirUpdate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1013vvd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uujd21">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0szzv2j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10bm5mw">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ag6vgm">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xk35wu">
+          <text>"[Request CIR Update](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendOrReplyToMessages)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17c11zm">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0zz1u3o">
+        <inputEntry id="UnaryTests_1dh8mxh">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1b8dmhv">
+          <text>"requestCirUpdate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uveycc">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j1ftgo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ax9f3p">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gfy0cv">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_17tbpvc">
+          <text>"additionalProperties_isCirUpdateFollowUp"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1do7fb9">
+          <text>"Yes"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0711h8u">
+          <text></text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <decision id="Decision_11ew6tt" name="Order ID">
