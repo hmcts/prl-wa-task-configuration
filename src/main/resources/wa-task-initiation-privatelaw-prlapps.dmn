@@ -3181,7 +3181,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0rael10">
-          <text>"completeTheOrder"</text>
+          <text>"completeTheOrder,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_17oadi0">
@@ -3284,7 +3284,7 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0oa8y5v">
-          <text>"completeTheOrder"</text>
+          <text>"completeTheOrder,orderId_" + additionalData.Data.draftOrderCollectionId</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1mm12i7">
