@@ -566,14 +566,15 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 mapAdditionalData("{\n"
                                       + "   \"Data\":{\n"
                                       + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
-                                      + "      \"isOrderApproved\":\"" + "Yes" + "\"\n"
+                                      + "      \"isOrderApproved\":\"" + "Yes" + "\"\n,"
+                                      + "      \"draftOrderCollectionId\":\"" + "1234567890" + "\"\n"
                                       + "   }"
                                       + "}"),
                 singletonList(
                     Map.of(
                         "taskId", "adminServeOrderC100",
                         "name", "Complete the Order",
-                        "processCategories", "completeTheOrder"
+                        "processCategories", "completeTheOrder,orderId_1234567890"
                     )
                 )
             ),
