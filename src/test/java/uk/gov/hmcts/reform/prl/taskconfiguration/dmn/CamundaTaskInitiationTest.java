@@ -2045,18 +2045,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 List.of(new HashMap<>() {{
                         put("name", "Request CIR Update");
                         put("processCategories", "requestCirUpdate,orderId_123");
-                        put("delayUntil", new LinkedHashMap<>() {{
-                                put("delayUntilIntervalDays", 1L);
-                                put(
-                                    "delayUntilNonWorkingCalendar",
-                                    "https://www.gov.uk/bank-holidays/england-and-wales.json"
-                                );
-                                put("delayUntilSkipNonWorkingDays", false);
-                                put("delayUntilOrigin", currentDate);
-                                put("delayUntilMustBeWorkingDays", "Next");
-                                put("delayUntilNonWorkingDaysOfWeek", "SATURDAY,SUNDAY");
-                            }}
-                        );
                         put("taskId", "requestCirUpdate");
                     }}
                 )
@@ -2077,18 +2065,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                 List.of(new HashMap<>() {{
                         put("name", "Request CIR Update");
                         put("processCategories", "requestCirUpdate,orderId_123");
-                        put("delayUntil", new LinkedHashMap<>() {{
-                                put("delayUntilIntervalDays", 1L);
-                                put(
-                                    "delayUntilNonWorkingCalendar",
-                                    "https://www.gov.uk/bank-holidays/england-and-wales.json"
-                                );
-                                put("delayUntilSkipNonWorkingDays", false);
-                                put("delayUntilOrigin", currentDate);
-                                put("delayUntilMustBeWorkingDays", "Next");
-                                put("delayUntilNonWorkingDaysOfWeek", "SATURDAY,SUNDAY");
-                            }}
-                        );
                         put("taskId", "requestCirUpdate");
                     }}
                 )
