@@ -12688,7 +12688,16 @@ and additionalData.Data.isHearingTaskNeeded != null) then
           <text>"Request CIR Update"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1yg7dzm">
-          <text></text>
+          <text>{
+"delayUntilOrigin":date(if additionalData.Data.whenReportsMustBeFiledByLocalAuthority != null
+    then additionalData.Data.whenReportsMustBeFiledByLocalAuthority
+    else additionalData.Data.whenReportsMustBeFiled),
+"delayUntilIntervalDays":1,
+"delayUntilNonWorkingCalendar":"https://www.gov.uk/bank-holidays/england-and-wales.json",
+"delayUntilNonWorkingDaysOfWeek": "SATURDAY,SUNDAY",
+"delayUntilSkipNonWorkingDays": false,
+"delayUntilMustBeWorkingDays": "Next"
+}</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1dn1gce">
           <text>"requestCirUpdate,orderId_" + additionalData.Data.draftOrderCollectionId</text>
