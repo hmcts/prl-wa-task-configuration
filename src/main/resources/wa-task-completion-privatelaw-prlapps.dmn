@@ -1050,6 +1050,20 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_06cptwj">
+        <inputEntry id="UnaryTests_1l1smbf">
+          <text>"sendOrReplyToMessages"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p2ybbi">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1buv5es">
+          <text>"requestCirUpdate"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mew7en">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0ttgpjf">
         <inputEntry id="UnaryTests_1v7zhnr">
           <text>"manageOrders","serviceOfApplication","createBundle","adminEditAndApproveAnOrder","returnApplication","sendOrReplyToMessages","adminRemoveLegalRepresentativeC100","adminRemoveLegalRepresentativeFL401","c100ManageFlags","fl401ManageFlags","statementOfService","serviceOfDocuments","fl401ListOnNotice","listOnNotice","listWithoutNotice","c100listWithoutNotice","caseNumber","waSendOrReplyToMessages","recordFinalDecision"</text>
