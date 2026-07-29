@@ -1152,7 +1152,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0irt7go">
-          <text>"reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","reviewLangAndSmReq","newCaseTransferredToCourt"</text>
+          <text>"reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","reviewLangAndSmReq","newCaseTransferredToCourt","requestCirUpdate"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rwm1v2">
           <text></text>
@@ -3685,7 +3685,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1knbep8">
-          <text>"serviceOfApplicationC100","adminServeOrderC100"</text>
+          <text>"serviceOfApplicationC100","adminServeOrderC100","serviceOfApplication","completeTheOrder"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0kgmm7o">
           <text>not(null)</text>
@@ -3743,40 +3743,6 @@ else 5000</text>
           <text>if ((caseData.caseTypeOfApplication!=null and caseData.caseTypeOfApplication = "FL401") or (caseData.draftOrderCollection!=null and caseData.draftOrderCollection[id = orderId][1]!=null and caseData.draftOrderCollection[id = orderId][1].value!=null and caseData.draftOrderCollection[id = orderId][1].value.checkIsThisUrgent="Yes") or (caseData.orderCollection!=null and caseData.orderCollection[id = orderId][1]!=null and caseData.orderCollection[id = orderId][1].value!=null and caseData.orderCollection[id = orderId][1].value.checkIsThisUrgent="Yes")) then 1000 else 5000</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1sjeqaz">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_19wws0z">
-        <inputEntry id="UnaryTests_03bkp33">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1gc4i74">
-          <text>"requestCirUpdate"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0zbjo78">
-          <text>not(null)</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0ylm4xt">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1l37t7e">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0imv5t8">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0imv5t9">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1ru40as">
-          <text>"majorPriority"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_080gq8c">
-          <text>if (caseData.draftOrderCollection!=null and caseData.draftOrderCollection[id = orderId][1]!=null and caseData.draftOrderCollection[id = orderId][1].value!=null and caseData.draftOrderCollection[id = orderId][1].value.checkIsThisUrgent="Yes") then 1000
-else if (caseData.orderCollection!=null and caseData.orderCollection[id = orderId][1]!=null and caseData.orderCollection[id = orderId][1].value!=null and caseData.orderCollection[id = orderId][1].value.checkIsThisUrgent="Yes") then 1000
-else 5000</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_12nvdkh">
           <text></text>
         </outputEntry>
       </rule>
