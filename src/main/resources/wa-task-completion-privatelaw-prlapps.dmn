@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.35.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.32.0">
   <decision id="wa-task-completion-privatelaw-prlapps" name="Private Law Task completion DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_01re27m" hitPolicy="COLLECT">
       <input id="eventId" label="Event ID" biodi:width="437">
@@ -1050,31 +1050,45 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1a7aqig">
-        <inputEntry id="UnaryTests_05lmstx">
+      <rule id="DecisionRule_06cptwj">
+        <inputEntry id="UnaryTests_1l1smbf">
           <text>"sendOrReplyToMessages"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_163xr5o">
+        <inputEntry id="UnaryTests_0p2ybbi">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_15filzl">
-          <text>"requestSolicitorOrderC100"</text>
+        <outputEntry id="LiteralExpression_1buv5es">
+          <text>"requestCirUpdate"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0u4kddb">
+        <outputEntry id="LiteralExpression_0mew7en">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0nux6bg">
-        <inputEntry id="UnaryTests_0v3kptp">
+      <rule id="DecisionRule_0b1ss0y">
+        <inputEntry id="UnaryTests_0jkydbj">
           <text>"sendOrReplyToMessages"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_031ge9v">
+        <inputEntry id="UnaryTests_0yni9ca">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_1a4t8f8">
+        <outputEntry id="LiteralExpression_1vd28kr">
+          <text>"requestSolicitorOrderC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06rv6hv">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0d821f7">
+        <inputEntry id="UnaryTests_09yhwli">
+          <text>"sendOrReplyToMessages"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ceet28">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ou7gk4">
           <text>"requestSolicitorOrderFL401"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1naamvz">
+        <outputEntry id="LiteralExpression_02ihxib">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
