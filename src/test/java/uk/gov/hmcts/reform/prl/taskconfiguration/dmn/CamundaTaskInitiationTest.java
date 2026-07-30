@@ -2129,6 +2129,37 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         );
                         put("taskId", "requestCirUpdate");
                     }}
+                ),
+                Arguments.of(
+                    "createRequestCirUpdateTask",
+                    null,
+                    mapAdditionalData("{\n"
+                                          + "   \"Data\":{\n"
+                                          + "      \"performingUser\":\"" + "COURT_ADMIN" + "\"\n,"
+                                          + "      \"caseTypeOfApplication\":\"" + "C100" + "\"\n,"
+                                          + "      \"cirDocumentsRequested\":" + "[{\"id\":\"" + getId() + "\","
+                                          + "      \"value\":\"childImpactReport1\"}]" + "\n,"
+                                          + "     \"isCirUpdateFollowUp\": true\n"
+                                          + "   }"
+                                          + "}"),
+                    List.of(new HashMap<>() {{
+                                put("name", "Request CIR Update");
+                                put("processCategories", "requestCirUpdate");
+                                put("delayUntil", new LinkedHashMap<>() {{
+                                        put("delayUntilIntervalDays", 1L);
+                                        put(
+                                            "delayUntilNonWorkingCalendar",
+                                            "https://www.gov.uk/bank-holidays/england-and-wales.json"
+                                        );
+                                        put("delayUntilSkipNonWorkingDays", false);
+                                        put("delayUntilOrigin", currentDate);
+                                        put("delayUntilMustBeWorkingDays", "Next");
+                                        put("delayUntilNonWorkingDaysOfWeek", "SATURDAY,SUNDAY");
+                                    }}
+                                );
+                                put("taskId", "requestCirUpdate");
+                            }}
+                    )
                 )
             )
         );
