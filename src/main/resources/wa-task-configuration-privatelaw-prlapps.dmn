@@ -669,7 +669,8 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_07bn4jn">
-          <text>"reviewSolicitorOrderProvided","reviewCorrespondenceC100","reviewCorrespondenceFL401","appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin"</text>
+          <text>"reviewSolicitorOrderProvided","reviewCorrespondenceC100","reviewCorrespondenceFL401",
+"appStatementOfServiceBySol","appStatementOfServiceByLiP","appStatementOfServiceByBailiff","arrangeBailiffSOA","appStatementOfServiceByAdmin"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0jy6j1o">
           <text></text>
@@ -1152,7 +1153,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0irt7go">
-          <text>"reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","reviewLangAndSmReq","newCaseTransferredToCourt","requestCirUpdate"</text>
+          <text>"reviewRaRequestsC100","reviewRaRequestsFL401","reviewInactiveRaRequestsC100","reviewInactiveRaRequestsFL401","reviewLangAndSmReq","newCaseTransferredToCourt", "requestCirUpdate"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1rwm1v2">
           <text></text>
@@ -3488,261 +3489,325 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0nziblu">
-        <inputEntry id="UnaryTests_17tc2n5">
+      <rule id="DecisionRule_1kk7tpj">
+        <inputEntry id="UnaryTests_1n5x2ji">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0g20t52">
+        <inputEntry id="UnaryTests_1585t0n">
+          <text>"requestCirUpdate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00spw70">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10m9ssu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tbgqyy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cqq2we">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vxasej">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0i196p6">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e76h7y">
+          <text>"[Request CIR Update](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendOrReplyToMessages)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i7avxw">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1kdx8pv">
+        <inputEntry id="UnaryTests_01ut809">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kdbkbl">
+          <text>"requestCirUpdate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16k1kck">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0epijno">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a9nyf4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rswi1r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s8h5zz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0j8ayxj">
+          <text>"additionalProperties_isCirUpdateFollowUp"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18ibqs2">
+          <text>"Yes"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fm2ty0">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0r4kihf">
+        <inputEntry id="UnaryTests_0gsa2ml">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13oikp9">
           <text>"replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_01h8tsz">
+        <inputEntry id="UnaryTests_0k3r54e">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_084zsor">
+        <inputEntry id="UnaryTests_1i3vo6w">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_004b4my">
+        <inputEntry id="UnaryTests_13dhuu7">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0i4mo58">
+        <inputEntry id="UnaryTests_1roc0s1">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0i4mo59">
+        <inputEntry id="UnaryTests_1549m9y">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_02pdg3f">
+        <outputEntry id="LiteralExpression_0absphg">
           <text>"dueDateIntervalDays"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0m9495c">
+        <outputEntry id="LiteralExpression_1yuqm7y">
           <text>if (caseData.sendMessageObject!=null and caseData.sendMessageObject.internalMessageUrgent="Yes") or (caseData.replyMessageObject!=null and caseData.replyMessageObject.internalMessageUrgent="Yes") then 0 else 1</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1m8t675">
+        <outputEntry id="LiteralExpression_0z5s2cd">
           <text></text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0gqzxcv">
-        <inputEntry id="UnaryTests_1jraojv">
+      <rule id="DecisionRule_02vm59g">
+        <inputEntry id="UnaryTests_0ehos64">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0s2yubh">
+        <inputEntry id="UnaryTests_0z9jmvv">
           <text>"replyToMessageForJudiciary"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1naq520">
+        <inputEntry id="UnaryTests_1wrawb5">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0k85mkz">
+        <inputEntry id="UnaryTests_10kjmpw">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0btczuz">
+        <inputEntry id="UnaryTests_0eo9he3">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_00i6a97">
+        <inputEntry id="UnaryTests_1qs1y14">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_00i6a98">
+        <inputEntry id="UnaryTests_11a5jw7">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0h7swjq">
+        <outputEntry id="LiteralExpression_0rqy0e4">
           <text>"dueDateIntervalDays"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0o4hqdh">
+        <outputEntry id="LiteralExpression_0izmmog">
           <text>if (caseData.sendMessageObject!=null and caseData.sendMessageObject.internalMessageUrgent="Yes") or (caseData.replyMessageObject!=null and caseData.replyMessageObject.internalMessageUrgent="Yes") then 0 else 5</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1hp355t">
+        <outputEntry id="LiteralExpression_15l3lcw">
           <text></text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0tzzblv">
-        <inputEntry id="UnaryTests_075cctv">
+      <rule id="DecisionRule_0hqr6kb">
+        <inputEntry id="UnaryTests_0do9mlm">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_16tifzv">
-          <text>"replyToMessageForCourtAdminC100"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1vbxrl5">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_15hfif7">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_11eyod8">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1d712cn">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1d712co">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0se97u9">
-          <text>"majorPriority"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1a8mxca">
-          <text>if (caseData.sendMessageObject!=null and caseData.sendMessageObject.internalMessageUrgent="Yes") or (caseData.replyMessageObject!=null and caseData.replyMessageObject.internalMessageUrgent="Yes") then 1000 else 5000</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_167fslk">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0b3zoy4">
-        <inputEntry id="UnaryTests_0bt5ug5">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ycg9dv">
-          <text>"replyToMessageForLA","replyToMessageForJudiciary"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_096qej3">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0nxegv3">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1phjdqt">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_10ppdqx">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_10ppdqy">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0t82wbr">
-          <text>"majorPriority"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_1fv3p85">
-          <text>if ((caseData.caseTypeOfApplication!=null and caseData.caseTypeOfApplication = "FL401") or (caseData.sendMessageObject!=null and caseData.sendMessageObject.internalMessageUrgent="Yes") or (caseData.replyMessageObject!=null and caseData.replyMessageObject.internalMessageUrgent="Yes")) then 1000 else 5000</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0c547ux">
-          <text></text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0sdpj5f">
-        <inputEntry id="UnaryTests_1xpln28">
-          <text></text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0x08l74">
+        <inputEntry id="UnaryTests_1o19cej">
           <text>"createHearingRequestReserveListAssist","createHearingRequest","createMultipleHearingRequest"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_10gnp0s">
+        <inputEntry id="UnaryTests_1asf6fr">
           <text>not(null)</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0qjbk2k">
+        <inputEntry id="UnaryTests_135830w">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0v2w57j">
+        <inputEntry id="UnaryTests_06yy1x2">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0kh0hvo">
+        <inputEntry id="UnaryTests_0ja8plq">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0kh0hvp">
+        <inputEntry id="UnaryTests_1urzeb0">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0de464b">
+        <outputEntry id="LiteralExpression_0u94lh7">
           <text>"dueDateIntervalDays"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_19o7qk8">
+        <outputEntry id="LiteralExpression_0yvfkvm">
           <text>if (caseData.draftOrderCollection!=null and caseData.draftOrderCollection[id = orderId][1]!=null and caseData.draftOrderCollection[id = orderId][1].value!=null and caseData.draftOrderCollection[id = orderId][1].value.checkIsThisUrgent="Yes") then 0 else 1</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_0r9crqh">
+        <outputEntry id="LiteralExpression_0krrma6">
           <text></text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1o45p6l">
-        <inputEntry id="UnaryTests_18rsq7o">
+      <rule id="DecisionRule_1no4wc2">
+        <inputEntry id="UnaryTests_1llfpm5">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0ehemvx">
+        <inputEntry id="UnaryTests_0ldm4va">
           <text>"serviceOfApplicationC100","serviceOfApplicationFL401","adminServeOrderC100","adminServeOrderFL401","reviewAdminOrderProvided","reviewAdminOrderByManager"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_115hn69">
+        <inputEntry id="UnaryTests_1j7u14e">
           <text>not(null)</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1oki5ra">
+        <inputEntry id="UnaryTests_1jr8nz6">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1qyz7l6">
+        <inputEntry id="UnaryTests_0p6gg0d">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1cvshls">
+        <inputEntry id="UnaryTests_1gqz45k">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1cvshlt">
+        <inputEntry id="UnaryTests_1y42q05">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_03aeyok">
+        <outputEntry id="LiteralExpression_1ga9mph">
           <text>"dueDateIntervalDays"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1ecm5fy">
+        <outputEntry id="LiteralExpression_136z8b8">
           <text>if (caseData.draftOrderCollection!=null and caseData.draftOrderCollection[id = orderId][1]!=null and caseData.draftOrderCollection[id = orderId][1].value!=null and caseData.draftOrderCollection[id = orderId][1].value.checkIsThisUrgent="Yes") then 0 else 2</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1hb146a">
+        <outputEntry id="LiteralExpression_13l9n9w">
           <text></text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1o7suuq">
-        <inputEntry id="UnaryTests_011ubi1">
+      <rule id="DecisionRule_1exqsom">
+        <inputEntry id="UnaryTests_09wcwa6">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_1knbep8">
-          <text>"serviceOfApplicationC100","adminServeOrderC100","serviceOfApplication","completeTheOrder"</text>
+        <inputEntry id="UnaryTests_038dz17">
+          <text>"replyToMessageForCourtAdminC100"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0kgmm7o">
-          <text>not(null)</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1ilu8tc">
+        <inputEntry id="UnaryTests_0bbiaf9">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_02sq9y6">
+        <inputEntry id="UnaryTests_0wia8he">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_026mv3f">
+        <inputEntry id="UnaryTests_1d4ra3k">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_026mv3g">
+        <inputEntry id="UnaryTests_1jkl9he">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_0i4sx1l">
+        <inputEntry id="UnaryTests_1x04zoc">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_04aqtcm">
           <text>"majorPriority"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_18cr10g">
+        <outputEntry id="LiteralExpression_1viro15">
+          <text>if (caseData.sendMessageObject!=null and caseData.sendMessageObject.internalMessageUrgent="Yes") or (caseData.replyMessageObject!=null and caseData.replyMessageObject.internalMessageUrgent="Yes") then 1000 else 5000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0l3b0hx">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rccwl4">
+        <inputEntry id="UnaryTests_1e5la87">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10wfm6c">
+          <text>"replyToMessageForLA","replyToMessageForJudiciary"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wtqjhq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gqbxew">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0spldlk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_117dix4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zdh067">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07nzraz">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0d0y5pq">
+          <text>if ((caseData.caseTypeOfApplication!=null and caseData.caseTypeOfApplication = "FL401") or (caseData.sendMessageObject!=null and caseData.sendMessageObject.internalMessageUrgent="Yes") or (caseData.replyMessageObject!=null and caseData.replyMessageObject.internalMessageUrgent="Yes")) then 1000 else 5000</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1q15djs">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1mnxo2i">
+        <inputEntry id="UnaryTests_1nctyed">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ylqfph">
+          <text>"serviceOfApplicationC100","adminServeOrderC100","serviceOfApplication","completeTheOrder"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15g29hr">
+          <text>not(null)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12pp7z9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r8iyn9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iuidyu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o98kxx">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03vrck6">
+          <text>"majorPriority"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09o78d7">
           <text>if (caseData.draftOrderCollection!=null and caseData.draftOrderCollection[id = orderId][1]!=null and caseData.draftOrderCollection[id = orderId][1].value!=null and caseData.draftOrderCollection[id = orderId][1].value.checkIsThisUrgent="Yes") then 1000
 else if (caseData.orderCollection!=null and caseData.orderCollection[id = orderId][1]!=null and caseData.orderCollection[id = orderId][1].value!=null and caseData.orderCollection[id = orderId][1].value.checkIsThisUrgent="Yes") then 1000
 else 5000</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_08skpim">
+        <outputEntry id="LiteralExpression_0q62ln9">
           <text></text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1bkeu84">
-        <inputEntry id="UnaryTests_1r3dz4k">
+      <rule id="DecisionRule_0yj8js2">
+        <inputEntry id="UnaryTests_0v8tlh4">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_16etifc">
+        <inputEntry id="UnaryTests_0wvw220">
           <text>"reviewAdminOrderProvided","reviewAdminOrderByManager","createHearingRequestReserveListAssist","createHearingRequest","createMultipleHearingRequest"</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0irevr6">
+        <inputEntry id="UnaryTests_1qwonrr">
           <text>not(null)</text>
         </inputEntry>
-        <inputEntry id="UnaryTests_17q3en9">
+        <inputEntry id="UnaryTests_00tg2vb">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0eg2sev">
+        <inputEntry id="UnaryTests_1mphrlx">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0e6whfb">
+        <inputEntry id="UnaryTests_1e95b6y">
           <text></text>
         </inputEntry>
-        <inputEntry id="UnaryTests_0e6whfc">
+        <inputEntry id="UnaryTests_06v3ky2">
           <text></text>
         </inputEntry>
-        <outputEntry id="LiteralExpression_1bl7erj">
+        <outputEntry id="LiteralExpression_196xz1e">
           <text>"majorPriority"</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_17mceqx">
+        <outputEntry id="LiteralExpression_08westr">
           <text>if ((caseData.caseTypeOfApplication!=null and caseData.caseTypeOfApplication = "FL401") or (caseData.draftOrderCollection!=null and caseData.draftOrderCollection[id = orderId][1]!=null and caseData.draftOrderCollection[id = orderId][1].value!=null and caseData.draftOrderCollection[id = orderId][1].value.checkIsThisUrgent="Yes") or (caseData.orderCollection!=null and caseData.orderCollection[id = orderId][1]!=null and caseData.orderCollection[id = orderId][1].value!=null and caseData.orderCollection[id = orderId][1].value.checkIsThisUrgent="Yes")) then 1000 else 5000</text>
         </outputEntry>
-        <outputEntry id="LiteralExpression_1sjeqaz">
+        <outputEntry id="LiteralExpression_0j5s3qq">
           <text></text>
         </outputEntry>
       </rule>
