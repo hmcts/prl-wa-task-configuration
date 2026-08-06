@@ -9,7 +9,7 @@ def s2sServiceName = "wa_camunda_pipeline_upload"
 def tenantId = "privatelaw"
 
 // note - 'demo' currently removed to disconnect auto-syncing of DMNs
-def branchesToSync = ['perftest', "ithc"]
+def branchesToSync = ['perftest']
 
 withCamundaOnlyPipeline(type, product, component, s2sServiceName, tenantId) {
 
