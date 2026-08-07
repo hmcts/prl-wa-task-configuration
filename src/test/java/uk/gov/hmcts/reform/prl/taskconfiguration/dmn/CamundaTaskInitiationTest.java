@@ -2164,7 +2164,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         );
 
         Assertions.assertEquals(
-            Map.of("delayUntilIntervalDays", 1L,
+            Map.of("delayUntilIntervalDays", 0L,
                    "delayUntilNonWorkingCalendar", "https://www.gov.uk/bank-holidays/england-and-wales.json",
                    "delayUntilSkipNonWorkingDays", false,
                    "delayUntilOrigin", LocalDateTime.parse("2026-03-10T00:00"),
