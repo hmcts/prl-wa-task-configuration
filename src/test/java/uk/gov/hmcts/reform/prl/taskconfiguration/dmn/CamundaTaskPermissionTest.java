@@ -944,7 +944,8 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
             taskSupervisor,
             allocatedJudge,
             judgeOne,
-            judgefl401
+            judgefl401,
+            hearingJudge
         )));
     }
 
