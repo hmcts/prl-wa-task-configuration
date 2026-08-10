@@ -943,9 +943,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
             taskSupervisor,
             allocatedJudge,
+            hearingJudge,
             judgeOne,
-            judgefl401,
-            hearingJudge
+            judgefl401
         )));
     }
 
