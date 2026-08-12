@@ -3522,6 +3522,70 @@ else ""</text>
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1kk7tpj">
+        <inputEntry id="UnaryTests_1n5x2ji">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1585t0n">
+          <text>"requestCirUpdate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00spw70">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10m9ssu">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tbgqyy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cqq2we">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vxasej">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0i196p6">
+          <text>"description"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0e76h7y">
+          <text>"[Request CIR Update](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendOrReplyToMessages)"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i7avxw">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1kdx8pv">
+        <inputEntry id="UnaryTests_01ut809">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kdbkbl">
+          <text>"requestCirUpdate"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16k1kck">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0epijno">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a9nyf4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rswi1r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s8h5zz">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0j8ayxj">
+          <text>"additionalProperties_isCirUpdateFollowUp"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18ibqs2">
+          <text>"Yes"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0fm2ty0">
+          <text></text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <decision id="Decision_11ew6tt" name="Order ID">
