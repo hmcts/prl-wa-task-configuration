@@ -95,7 +95,7 @@ task tests {
 
 checkstyle {
   maxWarnings = 0
-  toolVersion = '8.36'
+  toolVersion = '13.11.0'
   getConfigDirectory().set(new File(rootDir, 'config/checkstyle'))
 }
 
