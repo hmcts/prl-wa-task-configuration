@@ -246,7 +246,7 @@
           <text>"requestSolicitorOrderC100"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0wal4tx">
-          <text>"Request Solicitor Order C100"</text>
+          <text>"Request Order C100"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1gnqy86">
@@ -258,7 +258,7 @@
           <text>"requestSolicitorOrderFL401"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_11347sz">
-          <text>"Request Solicitor Order FL401"</text>
+          <text>"Request Order FL401"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1ys11ye">
