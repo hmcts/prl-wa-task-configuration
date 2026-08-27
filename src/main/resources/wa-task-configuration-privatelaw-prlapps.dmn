@@ -568,6 +568,40 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0g4npc7">
+        <inputEntry id="UnaryTests_1vebk98">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s2kh3i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wbpp7j">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uhva2c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m8c0eo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19e2bnt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e6k71h">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0pr720y">
+          <text>"securityClassification"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0p1ra4z">
+          <text>if caseData.caseSecurityClassification != null
+then caseData.caseSecurityClassification
+else ""</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0399ljw">
+          <text>"true"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_0tmyr2c">
         <inputEntry id="UnaryTests_0w1nlpg">
           <text></text>
