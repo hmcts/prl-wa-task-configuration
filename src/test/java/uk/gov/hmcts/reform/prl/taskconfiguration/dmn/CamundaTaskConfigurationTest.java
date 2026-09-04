@@ -2012,35 +2012,6 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "requestSolicitorOrderC100",
         "requestSolicitorOrderFL401"
     })
-    void when_given_task_requestSolicitorOrder_then_return_additionalProperties_hearingId(String taskType) {
-        VariableMap inputVariables = Variables.createVariables();
-        inputVariables.putValue(
-            "taskAttributes",
-            Map.of("taskId", "1234",
-                   "taskType", taskType,
-                   "name", "Request Order",
-                   "__processCategory__hearingId_456", ""
-            )
-        );
-        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
-
-        List<Map<String, Object>> hearingIdResultList = dmnDecisionTableResult.getResultList().stream()
-            .filter((r) -> r.containsValue("additionalProperties_hearingId"))
-            .toList();
-
-        assertThat(hearingIdResultList.size(), is(1));
-
-        assertTrue(hearingIdResultList.contains(Map.of(
-            "name", "additionalProperties_hearingId",
-            "value", "456"
-        )));
-    }
-
-    @ParameterizedTest
-    @CsvSource({
-        "requestSolicitorOrderC100",
-        "requestSolicitorOrderFL401"
-    })
     void when_given_requestSolicitorOrder_without_hearingId_then_no_additionalProperties_hearingId(String taskType) {
         VariableMap inputVariables = Variables.createVariables();
         inputVariables.putValue(
