@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.44.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="wa-configuration-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
   <decision id="wa-task-configuration-privatelaw-prlapps" name="Private Law Task configuration DMN" camunda:historyTimeToLive="P90D">
     <informationRequirement id="InformationRequirement_1iac9a2">
       <requiredDecision href="#Decision_11ew6tt" />
@@ -1823,6 +1823,70 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0b9nf73">
+        <inputEntry id="UnaryTests_15tyj2m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19ywn74">
+          <text>"requestSolicitorOrderC100","requestSolicitorOrderFL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sqt9rj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ajo8ha">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0thmuo1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tnsnuv">
+          <text>not(null)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ckq6ue">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ha3ges">
+          <text>"additionalProperties_hearingId"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_049i5kg">
+          <text>hearingId</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ezi1ay">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ouffug">
+        <inputEntry id="UnaryTests_0qls6qr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t5qd17">
+          <text>"requestSolicitorOrderC100","requestSolicitorOrderFL401"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1im7wr0">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nqqpd2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mvogph">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11ex9nu">
+          <text>not(null)</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hk2d2m">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0k5c9zo">
+          <text>"additionalProperties_taskTriggeredBy"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zed3o0">
+          <text>"RequestOrder"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qm5dfu">
+          <text></text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_17ypugq">
         <inputEntry id="UnaryTests_1i0b00r">
           <text></text>
@@ -2299,7 +2363,7 @@ taskAttributes. taskType else if(taskType != null) then taskType else null</text
           <text>"description"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0kzirjj">
-          <text>"[Request Solicitor to Submit the Order]"</text>
+          <text>"[Request Order](/cases/case-details/${[CASE_REFERENCE]}/trigger/sendOrReplyToMessages)"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0t3f1gd">
           <text></text>
