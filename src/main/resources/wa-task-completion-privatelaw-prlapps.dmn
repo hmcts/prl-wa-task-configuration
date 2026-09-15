@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.35.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="wa-completion-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
   <decision id="wa-task-completion-privatelaw-prlapps" name="Private Law Task completion DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_01re27m" hitPolicy="COLLECT">
       <input id="eventId" label="Event ID" biodi:width="437">
@@ -1061,6 +1061,34 @@
           <text>"requestCirUpdate"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0mew7en">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1iklvn1">
+        <inputEntry id="UnaryTests_036n7ip">
+          <text>"sendOrReplyToMessages"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p5lwo5">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10nm2zw">
+          <text>"requestSolicitorOrderC100"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1oze1jp">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lxva47">
+        <inputEntry id="UnaryTests_1sidkqu">
+          <text>"sendOrReplyToMessages"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sst24l">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gy6j20">
+          <text>"requestSolicitorOrderFL401"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0chdupo">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
