@@ -1596,7 +1596,7 @@ CTSC task permissions</description>
           <text>"reviewCaseForRequestedInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1g9nl4c">
-          <text>caseData.caseStatus.state = "Pending"</text>
+          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1x5ewbq">
           <text></text>
@@ -1628,7 +1628,7 @@ Admin task permissions</description>
           <text>"reviewCaseForRequestedInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ioudtt">
-          <text>caseData.caseStatus.state != "Pending"</text>
+          <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1kg0k1k">
           <text></text>
