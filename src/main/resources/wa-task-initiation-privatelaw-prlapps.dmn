@@ -12707,7 +12707,7 @@ if additionalData.Data.isCirUpdateFollowUp != null and additionalData.Data.isCir
           <text>"requestFurtherInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0al6oig">
-          <text>"AWAITING_INFORMATION"</text>
+          <text>"AWAITING_INFORMATION","SUBMITTED_NOT_PAID","SUBMITTED_PAID"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_14smic9">
           <text></text>
@@ -12791,7 +12791,7 @@ if additionalData.Data.isCirUpdateFollowUp != null and additionalData.Data.isCir
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1pfutcv">
-          <text>"reviewCaseForRequestedInformation"</text>
+          <text>"reviewCaseForRequestedInformationCtsc"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09snfrj">
           <text>"Review Case for Requested Information"</text>
@@ -12800,7 +12800,108 @@ if additionalData.Data.isCirUpdateFollowUp != null and additionalData.Data.isCir
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08zwsqv">
-          <text>"informationRequestedReviewByDateUpdate"</text>
+          <text>"informationRequestedReviewByDateUpdateCtsc"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1mw490g">
+        <inputEntry id="UnaryTests_17kwldg">
+          <text>"requestFurtherInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0luc0i4">
+          <text>"AWAITING_INFORMATION","CASE_ISSUED","JUDICIAL_REVIEW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sf0xes">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qirzt6">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ez2vxw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01plc91">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zksq0k">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1woul2f">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j2nijo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05pp4hf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1iane05">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xvln9x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ovk86w">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0x33nyd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01rfr1t">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wthqvp">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1tmxtgt">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1z10bk5">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kpastd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04fvkug">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17z2tpq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mh36ut">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1l4z5ez">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0av8s9o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00dgxfa">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y9hz6s">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ozh96v">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k4wv1r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0hj3two">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0twtuk9">
+          <text>"reviewCaseForRequestedInformationAdmin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17jjk9f">
+          <text>"Review Case for Requested Information"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kplkm1">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02m9aab">
+          <text>"informationRequestedReviewByDateUpdateAdmin"</text>
         </outputEntry>
       </rule>
     </decisionTable>
