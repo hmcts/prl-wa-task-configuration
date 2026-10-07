@@ -12707,7 +12707,7 @@ if additionalData.Data.isCirUpdateFollowUp != null and additionalData.Data.isCir
           <text>"requestFurtherInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0al6oig">
-          <text>"AWAITING_INFORMATION","SUBMITTED_NOT_PAID","SUBMITTED_PAID"</text>
+          <text>"SUBMITTED_NOT_PAID","SUBMITTED_PAID"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_14smic9">
           <text></text>
