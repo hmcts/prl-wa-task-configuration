@@ -1303,9 +1303,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     }
 
     @Test
-    void evaluate_task_ctsc_and_admin_reviewCaseForRequestedInformation() {
+    void evaluate_task_ctsc_reviewCaseForRequestedInformation() {
         VariableMap inputVariables = new VariableMapImpl();
-        inputVariables.putValue("taskAttributes", Map.of("taskType", "reviewCaseForRequestedInformation"));
+        inputVariables.putValue("taskAttributes", Map.of("taskType", "reviewCaseForRequestedInformationCtsc"));
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
@@ -1319,6 +1319,22 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "ctsc",
                 "roleCategory", "CTSC",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete,CompleteOwn"
+            )
+        )));
+    }
+
+    @Test
+    void evaluate_task_admin_reviewCaseForRequestedInformation() {
+        VariableMap inputVariables = new VariableMapImpl();
+        inputVariables.putValue("taskAttributes", Map.of("taskType", "reviewCaseForRequestedInformationAdmin"));
+
+        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
+
+        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
+            Map.of(
+                "autoAssignable", false,
+                "name", "task-supervisor",
+                "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
             ), Map.of(
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",

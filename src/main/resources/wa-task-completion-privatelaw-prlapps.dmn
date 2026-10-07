@@ -1044,9 +1044,23 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1tfplhp">
-          <text>"reviewCaseForRequestedInformation"</text>
+          <text>"reviewCaseForRequestedInformationCtsc"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ftg5xh">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1rpa90k">
+        <inputEntry id="UnaryTests_0frijuy">
+          <text>"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0oc3ig4">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1nbkf6y">
+          <text>"reviewCaseForRequestedInformationAdmin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0k0i35q">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
