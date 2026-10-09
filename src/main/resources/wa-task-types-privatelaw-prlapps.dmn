@@ -162,31 +162,7 @@
           <text>"gateKeeping"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1jbb027">
-          <text>"Gatekeeping (Judge or Legal Adviser)"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_0gxkkrk">
-        <description>GK</description>
-        <inputEntry id="UnaryTests_0nqhsmv">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0ii3vg7">
-          <text>"gateKeepingJudge"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0b7oshc">
-          <text>"Gatekeeping (Judge)"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1bvfa91">
-        <description>GK</description>
-        <inputEntry id="UnaryTests_09spxfo">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_0no5b1w">
-          <text>"gateKeepingLegalAdviser"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0j3tej6">
-          <text>"Gatekeeping (Legal Adviser)"</text>
+          <text>"Gatekeeping"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0f7f2pr">

@@ -55,7 +55,7 @@
       <rule id="DecisionRule_0cya10r">
         <description>Gatekeeping Auto task permissions</description>
         <inputEntry id="UnaryTests_09bbral">
-          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping",
+          <text>"directionOnIssue","directionOnIssueResubmitted",
 "gateKeepingResubmitted"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_14u50u0">
@@ -80,6 +80,36 @@
           <text>1</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0hf83w7">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1tq87zm">
+        <description>Gatekeeping Auto task permissions</description>
+        <inputEntry id="UnaryTests_1i452ob">
+          <text>"gateKeeping"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02cxo5t">
+          <text>caseData.gatekeepingTaskType = "JUDGE_OR_LEGAL_ADVISER"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0belme9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0nn39wq">
+          <text>"gatekeeping-judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_051iz84">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_04o9spd">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jbivpw">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ktd05j">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0y2t4ju">
           <text>true</text>
         </outputEntry>
       </rule>
@@ -296,7 +326,7 @@
       <rule id="DecisionRule_0ivpl63">
         <description>Judicial task permissions</description>
         <inputEntry id="UnaryTests_155q736">
-          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingJudge","gateKeepingResubmitted","replyToMessageForJudiciary"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeepingResubmitted","replyToMessageForJudiciary"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0buofva">
           <text></text>
@@ -320,6 +350,36 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1oc4t5p">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_11kyyas">
+        <description>Judicial task permissions</description>
+        <inputEntry id="UnaryTests_10dae18">
+          <text>"gateKeeping"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_18vdoeg">
+          <text>caseData.gatekeepingTaskType = "JUDGE_OR_LEGAL_ADVISER" or caseData.gatekeepingTaskType = "JUDGE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0v501kb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jcsyql">
+          <text>"judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_19xb81a">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14cd8n3">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_02pg6n2">
+          <text>315</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1aeoigx">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ebivcz">
           <text>false</text>
         </outputEntry>
       </rule>
@@ -356,7 +416,7 @@
       <rule id="DecisionRule_0x8fgsl">
         <description>Judicial task permissions</description>
         <inputEntry id="UnaryTests_01o0ofx">
-          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingJudge","gateKeepingResubmitted","replyToMessageForJudiciary"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeepingResubmitted","replyToMessageForJudiciary"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0wbmqfn">
           <text></text>
@@ -380,6 +440,36 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0oggfgn">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0k0ea9l">
+        <description>Judicial task permissions</description>
+        <inputEntry id="UnaryTests_0nkuv9g">
+          <text>"gateKeeping"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1p2zmoj">
+          <text>caseData.gatekeepingTaskType = "JUDGE_OR_LEGAL_ADVISER" or caseData.gatekeepingTaskType = "JUDGE"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05nslzj">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rgjn38">
+          <text>"fl401-judge"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_09um5c4">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i0lqoa">
+          <text>"JUDICIAL"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_12ill5p">
+          <text>294</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qg8dcd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_06vvx0s">
           <text>false</text>
         </outputEntry>
       </rule>
@@ -416,7 +506,7 @@
       <rule id="DecisionRule_1qbzl92">
         <description>Gatekeeping Auto task permissions</description>
         <inputEntry id="UnaryTests_0r04jcg">
-          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping",
+          <text>"directionOnIssue","directionOnIssueResubmitted",
 "gateKeepingResubmitted"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1t5f2hb">
@@ -444,10 +534,40 @@
           <text>true</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1nk3qy7">
+        <description>Gatekeeping Auto task permissions</description>
+        <inputEntry id="UnaryTests_1ennn26">
+          <text>"gateKeeping"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0v5anly">
+          <text>caseData.gatekeepingTaskType = "JUDGE_OR_LEGAL_ADVISER"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hs1msi">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v8zglm">
+          <text>"allocated-legal-adviser"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1sfeix7">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0bzts06">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1vxft48">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18pzusb">
+          <text>1</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rs43k1">
+          <text>true</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1x1oenn">
         <description>Tribunal caseworker task permissions</description>
         <inputEntry id="UnaryTests_183egaw">
-          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeeping","gateKeepingLegalAdviser","gateKeepingResubmitted","replyToMessageForLA"</text>
+          <text>"directionOnIssue","directionOnIssueResubmitted","gateKeepingResubmitted","replyToMessageForLA"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_18tqbn3">
           <text></text>
@@ -471,6 +591,36 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1kjalwr">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1vtp8nk">
+        <description>Tribunal caseworker task permissions</description>
+        <inputEntry id="UnaryTests_06d82r8">
+          <text>"gateKeeping"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00y613b">
+          <text>caseData.gatekeepingTaskType = "JUDGE_OR_LEGAL_ADVISER" or caseData.gatekeepingTaskType = "LEGAL_ADVISER"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1q0810r">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d3y8lx">
+          <text>"tribunal-caseworker"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0su815o">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,CompleteOwn"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16fsrjh">
+          <text>"LEGAL_OPERATIONS"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ac5q7r">
+          <text>"SKILL:ABA5:GATEKEEPING"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1k06qn4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1fhxxp6">
           <text>false</text>
         </outputEntry>
       </rule>
