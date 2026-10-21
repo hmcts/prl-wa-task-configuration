@@ -8,7 +8,6 @@ import org.camunda.bpm.engine.variable.VariableMap;
 import org.camunda.bpm.engine.variable.impl.VariableMapImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -2204,7 +2203,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         return result;
     }
 
-    @Disabled
     @Test
     void given_awaiting_information_event_should_evaluate_dmn() {
         Map<String, Object> additionalData = mapAdditionalData("{\n"
@@ -2224,7 +2222,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
 
 
         Assertions.assertEquals(
-            "reviewCaseForRequestedInformation",
+            "reviewCaseForRequestedInformationCtsc",
             dmnDecisionTableResult.getResultList().get(0).get("taskId")
         );
         Assertions.assertEquals(
@@ -2232,7 +2230,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             dmnDecisionTableResult.getResultList().get(0).get("name")
         );
         Assertions.assertEquals(
-            "informationRequestedReviewByDateUpdate",
+            "informationRequestedReviewByDateUpdateCtsc",
             dmnDecisionTableResult.getResultList().get(0).get("processCategories")
         );
 

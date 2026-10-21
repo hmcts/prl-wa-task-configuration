@@ -12707,7 +12707,7 @@ if additionalData.Data.isCirUpdateFollowUp != null and additionalData.Data.isCir
           <text>"requestFurtherInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0al6oig">
-          <text>"SUBMITTED_NOT_PAID","SUBMITTED_PAID"</text>
+          <text>"AWAITING_INFORMATION","SUBMITTED_NOT_PAID","SUBMITTED_PAID"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_14smic9">
           <text></text>
@@ -12797,7 +12797,14 @@ if additionalData.Data.isCirUpdateFollowUp != null and additionalData.Data.isCir
           <text>"Review Case for Requested Information"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_06hc4iq">
-          <text></text>
+          <text>{
+"delayUntilOrigin":date and time(additionalData.Data.requestFurtherInformationDetails.reviewByDate),
+"delayUntilIntervalDays":1,
+"delayUntilNonWorkingCalendar":"https://www.gov.uk/bank-holidays/england-and-wales.json",
+"delayUntilNonWorkingDaysOfWeek": "SATURDAY,SUNDAY",
+"delayUntilSkipNonWorkingDays": false,
+"delayUntilMustBeWorkingDays": "Next"
+}</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08zwsqv">
           <text>"informationRequestedReviewByDateUpdateCtsc"</text>
@@ -12898,7 +12905,14 @@ if additionalData.Data.isCirUpdateFollowUp != null and additionalData.Data.isCir
           <text>"Review Case for Requested Information"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_0kplkm1">
-          <text></text>
+          <text>{
+"delayUntilOrigin":date and time(additionalData.Data.requestFurtherInformationDetails.reviewByDate),
+"delayUntilIntervalDays":1,
+"delayUntilNonWorkingCalendar":"https://www.gov.uk/bank-holidays/england-and-wales.json",
+"delayUntilNonWorkingDaysOfWeek": "SATURDAY,SUNDAY",
+"delayUntilSkipNonWorkingDays": false,
+"delayUntilMustBeWorkingDays": "Next"
+}</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_02m9aab">
           <text>"informationRequestedReviewByDateUpdateAdmin"</text>
