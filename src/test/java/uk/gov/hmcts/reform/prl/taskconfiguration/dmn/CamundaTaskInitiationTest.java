@@ -2251,6 +2251,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         );
 
     }
+
     @ParameterizedTest
     @CsvSource({
         "requestFurtherInformation, CASE_ISSUED",
