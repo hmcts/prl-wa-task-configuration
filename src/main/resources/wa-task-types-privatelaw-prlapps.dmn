@@ -807,9 +807,21 @@
           <text></text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0e9djz1">
-          <text>"reviewCaseForRequestedInformation"</text>
+          <text>"reviewCaseForRequestedInformationCtsc"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_06dqa7u">
+          <text>"Review Case for Requested Information"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1r9fqgr">
+        <description>RCFRI</description>
+        <inputEntry id="UnaryTests_006kc42">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0cxttll">
+          <text>"reviewCaseForRequestedInformationAdmin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zv8g2l">
           <text>"Review Case for Requested Information"</text>
         </outputEntry>
       </rule>
