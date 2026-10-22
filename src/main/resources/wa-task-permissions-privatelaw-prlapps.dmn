@@ -1680,7 +1680,7 @@
 
 CTSC task permissions</description>
         <inputEntry id="UnaryTests_0wgj59r">
-          <text>"reviewCaseForRequestedInformation"</text>
+          <text>"reviewCaseForRequestedInformationCtsc"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1g9nl4c">
           <text></text>
@@ -1712,7 +1712,7 @@ CTSC task permissions</description>
 
 Admin task permissions</description>
         <inputEntry id="UnaryTests_1ti0tb8">
-          <text>"reviewCaseForRequestedInformation"</text>
+          <text>"reviewCaseForRequestedInformationAdmin"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1ioudtt">
           <text></text>
@@ -1744,7 +1744,7 @@ Admin task permissions</description>
 
 Admin task permissions</description>
         <inputEntry id="UnaryTests_1s7cvch">
-          <text>"reviewCaseForRequestedInformation"</text>
+          <text>"reviewCaseForRequestedInformationAdmin"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_012ves0">
           <text></text>
