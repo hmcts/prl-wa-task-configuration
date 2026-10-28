@@ -1672,13 +1672,7 @@
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1k6ma6a">
-        <description>
-
-
-
-
-
-CTSC task permissions</description>
+        <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_00fdsei">
           <text>"reviewCaseForRequestedInformation"</text>
         </inputEntry>
@@ -1708,13 +1702,7 @@ CTSC task permissions</description>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_05dqz3f">
-        <description>
-
-
-
-
-
-CTSC task permissions</description>
+        <description>CTSC task permissions</description>
         <inputEntry id="UnaryTests_0wgj59r">
           <text>"reviewCaseForRequestedInformationCtsc"</text>
         </inputEntry>
@@ -1744,9 +1732,7 @@ CTSC task permissions</description>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1yb6jiy">
-        <description>
-
-Admin task permissions</description>
+        <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_178yg2c">
           <text>"reviewCaseForRequestedInformation"</text>
         </inputEntry>
@@ -1776,9 +1762,7 @@ Admin task permissions</description>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1ru3um6">
-        <description>
-
-Admin task permissions</description>
+        <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_1ti0tb8">
           <text>"reviewCaseForRequestedInformationAdmin"</text>
         </inputEntry>
@@ -1808,9 +1792,7 @@ Admin task permissions</description>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0ptj491">
-        <description>
-
-Admin task permissions</description>
+        <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_10x83w8">
           <text>"reviewCaseForRequestedInformation"</text>
         </inputEntry>
@@ -1840,9 +1822,7 @@ Admin task permissions</description>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0llrvj2">
-        <description>
-
-Admin task permissions</description>
+        <description>Admin task permissions</description>
         <inputEntry id="UnaryTests_1s7cvch">
           <text>"reviewCaseForRequestedInformationAdmin"</text>
         </inputEntry>
