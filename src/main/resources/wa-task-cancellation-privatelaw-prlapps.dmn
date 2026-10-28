@@ -527,6 +527,29 @@
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_18o5ax5">
+        <inputEntry id="UnaryTests_16w5hje">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kw1v05">
+          <text>	"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees","exitAwaitingInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12b9nl1">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02o4n93">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ojmjc6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0isuw36">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1k94rct">
+          <text>	"informationRequestedReviewByDateUpdate"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_14k77ke">
         <inputEntry id="UnaryTests_05txbrc">
           <text></text>
@@ -571,6 +594,29 @@
         </outputEntry>
         <outputEntry id="LiteralExpression_1gatpo9">
           <text>	"informationRequestedReviewByDateUpdateAdmin"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0r1yzc8">
+        <inputEntry id="UnaryTests_0wdk6m7">
+          <text>	"AWAITING_INFORMATION"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19isvgh">
+          <text>	"transferToAnotherCourt"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j7hme0">
+          <text>not("AWAITING_INFORMATION")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1fosfq7">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0u17uxe">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1n90187">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lcd383">
+          <text>"informationRequestedReviewByDateUpdate"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1t9gytb">

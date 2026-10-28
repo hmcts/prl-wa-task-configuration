@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-permissions-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.36.1">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="wa-permissions-definition" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.34.0">
   <decision id="wa-task-permissions-privatelaw-prlapps" name="Private Law Permissions DMN" camunda:historyTimeToLive="P90D">
     <decisionTable id="DecisionTable_1pr5oic" hitPolicy="RULE ORDER">
       <input id="InputClause_12crj6e" label="Task Type" biodi:width="578" camunda:inputVariable="taskType">
@@ -1671,6 +1671,42 @@
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1k6ma6a">
+        <description>
+
+
+
+
+
+CTSC task permissions</description>
+        <inputEntry id="UnaryTests_00fdsei">
+          <text>"reviewCaseForRequestedInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_15m3u08">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1m1kkvq">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mtgz1j">
+          <text>"ctsc"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_00d9nxp">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete,CompleteOwn"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_16iumik">
+          <text>"CTSC"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xqk8n4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0dvho1z">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_015b501">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_05dqz3f">
         <description>
 
@@ -1707,6 +1743,38 @@ CTSC task permissions</description>
           <text>false</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1yb6jiy">
+        <description>
+
+Admin task permissions</description>
+        <inputEntry id="UnaryTests_178yg2c">
+          <text>"reviewCaseForRequestedInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ve6ypk">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1umx1h7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_15h5yrh">
+          <text>"hearing-centre-admin"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0scr2zz">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete,CompleteOwn"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zhdyvu">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ljii0f">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1d5wroe">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1bdw9ug">
+          <text>false</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1ru3um6">
         <description>
 
@@ -1736,6 +1804,38 @@ Admin task permissions</description>
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1pm4x2q">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ptj491">
+        <description>
+
+Admin task permissions</description>
+        <inputEntry id="UnaryTests_10x83w8">
+          <text>"reviewCaseForRequestedInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08oiwv2">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1x0aumb">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0m2rx27">
+          <text>"hearing-centre-team-leader"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14ndd9b">
+          <text>"Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete,CompleteOwn"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_10v5ix5">
+          <text>"ADMIN"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1aluyqd">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1jbu7s9">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1504o0u">
           <text>false</text>
         </outputEntry>
       </rule>
