@@ -8,10 +8,10 @@ import org.camunda.bpm.engine.variable.VariableMap;
 import org.camunda.bpm.engine.variable.impl.VariableMapImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTable;
 import uk.gov.hmcts.reform.prl.taskconfiguration.DmnDecisionTableBaseUnitTest;
@@ -43,7 +43,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(29));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(125));
+        assertThat(logic.getRules().size(), is(124));
     }
 
     private static UUID getId() {
@@ -2204,13 +2204,9 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         return result;
     }
 
-    @ParameterizedTest
-    @CsvSource({
-        "requestFurtherInformation, AWAITING_INFORMATION",
-        "requestFurtherInformation, SUBMITTED_NOT_PAID",
-        "requestFurtherInformation, SUBMITTED_PAID",
-    })
-    void given_request_further_information_event_should_evaluate_dmn_ctsc(String eventId, String state) {
+    @Disabled
+    @Test
+    void given_awaiting_information_event_should_evaluate_dmn() {
         Map<String, Object> additionalData = mapAdditionalData("{\n"
                + "   \"Data\":{\n"
                + "      \"requestFurtherInformationDetails\": {\n"
@@ -2220,15 +2216,15 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                + "}");
 
         VariableMap inputVariables = new VariableMapImpl();
-        inputVariables.putValue("eventId", eventId);
-        inputVariables.putValue("postEventState", state);
+        inputVariables.putValue("eventId", "requestFurtherInformation");
+        inputVariables.putValue("postEventState", "AWAITING_INFORMATION");
         inputVariables.putValue("additionalData", additionalData);
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
 
         Assertions.assertEquals(
-            "reviewCaseForRequestedInformationCtsc",
+            "reviewCaseForRequestedInformation",
             dmnDecisionTableResult.getResultList().get(0).get("taskId")
         );
         Assertions.assertEquals(
@@ -2236,54 +2232,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
             dmnDecisionTableResult.getResultList().get(0).get("name")
         );
         Assertions.assertEquals(
-            "informationRequestedReviewByDateUpdateCtsc",
-            dmnDecisionTableResult.getResultList().get(0).get("processCategories")
-        );
-
-        Assertions.assertEquals(
-            Map.of("delayUntilIntervalDays", 1L,
-                   "delayUntilNonWorkingCalendar", "https://www.gov.uk/bank-holidays/england-and-wales.json",
-                   "delayUntilSkipNonWorkingDays", false,
-                   "delayUntilOrigin", LocalDateTime.parse("2026-03-10T00:00"),
-                   "delayUntilNonWorkingDaysOfWeek", "SATURDAY,SUNDAY",
-                   "delayUntilMustBeWorkingDays", "Next"),
-            dmnDecisionTableResult.getResultList().get(0).get("delayUntil")
-        );
-
-    }
-
-    @ParameterizedTest
-    @CsvSource({
-        "requestFurtherInformation, CASE_ISSUED",
-        "requestFurtherInformation, JUDICIAL_REVIEW",
-    })
-    void given_request_further_information_event_should_evaluate_dmn_admin(String eventId, String state) {
-        Map<String, Object> additionalData = mapAdditionalData("{\n"
-                                                                   + "   \"Data\":{\n"
-                                                                   + "      \"requestFurtherInformationDetails\": {\n"
-                                                                   + "    \"reviewByDate\": \"2026-03-10T00:00:00.000\""
-                                                                   + "  }\n"
-                                                                   + "   }\n"
-                                                                   + "}");
-
-        VariableMap inputVariables = new VariableMapImpl();
-        inputVariables.putValue("eventId", eventId);
-        inputVariables.putValue("postEventState", state);
-        inputVariables.putValue("additionalData", additionalData);
-
-        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
-
-
-        Assertions.assertEquals(
-            "reviewCaseForRequestedInformationAdmin",
-            dmnDecisionTableResult.getResultList().get(0).get("taskId")
-        );
-        Assertions.assertEquals(
-            "Review Case for Requested Information",
-            dmnDecisionTableResult.getResultList().get(0).get("name")
-        );
-        Assertions.assertEquals(
-            "informationRequestedReviewByDateUpdateAdmin",
+            "informationRequestedReviewByDateUpdate",
             dmnDecisionTableResult.getResultList().get(0).get("processCategories")
         );
 

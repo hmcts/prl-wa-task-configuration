@@ -312,10 +312,10 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         "gateKeeping",
         "gateKeepingResubmitted"
     })
-    void evaluate_task_gateKeepingBoth(String taskType) {
+    void evaluate_task_legalOps(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();
         inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
-        inputVariables.putValue("caseData", Map.of("gatekeepingTaskType", "JUDGE_OR_LEGAL_ADVISER"));
+
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
         MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
@@ -324,47 +324,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
             judgeOne,
             judgefl401,
             allocatedLegalAdviserOne,
-            tribunalCaseworker
-        )));
-    }
-
-    @SuppressWarnings("checkstyle:indentation")
-    @ParameterizedTest
-    @CsvSource(value = {
-        "directionOnIssue",
-        "directionOnIssueResubmitted",
-        "gateKeeping",
-        "gateKeepingResubmitted"
-    })
-    void evaluate_task_gateKeepingJudge(String taskType) {
-        VariableMap inputVariables = new VariableMapImpl();
-        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
-        inputVariables.putValue("caseData", Map.of("gatekeepingTaskType", "JUDGE"));
-        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
-
-        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
-            taskSupervisor,
-            judgeOne,
-            judgefl401
-        )));
-    }
-
-    @SuppressWarnings("checkstyle:indentation")
-    @ParameterizedTest
-    @CsvSource(value = {
-        "directionOnIssue",
-        "directionOnIssueResubmitted",
-        "gateKeeping",
-        "gateKeepingResubmitted"
-    })
-    void evaluate_task_gateKeepingLegalAdviser(String taskType) {
-        VariableMap inputVariables = new VariableMapImpl();
-        inputVariables.putValue("taskAttributes", Map.of("taskType", taskType));
-        inputVariables.putValue("caseData", Map.of("gatekeepingTaskType", "LEGAL_ADVISER"));
-        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
-
-        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
-            taskSupervisor,
             tribunalCaseworker
         )));
     }
@@ -1237,7 +1196,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(7));
-        assertThat(logic.getRules().size(), is(58));
+        assertThat(logic.getRules().size(), is(55));
     }
 
     @ParameterizedTest
@@ -1344,9 +1303,9 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     }
 
     @Test
-    void evaluate_task_ctsc_reviewCaseForRequestedInformation() {
+    void evaluate_task_ctsc_and_admin_reviewCaseForRequestedInformation() {
         VariableMap inputVariables = new VariableMapImpl();
-        inputVariables.putValue("taskAttributes", Map.of("taskType", "reviewCaseForRequestedInformationCtsc"));
+        inputVariables.putValue("taskAttributes", Map.of("taskType", "reviewCaseForRequestedInformation"));
 
         DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
 
@@ -1360,22 +1319,6 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
                 "name", "ctsc",
                 "roleCategory", "CTSC",
                 "value", "Read,Own,UnclaimAssign,Claim,Unclaim,UnassignClaim,Complete,CompleteOwn"
-            )
-        )));
-    }
-
-    @Test
-    void evaluate_task_admin_reviewCaseForRequestedInformation() {
-        VariableMap inputVariables = new VariableMapImpl();
-        inputVariables.putValue("taskAttributes", Map.of("taskType", "reviewCaseForRequestedInformationAdmin"));
-
-        DmnDecisionTableResult dmnDecisionTableResult = evaluateDmnTable(inputVariables);
-
-        MatcherAssert.assertThat(dmnDecisionTableResult.getResultList(), is(List.of(
-            Map.of(
-                "autoAssignable", false,
-                "name", "task-supervisor",
-                "value", "Read,Manage,Complete,Cancel,Assign,Unassign"
             ), Map.of(
                 "autoAssignable", false,
                 "name", "hearing-centre-admin",
