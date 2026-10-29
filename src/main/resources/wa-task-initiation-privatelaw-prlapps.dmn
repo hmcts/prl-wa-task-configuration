@@ -12797,7 +12797,9 @@ if additionalData.Data.isCirUpdateFollowUp != null and additionalData.Data.isCir
           <text>"Review Case for Requested Information"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_06hc4iq">
-          <text>now() + duration("PT1H")</text>
+          <text>{
+"delayUntil":(now() + duration("PT1H")
+}</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_08zwsqv">
           <text>"informationRequestedReviewByDateUpdate"</text>
