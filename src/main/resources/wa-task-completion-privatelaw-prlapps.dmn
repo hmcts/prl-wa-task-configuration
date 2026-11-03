@@ -1036,6 +1036,20 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0tjyprq">
+        <inputEntry id="UnaryTests_00cj7vs">
+          <text>"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0s21m5t">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qmm5bw">
+          <text>"reviewCaseForRequestedInformation"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1qtbodb">
+          <text>"Auto"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_19qtnj3">
         <inputEntry id="UnaryTests_1jqph8w">
           <text>"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees"</text>

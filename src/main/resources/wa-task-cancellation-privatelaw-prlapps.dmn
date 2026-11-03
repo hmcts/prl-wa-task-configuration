@@ -527,12 +527,35 @@
           <text></text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_18o5ax5">
+        <inputEntry id="UnaryTests_16w5hje">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kw1v05">
+          <text>"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees","exitAwaitingInformation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12b9nl1">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02o4n93">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ojmjc6">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0isuw36">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1k94rct">
+          <text>"informationRequestedReviewByDateUpdate"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_14k77ke">
         <inputEntry id="UnaryTests_05txbrc">
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_07gjhsa">
-          <text>	"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees","exitAwaitingInformation"</text>
+          <text>"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees","exitAwaitingInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1blzkio">
           <text></text>
@@ -547,7 +570,7 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1vkai30">
-          <text>	"informationRequestedReviewByDateUpdateCtsc"</text>
+          <text>"informationRequestedReviewByDateUpdateCtsc"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1b2w4y2">
@@ -555,7 +578,7 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_0i55fp9">
-          <text>	"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees","exitAwaitingInformation"</text>
+          <text>"sendToGateKeeper","fl401SendToGateKeeper","issueAndSendToLocalCourtCallback","fl401AddCaseNumber","returnApplication","recordFinalDecision","processUrgentHelpWithFees","exitAwaitingInformation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1xx7l8t">
           <text></text>
@@ -570,15 +593,38 @@
           <text></text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1gatpo9">
-          <text>	"informationRequestedReviewByDateUpdateAdmin"</text>
+          <text>"informationRequestedReviewByDateUpdateAdmin"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0r1yzc8">
+        <inputEntry id="UnaryTests_0wdk6m7">
+          <text>	"AWAITING_INFORMATION"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_19isvgh">
+          <text>"transferToAnotherCourt"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1j7hme0">
+          <text>not("AWAITING_INFORMATION")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1fosfq7">
+          <text>"Cancel"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0u17uxe">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1n90187">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0lcd383">
+          <text>"informationRequestedReviewByDateUpdate"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1t9gytb">
         <inputEntry id="UnaryTests_1blbung">
-          <text>	"AWAITING_INFORMATION"</text>
+          <text>"AWAITING_INFORMATION"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1r16isw">
-          <text>	"transferToAnotherCourt"</text>
+          <text>"transferToAnotherCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_10ttnj8">
           <text>not("AWAITING_INFORMATION")</text>
@@ -598,10 +644,10 @@
       </rule>
       <rule id="DecisionRule_1ic3wkv">
         <inputEntry id="UnaryTests_1eogg83">
-          <text>	"AWAITING_INFORMATION"</text>
+          <text>"AWAITING_INFORMATION"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1buwviu">
-          <text>	"transferToAnotherCourt"</text>
+          <text>"transferToAnotherCourt"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0fhvx0r">
           <text>not("AWAITING_INFORMATION")</text>

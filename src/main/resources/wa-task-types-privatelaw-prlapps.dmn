@@ -801,6 +801,18 @@
           <text>"Review 16A Risk Assessment"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_1finyy9">
+        <description>RCFRI</description>
+        <inputEntry id="UnaryTests_1szixic">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_010b6ku">
+          <text>"reviewCaseForRequestedInformation"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1r7wsee">
+          <text>"Review Case for Requested Information"</text>
+        </outputEntry>
+      </rule>
       <rule id="DecisionRule_1ccyipv">
         <description>RCFRI</description>
         <inputEntry id="UnaryTests_0wk72dp">

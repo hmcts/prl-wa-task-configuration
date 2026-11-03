@@ -207,6 +207,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                     ),
                     Map.of(
                         "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    ),
+                    Map.of(
+                        "action", "Cancel",
                         "processCategories", "informationRequestedReviewByDateUpdateCtsc"
                     ),
                     Map.of(
@@ -226,6 +230,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                     ),
                     Map.of(
                         "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    ),
+                    Map.of(
+                        "action", "Cancel",
                         "processCategories", "informationRequestedReviewByDateUpdateCtsc"
                     ),
                     Map.of(
@@ -239,6 +247,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 "issueAndSendToLocalCourtCallback",
                 "CASE_ISSUED",
                 List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    ),
                     Map.of(
                         "action", "Cancel",
                         "processCategories", "informationRequestedReviewByDateUpdateCtsc"
@@ -256,6 +268,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     Map.of(
                         "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    ),
+                    Map.of(
+                        "action", "Cancel",
                         "processCategories", "informationRequestedReviewByDateUpdateCtsc"
                     ),
                     Map.of(
@@ -269,6 +285,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 "returnApplication",
                 "RETURNED",
                 List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    ),
                     Map.of(
                         "action", "Cancel",
                         "processCategories", "informationRequestedReviewByDateUpdateCtsc"
@@ -286,6 +306,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     Map.of(
                         "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    ),
+                    Map.of(
+                        "action", "Cancel",
                         "processCategories", "informationRequestedReviewByDateUpdateCtsc"
                     ),
                     Map.of(
@@ -299,6 +323,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 "processUrgentHelpWithFees",
                 "SUBMITTED_PAID",
                 List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    ),
                     Map.of(
                         "action", "Cancel",
                         "processCategories", "informationRequestedReviewByDateUpdateCtsc"
@@ -316,6 +344,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     Map.of(
                         "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    ),
+                    Map.of(
+                        "action", "Cancel",
                         "processCategories", "informationRequestedReviewByDateUpdateCtsc"
                     ),
                     Map.of(
@@ -329,6 +361,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 "exitAwaitingInformation",
                 "SUBMITTED_PAID",
                 List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    ),
                     Map.of(
                         "action", "Cancel",
                         "processCategories", "informationRequestedReviewByDateUpdateCtsc"
@@ -346,6 +382,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 List.of(
                     Map.of(
                         "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    ),
+                    Map.of(
+                        "action", "Cancel",
                         "processCategories", "informationRequestedReviewByDateUpdateCtsc"
                     ),
                     Map.of(
@@ -359,6 +399,10 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
                 "exitAwaitingInformation",
                 "JUDICIAL_REVIEW",
                 List.of(
+                    Map.of(
+                        "action", "Cancel",
+                        "processCategories", "informationRequestedReviewByDateUpdate"
+                    ),
                     Map.of(
                         "action", "Cancel",
                         "processCategories", "informationRequestedReviewByDateUpdateCtsc"
@@ -415,7 +459,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(3));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(26));
+        assertThat(logic.getRules().size(), is(28));
 
     }
 }
