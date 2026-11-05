@@ -166,7 +166,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "fl401AddCaseNumber",
+                "fl401IssueCase",
                 asList(
                     Map.of(
                         "taskType", "checkApplicationFL401",

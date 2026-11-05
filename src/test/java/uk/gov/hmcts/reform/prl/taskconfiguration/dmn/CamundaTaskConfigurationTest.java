@@ -1541,7 +1541,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
             case "checkApplicationFL401":
             case "checkApplicationResubmittedFL401":
                 return "[Add Case Number](/cases/case-details/${[CASE_REFERENCE]}/trigger/"
-                    + "fl401AddCaseNumber/fl401AddCaseNumber1)";
+                    + "fl401IssueCase/fl401IssueCase1)";
 
             case "checkApplicationC100":
             case "checkApplicationResubmittedC100":
