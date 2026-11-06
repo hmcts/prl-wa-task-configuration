@@ -57,18 +57,6 @@
           <text>"Check resubmitted application FL401"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_1vo8wqc">
-        <description>CAC100</description>
-        <inputEntry id="UnaryTests_0qxzdcr">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_06eqcww">
-          <text>"addCaseNumberResubmitted"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0rnmzpm">
-          <text>"Add Case Number Resubmitted"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_1mqqvev">
         <description>CAFL401</description>
         <inputEntry id="UnaryTests_1x6rhc3">

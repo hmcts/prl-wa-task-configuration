@@ -126,20 +126,6 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0tirx14">
-        <inputEntry id="UnaryTests_1b60snt">
-          <text>"caseNumber"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_1vackx5">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_190p0iw">
-          <text>"addCaseNumberResubmitted"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_00j054y">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0vuq3ym">
         <inputEntry id="UnaryTests_025guv0">
           <text>"fl401SendToGateKeeper"</text>
