@@ -126,20 +126,6 @@
           <text>"Auto"</text>
         </outputEntry>
       </rule>
-      <rule id="DecisionRule_0x1cjp2">
-        <inputEntry id="UnaryTests_1bjqbmz">
-          <text>"caseNumber"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_0nzbepx">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_1g232ye">
-          <text>"addCaseNumber"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0nx8xz4">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
       <rule id="DecisionRule_0tirx14">
         <inputEntry id="UnaryTests_1b60snt">
           <text>"caseNumber"</text>
@@ -151,20 +137,6 @@
           <text>"addCaseNumberResubmitted"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_00j054y">
-          <text>"Auto"</text>
-        </outputEntry>
-      </rule>
-      <rule id="DecisionRule_1v9cegc">
-        <inputEntry id="UnaryTests_1ckmgqx">
-          <text>"returnApplication"</text>
-        </inputEntry>
-        <inputEntry id="UnaryTests_19e491h">
-          <text></text>
-        </inputEntry>
-        <outputEntry id="LiteralExpression_11wnabl">
-          <text>"addCaseNumber"</text>
-        </outputEntry>
-        <outputEntry id="LiteralExpression_0um7can">
           <text>"Auto"</text>
         </outputEntry>
       </rule>
