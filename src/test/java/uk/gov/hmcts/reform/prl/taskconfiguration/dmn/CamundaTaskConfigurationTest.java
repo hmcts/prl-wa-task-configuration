@@ -35,7 +35,7 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(7));
         assertThat(logic.getOutputs().size(), is(3));
-        assertThat(logic.getRules().size(), is(119));
+        assertThat(logic.getRules().size(), is(118));
     }
 
     @Test
@@ -227,9 +227,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @ParameterizedTest
     @CsvSource({
         "checkApplicationC100", "checkApplicationResubmittedC100", "checkApplicationFL401",
-        "checkApplicationResubmittedFL401","addCaseNumber","addCaseNumberResubmitted",
-        "sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401","sendToGateKeeperC100",
-        "sendToGateKeeperResubmittedC100","produceHearingBundleC100",
+        "checkApplicationResubmittedFL401","sendToGateKeeperFL401","sendToGateKeeperResubmittedFL401",
+        "sendToGateKeeperC100","sendToGateKeeperResubmittedC100","produceHearingBundleC100",
         "updateHearingActualsC100","updateHearingActualsFL401","requestSolicitorOrderC100",
         "requestSolicitorOrderFL401","confidentialCheckSOA","recreateApplicationPack",
         "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100","replyToMessageForLA",
@@ -608,10 +607,9 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
         "checkApplicationFL401","checkApplicationResubmittedFL401","sendToGateKeeperFL401",
         "sendToGateKeeperResubmittedFL401","serviceOfApplicationFL401","adminServeOrderFL401",
         "updateHearingActualsFL401","requestSolicitorOrderFL401",
-        "checkApplicationC100","checkApplicationResubmittedC100","addCaseNumber",
-        "addCaseNumberResubmitted","sendToGateKeeperC100","sendToGateKeeperResubmittedC100",
-        "serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100",
-        "requestSolicitorOrderC100","reviewAdminOrderProvided",
+        "checkApplicationC100","checkApplicationResubmittedC100","sendToGateKeeperC100",
+        "sendToGateKeeperResubmittedC100","serviceOfApplicationC100","adminServeOrderC100",
+        "updateHearingActualsC100","requestSolicitorOrderC100","reviewAdminOrderProvided",
         "removeLegalRepresentativeC100","removeLegalRepresentativeFL401","confidentialCheckSOA",
         "replyToMessageForCourtAdminFL401","replyToMessageForCourtAdminC100",
         "replyToMessageForJudiciary","reviewDocumentsForSolAndCafcassC100",
@@ -857,9 +855,8 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @CsvSource({
-        "addCaseNumber","addCaseNumberResubmitted","serviceOfApplicationC100",
-        "adminServeOrderC100","updateHearingActualsC100","requestSolicitorOrderC100",
-        "reviewCorrespondenceC100", "produceHearingBundleC100",
+        "serviceOfApplicationC100","adminServeOrderC100","updateHearingActualsC100",
+        "requestSolicitorOrderC100","reviewCorrespondenceC100", "produceHearingBundleC100",
         "removeLegalRepresentativeC100","replyToMessageForCourtAdminC100"
     })
     void when_given_task_type_then_return_majorPriorityForValue5000_and_validate_description(String taskType) {
@@ -1348,7 +1345,6 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
     @ParameterizedTest
     @CsvSource({
         "checkApplicationC100", "checkApplicationResubmittedC100",
-        "addCaseNumber", "addCaseNumberResubmitted",
         "reviewSpecificAccessRequestCTSC"
     })
     void when_given_task_type_then_return_roleCategoryForValueCtsc_and_validate_description(
@@ -1711,7 +1707,6 @@ class CamundaTaskConfigurationTest extends DmnDecisionTableBaseUnitTest {
 
     @ParameterizedTest
     @CsvSource({
-            "addCaseNumber", "addCaseNumberResubmitted",
             "sendToGateKeeperC100", "sendToGateKeeperResubmittedC100",
             "sendToGateKeeperFL401", "sendToGateKeeperResubmittedFL401",
             "serviceOfApplicationC100", "adminServeOrderC100",
