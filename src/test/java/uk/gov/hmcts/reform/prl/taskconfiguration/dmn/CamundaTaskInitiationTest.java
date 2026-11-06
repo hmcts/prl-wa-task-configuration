@@ -43,7 +43,7 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(29));
         assertThat(logic.getOutputs().size(), is(4));
-        assertThat(logic.getRules().size(), is(125));
+        assertThat(logic.getRules().size(), is(123));
     }
 
     private static UUID getId() {
@@ -200,48 +200,6 @@ class CamundaTaskInitiationTest extends DmnDecisionTableBaseUnitTest {
                         "taskId", "sendToGateKeeperResubmittedFL401",
                         "name", "Send to Gatekeeper Resubmitted",
                         "processCategories", "localCourtGatekeepingFL401Resubmit"
-                    )
-                )
-            ),
-            Arguments.of(
-                "issueAndSendToLocalCourtCallback",
-                "CASE_ISSUED",
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                List.of(
-                    Map.of(
-                        "taskId", "addCaseNumber",
-                        "name", "Add Case Number",
-                        "processCategories", "addCaseNumberC100"
-                    ),
-                    Map.of(
-                        "taskId", "sendToGateKeeperC100",
-                        "name", "Send to Gatekeeper",
-                        "processCategories", "localCourtGatekeepingC100"
-                    )
-                )
-            ),
-            Arguments.of(
-                "submit",
-                "CASE_ISSUED",
-                mapAdditionalData("{\n"
-                                      + "   \"Data\":{\n"
-                                      + "      \"caseTypeOfApplication\":\"" + "" + "\"\n"
-                                      + "   }"
-                                      + "}"),
-                List.of(
-                    Map.of(
-                        "taskId", "addCaseNumberResubmitted",
-                        "name", "Add Case Number Resubmitted",
-                        "processCategories", "addCaseNumberC100Resubmit"
-                    ),
-                    Map.of(
-                        "taskId", "sendToGateKeeperResubmittedC100",
-                        "name", "Send to Gatekeeper Resubmitted",
-                        "processCategories", "localCourtGatekeepingResubmittedC100"
                     )
                 )
             ),
