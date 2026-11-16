@@ -263,7 +263,7 @@ class CamundaTaskCancellationTest extends DmnDecisionTableBaseUnitTest {
             ),
             Arguments.of(
                 "AWAITING_INFORMATION",
-                "fl401IssueCase",
+                "fl401AddCaseNumber",
                 "CASE_ISSUED",
                 List.of(
                     Map.of(
