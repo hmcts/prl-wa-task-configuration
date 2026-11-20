@@ -38,10 +38,6 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
                 "taskTypeName", "Check application FL401"));
         taskTypes.add(Map.of("taskTypeId", "checkApplicationResubmittedFL401",
                 "taskTypeName", "Check resubmitted application FL401"));
-        taskTypes.add(Map.of("taskTypeId", "addCaseNumber",
-                "taskTypeName", "Add Case Number"));
-        taskTypes.add(Map.of("taskTypeId", "addCaseNumberResubmitted",
-                "taskTypeName", "Add Case Number Resubmitted"));
         taskTypes.add(Map.of("taskTypeId", "sendToGateKeeperFL401",
                 "taskTypeName", "Send To Gatekeeper FL401"));
         taskTypes.add(Map.of("taskTypeId", "sendToGateKeeperC100",
@@ -191,6 +187,6 @@ class CamundaTaskTypeFilterTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(1));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(69));
+        assertThat(logic.getRules().size(), is(67));
     }
 }

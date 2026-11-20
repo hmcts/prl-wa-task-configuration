@@ -533,8 +533,7 @@ class CamundaTaskPermissionTest extends DmnDecisionTableBaseUnitTest {
     @SuppressWarnings("checkstyle:indentation")
     @ParameterizedTest
     @CsvSource(value = {
-        "checkApplicationC100", "checkApplicationResubmittedC100",
-        "addCaseNumber", "addCaseNumberResubmitted"
+        "checkApplicationC100", "checkApplicationResubmittedC100"
     })
     void evaluate_task_ctsc_checkApplicationc100(String taskType) {
         VariableMap inputVariables = new VariableMapImpl();

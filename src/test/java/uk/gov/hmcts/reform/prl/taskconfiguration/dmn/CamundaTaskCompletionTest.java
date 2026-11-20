@@ -77,10 +77,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                         "completionMode", "Auto"
                     ),
                     Map.of(
-                        "taskType", "addCaseNumber",
-                        "completionMode", "Auto"
-                    ),
-                    Map.of(
                         "taskType", "sendToGateKeeperFL401",
                         "completionMode", "Auto"
                     ),
@@ -166,7 +162,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                 )
             ),
             Arguments.of(
-                "fl401AddCaseNumber",
+                "fl401IssueCase",
                 asList(
                     Map.of(
                         "taskType", "checkApplicationFL401",
@@ -186,20 +182,6 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
                     ),
                     Map.of(
                         "taskType", "reviewCaseForRequestedInformationAdmin",
-                        "completionMode", "Auto"
-                    ),
-                    Map.of()
-                )
-            ),
-            Arguments.of(
-                "caseNumber",
-                asList(
-                    Map.of(
-                        "taskType", "addCaseNumber",
-                        "completionMode", "Auto"
-                    ),
-                    Map.of(
-                        "taskType", "addCaseNumberResubmitted",
                         "completionMode", "Auto"
                     ),
                     Map.of()
@@ -579,7 +561,7 @@ class CamundaTaskCompletionTest extends DmnDecisionTableBaseUnitTest {
         DmnDecisionTableImpl logic = (DmnDecisionTableImpl) decision.getDecisionLogic();
         assertThat(logic.getInputs().size(), is(2));
         assertThat(logic.getOutputs().size(), is(2));
-        assertThat(logic.getRules().size(), is(82));
+        assertThat(logic.getRules().size(), is(79));
     }
 
 
